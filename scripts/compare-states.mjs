@@ -55,6 +55,21 @@ const STATES = [
       await p.mouse.move(0, 0);
     },
   },
+  {
+    name: "contact-expert-picker-open", route: "/contact", viewport: { width: 1440, height: 900 },
+    run: async (p) => {
+      await p.locator("button", { hasText: "Book an Appointment" }).click();
+      await p.waitForTimeout(500);
+      await p.mouse.move(0, 0);
+    },
+  },
+  {
+    name: "contact-expert-picker-mobile", route: "/contact", viewport: { width: 390, height: 844 },
+    run: async (p) => {
+      await p.locator("button", { hasText: "Book an Appointment" }).click();
+      await p.waitForTimeout(500);
+    },
+  },
 ];
 
 const only = process.argv.slice(2);

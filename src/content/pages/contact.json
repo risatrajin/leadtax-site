@@ -1,0 +1,27 @@
+{
+  "title": "Contact Us",
+  "intro": "Have questions? We're here to help. Reach out to our friendly team.",
+  "bookLabel": "Book an Appointment",
+  "form": {
+    "_note": "The form is hidden on the live site (known issue). Submitting opens an email to the head office.",
+    "subject": "Contact Form Submission from {firstName} {lastName}",
+    "fields": {
+      "firstName": { "label": "First Name", "placeholder": "John" },
+      "lastName": { "label": "Last Name", "placeholder": "Doe" },
+      "email": { "label": "Email", "placeholder": "john@example.com" },
+      "phone": { "label": "Phone Number", "placeholder": "(555) 123-4567" },
+      "message": { "label": "Message", "placeholder": "How can we help you?" }
+    },
+    "submitLabel": "Send Message"
+  },
+  "expertPicker": {
+    "title": "Choose Your Tax Expert",
+    "description": "Select a team member to book your appointment with",
+    "experts": [
+      { "name": "Pathum", "role": "Tax Expert", "url": "https://calendly.com/pathum-leadtax" },
+      { "name": "US Tax Expert", "role": "Tax Expert", "url": "https://calendly.com/seran-leadtax" },
+      { "name": "Vincent Vimal", "role": "Tax Expert", "url": "https://calendly.com/vincent-leadtax" },
+      { "name": "Tax Expert", "role": "Tax Expert", "url": "https://calendly.com/taxexpert-leadtax/30min" }
+    ]
+  }
+}

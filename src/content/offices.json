@@ -12,6 +12,9 @@
         "subtitle": "(Head Office)",
         "address": "100-4350 Hasting St, Burnaby, BC"
       },
+      "booking": {
+        "type": "expertPicker"
+      },
       "schema": {
         "role": "main",
         "streetAddress": "100-4350 Hastings Street",
@@ -19,7 +22,10 @@
         "addressRegion": "BC",
         "postalCode": "V5C 2J9",
         "image": "https://leadtax.ca/images/hastings-4125.jpg",
-        "geo": { "latitude": 49.2829, "longitude": -122.999 }
+        "geo": {
+          "latitude": 49.2829,
+          "longitude": -122.999
+        }
       }
     },
     {
@@ -31,6 +37,9 @@
         "title": "Lead Tax",
         "subtitle": "",
         "address": "1100 Davie St, Vancouver, BC"
+      },
+      "booking": {
+        "url": "https://calendly.com/leadtax25/30min"
       },
       "schema": {
         "role": "department",
@@ -53,6 +62,9 @@
         "subtitle": "",
         "address": "2137 Commercial Dr, Vancouver, BC"
       },
+      "booking": {
+        "url": "https://calendly.com/chamal-leadtax/30min"
+      },
       "schema": {
         "role": "department",
         "order": 3,
@@ -73,6 +85,9 @@
         "subtitle": "",
         "address": "2681 Kingsway, Vancouver, BC V5R 5H4"
       },
+      "booking": {
+        "url": "https://calendly.com/vancouverk-leadtax/30min"
+      },
       "schema": {
         "role": "department",
         "order": 1,
@@ -92,6 +107,9 @@
         "title": "Lead Tax",
         "subtitle": "",
         "address": "4125 Hastings St, Burnaby, BC V5C 2J3"
+      },
+      "booking": {
+        "url": "https://calendly.com/chamal-leadtax/30min"
       },
       "schema": {
         "role": "department",

@@ -11,10 +11,13 @@
     "compare": "node scripts/compare-screenshots.mjs"
   },
   "dependencies": {
+    "@radix-ui/react-dialog": "^1.1.23",
+    "clsx": "^2.1.1",
     "lucide-react": "0.487.0",
     "react": "18.3.1",
     "react-dom": "18.3.1",
-    "react-router": "7.18.2"
+    "react-router": "7.18.2",
+    "tailwind-merge": "^3.7.0"
   },
   "devDependencies": {
     "@tailwindcss/vite": "4.1.12",
