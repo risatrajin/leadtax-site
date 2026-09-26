@@ -135,6 +135,7 @@
     "featuresLabel": "Features",
     "popularLabel": "Most Popular",
     "addOnLabel": "Add-on",
+    "notIncludedLabel": "not included",
     "getStartedLabel": "Get Started",
     "getStartedHref": "app:remote.register",
     "rows": {

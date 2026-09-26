@@ -69,7 +69,65 @@ function Row({ row, index }) {
   );
 }
 
-/** Plan comparison with a File Online / File Remotely switch. */
+/** One plan as a card, for phones: name, price, Get Started, then the included features. */
+function PlanCard({ column, tier, tab, rows }) {
+  const addOn = rows.find((row) => row.highlight);
+  const features = rows.filter((row) => !row.highlight);
+  return (
+    <li
+      className={`rounded-2xl border bg-white p-6 shadow-md ${column.popular && tab.showPrices ? "border-brand ring-2 ring-brand" : "border-gray-200"}`}
+    >
+      {column.popular && tab.showPrices && (
+        <span className="mb-3 inline-block rounded-full bg-popular px-2.5 py-0.5 text-xs font-bold uppercase tracking-wide text-gray-900">
+          {comparison.popularLabel}
+        </span>
+      )}
+      <div className="flex items-baseline justify-between gap-4">
+        <h3 className="text-xl font-bold text-gray-900">{tier.title}</h3>
+        {tab.showPrices && <p className="text-2xl font-bold text-brand">{tier.price}</p>}
+      </div>
+      {addOn && (
+        <p className="mt-2 text-sm text-gray-600">
+          {addOn.name} ({comparison.addOnLabel.toLowerCase()}): <span className="font-semibold text-gray-900">{addOn[column.key]}</span>
+        </p>
+      )}
+      <a href={resolveHref(comparison.getStartedHref)} className={buttonClasses({ size: "block", className: "mt-5" })}>
+        {comparison.getStartedLabel}
+      </a>
+      <ul className="mt-5 space-y-2 border-t border-gray-100 pt-5 text-sm">
+        {features.map((row) => {
+          const value = row[column.key];
+          if (row.section) {
+            return (
+              <li key={row.name} className="pt-3 text-xs font-semibold uppercase tracking-wider text-gray-500">
+                {row.name}
+              </li>
+            );
+          }
+          return (
+            <li key={row.name} className={`flex items-start gap-2.5 ${value ? "text-gray-800" : "text-gray-400 line-through"}`}>
+              {value ? (
+                <Check aria-hidden="true" className="mt-0.5 h-4 w-4 flex-shrink-0 text-green-600" />
+              ) : (
+                <X aria-hidden="true" className="mt-0.5 h-4 w-4 flex-shrink-0 text-gray-300" />
+              )}
+              <span>
+                {row.name}
+                {typeof value === "string" && <span className="font-semibold text-gray-900">: {value}</span>}
+                {!value && <span className="sr-only"> ({comparison.notIncludedLabel})</span>}
+              </span>
+            </li>
+          );
+        })}
+      </ul>
+    </li>
+  );
+}
+
+/**
+ * Plan comparison with a File Online / File Remotely switch. From 768px it is a table; on
+ * phones each plan is a card, so every plan is visible without sideways scrolling.
+ */
 export default function ComparisonTable() {
   const [activeId, setActiveId] = useState(comparison.tabs[0].id);
   const tab = comparison.tabs.find((candidate) => candidate.id === activeId);
@@ -92,7 +150,13 @@ export default function ComparisonTable() {
         </div>
       </div>
 
-      <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
+      <ul className="space-y-6 md:hidden">
+        {comparison.columns.map((column, index) => (
+          <PlanCard key={column.key} column={column} tier={tiers[index]} tab={tab} rows={rows} />
+        ))}
+      </ul>
+
+      <div className="hidden bg-white rounded-2xl shadow-xl overflow-hidden md:block">
         <div className="overflow-x-auto">
           <table className="w-full min-w-[700px]">
             <thead>
@@ -110,7 +174,7 @@ export default function ComparisonTable() {
                     >
                       {column.popular && tab.showPrices && (
                         <div className="flex justify-center mb-1">
-                          <span className="bg-popular text-white text-xs font-bold px-2 py-0.5 rounded-full uppercase tracking-wide">
+                          <span className="bg-popular text-gray-900 text-xs font-bold px-2 py-0.5 rounded-full uppercase tracking-wide">
                             {comparison.popularLabel}
                           </span>
                         </div>
