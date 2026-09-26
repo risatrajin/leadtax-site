@@ -1,5 +1,6 @@
 {
   "_note": "Single source for office data. 'display' is what the Contact page shows; 'schema' is what the SEO JSON-LD publishes. The two disagree in places on purpose (see docs/known-issues.md).",
+  "photoPlaceholderLabel": "[Photo needed: {office} storefront]",
   "offices": [
     {
       "_placeholders": [
@@ -87,13 +88,14 @@
         "email",
         "booking",
         "shortName",
-        "hours"
+        "hours",
+        "photo"
       ],
       "id": "vancouver-commercial",
       "shortName": "Commercial Drive",
       "phone": "6049693500",
       "email": "vancouverc@leadtax.ca",
-      "photo": "/images/008d8d5f7cfa9f365240f909ca99134f7bdc260b.png",
+      "photo": null,
       "mapError": true,
       "display": {
         "title": "Lead Tax",
@@ -116,7 +118,8 @@
         "weekdays": "[TBD: Mon–Fri hours]",
         "saturday": "[TBD: Saturday hours]",
         "sunday": "[TBD: Sunday hours]"
-      }
+      },
+      "_photoNote": "The only photo (/images/008d8d5f7cfa9f365240f909ca99134f7bdc260b.png) is a gallery screenshot with carousel arrows baked in; no object-position crop hides them at every breakpoint. Shown as a placeholder until the client supplies a clean photo."
     },
     {
       "_placeholders": [

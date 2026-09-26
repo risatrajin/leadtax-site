@@ -49,7 +49,7 @@ The original header and footer were replaced by one site-wide `SiteHeader` and `
 | H3 | Desktop "Get Started" was medium weight while "Sign In" was bold. | — | resolved |
 | H4 | "Do It Yourself" linked to `/`. | — | resolved: "File online yourself" goes to the DIY app |
 | H5 | Footer email was plain text, not a `mailto:` link. | — | fixed |
-| H6 | The logo's navy "Lead" is hard to read on the navy footer (same as the original footer). | `SiteFooter.jsx` | kept |
+| H6 | The logo's navy "Lead" was hard to read on the navy footer (same as the original footer). | `SiteFooter.jsx` | fixed for now: rendered white with a CSS filter until a reversed logo file arrives (question 35) |
 
 ## Homepage
 
@@ -91,6 +91,7 @@ The original header and footer were replaced by one site-wide `SiteHeader` and `
 | X19 | In Person: "Local offices across Canada" (all offices are in BC); "CRA and Revenu Québec compliant". | `file-in-person.json` | kept |
 | X20 | In Person hero's first button has an extra `block` class (only difference from Drop-off). | `file-in-person.json` → `block: true` | kept |
 | X21 | "What to bring", "Drop off your documents" and cross-border "Learn More" download files from Google Drive. | `site.json` → `downloads` | kept |
+| X24 | The Commercial Dr photo is a gallery screenshot with carousel arrows baked in; no crop hides them at every breakpoint. The office shows a flagged photo placeholder on /contact and /home-v2 until a clean photo arrives (question 38). | `offices.json` → `photo` | fixed |
 | X23 | Blog card images were shifted: "2026 Tax Filing Deadlines" showed the estate-tax artwork and "Avoid Heavy Estate Taxes" showed the e-commerce artwork. Now each post shows its own artwork; the deadlines card uses its article photo. | `posts.json` → `cardImage` | fixed |
 | X22 | About stats "10K+ / 99% / 24/7" and FAQ claims (French support, "regularly audited") are unverified. | `about.json`, `faqs.json` | kept |
 

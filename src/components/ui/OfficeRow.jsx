@@ -1,5 +1,6 @@
 import { bookingHref, directionsHref, officePhone, officeTel } from "../../lib/offices.js";
 import { fill } from "../../lib/template.js";
+import { OfficePhoto } from "../../lib/officePhoto.jsx";
 import Button from "./Button.jsx";
 
 /**
@@ -9,8 +10,8 @@ import Button from "./Button.jsx";
 export default function OfficeRow({ office, copy, bookingFallback }) {
   return (
     <li className="grid gap-5 rounded-2xl border border-gray-200 bg-white p-4 shadow-lg md:grid-cols-3 md:gap-6 md:p-5 xl:grid-cols-12 xl:items-center xl:gap-8">
-      <img
-        src={office.photo}
+      <OfficePhoto
+        office={office}
         alt={fill(copy.entranceAlt, { office: office.shortName })}
         className="h-52 w-full rounded-xl object-cover md:col-span-3 md:h-60 xl:col-span-3 xl:h-40"
       />

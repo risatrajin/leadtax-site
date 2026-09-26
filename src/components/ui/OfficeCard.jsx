@@ -1,4 +1,5 @@
 import { formatLocalPhone } from "../../lib/phone.js";
+import { OfficePhoto } from "../../lib/officePhoto.jsx";
 
 const BOOK_BUTTON =
   "bg-brand hover:bg-brand-strong text-white px-6 py-3 rounded-full transition-colors w-full mt-auto inline-block text-center";
@@ -14,7 +15,7 @@ export default function OfficeCard({ office, bookLabel, onPickExpert }) {
       id={office.id}
       className="bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden flex flex-col scroll-mt-32"
     >
-      <img src={office.photo} alt={`${display.title} office`} className="h-48 w-full object-cover" />
+      <OfficePhoto office={office} alt={`${display.title} office`} className="h-48 w-full object-cover" />
       <div className="p-6 space-y-3 flex flex-col flex-1">
         <div>
           <h3 className="font-bold text-gray-900 flex items-center gap-2">

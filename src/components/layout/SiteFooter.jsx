@@ -38,7 +38,8 @@ export default function SiteFooter() {
         <div className="grid gap-10 lg:grid-cols-12 lg:gap-12">
           <div className="space-y-4 lg:col-span-4">
             <Link to="/" className="inline-block" aria-label={nav.header.homeLabel}>
-              <img src={site.logo} alt={site.name} className="h-8" />
+              {/* White version via CSS filter until the client supplies a reversed logo file. */}
+              <img src={site.logo} alt={site.name} className="h-8 brightness-0 invert" />
             </Link>
             <p className="max-w-sm text-sm text-white/70">{site.footer.tagline}</p>
             <div className="space-y-1 text-sm">

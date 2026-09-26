@@ -151,3 +151,18 @@ what you can; anything left blank stays as it is now.
 
 34. **Which phone number is right for Commercial Drive?** The office window shows (604) 568-4829;
     the website lists (604) 969-3500.
+
+35. **Do you have a white (reversed) version of the logo?** The footer is navy, so the site shows the
+    logo in white using a filter, which turns the "LT" mark into a solid white shape. An official
+    reversed logo file (SVG or a large transparent PNG) would fix that.
+
+## Photos we need
+
+36. **Interior photos of at least two offices**, showing where clients sit down with a tax expert.
+
+37. **A team photo** (or individual photos of the tax experts clients meet).
+
+38. **A clean, full-resolution photo of each storefront.** The Commercial Drive photo we have is a
+    screenshot from an online gallery (it has the gallery's arrows in it), so the site shows a
+    placeholder for that office for now. The 4350 Hastings photo is only 616px wide and looks soft
+    at larger sizes. Ideally: taken in daylight, straight on, with the sign and door visible.
