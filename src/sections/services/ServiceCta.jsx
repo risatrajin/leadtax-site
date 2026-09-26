@@ -5,12 +5,12 @@ const STYLES = {
   remote: {
     section: "py-16 md:py-24 px-4 md:px-8 bg-gradient-to-br from-brand to-brand-highlight",
     text: "text-xl text-brand-subtle mb-8 max-w-2xl mx-auto",
-    button: { variant: "inverseTint", className: "inline-block text-lg" },
+    button: { variant: "inverseTint" },
   },
   local: {
     section: "py-16 md:py-24 px-4 md:px-8 bg-brand",
     text: "text-xl text-white/90 mb-8",
-    button: { variant: "inverse", className: "inline-block text-lg font-medium" },
+    button: { variant: "inverse" },
   },
 };
 

@@ -2,10 +2,11 @@ import { useState } from "react";
 import { Check, X } from "lucide-react";
 import pricing from "../../content/pricing.json";
 import { resolveHref } from "../../lib/links.js";
+import { buttonClasses } from "../../components/ui/Button.jsx";
 
 const { comparison } = pricing;
 
-const TAB = "px-4 sm:px-8 py-2.5 sm:py-3 rounded-full font-medium transition-all text-sm sm:text-base";
+const TAB = "min-h-10 px-4 sm:px-8 py-2 sm:py-3 rounded-full font-semibold transition-all text-sm sm:text-base";
 const PLAN_HEADER = "text-center py-4 px-2 md:px-4 font-bold text-gray-900 bg-white";
 
 function Cell({ value, highlight, tinted }) {
@@ -126,7 +127,7 @@ export default function ComparisonTable() {
                   <th key={column.key} className="text-center py-4 px-2 md:px-4 bg-white">
                     <a
                       href={resolveHref(comparison.getStartedHref)}
-                      className="inline-block bg-brand text-white py-2 px-4 md:px-6 rounded-full hover:bg-brand-strong transition-colors font-medium text-xs md:text-sm whitespace-nowrap"
+                      className={buttonClasses({ size: "sm", className: "whitespace-nowrap" })}
                     >
                       {comparison.getStartedLabel}
                     </a>

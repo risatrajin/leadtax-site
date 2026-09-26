@@ -43,7 +43,6 @@ export default function UsCrossBorderPage() {
                 key={action.label}
                 {...crossBorderAction(action)}
                 variant={CTA_VARIANTS[index]}
-                className="font-bold text-center"
               >
                 {action.label}
               </Button>

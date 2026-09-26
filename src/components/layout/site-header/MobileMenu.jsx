@@ -124,7 +124,7 @@ export default function MobileMenu({ id, onClose, returnFocusTo }) {
         <a href={`tel:${tollFreeDashed}`} className="text-center font-semibold text-gray-900">
           {tollFreeDashed}
         </a>
-        <Button to={nav.header.cta.to} size="md" onClick={onClose} className="w-full text-center font-semibold">
+        <Button to={nav.header.cta.to} size="md" onClick={onClose} className="w-full">
           {nav.header.cta.label}
         </Button>
       </div>

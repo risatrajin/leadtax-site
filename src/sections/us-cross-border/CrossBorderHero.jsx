@@ -17,7 +17,6 @@ export default function CrossBorderHero({ hero }) {
                 key={action.label}
                 {...crossBorderAction(action)}
                 variant={ACTION_VARIANTS[index]}
-                className="font-bold text-center"
               >
                 {action.label}
               </Button>

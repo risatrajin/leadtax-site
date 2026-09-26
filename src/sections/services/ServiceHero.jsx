@@ -10,15 +10,15 @@ const STYLES = {
     section: "bg-gradient-to-br from-white via-brand-subtle/10 to-white",
     title: "text-brand",
     text: "text-gray-600",
-    actions: [{ variant: "primary", className: "text-lg text-center" }],
+    actions: [{ variant: "primary" }],
   },
   local: {
     section: "bg-brand-fade",
     title: "text-white",
     text: "text-white/90",
     actions: [
-      { variant: "inverse", className: "text-lg font-medium text-center" },
-      { variant: "outlineInverseFill", className: "text-lg font-medium text-center" },
+      { variant: "inverse" },
+      { variant: "outlineInverseFill" },
     ],
   },
 };
@@ -45,7 +45,7 @@ export default function ServiceHero({ variant, hero }) {
                   key={action.label}
                   {...actionProps(action)}
                   variant={style.actions[index].variant}
-                  className={cx(style.actions[index].className, action.block && "block")}
+                  className={cx(action.block && "w-full sm:w-auto")}
                 >
                   {action.label}
                 </Button>

@@ -9,7 +9,7 @@ export default function PostCta({ cta }) {
         <p className="text-brand-subtle mb-8 max-w-2xl mx-auto">{cta.text}</p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           {cta.actions.map((action) => (
-            <Button key={action.label} to={action.to} href={action.href} variant={action.variant} className="font-bold">
+            <Button key={action.label} to={action.to} href={action.href} variant={action.variant}>
               {action.label}
             </Button>
           ))}

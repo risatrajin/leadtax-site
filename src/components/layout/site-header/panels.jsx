@@ -25,7 +25,7 @@ function FeatureCard({ feature }) {
       <div className="p-5">
         <p className="text-lg font-semibold text-gray-900">{feature.title}</p>
         {feature.text && <p className="mt-1 text-sm text-gray-600">{feature.text}</p>}
-        <Button to={feature.cta.to} size="md" className="mt-4 inline-block text-sm font-semibold">
+        <Button to={feature.cta.to} size="sm" className="mt-4">
           {feature.cta.label}
         </Button>
       </div>

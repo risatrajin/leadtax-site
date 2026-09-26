@@ -1,8 +1,8 @@
 import { formatLocalPhone } from "../../lib/phone.js";
 import { OfficePhoto } from "../../lib/officePhoto.jsx";
+import { buttonClasses } from "./Button.jsx";
 
-const BOOK_BUTTON =
-  "bg-brand hover:bg-brand-strong text-white px-6 py-3 rounded-full transition-colors w-full mt-auto inline-block text-center";
+const BOOK_BUTTON = buttonClasses({ size: "block", className: "mt-auto" });
 
 /**
  * One office: photo, name (+ "Head Office" badge), address, email, phone and a booking action.

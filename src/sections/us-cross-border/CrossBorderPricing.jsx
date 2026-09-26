@@ -49,7 +49,6 @@ function PlanCard({ plan, isLast }) {
         {...crossBorderAction({ href: "consultation" })}
         variant={style.button}
         size="block"
-        className="block w-full font-bold text-center"
       >
         {plan.ctaLabel}
       </Button>

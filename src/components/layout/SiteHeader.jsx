@@ -95,7 +95,7 @@ export default function SiteHeader() {
               <a href={`tel:${tollFreeDashed}`} className="hidden whitespace-nowrap font-semibold text-gray-700 hover:text-brand xl:inline">
                 {tollFreeDashed}
               </a>
-              <Button to={header.cta.to} size="header" className="whitespace-nowrap font-semibold">
+              <Button to={header.cta.to} size="header" className="whitespace-nowrap">
                 {header.cta.label}
               </Button>
             </div>

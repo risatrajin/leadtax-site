@@ -15,7 +15,7 @@ export default function NotFoundPage() {
         <p className="mx-auto mb-8 max-w-md text-gray-600">{copy.text}</p>
         <div className="flex flex-col justify-center gap-4 sm:flex-row">
           {copy.actions.map((action) => (
-            <Button key={action.label} to={action.to} variant={action.variant} size="wide" className="font-semibold">
+            <Button key={action.label} to={action.to} variant={action.variant} size="md">
               {action.label}
             </Button>
           ))}

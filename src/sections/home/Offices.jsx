@@ -17,8 +17,7 @@ const groups = officeCities.map((city) => ({
 const photoAlt = (office) => fill(copy.entranceAlt, { office: office.shortName });
 const officeCount = (count) => (count === 1 ? copy.officeCountOne : fill(copy.officeCountOther, { count }));
 
-/** Same height for the filled and the outlined button (the outline adds a 2px border). */
-const ACTION_CLASSES = "inline-flex h-11 items-center justify-center whitespace-nowrap text-sm font-semibold";
+const ACTION_CLASSES = "whitespace-nowrap";
 
 function Hours({ office }) {
   return (
@@ -39,7 +38,7 @@ function Hours({ office }) {
 function Actions({ office }) {
   return (
     <div className="flex flex-col gap-3 sm:flex-row">
-      <Button href={bookingHref(office, bookingFallback.href)} size="sm" className={ACTION_CLASSES}>
+      <Button href={bookingHref(office, bookingFallback.href)} size="md" className={ACTION_CLASSES}>
         {copy.bookLabel}
       </Button>
       <Button
@@ -47,7 +46,7 @@ function Actions({ office }) {
         target="_blank"
         rel="noopener noreferrer"
         variant="outline"
-        size="sm"
+        size="md"
         className={ACTION_CLASSES}
       >
         {copy.directionsLabel}

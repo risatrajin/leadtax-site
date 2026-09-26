@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const TAB = "px-5 md:px-6 py-2.5 md:py-3 rounded-full font-bold transition-all text-sm md:text-base";
+const TAB = "min-h-10 px-5 md:px-6 py-2 md:py-3 rounded-full font-semibold transition-all text-sm md:text-base";
 const TAB_ACTIVE = "bg-brand text-white shadow-lg";
 const TAB_IDLE = "bg-white text-gray-700 hover:bg-gray-100";
 

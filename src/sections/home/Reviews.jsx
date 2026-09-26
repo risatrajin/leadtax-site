@@ -33,7 +33,7 @@ export default function Reviews() {
             rel="noopener noreferrer"
             variant="outline"
             size="md"
-            className="self-start bg-white text-center font-semibold md:self-auto"
+            className="self-start bg-white md:self-auto"
           >
             {fill(copy.allLabel, { count: reviewCount })}
           </Button>

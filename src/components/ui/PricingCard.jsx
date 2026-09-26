@@ -19,7 +19,7 @@ export default function PricingCard({ tier, perReturnLabel, ctaLabel }) {
           href={tier.url}
           variant="outline"
           size="block"
-          className="w-full mt-auto font-medium text-center block"
+          className="mt-auto"
         >
           {ctaLabel}
         </Button>

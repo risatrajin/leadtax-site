@@ -14,21 +14,28 @@ const VARIANTS = {
   disabled: "border-2 border-gray-300 text-gray-400 cursor-not-allowed",
 };
 
+/**
+ * Three sizes used across the site: sm (40px), md (48px) and lg (56px, the default).
+ * Heights are minimums so a label that wraps on a narrow screen still fits.
+ */
 const SIZES = {
-  sm: "px-6 py-2",
+  sm: "min-h-10 px-5 py-2 text-sm",
+  md: "min-h-12 px-6 py-2.5 text-base",
+  lg: "min-h-14 px-8 py-3 text-base",
   /** Header booking button: a little smaller between 1024 and 1279px so the nav fits. */
-  header: "px-5 py-2 text-sm xl:px-6 xl:text-base",
-  md: "px-6 py-3",
-  lg: "px-8 py-4",
-  wide: "px-8 py-3",
-  xl: "px-10 py-4",
-  /** Vertical padding only, for full-width buttons. */
-  block: "py-3",
+  header: "min-h-10 px-5 py-2 text-sm xl:px-6 xl:text-base",
+  /** Full-width md button. */
+  block: "min-h-12 w-full px-6 py-2.5 text-base",
 };
+
+/** Older size names, kept so existing content and pages map onto the three sizes. */
+const ALIASES = { wide: "md", xl: "lg" };
+
+const BASE = "inline-flex items-center justify-center gap-2 rounded-full text-center font-semibold";
 
 /** Class list for a pill button, for elements that only look like buttons (e.g. inside a card link). */
 export function buttonClasses({ variant = "primary", size = "lg", transition = "transition-colors", className } = {}) {
-  return cx(VARIANTS[variant], SIZES[size], "rounded-full", transition, className);
+  return cx(BASE, VARIANTS[variant], SIZES[ALIASES[size] ?? size], transition, className);
 }
 
 /**

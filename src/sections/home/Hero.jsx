@@ -98,7 +98,7 @@ export default function Hero() {
           </h1>
           <p className="mt-6 text-xl leading-relaxed text-gray-600 md:text-2xl xl:max-w-xl xl:text-white">{hero.text}</p>
           <div className="mt-10 flex flex-col gap-4 sm:flex-row [text-shadow:none]">
-            <Button to={hero.book.to} className="inline-flex items-center justify-center gap-3 font-semibold">
+            <Button to={hero.book.to} className="gap-3">
               <CalendarDays aria-hidden="true" className="h-5 w-5" />
               {hero.book.label}
               <ArrowRight aria-hidden="true" className="h-5 w-5" />
@@ -106,7 +106,7 @@ export default function Hero() {
             <Button
               href={hero.findLocation.href}
               variant="outline"
-              className="inline-flex items-center justify-center gap-3 bg-white font-semibold"
+              className="gap-3 bg-white"
             >
               <MapPin aria-hidden="true" className="h-5 w-5" />
               {hero.findLocation.label}
