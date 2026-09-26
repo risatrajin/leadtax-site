@@ -76,7 +76,7 @@ The original header and footer were replaced by one site-wide `SiteHeader` and `
 | X4 | Expert picker lists "US Tax Expert" and "Tax Expert" as names. | `contact.json` | kept |
 | X5 | Career "Apply Now" ×3 and "Submit Resume" do nothing; a Toronto job is listed although all offices are in BC. | `/career` | kept |
 | X6 | FAQ page "Contact Support" does nothing. | `/faq` | kept |
-| X7 | Blog "Get Started Free" links to `/get-started`, which doesn't exist. | `blog.json` → `post.cta` | kept |
+| X7 | Blog "Get Started Free" links to `/get-started`, which doesn't exist. | `blog.json` → `post.cta` | fixed: links to the DIY registration page (`app:diy.register`) |
 | X8 | 5 of 11 blog posts aren't listed on `/blog` or in the sitemap (reachable via "Related Articles"). | `posts.json` (no `excerpt`) | kept |
 | X9 | Unknown blog slugs show "Not Found" with HTTP 200 and no `noindex`. | `BlogPostPage.jsx` | kept |
 | X10 | FAQ page prices ($19.99 / $49.99 / $79.99 / $99.99) disagree with the homepage and /pricing ($19 / $39 / $69 / $99, expert $59.99–$169.99) and JSON-LD ("$19 - $169"). | `faqs.json` → `faqPage` | kept |

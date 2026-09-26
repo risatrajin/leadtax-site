@@ -1,6 +1,6 @@
 import Button from "../../components/ui/Button.jsx";
 
-/** End-of-article banner. "Get Started Free" points to /get-started, which doesn't exist (known issue). */
+/** End-of-article banner. Actions are router paths (`to`) or URLs and "app:" refs (`href`). */
 export default function PostCta({ cta }) {
   return (
     <div className="mt-16 pt-12 border-t-2 border-gray-200">
@@ -9,7 +9,7 @@ export default function PostCta({ cta }) {
         <p className="text-brand-subtle mb-8 max-w-2xl mx-auto">{cta.text}</p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           {cta.actions.map((action) => (
-            <Button key={action.label} to={action.to} variant={action.variant} className="font-bold">
+            <Button key={action.label} to={action.to} href={action.href} variant={action.variant} className="font-bold">
               {action.label}
             </Button>
           ))}

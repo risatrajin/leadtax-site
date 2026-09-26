@@ -10,7 +10,7 @@
       "title": "Ready to File Your Taxes with Confidence?",
       "text": "LeadTax makes it simple to maximize your deductions and get the refund you deserve.",
       "actions": [
-        { "label": "Get Started Free", "to": "/get-started", "variant": "inverse" },
+        { "label": "Get Started Free", "href": "app:diy.register", "variant": "inverse" },
         { "label": "Talk to an Expert", "to": "/contact", "variant": "outlineInverse" }
       ]
     },
