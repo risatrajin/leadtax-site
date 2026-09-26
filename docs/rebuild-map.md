@@ -250,4 +250,4 @@ The office picker that used to be in the hero is gone; each office is still book
   square bright-blue buttons.
 - Icons: lucide has no flags or maple leaf. The maple leaf is an inline SVG (`MapleLeafIcon`);
   the US & Cross-Border card uses a globe instead of the mockup's two flags.
-- Photo: interim (#15) and flagged until a Lummi image is chosen.
+- Photo: `hero-cross-border-friends.webp` (supplied, Lummi Pro). From 1280px it covers the whole hero with no overlay; the trust row sits on a frosted white card and the accent word turns navy for contrast on the sky. Below 1280px the photo sits on top.

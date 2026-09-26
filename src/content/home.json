@@ -9,10 +9,6 @@
   },
   "hero": {
     "_source": "Client homepage mockup: headline, subtitle, buttons, trust row and service cards.",
-    "_placeholders": [
-      "image"
-    ],
-    "_imageNote": "Interim photo (#15) until a Lummi image is chosen.",
     "titleLead": "Canadian & US Taxes.",
     "titleAccent": "Simplified.",
     "text": "In-person tax, accounting and bookkeeping for individuals and businesses.",
@@ -42,9 +38,11 @@
       }
     ],
     "image": {
-      "src": "/images/70e1bf44b4f3bacec78cc900a37b1ff983c7da65.png",
-      "alt": "Woman in a LeadTax jacket smiling at her phone on the Vancouver seawall",
-      "position": "70% 40%"
+      "src": "/images/hero-cross-border-friends.webp",
+      "alt": "Two friends laughing at a phone, one in a US flag jacket and one in a Canadian flag hoodie",
+      "position": "0% 30%",
+      "_source": "Supplied by the LeadTax team (Lummi Pro licence).",
+      "_positionNote": "0% keeps the two people to the right of the text on wide screens."
     },
     "servicesTitle": "What we can do for you",
     "services": [

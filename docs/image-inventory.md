@@ -100,3 +100,9 @@ storefront rather than the sign (`crop-loose-book.png`). Per the rule, both tile
 
 #1 also has carousel arrows baked in (it's a gallery screenshot), and its window shows the phone
 number (604) 568-4829, which differs from the number the site lists for Commercial Dr.
+
+## Added images
+
+| File | Size | Shows | Source | Used on |
+|---|---|---|---|---|
+| `hero-cross-border-friends.webp` | 1964×1045, 117 KB | Two friends laughing at a phone under a blue sky, one in a US flag jacket, one in a Canadian flag hoodie | Supplied by the LeadTax team (Lummi Pro licence) | Homepage hero: full-bleed behind the text and cards from 1280px (`object-position: 0% 30%` keeps the people right of the text); on top of the text below 1280px |
