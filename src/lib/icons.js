@@ -1,4 +1,6 @@
 import {
+  Globe,
+  DollarSign,
   Award,
   Briefcase,
   Building2,
@@ -41,6 +43,8 @@ import TikTokIcon from "../components/ui/TikTokIcon.jsx";
 
 /** Icons referenced by name from content JSON. */
 const icons = {
+  Globe,
+  DollarSign,
   Award,
   Briefcase,
   Building2,

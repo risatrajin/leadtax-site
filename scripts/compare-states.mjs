@@ -70,6 +70,32 @@ const STATES = [
       await p.waitForTimeout(500);
     },
   },
+  {
+    name: "cross-border-tab-for-businesses", route: "/us-cross-border", viewport: { width: 1440, height: 900 },
+    run: async (p) => {
+      const tab = p.locator("button", { hasText: "For Businesses" });
+      await tab.click();
+      await tab.scrollIntoViewIfNeeded();
+      await p.mouse.move(0, 0);
+    },
+  },
+  {
+    name: "cross-border-tab-property-owners", route: "/us-cross-border", viewport: { width: 1440, height: 900 },
+    run: async (p) => {
+      const tab = p.locator("button", { hasText: "Property Owners" });
+      await tab.click();
+      await tab.scrollIntoViewIfNeeded();
+      await p.mouse.move(0, 0);
+    },
+  },
+  {
+    name: "cross-border-faq-open", route: "/us-cross-border", viewport: { width: 390, height: 844 },
+    run: async (p) => {
+      const q = p.locator("button", { hasText: "What is FBAR and do I need to file it?" });
+      await q.click();
+      await q.scrollIntoViewIfNeeded();
+    },
+  },
 ];
 
 const only = process.argv.slice(2);

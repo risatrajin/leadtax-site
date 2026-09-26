@@ -5,6 +5,7 @@ import Analytics from "./components/global/Analytics.jsx";
 import IntercomWidget from "./components/global/IntercomWidget.jsx";
 import Seo from "./components/seo/Seo.jsx";
 import HomePage from "./pages/HomePage.jsx";
+import UsCrossBorderPage from "./pages/UsCrossBorderPage.jsx";
 import BlogPostPage from "./pages/BlogPostPage.jsx";
 import BlogPage from "./pages/BlogPage.jsx";
 import ContactPage from "./pages/ContactPage.jsx";
@@ -43,6 +44,7 @@ export default function App() {
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/blog" element={<BlogPage />} />
         <Route path="/blog/:slug" element={<BlogPostPage />} />
+        <Route path="/us-cross-border" element={<UsCrossBorderPage />} />
       </Routes>
     </BrowserRouter>
   );
