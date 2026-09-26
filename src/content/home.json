@@ -93,6 +93,8 @@
     "bookLabel": "Book this office",
     "directionsLabel": "Directions",
     "headOfficeLabel": "Head office",
+    "officeCountOne": "1 office",
+    "officeCountOther": "{count} offices",
     "entranceAlt": "{office} office entrance"
   },
   "firstVisit": {

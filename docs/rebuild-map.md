@@ -208,7 +208,7 @@ brand navy tokens, the system font, the site's heading sizes and weights, `Butto
 |---|---|---|
 | Hero | `src/sections/home/Hero.jsx` | Navy gradient like the site hero; fixed photo #15; office card, select and dots share state |
 | Services | `src/sections/home/Services.jsx` | Two navy tiles (no photo, see image-inventory.md), three white cards |
-| Offices | `src/sections/home/Offices.jsx` | Accordion grouped by city (from `offices.json` `addressLocality`); from 1024px the open office's photo, hours and Book/Directions sit in a sticky panel on the right, below that they open inline. Only the open office shows buttons. |
+| Offices | `src/sections/home/Offices.jsx` | Accordion grouped by city (from `offices.json` `addressLocality`), each city with an office count; the open office is a white card with a navy side bar. From 1024px the open office's photo (with a name tag), hours and Book/Directions sit in a panel on the right that matches the list's height; below that they open inline. Only the open office shows buttons. |
 | First visit | `src/sections/home/FirstVisit.jsx` | Navy number circles, checklist on the brand-subtle panel |
 | Other ways to file | `src/sections/home/OtherWays.jsx` | |
 | Reviews | `src/sections/home/Reviews.jsx` | Initials instead of stock faces |
