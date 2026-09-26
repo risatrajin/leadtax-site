@@ -234,3 +234,20 @@ A brand-coloured `:focus-visible` outline now applies site-wide.
   and is flagged, like the Personal tax links in the header and footer.
 - Comparisons: `/home-legacy` is compared with the original build's `/`; the new `/` is only
   compared with the saved baseline.
+
+## Homepage hero from the client mockup
+
+The hero follows the client's homepage mockup: "Canadian & US Taxes. Simplified.", the subtitle,
+"Book an Appointment" and "Find a Location" buttons, a trust row (Google rating from `reviews.json`,
+Proudly Canadian, Trusted & Secure), and the five services as cards inside the hero. The separate
+"What we can do for you" section was removed (its heading stays in the hero for screen readers).
+The office picker that used to be in the hero is gone; each office is still bookable from the
+"Visit an office" section.
+
+- Copy: `src/content/home.json` → `hero` (source: client mockup). Service links come from `nav.json`.
+- Colours: two new tokens, `brand-bright` (#1459C7, accent word, icons, arrows) and `canada-red`
+  (#D52B1E, maple leaf). Buttons stay in the site's navy pill style rather than the mockup's
+  square bright-blue buttons.
+- Icons: lucide has no flags or maple leaf. The maple leaf is an inline SVG (`MapleLeafIcon`);
+  the US & Cross-Border card uses a globe instead of the mockup's two flags.
+- Photo: interim (#15) and flagged until a Lummi image is chosen.

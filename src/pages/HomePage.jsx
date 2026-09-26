@@ -3,7 +3,6 @@ import Seo from "../components/seo/Seo.jsx";
 import SiteHeader from "../components/layout/SiteHeader.jsx";
 import SiteFooter from "../components/layout/SiteFooter.jsx";
 import Hero from "../sections/home/Hero.jsx";
-import Services from "../sections/home/Services.jsx";
 import Offices from "../sections/home/Offices.jsx";
 import FirstVisit from "../sections/home/FirstVisit.jsx";
 import OtherWays from "../sections/home/OtherWays.jsx";
@@ -19,7 +18,6 @@ export default function HomePage() {
       <SiteHeader />
       <main id="main">
         <Hero />
-        <Services />
         <Offices />
         <FirstVisit />
         <OtherWays />

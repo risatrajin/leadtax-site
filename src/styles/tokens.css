@@ -35,3 +35,11 @@
   --color-promo-to: #65a30d;
 }
 
+
+/* Homepage hero (client mockup). */
+@theme {
+  /* Brighter brand blue for the accent word, service icons and arrows in the hero. */
+  --color-brand-bright: #1459c7;
+  /* Canadian red for the maple leaf. */
+  --color-canada-red: #d52b1e;
+}

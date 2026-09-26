@@ -8,84 +8,75 @@
     "href": "/contact"
   },
   "hero": {
+    "_source": "Client homepage mockup: headline, subtitle, buttons, trust row and service cards.",
     "_placeholders": [
-      "badge"
+      "image"
     ],
-    "badge": "Canadian owned and operated",
-    "title": "Tax help you can walk into.",
-    "text": "Sit down with a tax expert at one of our offices across Greater Vancouver. Personal and business returns, bookkeeping, and US filings for Canadians.",
-    "officeSelectLabel": "Pick the office closest to you",
-    "bookLabel": "Book an appointment",
-    "findOffice": {
-      "label": "Find an office",
+    "_imageNote": "Interim photo (#15) until a Lummi image is chosen.",
+    "titleLead": "Canadian & US Taxes.",
+    "titleAccent": "Simplified.",
+    "text": "In-person tax, accounting and bookkeeping for individuals and businesses.",
+    "book": {
+      "label": "Book an Appointment",
+      "to": "/contact"
+    },
+    "findLocation": {
+      "label": "Find a Location",
       "href": "#offices"
     },
-    "ratingLead": "{rating} on Google",
-    "ratingTail": ", {count} reviews",
-    "card": {
-      "label": "Pick the office closest to you",
-      "todayLabel": "Today:",
-      "bookLabel": "Book this office",
-      "directionsLabel": "Directions"
+    "rating": {
+      "label": "{rating} Google Rating",
+      "count": "{count} Reviews",
+      "starsLabel": "5 out of 5 stars"
     },
-    "dotLabel": "Show {office}",
-    "dotsLabel": "Offices",
-    "image": {
-      "src": "/images/70e1bf44b4f3bacec78cc900a37b1ff983c7da65.png",
-      "alt": "Woman in a LeadTax jacket smiling at her phone on the Vancouver seawall"
-    }
-  },
-  "services": {
-    "_placeholders": [
-      "intro"
-    ],
-    "title": "What we can do for you",
-    "intro": "Every service is handled by the same team, in the same office, so you explain your situation once.",
-    "featured": [
+    "trust": [
       {
-        "serviceId": "us-cross-border-tax",
-        "title": "US & cross-border tax",
-        "text": "Expert help for Canadians with US tax obligations, filed in both countries without the back and forth.",
-        "cta": "Book a cross-border consult",
-        "to": "/us-cross-border"
+        "icon": "MapleLeaf",
+        "title": "Proudly Canadian",
+        "text": "Canadian owned and operated"
       },
       {
-        "_placeholder": true,
-        "_note": "Bookkeeping availability and plans are unconfirmed (questions-for-client.md Q12).",
-        "serviceId": "bookkeeping",
-        "title": "Bookkeeping",
-        "text": "Keep your records organized and compliant all year, so tax time is a short meeting instead of a scramble.",
-        "cta": "See bookkeeping plans",
-        "href": "#"
+        "icon": "ShieldCheck",
+        "title": "Trusted & Secure",
+        "text": "Your information is safe with us."
       }
     ],
-    "standard": [
+    "image": {
+      "src": "/images/70e1bf44b4f3bacec78cc900a37b1ff983c7da65.png",
+      "alt": "Woman in a LeadTax jacket smiling at her phone on the Vancouver seawall",
+      "position": "70% 40%"
+    },
+    "servicesTitle": "What we can do for you",
+    "services": [
       {
-        "_placeholders": [
-          "href"
-        ],
-        "serviceId": "personal-tax",
-        "title": "Personal tax",
-        "text": "Simple and stress-free tax filing for you and your family.",
-        "href": "#"
+        "link": "personalTax",
+        "icon": "User",
+        "title": "Personal Tax",
+        "text": "Simple and stress-free tax filing."
       },
       {
-        "_placeholders": [
-          "href"
-        ],
-        "serviceId": "business-tax",
-        "title": "Business tax",
-        "text": "Corporate and self-employed returns that support your business growth.",
-        "href": "#"
+        "link": "businessTax",
+        "icon": "Briefcase",
+        "title": "Business Tax",
+        "text": "Support for your business growth."
       },
       {
-        "_placeholders": [
-          "href"
-        ],
-        "serviceId": "trust-estate-tax",
-        "title": "Trust & estate tax filing",
-        "text": "Professional tax filing for trusts and estates, handled with care.",
-        "href": "#"
+        "link": "bookkeeping",
+        "icon": "Calculator",
+        "title": "Bookkeeping",
+        "text": "Keep your records organized and compliant."
+      },
+      {
+        "link": "usCrossBorder",
+        "icon": "Globe",
+        "title": "US & Cross-Border Tax",
+        "text": "Expert help for Canadians with US tax obligations."
+      },
+      {
+        "link": "trustEstate",
+        "icon": "FilePenLine",
+        "title": "Trust & Estate Tax Filing",
+        "text": "Professional tax filing for trusts and estates."
       }
     ]
   },
