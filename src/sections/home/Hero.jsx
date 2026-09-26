@@ -23,7 +23,7 @@ function GoogleLogo({ className }) {
 
 function TrustRow() {
   return (
-    <ul className="mt-10 flex flex-col gap-6 sm:flex-row sm:flex-wrap sm:gap-y-6 sm:divide-x sm:divide-gray-200 xl:w-fit xl:rounded-2xl xl:bg-white/90 xl:px-5 xl:py-4 xl:shadow-lg xl:backdrop-blur">
+    <ul className="mx-auto flex w-fit flex-col gap-6 sm:flex-row sm:flex-wrap sm:justify-center sm:gap-y-6 sm:divide-x sm:divide-gray-200">
       <li className="flex items-center gap-3 sm:pr-5">
         <GoogleLogo className="h-9 w-9 flex-shrink-0" />
         <div>
@@ -71,11 +71,11 @@ function ServiceCard({ service }) {
 }
 
 /**
- * Homepage hero (client mockup): headline and actions on the left, a photo on the right that
- * fades into the page, a trust row, and the five services as cards along the bottom.
+ * Homepage hero (client mockup): headline and actions on the left, a photo behind them, and
+ * the five services as cards along the bottom.
  * From 1280px the photo covers the whole section behind the text and cards, with no overlay.
- * On the photo, the accent word uses brand navy and the subtitle a darker grey for contrast, and
- * the trust row sits on a frosted white card. Below 1280px the photo sits on top, full width.
+ * On the photo, the accent word uses brand navy and the subtitle a darker grey for contrast.
+ * Below 1280px the photo sits on top, full width. The trust row is a separate band (TrustBand).
  */
 export default function Hero() {
   return (
@@ -111,7 +111,6 @@ export default function Hero() {
             </Button>
           </div>
         </div>
-        <TrustRow />
       </div>
 
       <div className="relative mx-auto max-w-7xl px-4 pb-16 md:px-8 md:pb-24 xl:mt-[50px] xl:pb-[46px]">
@@ -123,5 +122,14 @@ export default function Hero() {
         </div>
       </div>
     </section>
+  );
+}
+
+/** Rating and trust points in a centered band directly under the hero. */
+export function TrustBand() {
+  return (
+    <div className="border-b border-gray-200 bg-white px-4 py-8 md:px-8">
+      <TrustRow />
+    </div>
   );
 }
