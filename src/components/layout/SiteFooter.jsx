@@ -10,7 +10,8 @@ import { linkById } from "./site-header/panels.jsx";
 
 const { footer, localLinks } = nav;
 const COLUMN_TITLE = "mb-4 text-sm uppercase tracking-wider text-white";
-const LINK = "text-sm text-white/70 transition-colors hover:text-white";
+// On phones each link gets a 32px-tall tap area; the list spacing shrinks to match.
+const LINK = "inline-block py-1.5 text-sm text-white/70 transition-colors hover:text-white md:py-0";
 // Extra cities whose name is still a placeholder are left out, so "[TBD: city]" never shows.
 const cities = [
   ...officeCities,
@@ -21,7 +22,7 @@ function LinkColumn({ title, links }) {
   return (
     <div>
       <h2 className={COLUMN_TITLE}>{title}</h2>
-      <ul className="space-y-3">
+      <ul className="space-y-1 md:space-y-3">
         {links.map((link) => (
           <li key={link.label}>
             <SmartLink to={link.to} href={link.href} className={LINK}>
@@ -46,15 +47,18 @@ export default function SiteFooter() {
               <img src={site.logo} alt={site.name} className="h-8 brightness-0 invert" />
             </Link>
             <p className="max-w-sm text-sm text-white/70">{site.footer.tagline}</p>
-            <div className="space-y-1 text-sm">
-              <a href={`tel:${tollFreeDashed}`} className="block text-white hover:underline">
+            <div className="text-sm">
+              <a href={`tel:${tollFreeDashed}`} className="flex min-h-11 w-fit items-center text-white hover:underline md:min-h-0 md:py-0.5">
                 {tollFreeDashed}
               </a>
-              <a href={`mailto:${site.contact.email}`} className="block text-white/70 hover:text-white">
+              <a
+                href={`mailto:${site.contact.email}`}
+                className="flex min-h-11 w-fit items-center text-white/70 hover:text-white md:min-h-0 md:py-0.5"
+              >
                 {site.contact.email}
               </a>
             </div>
-            <ul aria-label={footer.socialLabel} className="flex items-center gap-3 pt-2">
+            <ul aria-label={footer.socialLabel} className="-ml-3 flex items-center">
               {site.social.map((social) => {
                 const Icon = getIcon(social.icon);
                 return (
@@ -64,7 +68,7 @@ export default function SiteFooter() {
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label={social.label}
-                      className="text-white/60 transition-colors hover:text-white"
+                      className="flex h-11 w-11 items-center justify-center rounded-full text-white/70 transition-colors hover:bg-white/10 hover:text-white"
                     >
                       <Icon className="h-5 w-5" />
                     </a>
@@ -102,7 +106,7 @@ export default function SiteFooter() {
           {cities.map((city) => (
             <div key={city}>
               <h3 className="mb-3 text-sm font-semibold text-white">{city}</h3>
-              <ul className="space-y-2">
+              <ul className="space-y-1 md:space-y-2">
                 {localLinks.services.map((service) => (
                   <li key={service.label}>
                     <SmartLink href={service.href} className={LINK}>

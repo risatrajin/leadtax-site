@@ -105,11 +105,11 @@ function PlanCard({ column, tier, tab, rows }) {
             );
           }
           return (
-            <li key={row.name} className={`flex items-start gap-2.5 ${value ? "text-gray-800" : "text-gray-400 line-through"}`}>
+            <li key={row.name} className={`flex items-start gap-2.5 ${value ? "text-gray-800" : "text-gray-500 line-through"}`}>
               {value ? (
                 <Check aria-hidden="true" className="mt-0.5 h-4 w-4 flex-shrink-0 text-green-600" />
               ) : (
-                <X aria-hidden="true" className="mt-0.5 h-4 w-4 flex-shrink-0 text-gray-300" />
+                <X aria-hidden="true" className="mt-0.5 h-4 w-4 flex-shrink-0 text-gray-400" />
               )}
               <span>
                 {row.name}

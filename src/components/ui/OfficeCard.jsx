@@ -28,7 +28,7 @@ export default function OfficeCard({ office, bookLabel, headOfficeLabel, onPickE
         </div>
         <p className="text-gray-700 text-sm leading-relaxed">{display.address}</p>
         {office.email && (
-          <a href={`mailto:${office.email}`} className="text-gray-700 text-sm hover:text-brand">
+          <a href={`mailto:${office.email}`} className="inline-block py-1.5 text-gray-700 text-sm hover:text-brand">
             {office.email}
           </a>
         )}
