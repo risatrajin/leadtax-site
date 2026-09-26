@@ -69,5 +69,236 @@
     }
   ],
   "perReturnLabel": " per return",
-  "ctaLabel": "Get Started"
+  "ctaLabel": "Get Started",
+  "comparison": {
+    "_note": "Comparison table on /pricing. Column labels and the File Online prices come from diyTiers/expertTiers above. Both tabs link Get Started to the remote portal (known issue).",
+    "tabs": [
+      {
+        "id": "online",
+        "label": "File Online",
+        "tiers": "diyTiers",
+        "showPrices": true
+      },
+      {
+        "id": "expert",
+        "label": "File Remotely",
+        "tiers": "expertTiers",
+        "showPrices": false
+      }
+    ],
+    "columns": [
+      {
+        "key": "basic",
+        "headerId": "basic"
+      },
+      {
+        "key": "deluxe",
+        "headerId": "deluxe",
+        "popular": true
+      },
+      {
+        "key": "premier",
+        "headerId": "premier"
+      },
+      {
+        "key": "selfEmployed",
+        "headerId": "self-employment"
+      }
+    ],
+    "featuresLabel": "Features",
+    "popularLabel": "Most Popular",
+    "addOnLabel": "Add-on",
+    "getStartedLabel": "Get Started",
+    "getStartedHref": "app:remote.register",
+    "rows": {
+      "online": [
+        {
+          "highlight": true,
+          "name": "Review and file",
+          "basic": "$59.99",
+          "deluxe": "$89.99",
+          "premier": "$129.99",
+          "selfEmployed": "$169.99"
+        },
+        {
+          "name": "T4 income",
+          "basic": true,
+          "deluxe": true,
+          "premier": true,
+          "selfEmployed": true
+        },
+        {
+          "name": "RRSP contributions",
+          "basic": true,
+          "deluxe": true,
+          "premier": true,
+          "selfEmployed": true
+        },
+        {
+          "name": "Tuition credits",
+          "basic": true,
+          "deluxe": true,
+          "premier": true,
+          "selfEmployed": true
+        },
+        {
+          "name": "Automatic optimizations",
+          "basic": true,
+          "deluxe": true,
+          "premier": true,
+          "selfEmployed": true
+        },
+        {
+          "name": "Medical expenses",
+          "basic": true,
+          "deluxe": true,
+          "premier": true,
+          "selfEmployed": true
+        },
+        {
+          "name": "Donations & credits",
+          "basic": true,
+          "deluxe": true,
+          "premier": true,
+          "selfEmployed": true
+        },
+        {
+          "name": "Employment expenses",
+          "basic": false,
+          "deluxe": true,
+          "premier": true,
+          "selfEmployed": true
+        },
+        {
+          "name": "Dependent transfers",
+          "basic": false,
+          "deluxe": true,
+          "premier": true,
+          "selfEmployed": true
+        },
+        {
+          "name": "Capital gains & losses",
+          "basic": false,
+          "deluxe": true,
+          "premier": true,
+          "selfEmployed": true
+        },
+        {
+          "name": "Foreign income",
+          "basic": false,
+          "deluxe": false,
+          "premier": true,
+          "selfEmployed": true
+        },
+        {
+          "name": "Rental income support",
+          "basic": false,
+          "deluxe": false,
+          "premier": true,
+          "selfEmployed": true
+        },
+        {
+          "name": "Self-employed tax toolkit",
+          "basic": false,
+          "deluxe": false,
+          "premier": false,
+          "selfEmployed": true
+        },
+        {
+          "name": "Expense & deduction calculators",
+          "basic": false,
+          "deluxe": false,
+          "premier": false,
+          "selfEmployed": true
+        },
+        {
+          "name": "Simplified business workflow",
+          "basic": false,
+          "deluxe": false,
+          "premier": false,
+          "selfEmployed": true
+        }
+      ],
+      "expert": [
+        {
+          "name": "Full tax preparation from a real tax expert",
+          "basic": true,
+          "deluxe": true,
+          "premier": true,
+          "selfEmployed": true
+        },
+        {
+          "name": "Simple tax situations: employment and pension income, students & seniors",
+          "basic": true,
+          "deluxe": true,
+          "premier": true,
+          "selfEmployed": true
+        },
+        {
+          "name": "Stocks, capital gains/losses & investment",
+          "basic": true,
+          "deluxe": true,
+          "premier": true,
+          "selfEmployed": true
+        },
+        {
+          "name": "Rental and foreign (T1135) income",
+          "basic": false,
+          "deluxe": true,
+          "premier": true,
+          "selfEmployed": true
+        },
+        {
+          "name": "Crypto tax",
+          "basic": false,
+          "deluxe": true,
+          "premier": true,
+          "selfEmployed": true
+        },
+        {
+          "name": "Emigrant tax return",
+          "basic": false,
+          "deluxe": true,
+          "premier": true,
+          "selfEmployed": true
+        },
+        {
+          "name": "Final (deceased tax return)",
+          "basic": false,
+          "deluxe": false,
+          "premier": true,
+          "selfEmployed": true
+        },
+        {
+          "name": "Non-resident tax return",
+          "basic": false,
+          "deluxe": false,
+          "premier": false,
+          "selfEmployed": true
+        },
+        {
+          "name": "Business or self-employment income",
+          "basic": false,
+          "deluxe": false,
+          "premier": false,
+          "selfEmployed": true
+        },
+        {
+          "section": true,
+          "name": "Other Features",
+          "basic": "",
+          "deluxe": "",
+          "premier": "",
+          "selfEmployed": ""
+        },
+        {
+          "name": "1:1 tax consultation with a certified tax expert",
+          "basic": "30 minutes",
+          "deluxe": "30 minutes",
+          "premier": "45 minutes",
+          "selfEmployed": "60 minutes"
+        }
+      ]
+    }
+  }
 }

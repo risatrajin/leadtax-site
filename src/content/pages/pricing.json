@@ -1,0 +1,9 @@
+{
+  "title": "Simple, Transparent Pricing",
+  "intro": "Choose the plan that fits your tax situation. All plans include maximum refund guarantee.",
+  "guarantee": {
+    "title": "100% Accurate, Guaranteed",
+    "text": "We guarantee your maximum refund and 100% accuracy. If we make an error, we'll reimburse you for any penalties and interest, up to $1,000.",
+    "points": ["Maximum refund guarantee", "Error-free filing", "CRA certified"]
+  }
+}

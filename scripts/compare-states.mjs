@@ -96,6 +96,13 @@ const STATES = [
       await q.scrollIntoViewIfNeeded();
     },
   },
+  ...[{ width: 1440, height: 1600 }, { width: 390, height: 1400 }].map((viewport) => ({
+    name: `pricing-expert-tab-${viewport.width}`, route: "/pricing", viewport,
+    run: async (p) => {
+      await p.locator("section button", { hasText: "File Remotely" }).click();
+      await p.mouse.move(0, 0);
+    },
+  })),
 ];
 
 const only = process.argv.slice(2);

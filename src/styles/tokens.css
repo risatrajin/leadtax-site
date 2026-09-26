@@ -20,6 +20,9 @@
   /* Very pale blue-grey used to start soft section gradients. Was #E8F4F8. */
   --color-surface-tint: #e8f4f8;
 
+  /* Warm accent for the "Most Popular" badge on /pricing. Was #E8A020. */
+  --color-popular: #e8a020;
+
   /* Accent: rating stars. Was #FDB022. */
   --color-rating: #fdb022;
 
