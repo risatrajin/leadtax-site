@@ -66,12 +66,6 @@ function ServiceCard({ service }) {
         <h3 className="text-base font-semibold leading-snug text-gray-900 lg:mt-3">{service.title}</h3>
         <p className="mt-1 text-sm leading-snug text-gray-600">{service.text}</p>
       </div>
-      <span
-        aria-hidden="true"
-        className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full border-2 border-brand-bright text-brand-bright transition-colors group-hover:bg-brand-bright group-hover:text-white lg:mt-3"
-      >
-        <ArrowRight className="h-4 w-4" />
-      </span>
     </SmartLink>
   );
 }
