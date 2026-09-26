@@ -39,11 +39,19 @@
     "title": "File your tax return with confidence.",
     "items": [
       {
+        "_placeholders": [
+          "title",
+          "description"
+        ],
         "icon": "ShieldCheck",
         "title": "Maximum Refund Guarantee",
         "description": "We help you claim every credit you qualify for."
       },
       {
+        "_placeholders": [
+          "title",
+          "description"
+        ],
         "icon": "Check",
         "title": "Accuracy Guaranteed",
         "description": "Every return is checked for accuracy."
@@ -126,6 +134,9 @@
     "title": "Our experts are on standby to assist you at any step.",
     "items": [
       {
+        "_placeholders": [
+          "description"
+        ],
         "icon": "Shield",
         "title": "Audit Protection",
         "description": "Help with CRA or Revenu Québec letters."

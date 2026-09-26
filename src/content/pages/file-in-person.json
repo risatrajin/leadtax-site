@@ -102,6 +102,9 @@
         "description": "Your sensitive data is protected with industry-leading security measures."
       },
       {
+        "_placeholders": [
+          "title"
+        ],
         "icon": "CircleCheckBig",
         "title": "CRA and Revenu Québec compliant",
         "description": "All returns are prepared and filed according to government standards."

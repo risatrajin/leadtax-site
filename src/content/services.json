@@ -46,6 +46,10 @@
       "isComingSoon": false
     },
     {
+      "_placeholders": [
+        "isComingSoon",
+        "ctaText"
+      ],
       "id": 6,
       "title": "Accounting and Bookkeeping",
       "description": "Comprehensive accounting and bookkeeping services for individuals and businesses.",
@@ -54,5 +58,60 @@
       "ctaText": "Coming Soon",
       "isComingSoon": true
     }
-  ]
+  ],
+  "serviceLines": {
+    "_note": "Service list for the redesigned homepage. Titles come from the client homepage mockup. Summaries are quoted from the current site where one exists (_source says where); anything else is flagged as a placeholder.",
+    "items": [
+      {
+        "_placeholders": [
+          "summary",
+          "link"
+        ],
+        "id": "personal-tax",
+        "title": "Personal Tax",
+        "summary": "Personal tax filing for individuals in Canada, including do-it-yourself filing, remote filing, and in-person services.",
+        "_source": "adapted from terms.json §1 (edited, so flagged)",
+        "link": "/"
+      },
+      {
+        "_placeholders": [
+          "link"
+        ],
+        "id": "business-tax",
+        "title": "Business Tax",
+        "summary": "Transform tax liabilities into a manageable, optimized aspect of your business strategy with tailored solutions for Canadian entrepreneurs.",
+        "_source": "blog post excerpt: small-business-tax-solutions-canadian-entrepreneurs",
+        "link": null
+      },
+      {
+        "_placeholders": [
+          "available",
+          "link"
+        ],
+        "id": "bookkeeping",
+        "title": "Bookkeeping",
+        "summary": "Comprehensive accounting and bookkeeping services for individuals and businesses.",
+        "_source": "services.json filingOptions[id=6].description",
+        "available": false,
+        "link": null
+      },
+      {
+        "id": "us-cross-border-tax",
+        "title": "US & Cross-Border Tax",
+        "summary": "Specialized tax services for Canadians with US tax obligations or Americans living in Canada.",
+        "_source": "services.json filingOptions[id=4].description",
+        "link": "/us-cross-border"
+      },
+      {
+        "_placeholders": [
+          "link"
+        ],
+        "id": "trust-estate-tax",
+        "title": "Trust & Estate Tax Filing",
+        "summary": "We provide expert guidance on estate taxes, ensuring smooth wealth transfer, tax-efficient estate planning, and minimizing tax burdens for beneficiaries.",
+        "_source": "blog post body: avoid-heavy-estate-taxes-canada",
+        "link": null
+      }
+    ]
+  }
 }

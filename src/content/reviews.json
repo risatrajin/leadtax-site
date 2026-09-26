@@ -1,4 +1,8 @@
 {
+  "_placeholders": [
+    "rating",
+    "count"
+  ],
   "googleUrl": "https://www.google.com/search?sca_esv=539c00fc8c0dc83a&cs=0&output=search&kgmid=/g/11yrw6n2wz&q=Lead+Tax&shndl=30&source=sh/x/kp/local/m1/1&kgs=775836b1221013c6&shem=shrtsdl&utm_source=shrtsdl,sh/x/kp/local/m1/1#lrd=0x548671002f5d3723:0x639f6e81e3a64a20,1,,,,",
   "heading": "What Our Customers Say",
   "sourceLabel": "Reviews",
@@ -8,6 +12,7 @@
   "readMoreLabel": "Read more",
   "items": [
     {
+      "_placeholder": true,
       "id": 1,
       "name": "Radheeka Per...",
       "initials": "R",
@@ -18,6 +23,7 @@
       "avatar": "https://images.unsplash.com/photo-1655249493799-9cee4fe983bb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjB3b21hbiUyMGhlYWRzaG90JTIwcG9ydHJhaXR8ZW58MXx8fHwxNzc0MjI4OTczfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
     },
     {
+      "_placeholder": true,
       "id": 2,
       "name": "Ruwin Sinniah",
       "initials": "R",
@@ -28,6 +34,7 @@
       "avatar": "https://images.unsplash.com/photo-1629507208649-70919ca33793?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBtYW4lMjBidXNpbmVzcyUyMHBvcnRyYWl0fGVufDF8fHx8MTc3NDI2MjMyOXww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
     },
     {
+      "_placeholder": true,
       "id": 3,
       "name": "Amrin Virji",
       "initials": "A",
@@ -38,6 +45,7 @@
       "avatar": "https://images.unsplash.com/photo-1762522921456-cdfe882d36c3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx5b3VuZyUyMHByb2Zlc3Npb25hbCUyMHdvbWFuJTIwcG9ydHJhaXR8ZW58MXx8fHwxNzc0MjQ5OTA1fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
     },
     {
+      "_placeholder": true,
       "id": 4,
       "name": "CHRIS LUCIUK",
       "initials": "C",
@@ -48,6 +56,7 @@
       "avatar": "https://images.unsplash.com/photo-1651684215020-f7a5b6610f23?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBtYWxlJTIwaGVhZHNob3R8ZW58MXx8fHwxNzc0MjU5MjA0fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
     },
     {
+      "_placeholder": true,
       "id": 5,
       "name": "Lisa Stumpf",
       "initials": "L",

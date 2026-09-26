@@ -1,4 +1,8 @@
 {
+  "_placeholders": [
+    "siteUrl",
+    "downloads"
+  ],
   "name": "LeadTax",
   "siteUrl": "https://leadtax.ca",
   "logo": "/images/aa522b010086bcaf524c383acdd1db0f7a1d3d46.png",
@@ -21,36 +25,42 @@
   },
   "social": [
     {
+      "_placeholder": true,
       "id": "facebook",
       "label": "Facebook",
       "icon": "Facebook",
       "url": "https://www.facebook.com/leadtax.ca"
     },
     {
+      "_placeholder": true,
       "id": "x",
       "label": "X",
       "icon": "Twitter",
       "url": "https://x.com/leadtax_ca"
     },
     {
+      "_placeholder": true,
       "id": "instagram",
       "label": "Instagram",
       "icon": "Instagram",
       "url": "https://www.instagram.com/leadtax.ca"
     },
     {
+      "_placeholder": true,
       "id": "linkedin",
       "label": "LinkedIn",
       "icon": "Linkedin",
       "url": "https://www.linkedin.com/company/leadtax-ca/"
     },
     {
+      "_placeholder": true,
       "id": "youtube",
       "label": "YouTube",
       "icon": "Youtube",
       "url": "https://www.youtube.com/@leadtax"
     },
     {
+      "_placeholder": true,
       "id": "tiktok",
       "label": "TikTok",
       "icon": "TikTok",
@@ -58,6 +68,9 @@
     }
   ],
   "footer": {
+    "_placeholders": [
+      "compliance"
+    ],
     "tagline": "Canadian tax filing made simple. File online yourself or get expert help from certified tax professionals.",
     "copyright": "LeadTax. All rights reserved.",
     "compliance": "Powered by a NETFILE Certified application | SOC 2 Compliant"

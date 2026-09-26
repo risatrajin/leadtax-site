@@ -5,10 +5,11 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && node scripts/list-placeholders.mjs",
     "preview": "vite preview",
     "original": "serve -s original-build -l 8081",
-    "compare": "node scripts/compare-screenshots.mjs"
+    "compare": "node scripts/compare-screenshots.mjs",
+    "placeholders": "node scripts/list-placeholders.mjs"
   },
   "dependencies": {
     "@radix-ui/react-dialog": "^1.1.23",

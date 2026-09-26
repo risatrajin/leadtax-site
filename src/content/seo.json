@@ -1,5 +1,9 @@
 {
   "defaults": {
+    "_placeholders": [
+      "description",
+      "ogImage"
+    ],
     "title": "LeadTax - Local Tax Experts in Vancouver & Burnaby | In-Person, Drop-Off & Remote Filing",
     "description": "LeadTax offers tax filing at 4 offices across Vancouver and Burnaby, BC — walk-in, drop-off, or book an appointment. Also file remotely from anywhere in Canada. Expert help or DIY from $19. CRA-certified.",
     "keywords": "tax filing Vancouver, tax filing Burnaby, remote tax filing Canada, in-person tax expert Vancouver, tax office near me BC, drop off taxes Vancouver, local tax expert Canada, CRA certified tax",
@@ -8,11 +12,17 @@
   },
   "pages": {
     "home": {
+      "_placeholders": [
+        "description"
+      ],
       "title": "LeadTax - Local Tax Experts in Vancouver & Burnaby | File In-Person or Remotely",
       "description": "LeadTax has 4 offices across Vancouver & Burnaby for in-person and drop-off tax filing, plus remote filing from anywhere in Canada. Expert help or DIY from $19. CRA-certified, maximum refund guaranteed.",
       "keywords": "tax filing Vancouver, tax filing Burnaby, remote tax filing Canada, in-person tax help Vancouver, tax office Burnaby BC, local tax expert Vancouver, drop off taxes Burnaby, Canadian tax expert near me"
     },
     "about": {
+      "_placeholders": [
+        "description"
+      ],
       "title": "About LeadTax | Local Tax Experts in Vancouver & Burnaby, BC",
       "description": "LeadTax is a local Canadian tax company with 4 offices across Vancouver and Burnaby, BC. We offer in-person, drop-off, and remote tax filing for individuals, freelancers, and small businesses.",
       "keywords": "about LeadTax, local tax company Vancouver, tax experts Burnaby BC, Canadian tax filing company, LeadTax offices BC"
@@ -28,16 +38,26 @@
       "keywords": "tax drop off Vancouver, drop off taxes Burnaby, tax document drop off BC, tax preparation drop off near me, no appointment tax filing Vancouver"
     },
     "fileInPerson": {
+      "_placeholders": [
+        "description"
+      ],
       "title": "In-Person Tax Filing Vancouver & Burnaby | Meet a LeadTax Expert",
       "description": "File your taxes face-to-face with a LeadTax expert at one of our 4 offices in Vancouver and Burnaby. Walk-ins welcome. Book an appointment at Kingsway, Davie St, Commercial Dr, or Hastings.",
       "keywords": "in-person tax filing Vancouver, tax expert near me, tax office Burnaby, file taxes in person BC, local tax consultant Vancouver, walk in tax help"
     },
     "contact": {
+      "_placeholders": [
+        "description"
+      ],
       "title": "LeadTax Office Locations | Tax Filing in Vancouver & Burnaby",
       "description": "Visit LeadTax at 4 offices across Vancouver and Burnaby: Kingsway, Davie Street, Commercial Drive, and Hastings Street. Walk-ins welcome. Book an in-person or remote tax appointment today.",
       "keywords": "LeadTax locations, tax office Vancouver, tax office Burnaby, Kingsway tax filing, Davie Street tax, Commercial Drive tax expert, Hastings Street tax Burnaby, walk in tax help Vancouver"
     },
     "pricing": {
+      "_placeholders": [
+        "title",
+        "description"
+      ],
       "title": "LeadTax Pricing - Affordable Canadian Tax Filing Plans from $19",
       "description": "Compare LeadTax pricing plans. DIY online filing from $19 or expert-assisted filing from $59.99. All plans include maximum refund guarantee and CRA certification.",
       "keywords": "tax filing pricing Canada, affordable tax software, tax expert pricing, Canadian tax filing cost, CRA certified tax software"
@@ -63,7 +83,15 @@
     "appleStatusBarStyle": "black-translucent"
   },
   "schema": {
+    "_placeholders": [
+      "priceRange"
+    ],
     "organization": {
+      "_placeholders": [
+        "logo",
+        "foundingDate",
+        "availableLanguage"
+      ],
       "logo": "https://leadtax.ca/logo.png",
       "description": "Canadian do-it-yourself tax software for individuals, freelancers, and families",
       "foundingDate": "2020",

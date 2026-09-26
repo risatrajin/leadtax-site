@@ -55,6 +55,7 @@
       "to": "/terms"
     },
     "sitemap": {
+      "_placeholder": true,
       "label": "Sitemap",
       "to": "/sitemap"
     }

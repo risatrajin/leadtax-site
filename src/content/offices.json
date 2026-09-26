@@ -2,6 +2,15 @@
   "_note": "Single source for office data. 'display' is what the Contact page shows; 'schema' is what the SEO JSON-LD publishes. The two disagree in places on purpose (see docs/known-issues.md).",
   "offices": [
     {
+      "_placeholders": [
+        "phone",
+        "email",
+        "booking",
+        "display.address",
+        "schema.streetAddress",
+        "schema.postalCode",
+        "isHeadOffice"
+      ],
       "id": "burnaby-4350-hastings",
       "isHeadOffice": true,
       "phone": "6049784850",
@@ -29,6 +38,11 @@
       }
     },
     {
+      "_placeholders": [
+        "phone",
+        "email",
+        "booking"
+      ],
       "id": "vancouver-davie",
       "phone": "6044861111",
       "email": "Vancouverd@leadtax.ca",
@@ -52,6 +66,11 @@
       }
     },
     {
+      "_placeholders": [
+        "phone",
+        "email",
+        "booking"
+      ],
       "id": "vancouver-commercial",
       "phone": "6049693500",
       "email": "vancouverc@leadtax.ca",
@@ -76,6 +95,11 @@
       }
     },
     {
+      "_placeholders": [
+        "phone",
+        "email",
+        "booking"
+      ],
       "id": "vancouver-kingsway",
       "phone": "6049752950",
       "email": "",
@@ -99,6 +123,14 @@
       }
     },
     {
+      "_placeholders": [
+        "phone",
+        "email",
+        "booking",
+        "display.address",
+        "schema.streetAddress",
+        "schema.postalCode"
+      ],
       "id": "burnaby-4125-hastings",
       "phone": "6049784850",
       "email": "",

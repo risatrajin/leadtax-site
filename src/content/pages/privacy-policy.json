@@ -3,6 +3,9 @@
   "lastUpdated": "Last updated: Jan 10, 2026",
   "intro": [
     {
+      "_placeholders": [
+        "text"
+      ],
       "type": "paragraph",
       "text": "Lead Tax Group Inc. values your privacy and is committed to protecting your personal information. This Privacy Policy explains how we collect, use, store, and disclose personal information when you use our website, software, and services."
     },
@@ -17,6 +20,9 @@
       "title": "1. Who We Are",
       "blocks": [
         {
+          "_placeholders": [
+            "text"
+          ],
           "type": "paragraph",
           "text": "Lead Tax Inc. provides online, do-it-yourself personal tax filing services for Canadian residents. Our platform is powered by CRA NETFILE-certified software using the CloudTax API, allowing users to prepare and file tax returns securely and accurately with the Canada Revenue Agency (CRA)."
         }
@@ -279,6 +285,9 @@
           "gap": "md"
         },
         {
+          "_placeholders": [
+            "company"
+          ],
           "type": "contactCard",
           "company": "Lead Tax Inc."
         }

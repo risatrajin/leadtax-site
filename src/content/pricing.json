@@ -2,6 +2,9 @@
   "_note": "expertTiers is carried over from the original build but never shown: the tier toggle on the homepage was left empty.",
   "diyTiers": [
     {
+      "_placeholders": [
+        "price"
+      ],
       "title": "Basic",
       "price": "$19",
       "description": "Fast & simple for basic tax returns",
@@ -10,6 +13,9 @@
       "url": "app:diy.register"
     },
     {
+      "_placeholders": [
+        "price"
+      ],
       "title": "Deluxe",
       "price": "$39",
       "description": "Maximize your refund with smart deductions",
@@ -18,6 +24,9 @@
       "url": "app:diy.register"
     },
     {
+      "_placeholders": [
+        "price"
+      ],
       "title": "Premier",
       "price": "$69",
       "description": "Handle investments with confidence",
@@ -26,6 +35,9 @@
       "url": "app:diy.register"
     },
     {
+      "_placeholders": [
+        "price"
+      ],
       "title": "Self-Employment",
       "price": "$99",
       "description": "Built for business owners and freelancers",
@@ -36,6 +48,9 @@
   ],
   "expertTiers": [
     {
+      "_placeholders": [
+        "price"
+      ],
       "title": "Basic Expert",
       "price": "$59.99",
       "description": "Expert review for simple returns",
@@ -44,6 +59,9 @@
       "url": "https://calendly.com/leadtax/basic"
     },
     {
+      "_placeholders": [
+        "price"
+      ],
       "title": "Deluxe Expert",
       "price": "$89.99",
       "description": "Full expert assistance for families",
@@ -52,6 +70,9 @@
       "url": "https://calendly.com/leadtax/deluxe"
     },
     {
+      "_placeholders": [
+        "price"
+      ],
       "title": "Premier Expert",
       "price": "$129.99",
       "description": "Complex tax situations handled by pros",
@@ -60,6 +81,9 @@
       "url": "https://calendly.com/leadtax/premier"
     },
     {
+      "_placeholders": [
+        "price"
+      ],
       "title": "Self-Employment Expert",
       "price": "$169.99",
       "description": "Complete business tax management",
@@ -71,6 +95,9 @@
   "perReturnLabel": " per return",
   "ctaLabel": "Get Started",
   "comparison": {
+    "_placeholders": [
+      "popularLabel"
+    ],
     "_note": "Comparison table on /pricing. Column labels and the File Online prices come from diyTiers/expertTiers above. Both tabs link Get Started to the remote portal (known issue).",
     "tabs": [
       {
@@ -113,6 +140,12 @@
     "rows": {
       "online": [
         {
+          "_placeholders": [
+            "basic",
+            "deluxe",
+            "premier",
+            "selfEmployed"
+          ],
           "highlight": true,
           "name": "Review and file",
           "basic": "$59.99",

@@ -44,6 +44,10 @@
     "title": "Why choose drop-off",
     "items": [
       {
+        "_placeholders": [
+          "title",
+          "description"
+        ],
         "icon": "Calendar",
         "title": "No appointments needed",
         "description": "Drop off your documents anytime during our business hours. No scheduling required."

@@ -13,6 +13,9 @@
       "answer": "Lead Tax DIY is a great fit if you want to:\n\n• File your own taxes online with guidance and confidence\n• Have access to real experts when questions come up\n• File employment, family, investment, rental, or self-employment income\n• File current or previous years\n• Avoid hidden fees or last-minute surprises\n\nYou stay in control, but you are never on your own."
     },
     {
+      "_placeholders": [
+        "answer"
+      ],
       "question": "Who is Lead Tax DIY not for?",
       "answer": "While Lead Tax DIY covers most personal tax situations, it is not designed for certain specialized or advanced filings, including:\n\n• Corporate tax returns (T2)\n• Complex CRA elections or special returns\n• Certain agriculture-related reporting forms\n• Multi-jurisdiction provincial filings\n• Quebec provincial tax returns\n\nIf your situation falls into one of these categories, don't worry. Lead Tax can still help.\nThese cases can be handled through our File Remotely service or in-person support, where a tax professional takes care of the filing for you."
     },
@@ -29,6 +32,9 @@
       "answer": "Every Lead Tax DIY package includes:\n\n• Phone and email support from Lead Tax experts\n• Help understanding slips, forms, and CRA notices\n• Guidance before you file and after you submit\n• Year-round support, not just during tax season\n\nThis is a paid service so you always have someone to talk to when it matters."
     },
     {
+      "_placeholders": [
+        "answer"
+      ],
       "question": "How much does Lead Tax DIY cost?",
       "answer": "Lead Tax does not offer a free version. Pricing is simple and transparent:\n\nBasic $19\nSimple returns with employment income and common credits\n\nDeluxe $39\nFamilies, students, and returns with multiple slips\n\nPremier $69\nInvestment income, rental income, and more detailed situations\n\nSelf-Employment $99\nFreelancers, contractors, and gig workers\n\nEach return is priced per filing and includes expert support."
     },
@@ -55,6 +61,9 @@
       "answer": "You'll need your T4 slips from employers, receipts for deductions (like charitable donations, medical expenses), RRSP contributions, and any other income statements. If you're self-employed, bring records of your business income and expenses."
     },
     {
+      "_placeholders": [
+        "answer"
+      ],
       "question": "How much does LeadTax cost?",
       "answer": "Our pricing varies based on the filing method you choose. File Online starts at $19.99, File Remotely starts at $49.99, Drop-off service starts at $79.99, and In-Person consultations start at $99.99. All plans include expert review and maximum refund guarantee."
     },
@@ -75,6 +84,9 @@
       "answer": "Don't worry! You can adjust your return by filing a T1 Adjustment Request with the CRA. Our team can help you make corrections and ensure everything is accurate."
     },
     {
+      "_placeholders": [
+        "answer"
+      ],
       "question": "Do you offer support in French?",
       "answer": "Yes, we provide bilingual support in both English and French to serve all Canadians. Simply select your preferred language when you contact us."
     },
@@ -87,32 +99,53 @@
       "answer": "Yes! Our certified tax professionals handle everything from simple returns to complex situations including self-employment, rental income, investments, and small business taxes."
     },
     {
+      "_placeholders": [
+        "answer"
+      ],
       "question": "What is your maximum refund guarantee?",
       "answer": "We guarantee to find you the maximum refund you're entitled to by law. If we miss a credit or deduction that results in a smaller refund, we'll refund your service fee and pay any difference."
     }
   ],
   "usCrossBorder": [
     {
+      "_placeholders": [
+        "answer"
+      ],
       "question": "Who needs to file US taxes from Canada?",
       "answer": "US citizens, green card holders, and anyone with substantial presence in the US (typically 183 days over 3 years) must file US taxes, regardless of where they live. Additionally, Canadians earning US-source income may have filing obligations."
     },
     {
+      "_placeholders": [
+        "answer"
+      ],
       "question": "What is FBAR and do I need to file it?",
       "answer": "FBAR (Foreign Bank Account Report) is required if you have foreign financial accounts exceeding $10,000 USD at any time during the year. This includes Canadian bank accounts, investment accounts, and certain pension plans. Filing is separate from your tax return and due by April 15th (with automatic extension to October 15th)."
     },
     {
+      "_placeholders": [
+        "answer"
+      ],
       "question": "How does the Canada-US tax treaty help me?",
       "answer": "The tax treaty helps prevent double taxation by allowing you to claim foreign tax credits. Income taxed in one country can often be credited against taxes owed in the other. The treaty also provides specific benefits for pensions, social security, and certain types of investment income."
     },
     {
+      "_placeholders": [
+        "answer"
+      ],
       "question": "What are the deadlines for US cross-border tax filing?",
       "answer": "US tax returns are due April 15th, with an automatic 2-month extension to June 15th for those living abroad (further extension to October 15th available). FBAR is due April 15th with automatic extension to October 15th. Canadian returns are due April 30th (June 15th for self-employed)."
     },
     {
+      "_placeholders": [
+        "answer"
+      ],
       "question": "What happens if I haven't filed US taxes in previous years?",
       "answer": "The IRS offers Streamlined Filing Compliance Procedures for taxpayers who unintentionally failed to file. This program allows you to catch up on past returns with reduced penalties. We can help assess your situation and guide you through the process."
     },
     {
+      "_placeholders": [
+        "answer"
+      ],
       "question": "Can I deduct Canadian taxes paid on my US return?",
       "answer": "Yes, through the foreign tax credit system. You can claim a credit for taxes paid to Canada on your US return, which helps eliminate double taxation. This requires proper documentation and calculation, which our experts handle for you."
     }

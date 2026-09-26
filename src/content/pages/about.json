@@ -9,9 +9,21 @@
     ]
   },
   "stats": [
-    { "value": "10K+", "label": "Happy Customers" },
-    { "value": "99%", "label": "Accuracy Rate" },
-    { "value": "24/7", "label": "Support Available" }
+    {
+      "_placeholder": true,
+      "value": "10K+",
+      "label": "Happy Customers"
+    },
+    {
+      "_placeholder": true,
+      "value": "99%",
+      "label": "Accuracy Rate"
+    },
+    {
+      "_placeholder": true,
+      "value": "24/7",
+      "label": "Support Available"
+    }
   ],
   "whyChooseUs": {
     "title": "Why Choose LeadTax?",

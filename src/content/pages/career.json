@@ -4,10 +4,30 @@
   "benefits": {
     "title": "Why Work at LeadTax?",
     "items": [
-      { "emoji": "💼", "title": "Competitive Benefits", "description": "Comprehensive health coverage and retirement plans" },
-      { "emoji": "🏡", "title": "Flexible Work", "description": "Remote and hybrid options available" },
-      { "emoji": "📚", "title": "Growth Opportunities", "description": "Professional development and training programs" },
-      { "emoji": "🎉", "title": "Great Culture", "description": "Collaborative environment with passionate people" }
+      {
+        "_placeholder": true,
+        "emoji": "💼",
+        "title": "Competitive Benefits",
+        "description": "Comprehensive health coverage and retirement plans"
+      },
+      {
+        "_placeholder": true,
+        "emoji": "🏡",
+        "title": "Flexible Work",
+        "description": "Remote and hybrid options available"
+      },
+      {
+        "_placeholder": true,
+        "emoji": "📚",
+        "title": "Growth Opportunities",
+        "description": "Professional development and training programs"
+      },
+      {
+        "_placeholder": true,
+        "emoji": "🎉",
+        "title": "Great Culture",
+        "description": "Collaborative environment with passionate people"
+      }
     ]
   },
   "openings": {
@@ -15,19 +35,31 @@
     "applyLabel": "Apply Now",
     "jobs": [
       {
+        "_placeholder": true,
         "title": "Senior Tax Specialist",
         "description": "Help clients navigate complex tax situations with expertise and care.",
-        "tags": ["Full-time", "Toronto, ON"]
+        "tags": [
+          "Full-time",
+          "Toronto, ON"
+        ]
       },
       {
+        "_placeholder": true,
         "title": "Customer Success Representative",
         "description": "Provide exceptional support and guidance to our customers.",
-        "tags": ["Full-time", "Remote"]
+        "tags": [
+          "Full-time",
+          "Remote"
+        ]
       },
       {
+        "_placeholder": true,
         "title": "Software Developer",
         "description": "Build innovative features that simplify tax filing for Canadians.",
-        "tags": ["Full-time", "Hybrid"]
+        "tags": [
+          "Full-time",
+          "Hybrid"
+        ]
       }
     ]
   },

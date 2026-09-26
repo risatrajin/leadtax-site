@@ -73,6 +73,10 @@
     "title": "Why Choose LeadTax for Cross-Border Tax Services?",
     "items": [
       {
+        "_placeholders": [
+          "title",
+          "description"
+        ],
         "icon": "Shield",
         "title": "IRS-Certified Experts",
         "description": "Our team includes professionals with extensive experience in US and Canadian tax law."
@@ -184,18 +188,22 @@
     "text": "With years of experience helping Canadians navigate US tax requirements, we've become the trusted choice for cross-border tax services.",
     "stats": [
       {
+        "_placeholder": true,
         "value": "500+",
         "label": "Cross-Border Returns Filed"
       },
       {
+        "_placeholder": true,
         "value": "98%",
         "label": "Client Satisfaction Rate"
       },
       {
+        "_placeholder": true,
         "value": "15+",
         "label": "Years of Experience"
       },
       {
+        "_placeholder": true,
         "value": "100%",
         "label": "Compliance Guarantee"
       }
@@ -206,6 +214,9 @@
     "intro": "Choose the package that fits your needs. All prices in CAD.",
     "plans": [
       {
+        "_placeholders": [
+          "price"
+        ],
         "name": "Basic Filing",
         "price": "$299",
         "unit": "Per return",
@@ -218,6 +229,10 @@
         "ctaLabel": "Get Started"
       },
       {
+        "_placeholders": [
+          "price",
+          "badge"
+        ],
         "name": "Professional",
         "price": "$599",
         "unit": "Per return",
@@ -233,6 +248,9 @@
         "ctaLabel": "Get Started"
       },
       {
+        "_placeholders": [
+          "price"
+        ],
         "name": "Premium",
         "price": "$999",
         "unit": "Per return",

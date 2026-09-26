@@ -2,6 +2,9 @@
   "_note": "Posts in their original order (Related Articles shows the first three other posts in this order). Posts with an excerpt are listed on /blog; the other five are only reachable by URL or Related Articles. cardImage is the /blog card photo when it differs from the article image.",
   "posts": [
     {
+      "_placeholders": [
+        "content"
+      ],
       "slug": "bookkeepers-first-line-defense-wasted-spending",
       "title": "Bookkeepers: Your First Line of Defense Against Wasted Spending",
       "date": "January 8, 2026",
@@ -160,6 +163,9 @@
       ]
     },
     {
+      "_placeholders": [
+        "content"
+      ],
       "slug": "5-ways-turn-tax-return-financial-opportunity",
       "title": "5 Ways to Turn Your Tax Return into a Financial Opportunity",
       "date": "January 5, 2026",
@@ -282,6 +288,11 @@
       ]
     },
     {
+      "_placeholders": [
+        "author",
+        "authorRole",
+        "content"
+      ],
       "slug": "understanding-tax-deductions-for-freelancers",
       "title": "Understanding Tax Deductions for Freelancers",
       "date": "January 5, 2026",
@@ -349,6 +360,11 @@
       ]
     },
     {
+      "_placeholders": [
+        "author",
+        "authorRole",
+        "content"
+      ],
       "slug": "2026-tax-filing-deadlines",
       "title": "2026 Tax Filing Deadlines You Need to Know",
       "date": "January 3, 2026",
@@ -415,6 +431,9 @@
       ]
     },
     {
+      "_placeholders": [
+        "content"
+      ],
       "slug": "avoid-heavy-estate-taxes-canada",
       "title": "Transferring Wealth? Here's How to Avoid Heavy Estate Taxes in Canada",
       "date": "December 29, 2025",
@@ -553,6 +572,11 @@
       ]
     },
     {
+      "_placeholders": [
+        "author",
+        "authorRole",
+        "content"
+      ],
       "slug": "rrsp-vs-tfsa",
       "title": "RRSP vs TFSA: Which is Right for You?",
       "date": "December 28, 2025",
@@ -624,6 +648,11 @@
       ]
     },
     {
+      "_placeholders": [
+        "author",
+        "authorRole",
+        "content"
+      ],
       "slug": "common-tax-mistakes",
       "title": "Common Tax Mistakes and How to Avoid Them",
       "date": "December 20, 2025",
@@ -703,6 +732,9 @@
       ]
     },
     {
+      "_placeholders": [
+        "content"
+      ],
       "slug": "essential-tax-structures-ecommerce-service-businesses",
       "title": "Essential Tax Structures for E-commerce & Service Businesses in Canada",
       "date": "December 24, 2025",
@@ -876,6 +908,9 @@
       ]
     },
     {
+      "_placeholders": [
+        "content"
+      ],
       "slug": "small-business-tax-solutions-canadian-entrepreneurs",
       "title": "Small Business Tax Solutions: Tailored Advice for Canadian Entrepreneurs",
       "date": "December 17, 2025",
@@ -1025,6 +1060,11 @@
       ]
     },
     {
+      "_placeholders": [
+        "author",
+        "authorRole",
+        "content"
+      ],
       "slug": "whats-new-tax-year-2025",
       "title": "What's New for Tax Year 2025",
       "date": "December 15, 2025",
@@ -1105,6 +1145,11 @@
       ]
     },
     {
+      "_placeholders": [
+        "author",
+        "authorRole",
+        "content"
+      ],
       "slug": "home-office-deductions-guide",
       "title": "Home Office Deductions: A Complete Guide",
       "date": "December 10, 2025",
