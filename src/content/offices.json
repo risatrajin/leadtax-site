@@ -1,0 +1,108 @@
+{
+  "_note": "Single source for office data. 'display' is what the Contact page shows; 'schema' is what the SEO JSON-LD publishes. The two disagree in places on purpose (see docs/known-issues.md).",
+  "offices": [
+    {
+      "id": "burnaby-4350-hastings",
+      "isHeadOffice": true,
+      "phone": "6049784850",
+      "email": "burnaby@leadtax.ca",
+      "photo": "/images/c19d00da11be60b4716f88962976ce14c225dea3.png",
+      "display": {
+        "title": "Lead Tax",
+        "subtitle": "(Head Office)",
+        "address": "100-4350 Hasting St, Burnaby, BC"
+      },
+      "schema": {
+        "role": "main",
+        "streetAddress": "100-4350 Hastings Street",
+        "addressLocality": "Burnaby",
+        "addressRegion": "BC",
+        "postalCode": "V5C 2J9",
+        "image": "https://leadtax.ca/images/hastings-4125.jpg",
+        "geo": { "latitude": 49.2829, "longitude": -122.999 }
+      }
+    },
+    {
+      "id": "vancouver-davie",
+      "phone": "6044861111",
+      "email": "Vancouverd@leadtax.ca",
+      "photo": "/images/f324aaa86f9805f304d0788221b8ba2c741a484c.png",
+      "display": {
+        "title": "Lead Tax",
+        "subtitle": "",
+        "address": "1100 Davie St, Vancouver, BC"
+      },
+      "schema": {
+        "role": "department",
+        "order": 2,
+        "name": "LeadTax - Davie Street",
+        "streetAddress": "1100 Davie St",
+        "addressLocality": "Vancouver",
+        "addressRegion": "BC",
+        "postalCode": "V6E 1N3"
+      }
+    },
+    {
+      "id": "vancouver-commercial",
+      "phone": "6049693500",
+      "email": "vancouverc@leadtax.ca",
+      "photo": "/images/008d8d5f7cfa9f365240f909ca99134f7bdc260b.png",
+      "mapError": true,
+      "display": {
+        "title": "Lead Tax",
+        "subtitle": "",
+        "address": "2137 Commercial Dr, Vancouver, BC"
+      },
+      "schema": {
+        "role": "department",
+        "order": 3,
+        "name": "LeadTax - Commercial Drive",
+        "streetAddress": "2137 Commercial Dr",
+        "addressLocality": "Vancouver",
+        "addressRegion": "BC",
+        "postalCode": "V5N 4B4"
+      }
+    },
+    {
+      "id": "vancouver-kingsway",
+      "phone": "6049752950",
+      "email": "",
+      "photo": "/images/kingsway-2681.jpg",
+      "display": {
+        "title": "Lead Tax",
+        "subtitle": "",
+        "address": "2681 Kingsway, Vancouver, BC V5R 5H4"
+      },
+      "schema": {
+        "role": "department",
+        "order": 1,
+        "name": "LeadTax - Kingsway",
+        "streetAddress": "2681 Kingsway",
+        "addressLocality": "Vancouver",
+        "addressRegion": "BC",
+        "postalCode": "V5R 5H4"
+      }
+    },
+    {
+      "id": "burnaby-4125-hastings",
+      "phone": "6049784850",
+      "email": "",
+      "photo": "/images/hastings-4125.jpg",
+      "display": {
+        "title": "Lead Tax",
+        "subtitle": "",
+        "address": "4125 Hastings St, Burnaby, BC V5C 2J3"
+      },
+      "schema": {
+        "role": "department",
+        "order": 4,
+        "name": "LeadTax - 4125 Hastings",
+        "omitTelephone": true,
+        "streetAddress": "4125 Hastings St",
+        "addressLocality": "Burnaby",
+        "addressRegion": "BC",
+        "postalCode": "V5C 2J3"
+      }
+    }
+  ]
+}

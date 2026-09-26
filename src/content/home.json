@@ -1,0 +1,163 @@
+{
+  "hero": {
+    "title": "File your taxes online with confidence",
+    "text": "When you file your taxes with online tax software built by tax experts, you don't need to be a pro. Whether your tax situation is simple or complex, we guide you step by step so you can file confidently.",
+    "primaryCta": {
+      "label": "Get Started",
+      "href": "#pricing"
+    },
+    "video": {
+      "mediaId": "t0mnf104qc",
+      "label": "Watch Demo"
+    },
+    "copyTooltip": "Copy Number",
+    "copiedTooltip": "Copied!",
+    "image": {
+      "src": "/images/70e1bf44b4f3bacec78cc900a37b1ff983c7da65.png",
+      "alt": "Canadian couple reviewing taxes on laptop at home"
+    }
+  },
+  "filingOptions": {
+    "title": "Choose how you want to file",
+    "text": "Flexible filing options designed to fit your lifestyle and preferences",
+    "comingSoonLabel": "Coming Soon"
+  },
+  "pricing": {
+    "title": "Pick your do it yourself package.",
+    "text": "File your taxes online with confidence and accuracy."
+  },
+  "previousYears": {
+    "title": "Want to file taxes for previous years?",
+    "text": "You can file past returns with our easy-to-use tax software. Pricing may vary.",
+    "ctaLabel": "Get Started",
+    "image": {
+      "src": "https://images.unsplash.com/photo-1758613655335-63e9e75af77f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzdHVkaW8lMjBsYXB0b3AlMjBtb2Rlcm4lMjBwcm9mZXNzaW9uYWx8ZW58MXx8fHwxNzY3ODE5ODE2fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+      "alt": "Happy person working on laptop"
+    }
+  },
+  "trust": {
+    "title": "File your tax return with confidence.",
+    "items": [
+      {
+        "icon": "ShieldCheck",
+        "title": "Maximum Refund Guarantee",
+        "description": "We help you claim every credit you qualify for."
+      },
+      {
+        "icon": "Check",
+        "title": "Accuracy Guaranteed",
+        "description": "Every return is checked for accuracy."
+      },
+      {
+        "icon": "Lock",
+        "title": "Secure & Encrypted",
+        "description": "Your data is protected with modern encryption."
+      },
+      {
+        "icon": "Download",
+        "title": "Auto-Fill My Return",
+        "description": "Import slips directly from CRA."
+      },
+      {
+        "icon": "FileText",
+        "title": "Certified & Reliable",
+        "description": "Built by Canadian tax experts."
+      }
+    ]
+  },
+  "steps": {
+    "title": "It's easy, fast, and stress-free.",
+    "items": [
+      {
+        "number": "01",
+        "title": "Get started",
+        "description": "Complete a personalized tax interview and import slips."
+      },
+      {
+        "number": "02",
+        "title": "Optimize",
+        "description": "System scans for missed deductions automatically."
+      },
+      {
+        "number": "03",
+        "title": "Review",
+        "description": "See a clear breakdown of credits and totals."
+      },
+      {
+        "number": "04",
+        "title": "File",
+        "description": "Submit electronically via NETFILE to CRA."
+      }
+    ]
+  },
+  "tools": {
+    "title": "Tax tools to simplify your filing experience.",
+    "items": [
+      {
+        "icon": "Calculator",
+        "title": "Refund Calculator",
+        "description": "Estimate your tax refund before you file."
+      },
+      {
+        "icon": "ShieldCheck",
+        "title": "Error Checks",
+        "description": "Catch mistakes before submission."
+      },
+      {
+        "icon": "Headphones",
+        "title": "Live Expert Support",
+        "description": "Get help when you need it most."
+      }
+    ]
+  },
+  "expertCta": {
+    "title": "Need Expert Help?",
+    "text": "Want extra support while filing? Our experts are available anytime.",
+    "cta": {
+      "label": "Learn more",
+      "to": "/pricing"
+    },
+    "image": {
+      "src": "/images/d9d0a1e2d55eae8789abfd6f4bbf7547e5cf1318.png",
+      "alt": "Professional woman with tablet"
+    }
+  },
+  "expertAddons": {
+    "title": "Our experts are on standby to assist you at any step.",
+    "items": [
+      {
+        "icon": "Shield",
+        "title": "Audit Protection",
+        "description": "Help with CRA or Revenu Québec letters."
+      },
+      {
+        "icon": "Zap",
+        "title": "Priority Support",
+        "description": "Skip the line with dedicated support."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Frequently Asked Questions"
+  },
+  "finalCta": {
+    "title": "Ready to file your taxes?",
+    "text": "Whether you want to file on your own or get expert help, LeadTax is here.",
+    "image": {
+      "src": "/images/05c84d9500830dfbb3380883971c5a91afd89da2.png",
+      "alt": "Man with tablet"
+    },
+    "actions": [
+      {
+        "label": "Get started",
+        "href": "app:diy.register",
+        "variant": "inverse"
+      },
+      {
+        "label": "Sign in",
+        "href": "app:diy.login",
+        "variant": "outlineInverse"
+      }
+    ]
+  }
+}

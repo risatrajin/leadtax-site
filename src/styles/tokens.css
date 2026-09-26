@@ -1,0 +1,30 @@
+/*
+ * Design tokens — the only place brand colours are defined.
+ * Each token becomes a Tailwind colour utility (bg-brand, text-brand-subtle, ...).
+ * Names describe the role, not the hue.
+ */
+@theme {
+  /* Primary brand colour: main buttons, brand text, footer, step badges. Was #033D76. */
+  --color-brand: #033d76;
+  /* Darker brand shade: hover/pressed state of brand surfaces, gradient ends. Was #022A54. */
+  --color-brand-strong: #022a54;
+  /* Pale brand tint: icon wells, dropdown hover, text on brand backgrounds. Was #CAE1FF. */
+  --color-brand-subtle: #cae1ff;
+  /* Raised brand surface used on some inner pages. Was #044385. */
+  --color-brand-raised: #044385;
+  /* Lighter brand blue used as the highlight stop in the hero gradient. Was #044994. */
+  --color-brand-highlight: #044994;
+  /* Soft brand blue at the end of the "Need Expert Help?" gradient. Was #81ABDC. */
+  --color-brand-fade: #81abdc;
+
+  /* Accent: rating stars. Was #FDB022. */
+  --color-rating: #fdb022;
+
+  /* Third-party: Google blue for the "Review us on Google" button and links. Was #1A73E8 / #1557B0. */
+  --color-google: #1a73e8;
+  --color-google-hover: #1557b0;
+
+  /* Green backdrop behind the photo in the final homepage CTA. Was #84CC16 / #65A30D. */
+  --color-promo-from: #84cc16;
+  --color-promo-to: #65a30d;
+}

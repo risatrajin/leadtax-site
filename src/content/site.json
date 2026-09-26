@@ -1,0 +1,40 @@
+{
+  "name": "LeadTax",
+  "siteUrl": "https://leadtax.ca",
+  "logo": "/images/aa522b010086bcaf524c383acdd1db0f7a1d3d46.png",
+  "favicon": "/images/c1a5c15bfe97195bb0026f2c1b2d0d29be68c167.png",
+  "contact": {
+    "email": "info@leadtax.ca",
+    "tollFree": "1-877-453-2382"
+  },
+  "apps": {
+    "diy": {
+      "home": "https://app.leadtax.ca/user/",
+      "register": "https://app.leadtax.ca/user/auth/register",
+      "login": "https://app.leadtax.ca/user/auth/login"
+    },
+    "remote": {
+      "home": "https://portal.leadtax.ca/user/",
+      "register": "https://portal.leadtax.ca/user/auth/register"
+    }
+  },
+  "social": [
+    { "id": "facebook", "label": "Facebook", "icon": "Facebook", "url": "https://www.facebook.com/leadtax.ca" },
+    { "id": "x", "label": "X", "icon": "Twitter", "url": "https://x.com/leadtax_ca" },
+    { "id": "instagram", "label": "Instagram", "icon": "Instagram", "url": "https://www.instagram.com/leadtax.ca" },
+    { "id": "linkedin", "label": "LinkedIn", "icon": "Linkedin", "url": "https://www.linkedin.com/company/leadtax-ca/" },
+    { "id": "youtube", "label": "YouTube", "icon": "Youtube", "url": "https://www.youtube.com/@leadtax" },
+    { "id": "tiktok", "label": "TikTok", "icon": "TikTok", "url": "https://www.tiktok.com/@leadtax_ca" }
+  ],
+  "footer": {
+    "tagline": "Canadian tax filing made simple. File online yourself or get expert help from certified tax professionals.",
+    "copyright": "LeadTax. All rights reserved.",
+    "compliance": "Powered by a NETFILE Certified application | SOC 2 Compliant"
+  },
+  "integrations": {
+    "gtmId": "GTM-P48JWFV6",
+    "intercomAppId": "txzox33k",
+    "intercomApiBase": "https://api-iam.intercom.io",
+    "googleSiteVerification": "mDj13lSH-zTLFcO6A9D608gbGVFkoYdj_j5YPKvBDT8"
+  }
+}

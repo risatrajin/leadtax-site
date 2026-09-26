@@ -1,0 +1,73 @@
+{
+  "_note": "expertTiers is carried over from the original build but never shown: the tier toggle on the homepage was left empty.",
+  "diyTiers": [
+    {
+      "title": "Basic",
+      "price": "$19",
+      "description": "Fast & simple for basic tax returns",
+      "image": "/images/e1d32fdec2e516971cd34652a1de6e35ffb3e5b4.png",
+      "imageAlt": "Young adult smiling",
+      "url": "app:diy.register"
+    },
+    {
+      "title": "Deluxe",
+      "price": "$39",
+      "description": "Maximize your refund with smart deductions",
+      "image": "/images/c53919e052f37bf04762bc944068db15feb32b36.png",
+      "imageAlt": "Professional couple",
+      "url": "app:diy.register"
+    },
+    {
+      "title": "Premier",
+      "price": "$69",
+      "description": "Handle investments with confidence",
+      "image": "/images/f19dbff318044da5abfcc07cd6629cfcc2b0f641.png",
+      "imageAlt": "Happy family of three",
+      "url": "app:diy.register"
+    },
+    {
+      "title": "Self-Employment",
+      "price": "$99",
+      "description": "Built for business owners and freelancers",
+      "image": "/images/7051f12086d84a10a5a6245fe80411728ba1fea9.png",
+      "imageAlt": "Delivery rider with bicycle",
+      "url": "app:diy.register"
+    }
+  ],
+  "expertTiers": [
+    {
+      "title": "Basic Expert",
+      "price": "$59.99",
+      "description": "Expert review for simple returns",
+      "image": "/images/e1d32fdec2e516971cd34652a1de6e35ffb3e5b4.png",
+      "imageAlt": "Young adult smiling",
+      "url": "https://calendly.com/leadtax/basic"
+    },
+    {
+      "title": "Deluxe Expert",
+      "price": "$89.99",
+      "description": "Full expert assistance for families",
+      "image": "/images/c53919e052f37bf04762bc944068db15feb32b36.png",
+      "imageAlt": "Professional couple",
+      "url": "https://calendly.com/leadtax/deluxe"
+    },
+    {
+      "title": "Premier Expert",
+      "price": "$129.99",
+      "description": "Complex tax situations handled by pros",
+      "image": "/images/f19dbff318044da5abfcc07cd6629cfcc2b0f641.png",
+      "imageAlt": "Happy family of three",
+      "url": "https://calendly.com/leadtax/premier"
+    },
+    {
+      "title": "Self-Employment Expert",
+      "price": "$169.99",
+      "description": "Complete business tax management",
+      "image": "/images/7051f12086d84a10a5a6245fe80411728ba1fea9.png",
+      "imageAlt": "Delivery rider with bicycle",
+      "url": "https://calendly.com/leadtax/self-employed"
+    }
+  ],
+  "perReturnLabel": " per return",
+  "ctaLabel": "Get Started"
+}

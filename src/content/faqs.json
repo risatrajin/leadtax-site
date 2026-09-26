@@ -1,0 +1,52 @@
+{
+  "home": [
+    {
+      "question": "Is LeadTax certified by the Canada Revenue Agency (CRA)?",
+      "answer": "Our do-it-yourself platform is powered by CloudTax API, a NETFILE-certified application approved by the Canada Revenue Agency."
+    },
+    {
+      "question": "How does Lead Tax work?",
+      "answer": "Lead Tax is designed to make filing your taxes feel simple, even if taxes usually feel overwhelming.\n\nAfter creating your account, the software walks you through your return step by step, asking clear questions in plain language. You can upload your slips and documents, and the system automatically pulls in the details to reduce manual entry and help avoid mistakes.\n\nBehind the scenes, Lead Tax is powered by CRA NETFILE-certified software using the CloudTax API, so all calculations follow CRA rules and your return is submitted directly to the CRA once you are ready.\n\nAnd if you ever feel unsure, real Lead Tax experts are available by phone or email to help you through it."
+    },
+    {
+      "question": "Who is Lead Tax DIY for?",
+      "answer": "Lead Tax DIY is a great fit if you want to:\n\n• File your own taxes online with guidance and confidence\n• Have access to real experts when questions come up\n• File employment, family, investment, rental, or self-employment income\n• File current or previous years\n• Avoid hidden fees or last-minute surprises\n\nYou stay in control, but you are never on your own."
+    },
+    {
+      "question": "Who is Lead Tax DIY not for?",
+      "answer": "While Lead Tax DIY covers most personal tax situations, it is not designed for certain specialized or advanced filings, including:\n\n• Corporate tax returns (T2)\n• Complex CRA elections or special returns\n• Certain agriculture-related reporting forms\n• Multi-jurisdiction provincial filings\n• Quebec provincial tax returns\n\nIf your situation falls into one of these categories, don't worry. Lead Tax can still help.\nThese cases can be handled through our File Remotely service or in-person support, where a tax professional takes care of the filing for you."
+    },
+    {
+      "question": "What types of returns can I file with Lead Tax DIY?",
+      "answer": "Most Canadians can file their personal tax returns using Lead Tax DIY, including:\n\n• Employment income (T4)\n• Family and dependent claims\n• RRSP, TFSA, and investment income\n• Rental income\n• Self-employment and gig work\n• Multiple tax years, including past returns\n\nIf you are unsure whether your situation qualifies, our team is happy to confirm before you start."
+    },
+    {
+      "question": "Can I file taxes for previous years?",
+      "answer": "Yes. You can file returns for previous years using Lead Tax DIY.\nSome older returns may have CRA restrictions, and if that happens, our experts will guide you on the best next step."
+    },
+    {
+      "question": "What support is included?",
+      "answer": "Every Lead Tax DIY package includes:\n\n• Phone and email support from Lead Tax experts\n• Help understanding slips, forms, and CRA notices\n• Guidance before you file and after you submit\n• Year-round support, not just during tax season\n\nThis is a paid service so you always have someone to talk to when it matters."
+    },
+    {
+      "question": "How much does Lead Tax DIY cost?",
+      "answer": "Lead Tax does not offer a free version. Pricing is simple and transparent:\n\nBasic $19\nSimple returns with employment income and common credits\n\nDeluxe $39\nFamilies, students, and returns with multiple slips\n\nPremier $69\nInvestment income, rental income, and more detailed situations\n\nSelf-Employment $99\nFreelancers, contractors, and gig workers\n\nEach return is priced per filing and includes expert support."
+    },
+    {
+      "question": "Why doesn't Lead Tax offer a free option?",
+      "answer": "Because your taxes matter.\n\nBy offering a paid service, Lead Tax ensures:\n\n• Access to real experts by phone and email\n• Reliable, CRA-certified technology\n• Support beyond just clicking \"submit\"\n\nYou are paying for confidence, accuracy, and peace of mind."
+    },
+    {
+      "question": "Will Lead Tax submit my return to the CRA?",
+      "answer": "Yes. Once you complete your return and approve it, the software submits it directly to the CRA using NETFILE. You will receive confirmation once the CRA accepts your return."
+    },
+    {
+      "question": "Is my information safe?",
+      "answer": "Yes. Your information is protected using secure systems and CRA-approved technology.\nData security and privacy are taken seriously at every step of the filing process."
+    },
+    {
+      "question": "What if I get stuck or make a mistake?",
+      "answer": "That's exactly why support is included.\n\nIf something does not look right, or you are unsure about an entry, Lead Tax experts are available to help before you file. If the CRA follows up after filing, we will guide you through that too."
+    }
+  ]
+}

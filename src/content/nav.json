@@ -1,0 +1,161 @@
+{
+  "links": {
+    "diy": {
+      "label": "Do It Yourself",
+      "to": "/"
+    },
+    "fileRemotely": {
+      "label": "File Remotely",
+      "to": "/file-remotely"
+    },
+    "dropOff": {
+      "label": "Drop-off",
+      "to": "/drop-off",
+      "badge": "NEW"
+    },
+    "inPerson": {
+      "label": "In Person",
+      "to": "/file-in-person"
+    },
+    "usCrossBorder": {
+      "label": "US Cross-Border Tax",
+      "to": "/us-cross-border"
+    },
+    "blog": {
+      "label": "Blog",
+      "to": "/blog"
+    },
+    "faq": {
+      "label": "FAQ",
+      "to": "/faq"
+    },
+    "about": {
+      "label": "About",
+      "footerLabel": "About Us",
+      "to": "/about"
+    },
+    "career": {
+      "label": "Career",
+      "to": "/career"
+    },
+    "contact": {
+      "label": "Contact",
+      "to": "/contact"
+    },
+    "pricing": {
+      "label": "Pricing",
+      "to": "/pricing"
+    },
+    "privacy": {
+      "label": "Privacy Policy",
+      "to": "/privacy-policy"
+    },
+    "terms": {
+      "label": "Terms & Conditions",
+      "to": "/terms"
+    },
+    "sitemap": {
+      "label": "Sitemap",
+      "to": "/sitemap"
+    }
+  },
+  "header": [
+    {
+      "link": "diy"
+    },
+    {
+      "label": "File Remotely",
+      "menuWidth": "w-64",
+      "items": [
+        "fileRemotely",
+        "dropOff",
+        "inPerson",
+        "usCrossBorder"
+      ]
+    },
+    {
+      "label": "Resources",
+      "menuWidth": "w-56",
+      "items": [
+        "blog",
+        "faq",
+        "about",
+        "career",
+        "contact"
+      ]
+    },
+    {
+      "link": "pricing"
+    },
+    {
+      "link": "contact"
+    }
+  ],
+  "accountMenus": [
+    {
+      "id": "signIn",
+      "label": "Sign In",
+      "items": [
+        {
+          "label": "File Online (DIY)",
+          "app": "diy",
+          "target": "home"
+        },
+        {
+          "label": "File Remotely",
+          "app": "remote",
+          "target": "home"
+        }
+      ]
+    },
+    {
+      "id": "getStarted",
+      "label": "Get Started",
+      "items": [
+        {
+          "label": "File Online (DIY)",
+          "app": "diy",
+          "target": "register"
+        },
+        {
+          "label": "File Remotely",
+          "app": "remote",
+          "target": "register"
+        }
+      ]
+    }
+  ],
+  "footer": [
+    {
+      "title": "File Your Taxes",
+      "items": [
+        "diy",
+        "fileRemotely",
+        "dropOff",
+        "inPerson",
+        "usCrossBorder",
+        "pricing"
+      ]
+    },
+    {
+      "title": "Resources",
+      "items": [
+        "blog",
+        "faq",
+        "about",
+        "career",
+        "contact"
+      ]
+    },
+    {
+      "title": "Legal",
+      "items": [
+        "privacy",
+        "terms",
+        "sitemap"
+      ],
+      "appendContact": true
+    }
+  ],
+  "footerContactTitle": "Contact"
+}

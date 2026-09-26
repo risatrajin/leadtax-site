@@ -1,0 +1,56 @@
+{
+  "defaults": {
+    "title": "LeadTax - Local Tax Experts in Vancouver & Burnaby | In-Person, Drop-Off & Remote Filing",
+    "description": "LeadTax offers tax filing at 4 offices across Vancouver and Burnaby, BC — walk-in, drop-off, or book an appointment. Also file remotely from anywhere in Canada. Expert help or DIY from $19. CRA-certified.",
+    "keywords": "tax filing Vancouver, tax filing Burnaby, remote tax filing Canada, in-person tax expert Vancouver, tax office near me BC, drop off taxes Vancouver, local tax expert Canada, CRA certified tax",
+    "ogImage": "https://leadtax.ca/og-image.png",
+    "ogType": "website"
+  },
+  "pages": {
+    "home": {
+      "title": "LeadTax - Local Tax Experts in Vancouver & Burnaby | File In-Person or Remotely",
+      "description": "LeadTax has 4 offices across Vancouver & Burnaby for in-person and drop-off tax filing, plus remote filing from anywhere in Canada. Expert help or DIY from $19. CRA-certified, maximum refund guaranteed.",
+      "keywords": "tax filing Vancouver, tax filing Burnaby, remote tax filing Canada, in-person tax help Vancouver, tax office Burnaby BC, local tax expert Vancouver, drop off taxes Burnaby, Canadian tax expert near me"
+    }
+  },
+  "meta": {
+    "author": "LeadTax",
+    "robots": "index, follow",
+    "language": "English",
+    "revisitAfter": "7 days",
+    "rating": "General",
+    "distribution": "global",
+    "classification": "Tax Software, Financial Services",
+    "geoRegion": "CA",
+    "geoPlacename": "Canada",
+    "geoPosition": "45.4215;-75.6972",
+    "icbm": "45.4215, -75.6972",
+    "ogImageAlt": "LeadTax - Canadian Tax Software",
+    "ogLocale": "en_CA",
+    "ogLocaleAlternate": "fr_CA",
+    "twitterHandle": "@LeadTax",
+    "themeColor": "#033D76",
+    "appleStatusBarStyle": "black-translucent"
+  },
+  "schema": {
+    "organization": {
+      "logo": "https://leadtax.ca/logo.png",
+      "description": "Canadian do-it-yourself tax software for individuals, freelancers, and families",
+      "foundingDate": "2020",
+      "availableLanguage": [
+        "English",
+        "French"
+      ]
+    },
+    "searchUrlTemplate": "https://leadtax.ca/search?q={search_term_string}",
+    "priceRange": "$19 - $169",
+    "serviceType": "Tax Preparation Software",
+    "offerCatalogName": "Tax Filing Services",
+    "offers": [
+      "Do-It-Yourself Tax Filing",
+      "File with Expert - Remote",
+      "File with Expert - Drop-off",
+      "File with Expert - In Person"
+    ]
+  }
+}
