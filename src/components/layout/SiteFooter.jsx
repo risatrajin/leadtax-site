@@ -2,7 +2,7 @@ import { Link } from "react-router";
 import nav from "../../content/nav.json";
 import site from "../../content/site.json";
 import { getIcon } from "../../lib/icons.js";
-import { officeCities, offices, officePhone, officeTel } from "../../lib/offices.js";
+import { officeCities, officesByCity, officePhone, officeTel } from "../../lib/offices.js";
 import { tollFreeDashed } from "../../lib/phone.js";
 import { fill } from "../../lib/template.js";
 import SmartLink from "../ui/SmartLink.jsx";
@@ -83,7 +83,7 @@ export default function SiteFooter() {
         <div className="mt-12 border-t border-white/20 pt-10">
           <h2 className={COLUMN_TITLE}>{footer.officesTitle}</h2>
           <ul className="grid gap-6 text-sm sm:grid-cols-2 lg:grid-cols-5">
-            {offices.map((office) => (
+            {officesByCity.map((office) => (
               <li key={office.id}>
                 <Link to={`/contact#${office.id}`} className="font-semibold text-white hover:underline">
                   {office.shortName}

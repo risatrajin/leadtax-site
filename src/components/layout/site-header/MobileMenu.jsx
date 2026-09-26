@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { ChevronDown } from "lucide-react";
 import nav from "../../../content/nav.json";
-import { offices, officePhone } from "../../../lib/offices.js";
+import { officesByCity, officePhone } from "../../../lib/offices.js";
 import { tollFreeDashed } from "../../../lib/phone.js";
 import { fill } from "../../../lib/template.js";
 import Button from "../../ui/Button.jsx";
@@ -22,7 +22,7 @@ function groupsFor() {
         label: item.label,
         sections: [
           {
-            links: offices.map((office) => ({
+            links: officesByCity.map((office) => ({
               label: office.shortName,
               detail: `${office.display.address} · ${officePhone(office)}`,
               to: fill(item.officeHref, { id: office.id }),

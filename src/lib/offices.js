@@ -28,3 +28,11 @@ export const officeTel = (office) => `tel:+1${office.phone}`;
 
 /** Cities that have an office, in office order. */
 export const officeCities = [...new Set(offices.map((office) => office.schema.addressLocality))];
+
+/**
+ * Offices grouped by city (cities in office order), so every list on the site shows them in the
+ * same order. The JSON-LD keeps the order of offices.json.
+ */
+export const officesByCity = officeCities.flatMap((city) =>
+  offices.filter((office) => office.schema.addressLocality === city),
+);

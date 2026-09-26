@@ -5,29 +5,36 @@ import { buttonClasses } from "./Button.jsx";
 const BOOK_BUTTON = buttonClasses({ size: "block", className: "mt-auto" });
 
 /**
- * One office: photo, name (+ "Head Office" badge), address, email, phone and a booking action.
+ * One office: photo, street name (+ "Head office" badge) and city, address, email, phone and a booking action.
  * `onPickExpert` is called for offices whose booking opens the expert picker instead of a link.
  */
-export default function OfficeCard({ office, bookLabel, onPickExpert }) {
+export default function OfficeCard({ office, bookLabel, headOfficeLabel, onPickExpert }) {
   const { display, booking } = office;
   return (
     <div
       id={office.id}
       className="bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden flex flex-col scroll-mt-32"
     >
-      <OfficePhoto office={office} alt={`${display.title} office`} className="h-48 w-full object-cover" />
+      <OfficePhoto office={office} alt={`${office.shortName} office entrance`} className="h-48 w-full object-cover" />
       <div className="p-6 space-y-3 flex flex-col flex-1">
         <div>
-          <h3 className="font-bold text-gray-900 flex items-center gap-2">
-            {display.title}
-            {display.subtitle && (
-              <span className="text-xs font-normal bg-brand-subtle text-brand px-2 py-1 rounded">{display.subtitle}</span>
+          <h2 className="text-lg font-bold text-gray-900 flex flex-wrap items-center gap-2">
+            {office.shortName}
+            {office.isHeadOffice && (
+              <span className="rounded-full bg-brand-subtle px-2.5 py-0.5 text-xs font-medium text-brand">{headOfficeLabel}</span>
             )}
-          </h3>
+          </h2>
+          <p className="text-sm text-gray-500">{office.schema.addressLocality}</p>
         </div>
         <p className="text-gray-700 text-sm leading-relaxed">{display.address}</p>
-        {office.email && <p className="text-gray-700 text-sm">{office.email}</p>}
-        <p className="text-gray-900 font-semibold">{formatLocalPhone(office.phone)}</p>
+        {office.email && (
+          <a href={`mailto:${office.email}`} className="text-gray-700 text-sm hover:text-brand">
+            {office.email}
+          </a>
+        )}
+        <a href={`tel:+1${office.phone}`} className="text-gray-900 font-semibold hover:text-brand">
+          {formatLocalPhone(office.phone)}
+        </a>
         {booking.type === "expertPicker" ? (
           <button onClick={onPickExpert} className={`${BOOK_BUTTON} cursor-pointer`}>
             {bookLabel}

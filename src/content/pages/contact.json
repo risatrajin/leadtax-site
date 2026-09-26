@@ -2,6 +2,7 @@
   "title": "Contact Us",
   "intro": "Have questions? We're here to help. Reach out to our friendly team.",
   "bookLabel": "Book an Appointment",
+  "headOfficeLabel": "Head office",
   "form": {
     "_note": "The form is hidden on the live site (known issue). Submitting opens an email to the head office.",
     "subject": "Contact Form Submission from {firstName} {lastName}",

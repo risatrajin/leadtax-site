@@ -1,5 +1,5 @@
 import nav from "../../../content/nav.json";
-import { offices, officePhone } from "../../../lib/offices.js";
+import { officesByCity, officePhone } from "../../../lib/offices.js";
 import { fill } from "../../../lib/template.js";
 import Button from "../../ui/Button.jsx";
 import SmartLink from "../../ui/SmartLink.jsx";
@@ -36,7 +36,7 @@ function FeatureCard({ feature }) {
 function OfficeLinks({ item, onNavigate }) {
   return (
     <ul className="grid gap-1 sm:grid-cols-2">
-      {offices.map((office) => (
+      {officesByCity.map((office) => (
         <li key={office.id}>
           <SmartLink to={fill(item.officeHref, { id: office.id })} onClick={onNavigate} className={`${PANEL_LINK} py-3`}>
             <span className="block font-semibold text-gray-900">{office.shortName}</span>
