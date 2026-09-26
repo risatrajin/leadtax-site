@@ -77,7 +77,7 @@ function ServiceCard({ service }) {
  * the five services as cards along the bottom.
  * From 1280px the photo covers the whole section behind the text and cards, with no overlay.
  * The people stand on the right of the photo, leaving open sky behind the left-aligned text.
- * The text is left-aligned; on the photo it is white with a soft shadow for contrast.
+ * The text is left-aligned; on the photo it is white over a dark left-to-right gradient.
  * Below 1280px the photo sits on top, full width. The trust row is a separate band (TrustBand).
  */
 export default function Hero() {
@@ -90,9 +90,14 @@ export default function Hero() {
           className="h-full w-full object-cover"
           style={{ objectPosition: hero.image.position }}
         />
+        {/* Darkens the sky behind the white text; the people on the right stay untouched. */}
+        <div
+          aria-hidden="true"
+          className="absolute inset-0 hidden bg-gradient-to-r from-gray-950/70 via-gray-950/35 via-45% to-transparent to-65% xl:block"
+        />
       </div>
       <div className="relative mx-auto max-w-7xl px-4 pb-12 pt-6 md:px-8 xl:pb-16 xl:pt-[104px]">
-        <div className="max-w-3xl xl:text-white xl:[text-shadow:0_1px_12px_rgb(0_0_0/0.35)]">
+        <div className="max-w-3xl xl:text-white xl:[text-shadow:0_1px_8px_rgb(0_0_0/0.25)]">
           <h1 id="hero-title" className="text-4xl font-bold leading-[1.05] tracking-tight text-gray-900 sm:text-5xl lg:text-7xl xl:text-white">
             {hero.titleLead} <span className="text-brand-bright xl:text-white">{hero.titleAccent}</span>
           </h1>
