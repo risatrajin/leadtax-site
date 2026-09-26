@@ -23,8 +23,8 @@ function GoogleLogo({ className }) {
 
 function TrustRow() {
   return (
-    <ul className="mt-10 grid max-w-3xl gap-6 sm:grid-cols-3 sm:gap-0 sm:divide-x sm:divide-gray-200">
-      <li className="flex items-center gap-3 sm:pr-6">
+    <ul className="mt-10 flex flex-col gap-6 sm:flex-row sm:flex-wrap sm:gap-y-6 sm:divide-x sm:divide-gray-200">
+      <li className="flex items-center gap-3 sm:pr-5">
         <GoogleLogo className="h-9 w-9 flex-shrink-0" />
         <div>
           <div role="img" aria-label={hero.rating.starsLabel} className="flex gap-0.5">
@@ -39,10 +39,10 @@ function TrustRow() {
       {hero.trust.map((item) => {
         const Icon = getIcon(item.icon);
         return (
-          <li key={item.title} className="flex items-center gap-3 sm:px-6">
+          <li key={item.title} className="flex items-center gap-3 sm:px-5">
             <Icon className={`h-8 w-8 flex-shrink-0 ${item.icon === "MapleLeaf" ? "text-canada-red" : "text-brand-bright"}`} />
-            <div>
-              <p className="font-semibold text-gray-900">{item.title}</p>
+            <div className="max-w-[170px]">
+              <p className="whitespace-nowrap font-semibold text-gray-900">{item.title}</p>
               <p className="text-sm text-gray-600">{item.text}</p>
             </div>
           </li>
@@ -77,22 +77,24 @@ function ServiceCard({ service }) {
 /**
  * Homepage hero (client mockup): headline and actions on the left, a photo on the right that
  * fades into the page, a trust row, and the five services as cards along the bottom.
+ * From 1280px the photo fills the right half at full strength with only a soft left edge; below
+ * that it sits on top, full width, so text never runs over it.
  */
 export default function Hero() {
   return (
     <section aria-labelledby="hero-title" className="relative overflow-hidden bg-white">
       <div className="relative">
-        <div className="relative h-64 sm:h-80 lg:absolute lg:inset-y-0 lg:right-0 lg:h-auto lg:w-[62%]">
+        <div className="relative h-64 sm:h-80 lg:h-96 xl:absolute xl:inset-y-0 xl:right-0 xl:h-auto xl:w-1/2">
           <img
             src={hero.image.src}
             alt={hero.image.alt}
             className="h-full w-full object-cover"
             style={{ objectPosition: hero.image.position }}
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-white via-white/10 to-transparent lg:bg-gradient-to-r lg:from-white lg:from-20% lg:via-white/75 lg:via-45% lg:to-transparent lg:to-80%" />
+          <div className="absolute inset-0 bg-gradient-to-t from-white via-white/10 to-transparent xl:bg-gradient-to-r xl:from-white xl:via-white/60 xl:via-15% xl:to-transparent xl:to-35%" />
         </div>
 
-        <div className="relative mx-auto max-w-7xl px-4 pb-12 pt-6 md:px-8 lg:pb-16 lg:pt-24">
+        <div className="relative mx-auto max-w-7xl px-4 pb-12 pt-6 md:px-8 xl:pb-16 xl:pt-24">
           <div className="max-w-2xl">
             <h1 id="hero-title" className="text-4xl font-bold leading-[1.05] tracking-tight text-gray-900 sm:text-5xl lg:text-7xl">
               {hero.titleLead} <span className="text-brand-bright">{hero.titleAccent}</span>
