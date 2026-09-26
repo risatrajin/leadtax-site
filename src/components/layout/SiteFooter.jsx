@@ -11,7 +11,11 @@ import { linkById } from "./site-header/panels.jsx";
 const { footer, localLinks } = nav;
 const COLUMN_TITLE = "mb-4 text-sm uppercase tracking-wider text-white";
 const LINK = "text-sm text-white/70 transition-colors hover:text-white";
-const cities = [...officeCities, ...localLinks.extraCities.map((city) => city.name)];
+// Extra cities whose name is still a placeholder are left out, so "[TBD: city]" never shows.
+const cities = [
+  ...officeCities,
+  ...localLinks.extraCities.filter((city) => !city._placeholders?.includes("name")).map((city) => city.name),
+];
 
 function LinkColumn({ title, links }) {
   return (
