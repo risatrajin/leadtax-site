@@ -1,0 +1,26 @@
+{
+  "title": "About LeadTax",
+  "intro": "Making tax filing simple, accessible, and stress-free for all Canadians.",
+  "mission": {
+    "title": "Our Mission",
+    "paragraphs": [
+      "At LeadTax, we believe that filing your taxes shouldn't be complicated or expensive. We're dedicated to providing Canadian individuals, freelancers, and families with an easy-to-use, affordable tax solution that gives you confidence and peace of mind.",
+      "Whether you prefer to file online at your own pace, get expert help remotely, drop off your documents, or meet with a professional in person, we offer flexible options that fit your lifestyle and comfort level."
+    ]
+  },
+  "stats": [
+    { "value": "10K+", "label": "Happy Customers" },
+    { "value": "99%", "label": "Accuracy Rate" },
+    { "value": "24/7", "label": "Support Available" }
+  ],
+  "whyChooseUs": {
+    "title": "Why Choose LeadTax?",
+    "items": [
+      "CRA-certified software ensuring accuracy and compliance",
+      "Multiple filing options to suit your preferences",
+      "Expert tax professionals available when you need them",
+      "Transparent pricing with no hidden fees",
+      "Bank-level security to protect your personal information"
+    ]
+  }
+}
