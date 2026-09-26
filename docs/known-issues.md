@@ -8,7 +8,8 @@ Items that only the client can answer are collected as plain questions in
 [questions-for-client.md](questions-for-client.md).
 
 Status: **kept** = reproduced in the rebuild; **dropped** = on a page that was not rebuilt
-(copy archived in `src/content/archive/`); **resolved** = no longer applies after a scope decision.
+(copy archived in `src/content/archive/`); **resolved** = no longer applies after a scope decision;
+**fixed** = deliberately corrected after the rebuild.
 
 ## Site-wide
 
@@ -87,6 +88,7 @@ Status: **kept** = reproduced in the rebuild; **dropped** = on a page that was n
 | X19 | In Person: "Local offices across Canada" (all offices are in BC); "CRA and Revenu Québec compliant". | `file-in-person.json` | kept |
 | X20 | In Person hero's first button has an extra `block` class (only difference from Drop-off). | `file-in-person.json` → `block: true` | kept |
 | X21 | "What to bring", "Drop off your documents" and cross-border "Learn More" download files from Google Drive. | `site.json` → `downloads` | kept |
+| X23 | Blog card images were shifted: "2026 Tax Filing Deadlines" showed the estate-tax artwork and "Avoid Heavy Estate Taxes" showed the e-commerce artwork. Now each post shows its own artwork; the deadlines card uses its article photo. | `posts.json` → `cardImage` | fixed |
 | X22 | About stats "10K+ / 99% / 24/7" and FAQ claims (French support, "regularly audited") are unverified. | `about.json`, `faqs.json` | kept |
 
 ## Dropped pages (archived, from the audit)

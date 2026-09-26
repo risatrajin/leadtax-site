@@ -374,7 +374,6 @@
       "authorRole": "Tax Compliance Specialist",
       "image": "https://images.unsplash.com/photo-1703300450387-047da16a89c4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjYWxlbmRhciUyMGRlYWRsaW5lJTIwc2NoZWR1bGV8ZW58MXx8fHwxNzY3OTkxMTAxfDA&ixlib=rb-4.1.0&q=80&w=1080",
       "excerpt": "Mark your calendar with these important dates to avoid penalties and stay compliant.",
-      "cardImage": "/images/e2702a141a80a4ca9460ac94974e4809a2d108b4.png",
       "content": [
         {
           "type": "intro",
@@ -443,7 +442,7 @@
       "authorRole": "Estate & Tax Planning Experts",
       "image": "https://images.unsplash.com/photo-1762941177632-fe37c485c428?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxlc3RhdGUlMjBwbGFubmluZyUyMHdlYWx0aHxlbnwxfHx8fDE3Njc5OTExMDJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "excerpt": "Learn how to protect your hard-earned assets and ensure your legacy is passed to loved ones, not consumed by estate taxes.",
-      "cardImage": "/images/346fb297d23f425b2269bc986f2fbd68dacb7ae6.png",
+      "cardImage": "/images/e2702a141a80a4ca9460ac94974e4809a2d108b4.png",
       "content": [
         {
           "type": "intro",
@@ -905,7 +904,8 @@
           "type": "conclusion",
           "text": "Ready to optimize your business tax structure? Don't settle for a basic return. Book a Consultation Today and discover how Lead Tax can help you simplify your taxes and amplify your growth."
         }
-      ]
+      ],
+      "cardImage": "/images/346fb297d23f425b2269bc986f2fbd68dacb7ae6.png"
     },
     {
       "_placeholders": [
