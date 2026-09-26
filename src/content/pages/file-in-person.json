@@ -1,0 +1,124 @@
+{
+  "variant": "local",
+  "hero": {
+    "title": "File your taxes in person with confidence.",
+    "text": "Meet one-on-one with a tax professional at a LeadTax office and get personalized support for your tax needs.",
+    "actions": [
+      {
+        "label": "Book an in-person visit",
+        "to": "/contact",
+        "block": true
+      },
+      {
+        "label": "Find an office",
+        "to": "/contact"
+      }
+    ],
+    "image": {
+      "src": "https://images.unsplash.com/photo-1565688527174-775059ac429c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0YXglMjBhZHZpc29yJTIwY2xpZW50JTIwbWVldGluZyUyMG9mZmljZXxlbnwxfHx8fDE3Njc2NTk0MTB8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+      "alt": "Tax advisor meeting with client in professional office"
+    }
+  },
+  "steps": {
+    "title": "What to expect",
+    "items": [
+      {
+        "icon": "Building2",
+        "text": "Visit a LeadTax office"
+      },
+      {
+        "icon": "Handshake",
+        "text": "Meet your tax expert"
+      },
+      {
+        "icon": "FileSearch",
+        "text": "Review your return together"
+      },
+      {
+        "icon": "CircleCheck",
+        "text": "File securely with confidence"
+      }
+    ]
+  },
+  "benefits": {
+    "title": "Benefits of in-person filing",
+    "items": [
+      {
+        "icon": "UserRound",
+        "title": "Face-to-face guidance",
+        "description": "Work directly with a tax professional who understands your unique situation."
+      },
+      {
+        "icon": "MessageCircle",
+        "title": "Ask questions in real time",
+        "description": "Get immediate answers and clarifications as you go through your return."
+      },
+      {
+        "icon": "Shield",
+        "title": "Ideal for complex cases",
+        "description": "Perfect for complicated or sensitive tax situations that need expert attention."
+      },
+      {
+        "icon": "Lightbulb",
+        "title": "Clear explanations",
+        "description": "Understand every detail of your return with personalized, easy-to-follow guidance."
+      }
+    ]
+  },
+  "audience": {
+    "title": "Who should file in person",
+    "intro": "Recommended if you:",
+    "items": [
+      {
+        "title": "Want personal reassurance",
+        "description": "Face-to-face interaction gives you confidence that everything is handled correctly."
+      },
+      {
+        "title": "Have complex tax situations",
+        "description": "Multiple income sources, investments, or business income benefit from expert guidance."
+      },
+      {
+        "title": "Prefer human interaction",
+        "description": "Some people simply feel more comfortable discussing finances in person."
+      },
+      {
+        "title": "Are filing for the first time",
+        "description": "First-time filers can learn the process with personalized support and guidance."
+      }
+    ]
+  },
+  "trust": {
+    "title": "Trust & professionalism",
+    "intro": "You're in safe hands with LeadTax's qualified tax professionals.",
+    "items": [
+      {
+        "icon": "Award",
+        "title": "Experienced Canadian tax professionals",
+        "description": "Our team includes certified tax experts with deep knowledge of Canadian tax law."
+      },
+      {
+        "icon": "Lock",
+        "title": "Secure handling of personal information",
+        "description": "Your sensitive data is protected with industry-leading security measures."
+      },
+      {
+        "icon": "CircleCheckBig",
+        "title": "CRA and Revenu Québec compliant",
+        "description": "All returns are prepared and filed according to government standards."
+      },
+      {
+        "icon": "Flag",
+        "title": "Local offices across Canada",
+        "description": "Convenient locations staffed by professionals who understand your community."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Ready for a face-to-face tax filing experience?",
+    "text": "Book an appointment or walk in to one of our convenient locations today.",
+    "action": {
+      "label": "Visit a LeadTax office",
+      "to": "/contact"
+    }
+  }
+}

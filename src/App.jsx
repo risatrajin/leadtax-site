@@ -5,6 +5,7 @@ import Analytics from "./components/global/Analytics.jsx";
 import IntercomWidget from "./components/global/IntercomWidget.jsx";
 import Seo from "./components/seo/Seo.jsx";
 import HomePage from "./pages/HomePage.jsx";
+import FileInPersonPage from "./pages/FileInPersonPage.jsx";
 import DropOffPage from "./pages/DropOffPage.jsx";
 import FileRemotelyPage from "./pages/FileRemotelyPage.jsx";
 import PrivacyPolicyPage from "./pages/PrivacyPolicyPage.jsx";
@@ -35,6 +36,7 @@ export default function App() {
         <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
         <Route path="/file-remotely" element={<FileRemotelyPage />} />
         <Route path="/drop-off" element={<DropOffPage />} />
+        <Route path="/file-in-person" element={<FileInPersonPage />} />
       </Routes>
     </BrowserRouter>
   );
