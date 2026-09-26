@@ -34,3 +34,63 @@
   --color-promo-from: #84cc16;
   --color-promo-to: #65a30d;
 }
+
+/*
+ * "Light editorial" design (/home-v2). Prefixed "ed-" so they can't collide with the
+ * shadcn variables (accent, muted) or Tailwind's outline-* utilities used elsewhere.
+ */
+@theme {
+  /* Text and solid buttons. */
+  --color-ed-ink: #0b1f3a;
+  /* Body text. */
+  --color-ed-muted: #5d6675;
+  /* Panels and inputs. */
+  --color-ed-surface: #f4f4f2;
+  /* Dividers. */
+  --color-ed-line: #ecece9;
+  /* Outline buttons and inactive carousel dots. */
+  --color-ed-outline: #d9d9d5;
+  /* Step numbers, checkmarks, focus rings. */
+  --color-ed-accent: #1459c7;
+  /* Avatar dots. */
+  --color-ed-sky: #cae1ff;
+  /* Page background. */
+  --color-ed-page: #ffffff;
+
+  --font-ed-sans: "Geist", ui-sans-serif, system-ui, sans-serif;
+  --font-ed-serif: "Instrument Serif", ui-serif, Georgia, serif;
+
+  /* Headings: weight 400, tight tracking. "-sm" sizes are for phones. */
+  --text-ed-display: 76px;
+  --text-ed-display--line-height: 1.04;
+  --text-ed-display--letter-spacing: -0.04em;
+  --text-ed-display-sm: 44px;
+  --text-ed-display-sm--line-height: 1.06;
+  --text-ed-display-sm--letter-spacing: -0.035em;
+  --text-ed-section: 52px;
+  --text-ed-section--line-height: 1.06;
+  --text-ed-section--letter-spacing: -0.035em;
+  --text-ed-section-sm: 36px;
+  --text-ed-section-sm--line-height: 1.1;
+  --text-ed-section-sm--letter-spacing: -0.03em;
+  --text-ed-cta: 48px;
+  --text-ed-cta--line-height: 1.08;
+  --text-ed-cta--letter-spacing: -0.035em;
+  --text-ed-cta-sm: 34px;
+  --text-ed-cta-sm--line-height: 1.1;
+  --text-ed-cta-sm--letter-spacing: -0.03em;
+  --text-ed-minor: 32px;
+  --text-ed-minor--line-height: 1.15;
+  --text-ed-minor--letter-spacing: -0.03em;
+
+  /* Shapes. */
+  --radius-ed-cta: 32px;
+  --radius-ed-panel: 28px;
+  --radius-ed-row: 24px;
+  --radius-ed-card: 22px;
+  --radius-ed-float: 18px;
+  --radius-ed-image: 16px;
+
+  --shadow-ed-float: 0 30px 60px rgb(11 31 58 / 0.12);
+  --shadow-ed-card: 0 18px 40px rgb(11 31 58 / 0.12);
+}

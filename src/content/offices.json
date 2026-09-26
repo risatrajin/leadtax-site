@@ -9,9 +9,12 @@
         "display.address",
         "schema.streetAddress",
         "schema.postalCode",
-        "isHeadOffice"
+        "isHeadOffice",
+        "shortName",
+        "hours"
       ],
       "id": "burnaby-4350-hastings",
+      "shortName": "4350 Hastings",
       "isHeadOffice": true,
       "phone": "6049784850",
       "email": "burnaby@leadtax.ca",
@@ -35,15 +38,23 @@
           "latitude": 49.2829,
           "longitude": -122.999
         }
+      },
+      "hours": {
+        "weekdays": "[TBD: Mon–Fri hours]",
+        "saturday": "[TBD: Saturday hours]",
+        "sunday": "[TBD: Sunday hours]"
       }
     },
     {
       "_placeholders": [
         "phone",
         "email",
-        "booking"
+        "booking",
+        "shortName",
+        "hours"
       ],
       "id": "vancouver-davie",
+      "shortName": "Davie Street",
       "phone": "6044861111",
       "email": "Vancouverd@leadtax.ca",
       "photo": "/images/f324aaa86f9805f304d0788221b8ba2c741a484c.png",
@@ -63,15 +74,23 @@
         "addressLocality": "Vancouver",
         "addressRegion": "BC",
         "postalCode": "V6E 1N3"
+      },
+      "hours": {
+        "weekdays": "[TBD: Mon–Fri hours]",
+        "saturday": "[TBD: Saturday hours]",
+        "sunday": "[TBD: Sunday hours]"
       }
     },
     {
       "_placeholders": [
         "phone",
         "email",
-        "booking"
+        "booking",
+        "shortName",
+        "hours"
       ],
       "id": "vancouver-commercial",
+      "shortName": "Commercial Drive",
       "phone": "6049693500",
       "email": "vancouverc@leadtax.ca",
       "photo": "/images/008d8d5f7cfa9f365240f909ca99134f7bdc260b.png",
@@ -92,15 +111,23 @@
         "addressLocality": "Vancouver",
         "addressRegion": "BC",
         "postalCode": "V5N 4B4"
+      },
+      "hours": {
+        "weekdays": "[TBD: Mon–Fri hours]",
+        "saturday": "[TBD: Saturday hours]",
+        "sunday": "[TBD: Sunday hours]"
       }
     },
     {
       "_placeholders": [
         "phone",
         "email",
-        "booking"
+        "booking",
+        "shortName",
+        "hours"
       ],
       "id": "vancouver-kingsway",
+      "shortName": "Kingsway",
       "phone": "6049752950",
       "email": "",
       "photo": "/images/kingsway-2681.jpg",
@@ -120,6 +147,11 @@
         "addressLocality": "Vancouver",
         "addressRegion": "BC",
         "postalCode": "V5R 5H4"
+      },
+      "hours": {
+        "weekdays": "[TBD: Mon–Fri hours]",
+        "saturday": "[TBD: Saturday hours]",
+        "sunday": "[TBD: Sunday hours]"
       }
     },
     {
@@ -129,9 +161,12 @@
         "booking",
         "display.address",
         "schema.streetAddress",
-        "schema.postalCode"
+        "schema.postalCode",
+        "shortName",
+        "hours"
       ],
       "id": "burnaby-4125-hastings",
+      "shortName": "4125 Hastings",
       "phone": "6049784850",
       "email": "",
       "photo": "/images/hastings-4125.jpg",
@@ -152,6 +187,11 @@
         "addressLocality": "Burnaby",
         "addressRegion": "BC",
         "postalCode": "V5C 2J3"
+      },
+      "hours": {
+        "weekdays": "[TBD: Mon–Fri hours]",
+        "saturday": "[TBD: Saturday hours]",
+        "sunday": "[TBD: Sunday hours]"
       }
     }
   ]

@@ -18,6 +18,7 @@ import FaqPage from "./pages/FaqPage.jsx";
 import TermsPage from "./pages/TermsPage.jsx";
 import PrivacyPolicyPage from "./pages/PrivacyPolicyPage.jsx";
 import PricingPage from "./pages/PricingPage.jsx";
+import HomeV2Page from "./pages/HomeV2Page.jsx";
 
 /*
  * Routes in the same order as the original build. /sign-in, /diy-landing,
@@ -48,6 +49,8 @@ export default function App() {
         <Route path="/terms" element={<TermsPage />} />
         <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
         <Route path="/pricing" element={<PricingPage />} />
+        {/* Redesign in progress; not linked from the live pages. */}
+        <Route path="/home-v2" element={<HomeV2Page />} />
       </Routes>
     </BrowserRouter>
   );
