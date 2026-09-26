@@ -89,7 +89,7 @@ export default function Hero() {
           style={{ objectPosition: hero.image.position }}
         />
       </div>
-      <div className="relative mx-auto max-w-7xl px-4 pb-12 pt-6 md:px-8 xl:pb-16 xl:pt-20">
+      <div className="relative mx-auto max-w-7xl px-4 pb-12 pt-6 md:px-8 xl:pb-16 xl:pt-[104px]">
         <div className="max-w-3xl xl:text-white xl:[text-shadow:0_1px_12px_rgb(0_0_0/0.35)]">
           <h1 id="hero-title" className="text-4xl font-bold leading-[1.05] tracking-tight text-gray-900 sm:text-5xl lg:text-7xl xl:text-white">
             {hero.titleLead} <span className="text-brand-bright xl:text-white">{hero.titleAccent}</span>
@@ -114,7 +114,7 @@ export default function Hero() {
         </div>
       </div>
 
-      <div className="relative mx-auto max-w-7xl px-4 pb-16 md:px-8 md:pb-24 xl:mt-[66px] xl:pb-[46px]">
+      <div className="relative mx-auto max-w-7xl px-4 pb-16 md:px-8 md:pb-24 xl:mt-[42px] xl:pb-[46px]">
         <h2 className="sr-only">{hero.servicesTitle}</h2>
         <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-5 lg:gap-4">
           {hero.services.map((service) => (
