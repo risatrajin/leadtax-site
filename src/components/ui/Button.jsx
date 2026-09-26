@@ -24,6 +24,11 @@ const SIZES = {
   block: "py-3",
 };
 
+/** Class list for a pill button, for elements that only look like buttons (e.g. inside a card link). */
+export function buttonClasses({ variant = "primary", size = "lg", transition = "transition-colors", className } = {}) {
+  return cx(VARIANTS[variant], SIZES[size], "rounded-full", transition, className);
+}
+
 /**
  * Pill-shaped button. Renders a router <Link> when `to` is set, an <a> when
  * `href` is set (accepts "app:" refs), otherwise a <button>.
@@ -38,7 +43,7 @@ export default function Button({
   children,
   ...rest
 }) {
-  const classes = cx(VARIANTS[variant], SIZES[size], "rounded-full", transition, className);
+  const classes = buttonClasses({ variant, size, transition, className });
 
   if (to) {
     return (

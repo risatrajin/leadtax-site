@@ -144,7 +144,7 @@ function buildStructuredData(pathname) {
 /**
  * Client-side SEO: sets the document title, meta/OG/Twitter tags, canonical link
  * and JSON-LD after render. Rendered once globally with defaults and again by
- * pages that override title/description/keywords.
+ * pages that override title/description/keywords (and `robots`, e.g. to noindex a draft).
  */
 export default function Seo({
   title = defaults.title,
@@ -152,6 +152,7 @@ export default function Seo({
   keywords = defaults.keywords,
   ogImage = defaults.ogImage,
   ogType = defaults.ogType,
+  robots = meta.robots,
 }) {
   const { pathname } = useLocation();
   const url = `${site.siteUrl}${pathname}`;
@@ -162,7 +163,7 @@ export default function Seo({
     setMeta('meta[name="description"]', "name", description);
     setMeta('meta[name="keywords"]', "name", keywords);
     setMeta('meta[name="author"]', "name", meta.author);
-    setMeta('meta[name="robots"]', "name", meta.robots);
+    setMeta('meta[name="robots"]', "name", robots);
     setMeta('meta[name="language"]', "name", meta.language);
     setMeta('meta[name="revisit-after"]', "name", meta.revisitAfter);
     setMeta('meta[name="rating"]', "name", meta.rating);
@@ -219,7 +220,7 @@ export default function Seo({
       document.head.appendChild(jsonLd);
     }
     jsonLd.textContent = JSON.stringify(buildStructuredData(pathname));
-  }, [title, description, keywords, ogImage, ogType, url, pathname]);
+  }, [title, description, keywords, ogImage, ogType, robots, url, pathname]);
 
   return null;
 }

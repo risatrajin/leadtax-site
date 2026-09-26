@@ -1,5 +1,5 @@
-import content from "../content/home-v2.json";
-import EditorialFonts from "../components/editorial/EditorialFonts.jsx";
+import seo from "../content/seo.json";
+import Seo from "../components/seo/Seo.jsx";
 import SiteHeader from "../components/layout/SiteHeader.jsx";
 import SiteFooter from "../components/layout/SiteFooter.jsx";
 import Hero from "../sections/home-v2/Hero.jsx";
@@ -11,11 +11,11 @@ import Reviews from "../sections/home-v2/Reviews.jsx";
 import Faq from "../sections/home-v2/Faq.jsx";
 import CtaPanel from "../sections/home-v2/CtaPanel.jsx";
 
-/** "Light editorial" homepage redesign. Lives beside the current homepage at /home-v2. */
+/** Homepage redesign, in the site's own look. Lives beside the current homepage at /home-v2 (noindex). */
 export default function HomeV2Page() {
   return (
-    <div className="editorial min-h-screen bg-ed-page font-ed-sans text-ed-ink antialiased">
-      <EditorialFonts href={content.fontsHref} />
+    <div className="min-h-screen bg-white">
+      <Seo {...seo.pages.homeV2} />
       <SiteHeader />
       <main id="main">
         <Hero />

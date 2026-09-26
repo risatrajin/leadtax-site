@@ -80,3 +80,22 @@ These files stay in the repo for now but must not be used on the site. Nothing h
 | 17 | `80a02a192ce01e39a122da282393cd5dc3437db3.png` | Screenshot of an icon row with a "NETFILE Certified by CRA" claim as an image. |
 | 24 | `b5b7c7277519a790337ab2000aa26e112c632239.png` | Screenshot of a "Frequently asked questions." heading; text as an image. |
 | 38 | `fe336c8bfd5d0682c1bc8a38c1275a2197689a81.png` | Screenshot of an old pricing section showing unconfirmed prices. |
+
+## Where images are used on /home-v2
+
+| Slot | Image | Crop |
+|---|---|---|
+| Hero (fixed, does not change with the office) | #15 `70e1bf44…png` | default |
+| Office rows | #26, #36, #1, #40, #39 (from `offices.json` → `photo`) | `object-fit: cover` |
+| Tax services menu card | #26 | `object-position: 50% 40%` (in `nav.json`) |
+| Locations menu card | #40 | `object-position: 50% 45%` (in `nav.json`) |
+| Bookkeeping and US & cross-border tiles | none: plain brand-navy tiles | see below |
+
+The approved crops of #1 to the "Bookkeeping" and "US Tax" window signs were tested at the tile's
+rendered size (600×320) on a 2× screen. Each sign is only ~190px wide in the 1322px photo, so a
+crop that fills the tile is upscaled about 6× and is visibly soft
+(`verification-output/screens/crop-tight-book.png`). A crop that stays sharp shows the whole
+storefront rather than the sign (`crop-loose-book.png`). Per the rule, both tiles have no photo.
+
+#1 also has carousel arrows baked in (it's a gallery screenshot), and its window shows the phone
+number (604) 568-4829, which differs from the number the site lists for Commercial Dr.

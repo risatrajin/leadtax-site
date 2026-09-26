@@ -61,6 +61,16 @@
       "title": "LeadTax Pricing - Affordable Canadian Tax Filing Plans from $19",
       "description": "Compare LeadTax pricing plans. DIY online filing from $19 or expert-assisted filing from $59.99. All plans include maximum refund guarantee and CRA certification.",
       "keywords": "tax filing pricing Canada, affordable tax software, tax expert pricing, Canadian tax filing cost, CRA certified tax software"
+    },
+    "homeV2": {
+      "_placeholders": [
+        "title",
+        "description"
+      ],
+      "_note": "Draft redesign of the homepage; noindex until it replaces /.",
+      "title": "LeadTax | In-Person Tax Help Across Greater Vancouver",
+      "description": "Sit down with a tax expert at one of our offices across Greater Vancouver. Personal and business returns, bookkeeping, and US filings for Canadians.",
+      "robots": "noindex, follow"
     }
   },
   "meta": {

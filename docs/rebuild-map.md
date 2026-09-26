@@ -195,3 +195,25 @@ Decisions:
 Verification: `node scripts/compare-screenshots.mjs --body` compares everything between the
 header and the footer with the original. `node scripts/check-header.mjs` runs 20 behaviour and
 accessibility checks on the header.
+
+## /home-v2 in the site's look (redesign step 3)
+
+Same sections, order, copy and behaviour as the first draft, restyled with the site's rules:
+brand navy tokens, the system font, the site's heading sizes and weights, `Button` variants,
+16px-radius cards with the site's shadows, `py-16 md:py-24` sections in a 1280px container.
+
+| Section | File | Notes |
+|---|---|---|
+| Hero | `src/sections/home-v2/Hero.jsx` | Navy gradient like the site hero; fixed photo #15; office card, select and dots share state |
+| Services | `src/sections/home-v2/Services.jsx` | Two navy tiles (no photo, see image-inventory.md), three white cards |
+| Offices | `src/sections/home-v2/Offices.jsx`, `src/components/ui/OfficeRow.jsx` | Storefront photos from `offices.json` |
+| First visit | `src/sections/home-v2/FirstVisit.jsx` | Navy number circles, checklist on the brand-subtle panel |
+| Other ways to file | `src/sections/home-v2/OtherWays.jsx` | |
+| Reviews | `src/sections/home-v2/Reviews.jsx` | Initials instead of stock faces |
+| FAQ | `src/sections/home-v2/Faq.jsx`, `src/components/ui/FaqList.jsx` | |
+| CTA | `src/sections/home-v2/CtaPanel.jsx` | |
+
+Removed: the `ed-*` tokens, Geist / Instrument Serif and the accent letters, `editorial.css`, and the
+`src/components/editorial/` components. The "Tax services near you" grid now lives in the site footer.
+`Seo` gained a `robots` prop; /home-v2 is `noindex, follow` with its own (flagged) title and description.
+A brand-coloured `:focus-visible` outline now applies site-wide.

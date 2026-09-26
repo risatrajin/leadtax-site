@@ -1,29 +1,33 @@
 import { ArrowRight } from "lucide-react";
 import content from "../../content/home-v2.json";
-import SectionHeading from "../../components/editorial/SectionHeading.jsx";
-import TextLink from "../../components/editorial/TextLink.jsx";
+import SmartLink from "../../components/ui/SmartLink.jsx";
 
 const { otherWays } = content;
 
 export default function OtherWays() {
   return (
-    <section className="ed-container pb-24 xl:pb-28">
-      <SectionHeading size="minor" text={otherWays.title} />
-      <div className="mt-10 grid gap-4 md:grid-cols-3">
-        {otherWays.cards.map((card) => (
-          <article key={card.title} className="flex flex-col rounded-ed-card border border-ed-line p-8">
-            <h3 className="text-xl font-medium tracking-[-0.01em]">{card.title}</h3>
-            <p className="mt-3 text-ed-muted">{card.text}</p>
-            <TextLink
-              to={card.link.to}
-              href={card.link.href}
-              className="mt-auto inline-flex items-center gap-2 pt-6 font-medium underline-offset-4 hover:underline"
+    <section className="bg-white px-4 pb-16 md:px-8 md:pb-24">
+      <div className="mx-auto max-w-7xl">
+        <h2 className="text-2xl text-gray-900 md:text-3xl">{otherWays.title}</h2>
+        <div className="mt-10 grid gap-6 md:grid-cols-3">
+          {otherWays.cards.map((card) => (
+            <article
+              key={card.title}
+              className="flex flex-col rounded-2xl border border-gray-100 bg-white p-8 shadow-md transition-shadow hover:shadow-lg"
             >
-              {card.link.label}
-              <ArrowRight aria-hidden="true" className="h-4 w-4" />
-            </TextLink>
-          </article>
-        ))}
+              <h3 className="text-xl font-semibold text-gray-900">{card.title}</h3>
+              <p className="mt-3 text-gray-600">{card.text}</p>
+              <SmartLink
+                to={card.link.to}
+                href={card.link.href}
+                className="mt-auto inline-flex items-center gap-2 pt-6 font-semibold text-brand underline-offset-4 hover:underline"
+              >
+                {card.link.label}
+                <ArrowRight aria-hidden="true" className="h-4 w-4" />
+              </SmartLink>
+            </article>
+          ))}
+        </div>
       </div>
     </section>
   );

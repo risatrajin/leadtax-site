@@ -148,3 +148,6 @@ what you can; anything left blank stays as it is now.
 
 33. **Is there an office in Kamloops?** An older version of the Contact page listed an office at
     441 Seymour St, Kamloops. Is that office open?
+
+34. **Which phone number is right for Commercial Drive?** The office window shows (604) 568-4829;
+    the website lists (604) 969-3500.

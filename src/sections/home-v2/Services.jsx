@@ -1,56 +1,52 @@
 import { ArrowUpRight } from "lucide-react";
 import content from "../../content/home-v2.json";
-import { pillClasses } from "../../components/editorial/PillButton.jsx";
-import SectionHeading from "../../components/editorial/SectionHeading.jsx";
-import TextLink from "../../components/editorial/TextLink.jsx";
+import { buttonClasses } from "../../components/ui/Button.jsx";
+import SmartLink from "../../components/ui/SmartLink.jsx";
 
 const { services } = content;
 
-const FEATURED_TONES = {
-  ink: { tile: "bg-ed-ink text-white", text: "text-white/70", pill: "inverse" },
-  surface: { tile: "bg-ed-surface text-ed-ink", text: "text-ed-muted", pill: "solid" },
-};
-
+/** Large navy tile. The approved storefront crops were too soft at this size, so these tiles have no photo. */
 function FeaturedTile({ tile }) {
-  const tone = FEATURED_TONES[tile.tone];
   return (
-    <TextLink
+    <SmartLink
       to={tile.to}
       href={tile.href}
-      className={`group flex min-h-[320px] flex-col justify-end rounded-ed-card p-8 md:p-10 xl:col-span-3 ${tone.tile}`}
+      className="group flex min-h-[320px] flex-col justify-end rounded-2xl bg-gradient-to-br from-brand to-brand-strong p-8 text-white shadow-xl transition-shadow hover:shadow-2xl md:p-10 xl:col-span-3"
     >
-      <h3 className="text-[30px] font-normal leading-[1.1] tracking-[-0.03em]">{tile.title}</h3>
-      <p className={`mt-3 max-w-[440px] ${tone.text}`}>{tile.text}</p>
-      <span className={`mt-8 self-start ${pillClasses(tone.pill, "sm")}`}>{tile.cta}</span>
-    </TextLink>
+      <h3 className="text-2xl font-semibold md:text-3xl">{tile.title}</h3>
+      <p className="mt-3 max-w-md text-brand-subtle">{tile.text}</p>
+      <span className={buttonClasses({ variant: "inverse", size: "md", className: "mt-8 self-start font-semibold" })}>
+        {tile.cta}
+      </span>
+    </SmartLink>
   );
 }
 
 function StandardTile({ tile }) {
   return (
-    <TextLink
+    <SmartLink
       to={tile.to}
       href={tile.href}
-      className="group flex min-h-[240px] flex-col justify-between rounded-ed-card bg-ed-surface p-8 xl:col-span-2"
+      className="group flex min-h-[240px] flex-col justify-between rounded-2xl border border-gray-100 bg-white p-8 shadow-md transition-all duration-300 hover:shadow-xl xl:col-span-2"
     >
-      <ArrowUpRight aria-hidden="true" className="h-5 w-5 self-end text-ed-muted transition-colors group-hover:text-ed-ink" />
+      <ArrowUpRight aria-hidden="true" className="h-6 w-6 self-end text-brand" />
       <div>
-        <h3 className="text-[24px] font-normal leading-[1.15] tracking-[-0.02em]">{tile.title}</h3>
-        <p className="mt-2 text-ed-muted">{tile.text}</p>
+        <h3 className="text-2xl font-semibold text-gray-900">{tile.title}</h3>
+        <p className="mt-2 leading-relaxed text-gray-600">{tile.text}</p>
       </div>
-    </TextLink>
+    </SmartLink>
   );
 }
 
 export default function Services() {
   return (
-    <section id="services" className="border-t border-ed-line">
-      <div className="ed-container py-24 xl:py-28">
+    <section id="services" className="bg-white px-4 py-16 md:px-8 md:py-24">
+      <div className="mx-auto max-w-7xl">
         <div className="flex flex-col gap-6 xl:flex-row xl:items-end xl:justify-between">
-          <SectionHeading text={services.title} className="max-w-[620px]" />
-          <p className="max-w-[420px] text-lg text-ed-muted">{services.intro}</p>
+          <h2 className="text-3xl text-gray-900 md:text-4xl lg:text-5xl">{services.title}</h2>
+          <p className="max-w-md text-lg text-gray-600">{services.intro}</p>
         </div>
-        <div className="mt-12 grid gap-4 md:grid-cols-2 xl:grid-cols-6">
+        <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-6">
           {services.featured.map((tile) => (
             <FeaturedTile key={tile.serviceId} tile={tile} />
           ))}
