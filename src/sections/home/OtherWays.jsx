@@ -8,7 +8,7 @@ export default function OtherWays() {
   return (
     <section className="bg-white px-4 pb-16 md:px-8 md:pb-24">
       <div className="mx-auto max-w-7xl">
-        <h2 className="text-2xl text-gray-900 md:text-3xl">{otherWays.title}</h2>
+        <h2 className="text-3xl text-gray-900 md:text-4xl lg:text-5xl">{otherWays.title}</h2>
         <div className="mt-10 grid gap-6 md:grid-cols-3">
           {otherWays.cards.map((card) => (
             <article

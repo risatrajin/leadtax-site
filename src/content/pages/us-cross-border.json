@@ -1,7 +1,7 @@
 {
   "consultationUrl": "https://calendly.com/d/cxn8-znf-xys/discovery-call-usa",
   "hero": {
-    "title": "US Cross-Border Tax Services",
+    "title": "US cross-border tax services",
     "text": "Navigate the complexities of US-Canada tax obligations with confidence. Expert guidance for dual residents, property owners, and cross-border workers.",
     "actions": [
       {
@@ -20,7 +20,7 @@
     }
   },
   "audiences": {
-    "title": "Who Needs Cross-Border Tax Services?",
+    "title": "Who needs cross-border tax services?",
     "items": [
       {
         "icon": "Users",
@@ -40,7 +40,7 @@
     ]
   },
   "services": {
-    "title": "Comprehensive Cross-Border Tax Solutions",
+    "title": "Comprehensive cross-border tax solutions",
     "intro": "Our experts help you navigate complex tax regulations and optimize your tax position across borders.",
     "items": [
       {
@@ -70,7 +70,7 @@
     ]
   },
   "whyUs": {
-    "title": "Why Choose LeadTax for Cross-Border Tax Services?",
+    "title": "Why choose LeadTax for cross-border tax services?",
     "items": [
       {
         "_placeholders": [
@@ -94,7 +94,7 @@
     ]
   },
   "process": {
-    "title": "How Our Cross-Border Tax Process Works",
+    "title": "How our cross-border tax process works",
     "tabs": [
       {
         "id": "individuals",
@@ -184,7 +184,7 @@
       "src": "https://images.unsplash.com/photo-1659607185089-944e2cc33be5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx1c2ElMjBjYW5hZGElMjBmbGFnc3xlbnwxfHx8fDE3Njc4MjExNTV8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
       "alt": "USA and Canada cross-border"
     },
-    "title": "Trusted Cross-Border Tax Experts",
+    "title": "Trusted cross-border tax experts",
     "text": "With years of experience helping Canadians navigate US tax requirements, we've become the trusted choice for cross-border tax services.",
     "stats": [
       {
@@ -210,7 +210,7 @@
     ]
   },
   "pricing": {
-    "title": "Transparent Pricing for Cross-Border Services",
+    "title": "Transparent pricing for cross-border services",
     "intro": "Choose the package that fits your needs. All prices in CAD.",
     "plans": [
       {
@@ -266,10 +266,10 @@
     ]
   },
   "faq": {
-    "title": "Frequently Asked Questions"
+    "title": "Frequently asked questions"
   },
   "cta": {
-    "title": "Ready to Simplify Your Cross-Border Tax Situation?",
+    "title": "Ready to simplify your cross-border tax situation?",
     "text": "Book a consultation with our cross-border tax experts and get peace of mind knowing your tax obligations are handled correctly.",
     "actions": [
       {

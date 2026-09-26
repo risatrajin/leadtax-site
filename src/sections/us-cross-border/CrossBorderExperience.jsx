@@ -12,7 +12,7 @@ export default function CrossBorderExperience({ experience }) {
           </div>
           <div className="space-y-8">
             <div>
-              <h2 className="text-2xl md:text-3xl lg:text-4xl mb-4 text-gray-900">{experience.title}</h2>
+              <h2 className="text-3xl md:text-4xl lg:text-5xl mb-4 text-gray-900">{experience.title}</h2>
               <p className="text-lg text-gray-600">{experience.text}</p>
             </div>
             <div className="grid grid-cols-2 gap-4 md:gap-6">

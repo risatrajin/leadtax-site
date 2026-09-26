@@ -61,7 +61,7 @@ export default function CrossBorderPricing({ pricing }) {
     <section className="py-16 md:py-20 px-4 md:px-8 bg-gray-50">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-2xl md:text-3xl lg:text-4xl mb-4 text-gray-900">{pricing.title}</h2>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl mb-4 text-gray-900">{pricing.title}</h2>
           <p className="text-lg text-gray-600">{pricing.intro}</p>
         </div>
         <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8">

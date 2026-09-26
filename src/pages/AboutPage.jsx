@@ -11,7 +11,7 @@ export default function AboutPage() {
 
         <div className="prose prose-lg max-w-4xl mx-auto">
           <div className="bg-white rounded-2xl shadow-lg border border-gray-200 p-8 md:p-12 mb-12">
-            <h2 className="text-3xl font-bold text-brand mb-6">{about.mission.title}</h2>
+            <h2 className="text-2xl md:text-3xl text-gray-900 mb-6">{about.mission.title}</h2>
             {about.mission.paragraphs.map((paragraph, index, all) => (
               <p
                 key={index}
@@ -32,7 +32,7 @@ export default function AboutPage() {
           </div>
 
           <div className="bg-brand-subtle rounded-2xl p-8 md:p-12">
-            <h2 className="text-3xl font-bold text-brand mb-6">{about.whyChooseUs.title}</h2>
+            <h2 className="text-2xl md:text-3xl text-gray-900 mb-6">{about.whyChooseUs.title}</h2>
             <ul className="space-y-4 text-gray-700">
               {about.whyChooseUs.items.map((item) => (
                 <li key={item} className="flex items-start gap-3">

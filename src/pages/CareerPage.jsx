@@ -13,7 +13,7 @@ export default function CareerPage() {
       <div className="max-w-7xl mx-auto px-4 md:px-8 py-16 md:py-24">
 
         <div className="bg-brand-subtle rounded-2xl p-8 md:p-12 mb-12">
-          <h2 className="text-3xl font-bold text-brand mb-6">{benefits.title}</h2>
+          <h2 className="text-2xl md:text-3xl text-gray-900 mb-6">{benefits.title}</h2>
           <div className="grid md:grid-cols-2 gap-8">
             {benefits.items.map((benefit) => (
               <div key={benefit.title} className="flex gap-4">
@@ -28,7 +28,7 @@ export default function CareerPage() {
         </div>
 
         <div className="mb-12">
-          <h2 className="text-3xl font-bold text-brand mb-8">{openings.title}</h2>
+          <h2 className="text-2xl md:text-3xl text-gray-900 mb-8">{openings.title}</h2>
           <div className="space-y-6">
             {openings.jobs.map((job) => (
               <div
@@ -57,7 +57,7 @@ export default function CareerPage() {
         </div>
 
         <div className="bg-white rounded-2xl shadow-lg border border-gray-200 p-8 md:p-12 text-center">
-          <h2 className="text-2xl font-bold text-brand mb-4">{openApplication.title}</h2>
+          <h2 className="text-2xl md:text-3xl text-gray-900 mb-4">{openApplication.title}</h2>
           <p className="text-gray-600 mb-6">{openApplication.text}</p>
           <Button size="wide">{openApplication.buttonLabel}</Button>
         </div>

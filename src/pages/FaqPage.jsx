@@ -16,7 +16,7 @@ export default function FaqPage() {
       <div className="max-w-4xl mx-auto px-4 md:px-8 py-16 md:py-24">
           <FaqAccordion items={faqs.faqPage} variant="bordered" />
           <div className="mt-16 bg-brand-subtle rounded-2xl p-8 md:p-12 text-center">
-            <h2 className="text-2xl font-bold text-brand mb-4">{faq.support.title}</h2>
+            <h2 className="text-2xl md:text-3xl text-gray-900 mb-4">{faq.support.title}</h2>
             <p className="text-gray-700 mb-6">{faq.support.text}</p>
             <Button to={faq.support.buttonTo} size="wide">
               {faq.support.buttonLabel}
