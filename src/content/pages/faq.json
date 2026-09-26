@@ -4,6 +4,7 @@
   "support": {
     "title": "Still Have Questions?",
     "text": "Our friendly support team is here to help. Reach out anytime!",
-    "buttonLabel": "Contact Support"
+    "buttonLabel": "Contact Support",
+    "buttonTo": "/contact"
   }
 }

@@ -6,7 +6,7 @@ import FaqSchema from "../components/seo/FaqSchema.jsx";
 import Button from "../components/ui/Button.jsx";
 import FaqAccordion from "../components/ui/FaqAccordion.jsx";
 
-/** FAQ page. "Contact Support" has no action (known issue). */
+/** FAQ page. "Contact Support" goes to /contact. */
 export default function FaqPage() {
   return (
     <>
@@ -20,7 +20,9 @@ export default function FaqPage() {
           <div className="mt-16 bg-brand-subtle rounded-2xl p-8 md:p-12 text-center">
             <h2 className="text-2xl font-bold text-brand mb-4">{faq.support.title}</h2>
             <p className="text-gray-700 mb-6">{faq.support.text}</p>
-            <Button size="wide">{faq.support.buttonLabel}</Button>
+            <Button to={faq.support.buttonTo} size="wide">
+              {faq.support.buttonLabel}
+            </Button>
           </div>
         </div>
       </PageShell>

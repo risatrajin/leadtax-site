@@ -75,7 +75,7 @@ The original header and footer were replaced by one site-wide `SiteHeader` and `
 | X3 | Commercial Dr and 4125 Hastings share one Calendly link; Commercial Dr has an unused `mapError` flag; only the head office opens the expert picker. | `offices.json` | kept |
 | X4 | Expert picker lists "US Tax Expert" and "Tax Expert" as names. | `contact.json` | kept |
 | X5 | Career "Apply Now" ×3 and "Submit Resume" do nothing; a Toronto job is listed although all offices are in BC. | `/career` | kept |
-| X6 | FAQ page "Contact Support" does nothing. | `/faq` | kept |
+| X6 | FAQ page "Contact Support" does nothing. | `/faq` | fixed: links to /contact |
 | X7 | Blog "Get Started Free" links to `/get-started`, which doesn't exist. | `blog.json` → `post.cta` | fixed: links to the DIY registration page (`app:diy.register`) |
 | X8 | 5 of 11 blog posts aren't listed on `/blog` or in the sitemap (reachable via "Related Articles"). | `posts.json` (no `excerpt`) | kept |
 | X9 | Unknown blog slugs show "Not Found" with HTTP 200 and no `noindex`. | `BlogPostPage.jsx` | kept |
