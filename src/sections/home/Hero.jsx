@@ -23,8 +23,8 @@ function GoogleLogo({ className }) {
 
 function TrustRow() {
   return (
-    <ul className="mx-auto flex w-fit flex-col gap-6 sm:flex-row sm:flex-wrap sm:justify-center sm:gap-y-6 sm:divide-x sm:divide-gray-200">
-      <li className="flex items-center gap-3 sm:pr-5">
+    <ul className="mx-auto grid max-w-xs gap-6 sm:max-w-5xl sm:grid-cols-3 sm:gap-0 sm:divide-x sm:divide-gray-200">
+      <li className="flex items-center gap-3 sm:justify-center sm:px-6">
         <GoogleLogo className="h-9 w-9 flex-shrink-0" />
         <div>
           <div role="img" aria-label={hero.rating.starsLabel} className="flex gap-0.5">
@@ -39,10 +39,10 @@ function TrustRow() {
       {hero.trust.map((item) => {
         const Icon = getIcon(item.icon);
         return (
-          <li key={item.title} className="flex items-center gap-3 sm:px-5">
+          <li key={item.title} className="flex items-center gap-3 sm:justify-center sm:px-6">
             <Icon className={`h-8 w-8 flex-shrink-0 ${item.icon === "MapleLeaf" ? "text-canada-red" : "text-brand-bright"}`} />
-            <div className="max-w-[170px]">
-              <p className="whitespace-nowrap font-semibold text-gray-900">{item.title}</p>
+            <div>
+              <p className="font-semibold text-gray-900">{item.title}</p>
               <p className="text-sm text-gray-600">{item.text}</p>
             </div>
           </li>
@@ -126,7 +126,7 @@ export default function Hero() {
   );
 }
 
-/** Rating and trust points in a centered band directly under the hero. */
+/** Rating and trust points in a centered three-column grid directly under the hero. */
 export function TrustBand() {
   return (
     <div className="border-b border-gray-200 bg-white px-4 py-8 md:px-8">
