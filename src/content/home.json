@@ -92,6 +92,7 @@
     },
     "bookLabel": "Book this office",
     "directionsLabel": "Directions",
+    "headOfficeLabel": "Head office",
     "entranceAlt": "{office} office entrance"
   },
   "firstVisit": {
