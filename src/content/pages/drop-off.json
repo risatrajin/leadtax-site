@@ -1,0 +1,125 @@
+{
+  "variant": "local",
+  "hero": {
+    "title": "Drop off your tax documents. We'll handle the rest.",
+    "text": "Leave your documents at one of our locations and let our tax experts prepare and file your return for you.",
+    "actions": [
+      {
+        "label": "Find a drop-off location",
+        "to": "/contact"
+      },
+      {
+        "label": "What to bring",
+        "href": "download:whatToBring",
+        "newTab": true
+      }
+    ],
+    "image": {
+      "src": "https://images.unsplash.com/photo-1554224155-cfa08c2a758f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0YXglMjBvZmZpY2UlMjBmcm9udCUyMGRlc2slMjBjbGllbnQlMjBkb2N1bWVudHN8ZW58MXx8fHwxNzY3NjU5MjE1fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+      "alt": "Friendly tax office front desk with professional staff"
+    }
+  },
+  "steps": {
+    "title": "How drop-off works",
+    "items": [
+      {
+        "icon": "FileText",
+        "text": "Gather your tax documents"
+      },
+      {
+        "icon": "MapPin",
+        "text": "Drop them off at a LeadTax location"
+      },
+      {
+        "icon": "Users",
+        "text": "Our experts prepare your return"
+      },
+      {
+        "icon": "CircleCheckBig",
+        "text": "Review and approve before filing"
+      }
+    ]
+  },
+  "benefits": {
+    "title": "Why choose drop-off",
+    "items": [
+      {
+        "icon": "Calendar",
+        "title": "No appointments needed",
+        "description": "Drop off your documents anytime during our business hours. No scheduling required."
+      },
+      {
+        "icon": "Zap",
+        "title": "Minimal effort required",
+        "description": "Just bring your documents and we'll take care of everything else for you."
+      },
+      {
+        "icon": "Award",
+        "title": "Expert-prepared returns",
+        "description": "Certified tax professionals review and prepare your return with accuracy."
+      },
+      {
+        "icon": "FileCheck",
+        "title": "Ideal for offline handling",
+        "description": "Perfect if you prefer handling your taxes in person without digital meetings."
+      }
+    ]
+  },
+  "audience": {
+    "title": "Who this is for",
+    "intro": "Best for:",
+    "items": [
+      {
+        "title": "Seniors",
+        "description": "A convenient, trusted way to file without dealing with technology."
+      },
+      {
+        "title": "Non-technical users",
+        "description": "No need to navigate online forms or video calls—just drop and go."
+      },
+      {
+        "title": "Busy individuals",
+        "description": "Save time with a simple drop-off at your nearest location."
+      },
+      {
+        "title": "Prefer in-person handling",
+        "description": "For those who value personal service without in-person meetings."
+      }
+    ]
+  },
+  "trust": {
+    "title": "Security & care",
+    "intro": "Your documents and personal information are protected every step of the way.",
+    "items": [
+      {
+        "icon": "Shield",
+        "title": "Secure document handling",
+        "description": "Your documents are handled with the highest security standards from drop-off to filing."
+      },
+      {
+        "icon": "Lock",
+        "title": "Confidential storage",
+        "description": "All documents are stored in secure, access-controlled environments."
+      },
+      {
+        "icon": "Eye",
+        "title": "Professional review",
+        "description": "Every return is carefully reviewed by certified tax professionals."
+      },
+      {
+        "icon": "SquareCheckBig",
+        "title": "CRA-compliant submission",
+        "description": "Your return is filed according to all Canada Revenue Agency requirements."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Prefer a hands-off tax filing experience?",
+    "text": "Visit any of our convenient locations and let us take care of everything for you.",
+    "action": {
+      "label": "Drop off your documents",
+      "href": "download:whatToBring",
+      "newTab": true
+    }
+  }
+}
