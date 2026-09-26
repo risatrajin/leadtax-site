@@ -38,11 +38,11 @@
       }
     ],
     "image": {
-      "src": "/images/hero-cross-border-friends.webp",
+      "src": "/images/hero-cross-border-friends-wide.webp",
       "alt": "Two friends laughing at a phone, one in a US flag jacket and one in a Canadian flag hoodie",
-      "position": "0% 30%",
+      "position": "85% 20%",
       "_source": "Supplied by the LeadTax team (Lummi Pro licence).",
-      "_positionNote": "0% keeps the two people to the right of the text on wide screens."
+      "_positionNote": "The people stand on the right of this photo with open sky on the left for the text; 85% 20% keeps their faces in view when the photo is cropped."
     },
     "servicesTitle": "What we can do for you",
     "services": [

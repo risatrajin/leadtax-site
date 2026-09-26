@@ -105,4 +105,4 @@ number (604) 568-4829, which differs from the number the site lists for Commerci
 
 | File | Size | Shows | Source | Used on |
 |---|---|---|---|---|
-| `hero-cross-border-friends.webp` | 1964×1045, 117 KB | Two friends laughing at a phone under a blue sky, one in a US flag jacket, one in a Canadian flag hoodie | Supplied by the LeadTax team (Lummi Pro licence) | Homepage hero: full-bleed behind the text and cards from 1280px (`object-position: 0% 30%` keeps the people right of the text); on top of the text below 1280px |
+| `hero-cross-border-friends-wide.webp` | 1964×1038, 125 KB | Two friends laughing at a phone under a blue sky, one in a US flag jacket, one in a Canadian flag hoodie; the people stand on the right with open sky on the left | Supplied by the LeadTax team (Lummi Pro licence); replaces the earlier `hero-cross-border-friends.webp` crop | Homepage hero: full-bleed behind the left-aligned text and cards from 1280px (`object-position: 85% 20%`); on top of the text below 1280px |

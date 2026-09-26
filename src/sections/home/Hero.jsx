@@ -74,19 +74,18 @@ function ServiceCard({ service }) {
  * Homepage hero (client mockup): headline and actions on the left, a photo behind them, and
  * the five services as cards along the bottom.
  * From 1280px the photo covers the whole section behind the text and cards, with no overlay.
- * It sits in a fixed 1000px frame (clipped by the section) focused at 45% down, so the faces
- * land between the buttons and the cards at every desktop width.
+ * The people stand on the right of the photo, leaving open sky behind the left-aligned text.
  * The text is left-aligned; on the photo it is white with a soft shadow for contrast.
  * Below 1280px the photo sits on top, full width. The trust row is a separate band (TrustBand).
  */
 export default function Hero() {
   return (
     <section aria-labelledby="hero-title" className="relative overflow-hidden bg-white">
-      <div className="relative h-64 sm:h-80 lg:h-[26rem] xl:absolute xl:inset-x-0 xl:top-0 xl:h-[1000px]">
+      <div className="relative h-64 sm:h-80 lg:h-[26rem] xl:absolute xl:inset-0 xl:h-auto">
         <img
           src={hero.image.src}
           alt={hero.image.alt}
-          className="h-full w-full object-cover xl:object-[50%_45%]!"
+          className="h-full w-full object-cover"
           style={{ objectPosition: hero.image.position }}
         />
       </div>
@@ -95,7 +94,7 @@ export default function Hero() {
           <h1 id="hero-title" className="text-4xl font-bold leading-[1.05] tracking-tight text-gray-900 sm:text-5xl lg:text-7xl xl:text-white">
             {hero.titleLead} <span className="text-brand-bright xl:text-white">{hero.titleAccent}</span>
           </h1>
-          <p className="mt-6 text-xl leading-relaxed text-gray-600 md:text-2xl xl:text-white">{hero.text}</p>
+          <p className="mt-6 text-xl leading-relaxed text-gray-600 md:text-2xl xl:max-w-xl xl:text-white">{hero.text}</p>
           <div className="mt-10 flex flex-col gap-4 sm:flex-row [text-shadow:none]">
             <Button to={hero.book.to} className="inline-flex items-center justify-center gap-3 font-semibold">
               <CalendarDays aria-hidden="true" className="h-5 w-5" />
