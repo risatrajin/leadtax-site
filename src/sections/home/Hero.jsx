@@ -74,21 +74,23 @@ function ServiceCard({ service }) {
  * Homepage hero (client mockup): headline and actions on the left, a photo behind them, and
  * the five services as cards along the bottom.
  * From 1280px the photo covers the whole section behind the text and cards, with no overlay.
+ * It sits in a fixed 1000px frame (clipped by the section) focused at 45% down, so the faces
+ * land between the buttons and the cards at every desktop width.
  * The text is centered; on the photo it is white with a soft shadow for contrast.
  * Below 1280px the photo sits on top, full width. The trust row is a separate band (TrustBand).
  */
 export default function Hero() {
   return (
     <section aria-labelledby="hero-title" className="relative overflow-hidden bg-white">
-      <div className="relative h-64 sm:h-80 lg:h-[26rem] xl:absolute xl:inset-0 xl:h-auto">
+      <div className="relative h-64 sm:h-80 lg:h-[26rem] xl:absolute xl:inset-x-0 xl:top-0 xl:h-[1000px]">
         <img
           src={hero.image.src}
           alt={hero.image.alt}
-          className="h-full w-full object-cover"
+          className="h-full w-full object-cover xl:object-[50%_45%]!"
           style={{ objectPosition: hero.image.position }}
         />
       </div>
-      <div className="relative mx-auto max-w-7xl px-4 pb-12 pt-6 md:px-8 xl:pb-16 xl:pt-24">
+      <div className="relative mx-auto max-w-7xl px-4 pb-12 pt-6 md:px-8 xl:pb-16 xl:pt-14">
         <div className="mx-auto max-w-3xl text-center xl:text-white xl:[text-shadow:0_1px_12px_rgb(0_0_0/0.35)]">
           <h1 id="hero-title" className="text-4xl font-bold leading-[1.05] tracking-tight text-gray-900 sm:text-5xl lg:text-7xl xl:text-white">
             {hero.titleLead} <span className="text-brand-bright xl:text-white">{hero.titleAccent}</span>
@@ -113,7 +115,7 @@ export default function Hero() {
         </div>
       </div>
 
-      <div className="relative mx-auto max-w-7xl px-4 pb-16 md:px-8 md:pb-24 xl:mt-[50px] xl:pb-[46px]">
+      <div className="relative mx-auto max-w-7xl px-4 pb-16 md:px-8 md:pb-24 xl:mt-[90px] xl:pb-[46px]">
         <h2 className="sr-only">{hero.servicesTitle}</h2>
         <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-5 lg:gap-4">
           {hero.services.map((service) => (
