@@ -59,14 +59,16 @@ function ServiceCard({ service }) {
     <SmartLink
       to={link.to}
       href={link.href}
-      className="group flex flex-col items-center rounded-2xl border border-gray-200 bg-white px-5 py-7 text-center shadow-md transition-shadow hover:shadow-xl"
+      className="group flex items-center gap-4 rounded-2xl border border-gray-200 bg-white p-4 shadow-md transition-shadow hover:shadow-xl lg:flex-col lg:items-center lg:gap-0 lg:px-4 lg:py-5 lg:text-center"
     >
-      <Icon aria-hidden="true" strokeWidth={1.5} className="h-12 w-12 text-brand-bright" />
-      <h3 className="mt-4 text-lg font-semibold text-gray-900">{service.title}</h3>
-      <p className="mt-2 text-sm leading-relaxed text-gray-600">{service.text}</p>
+      <Icon aria-hidden="true" strokeWidth={1.5} className="h-9 w-9 flex-shrink-0 text-brand-bright" />
+      <div className="min-w-0 flex-1 lg:flex-none">
+        <h3 className="text-base font-semibold leading-snug text-gray-900 lg:mt-3">{service.title}</h3>
+        <p className="mt-1 text-sm leading-snug text-gray-600">{service.text}</p>
+      </div>
       <span
         aria-hidden="true"
-        className="mt-auto flex h-10 w-10 translate-y-1 items-center justify-center rounded-full border-2 border-brand-bright text-brand-bright transition-colors group-hover:bg-brand-bright group-hover:text-white"
+        className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full border-2 border-brand-bright text-brand-bright transition-colors group-hover:bg-brand-bright group-hover:text-white lg:mt-3"
       >
         <ArrowRight className="h-4 w-4" />
       </span>
@@ -123,7 +125,7 @@ export default function Hero() {
 
       <div className="relative mx-auto max-w-7xl px-4 pb-16 md:px-8 md:pb-24">
         <h2 className="sr-only">{hero.servicesTitle}</h2>
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
+        <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-5 lg:gap-4">
           {hero.services.map((service) => (
             <ServiceCard key={service.link} service={service} />
           ))}
