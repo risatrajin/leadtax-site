@@ -84,7 +84,7 @@ The original header and footer were replaced by one site-wide `SiteHeader` and `
 | X12 | Two different refund guarantees: /faq "refund your service fee and pay any difference" vs /pricing "reimburse penalties and interest up to $1,000". | `faqs.json`, `pages/pricing.json` | kept |
 | X13 | Related Articles cards show a gradient placeholder instead of the post photo. | `RelatedArticles.jsx` | kept |
 | X14 | Six blog posts credit named authors (Sarah Johnson, Michael Chen, Emily Rodriguez, David Thompson "CPA", Jennifer Lee, Robert Martinez) who look like placeholders. | `posts.json` | kept |
-| X15 | US cross-border hero "Schedule Consultation" is navy on a navy gradient (very low contrast). | `CrossBorderHero.jsx` | kept |
+| X15 | US cross-border hero "Schedule Consultation" is navy on a navy gradient (very low contrast). | `CrossBorderHero.jsx` | fixed: shared PageHero, white button |
 | X16 | US cross-border prices $299 / $599 / $999 CAD; "Most Popular" is Professional there but Deluxe on /pricing. | `us-cross-border.json` | kept |
 | X17 | US cross-border claims "15+ Years of Experience" while JSON-LD says founded 2020; also "IRS-Certified Experts", "500+", "98%", "100% Compliance Guarantee". | `us-cross-border.json` | kept |
 | X18 | Drop-off: audience item "Prefer in-person handling — For those who value personal service without in-person meetings" contradicts itself; "during our business hours" but hours are never listed. | `drop-off.json` | kept |
