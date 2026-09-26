@@ -12,7 +12,7 @@ import useDesktopMenus from "./site-header/useDesktopMenus.js";
 
 const { header } = nav;
 const TRIGGER =
-  "inline-flex items-center gap-1 rounded-full px-3 py-2 text-[15px] font-semibold transition-colors hover:text-brand";
+  "inline-flex items-center gap-1 whitespace-nowrap rounded-full px-2 py-2 text-[14px] font-semibold transition-colors hover:text-brand xl:px-2.5 xl:text-[15px]";
 
 /**
  * The one header used on every page: a small utility bar (client login, phone on
@@ -56,13 +56,13 @@ export default function SiteHeader() {
 
       <header className="sticky top-0 z-50 border-b border-gray-200 bg-white">
         <div className="relative">
-          <div className="mx-auto flex h-16 max-w-7xl items-center justify-between gap-6 px-4 md:h-20 md:px-8">
+          <div className="mx-auto flex h-16 max-w-7xl items-center justify-between gap-4 px-4 md:h-20 md:px-8 xl:gap-5">
             <Link to="/" aria-label={header.homeLabel} className="flex-shrink-0">
-              <img src={site.logo} alt={site.name} className="h-8 md:h-10" />
+              <img src={site.logo} alt={site.name} className="h-8 md:h-10 lg:h-8 xl:h-10" />
             </Link>
 
             <nav aria-label={header.navLabel} className="hidden lg:block">
-              <ul className="flex items-center gap-1">
+              <ul className="flex items-center xl:gap-1">
                 {header.items.map((item) => {
                   if (item.type === "link") {
                     const link = linkById(item.link);
@@ -91,11 +91,11 @@ export default function SiteHeader() {
               </ul>
             </nav>
 
-            <div className="hidden items-center gap-5 lg:flex">
-              <a href={`tel:${tollFreeDashed}`} className="hidden font-semibold text-gray-700 hover:text-brand xl:inline">
+            <div className="hidden items-center gap-4 lg:flex xl:gap-5">
+              <a href={`tel:${tollFreeDashed}`} className="hidden whitespace-nowrap font-semibold text-gray-700 hover:text-brand xl:inline">
                 {tollFreeDashed}
               </a>
-              <Button to={header.cta.to} size="sm" className="whitespace-nowrap font-semibold">
+              <Button to={header.cta.to} size="header" className="whitespace-nowrap font-semibold">
                 {header.cta.label}
               </Button>
             </div>

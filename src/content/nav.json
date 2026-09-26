@@ -1,6 +1,10 @@
 {
   "_note": "Every site-wide link. SiteHeader and SiteFooter read only this file (plus offices.json and site.json). Links to pages that do not exist yet point to # and are flagged.",
   "links": {
+    "home": {
+      "label": "Home",
+      "to": "/"
+    },
     "personalTax": {
       "_placeholders": [
         "href"
@@ -88,6 +92,10 @@
     "homeLabel": "LeadTax home",
     "navLabel": "Main",
     "items": [
+      {
+        "type": "link",
+        "link": "home"
+      },
       {
         "type": "mega",
         "id": "tax-services",

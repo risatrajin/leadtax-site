@@ -16,6 +16,8 @@ const VARIANTS = {
 
 const SIZES = {
   sm: "px-6 py-2",
+  /** Header booking button: a little smaller between 1024 and 1279px so the nav fits. */
+  header: "px-5 py-2 text-sm xl:px-6 xl:text-base",
   md: "px-6 py-3",
   lg: "px-8 py-4",
   wide: "px-8 py-3",
