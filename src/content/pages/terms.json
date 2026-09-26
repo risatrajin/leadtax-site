@@ -1,0 +1,329 @@
+{
+  "title": "Terms and Conditions",
+  "lastUpdated": "Last updated: Jan 10, 2026",
+  "intro": [
+    {
+      "type": "paragraph",
+      "text": "These Terms and Conditions govern your access to and use of the Lead Tax website, software, and services. By using our services, you agree to these Terms."
+    },
+    {
+      "type": "paragraph",
+      "text": "If you do not agree, please do not use Lead Tax.",
+      "emphasis": true
+    }
+  ],
+  "sections": [
+    {
+      "title": "1. About Lead Tax",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Lead Tax Group Inc. (\"Lead Tax,\" \"we,\" \"us,\" or \"our\") provides personal tax filing services to individuals in Canada through multiple service options, including do-it-yourself filing, remote filing, and in-person services.",
+          "gap": "sm"
+        },
+        {
+          "type": "paragraph",
+          "text": "Some services are delivered using licensed third-party tax technology. Others are delivered directly by Lead Tax professionals."
+        }
+      ]
+    },
+    {
+      "title": "2. Our Services Overview",
+      "blocks": [
+        {
+          "type": "subheading",
+          "text": "a) DIY Tax Filing (Powered by CloudTax API)"
+        },
+        {
+          "type": "paragraph",
+          "text": "Lead Tax offers a do-it-yourself tax filing platform powered by CRA NETFILE-certified software using the CloudTax API.",
+          "gap": "sm"
+        },
+        {
+          "type": "paragraph",
+          "text": "With this service:",
+          "gap": "sm"
+        },
+        {
+          "type": "list",
+          "items": [
+            "You prepare your own personal tax return",
+            "The software guides you step by step and performs calculations",
+            "Your return is submitted electronically to the CRA through NETFILE",
+            "Lead Tax provides phone and email support to assist you",
+            "You are responsible for reviewing and approving your return before submission."
+          ]
+        },
+        {
+          "type": "subheading",
+          "text": "b) File Remotely (Powered by CloudTax EFILE and Client Portal)"
+        },
+        {
+          "type": "paragraph",
+          "text": "File Remotely allows you to have your tax return prepared and filed by a tax professional without visiting an office.",
+          "gap": "sm"
+        },
+        {
+          "type": "paragraph",
+          "text": "With this service:",
+          "gap": "sm"
+        },
+        {
+          "type": "list",
+          "items": [
+            "You upload documents through a secure client portal",
+            "A tax professional prepares your return using CloudTax EFILE",
+            "You review and approve the return before filing",
+            "The return is submitted electronically to the CRA",
+            "This service may be used for more complex situations not supported by DIY."
+          ]
+        },
+        {
+          "type": "subheading",
+          "text": "c) Drop-off and In-Person Services (Provided by Lead Tax)"
+        },
+        {
+          "type": "paragraph",
+          "text": "Drop-off and in-person tax services are provided directly by Lead Tax Group Inc.",
+          "gap": "sm"
+        },
+        {
+          "type": "paragraph",
+          "text": "With these services:",
+          "gap": "sm"
+        },
+        {
+          "type": "list",
+          "items": [
+            "A Lead Tax professional prepares and files your return",
+            "Additional consultation may be provided depending on your situation",
+            "Fees and timelines may vary based on complexity",
+            "These services are suitable for clients who prefer hands-on support or have specialized needs."
+          ]
+        }
+      ]
+    },
+    {
+      "title": "3. Eligibility and Scope",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Lead Tax services are intended for Canadian residents filing personal income tax returns.",
+          "gap": "sm"
+        },
+        {
+          "type": "paragraph",
+          "text": "Certain filings are not supported through DIY and may require File Remotely or in-person service, including but not limited to:",
+          "gap": "sm"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Corporate tax returns (T2)",
+            "Complex CRA elections or special returns",
+            "Quebec provincial tax returns",
+            "Certain agriculture-related and multi-jurisdiction filings"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Lead Tax reserves the right to redirect a filing to the appropriate service channel."
+        }
+      ]
+    },
+    {
+      "title": "4. User Responsibilities",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "By using Lead Tax, you agree to:",
+          "gap": "sm"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Provide accurate, complete, and truthful information",
+            "Review your return carefully before approving submission",
+            "Maintain the confidentiality of your login credentials",
+            "Notify us promptly of any errors or concerns"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "You are ultimately responsible for the information submitted to the CRA."
+        }
+      ]
+    },
+    {
+      "title": "5. Fees and Payments",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "All fees are disclosed before service begins",
+            "DIY pricing is per return and non-refundable once filing has started",
+            "Remote and in-person services may involve additional fees based on complexity",
+            "Payments must be completed before filing unless otherwise agreed in writing",
+            "Lead Tax does not offer a free filing option."
+          ]
+        }
+      ]
+    },
+    {
+      "title": "6. Refunds and Cancellations",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "DIY services are non-refundable once you begin entering tax data",
+            "File Remotely and in-person services may be cancelled before work begins",
+            "Refunds, if applicable, are issued at Lead Tax's discretion",
+            "CRA filing fees and completed professional work are non-refundable."
+          ]
+        }
+      ]
+    },
+    {
+      "title": "7. CRA Submissions and Acceptance",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Lead Tax submits returns electronically using CRA-approved systems.",
+          "gap": "sm"
+        },
+        {
+          "type": "paragraph",
+          "text": "The CRA is solely responsible for:",
+          "gap": "sm"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Acceptance or rejection of a return",
+            "Processing timelines",
+            "Assessments, reassessments, penalties, or interest"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Lead Tax cannot guarantee CRA outcomes."
+        }
+      ]
+    },
+    {
+      "title": "8. Accuracy and No Guarantee of Results",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "While we take reasonable steps to ensure accuracy:",
+          "gap": "sm"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Tax outcomes depend on the information you provide",
+            "Refund amounts and balances owing are not guaranteed",
+            "Lead Tax does not guarantee specific tax results",
+            "Support provided does not replace legal or financial advice."
+          ]
+        }
+      ]
+    },
+    {
+      "title": "9. Technology and Third-Party Services",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Lead Tax uses licensed tax software and infrastructure, including:",
+          "gap": "sm"
+        },
+        {
+          "type": "list",
+          "items": [
+            "CloudTax API for DIY filing",
+            "CloudTax EFILE and Client Portal for professional filings",
+            "Secure payment and communication platforms"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Lead Tax is not responsible for outages or interruptions caused by third-party systems, though we will make reasonable efforts to resolve issues."
+        }
+      ]
+    },
+    {
+      "title": "10. Privacy and Data Protection",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Your use of Lead Tax is subject to our Privacy Policy.",
+          "gap": "sm"
+        },
+        {
+          "type": "paragraph",
+          "text": "We take reasonable measures to protect your personal information and comply with applicable Canadian privacy laws."
+        }
+      ]
+    },
+    {
+      "title": "11. Limitation of Liability",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "To the maximum extent permitted by law:",
+          "gap": "sm"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Lead Tax is not liable for indirect, incidental, or consequential damages",
+            "Liability is limited to the fees paid for the service in question",
+            "Lead Tax is not responsible for CRA penalties resulting from incorrect information provided by you"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "12. Changes to These Terms",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Lead Tax may update these Terms from time to time.",
+          "gap": "sm"
+        },
+        {
+          "type": "paragraph",
+          "text": "Updated Terms will be posted on our website with a revised date.",
+          "gap": "sm"
+        },
+        {
+          "type": "paragraph",
+          "text": "Continued use of our services means you accept the updated Terms."
+        }
+      ]
+    },
+    {
+      "title": "13. Governing Law",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "These Terms are governed by the laws of the Province of Ontario and the laws of Canada applicable therein."
+        }
+      ]
+    },
+    {
+      "title": "14. Contact Us",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "If you have questions about these Terms, please contact us:",
+          "gap": "md"
+        },
+        {
+          "type": "contactCard",
+          "company": "Lead Tax Group Inc."
+        }
+      ]
+    }
+  ]
+}
