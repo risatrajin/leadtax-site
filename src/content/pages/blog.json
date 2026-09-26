@@ -1,0 +1,23 @@
+{
+  "listing": {
+    "title": "Tax Tips & Insights",
+    "intro": "Stay informed with expert advice, tax tips, and the latest updates from LeadTax.",
+    "readMoreLabel": "Read More →"
+  },
+  "post": {
+    "backLabel": "Back to Blog",
+    "cta": {
+      "title": "Ready to File Your Taxes with Confidence?",
+      "text": "LeadTax makes it simple to maximize your deductions and get the refund you deserve.",
+      "actions": [
+        { "label": "Get Started Free", "to": "/get-started", "variant": "inverse" },
+        { "label": "Talk to an Expert", "to": "/contact", "variant": "outlineInverse" }
+      ]
+    },
+    "relatedTitle": "Related Articles",
+    "notFound": {
+      "title": "Blog Post Not Found",
+      "text": "Sorry, we couldn't find the article you're looking for."
+    }
+  }
+}
