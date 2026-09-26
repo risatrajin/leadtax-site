@@ -1,0 +1,92 @@
+{
+  "_note": "Copy archived from the original build. This page was not rebuilt and will be dropped. 'content' is the page in reading order as first rendered; 'otherText' holds every other string in the page's source (hidden accordion answers, alternate states, messages) so nothing is lost.",
+  "routes": [
+    "/sign-in"
+  ],
+  "originalComponent": "Hw",
+  "seo": {
+    "title": "Sign In - LeadTax",
+    "description": "Sign in to your LeadTax account to access your tax filings, documents, and account information."
+  },
+  "content": [
+    {
+      "type": "header"
+    },
+    {
+      "type": "h1",
+      "text": "Sign In to LeadTax"
+    },
+    {
+      "type": "p",
+      "text": "Access your account to manage your tax filings"
+    },
+    {
+      "type": "label",
+      "text": "Email Address"
+    },
+    {
+      "type": "field",
+      "name": "email",
+      "inputType": "email",
+      "placeholder": "your@email.com"
+    },
+    {
+      "type": "label",
+      "text": "Password"
+    },
+    {
+      "type": "field",
+      "name": "password",
+      "inputType": "password",
+      "placeholder": "••••••••"
+    },
+    {
+      "type": "field",
+      "name": "remember-me",
+      "inputType": "checkbox"
+    },
+    {
+      "type": "label",
+      "text": "Remember me"
+    },
+    {
+      "type": "link",
+      "label": "Forgot password?",
+      "href": "#"
+    },
+    {
+      "type": "button",
+      "text": "Sign In"
+    },
+    {
+      "type": "p",
+      "text": "Don't have an account? "
+    },
+    {
+      "type": "link",
+      "label": "Get Started",
+      "to": "/contact"
+    },
+    {
+      "type": "p",
+      "text": "By signing in, you agree to our  and "
+    },
+    {
+      "type": "link",
+      "label": "Terms and Conditions",
+      "to": "/terms"
+    },
+    {
+      "type": "link",
+      "label": "Privacy Policy",
+      "to": "/privacy-policy"
+    },
+    {
+      "type": "footer"
+    }
+  ],
+  "otherText": [
+    "Don't have an account?",
+    "By signing in, you agree to our"
+  ]
+}

@@ -1,0 +1,189 @@
+{
+  "_note": "Copy archived from the original build. This page was not rebuilt and will be dropped. 'content' is the page in reading order as first rendered; 'otherText' holds every other string in the page's source (hidden accordion answers, alternate states, messages) so nothing is lost.",
+  "routes": [
+    "/file-remote-landing"
+  ],
+  "originalComponent": "_1",
+  "seo": {
+    "title": "Remote Tax Filing Canada | File From Anywhere with a LeadTax Expert",
+    "description": "File your Canadian taxes remotely with a LeadTax expert. Upload your documents securely, we prepare and file your return from anywhere in Canada. Maximum refund guaranteed. CRA-certified.",
+    "keywords": "remote tax filing Canada, virtual tax filing, file taxes online with expert, tax expert remote Canada, online tax preparation BC, remote tax return Canada",
+    "path": "/file-remote-landing"
+  },
+  "content": [
+    {
+      "type": "header"
+    },
+    {
+      "type": "h1",
+      "text": "Say 👋 Hello to your"
+    },
+    {
+      "type": "span",
+      "text": "Remote tax Expert"
+    },
+    {
+      "type": "p",
+      "text": "Meet with a tax professional online and get your return prepared accurately without visiting an office."
+    },
+    {
+      "type": "link",
+      "label": "Get A Remote Expert Review",
+      "to": "/contact"
+    },
+    {
+      "type": "image",
+      "src": "/images/85c42efac7ab296e244fc3648ac9b045ad21032f.png",
+      "alt": "Remote Tax Experts"
+    },
+    {
+      "type": "h2",
+      "text": "How remote filing works"
+    },
+    {
+      "type": "p",
+      "text": "Step 1"
+    },
+    {
+      "type": "h3",
+      "text": "Upload your documents securely"
+    },
+    {
+      "type": "p",
+      "text": "Step 2"
+    },
+    {
+      "type": "h3",
+      "text": "Meet your tax expert via video call"
+    },
+    {
+      "type": "p",
+      "text": "Step 3"
+    },
+    {
+      "type": "h3",
+      "text": "Review your completed return together"
+    },
+    {
+      "type": "p",
+      "text": "Step 4"
+    },
+    {
+      "type": "h3",
+      "text": "File electronically with confidence"
+    },
+    {
+      "type": "h3",
+      "text": "Full Review"
+    },
+    {
+      "type": "p",
+      "text": "Use our FREE tax experts who review for free! We're here to answer questions, review your return, and make sure you get the best refund."
+    },
+    {
+      "type": "h3",
+      "text": "Drop a Virtual Application"
+    },
+    {
+      "type": "p",
+      "text": "Schedule a call (or virtual session) with our tax experts if you'd like hands on support. We'll guide you so you can file with confidence."
+    },
+    {
+      "type": "h3",
+      "text": "Premier Support"
+    },
+    {
+      "type": "p",
+      "text": "Remember you, protect Advanced full service CRA representation for any future audit. We'll be there representing you."
+    },
+    {
+      "type": "image",
+      "src": "/images/f9f19d1ce2ca93b00bc619db8f8017f7c2bef2c9.png",
+      "alt": "Tax Support Professional"
+    },
+    {
+      "type": "h2",
+      "text": "What happens if the CRA Audits you?"
+    },
+    {
+      "type": "span",
+      "text": "A CRA request can seem scary! A email or a text with a professional representative using LeadTax is already SO"
+    },
+    {
+      "type": "span",
+      "text": "Our trained experts can talk with the CRA on your behalf and find out what's required"
+    },
+    {
+      "type": "span",
+      "text": "We deal with the CRA for 90% — no hassles or calls or you pay online. — We handle it all for you"
+    },
+    {
+      "type": "span",
+      "text": "And guess what? LeadTax helps with that!"
+    },
+    {
+      "type": "h2",
+      "text": "Frequently asked questions."
+    },
+    {
+      "type": "p",
+      "text": "Have questions about our remote tax services? Find answers below."
+    },
+    {
+      "type": "span",
+      "text": "What is remote tax filing?"
+    },
+    {
+      "type": "span",
+      "text": "Who can use Lead TAX remote filing service?"
+    },
+    {
+      "type": "span",
+      "text": "What documents do I need to get started?"
+    },
+    {
+      "type": "span",
+      "text": "How do I send my tax documents?"
+    },
+    {
+      "type": "span",
+      "text": "Is my personal information safe?"
+    },
+    {
+      "type": "span",
+      "text": "How long does remote tax filing take?"
+    },
+    {
+      "type": "span",
+      "text": "Can you help if I am self-employed or have a more complex return?"
+    },
+    {
+      "type": "h2",
+      "text": "Ready to file with a remote tax expert?"
+    },
+    {
+      "type": "p",
+      "text": "Get personalized support, maximum deductions, and peace of mind with our professional tax experts."
+    },
+    {
+      "type": "link",
+      "label": "Book Your Remote Expert Review",
+      "to": "/contact"
+    },
+    {
+      "type": "footer"
+    }
+  ],
+  "otherText": [
+    "Error loading image",
+    "Samira",
+    "Remote Support Lead",
+    "Remote tax filing lets you complete your tax return without visiting our office. You send your documents securely online, and our team prepares and files your return remotely.",
+    "Our remote filing service is available to individuals across Canada, including employees, students, self-employed individuals, newcomers, couples, and families.",
+    "Most clients need tax slips such as T4, T5, or tuition slips, along with receipts for RRSP contributions, medical expenses, childcare, rent, or other tax-related documents depending on their situation.",
+    "You can submit your documents through our secure remote process. Please make sure your files are clear, complete, and easy to read.",
+    "Yes. We handle your personal and financial information with care and use secure methods to collect and process your documents.",
+    "The timeline depends on how simple or complex your return is and whether all required documents are provided on time. Simple returns are usually completed faster.",
+    "Yes. We can assist with self-employed and more detailed tax situations by reviewing the information you provide and helping prepare your return properly."
+  ]
+}

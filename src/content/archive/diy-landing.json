@@ -1,0 +1,499 @@
+{
+  "_note": "Copy archived from the original build. This page was not rebuilt and will be dropped. 'content' is the page in reading order as first rendered; 'otherText' holds every other string in the page's source (hidden accordion answers, alternate states, messages) so nothing is lost.",
+  "routes": [
+    "/diy-landing",
+    "/dyi-landing"
+  ],
+  "originalComponent": "ap",
+  "seo": {
+    "title": "File Your 2025 Tax Return Online - NETFILE Certified | LeadTax",
+    "description": "NETFILE is open! File your 2025 Canadian tax return online from $19. CRA certified, maximum refund guarantee, and get your refund in as little as 8 days with direct deposit.",
+    "keywords": "tax return Canada, NETFILE, online tax filing, file taxes online, tax software Canada, CRA, income tax return, tax refund, DIY tax filing"
+  },
+  "content": [
+    {
+      "type": "link",
+      "label": "",
+      "to": "/"
+    },
+    {
+      "type": "link",
+      "label": "Get Started",
+      "href": "https://app.leadtax.ca/user/auth/register"
+    },
+    {
+      "type": "h1",
+      "text": "NETFILE Is Open.File Your Taxes Today."
+    },
+    {
+      "type": "p",
+      "text": "CRA is accepting 2025 returns right now. File from $19. Online + direct deposit could mean refund in as little as 8 business days.*"
+    },
+    {
+      "type": "link",
+      "label": "Start Your Return",
+      "href": "https://app.leadtax.ca/user/auth/register"
+    },
+    {
+      "type": "span",
+      "text": "Secure Encrypted"
+    },
+    {
+      "type": "span",
+      "text": "CRA Certified NETFILE"
+    },
+    {
+      "type": "span",
+      "text": "SOC 2 Audited"
+    },
+    {
+      "type": "h2",
+      "text": "What Our Customers Say"
+    },
+    {
+      "type": "span",
+      "text": "Reviews"
+    },
+    {
+      "type": "span",
+      "text": "5.0"
+    },
+    {
+      "type": "span",
+      "text": "(206)"
+    },
+    {
+      "type": "link",
+      "label": "Review us on Google",
+      "href": "https://www.google.com/search?sca_esv=539c00fc8c0dc83a&cs=0&output=search&kgmid=/g/11yrw6n2wz&q=Lead+Tax&shndl=30&source=sh/x/kp/local/m1/1&kgs=775836b1221013c6&shem=shrtsdl&utm_source=shrtsdl,sh/x/kp/local/m1/1#lrd=0x548671002f5d3723:0x639f6e81e3a64a20,1,,,,"
+    },
+    {
+      "type": "link",
+      "label": "Radheeka Per...3 days agoHighly recommend!Read more",
+      "href": "https://www.google.com/search?sca_esv=539c00fc8c0dc83a&cs=0&output=search&kgmid=/g/11yrw6n2wz&q=Lead+Tax&shndl=30&source=sh/x/kp/local/m1/1&kgs=775836b1221013c6&shem=shrtsdl&utm_source=shrtsdl,sh/x/kp/local/m1/1#lrd=0x548671002f5d3723:0x639f6e81e3a64a20,1,,,,"
+    },
+    {
+      "type": "link",
+      "label": "Ruwin Sinniah2 days agoSuper efficient service.. Thank you Pathum for your valuable profession...Read more",
+      "href": "https://www.google.com/search?sca_esv=539c00fc8c0dc83a&cs=0&output=search&kgmid=/g/11yrw6n2wz&q=Lead+Tax&shndl=30&source=sh/x/kp/local/m1/1&kgs=775836b1221013c6&shem=shrtsdl&utm_source=shrtsdl,sh/x/kp/local/m1/1#lrd=0x548671002f5d3723:0x639f6e81e3a64a20,1,,,,"
+    },
+    {
+      "type": "link",
+      "label": "Amrin Virji3 days agoI will move provinces but I will always rely on them for their services! Fast,...Read more",
+      "href": "https://www.google.com/search?sca_esv=539c00fc8c0dc83a&cs=0&output=search&kgmid=/g/11yrw6n2wz&q=Lead+Tax&shndl=30&source=sh/x/kp/local/m1/1&kgs=775836b1221013c6&shem=shrtsdl&utm_source=shrtsdl,sh/x/kp/local/m1/1#lrd=0x548671002f5d3723:0x639f6e81e3a64a20,1,,,,"
+    },
+    {
+      "type": "link",
+      "label": "CHRIS LUCIUK3 days agoVincent is a total Professional.Read more",
+      "href": "https://www.google.com/search?sca_esv=539c00fc8c0dc83a&cs=0&output=search&kgmid=/g/11yrw6n2wz&q=Lead+Tax&shndl=30&source=sh/x/kp/local/m1/1&kgs=775836b1221013c6&shem=shrtsdl&utm_source=shrtsdl,sh/x/kp/local/m1/1#lrd=0x548671002f5d3723:0x639f6e81e3a64a20,1,,,,"
+    },
+    {
+      "type": "link",
+      "label": "Lisa Stumpf3 days agoGreat service and friendly staff. Taxes were done quickly. Thanks VincentRead more",
+      "href": "https://www.google.com/search?sca_esv=539c00fc8c0dc83a&cs=0&output=search&kgmid=/g/11yrw6n2wz&q=Lead+Tax&shndl=30&source=sh/x/kp/local/m1/1&kgs=775836b1221013c6&shem=shrtsdl&utm_source=shrtsdl,sh/x/kp/local/m1/1#lrd=0x548671002f5d3723:0x639f6e81e3a64a20,1,,,,"
+    },
+    {
+      "type": "p",
+      "text": "File with Confidence"
+    },
+    {
+      "type": "p",
+      "text": "Built by Canadian tax experts. Certified by the CRA. Protected by industry-leading security."
+    },
+    {
+      "type": "p",
+      "text": "Maximum Refund Guarantee"
+    },
+    {
+      "type": "p",
+      "text": "Find a bigger refund elsewhere with the same info? We refund your filing fee."
+    },
+    {
+      "type": "p",
+      "text": "Accuracy Guaranteed"
+    },
+    {
+      "type": "p",
+      "text": "Every return checked for errors before submission."
+    },
+    {
+      "type": "p",
+      "text": "Secure & Encrypted"
+    },
+    {
+      "type": "p",
+      "text": "SOC 2 certified. Bank-level encryption in transit and at rest."
+    },
+    {
+      "type": "p",
+      "text": "Auto-Fill My Return"
+    },
+    {
+      "type": "p",
+      "text": "Import slips directly from the CRA. Less typing, fewer errors."
+    },
+    {
+      "type": "p",
+      "text": "Error Checks Built In"
+    },
+    {
+      "type": "p",
+      "text": "Catches mistakes and missed deductions automatically."
+    },
+    {
+      "type": "h2",
+      "text": "Pick your do it yourself package."
+    },
+    {
+      "type": "p",
+      "text": "File your taxes online with confidence and accuracy."
+    },
+    {
+      "type": "image",
+      "src": "/images/e1d32fdec2e516971cd34652a1de6e35ffb3e5b4.png",
+      "alt": "Young adult smiling"
+    },
+    {
+      "type": "h3",
+      "text": "Basic"
+    },
+    {
+      "type": "p",
+      "text": "Fast & simple for basic tax returns"
+    },
+    {
+      "type": "span",
+      "text": "$19"
+    },
+    {
+      "type": "span",
+      "text": " per return"
+    },
+    {
+      "type": "link",
+      "label": "Get Started",
+      "href": "https://app.leadtax.ca/user/auth/register"
+    },
+    {
+      "type": "image",
+      "src": "/images/c53919e052f37bf04762bc944068db15feb32b36.png",
+      "alt": "Professional couple"
+    },
+    {
+      "type": "h3",
+      "text": "Deluxe"
+    },
+    {
+      "type": "p",
+      "text": "Maximize your refund with smart deductions"
+    },
+    {
+      "type": "span",
+      "text": "$39"
+    },
+    {
+      "type": "span",
+      "text": " per return"
+    },
+    {
+      "type": "link",
+      "label": "Get Started",
+      "href": "https://app.leadtax.ca/user/auth/register"
+    },
+    {
+      "type": "image",
+      "src": "/images/f19dbff318044da5abfcc07cd6629cfcc2b0f641.png",
+      "alt": "Happy family of three"
+    },
+    {
+      "type": "h3",
+      "text": "Premier"
+    },
+    {
+      "type": "p",
+      "text": "Handle investments with confidence"
+    },
+    {
+      "type": "span",
+      "text": "$69"
+    },
+    {
+      "type": "span",
+      "text": " per return"
+    },
+    {
+      "type": "link",
+      "label": "Get Started",
+      "href": "https://app.leadtax.ca/user/auth/register"
+    },
+    {
+      "type": "image",
+      "src": "/images/7051f12086d84a10a5a6245fe80411728ba1fea9.png",
+      "alt": "Delivery rider with bicycle"
+    },
+    {
+      "type": "h3",
+      "text": "Self-Employment"
+    },
+    {
+      "type": "p",
+      "text": "Built for business owners and freelancers"
+    },
+    {
+      "type": "span",
+      "text": "$99"
+    },
+    {
+      "type": "span",
+      "text": " per return"
+    },
+    {
+      "type": "link",
+      "label": "Get Started",
+      "href": "https://app.leadtax.ca/user/auth/register"
+    },
+    {
+      "type": "h3",
+      "text": "What happens if the CRA Audits you?"
+    },
+    {
+      "type": "p",
+      "text": "A CRA review can mean months of stress and thousands in professional fees. With LeadTax Audit Defence, we handle it for you."
+    },
+    {
+      "type": "span",
+      "text": " — up to $2,500 for a tax professional to represent you."
+    },
+    {
+      "type": "span",
+      "text": "100% of representation fees covered"
+    },
+    {
+      "type": "span",
+      "text": " — no stressful calls or letters on your own."
+    },
+    {
+      "type": "span",
+      "text": "We deal with the CRA for you"
+    },
+    {
+      "type": "span",
+      "text": " — we gather and submit what CRA requests."
+    },
+    {
+      "type": "span",
+      "text": "Document preparation included"
+    },
+    {
+      "type": "image",
+      "src": "/images/114fa8c0857c8dc963e5a09f109b42c1c501a7aa.png",
+      "alt": "Tax Tools Demo"
+    },
+    {
+      "type": "image",
+      "src": "/images/60c0473d81f3d5550b6355b64e70c5c171c4a74c.png",
+      "alt": "Need Expert Help"
+    },
+    {
+      "type": "span",
+      "text": "Powerful tax software that’s person-friendly"
+    },
+    {
+      "type": "p",
+      "text": "Get your taxes done by a certified tax professional. Maximum refund guaranteed with full audit protection."
+    },
+    {
+      "type": "span",
+      "text": "Get step-by-step guidance"
+    },
+    {
+      "type": "span",
+      "text": "One price. No games."
+    },
+    {
+      "type": "span",
+      "text": "Catches your mistakes"
+    },
+    {
+      "type": "link",
+      "label": "Start Your Return",
+      "href": "https://portal.leadtax.ca/user/auth/register"
+    },
+    {
+      "type": "h2",
+      "text": "What Our Customers Say"
+    },
+    {
+      "type": "p",
+      "text": "Don't just take our word for it. See what our satisfied customers have to say."
+    },
+    {
+      "type": "h2",
+      "text": "What Our Customers Say"
+    },
+    {
+      "type": "span",
+      "text": "Reviews"
+    },
+    {
+      "type": "span",
+      "text": "5.0"
+    },
+    {
+      "type": "span",
+      "text": "(206)"
+    },
+    {
+      "type": "link",
+      "label": "Review us on Google",
+      "href": "https://www.google.com/search?sca_esv=539c00fc8c0dc83a&cs=0&output=search&kgmid=/g/11yrw6n2wz&q=Lead+Tax&shndl=30&source=sh/x/kp/local/m1/1&kgs=775836b1221013c6&shem=shrtsdl&utm_source=shrtsdl,sh/x/kp/local/m1/1#lrd=0x548671002f5d3723:0x639f6e81e3a64a20,1,,,,"
+    },
+    {
+      "type": "link",
+      "label": "Radheeka Per...3 days agoHighly recommend!Read more",
+      "href": "https://www.google.com/search?sca_esv=539c00fc8c0dc83a&cs=0&output=search&kgmid=/g/11yrw6n2wz&q=Lead+Tax&shndl=30&source=sh/x/kp/local/m1/1&kgs=775836b1221013c6&shem=shrtsdl&utm_source=shrtsdl,sh/x/kp/local/m1/1#lrd=0x548671002f5d3723:0x639f6e81e3a64a20,1,,,,"
+    },
+    {
+      "type": "link",
+      "label": "Ruwin Sinniah2 days agoSuper efficient service.. Thank you Pathum for your valuable profession...Read more",
+      "href": "https://www.google.com/search?sca_esv=539c00fc8c0dc83a&cs=0&output=search&kgmid=/g/11yrw6n2wz&q=Lead+Tax&shndl=30&source=sh/x/kp/local/m1/1&kgs=775836b1221013c6&shem=shrtsdl&utm_source=shrtsdl,sh/x/kp/local/m1/1#lrd=0x548671002f5d3723:0x639f6e81e3a64a20,1,,,,"
+    },
+    {
+      "type": "link",
+      "label": "Amrin Virji3 days agoI will move provinces but I will always rely on them for their services! Fast,...Read more",
+      "href": "https://www.google.com/search?sca_esv=539c00fc8c0dc83a&cs=0&output=search&kgmid=/g/11yrw6n2wz&q=Lead+Tax&shndl=30&source=sh/x/kp/local/m1/1&kgs=775836b1221013c6&shem=shrtsdl&utm_source=shrtsdl,sh/x/kp/local/m1/1#lrd=0x548671002f5d3723:0x639f6e81e3a64a20,1,,,,"
+    },
+    {
+      "type": "link",
+      "label": "CHRIS LUCIUK3 days agoVincent is a total Professional.Read more",
+      "href": "https://www.google.com/search?sca_esv=539c00fc8c0dc83a&cs=0&output=search&kgmid=/g/11yrw6n2wz&q=Lead+Tax&shndl=30&source=sh/x/kp/local/m1/1&kgs=775836b1221013c6&shem=shrtsdl&utm_source=shrtsdl,sh/x/kp/local/m1/1#lrd=0x548671002f5d3723:0x639f6e81e3a64a20,1,,,,"
+    },
+    {
+      "type": "link",
+      "label": "Lisa Stumpf3 days agoGreat service and friendly staff. Taxes were done quickly. Thanks VincentRead more",
+      "href": "https://www.google.com/search?sca_esv=539c00fc8c0dc83a&cs=0&output=search&kgmid=/g/11yrw6n2wz&q=Lead+Tax&shndl=30&source=sh/x/kp/local/m1/1&kgs=775836b1221013c6&shem=shrtsdl&utm_source=shrtsdl,sh/x/kp/local/m1/1#lrd=0x548671002f5d3723:0x639f6e81e3a64a20,1,,,,"
+    },
+    {
+      "type": "h2",
+      "text": "Frequently asked questions."
+    },
+    {
+      "type": "p",
+      "text": "Have questions? We've got answers."
+    },
+    {
+      "type": "span",
+      "text": "I'm not good with taxes. Can I use LeadTax?"
+    },
+    {
+      "type": "p",
+      "text": "Absolutely. Simple questions + Auto-Fill from CRA. No tax knowledge needed. LeadTax fills in the forms for you."
+    },
+    {
+      "type": "span",
+      "text": "Is my information safe?"
+    },
+    {
+      "type": "p",
+      "text": "SOC 2 Type II certified. Bank-level encryption. Secure NETFILE transmission."
+    },
+    {
+      "type": "span",
+      "text": "What's different from free software?"
+    },
+    {
+      "type": "p",
+      "text": "Clear pricing before you start, tax practice backing, error checking, accuracy guarantee, Audit Defence on higher plans."
+    },
+    {
+      "type": "span",
+      "text": "Is LeadTax a government service?"
+    },
+    {
+      "type": "p",
+      "text": "No. Independent, CRA-certified. Not affiliated with or endorsed by the Government of Canada."
+    },
+    {
+      "type": "span",
+      "text": "What is Audit Defence?"
+    },
+    {
+      "type": "p",
+      "text": "CRA reviews your return → we cover representation fees up to $2,500. Included with Premier ($69) and Self-Employment ($99)."
+    },
+    {
+      "type": "span",
+      "text": "How long does it take?"
+    },
+    {
+      "type": "p",
+      "text": "About 20 minutes for a basic return with Auto-Fill from CRA."
+    },
+    {
+      "type": "span",
+      "text": "What does maximum refund guarantee mean?"
+    },
+    {
+      "type": "p",
+      "text": "Find a bigger refund elsewhere with the same info? We refund your filing fee."
+    },
+    {
+      "type": "span",
+      "text": "What happens after I submit?"
+    },
+    {
+      "type": "p",
+      "text": "CRA processes your return and issues a Notice of Assessment. With direct deposit, refund could arrive in as little as 8 business days (CRA estimate, not guaranteed)."
+    },
+    {
+      "type": "span",
+      "text": "What's the refund timeline realistically?"
+    },
+    {
+      "type": "p",
+      "text": "CRA says ~2 weeks for e-filed returns. With direct deposit, could be as little as 8 business days. If reviewed, could take longer. We can't predict your specific timeline."
+    },
+    {
+      "type": "h2",
+      "text": "You've Got This. Start Filing."
+    },
+    {
+      "type": "p",
+      "text": "Join thousands of Canadians who've already filed with LeadTax this year."
+    },
+    {
+      "type": "link",
+      "label": "Start Filing Now",
+      "href": "https://app.leadtax.ca/user/auth/register"
+    },
+    {
+      "type": "p",
+      "text": "© 2026 LeadTax. All rights reserved."
+    },
+    {
+      "type": "link",
+      "label": "Privacy Policy",
+      "to": "/privacy-policy"
+    },
+    {
+      "type": "link",
+      "label": "Terms & Conditions",
+      "to": "/terms"
+    },
+    {
+      "type": "link",
+      "label": "Contact",
+      "to": "/contact"
+    }
+  ],
+  "otherText": [
+    "/images/2a2b079bc66dbc6991115f5877af5c4ab44bacd4.png",
+    "LeadTax",
+    "NETFILE Is Open.",
+    "File Your Taxes Today.",
+    "https://fast.wistia.net/embed/iframe/{…}?autoPlay=true&muted=true&playsinline=true&controlsVisibleOnLoad=true",
+    "LeadTax Demo Video",
+    "autoplay; fullscreen",
+    " LeadTax. All rights reserved."
+  ]
+}
