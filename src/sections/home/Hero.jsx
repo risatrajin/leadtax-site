@@ -61,13 +61,13 @@ function ServiceCard({ service }) {
     <SmartLink
       to={link.to}
       href={link.href}
-      className="group flex items-center gap-4 rounded-2xl border border-gray-200 bg-white p-4 shadow-md transition-shadow hover:shadow-xl lg:flex-col lg:items-center lg:gap-0 lg:px-4 lg:py-5 lg:text-center"
+      className="group block rounded-2xl border border-gray-200 bg-white p-4 shadow-md transition-shadow hover:shadow-xl lg:p-5"
     >
-      <Icon aria-hidden="true" strokeWidth={1.5} className="h-9 w-9 flex-shrink-0 text-brand-bright" />
-      <div className="min-w-0 flex-1 lg:flex-none">
-        <h3 className="text-base font-semibold leading-snug text-gray-900 lg:mt-3">{service.title}</h3>
-        <p className="mt-1 text-sm leading-snug text-gray-600">{service.text}</p>
+      <div className="flex items-center gap-2.5 xl:min-h-11 xl:items-start">
+        <Icon aria-hidden="true" strokeWidth={1.5} className="h-7 w-7 flex-shrink-0 text-brand-bright xl:-mt-0.5" />
+        <h3 className="text-base font-semibold leading-snug text-gray-900">{service.title}</h3>
       </div>
+      <p className="mt-2 text-sm leading-snug text-gray-600">{service.text}</p>
     </SmartLink>
   );
 }
@@ -118,7 +118,7 @@ export default function Hero() {
 
       <div className="relative mx-auto max-w-7xl px-4 pb-16 md:px-8 md:pb-24 xl:mt-[42px] xl:pb-[46px]">
         <h2 className="sr-only">{hero.servicesTitle}</h2>
-        <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-5 lg:gap-4">
+        <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3 lg:gap-4 xl:grid-cols-5">
           {hero.services.map((service) => (
             <ServiceCard key={service.link} service={service} />
           ))}
