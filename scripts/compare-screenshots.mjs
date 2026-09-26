@@ -21,10 +21,10 @@ const REBUILD = process.env.REBUILD_URL ?? "http://localhost:5173";
 const OUT = path.resolve("verification-output");
 
 const ALL_ROUTES = [
-  "/", "/diy-landing", "/dyi-landing", "/file-remote-landing", "/file-remotely",
-  "/drop-off", "/file-in-person", "/us-cross-border", "/contact", "/about", "/career",
-  "/blog", "/blog/2026-tax-filing-deadlines", "/faq", "/terms", "/privacy-policy",
-  "/sign-in", "/pricing", "/sitemap",
+  "/", "/file-remotely", "/drop-off", "/file-in-person", "/us-cross-border", "/contact", "/about",
+  "/career", "/blog", "/faq", "/terms", "/privacy-policy", "/pricing",
+  ...JSON.parse(fs.readFileSync("src/content/blog/posts.json", "utf8")).posts.map((post) => `/blog/${post.slug}`),
+  "/blog/no-such-post",
 ];
 const routes = process.argv.slice(2).length ? process.argv.slice(2) : ALL_ROUTES;
 const WIDTHS = [

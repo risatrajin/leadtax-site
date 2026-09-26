@@ -1,14 +1,13 @@
 import career from "../content/pages/career.json";
-import seo from "../content/seo.json";
 import PageShell from "../components/layout/PageShell.jsx";
 import Button from "../components/ui/Button.jsx";
 
 const { benefits, openings, openApplication } = career;
 
-/** Careers. The "Apply Now" and "Submit Resume" buttons have no action (known issue). */
+/** Careers. Sets no page-specific SEO; "Apply Now" and "Submit Resume" have no action (known issues). */
 export default function CareerPage() {
   return (
-    <PageShell seo={seo.pages.career}>
+    <PageShell>
       <div className="max-w-7xl mx-auto px-4 md:px-8 py-16 md:py-24">
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-5xl font-bold text-brand mb-4">{career.title}</h1>

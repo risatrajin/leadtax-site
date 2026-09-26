@@ -10,7 +10,7 @@
   --color-brand-strong: #022a54;
   /* Pale brand tint: icon wells, dropdown hover, text on brand backgrounds. Was #CAE1FF. */
   --color-brand-subtle: #cae1ff;
-  /* Raised brand surface used on some inner pages. Was #044385. */
+  /* Raised brand surface. Only used on the archived DIY landing page; kept for future use. Was #044385. */
   --color-brand-raised: #044385;
   /* Lighter brand blue used as the highlight stop in the hero gradient. Was #044994. */
   --color-brand-highlight: #044994;

@@ -1,19 +1,13 @@
-import { Link, useLocation } from "react-router";
+import { Link } from "react-router";
 import nav from "../../content/nav.json";
 import site from "../../content/site.json";
 import { getIcon } from "../../lib/icons.js";
 import { tollFreeDashed } from "../../lib/phone.js";
 
-/** Pages that render as plain text and therefore have no footer. */
-const PLAIN_TEXT_PATHS = ["/sitemap.xml", "/robots.txt"];
-
 const COLUMN_TITLE = "text-white text-sm tracking-wider uppercase";
 const FOOTER_LINK = "text-white/70 hover:text-white transition-colors text-sm";
 
 export default function Footer() {
-  const { pathname } = useLocation();
-  if (PLAIN_TEXT_PATHS.includes(pathname)) return null;
-
   return (
     <footer className="bg-brand text-white">
       <div className="max-w-7xl mx-auto px-4 md:px-8 py-12 md:py-16">

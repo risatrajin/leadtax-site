@@ -5,23 +5,24 @@ import Analytics from "./components/global/Analytics.jsx";
 import IntercomWidget from "./components/global/IntercomWidget.jsx";
 import Seo from "./components/seo/Seo.jsx";
 import HomePage from "./pages/HomePage.jsx";
-import PricingPage from "./pages/PricingPage.jsx";
-import UsCrossBorderPage from "./pages/UsCrossBorderPage.jsx";
-import BlogPostPage from "./pages/BlogPostPage.jsx";
-import BlogPage from "./pages/BlogPage.jsx";
-import ContactPage from "./pages/ContactPage.jsx";
-import FileInPersonPage from "./pages/FileInPersonPage.jsx";
-import DropOffPage from "./pages/DropOffPage.jsx";
 import FileRemotelyPage from "./pages/FileRemotelyPage.jsx";
-import PrivacyPolicyPage from "./pages/PrivacyPolicyPage.jsx";
-import TermsPage from "./pages/TermsPage.jsx";
-import FaqPage from "./pages/FaqPage.jsx";
-import CareerPage from "./pages/CareerPage.jsx";
+import DropOffPage from "./pages/DropOffPage.jsx";
+import FileInPersonPage from "./pages/FileInPersonPage.jsx";
+import UsCrossBorderPage from "./pages/UsCrossBorderPage.jsx";
+import ContactPage from "./pages/ContactPage.jsx";
 import AboutPage from "./pages/AboutPage.jsx";
+import CareerPage from "./pages/CareerPage.jsx";
+import BlogPage from "./pages/BlogPage.jsx";
+import BlogPostPage from "./pages/BlogPostPage.jsx";
+import FaqPage from "./pages/FaqPage.jsx";
+import TermsPage from "./pages/TermsPage.jsx";
+import PrivacyPolicyPage from "./pages/PrivacyPolicyPage.jsx";
+import PricingPage from "./pages/PricingPage.jsx";
 
 /*
- * Route table mirrors the original build. Phase 1 rebuilds "/" only; the other
- * routes are listed in docs/rebuild-map.md and are added in phase 2.
+ * Routes in the same order as the original build. /sign-in, /diy-landing,
+ * /dyi-landing and /file-remote-landing were not rebuilt (their copy is in
+ * src/content/archive/). /sitemap.xml and /robots.txt are static files in public/.
  * There is no catch-all route in the original, so unknown paths render nothing.
  */
 export default function App() {
@@ -34,18 +35,18 @@ export default function App() {
       <IntercomWidget />
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/about" element={<AboutPage />} />
-        <Route path="/career" element={<CareerPage />} />
-        <Route path="/faq" element={<FaqPage />} />
-        <Route path="/terms" element={<TermsPage />} />
-        <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
         <Route path="/file-remotely" element={<FileRemotelyPage />} />
         <Route path="/drop-off" element={<DropOffPage />} />
         <Route path="/file-in-person" element={<FileInPersonPage />} />
+        <Route path="/us-cross-border" element={<UsCrossBorderPage />} />
         <Route path="/contact" element={<ContactPage />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/career" element={<CareerPage />} />
         <Route path="/blog" element={<BlogPage />} />
         <Route path="/blog/:slug" element={<BlogPostPage />} />
-        <Route path="/us-cross-border" element={<UsCrossBorderPage />} />
+        <Route path="/faq" element={<FaqPage />} />
+        <Route path="/terms" element={<TermsPage />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
         <Route path="/pricing" element={<PricingPage />} />
       </Routes>
     </BrowserRouter>

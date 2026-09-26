@@ -2,8 +2,8 @@
 
 The source of truth is the minified bundle in `original-build/assets/index-ZBPKqb17.js`.
 Line numbers below refer to a Prettier-formatted copy of that file (`npx prettier --parser babel`),
-which is how the bundle was read. Library code (React, react-dom, react-router, lucide-react) was
-not rebuilt; those packages are installed from npm at the same versions.
+which is how the bundle was read. Library code (React, react-dom, react-router, lucide-react,
+Radix Dialog) was not rebuilt; those packages are installed from npm.
 
 | Package | Bundle version | Installed |
 |---|---|---|
@@ -11,32 +11,41 @@ not rebuilt; those packages are installed from npm at the same versions.
 | react-router | 7.18.2 | 7.18.2 |
 | lucide-react | 0.487.0 | 0.487.0 |
 | tailwindcss | 4.1.12 | 4.1.12 |
+| @radix-ui/react-dialog, clsx, tailwind-merge | unknown (bundled) | latest 1.x / 2.x / 3.x |
 
 ## Routes
 
-Status: **done** = rebuilt and verified pixel-identical; **pending** = phase 2.
+Status: **done** = rebuilt and verified pixel-identical at 1440px and 390px with identical SEO output;
+**archived** = not rebuilt, will be dropped, copy kept in `src/content/archive/`;
+**static** = served as a file from `public/`; **open** = not rebuilt, needs a decision.
 
 | Route | Minified | Line | New file | Status |
 |---|---|---|---|---|
 | `/` | `K0` | 14753 | `src/pages/HomePage.jsx` | done |
-| `/diy-landing`, `/dyi-landing` | `ap` | 15246 | `src/pages/DiyLandingPage.jsx` | pending |
-| `/file-remote-landing` | `_1` | 16030 | `src/pages/FileRemoteLandingPage.jsx` | pending |
-| `/file-remotely` | `V1` | 16771 | `src/pages/FileRemotelyPage.jsx` | pending |
-| `/drop-off` | `av` | 17137 | `src/pages/DropOffPage.jsx` | pending |
-| `/file-in-person` | `hv` | 17507 | `src/pages/FileInPersonPage.jsx` | pending |
-| `/us-cross-border` | `Ow` | 24343 | `src/pages/UsCrossBorderPage.jsx` | pending |
-| `/contact` | `Dw` | 20708 | `src/pages/ContactPage.jsx` | pending |
-| `/about` | `Pw` | 21169 | `src/pages/AboutPage.jsx` | pending |
-| `/career` | `Fw` | 21356 | `src/pages/CareerPage.jsx` | pending |
-| `/blog` | `Lw` | 21655 | `src/pages/BlogPage.jsx` | pending |
-| `/blog/:slug` | `Mw` | 21802 | `src/pages/BlogPostPage.jsx` | pending |
-| `/faq` | `_w` | 23134 | `src/pages/FaqPage.jsx` | pending |
-| `/terms` | `Iw` | 23309 | `src/pages/TermsPage.jsx` | pending |
-| `/privacy-policy` | `zw` | 23865 | `src/pages/PrivacyPolicyPage.jsx` | pending |
-| `/sign-in` | `Hw` | 25696 | `src/pages/SignInPage.jsx` | pending |
-| `/pricing` | `$w` | 26043 | `src/pages/PricingPage.jsx` | pending |
-| `/sitemap`, `/sitemap.xml` | `Np` | 26406 | `src/pages/SitemapPage.jsx` | pending |
-| `/robots.txt` | `Uw` | 26581 | `src/pages/RobotsPage.jsx` | pending |
+| `/file-remotely` | `V1` | 16771 | `src/pages/FileRemotelyPage.jsx` | done |
+| `/drop-off` | `av` | 17137 | `src/pages/DropOffPage.jsx` | done |
+| `/file-in-person` | `hv` | 17507 | `src/pages/FileInPersonPage.jsx` | done |
+| `/us-cross-border` | `Ow` | 24343 | `src/pages/UsCrossBorderPage.jsx` | done |
+| `/contact` | `Dw` | 20708 | `src/pages/ContactPage.jsx` | done |
+| `/about` | `Pw` | 21169 | `src/pages/AboutPage.jsx` | done |
+| `/career` | `Fw` | 21356 | `src/pages/CareerPage.jsx` | done |
+| `/blog` | `Lw` | 21655 | `src/pages/BlogPage.jsx` | done |
+| `/blog/:slug` | `Mw` | 21802 | `src/pages/BlogPostPage.jsx` (all 11 posts + not-found) | done |
+| `/faq` | `_w` | 23134 | `src/pages/FaqPage.jsx` | done |
+| `/terms` | `Iw` | 23309 | `src/pages/TermsPage.jsx` | done |
+| `/privacy-policy` | `zw` | 23865 | `src/pages/PrivacyPolicyPage.jsx` | done |
+| `/pricing` | `$w` | 26043 | `src/pages/PricingPage.jsx` | done |
+| `/diy-landing`, `/dyi-landing` | `ap` | 15246 | `src/content/archive/diy-landing.json` | archived — not rebuilt, will be dropped |
+| `/file-remote-landing` | `_1` | 16030 | `src/content/archive/file-remote-landing.json` | archived — not rebuilt, will be dropped |
+| `/sign-in` | `Hw` | 25696 | `src/content/archive/sign-in.json` | archived — not rebuilt, will be dropped |
+| `/sitemap.xml` | `Np` | 26406 | `public/sitemap.xml` | static (React route not recreated) |
+| `/robots.txt` | `Uw` | 26581 | `public/robots.txt` | static (React route not recreated) |
+| `/sitemap` | `Np` | 26406 | — | **open**: not in either list for phase 2. The footer links here and it now renders a blank page. `public/sitemap.html` exists as a static alternative. |
+
+Archived routes now render a blank page in the rebuild (no catch-all route, same as any unknown URL).
+Each archive file holds the page's SEO copy, its content in reading order (headings, text, links,
+images, form fields) and `otherText`: every other human-readable string from the component source
+(hidden accordion answers, alternate states), checked so that nothing was dropped.
 
 ## App shell
 
@@ -49,16 +58,19 @@ Status: **done** = rebuilt and verified pixel-identical; **pending** = phase 2.
 | `Vw` | 26683 | `src/components/global/Analytics.jsx` | GTM loader + `fbq` stub |
 | `Vg` | 11300 | `src/components/global/IntercomWidget.jsx` | Intercom launcher |
 | `Ze` | 12167 | `src/components/layout/Header.jsx` | Header, desktop dropdowns, mobile menu |
-| `Qe` | 14151 | `src/components/layout/Footer.jsx` | Footer |
+| `Qe` | 14151 | `src/components/layout/Footer.jsx` | Footer (its hide-on-`/sitemap.xml`/`/robots.txt` check was removed: those are static files now) |
+| — | — | `src/components/layout/PageShell.jsx` | Shared inner-page frame (`min-h-screen flex flex-col` + header, `<main>`, footer) |
 
-## Homepage sections (`K0`)
+## Page sections
+
+### Homepage (`K0`)
 
 | Order | Minified | Line | New file |
 |---|---|---|---|
 | 1 | `M0` | 12655 | `src/sections/home/Hero.jsx` (+ `src/components/media/WistiaPopover.jsx`) |
-| 2 | `pl` | 12847 | `src/sections/shared/ReviewsCarousel.jsx` (also used by `/diy-landing`) |
+| 2 | `pl` | 12847 | `src/sections/shared/ReviewsCarousel.jsx` |
 | 3 | `I0` | 13197 | `src/sections/home/FilingOptions.jsx` |
-| 4 | `im` | 13372 | `src/sections/shared/DiyPricing.jsx` (also used by `/diy-landing`) |
+| 4 | `im` | 13372 | `src/sections/shared/DiyPricing.jsx` |
 | 5 | `H0` | 13589 | `src/sections/home/PreviousYearsBanner.jsx` |
 | 6 | `W0` | 13649 | `src/sections/home/TrustFeatures.jsx` |
 | 7 | `U0` | 13716 | `src/sections/home/HowItWorks.jsx` |
@@ -68,37 +80,60 @@ Status: **done** = rebuilt and verified pixel-identical; **pending** = phase 2.
 | 11 | `Q0` | 14042 | `src/sections/home/HomeFaq.jsx` |
 | 12 | `J0` | 14094 | `src/sections/home/FinalCta.jsx` |
 
-## Shared UI components
+### Service pages (`V1`, `av`, `hv`)
 
-Copy-pasted markup in the bundle, now one component each.
+The three pages share one template, `src/sections/services/ServicePage.jsx`, with
+`variant: "remote"` (File Remotely) or `"local"` (Drop-off, In Person).
+
+| File Remotely | Drop-off | In Person | New file |
+|---|---|---|---|
+| `I1` 16429 | `G1` 16786 | `sv` 17159 | `src/sections/services/ServiceHero.jsx` |
+| `O1` 16480 | `Z1` 16845 | `ov` 17216 | `src/sections/services/ServiceSteps.jsx` |
+| `B1` 16550 | `J1` 16915 | `cv` 17286 | `src/sections/services/ServiceBenefits.jsx` |
+| `$1` 16620 | `ev` 16979 | `dv` 17351 | `src/sections/services/ServiceAudience.jsx` |
+| `Y1` 16702 | `nv` 17060 | `mv` 17432 | `src/sections/services/ServiceTrust.jsx` |
+| `q1` 16745 | `rv` 17110 | `fv` 17482 | `src/sections/services/ServiceCta.jsx` |
+
+### Other pages
+
+| Page | New files |
+|---|---|
+| Contact (`Dw`) | `src/components/ui/OfficeCard.jsx`, `src/sections/contact/ContactForm.jsx`, `src/sections/contact/ExpertPickerDialog.jsx`, `src/components/ui/Dialog.jsx` (shadcn wrapper, bundle lines 20643–20707) |
+| US Cross-Border (`Ow`) | `src/sections/us-cross-border/*` (Hero, Audiences, Services, WhyUs, Process tabs, Experience, Pricing) |
+| Blog post (`Mw`) | `src/sections/blog/PostHeader.jsx`, `PostBody.jsx`, `PostCta.jsx`, `RelatedArticles.jsx` |
+| Terms, Privacy (`Iw`, `zw`) | `src/components/legal/LegalDocument.jsx` renders both from JSON |
+| Pricing (`$w`) | `src/sections/pricing/ComparisonTable.jsx` |
+| FAQ (`_w`) | `src/components/seo/FaqSchema.jsx` (FAQPage JSON-LD) |
+
+## Shared UI components
 
 | Component | Replaces |
 |---|---|
-| `src/components/ui/Button.jsx` | ~15 inline pill buttons/links (variants: primary, inverse, outline, outlineMuted, outlineInverse, ghost, disabled) |
-| `src/components/ui/Card.jsx` | White `rounded-2xl` surfaces (filing options, trust features, pricing, reviews) |
-| `src/components/ui/SectionHeading.jsx` | The repeated `text-3xl md:text-4xl lg:text-5xl text-center text-gray-900 mb-12` heading |
-| `src/components/ui/FaqAccordion.jsx` | FAQ list in `Q0` (other pages' FAQs to be merged in phase 2) |
-| `src/components/ui/PricingCard.jsx` | The four hand-written cards in `im` |
-| `src/components/ui/CtaBanner.jsx` | Split photo/copy panels `V0` and `J0` |
-| `src/components/ui/TikTokIcon.jsx` | Inline TikTok SVG in the footer |
-| `OfficeCard` | Contact page office cards — phase 2 |
+| `src/components/ui/Button.jsx` | ~40 inline pill buttons/links. Variants: primary, inverse, inverseTint, outline, outlineMuted, outlineInverse, outlineInverseFill, ghost, disabled. Sizes: sm, md, lg, wide, xl, block |
+| `src/components/ui/Card.jsx` | White `rounded-2xl` surfaces |
+| `src/components/ui/SectionHeading.jsx` | The repeated homepage section heading |
+| `src/components/ui/FaqAccordion.jsx` | All three FAQ styles: `simple` (homepage), `bordered` (/faq), `compact` (/us-cross-border) |
+| `src/components/ui/PricingCard.jsx` | DIY package cards |
+| `src/components/ui/OfficeCard.jsx` | Contact page office cards (reads `offices.json`) |
+| `src/components/ui/CtaBanner.jsx` | Split photo/copy panels on the homepage |
+| `src/components/ui/Dialog.jsx` | shadcn Dialog on Radix |
+| `src/components/ui/TikTokIcon.jsx` | Inline TikTok SVG |
 
 ## Data → content files
 
-| Minified | Line | Content file |
-|---|---|---|
-| image constants `sm`, `np`, `b0`… | 12147 | paths inlined into the JSON files below; images copied to `public/images/` |
-| nav links (inline in `Ze`, `Qe`) | 12194, 14249 | `src/content/nav.json` (header, mobile menu and footer all read it) |
-| phone / email (inline ×3) | 12661, 12780, 14414 | `src/content/site.json` → `contact` |
-| app URLs (inline, many) | — | `src/content/site.json` → `apps` (content refers to them as `app:diy.register` etc.) |
-| social links | 14184 | `src/content/site.json` → `social` |
-| reviews `a` | 12848 | `src/content/reviews.json` |
-| `_0` | 13132 | `src/content/services.json` |
-| `z0`, `O0` | 13304 | `src/content/pricing.json` |
-| `B0`, `$0`, `Y0`, `G0` + section copy | 13622–13868 | `src/content/home.json` |
-| `Z0` | 13925 | `src/content/faqs.json` → `home` |
-| JSON-LD offices, contact-page offices `f` | 14601, 20734 | `src/content/offices.json` (one record per office) |
-| SEO defaults, per-page SEO, meta values | 14448–14764 | `src/content/seo.json` |
+| Content | File |
+|---|---|
+| Phone, email, website, app URLs, downloads, social links, integrations | `src/content/site.json` (content refers to URLs as `app:diy.register`, `download:whatToBring`) |
+| Nav links (header, mobile menu, footer) | `src/content/nav.json` |
+| Offices (display, JSON-LD, photo, booking link) | `src/content/offices.json` — one record per office |
+| SEO defaults and per-page SEO | `src/content/seo.json` |
+| FAQs: homepage, /faq, /us-cross-border | `src/content/faqs.json` |
+| DIY tiers, expert tiers, /pricing comparison rows | `src/content/pricing.json` |
+| Reviews | `src/content/reviews.json` |
+| Filing services | `src/content/services.json` |
+| All 11 blog posts (listing + article) | `src/content/blog/posts.json` |
+| Page copy | `src/content/home.json`, `src/content/pages/*.json` |
+| Dropped pages | `src/content/archive/*.json` |
 
 ## Design tokens
 
@@ -106,17 +141,29 @@ Copy-pasted markup in the bundle, now one component each.
 
 | Token | Was | Role |
 |---|---|---|
-| `brand` | `#033D76` | Primary brand: buttons, brand text, footer |
+| `brand` | `#033D76` (also `rgb(3,61,118)`) | Primary brand: buttons, brand text, footer |
 | `brand-strong` | `#022A54` | Hover/pressed state, gradient ends |
 | `brand-subtle` | `#CAE1FF` | Tints, icon wells, text on brand backgrounds |
-| `brand-raised` | `#044385` | Raised brand surfaces (inner pages) |
-| `brand-highlight` | `#044994` | Highlight stop in the hero gradient |
-| `brand-fade` | `#81ABDC` | End of the "Need Expert Help?" gradient |
+| `brand-raised` | `#044385` | Reserved (used only on the archived DIY landing page) |
+| `brand-highlight` | `#044994` | Highlight stop in hero/CTA gradients |
+| `brand-fade` | `#81ABDC` | Drop-off / In Person hero, "Need Expert Help?" gradient |
+| `surface-tint` | `#E8F4F8` | Start of soft section gradients |
+| `popular` | `#E8A020` | "Most Popular" badge on /pricing |
 | `rating` | `#FDB022` | Review stars |
 | `google`, `google-hover` | `#1A73E8`, `#1557B0` | Google review button/link |
-| `promo-from`, `promo-to` | `#84CC16`, `#65A30D` | Green backdrop in the final CTA |
+| `promo-from`, `promo-to` | `#84CC16`, `#65A30D` | Green backdrop in the final homepage CTA |
+
+The remaining hex values in the bundle (`#5E5E5E`, `#4E4E4E`, `#233E85`, `#1A263A`, `#022D5A`,
+`#F8F9FB`) appear only on the archived `/diy-landing` and `/file-remote-landing` pages, so no tokens
+were added for them.
 
 `src/styles/globals.css` reproduces the Figma Make / shadcn base layer from the original CSS
-(heading sizes, `--radius` scale, `animate-fadeIn`). Remaining hex values used only on inner
-pages (`#5E5E5E`, `#E8F4F8`, `#E8A020`, `#4E4E4E`, `#233E85`, `#1A263A`, `#022D5A`, `#F8F9FB`)
-get tokens in phase 2.
+(heading sizes, `--radius` scale, `animate-fadeIn`).
+
+## Verification
+
+- `npm run compare`: screenshots every rebuilt route (all 11 blog posts and a missing slug included)
+  on both builds at 1440px and 390px, diffs pixels, compares title/meta/canonical/JSON-LD.
+- `node scripts/compare-states.mjs`: 16 interaction states (header menus, mobile menu, tooltips,
+  FAQ items, contact dialog, cross-border tabs, pricing tabs).
+- Final phase 2 run: every route and state 0 px different; SEO identical.
