@@ -1,174 +1,236 @@
 {
+  "_note": "Copy for the homepage at /. Offices come from offices.json, phone and email from site.json, ratings and reviews from reviews.json. {office}, {rating}, {count}, {phone}, {city} are filled in by the page.",
+  "bookingFallback": {
+    "_placeholders": [
+      "href"
+    ],
+    "_note": "Where 'Book' goes for an office without its own booking link (the head office uses the expert picker on /contact).",
+    "href": "/contact"
+  },
   "hero": {
-    "title": "File your taxes online with confidence",
-    "text": "When you file your taxes with online tax software built by tax experts, you don't need to be a pro. Whether your tax situation is simple or complex, we guide you step by step so you can file confidently.",
-    "primaryCta": {
-      "label": "Get Started",
-      "href": "#pricing"
+    "_placeholders": [
+      "badge"
+    ],
+    "badge": "Canadian owned and operated",
+    "title": "Tax help you can walk into.",
+    "text": "Sit down with a tax expert at one of our offices across Greater Vancouver. Personal and business returns, bookkeeping, and US filings for Canadians.",
+    "officeSelectLabel": "Pick the office closest to you",
+    "bookLabel": "Book an appointment",
+    "findOffice": {
+      "label": "Find an office",
+      "href": "#offices"
     },
-    "video": {
-      "mediaId": "t0mnf104qc",
-      "label": "Watch Demo"
+    "ratingLead": "{rating} on Google",
+    "ratingTail": ", {count} reviews",
+    "card": {
+      "label": "Pick the office closest to you",
+      "todayLabel": "Today:",
+      "bookLabel": "Book this office",
+      "directionsLabel": "Directions"
     },
-    "copyTooltip": "Copy Number",
-    "copiedTooltip": "Copied!",
+    "dotLabel": "Show {office}",
+    "dotsLabel": "Offices",
     "image": {
       "src": "/images/70e1bf44b4f3bacec78cc900a37b1ff983c7da65.png",
-      "alt": "Canadian couple reviewing taxes on laptop at home"
+      "alt": "Woman in a LeadTax jacket smiling at her phone on the Vancouver seawall"
     }
   },
-  "filingOptions": {
-    "title": "Choose how you want to file",
-    "text": "Flexible filing options designed to fit your lifestyle and preferences",
-    "comingSoonLabel": "Coming Soon"
-  },
-  "pricing": {
-    "title": "Pick your do it yourself package.",
-    "text": "File your taxes online with confidence and accuracy."
-  },
-  "previousYears": {
-    "title": "Want to file taxes for previous years?",
-    "text": "You can file past returns with our easy-to-use tax software. Pricing may vary.",
-    "ctaLabel": "Get Started",
-    "image": {
-      "src": "https://images.unsplash.com/photo-1758613655335-63e9e75af77f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzdHVkaW8lMjBsYXB0b3AlMjBtb2Rlcm4lMjBwcm9mZXNzaW9uYWx8ZW58MXx8fHwxNzY3ODE5ODE2fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-      "alt": "Happy person working on laptop"
-    }
-  },
-  "trust": {
-    "title": "File your tax return with confidence.",
-    "items": [
+  "services": {
+    "_placeholders": [
+      "intro"
+    ],
+    "title": "What we can do for you",
+    "intro": "Every service is handled by the same team, in the same office, so you explain your situation once.",
+    "featured": [
+      {
+        "serviceId": "us-cross-border-tax",
+        "title": "US & cross-border tax",
+        "text": "Expert help for Canadians with US tax obligations, filed in both countries without the back and forth.",
+        "cta": "Book a cross-border consult",
+        "to": "/us-cross-border"
+      },
+      {
+        "_placeholder": true,
+        "_note": "Bookkeeping availability and plans are unconfirmed (questions-for-client.md Q12).",
+        "serviceId": "bookkeeping",
+        "title": "Bookkeeping",
+        "text": "Keep your records organized and compliant all year, so tax time is a short meeting instead of a scramble.",
+        "cta": "See bookkeeping plans",
+        "href": "#"
+      }
+    ],
+    "standard": [
       {
         "_placeholders": [
-          "title",
-          "description"
+          "href"
         ],
-        "icon": "ShieldCheck",
-        "title": "Maximum Refund Guarantee",
-        "description": "We help you claim every credit you qualify for."
+        "serviceId": "personal-tax",
+        "title": "Personal tax",
+        "text": "Simple and stress-free tax filing for you and your family.",
+        "href": "#"
       },
       {
         "_placeholders": [
-          "title",
-          "description"
+          "href"
         ],
-        "icon": "Check",
-        "title": "Accuracy Guaranteed",
-        "description": "Every return is checked for accuracy."
+        "serviceId": "business-tax",
+        "title": "Business tax",
+        "text": "Corporate and self-employed returns that support your business growth.",
+        "href": "#"
       },
       {
-        "icon": "Lock",
-        "title": "Secure & Encrypted",
-        "description": "Your data is protected with modern encryption."
-      },
-      {
-        "icon": "Download",
-        "title": "Auto-Fill My Return",
-        "description": "Import slips directly from CRA."
-      },
-      {
-        "icon": "FileText",
-        "title": "Certified & Reliable",
-        "description": "Built by Canadian tax experts."
+        "_placeholders": [
+          "href"
+        ],
+        "serviceId": "trust-estate-tax",
+        "title": "Trust & estate tax filing",
+        "text": "Professional tax filing for trusts and estates, handled with care.",
+        "href": "#"
       }
     ]
   },
-  "steps": {
-    "title": "It's easy, fast, and stress-free.",
-    "items": [
-      {
-        "number": "01",
-        "title": "Get started",
-        "description": "Complete a personalized tax interview and import slips."
-      },
-      {
-        "number": "02",
-        "title": "Optimize",
-        "description": "System scans for missed deductions automatically."
-      },
-      {
-        "number": "03",
-        "title": "Review",
-        "description": "See a clear breakdown of credits and totals."
-      },
-      {
-        "number": "04",
-        "title": "File",
-        "description": "Submit electronically via NETFILE to CRA."
-      }
-    ]
-  },
-  "tools": {
-    "title": "Tax tools to simplify your filing experience.",
-    "items": [
-      {
-        "icon": "Calculator",
-        "title": "Refund Calculator",
-        "description": "Estimate your tax refund before you file."
-      },
-      {
-        "icon": "ShieldCheck",
-        "title": "Error Checks",
-        "description": "Catch mistakes before submission."
-      },
-      {
-        "icon": "Headphones",
-        "title": "Live Expert Support",
-        "description": "Get help when you need it most."
-      }
-    ]
-  },
-  "expertCta": {
-    "title": "Need Expert Help?",
-    "text": "Want extra support while filing? Our experts are available anytime.",
-    "cta": {
-      "label": "Learn more",
-      "to": "/pricing"
+  "offices": {
+    "_placeholders": [
+      "intro"
+    ],
+    "title": "Visit an office",
+    "intro": "Every office offers the full range of services. Here is what each one looks like from the street, so you know which door to walk through.",
+    "hoursLabel": "Opening hours",
+    "hours": {
+      "weekdays": "Mon to Fri",
+      "saturday": "Saturday",
+      "sunday": "Sunday"
     },
-    "image": {
-      "src": "/images/d9d0a1e2d55eae8789abfd6f4bbf7547e5cf1318.png",
-      "alt": "Professional woman with tablet"
-    }
+    "bookLabel": "Book this office",
+    "directionsLabel": "Directions",
+    "entranceAlt": "{office} office entrance"
   },
-  "expertAddons": {
-    "title": "Our experts are on standby to assist you at any step.",
-    "items": [
+  "firstVisit": {
+    "title": "Your first visit, start to finish",
+    "steps": [
       {
-        "_placeholders": [
-          "description"
-        ],
-        "icon": "Shield",
-        "title": "Audit Protection",
-        "description": "Help with CRA or Revenu Québec letters."
+        "title": "Book a time",
+        "text": "Choose an office and a time online, or call us and we will set it up."
       },
       {
-        "icon": "Zap",
-        "title": "Priority Support",
-        "description": "Skip the line with dedicated support."
+        "title": "Bring your documents",
+        "text": "Slips, receipts and last year's notice of assessment. The list on the right covers most people."
+      },
+      {
+        "title": "Review it together, then we file",
+        "text": "Your tax expert walks you through the return before anything goes to the CRA."
+      }
+    ],
+    "checklist": {
+      "_placeholder": true,
+      "_note": "Until the client confirms what clients should bring.",
+      "title": "What to bring",
+      "items": [
+        "T4 and other tax slips",
+        "Last year's notice of assessment",
+        "RRSP contribution receipts",
+        "Receipts for donations, medical and childcare costs",
+        "Photo ID and your SIN",
+        "US tax forms, if you file in both countries"
+      ],
+      "download": {
+        "label": "Download the full checklist",
+        "href": "download:whatToBring"
+      }
+    }
+  },
+  "otherWays": {
+    "title": "Can't come in? Other ways to file",
+    "cards": [
+      {
+        "title": "File remotely",
+        "text": "Upload your documents and meet your tax expert by video.",
+        "link": {
+          "label": "How remote filing works",
+          "to": "/file-remotely"
+        }
+      },
+      {
+        "title": "Drop off your documents",
+        "text": "Leave your paperwork at any office. We prepare the return and contact you to review it.",
+        "link": {
+          "label": "How drop-off works",
+          "to": "/drop-off"
+        }
+      },
+      {
+        "title": "File it yourself",
+        "text": "Use LeadTax online software and file on your own schedule.",
+        "link": {
+          "label": "Start filing online",
+          "href": "app:diy.register"
+        }
       }
     ]
+  },
+  "reviews": {
+    "_placeholders": [
+      "reviewerOffice"
+    ],
+    "title": "What clients say",
+    "allLabel": "Read all {count} reviews on Google",
+    "starsLabel": "5 out of 5 stars",
+    "reviewerOffice": "[TBD: office visited]",
+    "count": 3
   },
   "faq": {
-    "title": "Frequently Asked Questions"
-  },
-  "finalCta": {
-    "title": "Ready to file your taxes?",
-    "text": "Whether you want to file on your own or get expert help, LeadTax is here.",
-    "image": {
-      "src": "/images/05c84d9500830dfbb3380883971c5a91afd89da2.png",
-      "alt": "Man with tablet"
-    },
-    "actions": [
+    "title": "Questions before you visit",
+    "items": [
       {
-        "label": "Get started",
-        "href": "app:diy.register",
-        "variant": "inverse"
+        "_placeholders": [
+          "answer"
+        ],
+        "question": "Do I need an appointment, or can I walk in?",
+        "answer": "[TBD: answer]"
       },
       {
-        "label": "Sign in",
-        "href": "app:diy.login",
-        "variant": "outlineInverse"
+        "_placeholders": [
+          "answer"
+        ],
+        "question": "What documents should I bring?",
+        "answer": "[TBD: answer]"
+      },
+      {
+        "_placeholders": [
+          "answer"
+        ],
+        "question": "Can you file returns for previous years?",
+        "answer": "[TBD: answer]"
+      },
+      {
+        "_placeholders": [
+          "answer"
+        ],
+        "question": "I live in Canada and have US income. Can you help?",
+        "answer": "[TBD: answer]"
+      },
+      {
+        "_placeholders": [
+          "answer"
+        ],
+        "question": "How much does it cost?",
+        "answer": "[TBD: answer]"
+      },
+      {
+        "_placeholders": [
+          "answer"
+        ],
+        "question": "Can I file without coming to an office?",
+        "answer": "[TBD: answer]"
       }
     ]
+  },
+  "cta": {
+    "title": "Find the office nearest you and book a time.",
+    "button": {
+      "label": "Book an appointment",
+      "href": "#offices"
+    },
+    "callLabel": "Or call {phone}"
   }
 }

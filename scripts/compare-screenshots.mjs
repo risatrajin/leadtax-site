@@ -11,6 +11,10 @@
  *   node scripts/compare-screenshots.mjs --baseline [/route ...]
  *       Rebuild vs the saved baseline.
  *
+ * Routes are given as rebuild paths. The original build's homepage (/) is compared with the
+ * rebuild's /home-legacy; the new homepage (/) only exists in the rebuild, so it is checked
+ * against the baseline.
+ *
  * Servers: `npm run original` (original build on :8081) and `npm run dev` (rebuild on :5173).
  * Output goes to verification-output/ (git-ignored). The original build's full-page
  * screenshots from before the site-wide header are kept in verification-output/baseline-original/.
@@ -31,16 +35,23 @@ const flags = new Set(args.filter((arg) => arg.startsWith("--")));
 const mode = flags.has("--save-baseline") ? "save-baseline" : flags.has("--baseline") ? "baseline" : "original";
 const bodyOnly = flags.has("--body");
 
-const ORIGINAL_ROUTES = [
-  "/", "/file-remotely", "/drop-off", "/file-in-person", "/us-cross-border", "/contact", "/about",
+/** Rebuild path → original path, for pages that exist in the original build. */
+const ORIGINAL_PATHS = {
+  "/home-legacy": "/",
+};
+const PAGES_IN_BOTH = [
+  "/home-legacy", "/file-remotely", "/drop-off", "/file-in-person", "/us-cross-border", "/contact", "/about",
   "/career", "/blog", "/faq", "/terms", "/privacy-policy", "/pricing",
   ...JSON.parse(fs.readFileSync("src/content/blog/posts.json", "utf8")).posts.map((post) => `/blog/${post.slug}`),
   "/blog/no-such-post",
 ];
 // Pages that only exist in the rebuild are part of the baseline, not the original comparison.
-const REBUILD_ONLY_ROUTES = ["/home-v2"];
+const REBUILD_ONLY = ["/"];
+const originalPathFor = (route) => (REBUILD_ONLY.includes(route) ? null : (ORIGINAL_PATHS[route] ?? route));
 const requested = args.filter((arg) => !arg.startsWith("--"));
-const routes = requested.length ? requested : mode === "original" ? ORIGINAL_ROUTES : [...ORIGINAL_ROUTES, ...REBUILD_ONLY_ROUTES];
+const routes = (requested.length ? requested : [...REBUILD_ONLY, ...PAGES_IN_BOTH]).filter(
+  (route) => mode !== "original" || originalPathFor(route) !== null,
+);
 
 const WIDTHS = [
   { name: "desktop", width: 1440, height: 900 },
@@ -143,7 +154,7 @@ for (const route of routes) {
       }
       reference = PNG.sync.read(fs.readFileSync(file));
     } else {
-      const original = await capture(browser, ORIGINAL, route, viewport);
+      const original = await capture(browser, ORIGINAL, originalPathFor(route), viewport);
       reference = original.png;
       seoDiffs = seoDifferences(original.seo, current.seo, ORIGINAL, REBUILD);
     }

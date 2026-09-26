@@ -80,9 +80,9 @@ These files stay in the repo for now but must not be used on the site. Nothing h
 | 17 | `80a02a192ce01e39a122da282393cd5dc3437db3.png` | Screenshot of an icon row with a "NETFILE Certified by CRA" claim as an image. |
 | 24 | `b5b7c7277519a790337ab2000aa26e112c632239.png` | Screenshot of a "Frequently asked questions." heading; text as an image. |
 | 38 | `fe336c8bfd5d0682c1bc8a38c1275a2197689a81.png` | Screenshot of an old pricing section showing unconfirmed prices. |
-| 1 | `008d8d5f7cfa9f365240f909ca99134f7bdc260b.png` | Real Commercial Dr storefront, but a gallery screenshot with carousel arrows at mid-height on both edges. Every place it appears is wider than the photo's 1.49:1 ratio, so `object-fit: cover` always shows the full width and the arrows; no `object-position` hides them at every breakpoint (tested on /contact at 1440/390 and /home-v2 at 1440/1024/390). |
+| 1 | `008d8d5f7cfa9f365240f909ca99134f7bdc260b.png` | Real Commercial Dr storefront, but a gallery screenshot with carousel arrows at mid-height on both edges. Every place it appears is wider than the photo's 1.49:1 ratio, so `object-fit: cover` always shows the full width and the arrows; no `object-position` hides them at every breakpoint (tested on /contact at 1440/390 and the new homepage at 1440/1024/390). |
 
-## Where images are used on /home-v2
+## Where images are used on the homepage (/)
 
 | Slot | Image | Crop |
 |---|---|---|

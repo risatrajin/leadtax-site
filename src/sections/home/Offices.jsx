@@ -1,4 +1,4 @@
-import content from "../../content/home-v2.json";
+import content from "../../content/home.json";
 import { offices } from "../../lib/offices.js";
 import OfficeRow from "../../components/ui/OfficeRow.jsx";
 

@@ -1,5 +1,5 @@
 import { Star } from "lucide-react";
-import content from "../../content/home-v2.json";
+import content from "../../content/home.json";
 import reviews from "../../content/reviews.json";
 import { fill } from "../../lib/template.js";
 import Button from "../../components/ui/Button.jsx";

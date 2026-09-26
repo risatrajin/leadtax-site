@@ -1,5 +1,5 @@
 import { ArrowRight } from "lucide-react";
-import home from "../../content/home.json";
+import home from "../../content/home-legacy.json";
 import { filingOptions } from "../../content/services.json";
 import { isExternal } from "../../lib/links.js";
 import Button from "../../components/ui/Button.jsx";

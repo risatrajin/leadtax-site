@@ -71,7 +71,7 @@
         "title": "Personal Tax",
         "summary": "Personal tax filing for individuals in Canada, including do-it-yourself filing, remote filing, and in-person services.",
         "_source": "adapted from terms.json §1 (edited, so flagged)",
-        "link": "/"
+        "link": null
       },
       {
         "_placeholders": [

@@ -1,4 +1,4 @@
-import home from "../../content/home.json";
+import home from "../../content/home-legacy.json";
 import faqs from "../../content/faqs.json";
 import FaqAccordion from "../../components/ui/FaqAccordion.jsx";
 import SectionHeading from "../../components/ui/SectionHeading.jsx";

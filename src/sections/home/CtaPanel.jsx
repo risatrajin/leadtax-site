@@ -1,4 +1,4 @@
-import content from "../../content/home-v2.json";
+import content from "../../content/home.json";
 import { tollFreeDashed } from "../../lib/phone.js";
 import { fill } from "../../lib/template.js";
 import Button from "../../components/ui/Button.jsx";

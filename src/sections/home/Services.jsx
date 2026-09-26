@@ -1,5 +1,5 @@
 import { ArrowUpRight } from "lucide-react";
-import content from "../../content/home-v2.json";
+import content from "../../content/home.json";
 import { buttonClasses } from "../../components/ui/Button.jsx";
 import SmartLink from "../../components/ui/SmartLink.jsx";
 

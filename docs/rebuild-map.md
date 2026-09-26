@@ -21,7 +21,9 @@ Status: **done** = rebuilt and verified pixel-identical at 1440px and 390px with
 
 | Route | Minified | Line | New file | Status |
 |---|---|---|---|---|
-| `/` | `K0` | 14753 | `src/pages/HomePage.jsx` | done |
+| `/` | — | — | `src/pages/HomePage.jsx` (the redesign, see below) | new homepage |
+| `/home-legacy` | `K0` | 14753 | `src/pages/LegacyHomePage.jsx` (was `/`; noindex) | done |
+| `/home-v2` | — | — | redirects to `/` (keeps query and hash) | redirect |
 | `/file-remotely` | `V1` | 16771 | `src/pages/FileRemotelyPage.jsx` | done |
 | `/drop-off` | `av` | 17137 | `src/pages/DropOffPage.jsx` | done |
 | `/file-in-person` | `hv` | 17507 | `src/pages/FileInPersonPage.jsx` | done |
@@ -63,22 +65,22 @@ images, form fields) and `otherText`: every other human-readable string from the
 
 ## Page sections
 
-### Homepage (`K0`)
+### Original homepage (`K0`, now `/home-legacy`)
 
 | Order | Minified | Line | New file |
 |---|---|---|---|
-| 1 | `M0` | 12655 | `src/sections/home/Hero.jsx` (+ `src/components/media/WistiaPopover.jsx`) |
+| 1 | `M0` | 12655 | `src/sections/home-legacy/Hero.jsx` (+ `src/components/media/WistiaPopover.jsx`) |
 | 2 | `pl` | 12847 | `src/sections/shared/ReviewsCarousel.jsx` |
-| 3 | `I0` | 13197 | `src/sections/home/FilingOptions.jsx` |
+| 3 | `I0` | 13197 | `src/sections/home-legacy/FilingOptions.jsx` |
 | 4 | `im` | 13372 | `src/sections/shared/DiyPricing.jsx` |
-| 5 | `H0` | 13589 | `src/sections/home/PreviousYearsBanner.jsx` |
-| 6 | `W0` | 13649 | `src/sections/home/TrustFeatures.jsx` |
-| 7 | `U0` | 13716 | `src/sections/home/HowItWorks.jsx` |
-| 8 | `q0` | 13778 | `src/sections/home/TaxTools.jsx` |
-| 9 | `V0` | 13822 | `src/sections/home/ExpertHelpCta.jsx` |
-| 10 | `X0` | 13880 | `src/sections/home/ExpertAddons.jsx` |
-| 11 | `Q0` | 14042 | `src/sections/home/HomeFaq.jsx` |
-| 12 | `J0` | 14094 | `src/sections/home/FinalCta.jsx` |
+| 5 | `H0` | 13589 | `src/sections/home-legacy/PreviousYearsBanner.jsx` |
+| 6 | `W0` | 13649 | `src/sections/home-legacy/TrustFeatures.jsx` |
+| 7 | `U0` | 13716 | `src/sections/home-legacy/HowItWorks.jsx` |
+| 8 | `q0` | 13778 | `src/sections/home-legacy/TaxTools.jsx` |
+| 9 | `V0` | 13822 | `src/sections/home-legacy/ExpertHelpCta.jsx` |
+| 10 | `X0` | 13880 | `src/sections/home-legacy/ExpertAddons.jsx` |
+| 11 | `Q0` | 14042 | `src/sections/home-legacy/HomeFaq.jsx` |
+| 12 | `J0` | 14094 | `src/sections/home-legacy/FinalCta.jsx` |
 
 ### Service pages (`V1`, `av`, `hv`)
 
@@ -196,7 +198,7 @@ Verification: `node scripts/compare-screenshots.mjs --body` compares everything 
 header and the footer with the original. `node scripts/check-header.mjs` runs 20 behaviour and
 accessibility checks on the header.
 
-## /home-v2 in the site's look (redesign step 3)
+## New homepage (built as /home-v2, now `/`)
 
 Same sections, order, copy and behaviour as the first draft, restyled with the site's rules:
 brand navy tokens, the system font, the site's heading sizes and weights, `Button` variants,
@@ -204,16 +206,31 @@ brand navy tokens, the system font, the site's heading sizes and weights, `Butto
 
 | Section | File | Notes |
 |---|---|---|
-| Hero | `src/sections/home-v2/Hero.jsx` | Navy gradient like the site hero; fixed photo #15; office card, select and dots share state |
-| Services | `src/sections/home-v2/Services.jsx` | Two navy tiles (no photo, see image-inventory.md), three white cards |
-| Offices | `src/sections/home-v2/Offices.jsx`, `src/components/ui/OfficeRow.jsx` | Storefront photos from `offices.json` |
-| First visit | `src/sections/home-v2/FirstVisit.jsx` | Navy number circles, checklist on the brand-subtle panel |
-| Other ways to file | `src/sections/home-v2/OtherWays.jsx` | |
-| Reviews | `src/sections/home-v2/Reviews.jsx` | Initials instead of stock faces |
-| FAQ | `src/sections/home-v2/Faq.jsx`, `src/components/ui/FaqList.jsx` | |
-| CTA | `src/sections/home-v2/CtaPanel.jsx` | |
+| Hero | `src/sections/home/Hero.jsx` | Navy gradient like the site hero; fixed photo #15; office card, select and dots share state |
+| Services | `src/sections/home/Services.jsx` | Two navy tiles (no photo, see image-inventory.md), three white cards |
+| Offices | `src/sections/home/Offices.jsx`, `src/components/ui/OfficeRow.jsx` | Storefront photos from `offices.json` |
+| First visit | `src/sections/home/FirstVisit.jsx` | Navy number circles, checklist on the brand-subtle panel |
+| Other ways to file | `src/sections/home/OtherWays.jsx` | |
+| Reviews | `src/sections/home/Reviews.jsx` | Initials instead of stock faces |
+| FAQ | `src/sections/home/Faq.jsx`, `src/components/ui/FaqList.jsx` | |
+| CTA | `src/sections/home/CtaPanel.jsx` | |
 
 Removed: the `ed-*` tokens, Geist / Instrument Serif and the accent letters, `editorial.css`, and the
 `src/components/editorial/` components. The "Tax services near you" grid now lives in the site footer.
-`Seo` gained a `robots` prop; /home-v2 is `noindex, follow` with its own (flagged) title and description.
+`Seo` gained a `robots` prop.
 A brand-coloured `:focus-visible` outline now applies site-wide.
+
+## Homepage switch
+
+- `/` renders the redesign (`src/pages/HomePage.jsx`, copy in `src/content/home.json`, sections in
+  `src/sections/home/`). It uses the site's homepage SEO from `seo.json` → `pages.home` and is indexable;
+  the structured data (Organization, WebSite, offices, Service, breadcrumbs) comes from `Seo` as on every page.
+- `/home-legacy` renders the original DIY homepage (`src/pages/LegacyHomePage.jsx`, copy in
+  `src/content/home-legacy.json`, sections in `src/sections/home-legacy/`) with `noindex, follow`.
+- `/home-v2` redirects to `/` in the browser (`RedirectTo`, keeps query and hash, replaces history).
+  **When deployed, the host should also answer `/home-v2` with a 301 to `/`**, because a client-side
+  redirect is invisible to crawlers and link checkers.
+- The Personal tax tile on the homepage used to link to `/` (the DIY homepage). It now points to `#`
+  and is flagged, like the Personal tax links in the header and footer.
+- Comparisons: `/home-legacy` is compared with the original build's `/`; the new `/` is only
+  compared with the saved baseline.

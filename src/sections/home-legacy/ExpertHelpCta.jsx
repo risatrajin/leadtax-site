@@ -1,4 +1,4 @@
-import home from "../../content/home.json";
+import home from "../../content/home-legacy.json";
 import Button from "../../components/ui/Button.jsx";
 import CtaBanner from "../../components/ui/CtaBanner.jsx";
 

@@ -1,4 +1,4 @@
-import home from "../../content/home.json";
+import home from "../../content/home-legacy.json";
 import { getIcon } from "../../lib/icons.js";
 import SectionHeading from "../../components/ui/SectionHeading.jsx";
 

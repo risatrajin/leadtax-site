@@ -1,6 +1,6 @@
 /**
  * Full-page screenshots of rebuild routes at given widths.
- * Usage: node scripts/screenshot.mjs /home-v2 1440 390 [1024]
+ * Usage: node scripts/screenshot.mjs / 1440 390 [1024]
  */
 import fs from "node:fs";
 import { chromium } from "playwright-core";

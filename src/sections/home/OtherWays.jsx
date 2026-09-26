@@ -1,5 +1,5 @@
 import { ArrowRight } from "lucide-react";
-import content from "../../content/home-v2.json";
+import content from "../../content/home.json";
 import SmartLink from "../../components/ui/SmartLink.jsx";
 
 const { otherWays } = content;

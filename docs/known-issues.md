@@ -91,7 +91,7 @@ The original header and footer were replaced by one site-wide `SiteHeader` and `
 | X19 | In Person: "Local offices across Canada" (all offices are in BC); "CRA and Revenu Québec compliant". | `file-in-person.json` | kept |
 | X20 | In Person hero's first button has an extra `block` class (only difference from Drop-off). | `file-in-person.json` → `block: true` | kept |
 | X21 | "What to bring", "Drop off your documents" and cross-border "Learn More" download files from Google Drive. | `site.json` → `downloads` | kept |
-| X24 | The Commercial Dr photo is a gallery screenshot with carousel arrows baked in; no crop hides them at every breakpoint. The office shows a flagged photo placeholder on /contact and /home-v2 until a clean photo arrives (question 38). | `offices.json` → `photo` | fixed |
+| X24 | The Commercial Dr photo is a gallery screenshot with carousel arrows baked in; no crop hides them at every breakpoint. The office shows a flagged photo placeholder on /contact and the homepage until a clean photo arrives (question 38). | `offices.json` → `photo` | fixed |
 | X23 | Blog card images were shifted: "2026 Tax Filing Deadlines" showed the estate-tax artwork and "Avoid Heavy Estate Taxes" showed the e-commerce artwork. Now each post shows its own artwork; the deadlines card uses its article photo. | `posts.json` → `cardImage` | fixed |
 | X22 | About stats "10K+ / 99% / 24/7" and FAQ claims (French support, "regularly audited") are unverified. | `about.json`, `faqs.json` | kept |
 

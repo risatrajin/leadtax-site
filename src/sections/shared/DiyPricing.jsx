@@ -1,5 +1,5 @@
 import { useState } from "react";
-import home from "../../content/home.json";
+import home from "../../content/home-legacy.json";
 import pricing from "../../content/pricing.json";
 import PricingCard from "../../components/ui/PricingCard.jsx";
 

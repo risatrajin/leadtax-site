@@ -1,4 +1,4 @@
-import content from "../../content/home-v2.json";
+import content from "../../content/home.json";
 import FaqList from "../../components/ui/FaqList.jsx";
 
 const { faq } = content;
