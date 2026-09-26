@@ -76,7 +76,7 @@ function ServiceCard({ service }) {
  * From 1280px the photo covers the whole section behind the text and cards, with no overlay.
  * It sits in a fixed 1000px frame (clipped by the section) focused at 45% down, so the faces
  * land between the buttons and the cards at every desktop width.
- * The text is centered; on the photo it is white with a soft shadow for contrast.
+ * The text is left-aligned; on the photo it is white with a soft shadow for contrast.
  * Below 1280px the photo sits on top, full width. The trust row is a separate band (TrustBand).
  */
 export default function Hero() {
@@ -91,12 +91,12 @@ export default function Hero() {
         />
       </div>
       <div className="relative mx-auto max-w-7xl px-4 pb-12 pt-6 md:px-8 xl:pb-16 xl:pt-14">
-        <div className="mx-auto max-w-3xl text-center xl:text-white xl:[text-shadow:0_1px_12px_rgb(0_0_0/0.35)]">
+        <div className="max-w-3xl xl:text-white xl:[text-shadow:0_1px_12px_rgb(0_0_0/0.35)]">
           <h1 id="hero-title" className="text-4xl font-bold leading-[1.05] tracking-tight text-gray-900 sm:text-5xl lg:text-7xl xl:text-white">
             {hero.titleLead} <span className="text-brand-bright xl:text-white">{hero.titleAccent}</span>
           </h1>
           <p className="mt-6 text-xl leading-relaxed text-gray-600 md:text-2xl xl:text-white">{hero.text}</p>
-          <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:justify-center [text-shadow:none]">
+          <div className="mt-10 flex flex-col gap-4 sm:flex-row [text-shadow:none]">
             <Button to={hero.book.to} className="inline-flex items-center justify-center gap-3 font-semibold">
               <CalendarDays aria-hidden="true" className="h-5 w-5" />
               {hero.book.label}
