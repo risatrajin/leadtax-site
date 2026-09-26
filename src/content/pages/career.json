@@ -1,0 +1,39 @@
+{
+  "title": "Join Our Team",
+  "intro": "Help us make tax filing simple and accessible for all Canadians.",
+  "benefits": {
+    "title": "Why Work at LeadTax?",
+    "items": [
+      { "emoji": "💼", "title": "Competitive Benefits", "description": "Comprehensive health coverage and retirement plans" },
+      { "emoji": "🏡", "title": "Flexible Work", "description": "Remote and hybrid options available" },
+      { "emoji": "📚", "title": "Growth Opportunities", "description": "Professional development and training programs" },
+      { "emoji": "🎉", "title": "Great Culture", "description": "Collaborative environment with passionate people" }
+    ]
+  },
+  "openings": {
+    "title": "Open Positions",
+    "applyLabel": "Apply Now",
+    "jobs": [
+      {
+        "title": "Senior Tax Specialist",
+        "description": "Help clients navigate complex tax situations with expertise and care.",
+        "tags": ["Full-time", "Toronto, ON"]
+      },
+      {
+        "title": "Customer Success Representative",
+        "description": "Provide exceptional support and guidance to our customers.",
+        "tags": ["Full-time", "Remote"]
+      },
+      {
+        "title": "Software Developer",
+        "description": "Build innovative features that simplify tax filing for Canadians.",
+        "tags": ["Full-time", "Hybrid"]
+      }
+    ]
+  },
+  "openApplication": {
+    "title": "Don't See a Perfect Fit?",
+    "text": "We're always looking for talented people. Send us your resume and we'll keep you in mind for future opportunities.",
+    "buttonLabel": "Submit Resume"
+  }
+}

@@ -16,6 +16,7 @@ const SIZES = {
   sm: "px-6 py-2",
   md: "px-6 py-3",
   lg: "px-8 py-4",
+  wide: "px-8 py-3",
   /** Vertical padding only, for full-width buttons. */
   block: "py-3",
 };
