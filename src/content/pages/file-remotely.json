@@ -1,0 +1,122 @@
+{
+  "variant": "remote",
+  "hero": {
+    "title": "File your taxes remotely with expert guidance.",
+    "text": "Meet with a tax professional online and get your return prepared accurately without visiting an office.",
+    "actions": [
+      {
+        "label": "Get started remotely",
+        "href": "app:remote.register"
+      }
+    ],
+    "image": {
+      "src": "https://images.unsplash.com/photo-1758518727888-ffa196002e59?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb25maWRlbnQlMjB3b21hbiUyMHByb2Zlc3Npb25hbHxlbnwxfHx8fDE3Njc2MzU4ODN8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+      "alt": "Confident professional woman"
+    }
+  },
+  "steps": {
+    "title": "How remote filing works",
+    "items": [
+      {
+        "icon": "Upload",
+        "text": "Upload your documents securely"
+      },
+      {
+        "icon": "Video",
+        "text": "Meet your tax expert via video call"
+      },
+      {
+        "icon": "FileCheck",
+        "text": "Review your completed return together"
+      },
+      {
+        "icon": "Send",
+        "text": "File electronically with confidence"
+      }
+    ]
+  },
+  "benefits": {
+    "title": "Why file remotely",
+    "items": [
+      {
+        "icon": "UserCheck",
+        "title": "One-on-one expert support",
+        "description": "Work directly with a dedicated tax professional who understands your unique situation."
+      },
+      {
+        "icon": "House",
+        "title": "No travel or waiting rooms",
+        "description": "File from anywhere at a time that works for you—no commute required."
+      },
+      {
+        "icon": "ShieldCheck",
+        "title": "Secure document handling",
+        "description": "Your documents are encrypted and protected with bank-level security."
+      },
+      {
+        "icon": "FileText",
+        "title": "Ideal for complex returns",
+        "description": "Perfect for self-employed, investors, and anyone with detailed tax needs."
+      }
+    ]
+  },
+  "audience": {
+    "title": "Who this is for",
+    "intro": "Perfect for:",
+    "items": [
+      {
+        "icon": "Briefcase",
+        "title": "Busy professionals",
+        "description": "No time to visit an office? File on your schedule with expert support."
+      },
+      {
+        "icon": "Users",
+        "title": "Families with complex tax situations",
+        "description": "Multiple income sources, dependents, or credits—we handle it all."
+      },
+      {
+        "icon": "TrendingUp",
+        "title": "Investors and rental property owners",
+        "description": "Navigate capital gains, dividends, and rental income with confidence."
+      },
+      {
+        "icon": "House",
+        "title": "Anyone who wants expert help from home",
+        "description": "Enjoy the convenience of professional tax preparation without leaving your house."
+      }
+    ]
+  },
+  "trust": {
+    "title": "Trust & Security",
+    "items": [
+      {
+        "icon": "FileCheck",
+        "title": "CRA-compliant filing",
+        "description": "All returns meet official CRA requirements and standards."
+      },
+      {
+        "icon": "Lock",
+        "title": "Secure document upload",
+        "description": "Your files are encrypted end-to-end during transfer and storage."
+      },
+      {
+        "icon": "Video",
+        "title": "Encrypted video consultations",
+        "description": "Private, secure video meetings protect your financial information."
+      },
+      {
+        "icon": "UserCheck",
+        "title": "Canadian tax professionals",
+        "description": "Work with certified experts who know Canadian tax law inside out."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Ready to file with an expert from home?",
+    "text": "Schedule your remote consultation today and experience professional tax preparation from the comfort of your home.",
+    "action": {
+      "label": "Start remote filing",
+      "href": "app:remote.register"
+    }
+  }
+}

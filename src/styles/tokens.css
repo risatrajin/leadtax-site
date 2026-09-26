@@ -14,8 +14,11 @@
   --color-brand-raised: #044385;
   /* Lighter brand blue used as the highlight stop in the hero gradient. Was #044994. */
   --color-brand-highlight: #044994;
-  /* Soft brand blue at the end of the "Need Expert Help?" gradient. Was #81ABDC. */
+  /* Soft brand blue: Drop-off / In Person hero background, end of the "Need Expert Help?" gradient. Was #81ABDC. */
   --color-brand-fade: #81abdc;
+
+  /* Very pale blue-grey used to start soft section gradients. Was #E8F4F8. */
+  --color-surface-tint: #e8f4f8;
 
   /* Accent: rating stars. Was #FDB022. */
   --color-rating: #fdb022;
