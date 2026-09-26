@@ -28,7 +28,7 @@ function PlanCard({ plan, isLast }) {
   return (
     <div className={isLast ? `${style.card} sm:col-span-2 md:col-span-1` : style.card}>
       {plan.badge && (
-        <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-green-500 text-white px-4 py-1 rounded-full text-sm font-bold">
+        <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-popular text-gray-900 px-4 py-1 rounded-full text-sm font-bold">
           {plan.badge}
         </div>
       )}
