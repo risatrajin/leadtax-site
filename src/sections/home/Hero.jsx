@@ -32,8 +32,10 @@ function TrustRow() {
               <Star key={index} aria-hidden="true" className="h-4 w-4 fill-rating text-rating" />
             ))}
           </div>
-          <p className="font-semibold text-gray-900">{fill(hero.rating.label, { rating: reviews.rating })}</p>
-          <p className="text-sm text-gray-600">{fill(hero.rating.count, { count: reviewCount })}</p>
+          <p className="font-semibold text-gray-900">
+            {fill(hero.rating.label, { rating: reviews.rating })}{" "}
+            <span className="text-sm font-normal text-gray-600">{fill(hero.rating.count, { count: reviewCount })}</span>
+          </p>
         </div>
       </li>
       {hero.trust.map((item) => {

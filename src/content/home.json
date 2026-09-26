@@ -22,7 +22,7 @@
     },
     "rating": {
       "label": "{rating} Google Rating",
-      "count": "{count} Reviews",
+      "count": "({count} Reviews)",
       "starsLabel": "5 out of 5 stars"
     },
     "trust": [
