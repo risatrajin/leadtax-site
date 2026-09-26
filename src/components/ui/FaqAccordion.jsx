@@ -1,8 +1,16 @@
 import { useState } from "react";
 import { ChevronDown } from "lucide-react";
 
-/** List of expandable questions. Each question toggles independently. */
-export default function FaqAccordion({ items }) {
+/**
+ * Expandable question list. Two styles exist on the site:
+ * - "simple" (homepage): any number of answers open at once; answers keep line breaks.
+ * - "bordered" (/faq): one answer open at a time.
+ */
+export default function FaqAccordion({ items, variant = "simple" }) {
+  return variant === "bordered" ? <BorderedFaq items={items} /> : <SimpleFaq items={items} />;
+}
+
+function SimpleFaq({ items }) {
   const [open, setOpen] = useState({});
   const toggle = (question) => setOpen((prev) => ({ ...prev, [question]: !prev[question] }));
 
@@ -21,6 +29,33 @@ export default function FaqAccordion({ items }) {
           </button>
           {open[item.question] && (
             <div className="px-6 pb-5 text-gray-600 whitespace-pre-line">{item.answer}</div>
+          )}
+        </div>
+      ))}
+    </div>
+  );
+}
+
+function BorderedFaq({ items }) {
+  const [openIndex, setOpenIndex] = useState(null);
+
+  return (
+    <div className="space-y-4">
+      {items.map((item, index) => (
+        <div key={index} className="bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden">
+          <button
+            onClick={() => setOpenIndex(openIndex === index ? null : index)}
+            className="w-full flex items-center justify-between p-6 text-left hover:bg-gray-50 transition-colors"
+          >
+            <span className="font-semibold text-gray-900 pr-4">{item.question}</span>
+            <ChevronDown
+              className={`w-5 h-5 text-brand transition-transform flex-shrink-0 ${openIndex === index ? "rotate-180" : ""}`}
+            />
+          </button>
+          {openIndex === index && (
+            <div className="px-6 pb-6">
+              <p className="text-gray-600 leading-relaxed">{item.answer}</p>
+            </div>
           )}
         </div>
       ))}

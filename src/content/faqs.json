@@ -48,5 +48,47 @@
       "question": "What if I get stuck or make a mistake?",
       "answer": "That's exactly why support is included.\n\nIf something does not look right, or you are unsure about an entry, Lead Tax experts are available to help before you file. If the CRA follows up after filing, we will guide you through that too."
     }
+  ],
+  "faqPage": [
+    {
+      "question": "What documents do I need to file my taxes?",
+      "answer": "You'll need your T4 slips from employers, receipts for deductions (like charitable donations, medical expenses), RRSP contributions, and any other income statements. If you're self-employed, bring records of your business income and expenses."
+    },
+    {
+      "question": "How much does LeadTax cost?",
+      "answer": "Our pricing varies based on the filing method you choose. File Online starts at $19.99, File Remotely starts at $49.99, Drop-off service starts at $79.99, and In-Person consultations start at $99.99. All plans include expert review and maximum refund guarantee."
+    },
+    {
+      "question": "Is my personal information secure?",
+      "answer": "Absolutely. We use bank-level encryption and follow strict security protocols to protect your data. All our systems are CRA-certified and regularly audited for compliance with Canadian privacy laws."
+    },
+    {
+      "question": "When will I receive my tax refund?",
+      "answer": "If you file electronically and choose direct deposit, most refunds are processed within 8-14 business days. Paper returns can take 8-12 weeks. You can track your refund status through the CRA My Account portal."
+    },
+    {
+      "question": "Can I file taxes for previous years?",
+      "answer": "Yes! We can help you file returns for previous tax years. Keep in mind that you can go back up to 10 years, and filing late returns may result in penalties if you owe taxes."
+    },
+    {
+      "question": "What if I make a mistake on my tax return?",
+      "answer": "Don't worry! You can adjust your return by filing a T1 Adjustment Request with the CRA. Our team can help you make corrections and ensure everything is accurate."
+    },
+    {
+      "question": "Do you offer support in French?",
+      "answer": "Yes, we provide bilingual support in both English and French to serve all Canadians. Simply select your preferred language when you contact us."
+    },
+    {
+      "question": "What's the difference between your filing options?",
+      "answer": "File Online is DIY with software guidance. File Remotely means a tax professional prepares your return remotely. Drop-off lets you submit documents and pick them up when done. In-Person gives you face-to-face consultation with an expert."
+    },
+    {
+      "question": "Can you help with complex tax situations?",
+      "answer": "Yes! Our certified tax professionals handle everything from simple returns to complex situations including self-employment, rental income, investments, and small business taxes."
+    },
+    {
+      "question": "What is your maximum refund guarantee?",
+      "answer": "We guarantee to find you the maximum refund you're entitled to by law. If we miss a credit or deduction that results in a smaller refund, we'll refund your service fee and pay any difference."
+    }
   ]
 }

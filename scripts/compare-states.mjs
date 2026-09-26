@@ -1,5 +1,5 @@
 /**
- * Interaction parity check for the homepage: opens menus, expands FAQs and
+ * Interaction parity check: opens menus, expands FAQs and
  * shows tooltips on both builds, then diffs viewport screenshots.
  * Usage: node scripts/compare-states.mjs   (both servers running, see compare-screenshots.mjs)
  */
@@ -48,13 +48,23 @@ const STATES = [
       await p.mouse.move(0, 0);
     },
   },
+  {
+    name: "faq-page-item-open", route: "/faq", viewport: { width: 1440, height: 900 },
+    run: async (p) => {
+      await p.locator("button", { hasText: "How much does LeadTax cost?" }).click();
+      await p.mouse.move(0, 0);
+    },
+  },
 ];
+
+const only = process.argv.slice(2);
+const selected = only.length ? STATES.filter((s) => only.some((o) => s.name.includes(o) || s.route === o)) : STATES;
 
 async function shoot(browser, base, state) {
   const context = await browser.newContext({ viewport: state.viewport, deviceScaleFactor: 1 });
   await context.route(/intercom|googletagmanager/, (r) => r.abort());
   const page = await context.newPage();
-  await page.goto(base + "/", { waitUntil: "networkidle" });
+  await page.goto(base + (state.route ?? "/"), { waitUntil: "networkidle" });
   await page.addStyleTag({ content: FREEZE_CSS });
   await state.run(page);
   await page.waitForTimeout(400);
@@ -65,7 +75,7 @@ async function shoot(browser, base, state) {
 
 fs.mkdirSync(OUT, { recursive: true });
 const browser = await chromium.launch({ channel: "chrome" });
-for (const state of STATES) {
+for (const state of selected) {
   const [a, b] = await Promise.all([shoot(browser, ORIGINAL, state), shoot(browser, REBUILD, state)]);
   const diff = new PNG({ width: a.width, height: a.height });
   const changed = pixelmatch(a.data, b.data, diff.data, a.width, a.height, { threshold: 0.1 });

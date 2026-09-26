@@ -5,6 +5,7 @@ import Analytics from "./components/global/Analytics.jsx";
 import IntercomWidget from "./components/global/IntercomWidget.jsx";
 import Seo from "./components/seo/Seo.jsx";
 import HomePage from "./pages/HomePage.jsx";
+import FaqPage from "./pages/FaqPage.jsx";
 import CareerPage from "./pages/CareerPage.jsx";
 import AboutPage from "./pages/AboutPage.jsx";
 
@@ -25,6 +26,7 @@ export default function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/career" element={<CareerPage />} />
+        <Route path="/faq" element={<FaqPage />} />
       </Routes>
     </BrowserRouter>
   );
