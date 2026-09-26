@@ -2,6 +2,7 @@ import about from "../content/pages/about.json";
 import seo from "../content/seo.json";
 import PageShell from "../components/layout/PageShell.jsx";
 import PageHero from "../components/ui/PageHero.jsx";
+import CtaPanel from "../sections/home/CtaPanel.jsx";
 
 export default function AboutPage() {
   return (
@@ -44,6 +45,7 @@ export default function AboutPage() {
           </div>
         </div>
       </div>
+      <CtaPanel to="/contact" />
     </PageShell>
   );
 }
