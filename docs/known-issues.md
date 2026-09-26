@@ -27,7 +27,7 @@ Status: **kept** = reproduced in the rebuild; **dropped** = on a page that was n
 | G10 | JSON-LD advertises a site search at `/search?q=` that doesn't exist. | `src/content/seo.json` → `schema.searchUrlTemplate` | kept |
 | G11 | JSON-LD main office (100-4350 Hastings) uses the 4125 Hastings photo; 4125 Hastings has no telephone in JSON-LD. | `src/content/offices.json` → `schema` | kept |
 | G12 | Head office street is "Hastings Street" in JSON-LD but "Hasting St" (typo) on the Contact page. | `src/content/offices.json` | kept |
-| G13 | No catch-all route: unknown URLs render a blank page with no header or footer. This now also applies to the four archived routes and to `/sitemap`. | `src/App.jsx` | kept |
+| G13 | No catch-all route: unknown URLs render a blank page with no header or footer. This now also applies to the four archived routes and to `/sitemap`. | `src/App.jsx` | fixed: unknown paths show `NotFoundPage` (noindex) with links home and to /contact |
 | G14 | Favicon is only set by JavaScript. | `src/components/global/Favicon.jsx` | kept |
 | G15 | `window.fbq` is replaced with a no-op, so any Facebook pixel in GTM does nothing. | `src/components/global/Analytics.jsx` | kept |
 | G16 | `/sitemap.xml` and `/robots.txt` were also React routes that could shadow the static files. | — | resolved: React routes not recreated; static files in `public/` |

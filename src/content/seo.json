@@ -62,6 +62,11 @@
       "description": "Compare LeadTax pricing plans. DIY online filing from $19 or expert-assisted filing from $59.99. All plans include maximum refund guarantee and CRA certification.",
       "keywords": "tax filing pricing Canada, affordable tax software, tax expert pricing, Canadian tax filing cost, CRA certified tax software"
     },
+    "notFound": {
+      "title": "Page Not Found | LeadTax",
+      "description": "The page you're looking for doesn't exist on the LeadTax website.",
+      "robots": "noindex, follow"
+    },
     "homeLegacy": {
       "_note": "The original DIY homepage, kept at /home-legacy for comparison. Uses the home copy with noindex.",
       "robots": "noindex, follow"

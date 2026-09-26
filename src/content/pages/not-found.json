@@ -1,0 +1,8 @@
+{
+  "title": "Page Not Found",
+  "text": "Sorry, we couldn't find the page you're looking for. It may have moved, or the link may be out of date.",
+  "actions": [
+    { "label": "Go to the homepage", "to": "/", "variant": "primary" },
+    { "label": "Contact us", "to": "/contact", "variant": "outline" }
+  ]
+}

@@ -20,13 +20,15 @@ import FaqPage from "./pages/FaqPage.jsx";
 import TermsPage from "./pages/TermsPage.jsx";
 import PrivacyPolicyPage from "./pages/PrivacyPolicyPage.jsx";
 import PricingPage from "./pages/PricingPage.jsx";
+import NotFoundPage from "./pages/NotFoundPage.jsx";
 
 /*
  * "/" is the redesigned homepage; the original DIY homepage is at /home-legacy.
  * Other routes are in the same order as the original build. /sign-in, /diy-landing,
  * /dyi-landing and /file-remote-landing were not rebuilt (their copy is in
  * src/content/archive/). /sitemap.xml and /robots.txt are static files in public/.
- * There is no catch-all route in the original, so unknown paths render nothing.
+ * The original had no catch-all route, so unknown paths rendered a blank page; they now show
+ * NotFoundPage.
  */
 export default function App() {
   return (
@@ -55,6 +57,7 @@ export default function App() {
         <Route path="/home-legacy" element={<LegacyHomePage />} />
         {/* The redesign lived here before it became the homepage. */}
         <Route path="/home-v2" element={<RedirectTo to="/" />} />
+        <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </BrowserRouter>
   );
