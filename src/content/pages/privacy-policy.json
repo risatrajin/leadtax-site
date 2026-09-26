@@ -1,0 +1,288 @@
+{
+  "title": "Privacy Policy",
+  "lastUpdated": "Last updated: Jan 10, 2026",
+  "intro": [
+    {
+      "type": "paragraph",
+      "text": "Lead Tax Group Inc. values your privacy and is committed to protecting your personal information. This Privacy Policy explains how we collect, use, store, and disclose personal information when you use our website, software, and services."
+    },
+    {
+      "type": "paragraph",
+      "text": "By using Lead Tax, you agree to the practices described in this policy.",
+      "emphasis": true
+    }
+  ],
+  "sections": [
+    {
+      "title": "1. Who We Are",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Lead Tax Inc. provides online, do-it-yourself personal tax filing services for Canadian residents. Our platform is powered by CRA NETFILE-certified software using the CloudTax API, allowing users to prepare and file tax returns securely and accurately with the Canada Revenue Agency (CRA)."
+        }
+      ]
+    },
+    {
+      "title": "2. Information We Collect",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "We collect only the information necessary to provide tax filing services and support you effectively.",
+          "gap": "md"
+        },
+        {
+          "type": "subheading",
+          "text": "Personal Information You Provide"
+        },
+        {
+          "type": "paragraph",
+          "text": "This may include:",
+          "gap": "sm"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Name, address, email address, phone number",
+            "Date of birth and Social Insurance Number (SIN)",
+            "Marital and family status",
+            "Employment, income, and tax-related information",
+            "Uploaded tax slips and documents",
+            "Payment and billing information"
+          ]
+        },
+        {
+          "type": "subheading",
+          "text": "Automatically Collected Information"
+        },
+        {
+          "type": "paragraph",
+          "text": "When you use our website or platform, we may collect:",
+          "gap": "sm"
+        },
+        {
+          "type": "list",
+          "items": [
+            "IP address and browser type",
+            "Device and usage data",
+            "Pages visited and actions taken on the site",
+            "Cookies and similar tracking technologies"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "This information helps us improve performance, security, and user experience."
+        }
+      ]
+    },
+    {
+      "title": "3. How We Use Your Information",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "We use your information to:",
+          "gap": "sm"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Prepare and file your tax return with the CRA",
+            "Calculate taxes accurately and apply eligible credits",
+            "Provide phone and email support",
+            "Respond to inquiries and CRA notices",
+            "Process payments and prevent fraud",
+            "Improve our services and user experience",
+            "Meet legal and regulatory requirements"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "We do not sell your personal information.",
+          "emphasis": true
+        }
+      ]
+    },
+    {
+      "title": "4. CRA NETFILE and CloudTax Technology",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Lead Tax uses CRA NETFILE-certified software powered by the CloudTax API to prepare and submit tax returns.",
+          "gap": "md"
+        },
+        {
+          "type": "paragraph",
+          "text": "This means:",
+          "gap": "sm"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Your return is transmitted securely to the CRA",
+            "All calculations follow CRA rules and validation checks",
+            "CloudTax acts as a technology service provider and does not use your data for unrelated purposes",
+            "Your tax data is used only to deliver the services you request."
+          ]
+        }
+      ]
+    },
+    {
+      "title": "5. Support Access to Your Information",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Lead Tax experts may access your information only when necessary to:",
+          "gap": "sm"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Provide support you request",
+            "Resolve technical or filing issues",
+            "Assist with CRA inquiries or corrections"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "All staff and contractors are bound by confidentiality obligations and access controls."
+        }
+      ]
+    },
+    {
+      "title": "6. How We Store and Protect Your Information",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "We use industry-standard security measures to protect your information, including:",
+          "gap": "sm"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Encrypted data transmission",
+            "Secure cloud infrastructure hosted in Canada",
+            "Role-based access controls",
+            "Ongoing monitoring and security reviews"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "We retain personal information only as long as required to provide services or meet legal obligations."
+        }
+      ]
+    },
+    {
+      "title": "7. Sharing Your Information",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "We may share your information only in the following limited circumstances:",
+          "gap": "sm"
+        },
+        {
+          "type": "list",
+          "items": [
+            "With the CRA for tax filing and compliance",
+            "With service providers that help us operate our platform (such as payment processors), under strict confidentiality agreements",
+            "When required by law, court order, or regulatory authority"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "We do not share your information for marketing purposes with third parties.",
+          "emphasis": true
+        }
+      ]
+    },
+    {
+      "title": "8. Cookies and Analytics",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Lead Tax uses cookies and similar technologies to:",
+          "gap": "sm"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Keep you signed in",
+            "Improve website performance",
+            "Understand how users interact with our platform"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "You can manage cookie preferences through your browser settings."
+        }
+      ]
+    },
+    {
+      "title": "9. Your Rights and Choices",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "You have the right to:",
+          "gap": "sm"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Access your personal information",
+            "Request corrections to inaccurate data",
+            "Withdraw consent where permitted by law",
+            "Request information about how your data is used"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Some requests may be limited due to legal or CRA requirements."
+        }
+      ]
+    },
+    {
+      "title": "10. Children's Privacy",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Lead Tax services are not intended for children under 16. We do not knowingly collect personal information from minors without parental consent."
+        }
+      ]
+    },
+    {
+      "title": "11. Filing Outside DIY Scope",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Certain filings are not supported through Lead Tax DIY. In these cases, personal information may be used only if you choose to proceed through our File Remotely or in-person services, and only with your consent."
+        }
+      ]
+    },
+    {
+      "title": "12. Changes to This Privacy Policy",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "We may update this Privacy Policy from time to time. Any changes will be posted on our website with an updated revision date.",
+          "gap": "sm"
+        },
+        {
+          "type": "paragraph",
+          "text": "Continued use of our services after updates means you accept the revised policy."
+        }
+      ]
+    },
+    {
+      "title": "13. Contact Us",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "If you have questions about this Privacy Policy or how your information is handled, please contact us:",
+          "gap": "md"
+        },
+        {
+          "type": "contactCard",
+          "company": "Lead Tax Inc."
+        }
+      ]
+    }
+  ]
+}

@@ -5,6 +5,8 @@ import Analytics from "./components/global/Analytics.jsx";
 import IntercomWidget from "./components/global/IntercomWidget.jsx";
 import Seo from "./components/seo/Seo.jsx";
 import HomePage from "./pages/HomePage.jsx";
+import PrivacyPolicyPage from "./pages/PrivacyPolicyPage.jsx";
+import TermsPage from "./pages/TermsPage.jsx";
 import FaqPage from "./pages/FaqPage.jsx";
 import CareerPage from "./pages/CareerPage.jsx";
 import AboutPage from "./pages/AboutPage.jsx";
@@ -27,6 +29,8 @@ export default function App() {
         <Route path="/about" element={<AboutPage />} />
         <Route path="/career" element={<CareerPage />} />
         <Route path="/faq" element={<FaqPage />} />
+        <Route path="/terms" element={<TermsPage />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
       </Routes>
     </BrowserRouter>
   );
