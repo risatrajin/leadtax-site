@@ -77,48 +77,48 @@ function ServiceCard({ service }) {
 /**
  * Homepage hero (client mockup): headline and actions on the left, a photo on the right that
  * fades into the page, a trust row, and the five services as cards along the bottom.
- * From 1280px the photo fills the right half at full strength with only a soft left edge; below
+ * From 1280px the photo fills the right half of the whole section (behind the cards) at full
+ * strength, with soft left and bottom edges; below
  * that it sits on top, full width, so text never runs over it.
  */
 export default function Hero() {
   return (
     <section aria-labelledby="hero-title" className="relative overflow-hidden bg-white">
-      <div className="relative">
-        <div className="relative h-64 sm:h-80 lg:h-96 xl:absolute xl:inset-y-0 xl:right-0 xl:h-auto xl:w-1/2">
-          <img
-            src={hero.image.src}
-            alt={hero.image.alt}
-            className="h-full w-full object-cover"
-            style={{ objectPosition: hero.image.position }}
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-white via-white/10 to-transparent xl:bg-gradient-to-r xl:from-white xl:via-white/60 xl:via-15% xl:to-transparent xl:to-35%" />
-        </div>
-
-        <div className="relative mx-auto max-w-7xl px-4 pb-12 pt-6 md:px-8 xl:pb-16 xl:pt-24">
-          <div className="max-w-2xl">
-            <h1 id="hero-title" className="text-4xl font-bold leading-[1.05] tracking-tight text-gray-900 sm:text-5xl lg:text-7xl">
-              {hero.titleLead} <span className="text-brand-bright">{hero.titleAccent}</span>
-            </h1>
-            <p className="mt-6 text-xl leading-relaxed text-gray-600 md:text-2xl">{hero.text}</p>
-            <div className="mt-10 flex flex-col gap-4 sm:flex-row">
-              <Button to={hero.book.to} className="inline-flex items-center justify-center gap-3 font-semibold">
-                <CalendarDays aria-hidden="true" className="h-5 w-5" />
-                {hero.book.label}
-                <ArrowRight aria-hidden="true" className="h-5 w-5" />
-              </Button>
-              <Button
-                href={hero.findLocation.href}
-                variant="outline"
-                className="inline-flex items-center justify-center gap-3 bg-white font-semibold"
-              >
-                <MapPin aria-hidden="true" className="h-5 w-5" />
-                {hero.findLocation.label}
-                <ArrowRight aria-hidden="true" className="h-5 w-5" />
-              </Button>
-            </div>
+      <div className="relative h-64 sm:h-80 lg:h-96 xl:absolute xl:inset-y-0 xl:right-0 xl:h-auto xl:w-1/2">
+        <img
+          src={hero.image.src}
+          alt={hero.image.alt}
+          className="h-full w-full object-cover"
+          style={{ objectPosition: hero.image.position }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-white via-white/10 to-transparent xl:bg-gradient-to-r xl:from-white xl:via-white/60 xl:via-15% xl:to-transparent xl:to-35%" />
+        {/* Wide screens: fade the bottom edge into the next section. */}
+        <div className="absolute inset-x-0 bottom-0 hidden h-32 bg-gradient-to-t from-white to-transparent xl:block" />
+      </div>
+      <div className="relative mx-auto max-w-7xl px-4 pb-12 pt-6 md:px-8 xl:pb-16 xl:pt-24">
+        <div className="max-w-2xl">
+          <h1 id="hero-title" className="text-4xl font-bold leading-[1.05] tracking-tight text-gray-900 sm:text-5xl lg:text-7xl">
+            {hero.titleLead} <span className="text-brand-bright">{hero.titleAccent}</span>
+          </h1>
+          <p className="mt-6 text-xl leading-relaxed text-gray-600 md:text-2xl">{hero.text}</p>
+          <div className="mt-10 flex flex-col gap-4 sm:flex-row">
+            <Button to={hero.book.to} className="inline-flex items-center justify-center gap-3 font-semibold">
+              <CalendarDays aria-hidden="true" className="h-5 w-5" />
+              {hero.book.label}
+              <ArrowRight aria-hidden="true" className="h-5 w-5" />
+            </Button>
+            <Button
+              href={hero.findLocation.href}
+              variant="outline"
+              className="inline-flex items-center justify-center gap-3 bg-white font-semibold"
+            >
+              <MapPin aria-hidden="true" className="h-5 w-5" />
+              {hero.findLocation.label}
+              <ArrowRight aria-hidden="true" className="h-5 w-5" />
+            </Button>
           </div>
-          <TrustRow />
         </div>
+        <TrustRow />
       </div>
 
       <div className="relative mx-auto max-w-7xl px-4 pb-16 md:px-8 md:pb-24">
