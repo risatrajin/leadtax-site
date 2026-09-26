@@ -20,7 +20,7 @@ export default function ServicePage({ content, seo }) {
     <div className={WRAPPER[variant]}>
       {seo && <Seo {...seo} />}
       <SiteHeader />
-      <ServiceHero variant={variant} hero={content.hero} />
+      <ServiceHero hero={content.hero} />
       <ServiceSteps variant={variant} steps={content.steps} />
       <ServiceBenefits variant={variant} benefits={content.benefits} />
       <ServiceAudience variant={variant} audience={content.audience} />

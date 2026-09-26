@@ -10,7 +10,7 @@ export default function CrossBorderProcess({ process }) {
 
   return (
     <section className="py-16 md:py-20 px-4 md:px-8 bg-gray-50">
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-7xl mx-auto">
         <h2 className="text-2xl md:text-3xl lg:text-4xl text-center mb-12 text-gray-900">{process.title}</h2>
         <div className="flex flex-wrap justify-center gap-3 md:gap-4 mb-12">
           {process.tabs.map((tab) => (

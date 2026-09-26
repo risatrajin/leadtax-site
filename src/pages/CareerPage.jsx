@@ -1,5 +1,6 @@
 import career from "../content/pages/career.json";
 import PageShell from "../components/layout/PageShell.jsx";
+import PageHero from "../components/ui/PageHero.jsx";
 import Button from "../components/ui/Button.jsx";
 
 const { benefits, openings, openApplication } = career;
@@ -8,11 +9,8 @@ const { benefits, openings, openApplication } = career;
 export default function CareerPage() {
   return (
     <PageShell>
+      <PageHero title={career.title} text={career.intro} />
       <div className="max-w-7xl mx-auto px-4 md:px-8 py-16 md:py-24">
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold text-brand mb-4">{career.title}</h1>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">{career.intro}</p>
-        </div>
 
         <div className="bg-brand-subtle rounded-2xl p-8 md:p-12 mb-12">
           <h2 className="text-3xl font-bold text-brand mb-6">{benefits.title}</h2>

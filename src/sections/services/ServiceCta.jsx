@@ -1,5 +1,5 @@
 import Button from "../../components/ui/Button.jsx";
-import { actionProps } from "./ServiceHero.jsx";
+import { actionProps } from "../../components/ui/PageHero.jsx";
 
 const STYLES = {
   remote: {

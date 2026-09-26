@@ -3,7 +3,7 @@ import { Check } from "lucide-react";
 export default function CrossBorderServices({ services }) {
   return (
     <section className="py-16 md:py-20 px-4 md:px-8">
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-2xl md:text-3xl lg:text-4xl mb-4 text-gray-900">{services.title}</h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">{services.intro}</p>

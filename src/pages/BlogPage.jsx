@@ -2,6 +2,7 @@ import { Link } from "react-router";
 import { posts } from "../content/blog/posts.json";
 import blog from "../content/pages/blog.json";
 import PageShell from "../components/layout/PageShell.jsx";
+import PageHero from "../components/ui/PageHero.jsx";
 
 const copy = blog.listing;
 const listedPosts = posts.filter((post) => post.excerpt);
@@ -10,11 +11,8 @@ const listedPosts = posts.filter((post) => post.excerpt);
 export default function BlogPage() {
   return (
     <PageShell>
+      <PageHero title={copy.title} text={copy.intro} />
       <div className="max-w-7xl mx-auto px-4 md:px-8 py-16 md:py-24">
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold text-brand mb-4">{copy.title}</h1>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">{copy.intro}</p>
-        </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {listedPosts.map((post) => (
             <Link

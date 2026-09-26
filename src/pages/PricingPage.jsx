@@ -5,6 +5,7 @@ import SiteHeader from "../components/layout/SiteHeader.jsx";
 import SiteFooter from "../components/layout/SiteFooter.jsx";
 import Seo from "../components/seo/Seo.jsx";
 import ComparisonTable from "../sections/pricing/ComparisonTable.jsx";
+import PageHero from "../components/ui/PageHero.jsx";
 
 /** Pricing: plan comparison table and accuracy guarantee. Has no <main> (kept from the original). */
 export default function PricingPage() {
@@ -12,12 +13,7 @@ export default function PricingPage() {
     <div className="min-h-screen bg-gray-50">
       <Seo {...seo.pages.pricing} />
       <SiteHeader />
-      <section className="bg-gradient-to-br from-brand to-brand-strong text-white py-16 md:py-24 px-4 md:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-3xl md:text-4xl lg:text-5xl mb-6">{content.title}</h1>
-          <p className="text-lg md:text-xl text-brand-subtle max-w-3xl mx-auto">{content.intro}</p>
-        </div>
-      </section>
+      <PageHero title={content.title} text={content.intro} />
       <section className="py-12 px-4 md:px-8">
         <div className="max-w-7xl mx-auto">
           <ComparisonTable />
