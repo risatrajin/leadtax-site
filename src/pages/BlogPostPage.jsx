@@ -2,8 +2,8 @@ import { Link, useParams } from "react-router";
 import { ArrowLeft } from "lucide-react";
 import { posts } from "../content/blog/posts.json";
 import blog from "../content/pages/blog.json";
-import Header from "../components/layout/Header.jsx";
-import Footer from "../components/layout/Footer.jsx";
+import SiteHeader from "../components/layout/SiteHeader.jsx";
+import SiteFooter from "../components/layout/SiteFooter.jsx";
 import PostHeader from "../sections/blog/PostHeader.jsx";
 import PostBody from "../sections/blog/PostBody.jsx";
 import PostCta from "../sections/blog/PostCta.jsx";
@@ -22,7 +22,7 @@ export default function BlogPostPage() {
   if (!post) {
     return (
       <div className="min-h-screen flex flex-col">
-        <Header />
+        <SiteHeader />
         <main className="flex-1 flex items-center justify-center">
           <div className="text-center py-20">
             <h1 className="text-4xl font-bold text-gray-900 mb-4">{copy.notFound.title}</h1>
@@ -33,14 +33,14 @@ export default function BlogPostPage() {
             </Link>
           </div>
         </main>
-        <Footer />
+        <SiteFooter />
       </div>
     );
   }
 
   return (
     <div className="min-h-screen flex flex-col">
-      <Header />
+      <SiteHeader />
       <main className="flex-1">
         <PostHeader post={post} backLabel={copy.backLabel} />
         <article className="py-12 md:py-16 px-4 md:px-8">
@@ -51,7 +51,7 @@ export default function BlogPostPage() {
         </article>
         <RelatedArticles posts={posts} currentSlug={post.slug} title={copy.relatedTitle} />
       </main>
-      <Footer />
+      <SiteFooter />
     </div>
   );
 }

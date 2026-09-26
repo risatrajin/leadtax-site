@@ -35,18 +35,21 @@ Status: **kept** = reproduced in the rebuild; **dropped** = on a page that was n
 | G18 | Brand name written "LeadTax", "Lead Tax" and "Lead TAX" in copy. | content files | kept |
 | G19 | Company legal name differs: "Lead Tax Group Inc." (Terms, Privacy intro) vs "Lead Tax Inc." (Privacy §1 and contact box). | `src/content/pages/terms.json`, `privacy-policy.json` | kept |
 | G20 | Several pages have no `<main>` element: home, service pages, US cross-border, pricing. | page components | kept |
-| G21 | Footer link "Sitemap" goes to `/sitemap`, which was not rebuilt and now renders blank. `public/sitemap.html` exists as a static page. | `src/content/nav.json` | kept (needs a decision) |
+| G21 | Footer link "Sitemap" went to `/sitemap`, which was not rebuilt and rendered blank. | — | resolved: the site-wide footer has no Sitemap link (`public/sitemap.html` still exists) |
 | G22 | Pricing disagrees across the site (see P7, X10, X11, X16). | several | kept |
 
 ## Header and footer
 
+The original header and footer were replaced by one site-wide `SiteHeader` and `SiteFooter` (step 2 of the redesign), so these entries no longer apply.
+
 | # | Issue | Where | Status |
 |---|---|---|---|
-| H1 | Desktop dropdowns open on mouse hover only; no keyboard or touch access on large screens. | `Header.jsx` | kept |
-| H2 | Desktop hover state and mobile tap state share one variable per menu. | `Header.jsx` | kept |
-| H3 | Desktop "Get Started" is medium weight while "Sign In" is bold. | `Header.jsx` → `ACCOUNT_BUTTONS` | kept |
-| H4 | "Do It Yourself" links to `/`; the DIY landing page was never linked (now archived). | `nav.json` | kept |
-| H5 | Footer email is plain text, not a `mailto:` link. | `Footer.jsx` | kept |
+| H1 | Desktop dropdowns opened on mouse hover only; no keyboard or touch access on large screens. | — | fixed: menus open on click or hover, close on Escape |
+| H2 | Desktop hover state and mobile tap state shared one variable per menu. | — | resolved |
+| H3 | Desktop "Get Started" was medium weight while "Sign In" was bold. | — | resolved |
+| H4 | "Do It Yourself" linked to `/`. | — | resolved: "File online yourself" goes to the DIY app |
+| H5 | Footer email was plain text, not a `mailto:` link. | — | fixed |
+| H6 | The logo's navy "Lead" is hard to read on the navy footer (same as the original footer). | `SiteFooter.jsx` | kept |
 
 ## Homepage
 

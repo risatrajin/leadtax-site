@@ -1,5 +1,5 @@
-import Header from "./Header.jsx";
-import Footer from "./Footer.jsx";
+import SiteHeader from "./SiteHeader.jsx";
+import SiteFooter from "./SiteFooter.jsx";
 import Seo from "../seo/Seo.jsx";
 
 /**
@@ -11,10 +11,10 @@ export default function PageShell({ seo, afterMain, className = "min-h-screen fl
   return (
     <div className={className}>
       {seo && <Seo {...seo} />}
-      <Header />
+      <SiteHeader />
       <main className={mainClassName}>{children}</main>
       {afterMain}
-      <Footer />
+      <SiteFooter />
     </div>
   );
 }

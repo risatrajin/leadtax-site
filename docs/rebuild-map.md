@@ -57,8 +57,8 @@ images, form fields) and `otherText`: every other human-readable string from the
 | `Yw` | 26655 | `src/components/global/ScrollToTop.jsx` | Scroll to top on path change |
 | `Vw` | 26683 | `src/components/global/Analytics.jsx` | GTM loader + `fbq` stub |
 | `Vg` | 11300 | `src/components/global/IntercomWidget.jsx` | Intercom launcher |
-| `Ze` | 12167 | `src/components/layout/Header.jsx` | Header, desktop dropdowns, mobile menu |
-| `Qe` | 14151 | `src/components/layout/Footer.jsx` | Footer (its hide-on-`/sitemap.xml`/`/robots.txt` check was removed: those are static files now) |
+| `Ze` | 12167 | replaced by `src/components/layout/SiteHeader.jsx` | Site-wide header (see below) |
+| `Qe` | 14151 | replaced by `src/components/layout/SiteFooter.jsx` | Site-wide footer (see below) |
 | — | — | `src/components/layout/PageShell.jsx` | Shared inner-page frame (`min-h-screen flex flex-col` + header, `<main>`, footer) |
 
 ## Page sections
@@ -167,3 +167,31 @@ were added for them.
 - `node scripts/compare-states.mjs`: 16 interaction states (header menus, mobile menu, tooltips,
   FAQ items, contact dialog, cross-border tabs, pricing tabs).
 - Final phase 2 run: every route and state 0 px different; SEO identical.
+
+## Site-wide header and footer (redesign step 2)
+
+The original header and footer (and the /home-v2 draft's own pair) were replaced by one
+`SiteHeader` and one `SiteFooter`, used on every route. Everything they link to comes from
+`src/content/nav.json`; offices from `offices.json`; phone, email, social links from `site.json`.
+
+| File | Role |
+|---|---|
+| `src/components/layout/SiteHeader.jsx` | Utility bar (Client login, phone below 1280px), logo, menus, phone, "Book an appointment" |
+| `src/components/layout/site-header/panels.jsx` | Mega-menu panels (Tax services, Locations), dropdowns, feature cards |
+| `src/components/layout/site-header/useDesktopMenus.js` | Open/close behaviour: click or hover, Escape, outside click, one menu at a time |
+| `src/components/layout/site-header/MobileMenu.jsx` | Full-height panel below 1024px with accordions and a pinned booking button |
+| `src/components/layout/SiteFooter.jsx` | Logo, tagline, contact, social, link columns, offices, local links, legal |
+| `src/components/ui/SmartLink.jsx` | Link for content records (`to` route or `href` URL/ref) |
+
+Decisions:
+- **Client login** sits in a slim utility bar above the main row. The main row doesn't have room
+  for it next to five menus, the phone number and the booking button, even at 1440px (content is
+  1280px wide). Below 1280px the phone number also moves into the utility bar.
+- The original header's "Get started" (register) links are gone from the header; the header links
+  to the two portals' login pages. Register links remain in page content (pricing, homepage).
+- Office links go to `/contact#<office-id>`; the Contact page's office cards now carry those ids and
+  `ScrollToTop` scrolls to a URL hash.
+
+Verification: `node scripts/compare-screenshots.mjs --body` compares everything between the
+header and the footer with the original. `node scripts/check-header.mjs` runs 20 behaviour and
+accessibility checks on the header.

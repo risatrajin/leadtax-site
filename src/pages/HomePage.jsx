@@ -1,7 +1,7 @@
 import seo from "../content/seo.json";
 import Seo from "../components/seo/Seo.jsx";
-import Header from "../components/layout/Header.jsx";
-import Footer from "../components/layout/Footer.jsx";
+import SiteHeader from "../components/layout/SiteHeader.jsx";
+import SiteFooter from "../components/layout/SiteFooter.jsx";
 import Hero from "../sections/home/Hero.jsx";
 import ReviewsCarousel from "../sections/shared/ReviewsCarousel.jsx";
 import FilingOptions from "../sections/home/FilingOptions.jsx";
@@ -19,7 +19,7 @@ export default function HomePage() {
   return (
     <div className="min-h-screen bg-white">
       <Seo {...seo.pages.home} />
-      <Header />
+      <SiteHeader />
       <Hero />
       <ReviewsCarousel />
       <FilingOptions />
@@ -32,7 +32,7 @@ export default function HomePage() {
       <ExpertAddons />
       <HomeFaq />
       <FinalCta />
-      <Footer />
+      <SiteFooter />
     </div>
   );
 }

@@ -1,25 +1,59 @@
 {
+  "_note": "Every site-wide link. SiteHeader and SiteFooter read only this file (plus offices.json and site.json). Links to pages that do not exist yet point to # and are flagged.",
   "links": {
-    "diy": {
-      "label": "Do It Yourself",
-      "to": "/"
+    "personalTax": {
+      "_placeholders": [
+        "href"
+      ],
+      "label": "Personal tax",
+      "href": "#"
+    },
+    "businessTax": {
+      "_placeholders": [
+        "href"
+      ],
+      "label": "Business tax",
+      "href": "#"
+    },
+    "trustEstate": {
+      "_placeholders": [
+        "href"
+      ],
+      "label": "Trust & estate tax filing",
+      "footerLabel": "Trust & estate",
+      "href": "#"
+    },
+    "usCrossBorder": {
+      "label": "US & cross-border tax",
+      "footerLabel": "US & cross-border",
+      "to": "/us-cross-border"
+    },
+    "bookkeeping": {
+      "_placeholders": [
+        "href"
+      ],
+      "label": "Bookkeeping",
+      "href": "#"
+    },
+    "fileInPerson": {
+      "label": "File in person",
+      "to": "/file-in-person"
     },
     "fileRemotely": {
-      "label": "File Remotely",
+      "label": "File remotely",
       "to": "/file-remotely"
     },
     "dropOff": {
-      "label": "Drop-off",
-      "to": "/drop-off",
-      "badge": "NEW"
+      "label": "Drop off your documents",
+      "to": "/drop-off"
     },
-    "inPerson": {
-      "label": "In Person",
-      "to": "/file-in-person"
+    "fileOnline": {
+      "label": "File online yourself",
+      "href": "app:diy.register"
     },
-    "usCrossBorder": {
-      "label": "US Cross-Border Tax",
-      "to": "/us-cross-border"
+    "pricing": {
+      "label": "Pricing",
+      "to": "/pricing"
     },
     "blog": {
       "label": "Blog",
@@ -30,72 +64,117 @@
       "to": "/faq"
     },
     "about": {
-      "label": "About",
-      "footerLabel": "About Us",
+      "label": "About us",
       "to": "/about"
     },
     "career": {
-      "label": "Career",
+      "label": "Careers",
       "to": "/career"
     },
     "contact": {
       "label": "Contact",
       "to": "/contact"
     },
-    "pricing": {
-      "label": "Pricing",
-      "to": "/pricing"
-    },
     "privacy": {
-      "label": "Privacy Policy",
+      "label": "Privacy policy",
       "to": "/privacy-policy"
     },
     "terms": {
-      "label": "Terms & Conditions",
+      "label": "Terms",
       "to": "/terms"
-    },
-    "sitemap": {
-      "_placeholder": true,
-      "label": "Sitemap",
-      "to": "/sitemap"
     }
   },
-  "header": [
-    {
-      "link": "diy"
+  "header": {
+    "homeLabel": "LeadTax home",
+    "navLabel": "Main",
+    "items": [
+      {
+        "type": "mega",
+        "id": "tax-services",
+        "label": "Tax services",
+        "columns": [
+          {
+            "title": "Services",
+            "items": [
+              "personalTax",
+              "businessTax",
+              "trustEstate",
+              "usCrossBorder"
+            ]
+          },
+          {
+            "title": "Ways to file",
+            "items": [
+              "fileInPerson",
+              "fileRemotely",
+              "dropOff",
+              "fileOnline",
+              "pricing"
+            ]
+          }
+        ],
+        "feature": {
+          "image": "/images/c19d00da11be60b4716f88962976ce14c225dea3.png",
+          "imageAlt": "LeadTax office entrance on Hastings Street, Burnaby",
+          "imagePosition": "50% 40%",
+          "title": "Book an appointment",
+          "text": "Meet a tax expert at one of our offices.",
+          "_placeholders": [
+            "text"
+          ],
+          "cta": {
+            "label": "Choose an office",
+            "to": "/contact"
+          }
+        }
+      },
+      {
+        "type": "link",
+        "link": "bookkeeping"
+      },
+      {
+        "type": "mega",
+        "id": "locations",
+        "label": "Locations",
+        "offices": true,
+        "officeHref": "/contact#{id}",
+        "feature": {
+          "image": "/images/kingsway-2681.jpg",
+          "imageAlt": "LeadTax office on Kingsway, Vancouver",
+          "imagePosition": "50% 45%",
+          "title": "Find an office near you",
+          "cta": {
+            "label": "See all locations",
+            "to": "/contact"
+          }
+        }
+      },
+      {
+        "type": "dropdown",
+        "id": "resources",
+        "label": "Resources",
+        "items": [
+          "blog",
+          "faq"
+        ]
+      },
+      {
+        "type": "dropdown",
+        "id": "about",
+        "label": "About",
+        "items": [
+          "about",
+          "career",
+          "contact"
+        ]
+      }
+    ],
+    "cta": {
+      "label": "Book an appointment",
+      "to": "/contact"
     },
-    {
-      "label": "File Remotely",
-      "menuWidth": "w-64",
-      "items": [
-        "fileRemotely",
-        "dropOff",
-        "inPerson",
-        "usCrossBorder"
-      ]
-    },
-    {
-      "label": "Resources",
-      "menuWidth": "w-56",
-      "items": [
-        "blog",
-        "faq",
-        "about",
-        "career",
-        "contact"
-      ]
-    },
-    {
-      "link": "pricing"
-    },
-    {
-      "link": "contact"
-    }
-  ],
-  "accountMenus": [
-    {
-      "id": "signIn",
-      "label": "Sign In",
+    "clientLogin": {
+      "label": "Client login",
       "items": [
         {
           "label": "File Online (DIY)",
@@ -109,54 +188,99 @@
         }
       ]
     },
-    {
-      "id": "getStarted",
-      "label": "Get Started",
-      "items": [
-        {
-          "label": "File Online (DIY)",
-          "app": "diy",
-          "target": "register"
-        },
-        {
-          "label": "File Remotely",
-          "app": "remote",
-          "target": "register"
-        }
-      ]
-    }
-  ],
-  "footer": [
-    {
-      "title": "File Your Taxes",
-      "items": [
-        "diy",
-        "fileRemotely",
-        "dropOff",
-        "inPerson",
-        "usCrossBorder",
-        "pricing"
-      ]
-    },
-    {
-      "title": "Resources",
-      "items": [
-        "blog",
-        "faq",
-        "about",
-        "career",
-        "contact"
-      ]
-    },
-    {
-      "title": "Legal",
-      "items": [
-        "privacy",
-        "terms",
-        "sitemap"
-      ],
-      "appendContact": true
-    }
-  ],
-  "footerContactTitle": "Contact"
+    "menuOpenLabel": "Open menu",
+    "menuCloseLabel": "Close menu"
+  },
+  "footer": {
+    "_placeholders": [
+      "legalName"
+    ],
+    "columns": [
+      {
+        "title": "Services",
+        "items": [
+          "personalTax",
+          "businessTax",
+          "bookkeeping",
+          "usCrossBorder",
+          "trustEstate"
+        ]
+      },
+      {
+        "title": "Ways to file",
+        "items": [
+          "fileInPerson",
+          "fileRemotely",
+          "dropOff",
+          "fileOnline",
+          "pricing"
+        ]
+      },
+      {
+        "title": "Company",
+        "items": [
+          "about",
+          "blog",
+          "faq",
+          "career",
+          "contact"
+        ]
+      }
+    ],
+    "officesTitle": "Offices",
+    "socialLabel": "LeadTax on social media",
+    "legal": [
+      "privacy",
+      "terms"
+    ],
+    "legalName": "[TBD: legal company name]"
+  },
+  "localLinks": {
+    "title": "Tax services near you",
+    "extraCities": [
+      {
+        "_placeholders": [
+          "name"
+        ],
+        "name": "[TBD: city]"
+      }
+    ],
+    "services": [
+      {
+        "_placeholders": [
+          "href"
+        ],
+        "label": "Personal tax in {city}",
+        "href": "#"
+      },
+      {
+        "_placeholders": [
+          "href"
+        ],
+        "label": "Business tax in {city}",
+        "href": "#"
+      },
+      {
+        "_placeholders": [
+          "href"
+        ],
+        "label": "Bookkeeping in {city}",
+        "href": "#"
+      },
+      {
+        "_placeholders": [
+          "href"
+        ],
+        "label": "US tax filing in {city}",
+        "href": "#"
+      },
+      {
+        "_placeholders": [
+          "href"
+        ],
+        "label": "Trust and estate tax in {city}",
+        "href": "#"
+      }
+    ]
+  }
 }

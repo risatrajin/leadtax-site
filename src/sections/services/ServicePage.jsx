@@ -1,5 +1,5 @@
-import Header from "../../components/layout/Header.jsx";
-import Footer from "../../components/layout/Footer.jsx";
+import SiteHeader from "../../components/layout/SiteHeader.jsx";
+import SiteFooter from "../../components/layout/SiteFooter.jsx";
 import Seo from "../../components/seo/Seo.jsx";
 import ServiceHero from "./ServiceHero.jsx";
 import ServiceSteps from "./ServiceSteps.jsx";
@@ -19,14 +19,14 @@ export default function ServicePage({ content, seo }) {
   return (
     <div className={WRAPPER[variant]}>
       {seo && <Seo {...seo} />}
-      <Header />
+      <SiteHeader />
       <ServiceHero variant={variant} hero={content.hero} />
       <ServiceSteps variant={variant} steps={content.steps} />
       <ServiceBenefits variant={variant} benefits={content.benefits} />
       <ServiceAudience variant={variant} audience={content.audience} />
       <ServiceTrust variant={variant} trust={content.trust} />
       <ServiceCta variant={variant} cta={content.cta} />
-      <Footer />
+      <SiteFooter />
     </div>
   );
 }

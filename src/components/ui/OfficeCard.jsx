@@ -10,7 +10,10 @@ const BOOK_BUTTON =
 export default function OfficeCard({ office, bookLabel, onPickExpert }) {
   const { display, booking } = office;
   return (
-    <div className="bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden flex flex-col">
+    <div
+      id={office.id}
+      className="bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden flex flex-col scroll-mt-32"
+    >
       <img src={office.photo} alt={`${display.title} office`} className="h-48 w-full object-cover" />
       <div className="p-6 space-y-3 flex flex-col flex-1">
         <div>

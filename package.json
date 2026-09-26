@@ -9,7 +9,11 @@
     "preview": "vite preview",
     "original": "serve -s original-build -l 8081",
     "compare": "node scripts/compare-screenshots.mjs",
-    "placeholders": "node scripts/list-placeholders.mjs"
+    "placeholders": "node scripts/list-placeholders.mjs",
+    "compare:body": "node scripts/compare-screenshots.mjs --body",
+    "baseline:save": "node scripts/compare-screenshots.mjs --save-baseline",
+    "compare:baseline": "node scripts/compare-screenshots.mjs --baseline",
+    "check:header": "node scripts/check-header.mjs"
   },
   "dependencies": {
     "@radix-ui/react-dialog": "^1.1.23",

@@ -143,3 +143,8 @@ what you can; anything left blank stays as it is now.
 
 32. **Can you send a logo file and an image for social media previews?** The site points to
     both, but neither file exists.
+
+## Added later
+
+33. **Is there an office in Kamloops?** An older version of the Contact page listed an office at
+    441 Seymour St, Kamloops. Is that office open?

@@ -1,8 +1,8 @@
 import { Check } from "lucide-react";
 import content from "../content/pages/pricing.json";
 import seo from "../content/seo.json";
-import Header from "../components/layout/Header.jsx";
-import Footer from "../components/layout/Footer.jsx";
+import SiteHeader from "../components/layout/SiteHeader.jsx";
+import SiteFooter from "../components/layout/SiteFooter.jsx";
 import Seo from "../components/seo/Seo.jsx";
 import ComparisonTable from "../sections/pricing/ComparisonTable.jsx";
 
@@ -11,7 +11,7 @@ export default function PricingPage() {
   return (
     <div className="min-h-screen bg-gray-50">
       <Seo {...seo.pages.pricing} />
-      <Header />
+      <SiteHeader />
       <section className="bg-gradient-to-br from-brand to-brand-strong text-white py-16 md:py-24 px-4 md:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-3xl md:text-4xl lg:text-5xl mb-6">{content.title}</h1>
@@ -35,7 +35,7 @@ export default function PricingPage() {
           </div>
         </div>
       </section>
-      <Footer />
+      <SiteFooter />
     </div>
   );
 }

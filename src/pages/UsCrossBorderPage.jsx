@@ -1,7 +1,7 @@
 import content from "../content/pages/us-cross-border.json";
 import faqs from "../content/faqs.json";
-import Header from "../components/layout/Header.jsx";
-import Footer from "../components/layout/Footer.jsx";
+import SiteHeader from "../components/layout/SiteHeader.jsx";
+import SiteFooter from "../components/layout/SiteFooter.jsx";
 import Button from "../components/ui/Button.jsx";
 import FaqAccordion from "../components/ui/FaqAccordion.jsx";
 import CrossBorderHero from "../sections/us-cross-border/CrossBorderHero.jsx";
@@ -19,7 +19,7 @@ const CTA_VARIANTS = ["primary", "outlineMuted"];
 export default function UsCrossBorderPage() {
   return (
     <div className="min-h-screen bg-white">
-      <Header />
+      <SiteHeader />
       <CrossBorderHero hero={content.hero} />
       <CrossBorderAudiences audiences={content.audiences} />
       <CrossBorderServices services={content.services} />
@@ -51,7 +51,7 @@ export default function UsCrossBorderPage() {
           </div>
         </div>
       </section>
-      <Footer />
+      <SiteFooter />
     </div>
   );
 }
