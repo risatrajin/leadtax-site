@@ -163,6 +163,6 @@ what you can; anything left blank stays as it is now.
 37. **A team photo** (or individual photos of the tax experts clients meet).
 
 38. **A clean, full-resolution photo of each storefront.** The Commercial Drive photo we have is a
-    screenshot from an online gallery (it has the gallery's arrows in it), so the site shows a
-    placeholder for that office for now. The 4350 Hastings photo is only 616px wide and looks soft
+    screenshot from an online gallery (it has the gallery's arrows in it); the site zooms in
+    slightly to hide them for now. The 4350 Hastings photo is only 616px wide and looks soft
     at larger sizes. Ideally: taken in daylight, straight on, with the sign and door visible.
