@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build && node scripts/list-placeholders.mjs",
+    "build": "vite build && node scripts/prerender.mjs && node scripts/list-placeholders.mjs",
     "preview": "vite preview",
     "placeholders": "node scripts/list-placeholders.mjs",
     "check:header": "node scripts/check-header.mjs",

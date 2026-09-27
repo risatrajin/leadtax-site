@@ -12,8 +12,11 @@ npm run build      # production build in dist/
 npm run preview    # serve the production build
 ```
 
-`npm run build` also lists every placeholder that still needs the client's input, and fails if
-any enabled link points to "#".
+`npm run build` also:
+- pre-renders each page's SEO head (title, meta, canonical, JSON-LD) into `dist/<route>/index.html`
+  and writes `dist/404.html`, so crawlers and social previews don't depend on JavaScript;
+- lists every placeholder that still needs the client's input, and fails if any enabled link
+  points to "#".
 
 ## Project layout
 
