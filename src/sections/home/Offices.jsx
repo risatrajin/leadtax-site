@@ -82,33 +82,33 @@ function OfficeMap({ office, className }) {
  */
 function OfficeCard({ office, selected, onSelect }) {
   return (
-    <li className={`${CARD} overflow-hidden transition-shadow ${selected ? "ring-2 ring-brand" : "hover:shadow-lg"}`}>
-      <div className="flex gap-4 p-3">
+    <li className={`${CARD} relative overflow-hidden transition-shadow ${selected ? "ring-2 ring-brand" : "hover:shadow-lg"}`}>
+      <div className="relative flex gap-4 p-3">
+        {/* One button stretched over the whole card, so a click anywhere selects the office. */}
         <button
           type="button"
           aria-pressed={selected}
           aria-label={fill(copy.selectLabel, { office: office.shortName })}
           onClick={onSelect}
-          className="flex-shrink-0 rounded-xl"
-        >
-          <OfficePhoto office={office} alt="" className="h-24 w-28 rounded-xl object-cover text-xs sm:w-36" />
-        </button>
+          className="absolute inset-0 rounded-2xl"
+        />
+        <OfficePhoto office={office} alt="" className="h-24 w-28 flex-shrink-0 rounded-xl object-cover text-xs sm:w-36" />
         <div className="min-w-0 flex-1 py-1">
-          <button type="button" onClick={onSelect} className="flex flex-wrap items-center gap-x-2 gap-y-1 text-left" tabIndex={-1}>
+          <p className="flex flex-wrap items-center gap-x-2 gap-y-1">
             <span className="text-lg font-semibold text-gray-900">{office.shortName}</span>
             {office.isHeadOffice && (
               <span className="rounded-full bg-brand-subtle px-2.5 py-0.5 text-xs font-medium text-brand">
                 {copy.headOfficeLabel}
               </span>
             )}
-          </button>
+          </p>
           <p className="mt-1 flex items-start gap-1.5 text-sm text-gray-600">
             <MapPin aria-hidden="true" className="mt-0.5 h-4 w-4 flex-shrink-0 text-gray-400" />
             {office.display.address}
           </p>
           <a
             href={officeTel(office)}
-            className="mt-1 inline-flex min-h-8 items-center gap-1.5 text-sm font-semibold text-gray-900 hover:text-brand"
+            className="relative mt-1 inline-flex min-h-8 items-center gap-1.5 text-sm font-semibold text-gray-900 hover:text-brand"
           >
             <Phone aria-hidden="true" className="h-4 w-4 flex-shrink-0 text-gray-400" />
             {officePhone(office)}
