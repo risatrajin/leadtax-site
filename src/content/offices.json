@@ -120,8 +120,7 @@
         "weekdays": "[TBD: Mon–Fri hours]",
         "saturday": "[TBD: Saturday hours]",
         "sunday": "[TBD: Sunday hours]"
-      },
-      "_photoNote": "The only photo (/images/008d8d5f7cfa9f365240f909ca99134f7bdc260b.png) is a gallery screenshot with carousel arrows baked in; no object-position crop hides them at every breakpoint. Shown as a placeholder until the client supplies a clean photo."
+      }
     },
     {
       "_placeholders": [

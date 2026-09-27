@@ -1,8 +1,8 @@
 # Rebuild map
 
-The source of truth is the minified bundle in `original-build/assets/index-ZBPKqb17.js`.
-Line numbers below refer to a Prettier-formatted copy of that file (`npx prettier --parser babel`),
-which is how the bundle was read. Library code (React, react-dom, react-router, lucide-react,
+The site was rebuilt from a minified Vite bundle (`index-ZBPKqb17.js`). That bundle was used for
+the rebuild and the pixel comparison and has since been removed from the project (it is still in
+the git history). Line numbers below refer to a Prettier-formatted copy of it. Library code (React, react-dom, react-router, lucide-react,
 Radix Dialog) was not rebuilt; those packages are installed from npm.
 
 | Package | Bundle version | Installed |
@@ -164,11 +164,10 @@ were added for them.
 
 ## Verification
 
-- `npm run compare`: screenshots every rebuilt route (all 11 blog posts and a missing slug included)
-  on both builds at 1440px and 390px, diffs pixels, compares title/meta/canonical/JSON-LD.
-- `node scripts/compare-states.mjs`: 16 interaction states (header menus, mobile menu, tooltips,
-  FAQ items, contact dialog, cross-border tabs, pricing tabs).
-- Final phase 2 run: every route and state 0 px different; SEO identical.
+- During the rebuild, every route and 16 interaction states were compared with the original
+  build at 1440px and 390px: 0 px different, SEO identical.
+- Now: `npm run baseline:save` stores screenshots of every route; `npm run compare` diffs the
+  site against them. `npm run check:header` runs 20 header behaviour checks.
 
 ## Site-wide header and footer (redesign step 2)
 
@@ -194,9 +193,8 @@ Decisions:
 - Office links go to `/contact#<office-id>`; the Contact page's office cards now carry those ids and
   `ScrollToTop` scrolls to a URL hash.
 
-Verification: `node scripts/compare-screenshots.mjs --body` compares everything between the
-header and the footer with the original. `node scripts/check-header.mjs` runs 20 behaviour and
-accessibility checks on the header.
+Verification: `node scripts/check-header.mjs` runs 20 behaviour and accessibility checks on the
+header.
 
 ## New homepage (built as /home-v2, now `/`)
 

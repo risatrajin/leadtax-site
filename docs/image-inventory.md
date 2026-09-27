@@ -1,11 +1,14 @@
 # Image inventory
 
-Every file in `public/images` (40). "Used on" is where the **original** site uses it.
+The 40 images the original site shipped with. "Used on" is where the **original** site used them.
+
+**Cleanup:** the 15 images marked unused below (#1, 3, 5, 6, 9, 10, 12, 13, 16, 17, 20, 21, 24, 33, 38)
+were removed from `public/images`; they remain in the git history. #1 was replaced by
+`office-commercial-dr.webp` (see Added images).
 Kinds: **office** = real LeadTax storefront, **logo**, **photo** = stock photo, **blog** = blog artwork,
 **screenshot** = screenshot of a web page, **avoid** = must not be used (another brand, a fake
 person, or baked-in claims such as "Certified by CRA" / "SOC 2 certified").
 
-A labelled gallery is generated at `verification-output/image-inventory.html` (open it on the dev server).
 
 | # | File | Size | Shows | Used on | Kind |
 |---|---|---|---|---|---|
