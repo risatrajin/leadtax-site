@@ -62,17 +62,46 @@ function Actions({ office }) {
   );
 }
 
-/** Grayscale Google map centred on the office. */
-function OfficeMap({ office, className }) {
+/** Brand-coloured map pin; its tip sits on the point it is placed at. */
+function MapPinMarker({ className }) {
   return (
-    <iframe
-      key={office.id}
-      title={fill(copy.mapTitle, { office: office.shortName })}
-      src={mapEmbedSrc(office)}
-      loading="lazy"
-      referrerPolicy="no-referrer-when-downgrade"
-      className={`border-0 grayscale ${className}`}
-    />
+    <svg
+      viewBox="0 0 40 52"
+      aria-hidden="true"
+      className={`pointer-events-none absolute h-[52px] w-10 -translate-x-1/2 -translate-y-full drop-shadow-md ${className}`}
+    >
+      <path d="M20 51C20 51 38 32.5 38 19.5C38 9.28 29.94 1.5 20 1.5C10.06 1.5 2 9.28 2 19.5C2 32.5 20 51 20 51Z" className="fill-brand stroke-white" strokeWidth="2.5" />
+      <circle cx="20" cy="19.5" r="6.5" className="fill-white" />
+    </svg>
+  );
+}
+
+/**
+ * Grayscale Google map centred on the office. The filter also greys Google's own pin, which we
+ * can't style inside the frame, so a brand-coloured pin is drawn over it at the map's centre.
+ * `offsetLeft` extends the map past the left edge (used beside the floating office card), which
+ * moves the centre left by half that amount.
+ */
+function OfficeMap({ office, className, offsetLeft }) {
+  return (
+    <div className={`overflow-hidden ${className}`}>
+      <iframe
+        key={office.id}
+        title={fill(copy.mapTitle, { office: office.shortName })}
+        src={mapEmbedSrc(office)}
+        loading="lazy"
+        referrerPolicy="no-referrer-when-downgrade"
+        className="absolute inset-y-0 right-0 h-full border-0 grayscale"
+        style={{ width: offsetLeft ? `calc(100% + ${offsetLeft})` : "100%" }}
+      />
+      <span
+        aria-hidden="true"
+        className="pointer-events-none absolute top-1/2"
+        style={{ left: offsetLeft ? `calc(50% - ${offsetLeft} / 2)` : "50%" }}
+      >
+        <MapPinMarker className="left-0 top-0" />
+      </span>
+    </div>
   );
 }
 
@@ -117,7 +146,7 @@ function OfficeCard({ office, selected, onSelect }) {
       </div>
       {selected && (
         <div className="space-y-4 border-t border-gray-100 p-4 lg:hidden">
-          <OfficeMap office={office} className="h-56 w-full rounded-xl" />
+          <OfficeMap office={office} className="relative h-56 w-full rounded-xl" />
           <Hours office={office} />
           <Actions office={office} />
         </div>
@@ -167,7 +196,7 @@ export default function Offices() {
           <div className="hidden lg:col-span-7 lg:block">
             <div className="sticky top-28 h-[calc(100vh-9rem)] max-h-[760px] min-h-[560px] overflow-hidden rounded-2xl border border-gray-200 bg-gray-100 shadow-md">
               {/* The map runs 22rem past the left edge, so the office pin centres in the open area left of the card. */}
-              <OfficeMap office={active} className="absolute inset-y-0 -left-[22rem] h-full w-[calc(100%+22rem)]" />
+              <OfficeMap office={active} offsetLeft="22rem" className="absolute inset-0" />
               <div key={active.id} className={`${CARD} animate-fadeIn absolute right-4 top-4 w-80 overflow-hidden`}>
                 <OfficePhoto office={active} alt={photoAlt(active)} className="h-40 w-full object-cover" />
                 <div className="space-y-4 p-5">
