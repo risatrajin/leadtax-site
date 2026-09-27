@@ -47,36 +47,37 @@
     "servicesTitle": "What we can do for you",
     "services": [
       {
-        "link": "personalTax",
-        "icon": "User",
-        "title": "Personal Tax",
-        "text": "Simple and stress-free tax filing."
-      },
-      {
-        "link": "businessTax",
-        "icon": "Briefcase",
-        "title": "Business Tax",
-        "text": "Support for your business growth."
-      },
-      {
-        "link": "bookkeeping",
-        "icon": "Calculator",
-        "title": "Bookkeeping",
-        "text": "Keep your records organized and compliant."
-      },
-      {
         "link": "usCrossBorder",
         "icon": "Globe",
         "title": "US & Cross-Border Tax",
         "text": "Expert help for Canadians with US tax obligations."
       },
       {
-        "link": "trustEstate",
-        "icon": "FilePenLine",
-        "title": "Trust & Estate Tax Filing",
-        "text": "Professional tax filing for trusts and estates."
+        "link": "fileInPerson",
+        "icon": "Handshake",
+        "title": "File in Person",
+        "text": "Meet a tax professional one-on-one at a LeadTax office."
+      },
+      {
+        "link": "fileRemotely",
+        "icon": "Video",
+        "title": "File Remotely",
+        "text": "Upload your documents and meet your tax expert by video."
+      },
+      {
+        "link": "dropOff",
+        "icon": "FileText",
+        "title": "Drop Off Documents",
+        "text": "Leave your paperwork at any office. We prepare the return."
+      },
+      {
+        "link": "fileOnline",
+        "icon": "FileCheck",
+        "title": "File Online Yourself",
+        "text": "Use LeadTax online software on your own schedule."
       }
-    ]
+    ],
+    "_servicesNote": "Only services and ways to file with a live page. Copy comes from the service pages and the Other ways to file cards. Personal tax, Business tax, Bookkeeping and Trust & estate return here once their pages exist."
   },
   "offices": {
     "_placeholders": [
