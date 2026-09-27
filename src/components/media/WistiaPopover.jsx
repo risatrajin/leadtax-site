@@ -14,7 +14,7 @@ function loadScript(src, type) {
 }
 
 /**
- * Wistia popover video trigger. The <wistia-player> element and its trigger link
+ * Wistia popover video trigger. The <wistia-player> element and its trigger button
  * are created imperatively (as in the original build) so Wistia's web component
  * can take them over.
  */
@@ -35,9 +35,9 @@ export default function WistiaPopover({ mediaId, label, linkClassName, className
     player.setAttribute("aspect", "1.7777777777777777");
     player.style.display = "inline-block";
 
-    const trigger = document.createElement("a");
-    trigger.href = "#";
-    trigger.addEventListener("click", (event) => event.preventDefault());
+    // A button, not an <a href="#">: the site never links to "#".
+    const trigger = document.createElement("button");
+    trigger.type = "button";
     trigger.className = linkClassName;
     trigger.innerHTML = `${PLAY_ICON} ${label}`;
 

@@ -7,7 +7,7 @@ import { tollFreeDashed } from "../../lib/phone.js";
 import Button from "../ui/Button.jsx";
 import SmartLink from "../ui/SmartLink.jsx";
 import MobileMenu from "./site-header/MobileMenu.jsx";
-import { DropdownPanel, MegaPanel, clientLoginLinks, linkById } from "./site-header/panels.jsx";
+import { DropdownPanel, MegaPanel, clientLoginLinks, enabledLinks, isEnabled, linkById } from "./site-header/panels.jsx";
 import useDesktopMenus from "./site-header/useDesktopMenus.js";
 
 const { header } = nav;
@@ -66,6 +66,7 @@ export default function SiteHeader() {
                 {header.items.map((item) => {
                   if (item.type === "link") {
                     const link = linkById(item.link);
+                    if (!isEnabled(link)) return null;
                     return (
                       <li key={item.link}>
                         <SmartLink to={link.to} href={link.href} className={`${TRIGGER} text-gray-700`}>
@@ -83,7 +84,7 @@ export default function SiteHeader() {
                         (isMega ? (
                           <MegaPanel item={item} id={panelId} onNavigate={close} />
                         ) : (
-                          <DropdownPanel id={panelId} links={item.items.map(linkById)} onNavigate={close} />
+                          <DropdownPanel id={panelId} links={enabledLinks(item.items)} onNavigate={close} />
                         ))}
                     </li>
                   );

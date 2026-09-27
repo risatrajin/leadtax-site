@@ -1,11 +1,11 @@
 import { ArrowRight, CalendarDays, MapPin, Star } from "lucide-react";
 import content from "../../content/home.json";
-import nav from "../../content/nav.json";
 import reviews from "../../content/reviews.json";
 import { getIcon } from "../../lib/icons.js";
 import { fill } from "../../lib/template.js";
 import Button from "../../components/ui/Button.jsx";
 import SmartLink from "../../components/ui/SmartLink.jsx";
+import { isEnabled, linkById } from "../../components/layout/site-header/panels.jsx";
 
 const { hero } = content;
 const reviewCount = reviews.count.replace(/[()]/g, "");
@@ -54,20 +54,26 @@ function TrustRow() {
   );
 }
 
+const CARD_CLASSES =
+  "flex items-center gap-4 rounded-2xl border border-gray-200 bg-white p-4 shadow-md lg:flex-col lg:items-center lg:gap-0 lg:px-4 lg:py-5 lg:text-center";
+
+/** A service tile. It links to the service page when that page exists, otherwise it is plain content. */
 function ServiceCard({ service }) {
-  const link = nav.links[service.link];
+  const link = linkById(service.link);
   const Icon = getIcon(service.icon);
-  return (
-    <SmartLink
-      to={link.to}
-      href={link.href}
-      className="group flex items-center gap-4 rounded-2xl border border-gray-200 bg-white p-4 shadow-md transition-shadow hover:shadow-xl lg:flex-col lg:items-center lg:gap-0 lg:px-4 lg:py-5 lg:text-center"
-    >
+  const body = (
+    <>
       <Icon aria-hidden="true" strokeWidth={1.5} className="h-9 w-9 flex-shrink-0 text-brand-bright" />
       <div className="min-w-0 flex-1 lg:flex-none">
         <h3 className="text-base font-semibold leading-snug text-gray-900 lg:mt-3">{service.title}</h3>
         <p className="mt-1 text-sm leading-snug text-gray-600">{service.text}</p>
       </div>
+    </>
+  );
+  if (!isEnabled(link)) return <div className={CARD_CLASSES}>{body}</div>;
+  return (
+    <SmartLink to={link.to} href={link.href} className={`group ${CARD_CLASSES} transition-shadow hover:shadow-xl`}>
+      {body}
     </SmartLink>
   );
 }

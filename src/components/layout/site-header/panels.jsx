@@ -10,6 +10,32 @@ export const linkById = (id) => {
   return link;
 };
 
+/** A link is shown only when its target page exists; entries with "enabled": false are kept but hidden. */
+export const isEnabled = (link) => link.enabled !== false;
+
+/** The enabled links for a list of nav.json ids. */
+export const enabledLinks = (ids) => ids.map(linkById).filter(isEnabled);
+
+/**
+ * Menu or footer columns with disabled links removed. Empty columns are dropped, and a column
+ * left with a single link is merged into the start of the next column (or the end of the
+ * previous one) instead of showing a one-item column.
+ */
+export function visibleColumns(columns) {
+  const result = columns
+    .map((column) => ({ title: column.title, links: enabledLinks(column.items) }))
+    .filter((column) => column.links.length > 0);
+  for (let index = 0; index < result.length && result.length > 1; index += 1) {
+    if (result[index].links.length !== 1) continue;
+    const [single] = result.splice(index, 1);
+    const target = result[index] ?? result[index - 1];
+    if (result[index]) target.links.unshift(...single.links);
+    else target.links.push(...single.links);
+    index -= 1;
+  }
+  return result;
+}
+
 const COLUMN_TITLE = "text-xs font-semibold uppercase tracking-wider text-gray-500";
 const PANEL_LINK = "block rounded-lg px-3 py-2 text-gray-700 transition-colors hover:bg-brand-subtle/40 hover:text-brand";
 
@@ -60,20 +86,17 @@ export function MegaPanel({ item, id, onNavigate }) {
             <OfficeLinks item={item} onNavigate={onNavigate} />
           </div>
         ) : (
-          item.columns.map((column) => (
-            <div key={column.title} className="col-span-4">
+          visibleColumns(item.columns).map((column, index, all) => (
+            <div key={column.title} className={all.length === 1 ? "col-span-8" : "col-span-4"}>
               <p className={`${COLUMN_TITLE} mb-3 px-3`}>{column.title}</p>
               <ul>
-                {column.items.map((linkId) => {
-                  const link = linkById(linkId);
-                  return (
-                    <li key={linkId}>
-                      <SmartLink to={link.to} href={link.href} onClick={onNavigate} className={PANEL_LINK}>
-                        {link.label}
-                      </SmartLink>
-                    </li>
-                  );
-                })}
+                {column.links.map((link) => (
+                  <li key={link.label}>
+                    <SmartLink to={link.to} href={link.href} onClick={onNavigate} className={PANEL_LINK}>
+                      {link.label}
+                    </SmartLink>
+                  </li>
+                ))}
               </ul>
             </div>
           ))

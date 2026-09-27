@@ -6,13 +6,17 @@ import { officeCities, officesByCity, officePhone, officeTel } from "../../lib/o
 import { tollFreeDashed } from "../../lib/phone.js";
 import { fill } from "../../lib/template.js";
 import SmartLink from "../ui/SmartLink.jsx";
-import { linkById } from "./site-header/panels.jsx";
+import { isEnabled, linkById, visibleColumns } from "./site-header/panels.jsx";
 
 const { footer, localLinks } = nav;
 const COLUMN_TITLE = "mb-4 text-sm uppercase tracking-wider text-white";
 // On phones each link gets a 32px-tall tap area; the list spacing shrinks to match.
 const LINK = "inline-block py-1.5 text-sm text-white/70 transition-colors hover:text-white md:py-0";
 // Extra cities whose name is still a placeholder are left out, so "[TBD: city]" never shows.
+const linkColumns = visibleColumns(footer.columns);
+const COLUMN_GRID = { 1: "", 2: "sm:grid-cols-2", 3: "sm:grid-cols-3" };
+// "Tax services near you" is hidden until at least one local service page exists.
+const localServices = localLinks.services.filter(isEnabled);
 const cities = [
   ...officeCities,
   ...localLinks.extraCities.filter((city) => !city._placeholders?.includes("name")).map((city) => city.name),
@@ -77,9 +81,9 @@ export default function SiteFooter() {
               })}
             </ul>
           </div>
-          <div className="grid gap-10 sm:grid-cols-3 lg:col-span-8">
-            {footer.columns.map((column) => (
-              <LinkColumn key={column.title} title={column.title} links={column.items.map(linkById)} />
+          <div className={`grid gap-10 lg:col-span-8 ${COLUMN_GRID[linkColumns.length]}`}>
+            {linkColumns.map((column) => (
+              <LinkColumn key={column.title} title={column.title} links={column.links} />
             ))}
           </div>
         </div>
@@ -101,23 +105,25 @@ export default function SiteFooter() {
           </ul>
         </div>
 
-        <div className="mt-12 grid gap-10 border-t border-white/20 pt-10 sm:grid-cols-2 lg:grid-cols-4">
-          <h2 className="text-lg font-semibold text-white">{localLinks.title}</h2>
-          {cities.map((city) => (
-            <div key={city}>
-              <h3 className="mb-3 text-sm font-semibold text-white">{city}</h3>
-              <ul className="space-y-1 md:space-y-2">
-                {localLinks.services.map((service) => (
-                  <li key={service.label}>
-                    <SmartLink href={service.href} className={LINK}>
-                      {fill(service.label, { city })}
-                    </SmartLink>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
+        {localServices.length > 0 && (
+          <div className="mt-12 grid gap-10 border-t border-white/20 pt-10 sm:grid-cols-2 lg:grid-cols-4">
+            <h2 className="text-lg font-semibold text-white">{localLinks.title}</h2>
+            {cities.map((city) => (
+              <div key={city}>
+                <h3 className="mb-3 text-sm font-semibold text-white">{city}</h3>
+                <ul className="space-y-1 md:space-y-2">
+                  {localServices.map((service) => (
+                    <li key={service.label}>
+                      <SmartLink href={service.href} className={LINK}>
+                        {fill(service.label, { city })}
+                      </SmartLink>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        )}
 
         <div className="mt-12 flex flex-col gap-4 border-t border-white/20 pt-8 md:flex-row md:items-center md:justify-between">
           <div className="space-y-1">

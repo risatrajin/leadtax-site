@@ -6,9 +6,12 @@
  *   "_placeholders": ["field", ...]  only these fields (dotted paths allowed, e.g. "display.address")
  * Visible "[TBD: ...]" text is listed too.
  *
+ * It also enforces the link rule: a link only appears if its target page exists. Any record
+ * whose "href", "to" or "link" is "#" must carry "enabled": false (the site then hides it).
+ *
  * Usage: node scripts/list-placeholders.mjs [--quiet]
- * Runs after `npm run build`. It never fails the build (yet); problems with the flags
- * themselves are printed as warnings.
+ * Runs after `npm run build`. Placeholders never fail the build; problems with the flags are
+ * printed as warnings. An enabled "#" link fails the build (exit code 1).
  */
 import fs from "node:fs";
 import path from "node:path";
@@ -43,6 +46,8 @@ function preview(value) {
 
 const found = [];
 const warnings = [];
+const deadLinks = [];
+const LINK_KEYS = ["href", "to", "link"];
 
 function walk(node, file, at) {
   if (Array.isArray(node)) {
@@ -61,6 +66,9 @@ function walk(node, file, at) {
           if (value === undefined) warnings.push(`${file} ${join(at, field)}: flagged field does not exist`);
           found.push({ file, path: join(at, field), kind: "field", value });
         }
+    }
+    for (const key of LINK_KEYS) {
+      if (node[key] === "#" && node.enabled !== false) deadLinks.push(`${file} ${join(at, key)}`);
     }
     for (const [key, value] of Object.entries(node)) {
       if (key.startsWith("_")) continue;
@@ -96,3 +104,9 @@ console.log(
   `\nPlaceholders: ${found.length} (${count("field")} fields, ${count("record")} records, ${count("tbd")} [TBD] texts)` +
     (warnings.length ? `, ${warnings.length} warning(s)` : ""),
 );
+
+if (deadLinks.length) {
+  console.error(`\nerror: ${deadLinks.length} enabled link(s) point to "#". Add "enabled": false until the page exists:`);
+  for (const link of deadLinks) console.error(`  ${link}`);
+  process.exit(1);
+}

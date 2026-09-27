@@ -6,16 +6,17 @@ import { tollFreeDashed } from "../../../lib/phone.js";
 import { fill } from "../../../lib/template.js";
 import Button from "../../ui/Button.jsx";
 import SmartLink from "../../ui/SmartLink.jsx";
-import { clientLoginLinks, linkById } from "./panels.jsx";
+import { clientLoginLinks, enabledLinks, isEnabled, linkById, visibleColumns } from "./panels.jsx";
 
 const ROW = "flex w-full items-center justify-between border-b border-gray-200 py-4 text-left text-lg font-semibold text-gray-900";
 const SUBLINK = "block py-2 text-gray-700 hover:text-brand";
 
 /** Groups shown as accordions: each header item plus Client login. */
 function groupsFor() {
-  const groups = nav.header.items.map((item) => {
+  const items = nav.header.items.filter((item) => item.type !== "link" || isEnabled(linkById(item.link)));
+  const groups = items.map((item) => {
     if (item.type === "link") return { id: item.link, link: linkById(item.link) };
-    if (item.type === "dropdown") return { id: item.id, label: item.label, sections: [{ links: item.items.map(linkById) }] };
+    if (item.type === "dropdown") return { id: item.id, label: item.label, sections: [{ links: enabledLinks(item.items) }] };
     if (item.offices) {
       return {
         id: item.id,
@@ -35,7 +36,7 @@ function groupsFor() {
     return {
       id: item.id,
       label: item.label,
-      sections: item.columns.map((column) => ({ title: column.title, links: column.items.map(linkById) })),
+      sections: visibleColumns(item.columns),
     };
   });
   groups.push({ id: "client-login", label: nav.header.clientLogin.label, sections: [{ links: clientLoginLinks }] });
