@@ -164,14 +164,15 @@
     ]
   },
   "reviews": {
-    "_placeholders": [
-      "reviewerOffice"
-    ],
     "title": "What clients say",
-    "allLabel": "Read all {count} reviews on Google",
+    "sourceLabel": "Google reviews",
+    "ratingLabel": "Rated {rating} out of 5 from {count} Google reviews",
     "starsLabel": "5 out of 5 stars",
-    "reviewerOffice": "[TBD: office visited]",
-    "count": 3
+    "writeLabel": "Review us on Google",
+    "readLabel": "Read on Google",
+    "previousLabel": "Previous reviews",
+    "nextLabel": "More reviews",
+    "_note": "Shows every review in reviews.json with the snippet the current site shows. Avatars are initials, not the stock photos in reviews.json; the hard-coded \"3 days ago\" dates and verified ticks are left out."
   },
   "faq": {
     "title": "Questions before you visit",
