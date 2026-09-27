@@ -80,14 +80,13 @@ These files stay in the repo for now but must not be used on the site. Nothing h
 | 17 | `80a02a192ce01e39a122da282393cd5dc3437db3.png` | Screenshot of an icon row with a "NETFILE Certified by CRA" claim as an image. |
 | 24 | `b5b7c7277519a790337ab2000aa26e112c632239.png` | Screenshot of a "Frequently asked questions." heading; text as an image. |
 | 38 | `fe336c8bfd5d0682c1bc8a38c1275a2197689a81.png` | Screenshot of an old pricing section showing unconfirmed prices. |
-| 1 | `008d8d5f7cfa9f365240f909ca99134f7bdc260b.png` | Real Commercial Dr storefront, but a gallery screenshot with carousel arrows at mid-height on both edges. Every place it appears is wider than the photo's 1.49:1 ratio, so `object-fit: cover` always shows the full width and the arrows; no `object-position` hides them at every breakpoint (tested on /contact at 1440/390 and the new homepage at 1440/1024/390). |
 
 ## Where images are used on the homepage (/)
 
 | Slot | Image | Crop |
 |---|---|---|
 | Hero (fixed, does not change with the office) | #15 `70e1bf44…png` | default |
-| Office rows (and Contact page cards) | #26, #36, #40, #39 (from `offices.json` → `photo`); Commercial Dr shows a flagged placeholder instead of #1 | `object-fit: cover` |
+| Office cards, map card and Contact cards | #26, #36, #40, #39 and `office-commercial-dr.webp` (from `offices.json` → `photo`) | `object-fit: cover`; Commercial Dr also `photoZoom: 1.16` and `photoPosition: 50% 12%` |
 | Tax services menu card | #26 | `object-position: 50% 40%` (in `nav.json`) |
 | Locations menu card | #40 | `object-position: 50% 45%` (in `nav.json`) |
 | Bookkeeping and US & cross-border tiles | none: plain brand-navy tiles | see below |
@@ -106,3 +105,4 @@ number (604) 568-4829, which differs from the number the site lists for Commerci
 | File | Size | Shows | Source | Used on |
 |---|---|---|---|---|
 | `hero-cross-border-friends-wide.webp` | 1964×1038, 125 KB | Two friends laughing at a phone under a blue sky, one in a US flag jacket, one in a Canadian flag hoodie; the people stand on the right with open sky on the left | Supplied by the LeadTax team (Lummi Pro licence); replaces the earlier `hero-cross-border-friends.webp` crop | Homepage hero: full-bleed behind the left-aligned text and cards from 1280px (`object-position: 85% 20%`); on top of the text below 1280px |
+| `office-commercial-dr.webp` | 1322×888, 207 KB | Commercial Dr storefront (same photo as #1, smaller WebP). A gallery screenshot with carousel arrows at both edges | Supplied by the LeadTax team | Commercial Dr office card, map card and Contact card. `photoZoom: 1.16` crops 7% off each side so the arrows stay out of view. The window shows (604) 568-4829, which differs from the listed number (question 34) |
