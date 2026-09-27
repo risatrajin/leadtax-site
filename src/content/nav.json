@@ -11,7 +11,9 @@
       ],
       "label": "Personal tax",
       "href": "#",
-      "enabled": false
+      "enabled": false,
+      "icon": "User",
+      "description": "Simple and stress-free tax filing."
     },
     "businessTax": {
       "_placeholders": [
@@ -19,7 +21,9 @@
       ],
       "label": "Business tax",
       "href": "#",
-      "enabled": false
+      "enabled": false,
+      "icon": "Briefcase",
+      "description": "Support for your business growth."
     },
     "trustEstate": {
       "_placeholders": [
@@ -28,12 +32,16 @@
       "label": "Trust & estate tax filing",
       "footerLabel": "Trust & estate",
       "href": "#",
-      "enabled": false
+      "enabled": false,
+      "icon": "FilePenLine",
+      "description": "Professional tax filing for trusts and estates."
     },
     "usCrossBorder": {
       "label": "US & cross-border tax",
       "footerLabel": "US & cross-border",
-      "to": "/us-cross-border"
+      "to": "/us-cross-border",
+      "icon": "Globe",
+      "description": "Expert help for Canadians with US tax obligations."
     },
     "bookkeeping": {
       "_placeholders": [
@@ -45,23 +53,33 @@
     },
     "fileInPerson": {
       "label": "File in person",
-      "to": "/file-in-person"
+      "to": "/file-in-person",
+      "icon": "Handshake",
+      "description": "Meet a tax professional one-on-one at an office."
     },
     "fileRemotely": {
       "label": "File remotely",
-      "to": "/file-remotely"
+      "to": "/file-remotely",
+      "icon": "Video",
+      "description": "Upload your documents and meet your expert by video."
     },
     "dropOff": {
       "label": "Drop off your documents",
-      "to": "/drop-off"
+      "to": "/drop-off",
+      "icon": "FileText",
+      "description": "Leave your paperwork at any office. We prepare the return."
     },
     "fileOnline": {
       "label": "File online yourself",
-      "href": "app:diy.register"
+      "href": "app:diy.register",
+      "icon": "FileCheck",
+      "description": "Use LeadTax online software on your own schedule."
     },
     "pricing": {
       "label": "Pricing",
-      "to": "/pricing"
+      "to": "/pricing",
+      "icon": "DollarSign",
+      "description": "Compare plans and prices for filing online."
     },
     "blog": {
       "label": "Blog",

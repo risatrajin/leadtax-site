@@ -1,6 +1,7 @@
 import nav from "../../../content/nav.json";
 import { officesByCity, officePhone } from "../../../lib/offices.js";
 import { fill } from "../../../lib/template.js";
+import { getIcon } from "../../../lib/icons.js";
 import Button from "../../ui/Button.jsx";
 import SmartLink from "../../ui/SmartLink.jsx";
 
@@ -75,6 +76,29 @@ function OfficeLinks({ item, onNavigate }) {
   );
 }
 
+/** Mega-menu link: icon, title and a one-line description (plain title when there is none). */
+function MenuLink({ link, onNavigate }) {
+  const Icon = link.icon ? getIcon(link.icon) : null;
+  return (
+    <SmartLink
+      to={link.to}
+      href={link.href}
+      onClick={onNavigate}
+      className="group flex items-start gap-3 rounded-xl px-3 py-3 transition-colors hover:bg-gray-50"
+    >
+      {Icon && (
+        <span className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-brand-subtle text-brand-bright">
+          <Icon aria-hidden="true" className="h-5 w-5" />
+        </span>
+      )}
+      <span className="min-w-0">
+        <span className="block font-semibold text-gray-900 group-hover:text-brand">{link.label}</span>
+        {link.description && <span className="mt-0.5 block text-sm leading-snug text-gray-500">{link.description}</span>}
+      </span>
+    </SmartLink>
+  );
+}
+
 /** Full-width panel under the header for "Tax services" and "Locations". */
 export function MegaPanel({ item, id, onNavigate }) {
   return (
@@ -89,12 +113,10 @@ export function MegaPanel({ item, id, onNavigate }) {
           visibleColumns(item.columns).map((column, index, all) => (
             <div key={column.title} className={all.length === 1 ? "col-span-8" : "col-span-4"}>
               <p className={`${COLUMN_TITLE} mb-3 px-3`}>{column.title}</p>
-              <ul>
+              <ul className={all.length === 1 ? "grid grid-cols-2 gap-1" : "space-y-1"}>
                 {column.links.map((link) => (
                   <li key={link.label}>
-                    <SmartLink to={link.to} href={link.href} onClick={onNavigate} className={PANEL_LINK}>
-                      {link.label}
-                    </SmartLink>
+                    <MenuLink link={link} onNavigate={onNavigate} />
                   </li>
                 ))}
               </ul>
