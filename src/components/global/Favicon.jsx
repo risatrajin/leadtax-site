@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import site from "../../content/site.json";
 
-/** Sets the favicon and apple-touch-icon at runtime (index.html has none). */
+/** Keeps the favicon and apple-touch-icon in sync with site.json (index.html also declares them). */
 export default function Favicon() {
   useEffect(() => {
     let icon = document.querySelector("link[rel~='icon']");

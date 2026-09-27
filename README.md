@@ -48,3 +48,19 @@ npm run check:header    # 20 header menu behaviour checks (dev server running)
 npm run baseline:save   # store screenshots of every route
 npm run compare         # compare the site with the stored screenshots
 ```
+
+## Deploy (Coolify or any Docker host)
+
+The `Dockerfile` builds the site and serves `dist/` with nginx (`deploy/nginx.conf`):
+- every page is served from its pre-rendered HTML; unknown paths return a real 404 with the
+  site's 404 page;
+- 301 redirects: `www.leadtax.ca` → `leadtax.ca` (the host Google indexes), trailing slashes,
+  and the removed pages `/sign-in`, `/diy-landing`, `/dyi-landing`, `/file-remote-landing`,
+  `/home-v2`;
+- security headers (HSTS, nosniff, frame and referrer policies) and a Content-Security-Policy
+  in **report-only** mode. Check the browser console on the live site for CSP reports (tags
+  added in Google Tag Manager may need more sources), then switch the header to
+  `Content-Security-Policy`;
+- long-lived caching for hashed assets, gzip.
+
+In Coolify: add both `leadtax.ca` and `www.leadtax.ca` to the app, build pack "Dockerfile", port 80.

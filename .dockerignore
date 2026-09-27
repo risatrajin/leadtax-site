@@ -1,0 +1,6 @@
+node_modules
+dist
+verification-output
+.git
+.claude
+.DS_Store
