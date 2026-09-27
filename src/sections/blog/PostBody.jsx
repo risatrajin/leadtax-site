@@ -1,3 +1,5 @@
+import { CARD } from "../../lib/styles.js";
+
 /** Renders an article's content blocks. Unknown block types render nothing (as in the original). */
 function Block({ block }) {
   switch (block.type) {
@@ -15,7 +17,7 @@ function Block({ block }) {
       );
     case "conclusion":
       return (
-        <div className="bg-brand-subtle/30 p-8 rounded-2xl mt-12 mb-8">
+        <div className={`${CARD} p-8 mt-12 mb-8`}>
           <p className="text-gray-800 leading-relaxed font-medium">{block.text}</p>
         </div>
       );

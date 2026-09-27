@@ -1,3 +1,5 @@
+import { CARD } from "../../lib/styles.js";
+
 export default function CrossBorderExperience({ experience }) {
   return (
     <section className="py-16 md:py-20 px-4 md:px-8">
@@ -17,9 +19,9 @@ export default function CrossBorderExperience({ experience }) {
             </div>
             <div className="grid grid-cols-2 gap-4 md:gap-6">
               {experience.stats.map((stat) => (
-                <div key={stat.label} className="bg-brand-subtle p-4 md:p-6 rounded-xl">
+                <div key={stat.label} className={`${CARD} p-4 md:p-6`}>
                   <div className="text-2xl md:text-3xl font-bold text-brand mb-2">{stat.value}</div>
-                  <div className="text-sm md:text-base text-gray-700">{stat.label}</div>
+                  <div className="text-sm md:text-base text-gray-600">{stat.label}</div>
                 </div>
               ))}
             </div>

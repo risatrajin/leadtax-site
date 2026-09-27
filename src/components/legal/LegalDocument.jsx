@@ -1,5 +1,6 @@
 import site from "../../content/site.json";
 import PageShell from "../layout/PageShell.jsx";
+import { CARD } from "../../lib/styles.js";
 
 const PARAGRAPH_GAP = { sm: "mb-3", md: "mb-4" };
 
@@ -12,7 +13,7 @@ function Paragraph({ block }) {
 
 function ContactCard({ company }) {
   return (
-    <div className="mt-4 p-4 bg-brand-subtle rounded-lg">
+    <div className={`mt-4 p-5 ${CARD}`}>
       <p className="text-gray-700">
         <strong>{company}</strong>
         <br />

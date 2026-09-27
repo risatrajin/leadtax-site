@@ -6,25 +6,25 @@
     "items": [
       {
         "_placeholder": true,
-        "emoji": "💼",
+        "icon": "Briefcase",
         "title": "Competitive Benefits",
         "description": "Comprehensive health coverage and retirement plans"
       },
       {
         "_placeholder": true,
-        "emoji": "🏡",
+        "icon": "House",
         "title": "Flexible Work",
         "description": "Remote and hybrid options available"
       },
       {
         "_placeholder": true,
-        "emoji": "📚",
+        "icon": "TrendingUp",
         "title": "Growth Opportunities",
         "description": "Professional development and training programs"
       },
       {
         "_placeholder": true,
-        "emoji": "🎉",
+        "icon": "Users",
         "title": "Great Culture",
         "description": "Collaborative environment with passionate people"
       }

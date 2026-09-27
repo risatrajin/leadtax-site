@@ -1,6 +1,7 @@
 import { Check, Download } from "lucide-react";
 import content from "../../content/home.json";
 import SmartLink from "../../components/ui/SmartLink.jsx";
+import { CARD, CARD_TITLE } from "../../lib/styles.js";
 
 const { firstVisit } = content;
 const { checklist } = firstVisit;
@@ -27,12 +28,12 @@ export default function FirstVisit() {
           </ol>
         </div>
 
-        <aside className="rounded-2xl bg-brand-subtle p-8 md:p-10">
-          <h3 className="text-2xl font-bold text-brand">{checklist.title}</h3>
-          <ul className="mt-6 space-y-3 text-gray-700">
+        <aside className={`${CARD} p-8 md:p-10`}>
+          <h3 className={CARD_TITLE}>{checklist.title}</h3>
+          <ul className="mt-6 space-y-3 text-gray-600">
             {checklist.items.map((item) => (
               <li key={item} className="flex gap-3">
-                <Check aria-hidden="true" className="mt-0.5 h-5 w-5 flex-shrink-0 text-green-600" />
+                <Check aria-hidden="true" className="mt-0.5 h-5 w-5 flex-shrink-0 text-brand-bright" />
                 <span>{item}</span>
               </li>
             ))}

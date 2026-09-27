@@ -3,6 +3,8 @@ import seo from "../content/seo.json";
 import PageShell from "../components/layout/PageShell.jsx";
 import PageHero from "../components/ui/PageHero.jsx";
 import CtaPanel from "../sections/home/CtaPanel.jsx";
+import { Check } from "lucide-react";
+import { CARD } from "../lib/styles.js";
 
 export default function AboutPage() {
   return (
@@ -32,12 +34,12 @@ export default function AboutPage() {
             ))}
           </div>
 
-          <div className="bg-brand-subtle rounded-2xl p-8 md:p-12">
+          <div className={`${CARD} p-8 md:p-12`}>
             <h2 className="text-2xl md:text-3xl text-gray-900 mb-6">{about.whyChooseUs.title}</h2>
-            <ul className="space-y-4 text-gray-700">
+            <ul className="space-y-4 text-gray-600">
               {about.whyChooseUs.items.map((item) => (
                 <li key={item} className="flex items-start gap-3">
-                  <span className="text-brand text-xl">✓</span>
+                  <Check aria-hidden="true" className="mt-0.5 h-5 w-5 flex-shrink-0 text-brand-bright" />
                   <span>{item}</span>
                 </li>
               ))}

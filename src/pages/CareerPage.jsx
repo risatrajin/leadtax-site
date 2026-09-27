@@ -2,6 +2,8 @@ import career from "../content/pages/career.json";
 import PageShell from "../components/layout/PageShell.jsx";
 import PageHero from "../components/ui/PageHero.jsx";
 import Button from "../components/ui/Button.jsx";
+import { getIcon } from "../lib/icons.js";
+import { CARD, ICON_BADGE } from "../lib/styles.js";
 
 const { benefits, openings, openApplication } = career;
 
@@ -12,18 +14,23 @@ export default function CareerPage() {
       <PageHero title={career.title} text={career.intro} />
       <div className="max-w-7xl mx-auto px-4 md:px-8 py-16 md:py-24">
 
-        <div className="bg-brand-subtle rounded-2xl p-8 md:p-12 mb-12">
+        <div className={`${CARD} p-8 md:p-12 mb-12`}>
           <h2 className="text-2xl md:text-3xl text-gray-900 mb-6">{benefits.title}</h2>
           <div className="grid md:grid-cols-2 gap-8">
-            {benefits.items.map((benefit) => (
-              <div key={benefit.title} className="flex gap-4">
-                <div className="text-brand text-2xl">{benefit.emoji}</div>
-                <div>
-                  <h3 className="font-semibold text-gray-900 mb-2">{benefit.title}</h3>
-                  <p className="text-gray-700">{benefit.description}</p>
+            {benefits.items.map((benefit) => {
+              const Icon = getIcon(benefit.icon);
+              return (
+                <div key={benefit.title} className="flex gap-4">
+                  <div className={ICON_BADGE}>
+                    <Icon aria-hidden="true" className="h-6 w-6" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-gray-900 mb-2">{benefit.title}</h3>
+                    <p className="text-gray-600">{benefit.description}</p>
+                  </div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
 
