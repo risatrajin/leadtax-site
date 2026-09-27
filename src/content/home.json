@@ -95,6 +95,8 @@
     "headOfficeLabel": "Head office",
     "officeCountOne": "1 office",
     "officeCountOther": "{count} offices",
+    "mapTitle": "Map showing the {office} office",
+    "selectLabel": "Show {office} on the map",
     "entranceAlt": "{office} office entrance"
   },
   "firstVisit": {

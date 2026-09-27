@@ -58,8 +58,8 @@ const WIDTHS = [
   { name: "mobile", width: 390, height: 844 },
 ];
 
-// Third-party overlays that load at random times; blocked on both sides.
-const BLOCKED = [/intercom/, /googletagmanager/, /google-analytics/];
+// Third-party overlays and the embedded Google map load at random times; blocked on both sides.
+const BLOCKED = [/intercom/, /googletagmanager/, /google-analytics/, /maps\.google\.com/, /google\.com\/maps/];
 // Freeze motion so both sides are captured in the same state.
 const FREEZE_CSS = "*,*::before,*::after{transition:none!important;animation:none!important;caret-color:transparent!important}";
 

@@ -8,11 +8,20 @@ export function bookingHref(office, fallbackHref) {
   return office.booking?.url ?? fallbackHref;
 }
 
+/** The office's full street address, as used for maps. */
+export function officeQuery(office) {
+  const { streetAddress, addressLocality, addressRegion, postalCode } = office.schema;
+  return `${streetAddress}, ${addressLocality}, ${addressRegion} ${postalCode}`;
+}
+
+/** Keyless Google Maps embed centred on the office (one pin; several pins need a Maps API key). */
+export function mapEmbedSrc(office, zoom = 15) {
+  return `https://maps.google.com/maps?q=${encodeURIComponent(officeQuery(office))}&z=${zoom}&output=embed`;
+}
+
 /** Google Maps search for the office's street address. */
 export function directionsHref(office) {
-  const { streetAddress, addressLocality, addressRegion, postalCode } = office.schema;
-  const query = `${streetAddress}, ${addressLocality}, ${addressRegion} ${postalCode}`;
-  return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(query)}`;
+  return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(officeQuery(office))}`;
 }
 
 /** Opening hours for the given day (0 = Sunday). */
