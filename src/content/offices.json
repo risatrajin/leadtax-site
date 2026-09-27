@@ -88,14 +88,16 @@
         "email",
         "booking",
         "shortName",
-        "hours",
-        "photo"
+        "hours"
       ],
       "id": "vancouver-commercial",
       "shortName": "Commercial Drive",
       "phone": "6049693500",
       "email": "vancouverc@leadtax.ca",
-      "photo": null,
+      "photo": "/images/office-commercial-dr.webp",
+      "photoZoom": 1.16,
+      "photoPosition": "50% 12%",
+      "_photoNote": "Supplied by the LeadTax team. It is a gallery screenshot with carousel arrows at both edges; photoZoom crops 7% off each side so they stay out of view. Replace with a clean photo when one arrives (question 38).",
       "mapError": true,
       "display": {
         "title": "Lead Tax",
