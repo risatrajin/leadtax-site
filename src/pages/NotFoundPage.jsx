@@ -1,5 +1,4 @@
 import copy from "../content/pages/not-found.json";
-import seo from "../content/seo.json";
 import PageShell from "../components/layout/PageShell.jsx";
 import Button from "../components/ui/Button.jsx";
 
@@ -9,7 +8,7 @@ import Button from "../components/ui/Button.jsx";
  */
 export default function NotFoundPage() {
   return (
-    <PageShell seo={seo.pages.notFound} mainClassName="flex flex-1 items-center justify-center">
+    <PageShell mainClassName="flex flex-1 items-center justify-center">
       <div className="px-4 py-20 text-center md:px-8">
         <h1 className="mb-4 text-4xl font-bold text-gray-900">{copy.title}</h1>
         <p className="mx-auto mb-8 max-w-md text-gray-600">{copy.text}</p>

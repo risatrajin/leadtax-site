@@ -70,6 +70,36 @@
     "homeLegacy": {
       "_note": "The original DIY homepage, kept at /home-legacy for comparison. Uses the home copy with noindex.",
       "robots": "noindex, follow"
+    },
+    "fileRemotely": {
+      "_note": "Added: this page used the generic default title.",
+      "title": "Remote Tax Filing Across Canada | LeadTax",
+      "description": "File your taxes remotely with expert guidance. Meet with a LeadTax tax professional online and get your return prepared accurately without visiting an office."
+    },
+    "usCrossBorder": {
+      "_note": "Added: this page used the generic default title.",
+      "title": "US Cross-Border Tax Services for Canadians | LeadTax",
+      "description": "Navigate US-Canada tax obligations with confidence. LeadTax offers expert guidance for dual residents, US property owners and cross-border workers."
+    },
+    "career": {
+      "_note": "Added: this page used the generic default title.",
+      "title": "Careers at LeadTax | Join Our Team",
+      "description": "Help us make tax filing simple and accessible for all Canadians. See open positions at LeadTax."
+    },
+    "blog": {
+      "_note": "Added: this page used the generic default title.",
+      "title": "LeadTax Blog | Tax Tips & Insights",
+      "description": "Stay informed with expert advice, tax tips and the latest updates from LeadTax."
+    },
+    "terms": {
+      "_note": "Added: this page used the generic default title.",
+      "title": "Terms and Conditions | LeadTax",
+      "description": "The terms and conditions for using the LeadTax website and services."
+    },
+    "privacyPolicy": {
+      "_note": "Added: this page used the generic default title.",
+      "title": "Privacy Policy | LeadTax",
+      "description": "How LeadTax collects, uses and protects your personal information."
     }
   },
   "meta": {

@@ -1,5 +1,4 @@
 import about from "../content/pages/about.json";
-import seo from "../content/seo.json";
 import PageShell from "../components/layout/PageShell.jsx";
 import PageHero from "../components/ui/PageHero.jsx";
 import CtaPanel from "../sections/home/CtaPanel.jsx";
@@ -8,7 +7,7 @@ import { CARD } from "../lib/styles.js";
 
 export default function AboutPage() {
   return (
-    <PageShell seo={seo.pages.about}>
+    <PageShell>
       <PageHero title={about.title} text={about.intro} />
       <div className="max-w-7xl mx-auto px-4 md:px-8 py-16 md:py-24">
 

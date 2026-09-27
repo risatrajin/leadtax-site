@@ -1,9 +1,7 @@
 import { Check } from "lucide-react";
 import content from "../content/pages/pricing.json";
-import seo from "../content/seo.json";
 import SiteHeader from "../components/layout/SiteHeader.jsx";
 import SiteFooter from "../components/layout/SiteFooter.jsx";
-import Seo from "../components/seo/Seo.jsx";
 import ComparisonTable from "../sections/pricing/ComparisonTable.jsx";
 import PageHero from "../components/ui/PageHero.jsx";
 
@@ -11,7 +9,6 @@ import PageHero from "../components/ui/PageHero.jsx";
 export default function PricingPage() {
   return (
     <div className="min-h-screen bg-gray-50">
-      <Seo {...seo.pages.pricing} />
       <SiteHeader />
       <PageHero title={content.title} text={content.intro} />
       <section className="py-12 px-4 md:px-8">

@@ -1,5 +1,3 @@
-import seo from "../content/seo.json";
-import Seo from "../components/seo/Seo.jsx";
 import SiteHeader from "../components/layout/SiteHeader.jsx";
 import SiteFooter from "../components/layout/SiteFooter.jsx";
 import Hero, { TrustBand } from "../sections/home/Hero.jsx";
@@ -14,7 +12,6 @@ import CtaPanel from "../sections/home/CtaPanel.jsx";
 export default function HomePage() {
   return (
     <div className="min-h-screen bg-white">
-      <Seo {...seo.pages.home} />
       <SiteHeader />
       <main id="main">
         <Hero />

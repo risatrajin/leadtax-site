@@ -47,9 +47,9 @@ function Block({ block }) {
 }
 
 /** Renders a legal page (Terms, Privacy Policy) from its content JSON. */
-export default function LegalDocument({ document: doc, seo }) {
+export default function LegalDocument({ document: doc }) {
   return (
-    <PageShell seo={seo}>
+    <PageShell>
       <div className="max-w-4xl mx-auto px-4 md:px-8 py-16 md:py-24">
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-5xl font-bold text-brand mb-4">{doc.title}</h1>

@@ -1,7 +1,6 @@
 import { useState } from "react";
 import contact from "../content/pages/contact.json";
 import { officesByCity } from "../lib/offices.js";
-import seo from "../content/seo.json";
 import PageShell from "../components/layout/PageShell.jsx";
 import PageHero from "../components/ui/PageHero.jsx";
 import OfficeCard from "../components/ui/OfficeCard.jsx";
@@ -13,7 +12,6 @@ export default function ContactPage() {
 
   return (
     <PageShell
-      seo={seo.pages.contact}
       afterMain={<ExpertPickerDialog open={pickerOpen} onOpenChange={setPickerOpen} />}
     >
       <PageHero title={contact.title} text={contact.intro} />

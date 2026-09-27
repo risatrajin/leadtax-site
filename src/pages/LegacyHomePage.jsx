@@ -1,5 +1,3 @@
-import seo from "../content/seo.json";
-import Seo from "../components/seo/Seo.jsx";
 import SiteHeader from "../components/layout/SiteHeader.jsx";
 import SiteFooter from "../components/layout/SiteFooter.jsx";
 import Hero from "../sections/home-legacy/Hero.jsx";
@@ -19,7 +17,6 @@ import FinalCta from "../sections/home-legacy/FinalCta.jsx";
 export default function LegacyHomePage() {
   return (
     <div className="min-h-screen bg-white">
-      <Seo {...seo.pages.home} robots={seo.pages.homeLegacy.robots} />
       <SiteHeader />
       <Hero />
       <ReviewsCarousel />

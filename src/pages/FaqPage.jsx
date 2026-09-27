@@ -1,6 +1,5 @@
 import faq from "../content/pages/faq.json";
 import faqs from "../content/faqs.json";
-import seo from "../content/seo.json";
 import PageShell from "../components/layout/PageShell.jsx";
 import PageHero from "../components/ui/PageHero.jsx";
 import FaqSchema from "../components/seo/FaqSchema.jsx";
@@ -12,7 +11,7 @@ import { CARD } from "../lib/styles.js";
 export default function FaqPage() {
   return (
     <>
-      <PageShell seo={seo.pages.faq}>
+      <PageShell>
         <PageHero title={faq.title} text={faq.intro} />
       <div className="max-w-4xl mx-auto px-4 md:px-8 py-16 md:py-24">
           <FaqAccordion items={faqs.faqPage} variant="bordered" />
