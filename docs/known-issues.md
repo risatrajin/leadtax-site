@@ -22,7 +22,7 @@ Status: **kept** = reproduced in the rebuild; **dropped** = on a page that was n
 | G5 | `geo.position` / `ICBM` meta point to Ottawa (45.4215, -75.6972), not Vancouver. | `src/content/seo.json` → `meta` | kept |
 | G6 | Meta descriptions say "4 offices" (site default, home, about, in person, contact); the site lists 5. | `src/content/seo.json` | kept |
 | G7 | Canonical URLs use `https://leadtax.ca`; `sitemap.xml` uses `https://www.leadtax.ca`. | `src/content/site.json`, `public/sitemap.xml` | kept |
-| G8 | `sitemap.xml` lists `https://porta.leadtax.ca` (typo for `portal`) and external app subdomains. | `public/sitemap.xml` | kept |
+| G8 | `sitemap.xml` lists `https://porta.leadtax.ca` (typo for `portal`) and external app subdomains. | `public/sitemap.xml` | fixed: subdomains removed, all URLs on `https://leadtax.ca` (the host Google indexes) |
 | G9 | `og:image` (`/og-image.png`) and JSON-LD `logo` (`/logo.png`) point to files that don't exist. | `src/content/seo.json` | kept |
 | G10 | JSON-LD advertises a site search at `/search?q=` that doesn't exist. | `src/content/seo.json` → `schema.searchUrlTemplate` | kept |
 | G11 | JSON-LD main office (100-4350 Hastings) uses the 4125 Hastings photo; 4125 Hastings has no telephone in JSON-LD. | `src/content/offices.json` → `schema` | kept |

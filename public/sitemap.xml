@@ -2,31 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <!-- Home Page / Do It Yourself -->
   <url>
-    <loc>https://www.leadtax.ca/</loc>
+    <loc>https://leadtax.ca/</loc>
     <lastmod>2026-03-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
-  <!-- DIY Tax Application Portal -->
-  <url>
-    <loc>https://app.leadtax.ca</loc>
-    <lastmod>2026-03-26</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.95</priority>
-  </url>
-
-  <!-- File with Expert Portal -->
-  <url>
-    <loc>https://porta.leadtax.ca</loc>
-    <lastmod>2026-03-26</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.95</priority>
-  </url>
-
   <!-- File with Expert - Remote -->
   <url>
-    <loc>https://www.leadtax.ca/file-remotely</loc>
+    <loc>https://leadtax.ca/file-remotely</loc>
     <lastmod>2026-03-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -34,7 +18,7 @@
 
   <!-- File with Expert - Drop-off -->
   <url>
-    <loc>https://www.leadtax.ca/drop-off</loc>
+    <loc>https://leadtax.ca/drop-off</loc>
     <lastmod>2026-03-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -42,7 +26,7 @@
 
   <!-- File with Expert - In Person -->
   <url>
-    <loc>https://www.leadtax.ca/file-in-person</loc>
+    <loc>https://leadtax.ca/file-in-person</loc>
     <lastmod>2026-03-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -50,7 +34,7 @@
 
   <!-- File with Expert - US Cross-Border Tax -->
   <url>
-    <loc>https://www.leadtax.ca/us-cross-border</loc>
+    <loc>https://leadtax.ca/us-cross-border</loc>
     <lastmod>2026-03-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -58,7 +42,7 @@
 
   <!-- Pricing -->
   <url>
-    <loc>https://www.leadtax.ca/pricing</loc>
+    <loc>https://leadtax.ca/pricing</loc>
     <lastmod>2026-03-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -66,7 +50,7 @@
 
   <!-- Resources - Blog -->
   <url>
-    <loc>https://www.leadtax.ca/blog</loc>
+    <loc>https://leadtax.ca/blog</loc>
     <lastmod>2026-03-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -74,7 +58,7 @@
 
   <!-- Resources - FAQ -->
   <url>
-    <loc>https://www.leadtax.ca/faq</loc>
+    <loc>https://leadtax.ca/faq</loc>
     <lastmod>2026-03-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -82,7 +66,7 @@
 
   <!-- Resources - About -->
   <url>
-    <loc>https://www.leadtax.ca/about</loc>
+    <loc>https://leadtax.ca/about</loc>
     <lastmod>2026-03-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -90,7 +74,7 @@
 
   <!-- Resources - Career -->
   <url>
-    <loc>https://www.leadtax.ca/career</loc>
+    <loc>https://leadtax.ca/career</loc>
     <lastmod>2026-03-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -98,7 +82,7 @@
 
   <!-- Resources - Contact -->
   <url>
-    <loc>https://www.leadtax.ca/contact</loc>
+    <loc>https://leadtax.ca/contact</loc>
     <lastmod>2026-03-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -106,42 +90,42 @@
 
   <!-- Blog -->
   <url>
-    <loc>https://www.leadtax.ca/blog/bookkeepers-first-line-defense-wasted-spending</loc>
+    <loc>https://leadtax.ca/blog/bookkeepers-first-line-defense-wasted-spending</loc>
     <lastmod>2026-01-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://www.leadtax.ca/blog/5-ways-turn-tax-return-financial-opportunity</loc>
+    <loc>https://leadtax.ca/blog/5-ways-turn-tax-return-financial-opportunity</loc>
     <lastmod>2026-01-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://www.leadtax.ca/blog/2026-tax-filing-deadlines</loc>
+    <loc>https://leadtax.ca/blog/2026-tax-filing-deadlines</loc>
     <lastmod>2026-01-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://www.leadtax.ca/blog/avoid-heavy-estate-taxes-canada</loc>
+    <loc>https://leadtax.ca/blog/avoid-heavy-estate-taxes-canada</loc>
     <lastmod>2025-12-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://www.leadtax.ca/blog/essential-tax-structures-ecommerce-service-businesses</loc>
+    <loc>https://leadtax.ca/blog/essential-tax-structures-ecommerce-service-businesses</loc>
     <lastmod>2025-12-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://www.leadtax.ca/blog/small-business-tax-solutions-canadian-entrepreneurs</loc>
+    <loc>https://leadtax.ca/blog/small-business-tax-solutions-canadian-entrepreneurs</loc>
     <lastmod>2025-12-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -149,7 +133,7 @@
 
   <!-- Privacy Policy -->
   <url>
-    <loc>https://www.leadtax.ca/privacy-policy</loc>
+    <loc>https://leadtax.ca/privacy-policy</loc>
     <lastmod>2026-03-26</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
@@ -157,7 +141,7 @@
 
   <!-- Terms and Conditions -->
   <url>
-    <loc>https://www.leadtax.ca/terms</loc>
+    <loc>https://leadtax.ca/terms</loc>
     <lastmod>2026-03-26</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
