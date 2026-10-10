@@ -1,15 +1,13 @@
 import { useState } from "react";
-import { ChevronDown, ChevronUp } from "lucide-react";
+import { ChevronDown } from "lucide-react";
 
 /**
  * Expandable question list. Two styles exist on the site:
  * - "simple" (homepage): any number of answers open at once; answers keep line breaks.
  * - "bordered" (/faq): one answer open at a time.
- * - "compact" (/us-cross-border): one answer open at a time, smaller text on mobile, chevron flips icon.
  */
 export default function FaqAccordion({ items, variant = "simple" }) {
   if (variant === "bordered") return <BorderedFaq items={items} />;
-  if (variant === "compact") return <CompactFaq items={items} />;
   return <SimpleFaq items={items} />;
 }
 
@@ -59,33 +57,6 @@ function BorderedFaq({ items }) {
             <div className="px-6 pb-6">
               <p className="text-gray-600 leading-relaxed">{item.answer}</p>
             </div>
-          )}
-        </div>
-      ))}
-    </div>
-  );
-}
-
-function CompactFaq({ items }) {
-  const [openIndex, setOpenIndex] = useState(null);
-
-  return (
-    <div className="space-y-4">
-      {items.map((item, index) => (
-        <div key={index} className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
-          <button
-            onClick={() => setOpenIndex(openIndex === index ? null : index)}
-            className="w-full px-4 md:px-6 py-4 md:py-5 flex items-center justify-between text-left hover:bg-gray-50 transition-colors"
-          >
-            <span className="font-bold text-gray-900 pr-4 text-sm md:text-base">{item.question}</span>
-            {openIndex === index ? (
-              <ChevronUp className="w-5 h-5 text-brand flex-shrink-0" />
-            ) : (
-              <ChevronDown className="w-5 h-5 text-brand flex-shrink-0" />
-            )}
-          </button>
-          {openIndex === index && (
-            <div className="px-4 md:px-6 pb-4 md:pb-5 text-sm md:text-base text-gray-600">{item.answer}</div>
           )}
         </div>
       ))}

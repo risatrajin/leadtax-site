@@ -73,7 +73,7 @@
       "description": "File your taxes remotely with expert guidance. Meet with a LeadTax tax professional online and get your return prepared accurately without visiting an office."
     },
     "usCrossBorder": {
-      "_note": "Added: this page used the generic default title.",
+      "_note": "The page now uses the redesigned homepage layout; title and description stay as published.",
       "title": "US Cross-Border Tax Services for Canadians | LeadTax",
       "description": "Navigate US-Canada tax obligations with confidence. LeadTax offers expert guidance for dual residents, US property owners and cross-border workers."
     },
@@ -96,10 +96,6 @@
       "_note": "Added: this page used the generic default title.",
       "title": "Privacy Policy | LeadTax",
       "description": "How LeadTax collects, uses and protects your personal information."
-    },
-    "homeRedesign": {
-      "_note": "The redesigned homepage at /home-redesign. Uses the home copy with noindex so it doesn't compete with /.",
-      "robots": "noindex, follow"
     }
   },
   "meta": {

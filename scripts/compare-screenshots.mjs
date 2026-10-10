@@ -25,7 +25,7 @@ const requested = args.filter((arg) => !arg.startsWith("--"));
 
 const ROUTES = [
   "/", "/file-remotely", "/drop-off", "/file-in-person", "/us-cross-border", "/contact", "/about",
-  "/career", "/blog", "/faq", "/terms", "/privacy-policy", "/pricing", "/home-redesign",
+  "/career", "/blog", "/faq", "/terms", "/privacy-policy", "/pricing",
   ...JSON.parse(fs.readFileSync("src/content/blog/posts.json", "utf8")).posts.map((post) => `/blog/${post.slug}`),
   "/blog/no-such-post",
 ];

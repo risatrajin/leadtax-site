@@ -27,7 +27,7 @@ Status: **done** = rebuilt and verified pixel-identical at 1440px and 390px with
 | `/file-remotely` | `V1` | 16771 | `src/pages/FileRemotelyPage.jsx` | done |
 | `/drop-off` | `av` | 17137 | `src/pages/DropOffPage.jsx` | done |
 | `/file-in-person` | `hv` | 17507 | `src/pages/FileInPersonPage.jsx` | done |
-| `/us-cross-border` | `Ow` | 24343 | `src/pages/UsCrossBorderPage.jsx` | done |
+| `/us-cross-border` | — | — | `src/pages/HomePage.jsx` (the redesigned homepage; the rebuilt original cross-border page was removed, see git history) | replaced |
 | `/contact` | `Dw` | 20708 | `src/pages/ContactPage.jsx` | done |
 | `/about` | `Pw` | 21169 | `src/pages/AboutPage.jsx` | done |
 | `/career` | `Fw` | 21356 | `src/pages/CareerPage.jsx` | done |
@@ -101,7 +101,6 @@ The three pages share one template, `src/sections/services/ServicePage.jsx`, wit
 | Page | New files |
 |---|---|
 | Contact (`Dw`) | `src/components/ui/OfficeCard.jsx`, `src/sections/contact/ContactForm.jsx`, `src/sections/contact/ExpertPickerDialog.jsx`, `src/components/ui/Dialog.jsx` (shadcn wrapper, bundle lines 20643–20707) |
-| US Cross-Border (`Ow`) | `src/sections/us-cross-border/*` (Hero, Audiences, Services, WhyUs, Process tabs, Experience, Pricing) |
 | Blog post (`Mw`) | `src/sections/blog/PostHeader.jsx`, `PostBody.jsx`, `PostCta.jsx`, `RelatedArticles.jsx` |
 | Terms, Privacy (`Iw`, `zw`) | `src/components/legal/LegalDocument.jsx` renders both from JSON |
 | Pricing (`$w`) | `src/sections/pricing/ComparisonTable.jsx` |
@@ -114,7 +113,7 @@ The three pages share one template, `src/sections/services/ServicePage.jsx`, wit
 | `src/components/ui/Button.jsx` | ~40 inline pill buttons/links. Variants: primary, inverse, inverseTint, outline, outlineMuted, outlineInverse, outlineInverseFill, ghost, disabled. Sizes: sm, md, lg, wide, xl, block |
 | `src/components/ui/Card.jsx` | White `rounded-2xl` surfaces |
 | `src/components/ui/SectionHeading.jsx` | The repeated homepage section heading |
-| `src/components/ui/FaqAccordion.jsx` | All three FAQ styles: `simple` (homepage), `bordered` (/faq), `compact` (/us-cross-border) |
+| `src/components/ui/FaqAccordion.jsx` | FAQ styles: `simple` (homepage), `bordered` (/faq) |
 | `src/components/ui/PricingCard.jsx` | DIY package cards |
 | `src/components/ui/OfficeCard.jsx` | Contact page office cards (reads `offices.json`) |
 | `src/components/ui/CtaBanner.jsx` | Split photo/copy panels on the homepage |
@@ -129,7 +128,7 @@ The three pages share one template, `src/sections/services/ServicePage.jsx`, wit
 | Nav links (header, mobile menu, footer) | `src/content/nav.json` |
 | Offices (display, JSON-LD, photo, booking link) | `src/content/offices.json` — one record per office |
 | SEO defaults and per-page SEO | `src/content/seo.json` |
-| FAQs: homepage, /faq, /us-cross-border | `src/content/faqs.json` |
+| FAQs: homepage, /faq | `src/content/faqs.json` |
 | DIY tiers, expert tiers, /pricing comparison rows | `src/content/pricing.json` |
 | Reviews | `src/content/reviews.json` |
 | Filing services | `src/content/services.json` |
@@ -196,7 +195,7 @@ Decisions:
 Verification: `node scripts/check-header.mjs` runs 20 behaviour and accessibility checks on the
 header.
 
-## Redesigned homepage (built as /home-v2, now `/home-redesign`, noindex)
+## Redesigned homepage (built as /home-v2, now the US & cross-border page at `/us-cross-border`)
 
 Same sections, order, copy and behaviour as the first draft, restyled with the site's rules:
 brand navy tokens, the system font, the site's heading sizes and weights, `Button` variants,

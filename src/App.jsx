@@ -10,7 +10,6 @@ import LegacyHomePage from "./pages/LegacyHomePage.jsx";
 import FileRemotelyPage from "./pages/FileRemotelyPage.jsx";
 import DropOffPage from "./pages/DropOffPage.jsx";
 import FileInPersonPage from "./pages/FileInPersonPage.jsx";
-import UsCrossBorderPage from "./pages/UsCrossBorderPage.jsx";
 import ContactPage from "./pages/ContactPage.jsx";
 import AboutPage from "./pages/AboutPage.jsx";
 import CareerPage from "./pages/CareerPage.jsx";
@@ -23,8 +22,8 @@ import PricingPage from "./pages/PricingPage.jsx";
 import NotFoundPage from "./pages/NotFoundPage.jsx";
 
 /*
- * "/" is the original DIY homepage (restored). The redesigned homepage is kept at /home-redesign
- * (noindex) until its new place is decided; /home-legacy and /home-v2 redirect to "/".
+ * "/" is the original DIY homepage. The redesigned homepage is the US & cross-border page
+ * (/us-cross-border); /home-legacy and /home-v2 redirect to "/", /home-redesign to /us-cross-border.
  * Other routes are in the same order as the original build. /sign-in, /diy-landing,
  * /dyi-landing and /file-remote-landing were not rebuilt (their copy is in
  * src/content/archive/). /sitemap.xml and /robots.txt are static files in public/.
@@ -44,7 +43,7 @@ export default function App() {
         <Route path="/file-remotely" element={<FileRemotelyPage />} />
         <Route path="/drop-off" element={<DropOffPage />} />
         <Route path="/file-in-person" element={<FileInPersonPage />} />
-        <Route path="/us-cross-border" element={<UsCrossBorderPage />} />
+        <Route path="/us-cross-border" element={<HomePage />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/career" element={<CareerPage />} />
@@ -54,9 +53,8 @@ export default function App() {
         <Route path="/terms" element={<TermsPage />} />
         <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
         <Route path="/pricing" element={<PricingPage />} />
-        {/* The redesigned homepage, not indexed until it gets its permanent URL. */}
-        <Route path="/home-redesign" element={<HomePage />} />
-        {/* Earlier addresses of the homepages. */}
+        {/* Earlier addresses of the homepages and the redesign. */}
+        <Route path="/home-redesign" element={<RedirectTo to="/us-cross-border" />} />
         <Route path="/home-legacy" element={<RedirectTo to="/" />} />
         <Route path="/home-v2" element={<RedirectTo to="/" />} />
         <Route path="*" element={<NotFoundPage />} />

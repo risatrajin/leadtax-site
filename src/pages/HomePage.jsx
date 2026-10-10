@@ -8,7 +8,7 @@ import Reviews from "../sections/home/Reviews.jsx";
 import Faq from "../sections/home/Faq.jsx";
 import CtaPanel from "../sections/home/CtaPanel.jsx";
 
-/** The redesigned homepage, at /home-redesign (noindex) until its permanent URL is decided. */
+/** The redesigned homepage, used as the US & cross-border page (/us-cross-border). */
 export default function HomePage() {
   return (
     <div className="min-h-screen bg-white">
