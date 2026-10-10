@@ -19,6 +19,7 @@ import FaqPage from "./pages/FaqPage.jsx";
 import TermsPage from "./pages/TermsPage.jsx";
 import PrivacyPolicyPage from "./pages/PrivacyPolicyPage.jsx";
 import PricingPage from "./pages/PricingPage.jsx";
+import ServiceLinePage from "./pages/ServiceLinePage.jsx";
 import NotFoundPage from "./pages/NotFoundPage.jsx";
 
 /*
@@ -44,6 +45,10 @@ export default function App() {
         <Route path="/drop-off" element={<DropOffPage />} />
         <Route path="/file-in-person" element={<FileInPersonPage />} />
         <Route path="/us-cross-border" element={<HomePage />} />
+        <Route path="/personal-tax" element={<ServiceLinePage slug="personal-tax" />} />
+        <Route path="/business-tax" element={<ServiceLinePage slug="business-tax" />} />
+        <Route path="/bookkeeping" element={<ServiceLinePage slug="bookkeeping" />} />
+        <Route path="/trust-estate-tax" element={<ServiceLinePage slug="trust-estate-tax" />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/career" element={<CareerPage />} />

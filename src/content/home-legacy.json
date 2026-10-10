@@ -17,7 +17,40 @@
       "alt": "Smiling woman in a LeadTax jacket using her phone on the Vancouver seawall",
       "position": "70% 30%",
       "_source": "Supplied by the LeadTax team; the left side is darkened in the image itself for the text."
-    }
+    },
+    "servicesTitle": "What we can do for you",
+    "services": [
+      {
+        "link": "personalTax",
+        "icon": "User",
+        "title": "Personal Tax",
+        "text": "Simple and stress-free tax filing."
+      },
+      {
+        "link": "businessTax",
+        "icon": "Briefcase",
+        "title": "Business Tax",
+        "text": "Support for your business growth."
+      },
+      {
+        "link": "bookkeeping",
+        "icon": "Calculator",
+        "title": "Bookkeeping",
+        "text": "Keep your records organized and compliant."
+      },
+      {
+        "link": "usCrossBorder",
+        "icon": "Globe",
+        "title": "US & Cross-Border Tax",
+        "text": "Expert help for Canadians with US tax obligations."
+      },
+      {
+        "link": "trustEstate",
+        "icon": "FilePenLine",
+        "title": "Trust & Estate Tax Filing",
+        "text": "Professional tax filing for trusts and estates."
+      }
+    ]
   },
   "filingOptions": {
     "title": "Choose how you want to file",

@@ -1,0 +1,50 @@
+{
+  "_note": "Service page added in the redesign. Copy is drawn from the pricing feature lists, blog posts and existing service text; the client should confirm the service scope. Whether bookkeeping is available yet is question 12.",
+  "_placeholders": [
+    "hero.text",
+    "services"
+  ],
+  "hero": {
+    "title": "Bookkeeping",
+    "text": "Accounting and bookkeeping services for individuals and businesses, so your records are organized and compliant.",
+    "actions": [
+      {
+        "label": "Book an appointment",
+        "to": "/contact"
+      },
+      {
+        "label": "Why bookkeeping matters",
+        "to": "/blog/bookkeepers-first-line-defense-wasted-spending"
+      }
+    ]
+  },
+  "services": {
+    "title": "What we help with",
+    "items": [
+      {
+        "icon": "BookOpen",
+        "title": "Day-to-day records",
+        "text": "Keeping your income and expenses recorded accurately and up to date."
+      },
+      {
+        "icon": "Receipt",
+        "title": "Receipts and expenses",
+        "text": "Organizing receipts and tracking spending so nothing gets missed."
+      },
+      {
+        "icon": "TrendingUp",
+        "title": "Spending visibility",
+        "text": "Clear books that show where money goes and help cut wasted spending."
+      },
+      {
+        "icon": "FileCheck",
+        "title": "Year-end and tax time",
+        "text": "Books that are ready when it's time to prepare your tax return."
+      }
+    ]
+  },
+  "cta": {
+    "to": "/contact"
+  },
+  "waysTitle": "Ways to work with us"
+}

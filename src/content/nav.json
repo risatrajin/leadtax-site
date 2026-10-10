@@ -6,33 +6,21 @@
       "to": "/"
     },
     "personalTax": {
-      "_placeholders": [
-        "href"
-      ],
       "label": "Personal tax",
-      "href": "#",
-      "enabled": false,
+      "to": "/personal-tax",
       "icon": "User",
       "description": "Simple and stress-free tax filing."
     },
     "businessTax": {
-      "_placeholders": [
-        "href"
-      ],
       "label": "Business tax",
-      "href": "#",
-      "enabled": false,
+      "to": "/business-tax",
       "icon": "Briefcase",
       "description": "Support for your business growth."
     },
     "trustEstate": {
-      "_placeholders": [
-        "href"
-      ],
       "label": "Trust & estate tax filing",
       "footerLabel": "Trust & estate",
-      "href": "#",
-      "enabled": false,
+      "to": "/trust-estate-tax",
       "icon": "FilePenLine",
       "description": "Professional tax filing for trusts and estates."
     },
@@ -44,12 +32,10 @@
       "description": "Expert help for Canadians with US tax obligations."
     },
     "bookkeeping": {
-      "_placeholders": [
-        "href"
-      ],
       "label": "Bookkeeping",
-      "href": "#",
-      "enabled": false
+      "to": "/bookkeeping",
+      "icon": "Calculator",
+      "description": "Keep your records organized and compliant."
     },
     "fileInPerson": {
       "label": "File in person",

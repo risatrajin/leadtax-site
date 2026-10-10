@@ -96,6 +96,26 @@
       "_note": "Added: this page used the generic default title.",
       "title": "Privacy Policy | LeadTax",
       "description": "How LeadTax collects, uses and protects your personal information."
+    },
+    "personalTax": {
+      "_note": "New page.",
+      "title": "Personal Tax Filing in Vancouver & Burnaby | LeadTax",
+      "description": "Personal tax filing for individuals in Canada: employment and pension income, RRSP and credits, investments, rental and foreign income. File online, remotely or in person with LeadTax."
+    },
+    "businessTax": {
+      "_note": "New page.",
+      "title": "Business Tax Services for Canadian Entrepreneurs | LeadTax",
+      "description": "Business and self-employment tax help from LeadTax: small business returns, expenses and deductions, GST/HST and tax planning for Canadian entrepreneurs."
+    },
+    "bookkeeping": {
+      "_note": "New page.",
+      "title": "Bookkeeping Services in Vancouver & Burnaby | LeadTax",
+      "description": "Accounting and bookkeeping services for individuals and businesses from LeadTax, so your records stay organized, compliant and ready for tax time."
+    },
+    "trustEstateTax": {
+      "_note": "New page.",
+      "title": "Trust & Estate Tax Filing | LeadTax",
+      "description": "Final (deceased) returns, trust returns and tax-efficient estate planning from LeadTax, to make wealth transfer smoother for beneficiaries."
     }
   },
   "meta": {

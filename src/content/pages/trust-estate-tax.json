@@ -1,0 +1,50 @@
+{
+  "_note": "Service page added in the redesign. Copy is drawn from the pricing feature lists, blog posts and existing service text; the client should confirm the service scope.",
+  "_placeholders": [
+    "hero.text",
+    "services"
+  ],
+  "hero": {
+    "title": "Trust & estate tax filing",
+    "text": "Guidance on estate taxes, smooth wealth transfer and tax-efficient estate planning, to reduce the tax burden on beneficiaries.",
+    "actions": [
+      {
+        "label": "Book an appointment",
+        "to": "/contact"
+      },
+      {
+        "label": "Estate tax guide",
+        "to": "/blog/avoid-heavy-estate-taxes-canada"
+      }
+    ]
+  },
+  "services": {
+    "title": "What we help with",
+    "items": [
+      {
+        "icon": "FileText",
+        "title": "Final (deceased) returns",
+        "text": "Filing the final tax return for someone who has passed away."
+      },
+      {
+        "icon": "ScrollText",
+        "title": "Trust returns",
+        "text": "Tax filing for trusts and estates."
+      },
+      {
+        "icon": "Handshake",
+        "title": "Wealth transfer",
+        "text": "Planning a smooth transfer of assets to the next generation."
+      },
+      {
+        "icon": "Shield",
+        "title": "Estate planning",
+        "text": "Tax-efficient estate planning to limit taxes for beneficiaries."
+      }
+    ]
+  },
+  "cta": {
+    "to": "/contact"
+  },
+  "waysTitle": "Ways to work with us"
+}

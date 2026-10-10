@@ -1,0 +1,61 @@
+{
+  "_note": "Service page added in the redesign. Copy is drawn from the pricing feature lists, blog posts and existing service text; the client should confirm the service scope.",
+  "_placeholders": [
+    "hero.text",
+    "services"
+  ],
+  "hero": {
+    "title": "Personal tax filing",
+    "text": "Personal tax filing for individuals in Canada, including do-it-yourself filing, remote filing and in-person services.",
+    "actions": [
+      {
+        "label": "Book an appointment",
+        "to": "/contact"
+      },
+      {
+        "label": "File online yourself",
+        "href": "app:diy.register"
+      }
+    ]
+  },
+  "services": {
+    "title": "What we help with",
+    "items": [
+      {
+        "icon": "Briefcase",
+        "title": "Employment and pension income",
+        "text": "T4 slips, employment expenses and pension income for employees and retirees."
+      },
+      {
+        "icon": "PiggyBank",
+        "title": "RRSP contributions and credits",
+        "text": "RRSP contributions, tuition, medical expenses, donations and other credits."
+      },
+      {
+        "icon": "TrendingUp",
+        "title": "Investments and capital gains",
+        "text": "Stocks, capital gains and losses, and other investment income."
+      },
+      {
+        "icon": "House",
+        "title": "Rental and foreign income",
+        "text": "Rental property income and foreign income, including T1135 reporting."
+      },
+      {
+        "icon": "Users",
+        "title": "Students, seniors and families",
+        "text": "Simple returns for students and seniors, and transfers between family members."
+      },
+      {
+        "icon": "FileText",
+        "title": "Special returns",
+        "text": "Emigrant, non-resident and final (deceased) returns."
+      }
+    ]
+  },
+  "firstVisit": true,
+  "cta": {
+    "to": "/contact"
+  },
+  "waysTitle": "Ways to work with us"
+}

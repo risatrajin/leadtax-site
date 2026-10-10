@@ -40,12 +40,21 @@ import {
   Video,
   Youtube,
   Zap,
+  PiggyBank,
+  Receipt,
+  BookOpen,
+  ScrollText,
 } from "lucide-react";
 import TikTokIcon from "../components/ui/TikTokIcon.jsx";
 import MapleLeafIcon from "../components/ui/MapleLeafIcon.jsx";
 
 /** Icons referenced by name from content JSON. */
 const icons = {
+  PiggyBank,
+  Receipt,
+  BookOpen,
+  ScrollText,
+
   MapleLeaf: MapleLeafIcon,
   User,
   FilePenLine,

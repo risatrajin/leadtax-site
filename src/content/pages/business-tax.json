@@ -1,0 +1,60 @@
+{
+  "_note": "Service page added in the redesign. Copy is drawn from the pricing feature lists, blog posts and existing service text; the client should confirm the service scope.",
+  "_placeholders": [
+    "hero.text",
+    "services"
+  ],
+  "hero": {
+    "title": "Business tax",
+    "text": "Transform tax liabilities into a manageable, optimized part of your business strategy, with tailored support for Canadian entrepreneurs.",
+    "actions": [
+      {
+        "label": "Book an appointment",
+        "to": "/contact"
+      },
+      {
+        "label": "Small business tax tips",
+        "to": "/blog/small-business-tax-solutions-canadian-entrepreneurs"
+      }
+    ]
+  },
+  "services": {
+    "title": "What we help with",
+    "items": [
+      {
+        "icon": "UserRound",
+        "title": "Self-employment income",
+        "text": "Business or self-employment income reported on your personal return."
+      },
+      {
+        "icon": "Building2",
+        "title": "Small business returns",
+        "text": "Tax filing for small and growing Canadian businesses."
+      },
+      {
+        "icon": "Calculator",
+        "title": "Expenses and deductions",
+        "text": "Tracking business expenses and claiming the deductions you're entitled to."
+      },
+      {
+        "icon": "Receipt",
+        "title": "GST/HST",
+        "text": "Understanding when GST/HST applies and keeping your filings on track."
+      },
+      {
+        "icon": "Lightbulb",
+        "title": "Tax planning",
+        "text": "Planning ahead so taxes are a predictable part of running your business."
+      },
+      {
+        "icon": "BookOpen",
+        "title": "Business structure",
+        "text": "Guidance on the tax side of sole proprietorships and incorporated businesses."
+      }
+    ]
+  },
+  "cta": {
+    "to": "/contact"
+  },
+  "waysTitle": "Ways to work with us"
+}

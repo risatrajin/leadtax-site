@@ -41,6 +41,32 @@
   </url>
 
   <!-- Pricing -->
+  <!-- Service pages -->
+  <url>
+    <loc>https://leadtax.ca/personal-tax</loc>
+    <lastmod>2026-10-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://leadtax.ca/business-tax</loc>
+    <lastmod>2026-10-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://leadtax.ca/bookkeeping</loc>
+    <lastmod>2026-10-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://leadtax.ca/trust-estate-tax</loc>
+    <lastmod>2026-10-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
   <url>
     <loc>https://leadtax.ca/pricing</loc>
     <lastmod>2026-03-26</lastmod>

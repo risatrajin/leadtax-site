@@ -6,11 +6,8 @@ import { tollFreeSpaced } from "../../lib/phone.js";
 import Button from "../../components/ui/Button.jsx";
 import WistiaPopover from "../../components/media/WistiaPopover.jsx";
 import { ServiceCard } from "../home/Hero.jsx";
-import homeContent from "../../content/home.json";
 
 const { hero } = home;
-// The service tiles are shared with the US & cross-border page (home.json → hero.services).
-const services = homeContent.hero;
 
 const VIDEO_LINK_CLASSES =
   "inline-flex min-h-14 items-center gap-2 rounded-full bg-white/15 px-8 py-3 font-semibold text-white backdrop-blur-sm transition-colors hover:bg-white/25";
@@ -114,9 +111,9 @@ export default function Hero() {
       </div>
 
       <div className="relative mx-auto max-w-7xl px-4 pb-16 md:px-8 md:pb-20 xl:mt-10 xl:pb-[46px]">
-        <h2 className="sr-only">{services.servicesTitle}</h2>
+        <h2 className="sr-only">{hero.servicesTitle}</h2>
         <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-5 lg:gap-4">
-          {services.services.map((service) => (
+          {hero.services.map((service) => (
             <ServiceCard key={service.link} service={service} />
           ))}
         </div>
