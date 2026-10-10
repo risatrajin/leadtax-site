@@ -1,0 +1,105 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "framework": null,
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/sign-in",
+      "destination": "https://app.leadtax.ca/user/auth/login",
+      "permanent": true
+    },
+    {
+      "source": "/diy-landing",
+      "destination": "/pricing",
+      "permanent": true
+    },
+    {
+      "source": "/dyi-landing",
+      "destination": "/pricing",
+      "permanent": true
+    },
+    {
+      "source": "/file-remote-landing",
+      "destination": "/file-remotely",
+      "permanent": true
+    },
+    {
+      "source": "/home-v2",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/home-legacy",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/home-redesign",
+      "destination": "/us-cross-border",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.leadtax.ca"
+        }
+      ],
+      "destination": "https://leadtax.ca/:path*",
+      "permanent": true
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "Strict-Transport-Security",
+          "value": "max-age=31536000; includeSubDomains"
+        },
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "SAMEORIGIN"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "Permissions-Policy",
+          "value": "camera=(), microphone=(), geolocation=(), payment=()"
+        },
+        {
+          "key": "Content-Security-Policy-Report-Only",
+          "value": "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://*.google-analytics.com https://www.gstatic.com https://googleads.g.doubleclick.net https://www.googleadservices.com https://www.google.com https://widget.intercom.io https://js.intercomcdn.com https://*.wistia.com https://*.wistia.net https://browser.sentry-cdn.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https:; font-src 'self' data: https://js.intercomcdn.com https://fonts.intercomcdn.com https://*.wistia.net; connect-src 'self' https: wss://*.intercom.io; frame-src https://www.google.com https://maps.google.com https://www.googletagmanager.com https://td.doubleclick.net https://*.wistia.net https://*.wistia.com https://intercom-sheets.com https://www.intercom-reporting.com; media-src 'self' blob: https:; object-src 'none'; base-uri 'self'; form-action 'self' https://app.leadtax.ca https://portal.leadtax.ca"
+        }
+      ]
+    },
+    {
+      "source": "/assets/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/images/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=2592000"
+        }
+      ]
+    }
+  ]
+}

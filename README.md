@@ -64,3 +64,10 @@ The `Dockerfile` builds the site and serves `dist/` with nginx (`deploy/nginx.co
 - long-lived caching for hashed assets, gzip.
 
 In Coolify: add both `leadtax.ca` and `www.leadtax.ca` to the app, build pack "Dockerfile", port 80.
+
+## Deploy on Vercel
+
+`vercel.json` holds the same setup as the nginx config: build `npm run build`, output `dist/`,
+clean URLs without trailing slashes, the 301 redirects (removed pages, `www` → `leadtax.ca`),
+security headers (CSP in report-only mode) and asset caching. Vercel serves `dist/404.html` with
+a 404 status for unknown paths. Import the repo in Vercel; no framework preset is needed.
