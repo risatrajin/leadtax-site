@@ -12,10 +12,10 @@ import { fill } from "../lib/template.js";
 
 const H2 = "text-3xl text-gray-900 md:text-4xl lg:text-5xl";
 
-function SectionTitle({ title, text, center }) {
+function SectionTitle({ title, text, center, small }) {
   return (
     <div className={cx("max-w-3xl", center && "mx-auto text-center")}>
-      <h2 className={H2}>{title}</h2>
+      <h2 className={small ? "text-2xl text-gray-900 md:text-3xl" : H2}>{title}</h2>
       {text && <p className="mt-4 text-lg text-gray-600">{text}</p>}
     </div>
   );
@@ -33,8 +33,8 @@ function CheckItem({ children, tone = "text-brand-bright" }) {
 function Hero() {
   const { hero } = page;
   return (
-    <PageHero title={hero.title} text={hero.text} actions={hero.actions}>
-      <ul className="mt-8 flex flex-wrap justify-center gap-x-6 gap-y-2 text-brand-subtle">
+    <PageHero title={hero.title} text={hero.text} actions={hero.actions} image={hero.image}>
+      <ul className="mt-8 flex flex-wrap gap-x-6 gap-y-2 text-brand-subtle">
         {hero.trust.map((item) => (
           <CheckItem key={item} tone="text-white">
             {item}
@@ -108,17 +108,19 @@ function Steps() {
     <section className="bg-white px-4 py-16 md:px-8 md:py-24">
       <div className="mx-auto max-w-7xl">
         <SectionTitle title={steps.title} text={steps.text} />
-        <ol className="mt-10 border-t border-gray-200">
+        <ol className="relative mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          {/* Connecting line behind the step numbers on wide screens. */}
+          <span aria-hidden="true" className="absolute left-10 right-10 top-11 hidden h-px bg-gray-200 lg:block" />
           {steps.items.map((step, index) => (
-            <li key={step.title} className="grid grid-cols-12 gap-x-4 gap-y-2 border-b border-gray-200 py-6">
+            <li key={step.title} className={`${CARD} relative p-6`}>
               <span
                 aria-hidden="true"
-                className="col-span-2 flex h-10 w-10 items-center justify-center rounded-full bg-brand font-bold text-white md:col-span-1"
+                className="flex h-10 w-10 items-center justify-center rounded-full bg-brand font-bold text-white ring-8 ring-white"
               >
                 {index + 1}
               </span>
-              <h3 className="col-span-10 self-center text-lg font-semibold text-gray-900 md:col-span-4">{step.title}</h3>
-              <p className="col-span-10 col-start-3 text-gray-600 md:col-span-7 md:col-start-auto">{step.text}</p>
+              <h3 className="mt-5 text-lg font-semibold text-gray-900">{step.title}</h3>
+              <p className="mt-2 text-gray-600">{step.text}</p>
             </li>
           ))}
         </ol>
@@ -158,14 +160,14 @@ function Pricing() {
 
         <ul className="mt-12 grid items-stretch gap-6 lg:grid-cols-3">
           {pricing.plans.map((plan) => (
-            <li key={plan.name} className={cx(CARD, "relative flex flex-col p-7", plan.popular && "ring-2 ring-brand")}>
+            <li key={plan.name} className={cx(CARD, "relative flex flex-col p-7", plan.popular && "shadow-xl ring-2 ring-brand lg:-translate-y-3")}>
               {plan.popular && (
                 <span className="absolute -top-3 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full bg-popular px-3 py-1 text-xs font-bold uppercase tracking-wide text-gray-900">
                   {pricing.popularLabel}
                 </span>
               )}
               <h3 className={CARD_TITLE}>{plan.name}</h3>
-              <p className="mt-2 min-h-12 text-gray-600">{plan.text}</p>
+              <p className="mt-2 text-gray-600 lg:min-h-[4.5rem]">{plan.text}</p>
               <p className="mt-6">
                 <span className="text-4xl font-bold text-brand">{annual ? plan.annual : plan.monthly}</span>
                 <span className="text-gray-600">{annual ? pricing.periodAnnual : pricing.periodMonthly}</span>
@@ -192,12 +194,12 @@ function Pricing() {
 
 function Chips({ items }) {
   return (
-    <ul className="mt-10 flex flex-wrap gap-3">
+    <ul className="mt-8 flex flex-wrap gap-3">
       {items.map((item) => {
         const Icon = item.icon ? getIcon(item.icon) : null;
         const label = item.label ?? item;
         return (
-          <li key={label} className="flex items-center gap-2.5 rounded-full border border-gray-200 bg-white px-5 py-3 text-gray-700 shadow-sm">
+          <li key={label} className="flex items-center gap-2.5 rounded-full border border-gray-200 bg-gray-50 px-4 py-2.5 text-gray-700">
             {Icon && <Icon aria-hidden="true" className="h-5 w-5 text-brand-bright" />}
             {label}
           </li>
@@ -210,14 +212,14 @@ function Chips({ items }) {
 function IndustriesAndTools() {
   const { industries, tools } = page;
   return (
-    <section className="bg-white px-4 py-16 md:px-8 md:py-24">
-      <div className="mx-auto grid max-w-7xl gap-16 lg:grid-cols-2">
-        <div>
-          <SectionTitle title={industries.title} />
+    <section className="bg-gray-50 px-4 pb-16 md:px-8 md:pb-24">
+      <div className="mx-auto grid max-w-7xl gap-6 lg:grid-cols-2">
+        <div className={`${CARD} p-8 md:p-10`}>
+          <SectionTitle title={industries.title} small />
           <Chips items={industries.items} />
         </div>
-        <div>
-          <SectionTitle title={tools.title} text={tools.text} />
+        <div className={`${CARD} p-8 md:p-10`}>
+          <SectionTitle title={tools.title} text={tools.text} small />
           <Chips items={tools.items} />
         </div>
       </div>
@@ -228,7 +230,7 @@ function IndustriesAndTools() {
 function CatchUp() {
   const { catchUp } = page;
   return (
-    <section className="bg-gray-50 px-4 py-16 md:px-8 md:py-24">
+    <section className="bg-gray-50 px-4 pb-16 md:px-8 md:pb-24">
       <div className={`${CARD} mx-auto grid max-w-7xl gap-10 p-8 md:p-12 lg:grid-cols-2 lg:items-center`}>
         <div>
           <h2 className={H2}>{catchUp.title}</h2>
