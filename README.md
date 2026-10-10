@@ -29,7 +29,7 @@ npm run preview    # serve the production build
 | `src/lib/` | Small helpers (links, offices, icons, shared card styles) |
 | `src/styles/` | Design tokens and base styles |
 | `public/` | Images, `robots.txt`, `sitemap.xml` |
-| `scripts/` | Checks: placeholders, header behaviour, screenshot comparison |
+| `scripts/` | Build steps and checks: pre-render, placeholders, header behaviour, screenshot comparison |
 | `docs/` | Open questions for the client, known issues, placeholders, image inventory, rebuild notes |
 
 ## Before launch

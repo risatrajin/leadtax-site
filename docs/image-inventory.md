@@ -7,7 +7,7 @@ were removed from `public/images`; they remain in the git history. #1 was replac
 `office-commercial-dr.webp` (see Added images).
 Kinds: **office** = real LeadTax storefront, **logo**, **photo** = stock photo, **blog** = blog artwork,
 **screenshot** = screenshot of a web page, **avoid** = must not be used (another brand, a fake
-person, or baked-in claims such as "Certified by CRA" / "SOC 2 certified").
+person, or baked-in claims such as "Certified by CRA" / "SOC 2 certified"). Later cleanups removed #15 (old homepage hero, replaced by `hero-vancouver-seawall.webp`) and #19 (`874f8d6d…png`, no longer used after the homepage cards became service cards).
 
 
 | # | File | Size | Shows | Used on | Kind |
