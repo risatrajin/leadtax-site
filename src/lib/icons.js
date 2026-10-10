@@ -54,12 +54,17 @@ import {
   Stethoscope,
   Truck,
   ShoppingBag,
+  Scale,
+  Landmark,
 } from "lucide-react";
 import TikTokIcon from "../components/ui/TikTokIcon.jsx";
 import MapleLeafIcon from "../components/ui/MapleLeafIcon.jsx";
 
 /** Icons referenced by name from content JSON. */
 const icons = {
+  Scale,
+  Landmark,
+
   ChartLine,
   Wallet,
   Percent,

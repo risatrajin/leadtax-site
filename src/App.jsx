@@ -21,6 +21,7 @@ import PrivacyPolicyPage from "./pages/PrivacyPolicyPage.jsx";
 import PricingPage from "./pages/PricingPage.jsx";
 import ServiceLinePage from "./pages/ServiceLinePage.jsx";
 import BookkeepingPage from "./pages/BookkeepingPage.jsx";
+import TrustEstatePage from "./pages/TrustEstatePage.jsx";
 import NotFoundPage from "./pages/NotFoundPage.jsx";
 
 /*
@@ -49,7 +50,7 @@ export default function App() {
         <Route path="/personal-tax" element={<ServiceLinePage slug="personal-tax" />} />
         <Route path="/business-tax" element={<ServiceLinePage slug="business-tax" />} />
         <Route path="/bookkeeping" element={<BookkeepingPage />} />
-        <Route path="/trust-estate-tax" element={<ServiceLinePage slug="trust-estate-tax" />} />
+        <Route path="/trust-estate-tax" element={<TrustEstatePage />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/career" element={<CareerPage />} />

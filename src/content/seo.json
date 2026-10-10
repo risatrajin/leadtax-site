@@ -113,9 +113,9 @@
       "description": "Modern bookkeeping for Canadian businesses. Monthly bookkeeping, payroll, GST/HST, QuickBooks, catch-up bookkeeping and corporate tax support from LeadTax."
     },
     "trustEstateTax": {
-      "_note": "New page.",
-      "title": "Trust & Estate Tax Filing | LeadTax",
-      "description": "Final (deceased) returns, trust returns and tax-efficient estate planning from LeadTax, to make wealth transfer smoother for beneficiaries."
+      "_note": "New page; title and description from the supplied estate & trust design.",
+      "title": "Estate & Trust Tax Returns | LeadTax",
+      "description": "Professional Canadian estate and trust tax return preparation. T3 trust returns, estate tax filings, Schedule 15 reporting, T3 slips, and support for executors and trustees."
     }
   },
   "meta": {
