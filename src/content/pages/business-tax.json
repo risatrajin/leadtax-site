@@ -1,11 +1,13 @@
 {
-  "_note": "Service page added in the redesign. Copy is drawn from the pricing feature lists, blog posts and existing service text; the client should confirm the service scope.",
+  "_note": "Service page in the Trust & estate layout. Copy is drawn from existing site content (pricing feature lists, homepage first-visit steps and checklist, /faq answers, blog posts); new wording is flagged. The client should confirm the service scope.",
   "_placeholders": [
     "hero.text",
-    "services"
+    "services",
+    "process.items",
+    "audience"
   ],
   "hero": {
-    "title": "Business tax",
+    "title": "Business tax, without the guesswork.",
     "text": "Transform tax liabilities into a manageable, optimized part of your business strategy, with tailored support for Canadian entrepreneurs.",
     "actions": [
       {
@@ -13,13 +15,23 @@
         "to": "/contact"
       },
       {
-        "label": "Small business tax tips",
-        "to": "/blog/small-business-tax-solutions-canadian-entrepreneurs"
+        "label": "See our services",
+        "href": "#services"
       }
-    ]
+    ],
+    "trust": [
+      "Self-employed & small business",
+      "GST/HST support",
+      "Tax planning"
+    ],
+    "image": {
+      "src": "https://images.unsplash.com/photo-1726056652582-7c9d202d4018?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzbWFsbCUyMGJ1c2luZXNzJTIwZW50cmVwcmVuZXVyfGVufDF8fHx8MTc2Nzk5MTEwMnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "alt": "Customer paying by card on a phone"
+    }
   },
   "services": {
     "title": "What we help with",
+    "text": "Tax support for Canadian entrepreneurs, from your first year in business to a growing company.",
     "items": [
       {
         "icon": "UserRound",
@@ -53,8 +65,77 @@
       }
     ]
   },
-  "cta": {
-    "to": "/contact"
+  "process": {
+    "title": "How it works",
+    "text": "We learn how your business runs, then prepare and file your return with you.",
+    "items": [
+      {
+        "title": "Tell us about your business",
+        "text": "How you operate, how you're structured and which records you keep."
+      },
+      {
+        "title": "Bring your records",
+        "text": "Income, expenses, GST/HST filings and last year's return."
+      },
+      {
+        "title": "We prepare your return",
+        "text": "We claim the deductions you're entitled to and review the return with you."
+      },
+      {
+        "title": "File and plan ahead",
+        "text": "We file, then help you plan so next year has fewer surprises."
+      }
+    ],
+    "panel": {
+      "type": "feature",
+      "title": "Bookkeeping + Tax. Better together.",
+      "text": "Why manage a separate bookkeeper and tax accountant? At LeadTax, your bookkeeping and tax professionals can work together so your records stay organized with year-end filing in mind.",
+      "link": {
+        "label": "See bookkeeping services",
+        "to": "/bookkeeping"
+      }
+    }
   },
-  "waysTitle": "Ways to work with us"
+  "audience": {
+    "title": "Who we help",
+    "items": [
+      {
+        "icon": "UserRound",
+        "title": "Self-employed",
+        "text": "Freelancers and contractors reporting business income on their personal return."
+      },
+      {
+        "icon": "Building2",
+        "title": "Small businesses",
+        "text": "Owner-managed businesses that want their taxes handled properly."
+      },
+      {
+        "icon": "ShoppingBag",
+        "title": "E-commerce & service businesses",
+        "text": "Online sellers and service providers with sales tax and expense questions."
+      },
+      {
+        "icon": "TrendingUp",
+        "title": "Growing companies",
+        "text": "Businesses planning ahead as revenue, staff and complexity grow."
+      }
+    ]
+  },
+  "articles": {
+    "title": "Related reading",
+    "slugs": [
+      "small-business-tax-solutions-canadian-entrepreneurs",
+      "essential-tax-structures-ecommerce-service-businesses",
+      "bookkeepers-first-line-defense-wasted-spending"
+    ]
+  },
+  "cta": {
+    "title": "Talk to a LeadTax expert about your business.",
+    "text": "Book a time at the office nearest you, or call us and we'll set it up.",
+    "primary": {
+      "label": "Book an Appointment",
+      "to": "/contact"
+    },
+    "callLabel": "Or call {phone}"
+  }
 }

@@ -1,11 +1,12 @@
 {
-  "_note": "Service page added in the redesign. Copy is drawn from the pricing feature lists, blog posts and existing service text; the client should confirm the service scope.",
+  "_note": "Service page in the Trust & estate layout. Copy is drawn from existing site content (pricing feature lists, homepage first-visit steps and checklist, /faq answers, blog posts); new wording is flagged. The client should confirm the service scope.",
   "_placeholders": [
     "hero.text",
-    "services"
+    "services",
+    "audience"
   ],
   "hero": {
-    "title": "Personal tax filing",
+    "title": "Personal tax filing, made simple.",
     "text": "Personal tax filing for individuals in Canada, including do-it-yourself filing, remote filing and in-person services.",
     "actions": [
       {
@@ -16,10 +17,20 @@
         "label": "File online yourself",
         "href": "app:diy.register"
       }
-    ]
+    ],
+    "trust": [
+      "In person, remote or online",
+      "Review before we file",
+      "Investments, rental and foreign income"
+    ],
+    "image": {
+      "src": "/images/ee2fa67a338b9bdd3b3f8ba404fce72fa2b6ecef.png",
+      "alt": "Smiling woman at home"
+    }
   },
   "services": {
     "title": "What we help with",
+    "text": "From a single T4 to investments, rentals and special returns.",
     "items": [
       {
         "icon": "Briefcase",
@@ -53,9 +64,100 @@
       }
     ]
   },
-  "firstVisit": true,
-  "cta": {
-    "to": "/contact"
+  "process": {
+    "title": "Your first visit, start to finish",
+    "text": "Book a time at the office nearest you, bring your documents, and review your return with a tax expert before anything is filed.",
+    "items": [
+      {
+        "title": "Book a time",
+        "text": "Choose an office and a time online, or call us and we will set it up."
+      },
+      {
+        "title": "Bring your documents",
+        "text": "Slips, receipts and last year's notice of assessment. The list on the right covers most people."
+      },
+      {
+        "title": "Review it together, then we file",
+        "text": "Your tax expert walks you through the return before anything goes to the CRA."
+      }
+    ],
+    "panel": {
+      "type": "checklist",
+      "title": "What to bring",
+      "items": [
+        "T4 and other tax slips",
+        "Last year's notice of assessment",
+        "RRSP contribution receipts",
+        "Receipts for donations, medical and childcare costs",
+        "Photo ID and your SIN",
+        "US tax forms, if you file in both countries"
+      ],
+      "link": {
+        "label": "Download the full checklist",
+        "href": "download:whatToBring"
+      }
+    }
   },
-  "waysTitle": "Ways to work with us"
+  "audience": {
+    "title": "Who we help",
+    "items": [
+      {
+        "icon": "Briefcase",
+        "title": "Employees & retirees",
+        "text": "T4 and pension income, employment expenses and RRSP contributions."
+      },
+      {
+        "icon": "Users",
+        "title": "Students & families",
+        "text": "Tuition credits, childcare and medical expenses, and transfers between family members."
+      },
+      {
+        "icon": "TrendingUp",
+        "title": "Investors & landlords",
+        "text": "Capital gains and losses, rental properties and foreign income."
+      },
+      {
+        "icon": "FileText",
+        "title": "Special situations",
+        "text": "Emigrant, non-resident and final (deceased) returns."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Personal tax questions",
+    "items": [
+      {
+        "question": "What documents do I need to file my taxes?",
+        "answer": "You'll need your T4 slips from employers, receipts for deductions (like charitable donations, medical expenses), RRSP contributions, and any other income statements. If you're self-employed, bring records of your business income and expenses."
+      },
+      {
+        "question": "When will I receive my tax refund?",
+        "answer": "If you file electronically and choose direct deposit, most refunds are processed within 8-14 business days. Paper returns can take 8-12 weeks. You can track your refund status through the CRA My Account portal."
+      },
+      {
+        "question": "Can I file taxes for previous years?",
+        "answer": "Yes! We can help you file returns for previous tax years. Keep in mind that you can go back up to 10 years, and filing late returns may result in penalties if you owe taxes."
+      },
+      {
+        "question": "What if I make a mistake on my tax return?",
+        "answer": "Don't worry! You can adjust your return by filing a T1 Adjustment Request with the CRA. Our team can help you make corrections and ensure everything is accurate."
+      }
+    ]
+  },
+  "articles": {
+    "title": "Related reading",
+    "slugs": [
+      "2026-tax-filing-deadlines",
+      "5-ways-turn-tax-return-financial-opportunity"
+    ]
+  },
+  "cta": {
+    "title": "Ready to file your personal return?",
+    "text": "Book a time at the office nearest you, or call us and we'll set it up.",
+    "primary": {
+      "label": "Book an Appointment",
+      "to": "/contact"
+    },
+    "callLabel": "Or call {phone}"
+  }
 }
