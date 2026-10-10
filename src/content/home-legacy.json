@@ -53,9 +53,65 @@
     ]
   },
   "filingOptions": {
-    "title": "Choose how you want to file",
-    "text": "Flexible filing options designed to fit your lifestyle and preferences",
-    "comingSoonLabel": "Coming Soon"
+    "_note": "Homepage service cards. Images are photos already used on the site (filing options and blog posts). Descriptions match the service pages and nav descriptions.",
+    "title": "Our tax services",
+    "text": "Personal, business and cross-border tax help, at an office near you or from home.",
+    "cards": [
+      {
+        "link": "personalTax",
+        "title": "Personal Tax",
+        "description": "Personal tax filing for individuals in Canada, including do-it-yourself filing, remote filing and in-person services.",
+        "image": "/images/ee2fa67a338b9bdd3b3f8ba404fce72fa2b6ecef.png",
+        "imageAlt": "Smiling woman at home",
+        "cta": "Learn more"
+      },
+      {
+        "_placeholders": [
+          "description"
+        ],
+        "link": "businessTax",
+        "title": "Business Tax",
+        "description": "Tax support for Canadian entrepreneurs: self-employment income, small business returns, expenses and GST/HST.",
+        "image": "https://images.unsplash.com/photo-1726056652582-7c9d202d4018?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzbWFsbCUyMGJ1c2luZXNzJTIwZW50cmVwcmVuZXVyfGVufDF8fHx8MTc2Nzk5MTEwMnww&ixlib=rb-4.1.0&q=80&w=1080",
+        "imageAlt": "Customer paying by card on a phone",
+        "cta": "Learn more"
+      },
+      {
+        "link": "bookkeeping",
+        "title": "Bookkeeping",
+        "description": "Accounting and bookkeeping services for individuals and businesses, so your records stay organized and compliant.",
+        "image": "https://images.unsplash.com/photo-1762319007311-31597c44aad8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhY2NvdW50aW5nJTIwY2FsY3VsYXRvciUyMGJ1c2luZXNzJTIwZmluYW5jZXxlbnwxfHx8fDE3Njk5NDA4MzV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+        "imageAlt": "Calculator and documents on a desk",
+        "cta": "Learn more"
+      },
+      {
+        "link": "usCrossBorder",
+        "title": "US & Cross-Border Tax",
+        "description": "Specialized tax services for Canadians with US tax obligations or Americans living in Canada.",
+        "image": "https://images.unsplash.com/photo-1767216427262-ce74ba565c3c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxib3JkZXIlMjBjcm9zc2luZyUyMGludGVybmF0aW9uYWwlMjB0cmF2ZWx8ZW58MXx8fHwxNzY5OTQwODQwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+        "imageAlt": "Passports on a table",
+        "cta": "Learn more"
+      },
+      {
+        "_placeholders": [
+          "description"
+        ],
+        "link": "trustEstate",
+        "title": "Trust & Estate Tax Filing",
+        "description": "Final returns, trust returns and tax-efficient estate planning to make wealth transfer smoother for beneficiaries.",
+        "image": "https://images.unsplash.com/photo-1762941177632-fe37c485c428?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxlc3RhdGUlMjBwbGFubmluZyUyMHdlYWx0aHxlbnwxfHx8fDE3Njc5OTExMDJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+        "imageAlt": "Small model house with a coin",
+        "cta": "Learn more"
+      },
+      {
+        "to": "/contact",
+        "title": "Find an office",
+        "description": "Visit our office for face-to-face assistance with our tax filing locations and we'll take care of the rest.",
+        "image": "/images/a412a6f225d0a225599199079941e39592456007.png",
+        "imageAlt": "Map pins on a laptop screen",
+        "cta": "See all offices"
+      }
+    ]
   },
   "pricing": {
     "title": "Pick your do it yourself package.",
