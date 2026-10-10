@@ -31,7 +31,7 @@ const PAGE_KEYS = {
   "/blog": "blog",
   "/terms": "terms",
   "/privacy-policy": "privacyPolicy",
-  "/home-legacy": "homeLegacy",
+  "/home-redesign": "homeRedesign",
 };
 
 /** Every route that has its own page, for the pre-render and the sitemap. */
@@ -58,7 +58,7 @@ const absolute = (url) => (url?.startsWith("/") ? `${site.siteUrl}${url}` : url)
 export function pageSeo(pathname) {
   const path = normalize(pathname);
   const key = PAGE_KEYS[path];
-  if (key === "homeLegacy") return { ...defaults, ...pages.home, robots: pages.homeLegacy.robots };
+  if (key === "homeRedesign") return { ...defaults, ...pages.home, robots: pages.homeRedesign.robots };
   if (key) return { ...defaults, robots: meta.robots, ...pages[key] };
 
   const slug = path.startsWith("/blog/") ? path.slice(6) : null;

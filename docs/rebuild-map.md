@@ -22,8 +22,8 @@ Status: **done** = rebuilt and verified pixel-identical at 1440px and 390px with
 | Route | Minified | Line | New file | Status |
 |---|---|---|---|---|
 | `/` | — | — | `src/pages/HomePage.jsx` (the redesign, see below) | new homepage |
-| `/home-legacy` | `K0` | 14753 | `src/pages/LegacyHomePage.jsx` (was `/`; noindex) | done |
-| `/home-v2` | — | — | redirects to `/` (keeps query and hash) | redirect |
+| `/` | `K0` | 14753 | `src/pages/LegacyHomePage.jsx` (the original homepage, restored to `/`; `/home-legacy` redirects here) | done |
+| `/home-v2`, `/home-legacy` | — | — | redirect to `/` (keep query and hash) | redirect |
 | `/file-remotely` | `V1` | 16771 | `src/pages/FileRemotelyPage.jsx` | done |
 | `/drop-off` | `av` | 17137 | `src/pages/DropOffPage.jsx` | done |
 | `/file-in-person` | `hv` | 17507 | `src/pages/FileInPersonPage.jsx` | done |
@@ -65,7 +65,7 @@ images, form fields) and `otherText`: every other human-readable string from the
 
 ## Page sections
 
-### Original homepage (`K0`, now `/home-legacy`)
+### Original homepage (`K0`, at `/`)
 
 | Order | Minified | Line | New file |
 |---|---|---|---|
@@ -196,7 +196,7 @@ Decisions:
 Verification: `node scripts/check-header.mjs` runs 20 behaviour and accessibility checks on the
 header.
 
-## New homepage (built as /home-v2, now `/`)
+## Redesigned homepage (built as /home-v2, now `/home-redesign`, noindex)
 
 Same sections, order, copy and behaviour as the first draft, restyled with the site's rules:
 brand navy tokens, the system font, the site's heading sizes and weights, `Button` variants,

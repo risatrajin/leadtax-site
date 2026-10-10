@@ -23,7 +23,8 @@ import PricingPage from "./pages/PricingPage.jsx";
 import NotFoundPage from "./pages/NotFoundPage.jsx";
 
 /*
- * "/" is the redesigned homepage; the original DIY homepage is at /home-legacy.
+ * "/" is the original DIY homepage (restored). The redesigned homepage is kept at /home-redesign
+ * (noindex) until its new place is decided; /home-legacy and /home-v2 redirect to "/".
  * Other routes are in the same order as the original build. /sign-in, /diy-landing,
  * /dyi-landing and /file-remote-landing were not rebuilt (their copy is in
  * src/content/archive/). /sitemap.xml and /robots.txt are static files in public/.
@@ -39,7 +40,7 @@ export default function App() {
       <Analytics />
       <IntercomWidget />
       <Routes>
-        <Route path="/" element={<HomePage />} />
+        <Route path="/" element={<LegacyHomePage />} />
         <Route path="/file-remotely" element={<FileRemotelyPage />} />
         <Route path="/drop-off" element={<DropOffPage />} />
         <Route path="/file-in-person" element={<FileInPersonPage />} />
@@ -53,9 +54,10 @@ export default function App() {
         <Route path="/terms" element={<TermsPage />} />
         <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
         <Route path="/pricing" element={<PricingPage />} />
-        {/* The original DIY homepage, kept for comparison (noindex). */}
-        <Route path="/home-legacy" element={<LegacyHomePage />} />
-        {/* The redesign lived here before it became the homepage. */}
+        {/* The redesigned homepage, not indexed until it gets its permanent URL. */}
+        <Route path="/home-redesign" element={<HomePage />} />
+        {/* Earlier addresses of the homepages. */}
+        <Route path="/home-legacy" element={<RedirectTo to="/" />} />
         <Route path="/home-v2" element={<RedirectTo to="/" />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>

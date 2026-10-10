@@ -13,7 +13,7 @@ import ExpertAddons from "../sections/home-legacy/ExpertAddons.jsx";
 import HomeFaq from "../sections/home-legacy/HomeFaq.jsx";
 import FinalCta from "../sections/home-legacy/FinalCta.jsx";
 
-/** The original DIY homepage, kept at /home-legacy (noindex) to compare against the original build. */
+/** The homepage: the original DIY homepage, rebuilt to match the original site. */
 export default function LegacyHomePage() {
   return (
     <div className="min-h-screen bg-white">
