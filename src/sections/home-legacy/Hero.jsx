@@ -5,11 +5,15 @@ import site from "../../content/site.json";
 import { tollFreeSpaced } from "../../lib/phone.js";
 import Button from "../../components/ui/Button.jsx";
 import WistiaPopover from "../../components/media/WistiaPopover.jsx";
+import { ServiceCard } from "../home/Hero.jsx";
+import homeContent from "../../content/home.json";
 
 const { hero } = home;
+// The service tiles are shared with the US & cross-border page (home.json → hero.services).
+const services = homeContent.hero;
 
 const VIDEO_LINK_CLASSES =
-  "inline-flex items-center gap-2 bg-white/10 text-white no-underline px-8 py-5 rounded-full font-semibold text-lg hover:bg-white/20 hover:shadow-xl transition-all duration-300 hover:scale-105 cursor-pointer backdrop-blur-sm";
+  "inline-flex min-h-14 items-center gap-2 rounded-full bg-white/15 px-8 py-3 font-semibold text-white backdrop-blur-sm transition-colors hover:bg-white/25";
 
 /** Copies text using a hidden textarea (the original approach; works without the Clipboard API). */
 function copyText(text, onCopied) {
@@ -53,60 +57,68 @@ export default function Hero() {
     });
 
   return (
-    <section className="bg-gradient-to-br from-brand via-brand-highlight to-brand text-white py-20 md:py-32 px-4 md:px-8 relative overflow-hidden">
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-brand-subtle rounded-full blur-3xl" />
+    <section className="relative overflow-hidden bg-gradient-to-br from-brand via-brand-highlight to-brand text-white">
+      {/* Below 1280px the photo sits on top; from 1280px it covers the whole hero behind the text. */}
+      <div className="relative h-64 sm:h-80 lg:h-[26rem] xl:absolute xl:inset-0 xl:h-auto">
+        <img
+          src={hero.image.src}
+          alt={hero.image.alt}
+          className="h-full w-full object-cover"
+          style={{ objectPosition: hero.image.position }}
+        />
+        {/* Extra shade behind the text on wide screens; the photo is already darker on the left. */}
+        <div
+          aria-hidden="true"
+          className="absolute inset-0 hidden bg-gradient-to-r from-gray-950/60 via-gray-950/25 via-40% to-transparent to-60% xl:block"
+        />
       </div>
-      <div className="max-w-7xl mx-auto relative z-10">
-        <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
-          <div className="space-y-8">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">{hero.title}</h1>
-            <p className="text-lg md:text-xl text-brand-subtle leading-relaxed">{hero.text}</p>
-            <div className="flex flex-col sm:flex-row flex-wrap gap-4 items-stretch sm:items-center w-full">
-              <Button
-                href={hero.primaryCta.href}
-                variant="inverse"
-                transition="transition-all duration-300"
-                className="block font-semibold text-base md:text-lg hover:shadow-xl hover:scale-105 text-center flex-1"
-              >
-                {hero.primaryCta.label}
-              </Button>
-              <WistiaPopover
-                mediaId={hero.video.mediaId}
-                label={hero.video.label}
-                linkClassName={VIDEO_LINK_CLASSES}
-                className="block flex-1 [&_wistia-player]:block [&_wistia-player]:w-full [&_a]:w-full [&_a]:justify-center [&_a]:text-center [&_a]:py-4 [&_a]:px-8"
-              />
-            </div>
-            <div className="flex flex-col sm:flex-row gap-4 text-sm text-brand-subtle">
-              <div className="flex items-center gap-2 relative">
-                <Phone className="w-[18px] h-[18px]" />
-                <button
-                  onClick={copyPhone}
-                  onMouseEnter={() => setHovering(true)}
-                  onMouseLeave={() => setHovering(false)}
-                  className="text-[18px] cursor-pointer hover:text-white transition-colors"
-                >
-                  {tollFreeSpaced}
-                </button>
-                {hovering && !copied && <Tooltip tone="bg-gray-900/95">{hero.copyTooltip}</Tooltip>}
-                {copied && <Tooltip tone="bg-green-600/95">{hero.copiedTooltip}</Tooltip>}
-              </div>
-              <a
-                href={`mailto:${site.contact.email}`}
-                className="hover:text-white transition-colors text-[18px] flex items-center gap-2"
-              >
-                <Mail className="w-[18px] h-[18px]" />
-                {site.contact.email}
-              </a>
-            </div>
+
+      <div className="relative mx-auto max-w-7xl px-4 pb-12 pt-10 md:px-8 xl:pb-16 xl:pt-28">
+        <div className="max-w-2xl space-y-8 xl:[text-shadow:0_1px_8px_rgb(0_0_0/0.25)]">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">{hero.title}</h1>
+          <p className="text-lg md:text-xl text-brand-subtle leading-relaxed xl:max-w-xl xl:text-white/90">{hero.text}</p>
+          <div className="flex flex-col sm:flex-row gap-4 items-stretch sm:items-center [text-shadow:none]">
+            <Button href={hero.primaryCta.href} variant="inverse" className="sm:min-w-56">
+              {hero.primaryCta.label}
+            </Button>
+            <WistiaPopover
+              mediaId={hero.video.mediaId}
+              label={hero.video.label}
+              linkClassName={VIDEO_LINK_CLASSES}
+              className="block [&_wistia-player]:block [&_wistia-player]:w-full [&_button]:w-full [&_button]:justify-center"
+            />
           </div>
-          <div className="relative">
-            <div className="rounded-3xl overflow-hidden shadow-2xl hover:shadow-3xl transition-shadow duration-300 ring-4 ring-white/10">
-              <img src={hero.image.src} alt={hero.image.alt} className="w-full h-full object-cover" />
+          <div className="flex flex-col sm:flex-row gap-4 text-sm text-brand-subtle xl:text-white/90">
+            <div className="flex items-center gap-2 relative">
+              <Phone className="w-[18px] h-[18px]" />
+              <button
+                onClick={copyPhone}
+                onMouseEnter={() => setHovering(true)}
+                onMouseLeave={() => setHovering(false)}
+                className="text-[18px] cursor-pointer hover:text-white transition-colors"
+              >
+                {tollFreeSpaced}
+              </button>
+              {hovering && !copied && <Tooltip tone="bg-gray-900/95">{hero.copyTooltip}</Tooltip>}
+              {copied && <Tooltip tone="bg-green-600/95">{hero.copiedTooltip}</Tooltip>}
             </div>
-            <div className="absolute -bottom-4 -right-4 w-72 h-72 bg-brand-subtle rounded-3xl -z-10 opacity-20" />
+            <a
+              href={`mailto:${site.contact.email}`}
+              className="hover:text-white transition-colors text-[18px] flex items-center gap-2"
+            >
+              <Mail className="w-[18px] h-[18px]" />
+              {site.contact.email}
+            </a>
           </div>
+        </div>
+      </div>
+
+      <div className="relative mx-auto max-w-7xl px-4 pb-16 md:px-8 md:pb-20 xl:mt-10 xl:pb-[46px]">
+        <h2 className="sr-only">{services.servicesTitle}</h2>
+        <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-5 lg:gap-4">
+          {services.services.map((service) => (
+            <ServiceCard key={service.link} service={service} />
+          ))}
         </div>
       </div>
     </section>

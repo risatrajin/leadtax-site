@@ -48,7 +48,7 @@ const CARD_CLASSES =
   "flex items-center gap-4 rounded-2xl border border-gray-200 bg-white p-4 shadow-md lg:flex-col lg:items-center lg:gap-0 lg:px-4 lg:py-5 lg:text-center";
 
 /** A service tile. It links to the service page when that page exists, otherwise it is plain content. */
-function ServiceCard({ service }) {
+export function ServiceCard({ service }) {
   const link = linkById(service.link);
   const Icon = getIcon(service.icon);
   const body = (
