@@ -131,7 +131,7 @@ The three pages share one template, `src/sections/services/ServicePage.jsx`, wit
 | FAQs: homepage, /faq | `src/content/faqs.json` |
 | DIY tiers, expert tiers, /pricing comparison rows | `src/content/pricing.json` |
 | Reviews | `src/content/reviews.json` |
-| Filing services | `src/content/services.json` |
+| Homepage service cards | `src/content/home-legacy.json` → `filingOptions.cards` |
 | All 11 blog posts (listing + article) | `src/content/blog/posts.json` |
 | Page copy | `src/content/home.json`, `src/content/pages/*.json` |
 | Dropped pages | `src/content/archive/*.json` |
