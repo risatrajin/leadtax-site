@@ -67,5 +67,11 @@
     "title": "Don't See a Perfect Fit?",
     "text": "We're always looking for talented people. Send us your resume and we'll keep you in mind for future opportunities.",
     "buttonLabel": "Submit Resume"
-  }
+  },
+  "_placeholders": [
+    "applyEmail"
+  ],
+  "applyEmail": "info@leadtax.ca",
+  "applySubject": "Job application: {job}",
+  "openApplicationSubject": "Open application"
 }

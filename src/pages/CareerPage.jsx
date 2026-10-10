@@ -2,12 +2,16 @@ import career from "../content/pages/career.json";
 import PageShell from "../components/layout/PageShell.jsx";
 import PageHero from "../components/ui/PageHero.jsx";
 import Button from "../components/ui/Button.jsx";
+import { fill } from "../lib/template.js";
 import { getIcon } from "../lib/icons.js";
 import { CARD, ICON_BADGE } from "../lib/styles.js";
 
 const { benefits, openings, openApplication } = career;
 
-/** Careers. Sets no page-specific SEO; "Apply Now" and "Submit Resume" have no action (known issues). */
+/** Email link for applications; the address is a placeholder until the client confirms how to apply (question 21). */
+const applyHref = (subject) => `mailto:${career.applyEmail}?subject=${encodeURIComponent(subject)}`;
+
+/** Careers. "Apply Now" and "Submit Resume" open an email to the application address. */
 export default function CareerPage() {
   return (
     <PageShell>
@@ -54,7 +58,7 @@ export default function CareerPage() {
                       ))}
                     </div>
                   </div>
-                  <Button size="md" className="whitespace-nowrap">
+                  <Button href={applyHref(fill(career.applySubject, { job: job.title }))} size="md" className="whitespace-nowrap">
                     {openings.applyLabel}
                   </Button>
                 </div>
@@ -66,7 +70,9 @@ export default function CareerPage() {
         <div className="bg-white rounded-2xl shadow-lg border border-gray-200 p-8 md:p-12 text-center">
           <h2 className="text-2xl md:text-3xl text-gray-900 mb-4">{openApplication.title}</h2>
           <p className="text-gray-600 mb-6">{openApplication.text}</p>
-          <Button size="wide">{openApplication.buttonLabel}</Button>
+          <Button href={applyHref(career.openApplicationSubject)} size="wide">
+            {openApplication.buttonLabel}
+          </Button>
         </div>
       </div>
     </PageShell>

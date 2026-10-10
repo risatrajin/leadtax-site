@@ -110,7 +110,7 @@ export function MegaPanel({ item, id, onNavigate }) {
             <OfficeLinks item={item} onNavigate={onNavigate} />
           </div>
         ) : (
-          visibleColumns(item.columns).map((column, index, all) => (
+          visibleColumns(item.columns).map((column, _index, all) => (
             <div key={column.title} className={all.length === 1 ? "col-span-8" : "col-span-4"}>
               <p className={`${COLUMN_TITLE} mb-3 px-3`}>{column.title}</p>
               <ul className={all.length === 1 ? "grid grid-cols-2 gap-1" : "space-y-1"}>
