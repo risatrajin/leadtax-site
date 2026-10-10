@@ -9,13 +9,11 @@ import { getIcon } from "../lib/icons.js";
 import { CARD, CARD_TITLE, ICON_BADGE } from "../lib/styles.js";
 import personalTax from "../content/pages/personal-tax.json";
 import businessTax from "../content/pages/business-tax.json";
-import bookkeeping from "../content/pages/bookkeeping.json";
 import trustEstateTax from "../content/pages/trust-estate-tax.json";
 
 const PAGES = {
   "personal-tax": personalTax,
   "business-tax": businessTax,
-  bookkeeping,
   "trust-estate-tax": trustEstateTax,
 };
 
@@ -77,7 +75,7 @@ function WaysToWork({ title }) {
 }
 
 /**
- * A service page (Personal tax, Business tax, Bookkeeping, Trust & estate): hero, what the service
+ * A service page (Personal tax, Business tax, Trust & estate): hero, what the service
  * covers, the ways to work with LeadTax and a booking panel. Content: src/content/pages/<slug>.json.
  */
 export default function ServiceLinePage({ slug }) {

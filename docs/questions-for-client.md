@@ -166,3 +166,10 @@ what you can; anything left blank stays as it is now.
     screenshot from an online gallery (it has the gallery's arrows in it); the site zooms in
     slightly to hide them for now. The 4350 Hastings photo is only 616px wide and looks soft
     at larger sizes. Ideally: taken in daylight, straight on, with the sign and door visible.
+
+## Bookkeeping page
+
+39. **Are the bookkeeping prices final?** The new bookkeeping page shows the design's proposed
+    starting prices: Bookkeeping Light $199/mo ($1,910/yr), Core $399/mo ($3,830/yr),
+    Bookkeeping + Tax $649/mo ($6,230/yr). Please also confirm the "free consultation" offer, the
+    industries listed and the tools (QuickBooks Online, Clover, Square, Stripe, Shopify).

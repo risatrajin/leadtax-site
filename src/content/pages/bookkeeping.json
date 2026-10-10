@@ -1,50 +1,336 @@
 {
-  "_note": "Service page added in the redesign. Copy is drawn from the pricing feature lists, blog posts and existing service text; the client should confirm the service scope. Whether bookkeeping is available yet is question 12.",
+  "_note": "Bookkeeping page, from the supplied design leadtax-bookkeeping-service.html. Prices are the design's proposed starting prices; the dashboard figures are an illustration. The client should confirm prices, 'free consultation', the industries and the tools listed.",
   "_placeholders": [
-    "hero.text",
-    "services"
+    "pricing.plans",
+    "hero.primary.label",
+    "cta.primary.label"
   ],
   "hero": {
-    "title": "Bookkeeping",
-    "text": "Accounting and bookkeeping services for individuals and businesses, so your records are organized and compliant.",
-    "actions": [
-      {
-        "label": "Book an appointment",
-        "to": "/contact"
+    "eyebrow": "Bookkeeping for Canadian businesses",
+    "titleLines": [
+      "Your books.",
+      "Your taxes."
+    ],
+    "titleAccent": "One team.",
+    "text": "Professional bookkeeping without the paperwork headache. LeadTax keeps your books organized, your financials clear, and your business ready for tax time.",
+    "primary": {
+      "label": "Get a Free Consultation",
+      "to": "/contact"
+    },
+    "secondary": {
+      "label": "Explore Services",
+      "href": "#services"
+    },
+    "trust": [
+      "Monthly bookkeeping",
+      "GST/HST & payroll",
+      "Tax-ready books"
+    ],
+    "dashboard": {
+      "label": "Example bookkeeping dashboard",
+      "title": "Business overview",
+      "period": "September 2026",
+      "status": "Books up to date",
+      "metrics": [
+        {
+          "label": "Revenue",
+          "value": "$84,620",
+          "note": "↑ 12.4%",
+          "up": true
+        },
+        {
+          "label": "Expenses",
+          "value": "$51,280",
+          "note": "This month"
+        },
+        {
+          "label": "Net profit",
+          "value": "$33,340",
+          "note": "↑ 8.1%",
+          "up": true
+        }
+      ],
+      "reconcile": {
+        "title": "Bank reconciliation complete",
+        "text": "All accounts matched through Sep 30"
       },
-      {
-        "label": "Why bookkeeping matters",
-        "to": "/blog/bookkeepers-first-line-defense-wasted-spending"
+      "floatTax": {
+        "label": "GST/HST",
+        "value": "Ready to file",
+        "note": "✓ Reconciled"
+      },
+      "floatReceipt": {
+        "label": "September bookkeeping",
+        "value": "428 transactions",
+        "status": "Done"
       }
-    ]
+    }
   },
   "services": {
-    "title": "What we help with",
+    "kicker": "Everything in one place",
+    "title": "Bookkeeping that works with your business.",
+    "text": "Stay organized throughout the year with practical bookkeeping and tax support built for Canadian small businesses.",
     "items": [
       {
         "icon": "BookOpen",
-        "title": "Day-to-day records",
-        "text": "Keeping your income and expenses recorded accurately and up to date."
+        "title": "Monthly Bookkeeping",
+        "text": "Transaction categorization, bank and credit-card reconciliation, and organized books every month."
       },
       {
-        "icon": "Receipt",
-        "title": "Receipts and expenses",
-        "text": "Organizing receipts and tracking spending so nothing gets missed."
+        "icon": "ChartLine",
+        "title": "Financial Reporting",
+        "text": "Clear Profit & Loss and Balance Sheet reports so you can understand how your business is performing."
       },
       {
-        "icon": "TrendingUp",
-        "title": "Spending visibility",
-        "text": "Clear books that show where money goes and help cut wasted spending."
+        "icon": "Wallet",
+        "title": "Payroll Support",
+        "text": "Payroll bookkeeping, source deductions, CRA remittance support, T4s and year-end reconciliation."
       },
       {
-        "icon": "FileCheck",
-        "title": "Year-end and tax time",
-        "text": "Books that are ready when it's time to prepare your tax return."
+        "icon": "Percent",
+        "title": "GST/HST & PST",
+        "text": "Sales tax reconciliation and filing support to keep your business organized and on schedule."
+      },
+      {
+        "icon": "Laptop",
+        "title": "QuickBooks Online",
+        "text": "Setup, cleanup, reconciliation, bank feeds and ongoing QuickBooks Online bookkeeping."
+      },
+      {
+        "icon": "History",
+        "title": "Catch-Up Bookkeeping",
+        "text": "Months or years behind? We can clean up your records and bring your books up to date."
       }
     ]
   },
-  "cta": {
-    "to": "/contact"
+  "together": {
+    "kicker": "A smarter way to work",
+    "titleLines": [
+      "Bookkeeping + Tax.",
+      "Better together."
+    ],
+    "paragraphs": [
+      "Why manage a separate bookkeeper and tax accountant? At LeadTax, your bookkeeping and tax professionals can work together so your records stay organized with year-end filing in mind.",
+      "That means fewer surprises, less back-and-forth, and a team that already understands your business when tax season arrives."
+    ],
+    "button": {
+      "label": "Talk to a LeadTax Advisor",
+      "to": "/contact"
+    },
+    "panelTitle": "One connected financial team.",
+    "benefits": [
+      {
+        "title": "Accurate, tax-ready books",
+        "text": "Organized throughout the year."
+      },
+      {
+        "title": "GST/HST & payroll support",
+        "text": "Keep key compliance items coordinated."
+      },
+      {
+        "title": "Corporate tax preparation",
+        "text": "Your year-end team already knows the books."
+      },
+      {
+        "title": "Less year-end back-and-forth",
+        "text": "One place for bookkeeping and tax support."
+      }
+    ]
   },
-  "waysTitle": "Ways to work with us"
+  "steps": {
+    "kicker": "How it works",
+    "title": "Simple from day one.",
+    "text": "Getting your bookkeeping under control shouldn't be complicated.",
+    "items": [
+      {
+        "title": "Tell us about your business",
+        "text": "We learn how you operate, what software you use, and what level of support you need."
+      },
+      {
+        "title": "Connect your records",
+        "text": "Securely provide the accounting, bank, credit-card and payroll information needed."
+      },
+      {
+        "title": "We handle the books",
+        "text": "We categorize, reconcile, review and organize your financial records."
+      },
+      {
+        "title": "Stay tax-ready",
+        "text": "Your books stay current so year-end tax preparation is easier and more predictable."
+      }
+    ]
+  },
+  "pricing": {
+    "kicker": "Simple, transparent pricing",
+    "title": "Choose the bookkeeping support you need.",
+    "text": "Start simple and add more support as your business grows. Prices below are proposed LeadTax starting prices in Canadian dollars.",
+    "monthlyLabel": "Monthly",
+    "annualLabel": "Annual",
+    "saveLabel": "Save 20%",
+    "popularLabel": "Most complete",
+    "ctaLabel": "Get Started",
+    "ctaTo": "/contact",
+    "plans": [
+      {
+        "name": "Bookkeeping Light",
+        "text": "For lean businesses that need clean, reliable books and straightforward reporting.",
+        "monthly": "$199",
+        "annual": "$1,910",
+        "features": [
+          "Monthly bookkeeping",
+          "Bank & credit-card reconciliation",
+          "Profit & Loss and Balance Sheet",
+          "Year-end tax-ready financial package",
+          "Scheduled bookkeeping check-ins"
+        ]
+      },
+      {
+        "name": "Bookkeeping Core",
+        "text": "For growing businesses that want ongoing bookkeeping support and more access to their team.",
+        "monthly": "$399",
+        "annual": "$3,830",
+        "features": [
+          "Everything in Bookkeeping Light",
+          "Dedicated bookkeeping support",
+          "Custom account categorization",
+          "GST/HST bookkeeping support",
+          "Priority communication"
+        ]
+      },
+      {
+        "name": "Bookkeeping + Tax",
+        "popular": true,
+        "text": "Full bookkeeping plus year-end corporate tax support from one connected LeadTax team.",
+        "monthly": "$649",
+        "annual": "$6,230",
+        "features": [
+          "Everything in Bookkeeping Core",
+          "Corporate tax return preparation",
+          "Year-end tax review",
+          "T4/T5 support where applicable",
+          "Tax planning consultation"
+        ]
+      }
+    ],
+    "periodMonthly": "/mo",
+    "periodAnnual": "/yr",
+    "noteMonthly": "Billed monthly",
+    "noteAnnual": "Billed annually · save 20%",
+    "footnote": "Pricing shown is a proposed starting structure and can scale with transaction volume, number of accounts, payroll, sales-tax filings, and bookkeeping complexity. Catch-up work and prior-year cleanup can be quoted separately."
+  },
+  "industries": {
+    "kicker": "Built for small business",
+    "title": "Bookkeeping for businesses like yours.",
+    "items": [
+      {
+        "icon": "UtensilsCrossed",
+        "label": "Restaurants & Hospitality"
+      },
+      {
+        "icon": "HardHat",
+        "label": "Construction & Trades"
+      },
+      {
+        "icon": "Stethoscope",
+        "label": "Medical Professionals"
+      },
+      {
+        "icon": "Truck",
+        "label": "Transportation"
+      },
+      {
+        "icon": "House",
+        "label": "Real Estate"
+      },
+      {
+        "icon": "ShoppingBag",
+        "label": "Retail & E-Commerce"
+      },
+      {
+        "icon": "Briefcase",
+        "label": "Professional Services"
+      },
+      {
+        "icon": "Building2",
+        "label": "Owner-Managed Corporations"
+      }
+    ]
+  },
+  "catchUp": {
+    "kicker": "Catch-up bookkeeping",
+    "titleLines": [
+      "Behind on your books?",
+      "We'll help you catch up."
+    ],
+    "text": "Whether you're a few months or a few years behind, LeadTax can organize your records and help get your bookkeeping back on track.",
+    "items": [
+      "Bank reconciliation",
+      "Credit-card reconciliation",
+      "Transaction cleanup",
+      "GST/HST review",
+      "Payroll reconciliation",
+      "Tax-ready year-end books"
+    ],
+    "button": {
+      "label": "Get a Catch-Up Quote",
+      "to": "/contact"
+    },
+    "progressTitle": "Catch-up progress",
+    "progress": [
+      {
+        "icon": "Landmark",
+        "title": "Bank accounts",
+        "note": "Reconciled",
+        "status": "Complete"
+      },
+      {
+        "icon": "CreditCard",
+        "title": "Credit cards",
+        "note": "Reconciled",
+        "status": "Complete"
+      },
+      {
+        "icon": "Receipt",
+        "title": "Transactions",
+        "note": "Categorized",
+        "status": "Complete"
+      },
+      {
+        "icon": "ChartColumn",
+        "title": "Financial reports",
+        "note": "Prepared",
+        "status": "Ready"
+      }
+    ]
+  },
+  "tools": {
+    "kicker": "Your existing tools",
+    "title": "Works with the way you already do business.",
+    "text": "LeadTax can work with commonly used accounting, banking, payment, and commerce platforms.",
+    "items": [
+      "QuickBooks Online",
+      "Clover",
+      "Square",
+      "Stripe",
+      "Shopify",
+      "Canadian Banks"
+    ]
+  },
+  "canada": {
+    "title": "Canadian bookkeeping for Canadian businesses.",
+    "text": "From GST/HST and payroll to corporate tax preparation, LeadTax gives business owners local service, real people, and Canadian tax expertise — in office or online.",
+    "button": {
+      "label": "Book an In-Office Consultation",
+      "to": "/contact"
+    }
+  },
+  "cta": {
+    "title": "Spend more time running your business. We'll take care of the books.",
+    "text": "Get bookkeeping, payroll, GST/HST and tax support from one team.",
+    "primary": {
+      "label": "Book a Free Consultation",
+      "to": "/contact"
+    },
+    "callLabel": "Call {phone}"
+  }
 }
