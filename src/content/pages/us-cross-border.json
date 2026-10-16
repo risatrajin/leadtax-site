@@ -38,7 +38,8 @@
       "src": "/images/cross-border-cityscape.webp",
       "alt": "Creative composite of Vancouver and New York waterfront skylines",
       "position": "50% 55%"
-    }
+    },
+    "align": "center"
   },
   "situations": {
     "title": "Your life crosses borders. Your tax plan should, too.",

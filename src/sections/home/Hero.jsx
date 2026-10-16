@@ -2,6 +2,7 @@ import { ArrowRight, CalendarDays, MapPin, Star } from "lucide-react";
 import home from "../../content/home.json";
 import reviews from "../../content/reviews.json";
 import { getIcon } from "../../lib/icons.js";
+import { cx } from "../../lib/cx.js";
 import { fill } from "../../lib/template.js";
 import Button from "../../components/ui/Button.jsx";
 import SmartLink from "../../components/ui/SmartLink.jsx";
@@ -73,11 +74,13 @@ export function ServiceCard({ service }) {
  * the five services as cards along the bottom.
  * From 1280px the photo covers the whole section behind the text and cards, with no overlay.
  * The people stand on the right of the photo, leaving open sky behind the left-aligned text.
- * The text is left-aligned; on the photo it is white over a dark left-to-right gradient.
+ * The text is left-aligned over a dark left-to-right gradient, or centred over an even dark
+ * overlay when `hero.align` is "center".
  * Below 1280px the photo sits on top, full width. The trust row is a separate band (TrustBand).
  */
 export default function Hero({ content = home }) {
   const { hero } = content;
+  const centered = hero.align === "center";
   return (
     <section aria-labelledby="hero-title" className="relative overflow-hidden bg-white">
       <div className="relative h-64 sm:h-80 lg:h-[26rem] xl:absolute xl:inset-0 xl:h-auto">
@@ -90,16 +93,21 @@ export default function Hero({ content = home }) {
         {/* Darkens the sky behind the white text; the people on the right stay untouched. */}
         <div
           aria-hidden="true"
-          className="absolute inset-0 hidden bg-gradient-to-r from-gray-950/70 via-gray-950/35 via-45% to-transparent to-65% xl:block"
+          className={cx(
+            "absolute inset-0 hidden xl:block",
+            centered
+              ? "bg-gradient-to-b from-gray-950/50 via-gray-950/45 to-gray-950/25"
+              : "bg-gradient-to-r from-gray-950/70 via-gray-950/35 via-45% to-transparent to-65%",
+          )}
         />
       </div>
       <div className="relative mx-auto max-w-7xl px-4 pb-12 pt-6 md:px-8 xl:pb-16 xl:pt-[104px]">
-        <div className="max-w-3xl xl:text-white xl:[text-shadow:0_1px_8px_rgb(0_0_0/0.25)]">
+        <div className={cx("max-w-3xl xl:text-white xl:[text-shadow:0_1px_8px_rgb(0_0_0/0.25)]", centered && "mx-auto text-center")}>
           <h1 id="hero-title" className="text-4xl font-bold leading-[1.05] tracking-tight text-gray-900 sm:text-5xl lg:text-7xl xl:text-white">
             {hero.titleLead} <span className="text-brand-bright xl:text-white">{hero.titleAccent}</span>
           </h1>
-          <p className="mt-6 text-xl leading-relaxed text-gray-600 md:text-2xl xl:max-w-xl xl:text-white">{hero.text}</p>
-          <div className="mt-10 flex flex-col gap-4 sm:flex-row [text-shadow:none]">
+          <p className={cx("mt-6 text-xl leading-relaxed text-gray-600 md:text-2xl xl:max-w-xl xl:text-white", centered && "mx-auto")}>{hero.text}</p>
+          <div className={cx("mt-10 flex flex-col gap-4 sm:flex-row [text-shadow:none]", centered && "sm:justify-center")}>
             <Button to={hero.book.to} className="gap-3">
               <CalendarDays aria-hidden="true" className="h-5 w-5" />
               {hero.book.label}
