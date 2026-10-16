@@ -50,7 +50,8 @@ export default function App() {
         <Route path="/file-in-person" element={<FileInPersonPage />} />
         <Route path="/us-cross-border" element={<UsCrossBorderPage />} />
         <Route path="/personal-tax" element={<ServiceLinePage slug="personal-tax" />} />
-        <Route path="/business-tax" element={<ServiceLinePage slug="business-tax" />} />
+        <Route path="/corporate-tax" element={<ServiceLinePage slug="corporate-tax" />} />
+        <Route path="/business-tax" element={<RedirectTo to="/corporate-tax" />} />
         <Route path="/bookkeeping" element={<BookkeepingPage />} />
         <Route path="/trust-estate-tax" element={<TrustEstatePage />} />
         <Route path="/contact" element={<ContactPage />} />

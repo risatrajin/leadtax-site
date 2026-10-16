@@ -11,9 +11,9 @@
       "icon": "User",
       "description": "Simple and stress-free tax filing."
     },
-    "businessTax": {
-      "label": "Business tax",
-      "to": "/business-tax",
+    "corporateTax": {
+      "label": "Corporate tax",
+      "to": "/corporate-tax",
       "icon": "Briefcase",
       "description": "Support for your business growth."
     },
@@ -113,7 +113,7 @@
             "title": "Services",
             "items": [
               "personalTax",
-              "businessTax",
+              "corporateTax",
               "trustEstate",
               "usCrossBorder"
             ]
@@ -216,7 +216,7 @@
         "title": "Services",
         "items": [
           "personalTax",
-          "businessTax",
+          "corporateTax",
           "bookkeeping",
           "usCrossBorder",
           "trustEstate"
@@ -274,7 +274,7 @@
         "_placeholders": [
           "href"
         ],
-        "label": "Business tax in {city}",
+        "label": "Corporate tax in {city}",
         "href": "#",
         "enabled": false
       },

@@ -7,7 +7,7 @@ Every value that is invented or unconfirmed is flagged, so nothing ships by acci
 
 1. What the current site already says.
 2. The client's homepage mockup. So far this gives the service list: Personal Tax,
-   Business Tax, Bookkeeping, US & Cross-Border Tax, Trust & Estate Tax Filing.
+   Corporate Tax, Bookkeeping, US & Cross-Border Tax, Trust & Estate Tax Filing.
 3. Invented copy, only where neither of the above has anything.
 
 Record the origin in a `_source` field when it isn't obvious (see `services.json` → `serviceLines`).

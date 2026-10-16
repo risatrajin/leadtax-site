@@ -26,7 +26,7 @@ const PAGE_KEYS = {
   "/file-remotely": "fileRemotely",
   "/us-cross-border": "usCrossBorder",
   "/personal-tax": "personalTax",
-  "/business-tax": "businessTax",
+  "/corporate-tax": "corporateTax",
   "/bookkeeping": "bookkeeping",
   "/trust-estate-tax": "trustEstateTax",
   "/contact": "contact",

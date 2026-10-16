@@ -27,9 +27,9 @@
         "text": "Simple and stress-free tax filing."
       },
       {
-        "link": "businessTax",
+        "link": "corporateTax",
         "icon": "Briefcase",
-        "title": "Business Tax",
+        "title": "Corporate Tax",
         "text": "Support for your business growth."
       },
       {
@@ -69,8 +69,8 @@
         "_placeholders": [
           "description"
         ],
-        "link": "businessTax",
-        "title": "Business Tax",
+        "link": "corporateTax",
+        "title": "Corporate Tax",
         "description": "Tax support for Canadian entrepreneurs: self-employment income, small business returns, expenses and GST/HST.",
         "image": "https://images.unsplash.com/photo-1726056652582-7c9d202d4018?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzbWFsbCUyMGJ1c2luZXNzJTIwZW50cmVwcmVuZXVyfGVufDF8fHx8MTc2Nzk5MTEwMnww&ixlib=rb-4.1.0&q=80&w=1080",
         "imageAlt": "Customer paying by card on a phone",

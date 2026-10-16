@@ -42,6 +42,11 @@
       "permanent": true
     },
     {
+      "source": "/business-tax",
+      "destination": "/corporate-tax",
+      "permanent": true
+    },
+    {
       "source": "/:path*",
       "has": [
         {
