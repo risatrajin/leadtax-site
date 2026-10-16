@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { ChevronDown } from "lucide-react";
+import Collapse from "./Collapse.jsx";
 
 /**
  * Expandable question list. Two styles exist on the site:
@@ -28,9 +29,9 @@ function SimpleFaq({ items }) {
               className={`w-5 h-5 text-gray-500 flex-shrink-0 transition-transform ${open[item.question] ? "rotate-180" : ""}`}
             />
           </button>
-          {open[item.question] && (
-            <div className="px-6 pb-5 text-gray-600 whitespace-pre-line">{item.answer}</div>
-          )}
+          <Collapse open={Boolean(open[item.question])} className="px-6 pb-5 text-gray-600 whitespace-pre-line">
+            {item.answer}
+          </Collapse>
         </div>
       ))}
     </div>
@@ -53,11 +54,9 @@ function BorderedFaq({ items }) {
               className={`w-5 h-5 text-brand transition-transform flex-shrink-0 ${openIndex === index ? "rotate-180" : ""}`}
             />
           </button>
-          {openIndex === index && (
-            <div className="px-6 pb-6">
-              <p className="text-gray-600 leading-relaxed">{item.answer}</p>
-            </div>
-          )}
+          <Collapse open={openIndex === index} className="px-6 pb-6">
+            <p className="text-gray-600 leading-relaxed">{item.answer}</p>
+          </Collapse>
         </div>
       ))}
     </div>

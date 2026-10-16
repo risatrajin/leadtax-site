@@ -128,7 +128,7 @@ export default function Reviews() {
                 href={reviews.googleUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`${CARD} group flex h-full flex-col p-6 transition-shadow hover:shadow-lg`}
+                className={`${CARD} group flex h-full flex-col p-6 transition duration-300 hover:-translate-y-1 hover:shadow-lg motion-reduce:hover:translate-y-0`}
               >
                 <span className="flex items-center gap-3">
                   <span

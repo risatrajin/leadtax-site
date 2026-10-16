@@ -17,7 +17,7 @@ export default function OtherWays({ content = home, section = "otherWays", class
           {otherWays.cards.map((card) => (
             <article
               key={card.title}
-              className="flex flex-col rounded-2xl border border-gray-100 bg-white p-8 shadow-md transition-shadow hover:shadow-lg"
+              className="flex flex-col rounded-2xl border border-gray-100 bg-white p-8 shadow-md transition duration-300 hover:-translate-y-1 hover:shadow-lg motion-reduce:hover:translate-y-0"
             >
               {card.tag && <p className="mb-2 text-xs font-semibold uppercase tracking-wider text-brand-bright">{card.tag}</p>}
               <h3 className="text-xl font-semibold text-gray-900">{card.title}</h3>

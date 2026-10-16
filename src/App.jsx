@@ -1,6 +1,7 @@
 import { BrowserRouter, Route, Routes } from "react-router";
 import Favicon from "./components/global/Favicon.jsx";
 import ScrollToTop from "./components/global/ScrollToTop.jsx";
+import RevealOnScroll from "./components/global/RevealOnScroll.jsx";
 import Analytics from "./components/global/Analytics.jsx";
 import IntercomWidget from "./components/global/IntercomWidget.jsx";
 import Seo from "./components/seo/Seo.jsx";
@@ -39,6 +40,7 @@ export default function App() {
       <Favicon />
       <Seo />
       <ScrollToTop />
+      <RevealOnScroll />
       <Analytics />
       <IntercomWidget />
       <Routes>

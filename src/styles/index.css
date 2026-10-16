@@ -1,4 +1,4 @@
-/* Only scan src/ for classes; original-build/ must not leak utilities into this build. */
+/* Scan only src/ for Tailwind classes. */
 @import "tailwindcss" source("..");
 @import "tw-animate-css";
 @import "./tokens.css";

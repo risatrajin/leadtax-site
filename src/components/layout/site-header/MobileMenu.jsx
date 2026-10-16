@@ -6,6 +6,7 @@ import { tollFreeDashed } from "../../../lib/phone.js";
 import { fill } from "../../../lib/template.js";
 import Button from "../../ui/Button.jsx";
 import SmartLink from "../../ui/SmartLink.jsx";
+import Collapse from "../../ui/Collapse.jsx";
 import { clientLoginLinks, enabledLinks, isEnabled, linkById, visibleColumns } from "./panels.jsx";
 
 const ROW = "flex w-full items-center justify-between border-b border-gray-200 py-4 text-left text-lg font-semibold text-gray-900";
@@ -97,7 +98,7 @@ export default function MobileMenu({ id, onClose, returnFocusTo }) {
                   {group.label}
                   <ChevronDown aria-hidden="true" className={`h-5 w-5 transition-transform ${expanded ? "rotate-180" : ""}`} />
                 </button>
-                <div id={contentId} hidden={!expanded} className="border-b border-gray-200 py-3">
+                <Collapse id={contentId} open={expanded} className="border-b border-gray-200 py-3">
                   {group.sections.map((section, index) => (
                     <div key={section.title ?? index} className={index > 0 ? "mt-3" : ""}>
                       {section.title && (
@@ -115,7 +116,7 @@ export default function MobileMenu({ id, onClose, returnFocusTo }) {
                       </ul>
                     </div>
                   ))}
-                </div>
+                </Collapse>
               </li>
             );
           })}

@@ -31,10 +31,11 @@ const SIZES = {
 /** Older size names, kept so existing content and pages map onto the three sizes. */
 const ALIASES = { wide: "md", xl: "lg" };
 
-const BASE = "inline-flex items-center justify-center gap-2 rounded-full text-center font-semibold";
+const BASE =
+  "inline-flex items-center justify-center gap-2 rounded-full text-center font-semibold active:scale-[0.98] motion-reduce:active:scale-100";
 
 /** Class list for a pill button, for elements that only look like buttons (e.g. inside a card link). */
-export function buttonClasses({ variant = "primary", size = "lg", transition = "transition-colors", className } = {}) {
+export function buttonClasses({ variant = "primary", size = "lg", transition = "transition duration-200", className } = {}) {
   return cx(BASE, VARIANTS[variant], SIZES[ALIASES[size] ?? size], transition, className);
 }
 
@@ -47,7 +48,7 @@ export default function Button({
   href,
   variant = "primary",
   size = "lg",
-  transition = "transition-colors",
+  transition = "transition duration-200",
   className,
   children,
   ...rest

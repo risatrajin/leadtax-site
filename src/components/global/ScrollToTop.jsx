@@ -9,11 +9,12 @@ export default function ScrollToTop() {
   const { pathname, hash } = useLocation();
   useEffect(() => {
     if (!hash) {
-      window.scrollTo(0, 0);
+      // Jump, don't glide, to the top of a new page (in-page links still scroll smoothly).
+      window.scrollTo({ top: 0, behavior: "instant" });
       return undefined;
     }
     const frame = requestAnimationFrame(() => {
-      document.getElementById(decodeURIComponent(hash.slice(1)))?.scrollIntoView();
+      document.getElementById(decodeURIComponent(hash.slice(1)))?.scrollIntoView({ behavior: "smooth" });
     });
     return () => cancelAnimationFrame(frame);
   }, [pathname, hash]);

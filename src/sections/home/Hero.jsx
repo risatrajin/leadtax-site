@@ -62,7 +62,7 @@ export function ServiceCard({ service }) {
   );
   if (!isEnabled(link)) return <div className={CARD_CLASSES}>{body}</div>;
   return (
-    <SmartLink to={link.to} href={link.href} className={`group ${CARD_CLASSES} transition-shadow hover:shadow-xl`}>
+    <SmartLink to={link.to} href={link.href} className={`group ${CARD_CLASSES} transition duration-300 hover:-translate-y-1 hover:shadow-xl motion-reduce:hover:translate-y-0`}>
       {body}
     </SmartLink>
   );

@@ -4,6 +4,7 @@ import SmartLink from "../../components/ui/SmartLink.jsx";
 import { getIcon } from "../../lib/icons.js";
 import { cx } from "../../lib/cx.js";
 import { CARD } from "../../lib/styles.js";
+import Collapse from "../../components/ui/Collapse.jsx";
 
 /**
  * "Choose your situation" as an accordion: the title and intro on the left, the situations on the
@@ -43,7 +44,7 @@ export default function Situations({ situations }) {
                     />
                   </button>
                 </h3>
-                <div id={panelId} hidden={!open} className="border-t border-gray-100 px-5 pb-6 pt-5 sm:pl-20">
+                <Collapse id={panelId} open={open} className="border-t border-gray-100 px-5 pb-6 pt-5 sm:pl-20">
                   <p className="text-xs font-semibold uppercase tracking-wider text-brand-bright">{item.tag}</p>
                   <p className="mt-2 text-xl font-semibold text-gray-900">{item.title}</p>
                   <p className="mt-3 text-gray-600">{item.text}</p>
@@ -63,7 +64,7 @@ export default function Situations({ situations }) {
                     {item.link.label}
                     <ArrowRight aria-hidden="true" className="h-4 w-4" />
                   </SmartLink>
-                </div>
+                </Collapse>
               </li>
             );
           })}

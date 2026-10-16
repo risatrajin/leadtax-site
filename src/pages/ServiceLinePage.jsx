@@ -129,7 +129,7 @@ function WaysToWork() {
             const Icon = getIcon(way.icon);
             return (
               <li key={way.label}>
-                <SmartLink to={way.to} className={`${CARD} group flex h-full flex-col p-6 transition-shadow hover:shadow-lg`}>
+                <SmartLink to={way.to} className={`${CARD} group flex h-full flex-col p-6 transition duration-300 hover:-translate-y-1 hover:shadow-lg motion-reduce:hover:translate-y-0`}>
                   <div className={ICON_BADGE}>
                     <Icon aria-hidden="true" className="h-6 w-6" />
                   </div>
@@ -173,7 +173,7 @@ function Articles({ articles, className }) {
             <li key={post.slug}>
               <Link
                 to={`/blog/${post.slug}`}
-                className={`${CARD} group flex h-full flex-col overflow-hidden transition-shadow hover:shadow-lg`}
+                className={`${CARD} group flex h-full flex-col overflow-hidden transition duration-300 hover:-translate-y-1 hover:shadow-lg motion-reduce:hover:translate-y-0`}
               >
                 <img src={post.cardImage ?? post.image} alt="" className="h-44 w-full object-cover" />
                 <div className="flex flex-1 flex-col p-6">
