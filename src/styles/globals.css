@@ -133,3 +133,30 @@
     transform: none;
   }
 }
+
+/* Situations: the active item's bar fills, then the next item opens (see Situations.jsx). */
+@keyframes situation-progress {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes situation-in {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .situation-in {
+    animation: situation-in 0.45s cubic-bezier(0.2, 0.7, 0.2, 1);
+  }
+}
