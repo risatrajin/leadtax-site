@@ -38,43 +38,9 @@
       "src": "/images/cross-border-cityscape.webp",
       "alt": "Creative composite of Vancouver and New York waterfront skylines",
       "position": "50% 55%"
-    },
-    "servicesTitle": "Choose your situation",
-    "services": [
-      {
-        "icon": "Flag",
-        "title": "I'm an American in Canada",
-        "text": "At home in Canada. Still connected to the U.S.",
-        "href": "#situations"
-      },
-      {
-        "icon": "House",
-        "title": "I have U.S. income or property",
-        "text": "Income on one side. Life on the other.",
-        "href": "#situations"
-      },
-      {
-        "icon": "Truck",
-        "title": "I'm moving across the border",
-        "text": "A new address. A new tax picture.",
-        "href": "#situations"
-      },
-      {
-        "icon": "Briefcase",
-        "title": "I own a business or investments",
-        "text": "Build your future. Understand the connections.",
-        "href": "#situations"
-      },
-      {
-        "icon": "History",
-        "title": "I need to catch up on filing",
-        "text": "A fresh start begins with a clear picture.",
-        "href": "#situations"
-      }
-    ]
+    }
   },
   "situations": {
-    "id": "situations",
     "title": "Your life crosses borders. Your tax plan should, too.",
     "text": "A new job, a new home, or financial ties in both countries. Choose the situation closest to yours.",
     "cards": [
@@ -90,7 +56,9 @@
         "link": {
           "label": "Talk about your situation",
           "href": "#contact"
-        }
+        },
+        "icon": "Flag",
+        "label": "I'm an American in Canada"
       },
       {
         "tag": "U.S. income & property",
@@ -104,7 +72,9 @@
         "link": {
           "label": "Talk about your situation",
           "href": "#contact"
-        }
+        },
+        "icon": "House",
+        "label": "I have U.S. income or property"
       },
       {
         "tag": "A cross-border move",
@@ -118,7 +88,9 @@
         "link": {
           "label": "Talk about your situation",
           "href": "#contact"
-        }
+        },
+        "icon": "Truck",
+        "label": "I'm moving across the border"
       },
       {
         "tag": "Business & investments",
@@ -132,7 +104,9 @@
         "link": {
           "label": "Talk about your situation",
           "href": "#contact"
-        }
+        },
+        "icon": "Briefcase",
+        "label": "I own a business or investments"
       },
       {
         "tag": "Prior years & missed filings",
@@ -146,7 +120,9 @@
         "link": {
           "label": "Talk about your situation",
           "href": "#contact"
-        }
+        },
+        "icon": "History",
+        "label": "I need to catch up on filing"
       }
     ]
   },

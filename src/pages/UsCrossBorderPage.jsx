@@ -5,6 +5,7 @@ import Hero, { TrustBand } from "../sections/home/Hero.jsx";
 import Offices from "../sections/home/Offices.jsx";
 import FirstVisit from "../sections/home/FirstVisit.jsx";
 import OtherWays from "../sections/home/OtherWays.jsx";
+import Situations from "../sections/home/Situations.jsx";
 import Reviews from "../sections/home/Reviews.jsx";
 import Faq from "../sections/home/Faq.jsx";
 import CtaPanel from "../sections/home/CtaPanel.jsx";
@@ -20,7 +21,7 @@ export default function UsCrossBorderPage() {
       <main id="main">
         <Hero content={content} />
         <TrustBand content={content} />
-        <OtherWays content={content} section="situations" className="bg-white px-4 py-16 md:px-8 md:py-24" />
+        <Situations situations={content.situations} />
         <OtherWays content={content} section="services" className="bg-gray-50 px-4 py-16 md:px-8 md:py-24" />
         <FirstVisit content={content} />
         <Offices />

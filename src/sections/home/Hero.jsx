@@ -118,14 +118,19 @@ export default function Hero({ content = home }) {
         </div>
       </div>
 
-      <div className="relative mx-auto max-w-7xl px-4 pb-16 md:px-8 md:pb-24 xl:mt-[42px] xl:pb-[46px]">
-        <h2 className="sr-only">{hero.servicesTitle}</h2>
-        <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-5 lg:gap-4">
-          {hero.services.map((service) => (
-            <ServiceCard key={service.link} service={service} />
-          ))}
+      {hero.services ? (
+        <div className="relative mx-auto max-w-7xl px-4 pb-16 md:px-8 md:pb-24 xl:mt-[42px] xl:pb-[46px]">
+          <h2 className="sr-only">{hero.servicesTitle}</h2>
+          <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-5 lg:gap-4">
+            {hero.services.map((service) => (
+              <ServiceCard key={service.link ?? service.title} service={service} />
+            ))}
+          </div>
         </div>
-      </div>
+      ) : (
+        // Without tiles the photo still needs room below the buttons on wide screens.
+        <div aria-hidden="true" className="xl:h-40" />
+      )}
     </section>
   );
 }
