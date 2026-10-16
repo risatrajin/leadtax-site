@@ -268,12 +268,17 @@
   },
   "cta": {
     "id": "contact",
+    "eyebrow": "Vancouver · Burnaby · Online",
     "title": "A life across borders. A clearer path ahead.",
     "text": "Tell us where you are and where you're going. We'll help you find the next step.",
     "button": {
       "label": "Book a consultation",
       "href": "/contact"
     },
-    "callLabel": "Or call {phone}"
+    "callLabel": "Call {phone}",
+    "image": {
+      "src": "/images/cross-border-cityscape.webp",
+      "position": "50% 55%"
+    }
   }
 }

@@ -227,6 +227,6 @@
       "label": "Book an appointment",
       "href": "#offices"
     },
-    "callLabel": "Or call {phone}"
+    "callLabel": "Call {phone}"
   }
 }
