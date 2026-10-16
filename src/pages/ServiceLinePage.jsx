@@ -3,7 +3,6 @@ import { ArrowRight, Download } from "lucide-react";
 import nav from "../content/nav.json";
 import { posts } from "../content/blog/posts.json";
 import personalTax from "../content/pages/personal-tax.json";
-import corporateTax from "../content/pages/corporate-tax.json";
 import PageShell from "../components/layout/PageShell.jsx";
 import PageHero from "../components/ui/PageHero.jsx";
 import Button from "../components/ui/Button.jsx";
@@ -13,7 +12,7 @@ import { CheckItem, ClosingCta, H2, IconCardGrid, SectionTitle } from "../compon
 import { getIcon } from "../lib/icons.js";
 import { CARD, CARD_TITLE, ICON_BADGE } from "../lib/styles.js";
 
-const PAGES = { "personal-tax": personalTax, "corporate-tax": corporateTax };
+const PAGES = { "personal-tax": personalTax };
 
 /** The three ways to work with LeadTax, linking to their pages (titles and text from nav.json). */
 const WAYS = ["fileInPerson", "fileRemotely", "dropOff"].map((id) => nav.links[id]);
@@ -191,7 +190,7 @@ function Articles({ articles, className }) {
 }
 
 /**
- * Personal tax and Corporate tax pages, in the same layout as the Trust & estate page:
+ * Personal tax page, in the same layout as the Trust & estate page:
  * photo hero, services, steps with a side panel, who we help, ways to work with us,
  * optional FAQ, related articles and the booking panel. Content: src/content/pages/<slug>.json.
  */

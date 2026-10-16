@@ -20,6 +20,7 @@ import TermsPage from "./pages/TermsPage.jsx";
 import PrivacyPolicyPage from "./pages/PrivacyPolicyPage.jsx";
 import PricingPage from "./pages/PricingPage.jsx";
 import UsCrossBorderPage from "./pages/UsCrossBorderPage.jsx";
+import CorporateTaxPage from "./pages/CorporateTaxPage.jsx";
 import ServiceLinePage from "./pages/ServiceLinePage.jsx";
 import BookkeepingPage from "./pages/BookkeepingPage.jsx";
 import TrustEstatePage from "./pages/TrustEstatePage.jsx";
@@ -50,7 +51,7 @@ export default function App() {
         <Route path="/file-in-person" element={<FileInPersonPage />} />
         <Route path="/us-cross-border" element={<UsCrossBorderPage />} />
         <Route path="/personal-tax" element={<ServiceLinePage slug="personal-tax" />} />
-        <Route path="/corporate-tax" element={<ServiceLinePage slug="corporate-tax" />} />
+        <Route path="/corporate-tax" element={<CorporateTaxPage />} />
         <Route path="/business-tax" element={<RedirectTo to="/corporate-tax" />} />
         <Route path="/bookkeeping" element={<BookkeepingPage />} />
         <Route path="/trust-estate-tax" element={<TrustEstatePage />} />

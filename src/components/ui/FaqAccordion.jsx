@@ -1,11 +1,12 @@
 import { useState } from "react";
-import { ChevronDown } from "lucide-react";
+import { ArrowUpRight, ChevronDown } from "lucide-react";
+import SmartLink from "./SmartLink.jsx";
 import Collapse from "./Collapse.jsx";
 
 /**
  * Expandable question list. Two styles exist on the site:
  * - "simple" (homepage): any number of answers open at once; answers keep line breaks.
- * - "bordered" (/faq): one answer open at a time.
+ * - "bordered" (/faq): one answer open at a time; an item may add a `link` ({ label, to | href }).
  */
 export default function FaqAccordion({ items, variant = "simple" }) {
   if (variant === "bordered") return <BorderedFaq items={items} />;
@@ -56,6 +57,17 @@ function BorderedFaq({ items }) {
           </button>
           <Collapse open={openIndex === index} className="px-6 pb-6">
             <p className="text-gray-600 leading-relaxed">{item.answer}</p>
+            {item.link && (
+              <SmartLink
+                to={item.link.to}
+                href={item.link.href}
+                {...(item.link.href ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+                className="mt-3 inline-flex items-center gap-1 font-semibold text-brand underline-offset-4 hover:underline"
+              >
+                {item.link.label}
+                <ArrowUpRight aria-hidden="true" className="h-4 w-4" />
+              </SmartLink>
+            )}
           </Collapse>
         </div>
       ))}

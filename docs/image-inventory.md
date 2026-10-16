@@ -116,3 +116,4 @@ number (604) 568-4829, which differs from the number the site lists for Commerci
 | `cross-border/moving-unpacking.webp` | 960 wide, 92 KB | Two friends laughing while unpacking boxes | Lummi free licence (asset `QmNU4Nsf…`) | Same section: Moving to Canada or the U.S. |
 | `cross-border/pensions-couple.webp` | 960 wide, 68 KB | Older couple relaxing on a sofa | Lummi free licence (asset `QmULxW5R…`) | Same section: Property, pensions & equity |
 | `cross-border/prior-years-files.webp` | 960 wide, 72 KB | Hands sorting colour-coded folders in a filing drawer | Lummi free licence (asset `QmPnjvtf…`) | Same section: Prior years & missed filings |
+| `corporate-team.webp` | 1200×800, 68 KB | Two business owners reviewing a financial report with an accountant | Supplied with the corporate page design (`corporate-team.png`); AI-generated per its README | Corporate tax hero, with the "Clarity at every year-end" note card |

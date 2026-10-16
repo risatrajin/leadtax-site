@@ -10,10 +10,14 @@ import { fill } from "../../lib/template.js";
 
 export const H2 = "text-3xl text-gray-900 md:text-4xl lg:text-5xl";
 
-/** Section heading with an optional intro; `small` for headings inside cards. */
-export function SectionTitle({ title, text, center, small }) {
+/** Small blue label above a section heading. */
+export const EYEBROW = "text-sm font-semibold uppercase tracking-wider text-brand-bright";
+
+/** Section heading with an optional label and intro; `small` for headings inside cards. */
+export function SectionTitle({ eyebrow, title, text, center, small }) {
   return (
     <div className={cx("max-w-3xl", center && "mx-auto text-center")}>
+      {eyebrow && <p className={cx(EYEBROW, "mb-3")}>{eyebrow}</p>}
       <h2 className={small ? "text-2xl text-gray-900 md:text-3xl" : H2}>
         {title}
       </h2>
@@ -38,6 +42,7 @@ export function CheckItem({ children, tone = "text-brand-bright" }) {
 /** Grid of white cards, each with an icon badge, title and text. */
 export function IconCardGrid({
   id,
+  eyebrow,
   title,
   text,
   items,
@@ -49,7 +54,7 @@ export function IconCardGrid({
       className={cx("scroll-mt-28 px-4 py-16 md:px-8 md:py-24", className)}
     >
       <div className="mx-auto max-w-7xl">
-        <SectionTitle title={title} text={text} />
+        <SectionTitle eyebrow={eyebrow} title={title} text={text} />
         <ul className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {items.map((item) => {
             const Icon = getIcon(item.icon);
