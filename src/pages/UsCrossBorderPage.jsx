@@ -8,7 +8,7 @@ import OtherWays from "../sections/home/OtherWays.jsx";
 import Situations from "../sections/home/Situations.jsx";
 import Reviews from "../sections/home/Reviews.jsx";
 import Faq from "../sections/home/Faq.jsx";
-import CtaPanel from "../sections/home/CtaPanel.jsx";
+import ContactEnquiry from "../sections/home/ContactEnquiry.jsx";
 
 /**
  * US & cross-border page: the redesigned homepage layout with the cross-border content
@@ -27,7 +27,7 @@ export default function UsCrossBorderPage() {
         <Offices />
         <Reviews />
         <Faq content={content} />
-        <CtaPanel content={content} to={content.cta.button.href} />
+        <ContactEnquiry contact={content.contact} />
       </main>
       <SiteFooter />
     </div>

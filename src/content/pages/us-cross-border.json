@@ -266,19 +266,37 @@
       }
     ]
   },
-  "cta": {
+  "contact": {
     "id": "contact",
-    "eyebrow": "Vancouver · Burnaby · Online",
-    "title": "A life across borders. A clearer path ahead.",
+    "eyebrow": "Your next chapter starts here",
+    "titleLead": "A life across borders.",
+    "titleAccent": "A clearer path ahead.",
     "text": "Tell us where you are and where you're going. We'll help you find the next step.",
-    "button": {
-      "label": "Book a consultation",
-      "href": "/contact"
-    },
-    "callLabel": "Call {phone}",
-    "image": {
-      "src": "/images/cross-border-cityscape.webp",
-      "position": "50% 55%"
+    "phone": "6049784850",
+    "location": "Vancouver · Burnaby · Online",
+    "emailSubject": "Cross-border tax consultation",
+    "card": {
+      "tag": "Let's connect",
+      "title": "How can we help?",
+      "text": "Choose your situation to prepare a consultation enquiry.",
+      "selectLabel": "I'd like help with",
+      "options": [
+        "U.S. citizen living in Canada",
+        "U.S. income or property",
+        "Moving between Canada and the U.S.",
+        "Business ownership or investments",
+        "Prior years or missed filings",
+        "Other cross-border tax questions"
+      ],
+      "button": "Prepare consultation email",
+      "emailSubject": "Cross-border tax consultation — {topic}",
+      "emailBody": "Hello LeadTax,\n\nI would like to discuss: {topic}.\n\nMy country of residence:\nTax years involved:\nA brief overview of my situation:\nPreferred contact number:\n\nThank you.",
+      "fine": "Opens a draft in your email app. Please leave out SINs, SSNs and financial account numbers.",
+      "remoteLabel": "Ready with your documents?",
+      "remoteLink": {
+        "label": "Start remote filing",
+        "to": "/file-remotely"
+      }
     }
   }
 }
