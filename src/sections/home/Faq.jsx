@@ -1,9 +1,8 @@
-import content from "../../content/home.json";
+import home from "../../content/home.json";
 import FaqList from "../../components/ui/FaqList.jsx";
 
-const { faq } = content;
-
-export default function Faq() {
+export default function Faq({ content = home }) {
+  const { faq } = content;
   return (
     <section className="bg-white px-4 py-16 md:px-8 md:py-24">
       <div className="mx-auto grid max-w-7xl gap-10 xl:grid-cols-[400px_1fr] xl:gap-16">

@@ -1,12 +1,12 @@
 import { Check, Download } from "lucide-react";
-import content from "../../content/home.json";
+import home from "../../content/home.json";
 import SmartLink from "../../components/ui/SmartLink.jsx";
 import { CARD, CARD_TITLE } from "../../lib/styles.js";
 
-const { firstVisit } = content;
-const { checklist } = firstVisit;
-
-export default function FirstVisit() {
+/** Numbered steps with a checklist card beside them. The download link is optional. */
+export default function FirstVisit({ content = home }) {
+  const { firstVisit } = content;
+  const { checklist } = firstVisit;
   return (
     <section className="bg-white px-4 py-16 md:px-8 md:py-24">
       <div className="mx-auto grid max-w-7xl gap-12 xl:grid-cols-[1fr_420px] xl:items-end xl:gap-16">
@@ -38,6 +38,7 @@ export default function FirstVisit() {
               </li>
             ))}
           </ul>
+          {checklist.download && (
           <SmartLink
             href={checklist.download.href}
             className="mt-8 inline-flex items-center gap-2 font-semibold text-brand underline-offset-4 hover:underline"
@@ -45,6 +46,7 @@ export default function FirstVisit() {
             <Download aria-hidden="true" className="h-4 w-4" />
             {checklist.download.label}
           </SmartLink>
+          )}
         </aside>
       </div>
     </section>

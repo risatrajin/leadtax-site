@@ -1,5 +1,5 @@
 import { ArrowRight, CalendarDays, MapPin, Star } from "lucide-react";
-import content from "../../content/home.json";
+import home from "../../content/home.json";
 import reviews from "../../content/reviews.json";
 import { getIcon } from "../../lib/icons.js";
 import { fill } from "../../lib/template.js";
@@ -8,10 +8,9 @@ import SmartLink from "../../components/ui/SmartLink.jsx";
 import GoogleLogo from "../../components/ui/GoogleLogo.jsx";
 import { isEnabled, linkById } from "../../components/layout/site-header/panels.jsx";
 
-const { hero } = content;
 const reviewCount = reviews.count.replace(/[()]/g, "");
 
-function TrustRow() {
+function TrustRow({ hero }) {
   return (
     <ul className="mx-auto grid max-w-xs gap-6 sm:max-w-5xl sm:grid-cols-3 sm:gap-0 sm:divide-x sm:divide-gray-200">
       <li className="flex items-center gap-3 sm:justify-center sm:px-6">
@@ -49,7 +48,8 @@ const CARD_CLASSES =
 
 /** A service tile. It links to the service page when that page exists, otherwise it is plain content. */
 export function ServiceCard({ service }) {
-  const link = linkById(service.link);
+  // A nav.json link id, or a direct `to` / `href` on the tile.
+  const link = service.link ? linkById(service.link) : service;
   const Icon = getIcon(service.icon);
   const body = (
     <>
@@ -76,7 +76,8 @@ export function ServiceCard({ service }) {
  * The text is left-aligned; on the photo it is white over a dark left-to-right gradient.
  * Below 1280px the photo sits on top, full width. The trust row is a separate band (TrustBand).
  */
-export default function Hero() {
+export default function Hero({ content = home }) {
+  const { hero } = content;
   return (
     <section aria-labelledby="hero-title" className="relative overflow-hidden bg-white">
       <div className="relative h-64 sm:h-80 lg:h-[26rem] xl:absolute xl:inset-0 xl:h-auto">
@@ -130,10 +131,10 @@ export default function Hero() {
 }
 
 /** Rating and trust points in a centered three-column grid directly under the hero. */
-export function TrustBand() {
+export function TrustBand({ content = home }) {
   return (
     <div className="border-b border-gray-200 bg-white px-4 py-8 md:px-8">
-      <TrustRow />
+      <TrustRow hero={content.hero} />
     </div>
   );
 }
