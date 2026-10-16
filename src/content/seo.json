@@ -73,9 +73,9 @@
       "description": "File your taxes remotely with expert guidance. Meet with a LeadTax tax professional online and get your return prepared accurately without visiting an office."
     },
     "usCrossBorder": {
-      "_note": "The page now uses the redesigned homepage layout; title and description stay as published.",
-      "title": "US Cross-Border Tax Services for Canadians | LeadTax",
-      "description": "Navigate US-Canada tax obligations with confidence. LeadTax offers expert guidance for dual residents, US property owners and cross-border workers."
+      "_note": "Title and description from the supplied cross-border design. The URL is unchanged; this page previously had the generic site title.",
+      "title": "U.S. & Canada Cross-Border Tax | LeadTax",
+      "description": "A clearer path through U.S. and Canadian tax. Explore cross-border filing, residency, foreign asset reporting and tax planning with LeadTax in Vancouver, Burnaby and online."
     },
     "career": {
       "_note": "Added: this page used the generic default title.",

@@ -5,7 +5,6 @@ import Analytics from "./components/global/Analytics.jsx";
 import IntercomWidget from "./components/global/IntercomWidget.jsx";
 import Seo from "./components/seo/Seo.jsx";
 import RedirectTo from "./components/global/RedirectTo.jsx";
-import HomePage from "./pages/HomePage.jsx";
 import LegacyHomePage from "./pages/LegacyHomePage.jsx";
 import FileRemotelyPage from "./pages/FileRemotelyPage.jsx";
 import DropOffPage from "./pages/DropOffPage.jsx";
@@ -19,14 +18,15 @@ import FaqPage from "./pages/FaqPage.jsx";
 import TermsPage from "./pages/TermsPage.jsx";
 import PrivacyPolicyPage from "./pages/PrivacyPolicyPage.jsx";
 import PricingPage from "./pages/PricingPage.jsx";
+import UsCrossBorderPage from "./pages/UsCrossBorderPage.jsx";
 import ServiceLinePage from "./pages/ServiceLinePage.jsx";
 import BookkeepingPage from "./pages/BookkeepingPage.jsx";
 import TrustEstatePage from "./pages/TrustEstatePage.jsx";
 import NotFoundPage from "./pages/NotFoundPage.jsx";
 
 /*
- * "/" is the original DIY homepage. The redesigned homepage is the US & cross-border page
- * (/us-cross-border); /home-legacy and /home-v2 redirect to "/", /home-redesign to /us-cross-border.
+ * "/" is the original DIY homepage; /home-legacy and /home-v2 redirect to "/", /home-redesign to
+ * /us-cross-border.
  * Other routes are in the same order as the original build. /sign-in, /diy-landing,
  * /dyi-landing and /file-remote-landing were not rebuilt (their copy is in
  * src/content/archive/). /sitemap.xml and /robots.txt are static files in public/.
@@ -46,7 +46,7 @@ export default function App() {
         <Route path="/file-remotely" element={<FileRemotelyPage />} />
         <Route path="/drop-off" element={<DropOffPage />} />
         <Route path="/file-in-person" element={<FileInPersonPage />} />
-        <Route path="/us-cross-border" element={<HomePage />} />
+        <Route path="/us-cross-border" element={<UsCrossBorderPage />} />
         <Route path="/personal-tax" element={<ServiceLinePage slug="personal-tax" />} />
         <Route path="/business-tax" element={<ServiceLinePage slug="business-tax" />} />
         <Route path="/bookkeeping" element={<BookkeepingPage />} />

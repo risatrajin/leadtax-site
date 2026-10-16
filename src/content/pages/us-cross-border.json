@@ -1,0 +1,247 @@
+{
+  "_note": "US & cross-border page, from the supplied cross-border design (cross-border-latest/index.html), laid out with the site's components. Tax content is general information; an accountant should confirm it (question 25).",
+  "_placeholders": [
+    "faq",
+    "services.items"
+  ],
+  "hero": {
+    "title": "Two countries. One life. Let's connect the details.",
+    "text": "Live, work or invest across the border? Bring your U.S. and Canadian tax picture together, with a clearer plan for what comes next.",
+    "actions": [
+      {
+        "label": "Let's talk cross-border",
+        "href": "#contact"
+      },
+      {
+        "label": "Find your situation",
+        "href": "#situations"
+      }
+    ],
+    "trust": [
+      "Canadian & U.S. filings",
+      "Residency & treaty considerations",
+      "In-person & remote options"
+    ],
+    "image": {
+      "src": "/images/cross-border-cityscape.webp",
+      "alt": "Creative composite of Vancouver and New York waterfront skylines"
+    }
+  },
+  "situations": {
+    "title": "Your life crosses borders. Your tax plan should, too.",
+    "text": "A new job, a new home, or financial ties in both countries. Choose the situation closest to yours.",
+    "linkLabel": "Talk about your situation",
+    "items": [
+      {
+        "id": "american",
+        "label": "I'm an American in Canada",
+        "tag": "Americans living in Canada",
+        "title": "At home in Canada. Still connected to the U.S.",
+        "text": "U.S. citizenship can come with filing obligations even when you live in Canada. Start by reviewing both countries' returns and any foreign account reporting that applies.",
+        "points": [
+          "U.S. individual and Canadian income tax returns",
+          "Foreign tax credit and treaty considerations",
+          "FBAR and other foreign asset reporting review"
+        ]
+      },
+      {
+        "id": "income",
+        "label": "I have U.S. income or property",
+        "tag": "U.S. income & property",
+        "title": "Income on one side. Life on the other.",
+        "text": "A U.S. job, rental property or investment can create questions in both countries. Connect your income sources with your residency and filing history.",
+        "points": [
+          "U.S. non-resident and state filing review",
+          "Rental income and property sale considerations",
+          "Canadian reporting and foreign tax credit review"
+        ]
+      },
+      {
+        "id": "moving",
+        "label": "I'm moving across the border",
+        "tag": "A cross-border move",
+        "title": "A new address. A new tax picture.",
+        "text": "Before or after your move, bring together the dates, residential ties, income and assets that help determine your tax obligations.",
+        "points": [
+          "Tax residency and arrival or departure review",
+          "Potential departure tax and asset considerations",
+          "Moving-year income and filing coordination"
+        ]
+      },
+      {
+        "id": "business",
+        "label": "I own a business or investments",
+        "tag": "Business & investments",
+        "title": "Build your future. Understand the connections.",
+        "text": "Corporate ownership and investments can add reporting requirements beyond a personal return. Start with an assessment of your structure and holdings.",
+        "points": [
+          "Ownership and foreign corporation reporting review",
+          "Investment account and retirement plan considerations",
+          "Engagement scope and specialist needs assessment"
+        ]
+      },
+      {
+        "id": "behind",
+        "label": "I need to catch up on filing",
+        "tag": "Prior years & missed filings",
+        "title": "A fresh start begins with a clear picture.",
+        "text": "Not sure what should have been filed? Gather your filing history and any notices. We'll discuss the next steps based on your circumstances.",
+        "points": [
+          "Outstanding returns and information forms review",
+          "Correction options and eligibility assessment",
+          "A plan for the records and years involved"
+        ]
+      }
+    ]
+  },
+  "services": {
+    "title": "Small details. Big-picture thinking.",
+    "text": "From annual returns to life-changing moves, start with the questions that matter to your circumstances.",
+    "items": [
+      {
+        "icon": "FileText",
+        "title": "U.S. & Canadian returns",
+        "text": "Bring your T1, U.S. individual return and applicable state filings into one coordinated conversation."
+      },
+      {
+        "icon": "Scale",
+        "title": "Double-tax considerations",
+        "text": "Review foreign tax credits, income sourcing and treaty provisions that may help address tax in both countries."
+      },
+      {
+        "icon": "Landmark",
+        "title": "Foreign accounts & assets",
+        "text": "Identify potential FBAR, Form 8938, T1135 and other information reporting requirements based on your holdings."
+      },
+      {
+        "icon": "Truck",
+        "title": "Moving to Canada or the U.S.",
+        "text": "Discuss tax residency, arrival or departure dates, assets and the tax implications of a cross-border move."
+      },
+      {
+        "icon": "House",
+        "title": "Property, pensions & equity",
+        "text": "Connect the details of rental income, property sales, retirement accounts, stock options and RSUs."
+      },
+      {
+        "icon": "History",
+        "title": "Prior years & missed filings",
+        "text": "Understand which years and forms may be outstanding, and discuss correction options and eligibility."
+      }
+    ],
+    "note": "Your engagement starts with a scope review. Required filings, specialist needs and fees depend on your individual circumstances."
+  },
+  "perspective": {
+    "title": "One return rarely tells the whole story.",
+    "paragraphs": [
+      "Where you live, where you earn and what you own can all affect your filing obligations. A decision in one country may matter in the other.",
+      "Start with a conversation about your complete situation, before you make your next move."
+    ],
+    "button": {
+      "label": "See the bigger picture",
+      "href": "#contact"
+    },
+    "left": "Canada",
+    "right": "United States",
+    "caption": "One connected tax picture"
+  },
+  "process": {
+    "title": "Less wondering. More knowing what's next.",
+    "items": [
+      {
+        "title": "Tell us your story.",
+        "text": "Share where you live, your citizenship, income sources and any upcoming changes. We'll discuss the scope and fees."
+      },
+      {
+        "title": "Bring the details together.",
+        "text": "Gather prior returns and relevant records. We'll explain the document-sharing process and follow up on missing information."
+      },
+      {
+        "title": "Review & move forward.",
+        "text": "Review the prepared work, ask questions and authorize applicable filings. Understand the next steps for your situation."
+      }
+    ],
+    "prepare": {
+      "title": "A few details help us get started.",
+      "items": [
+        "Countries of citizenship and residence",
+        "Years to file",
+        "Income sources",
+        "Prior returns or tax notices",
+        "Dates of any move"
+      ]
+    }
+  },
+  "faq": {
+    "title": "Big questions. A place to start.",
+    "text": "Every cross-border situation is different. Let's talk about yours.",
+    "items": [
+      {
+        "question": "I'm a U.S. citizen living in Canada. Do I still need to file?",
+        "answer": "U.S. citizens are generally subject to U.S. tax rules on worldwide income, even while living abroad. Whether a return is required depends on factors such as income, age and filing status. Foreign account reporting may also apply."
+      },
+      {
+        "question": "Will I pay tax twice on the same income?",
+        "answer": "Foreign tax credits and treaty provisions may help address double taxation, subject to eligibility and limits. They do not automatically remove filing requirements or every instance of tax in both countries."
+      },
+      {
+        "question": "Can I work with LeadTax remotely?",
+        "answer": "Yes. Use the remote filing link to begin, or contact us first to discuss your cross-border situation and the appropriate way to share documents."
+      },
+      {
+        "question": "What if I haven't filed U.S. returns for several years?",
+        "answer": "Start with a review of your filing history, income and accounts. Correction options depend on your facts. Any available relief procedure has eligibility requirements and should be assessed before filing."
+      },
+      {
+        "question": "How much will cross-border tax preparation cost?",
+        "answer": "The fee depends on the countries and years involved, income sources and required forms. Contact us for a scope review and quote before work begins."
+      }
+    ],
+    "sources": {
+      "text": "General information only; individual advice depends on your facts. Learn more from the",
+      "links": [
+        {
+          "label": "IRS",
+          "href": "https://www.irs.gov/individuals/international-taxpayers/us-citizens-and-resident-aliens-abroad"
+        },
+        {
+          "label": "CRA",
+          "href": "https://www.canada.ca/en/revenue-agency/services/tax/international-non-residents-tax.html"
+        }
+      ]
+    }
+  },
+  "contact": {
+    "title": "A life across borders. A clearer path ahead.",
+    "text": "Tell us where you are and where you're going. We'll help you find the next step.",
+    "phone": "6049784850",
+    "email": "info@leadtax.ca",
+    "locations": "Vancouver · Burnaby · Online",
+    "card": {
+      "title": "How can we help?",
+      "text": "Choose your situation to prepare a consultation enquiry.",
+      "selectLabel": "I'd like help with",
+      "options": [
+        "U.S. citizen living in Canada",
+        "U.S. income or property",
+        "Moving between Canada and the U.S.",
+        "Business ownership or investments",
+        "Prior years or missed filings",
+        "Other cross-border tax questions"
+      ],
+      "button": "Prepare consultation email",
+      "fine": "Opens a draft in your email app. Please leave out SINs, SSNs and financial account numbers.",
+      "subject": "Cross-border tax consultation — {topic}",
+      "body": "Hello LeadTax,\n\nI would like to discuss: {topic}.\n\nMy country of residence:\nTax years involved:\nA brief overview of my situation:\nPreferred contact number:\n\nThank you.",
+      "remoteLabel": "Ready with your documents?",
+      "remoteLink": {
+        "label": "Start remote filing",
+        "to": "/file-remotely"
+      },
+      "bookLink": {
+        "label": "Book an appointment",
+        "to": "/contact"
+      }
+    }
+  }
+}
