@@ -140,6 +140,11 @@
         "link": {
           "label": "Discuss your returns",
           "href": "#contact"
+        },
+        "badge": "Annual returns",
+        "image": {
+          "src": "/images/cross-border/returns-meeting.webp",
+          "alt": "A tax advisor reviewing documents with a client at a table"
         }
       },
       {
@@ -148,6 +153,11 @@
         "link": {
           "label": "Explore your tax picture",
           "href": "#contact"
+        },
+        "badge": "Double tax",
+        "image": {
+          "src": "/images/cross-border/double-tax-desk.webp",
+          "alt": "Financial reports, a calculator and a laptop on a desk"
         }
       },
       {
@@ -156,6 +166,11 @@
         "link": {
           "label": "Review your reporting",
           "href": "#contact"
+        },
+        "badge": "Reporting",
+        "image": {
+          "src": "/images/cross-border/foreign-accounts-phone.webp",
+          "alt": "A smartphone showing a bank card in a banking app"
         }
       },
       {
@@ -164,6 +179,11 @@
         "link": {
           "label": "Plan your next chapter",
           "href": "#contact"
+        },
+        "badge": "Moving",
+        "image": {
+          "src": "/images/cross-border/moving-unpacking.webp",
+          "alt": "Two friends laughing while unpacking boxes in a new home"
         }
       },
       {
@@ -172,6 +192,11 @@
         "link": {
           "label": "Bring your questions",
           "href": "#contact"
+        },
+        "badge": "Property & retirement",
+        "image": {
+          "src": "/images/cross-border/pensions-couple.webp",
+          "alt": "An older couple relaxing together on a sofa at home"
         }
       },
       {
@@ -180,6 +205,11 @@
         "link": {
           "label": "Find a starting point",
           "href": "#contact"
+        },
+        "badge": "Catch-up",
+        "image": {
+          "src": "/images/cross-border/prior-years-files.webp",
+          "alt": "Hands sorting colour-coded folders in a filing drawer"
         }
       }
     ]
