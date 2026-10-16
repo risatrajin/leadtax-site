@@ -26,8 +26,8 @@ export default function UsCrossBorderPage() {
         <FirstVisit content={content} />
         <Offices />
         <Reviews />
-        <Faq content={content} />
         <ContactEnquiry contact={content.contact} />
+        <Faq content={content} className="bg-gray-50" />
       </main>
       <SiteFooter />
     </div>

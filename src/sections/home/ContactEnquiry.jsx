@@ -21,7 +21,7 @@ export default function ContactEnquiry({ contact }) {
   const mailto = `mailto:${email}?subject=${encodeURIComponent(fill(card.emailSubject, { topic }))}&body=${encodeURIComponent(fill(card.emailBody, { topic }))}`;
 
   return (
-    <section id={contact.id} className="scroll-mt-28 bg-gray-50 px-4 py-16 md:px-8 md:py-24">
+    <section id={contact.id} className="scroll-mt-28 bg-white px-4 py-16 md:px-8 md:py-24">
       <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[1fr_minmax(0,32rem)] lg:items-center lg:gap-16">
         <div>
           <p className="text-sm font-semibold uppercase tracking-wider text-brand-bright">{contact.eyebrow}</p>
