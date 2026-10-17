@@ -26,7 +26,7 @@ function Hero() {
   const { hero } = home;
   const lines = hero.title.match(/[^.]+\./g);
   return (
-    <section className="relative bg-white">
+    <section className="relative bg-gray-50">
       <div className="bg-hero-blue px-4 text-white md:px-8">
         <div className="mx-auto grid max-w-7xl items-end gap-8 lg:grid-cols-[1.15fr_0.85fr]">
           <div className="pb-10 pt-14 md:pt-20 lg:pb-40 lg:pt-24">
@@ -55,7 +55,7 @@ function Hero() {
       </div>
 
       {/* Same column as the text above: padding outside, a 1280px column inside. */}
-      <div className="relative z-10 -mt-12 px-4 pb-12 md:px-8 lg:-mt-16">
+      <div className="relative z-10 -mt-12 px-4 md:px-8 lg:-mt-16">
         <div className="mx-auto max-w-7xl">
           <h2 className="sr-only">{hero.tilesTitle}</h2>
           <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-5 lg:gap-4">
