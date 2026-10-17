@@ -97,7 +97,7 @@ export default function HomePage() {
         <WaysShowcase ways={home.ways} />
         <ProcessShowcase process={home.process} tiles={home.hero.tiles} />
         <Faq />
-        <PreviousYearsBanner className="bg-gray-50" portrait={home.previousYears.portrait} />
+        <PreviousYearsBanner className="bg-gray-50" image={home.previousYears.image} />
         <Offices className="bg-white" />
         <EnquirySection />
       </main>
