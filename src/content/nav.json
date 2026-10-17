@@ -114,6 +114,7 @@
             "items": [
               "personalTax",
               "corporateTax",
+              "bookkeeping",
               "trustEstate",
               "usCrossBorder"
             ]
@@ -143,10 +144,6 @@
             "to": "/contact"
           }
         }
-      },
-      {
-        "type": "link",
-        "link": "bookkeeping"
       },
       {
         "type": "mega",
