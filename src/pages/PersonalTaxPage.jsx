@@ -18,23 +18,35 @@ function Hero() {
   const { hero, strip } = page;
   return (
     <>
-      <PageHero title={hero.title} text={hero.text} actions={hero.actions} image={hero.image} imageNote={hero.imageNote}>
-        <ul className="mt-8 flex flex-wrap gap-x-6 gap-y-2">
+      <PageHero title={hero.title} text={hero.text} actions={hero.actions} image={hero.image} imageNote={hero.imageNote} decor>
+        <ul className="mt-8 flex flex-wrap gap-2">
           {hero.trust.map((item) => (
-            <CheckItem key={item} tone="text-white">
+            <li
+              key={item}
+              className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-3.5 py-1.5 text-sm font-medium backdrop-blur"
+            >
+              <Check aria-hidden="true" className="h-4 w-4 text-brand-subtle" />
               {item}
-            </CheckItem>
+            </li>
           ))}
         </ul>
       </PageHero>
-      <div className="border-b border-gray-200 bg-white px-4 py-8 md:px-8">
-        <ul className="mx-auto grid max-w-7xl gap-4 sm:grid-cols-3 sm:gap-0 sm:divide-x sm:divide-gray-200">
-          {strip.map((item) => (
-            <li key={item.title} className="sm:px-6 sm:text-center">
-              <span className="font-semibold text-gray-900">{item.title}</span>{" "}
-              <span className="text-gray-600">{item.text}</span>
-            </li>
-          ))}
+      <div className="bg-white px-4 pt-10 md:px-8">
+        <ul className="mx-auto grid max-w-7xl gap-4 sm:grid-cols-3">
+          {strip.map((item) => {
+            const Icon = getIcon(item.icon);
+            return (
+              <li key={item.title} className="flex items-center gap-4 rounded-2xl border border-gray-200 bg-gray-50 p-5">
+                <span className="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-xl bg-white text-brand-bright shadow-sm">
+                  <Icon aria-hidden="true" className="h-5 w-5" />
+                </span>
+                <div>
+                  <p className="font-semibold text-gray-900">{item.title}</p>
+                  <p className="text-sm text-gray-600">{item.text}</p>
+                </div>
+              </li>
+            );
+          })}
         </ul>
       </div>
     </>
@@ -44,20 +56,23 @@ function Hero() {
 function Services() {
   const { services } = page;
   return (
-    <section id="services" className="scroll-mt-28 bg-white px-4 py-16 md:px-8 md:py-24">
+    <section id="services" className="scroll-mt-28 bg-white px-4 pb-16 pt-14 md:px-8 md:pb-24 md:pt-20">
       <div className="mx-auto max-w-7xl">
         <SectionTitle eyebrow={services.eyebrow} title={services.title} text={services.text} />
         <ul className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {services.items.map((item) => {
             const Icon = getIcon(item.icon);
             return (
-              <li key={item.title} className={`${CARD} flex flex-col p-6`}>
-                <div className={ICON_BADGE}>
+              <li
+                key={item.title}
+                className={`${CARD} group flex flex-col p-7 transition duration-300 hover:-translate-y-1 hover:border-brand-fade hover:shadow-xl motion-reduce:hover:translate-y-0`}
+              >
+                <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-brand-bright to-brand text-white shadow-md transition-transform duration-300 group-hover:scale-110 motion-reduce:group-hover:scale-100">
                   <Icon aria-hidden="true" className="h-6 w-6" />
                 </div>
                 <h3 className={`mt-4 ${CARD_TITLE}`}>{item.title}</h3>
                 <p className="mt-2 flex-1 text-gray-600">{item.text}</p>
-                <p className="mt-5 border-t border-gray-100 pt-4 text-sm font-semibold text-brand-bright">{item.tag}</p>
+                <p className="mt-5 self-start rounded-full bg-brand-subtle/60 px-3 py-1 text-xs font-semibold text-brand">{item.tag}</p>
               </li>
             );
           })}
@@ -67,45 +82,27 @@ function Services() {
   );
 }
 
-/** Numbered steps, each with a title and text. */
-function Steps({ items, icons }) {
+/** Numbered steps joined by a thin line, each with a title and text. */
+function Steps({ items }) {
   return (
-    <ol className="space-y-5">
-      {items.map((step, index) => {
-        const Icon = icons ? getIcon(step.icon) : null;
-        return (
-          <li key={step.title} className="flex gap-4">
-            <span
-              aria-hidden="true"
-              className={cx(
-                "flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full font-bold",
-                Icon ? "bg-brand-subtle text-brand-bright" : "bg-brand text-white",
-              )}
-            >
-              {Icon ? <Icon className="h-5 w-5" /> : index + 1}
-            </span>
-            <div>
-              <h3 className="text-lg font-semibold text-gray-900">{step.title}</h3>
-              <p className="mt-1 text-gray-600">{step.text}</p>
-              {step.links && (
-                <ul className="mt-3 flex flex-wrap gap-2">
-                  {enabledLinks(step.links).map((link) => (
-                    <li key={link.to}>
-                      <SmartLink
-                        to={link.to}
-                        className="inline-flex items-center gap-1.5 rounded-full border border-gray-200 bg-white px-3 py-1.5 text-sm font-semibold text-brand transition hover:border-brand"
-                      >
-                        {link.label}
-                        <ArrowRight aria-hidden="true" className="h-3.5 w-3.5" />
-                      </SmartLink>
-                    </li>
-                  ))}
-                </ul>
-              )}
-            </div>
-          </li>
-        );
-      })}
+    <ol>
+      {items.map((step, index) => (
+        <li
+          key={step.title}
+          className="relative flex gap-4 pb-7 last:pb-0 [&:not(:last-child)]:before:absolute [&:not(:last-child)]:before:bottom-0 [&:not(:last-child)]:before:left-5 [&:not(:last-child)]:before:top-12 [&:not(:last-child)]:before:w-px [&:not(:last-child)]:before:bg-gray-200"
+        >
+          <span
+            aria-hidden="true"
+            className="relative flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-brand font-bold text-white ring-4 ring-gray-50"
+          >
+            {index + 1}
+          </span>
+          <div>
+            <h3 className="text-lg font-semibold text-gray-900">{step.title}</h3>
+            <p className="mt-1 text-gray-600">{step.text}</p>
+          </div>
+        </li>
+      ))}
     </ol>
   );
 }
@@ -122,14 +119,17 @@ function Process() {
             <Steps items={process.steps} />
           </div>
         </div>
-        <aside className="rounded-3xl bg-gradient-to-br from-brand to-brand-strong p-8 text-white shadow-xl md:p-10">
+        <aside className="relative isolate overflow-hidden rounded-3xl bg-gradient-to-br from-brand to-brand-strong p-8 text-white shadow-2xl md:p-10">
+          <div aria-hidden="true" className="absolute -right-20 -top-20 -z-10 h-64 w-64 rounded-full bg-brand-bright/40 blur-3xl" />
           <p className="text-sm font-semibold uppercase tracking-wider text-brand-subtle">{panel.eyebrow}</p>
           <h3 className="mt-3 text-2xl font-semibold md:text-3xl">{panel.title}</h3>
           <p className="mt-3 text-brand-subtle">{panel.text}</p>
           <ul className="mt-6 divide-y divide-white/15 border-y border-white/15">
             {panel.items.map((item) => (
               <li key={item} className="flex items-center gap-3 py-3.5">
-                <Check aria-hidden="true" className="h-5 w-5 flex-shrink-0 text-brand-subtle" />
+                <span className="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-white/15">
+                  <Check aria-hidden="true" className="h-3.5 w-3.5" />
+                </span>
                 {item}
               </li>
             ))}
@@ -141,7 +141,7 @@ function Process() {
   );
 }
 
-const TAB = "rounded-full px-4 py-2 text-sm font-semibold transition";
+const TAB = "rounded-full px-4 py-2 text-sm font-semibold transition-all";
 
 function Checklist() {
   const { checklist } = page;
@@ -186,7 +186,7 @@ function Checklist() {
         </div>
         <div className={`${CARD} p-6 md:p-8 print:border-0 print:shadow-none`}>
           <h3 className={CARD_TITLE}>{checklist.cardTitle}</h3>
-          <div role="tablist" aria-label="Document categories" className="mt-5 flex flex-wrap gap-2 print:hidden">
+          <div role="tablist" aria-label="Document categories" className="mt-5 inline-flex flex-wrap gap-1 rounded-3xl bg-gray-100 p-1.5 print:hidden">
             {checklist.tabs.map((t, index) => {
               const selected = t.id === tabId;
               return (
@@ -200,7 +200,7 @@ function Checklist() {
                   tabIndex={selected ? 0 : -1}
                   onClick={() => setTabId(t.id)}
                   onKeyDown={(event) => onTabKey(event, index)}
-                  className={cx(TAB, selected ? "bg-brand text-white shadow-md" : "bg-gray-100 text-gray-700 hover:bg-gray-200")}
+                  className={cx(TAB, selected ? "bg-white text-brand shadow-md" : "text-gray-600 hover:text-gray-900")}
                 >
                   {t.label}
                 </button>
@@ -244,6 +244,46 @@ function Checklist() {
   );
 }
 
+/** Ways to work with us as separate cards; an option may link to related service pages. */
+function Options({ items }) {
+  return (
+    <ul className="space-y-4">
+      {items.map((option) => {
+        const Icon = getIcon(option.icon);
+        return (
+          <li
+            key={option.title}
+            className={`${CARD} flex gap-5 p-6 transition duration-300 hover:-translate-y-0.5 hover:shadow-lg motion-reduce:hover:translate-y-0`}
+          >
+            <span className={ICON_BADGE}>
+              <Icon aria-hidden="true" className="h-6 w-6" />
+            </span>
+            <div>
+              <h3 className="text-lg font-semibold text-gray-900">{option.title}</h3>
+              <p className="mt-1 text-gray-600">{option.text}</p>
+              {option.links && (
+                <ul className="mt-4 flex flex-wrap gap-2">
+                  {enabledLinks(option.links).map((link) => (
+                    <li key={link.to}>
+                      <SmartLink
+                        to={link.to}
+                        className="inline-flex items-center gap-1.5 rounded-full border border-gray-200 bg-white px-3 py-1.5 text-sm font-semibold text-brand transition hover:border-brand hover:bg-brand hover:text-white"
+                      >
+                        {link.label}
+                        <ArrowRight aria-hidden="true" className="h-3.5 w-3.5" />
+                      </SmartLink>
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </div>
+          </li>
+        );
+      })}
+    </ul>
+  );
+}
+
 function Remote() {
   const { remote } = page;
   return (
@@ -259,9 +299,7 @@ function Remote() {
             ))}
           </div>
         </div>
-        <div className={`${CARD} p-6 md:p-8`}>
-          <Steps items={remote.options} icons />
-        </div>
+        <Options items={remote.options} />
       </div>
     </section>
   );

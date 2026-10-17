@@ -33,15 +33,18 @@
   "strip": [
     {
       "title": "Your return",
-      "text": "Reviewed with care"
+      "text": "Reviewed with care",
+      "icon": "ShieldCheck"
     },
     {
       "title": "Your questions",
-      "text": "Explained in plain language"
+      "text": "Explained in plain language",
+      "icon": "MessageCircle"
     },
     {
       "title": "Your choice",
-      "text": "In office or remote"
+      "text": "In office or remote",
+      "icon": "MapPin"
     }
   ],
   "services": {
