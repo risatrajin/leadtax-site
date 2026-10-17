@@ -189,7 +189,7 @@ export default function WaysShowcase({ ways }) {
           className={cx("absolute inset-y-0 bg-gradient-to-br transition-colors duration-700", tab.glow)}
           style={{ left: "var(--inset, 0px)", right: "var(--inset, 0px)", borderRadius: "var(--radius, 0px)" }}
         />
-        <div className="relative mx-auto w-[calc(100%-2rem)] max-w-7xl p-4 sm:p-8 md:w-[calc(100%-4rem)] lg:p-12">
+        <div className="relative mx-auto w-[calc(100%-2rem)] max-w-7xl px-4 py-12 sm:px-8 sm:py-16 md:w-[calc(100%-4rem)] lg:px-12 lg:py-24">
           <div className="flex justify-center">
             <div
               role="tablist"
