@@ -56,7 +56,7 @@
       "description": "Leave your paperwork at any office. We prepare the return."
     },
     "fileOnline": {
-      "label": "File online yourself",
+      "label": "Do it yourself",
       "to": "/file-online",
       "icon": "FileCheck",
       "description": "Use LeadTax online software on your own schedule."

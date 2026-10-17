@@ -13,7 +13,7 @@ import HomeFaq from "../sections/file-online/HomeFaq.jsx";
 import FinalCta from "../sections/file-online/FinalCta.jsx";
 
 /**
- * "File online yourself" landing page: the original DIY homepage (online software, packages,
+ * "Do it yourself" landing page: the original DIY homepage (online software, packages,
  * how it works, tools, expert add-ons, FAQ), moved here when "/" became the services homepage.
  */
 export default function FileOnlinePage() {

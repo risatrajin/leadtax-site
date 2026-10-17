@@ -47,7 +47,7 @@ The original header and footer were replaced by one site-wide `SiteHeader` and `
 | H1 | Desktop dropdowns opened on mouse hover only; no keyboard or touch access on large screens. | — | fixed: menus open on click or hover, close on Escape |
 | H2 | Desktop hover state and mobile tap state shared one variable per menu. | — | resolved |
 | H3 | Desktop "Get Started" was medium weight while "Sign In" was bold. | — | resolved |
-| H4 | "Do It Yourself" linked to `/`. | — | resolved: "File online yourself" goes to the DIY app |
+| H4 | "Do It Yourself" linked to `/`. | — | resolved: "Do it yourself" goes to the /file-online landing page |
 | H5 | Footer email was plain text, not a `mailto:` link. | — | fixed |
 | H6 | The logo's navy "Lead" was hard to read on the navy footer (same as the original footer). | `SiteFooter.jsx` | fixed for now: rendered white with a CSS filter until a reversed logo file arrives (question 35) |
 
