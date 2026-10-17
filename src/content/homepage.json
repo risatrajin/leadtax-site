@@ -10,7 +10,7 @@
       },
       {
         "label": "Let's talk",
-        "href": "#contact"
+        "to": "/contact"
       }
     ],
     "image": {
@@ -79,7 +79,7 @@
     "title": "From your first question to your next step.",
     "cta": {
       "label": "Get started",
-      "href": "#contact"
+      "to": "/contact"
     },
     "steps": [
       {

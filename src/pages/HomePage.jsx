@@ -3,7 +3,6 @@ import SiteHeader from "../components/layout/SiteHeader.jsx";
 import SiteFooter from "../components/layout/SiteFooter.jsx";
 import Button from "../components/ui/Button.jsx";
 import FaqAccordion from "../components/ui/FaqAccordion.jsx";
-import EnquirySection from "../components/ui/EnquirySection.jsx";
 import { SectionTitle } from "../components/ui/ServiceBlocks.jsx";
 import { ServiceCard } from "../sections/home/Hero.jsx";
 import WaysShowcase from "../sections/home/WaysShowcase.jsx";
@@ -39,7 +38,7 @@ function Hero() {
             <p className="mt-8 max-w-xl text-lg text-white/90 md:text-xl">{hero.text}</p>
             <div className="mt-10 flex flex-col gap-4 sm:flex-row">
               {hero.actions.map((action, index) => (
-                <Button key={action.label} href={action.href} variant={index === 0 ? "inverse" : "outlineInverseFill"}>
+                <Button key={action.label} to={action.to} href={action.href} variant={index === 0 ? "inverse" : "outlineInverseFill"}>
                   {action.label}
                 </Button>
               ))}
@@ -106,7 +105,6 @@ export default function HomePage() {
         <DiyExpertCta />
         <DiyExpertAddons />
         <DiyFaq />
-        <EnquirySection className="bg-white" />
       </main>
       <SiteFooter />
     </div>

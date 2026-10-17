@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { Link } from "react-router";
 import { ArrowUpRight, Check, CircleCheckBig, FolderOpen, MousePointerClick } from "lucide-react";
 import { getIcon } from "../../lib/icons.js";
 import { cx } from "../../lib/cx.js";
@@ -90,7 +91,7 @@ function CompleteMock({ cta }) {
 /**
  * "From your first question to your next step": a gradient panel on the left with the open step
  * shown as a card, and the heading with the steps as a list on the right. The open step shows its
- * text, a link to the enquiry form and a progress bar; on wide screens the next step opens when the
+ * text, a link to the contact page and a progress bar; on wide screens the next step opens when the
  * bar fills, and hovering or focusing the section pauses it.
  */
 export default function ProcessShowcase({ process, tiles }) {
@@ -163,13 +164,13 @@ export default function ProcessShowcase({ process, tiles }) {
                   </h3>
                   <Collapse id={panelId} open={open} className="flex items-start gap-6 pb-6 pl-10">
                     <p className="flex-1 text-lg text-gray-600">{step.text}</p>
-                    <a
-                      href={process.cta.href}
+                    <Link
+                      to={process.cta.to}
                       aria-label={`${process.cta.label}: ${step.title}`}
                       className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-xl border border-gray-200 bg-white text-gray-700 shadow-sm transition hover:border-brand hover:bg-brand hover:text-white"
                     >
                       <ArrowUpRight aria-hidden="true" className="h-5 w-5" />
-                    </a>
+                    </Link>
                   </Collapse>
                   {open && (
                     <span
