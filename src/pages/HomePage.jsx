@@ -55,7 +55,7 @@ function Hero() {
       </div>
 
       {/* Same column as the text above: padding outside, a 1280px column inside. */}
-      <div className="relative z-10 -mt-16 px-4 pb-12 md:px-8 lg:-mt-24">
+      <div className="relative z-10 -mt-12 px-4 pb-12 md:px-8 lg:-mt-16">
         <div className="mx-auto max-w-7xl">
           <h2 className="sr-only">{hero.tilesTitle}</h2>
           <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-5 lg:gap-4">
