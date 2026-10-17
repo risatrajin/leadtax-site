@@ -4,6 +4,8 @@
  * Names describe the role, not the hue.
  */
 @theme {
+  /* Site typeface: Google Sans (loaded from Google Fonts in index.html), with system fallbacks. */
+  --font-sans: "Google Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
   /* Primary brand colour: main buttons, brand text, footer, step badges. Was #033D76. */
   --color-brand: #033d76;
   /* Darker brand shade: hover/pressed state of brand surfaces, gradient ends. Was #022A54. */
