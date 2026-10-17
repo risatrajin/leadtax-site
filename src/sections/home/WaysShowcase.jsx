@@ -170,7 +170,7 @@ export default function WaysShowcase({ ways }) {
   return (
     <section
       id="services"
-      className="scroll-mt-28 bg-white py-16 md:py-24"
+      className="scroll-mt-28 bg-white pt-16 md:pt-24"
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
       onFocus={() => setPaused(true)}
