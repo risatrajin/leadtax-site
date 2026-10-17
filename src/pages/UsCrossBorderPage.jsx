@@ -1,7 +1,8 @@
 import content from "../content/pages/us-cross-border.json";
 import SiteHeader from "../components/layout/SiteHeader.jsx";
 import SiteFooter from "../components/layout/SiteFooter.jsx";
-import Hero, { TrustBand } from "../sections/home/Hero.jsx";
+import { TrustBand } from "../sections/home/Hero.jsx";
+import BlueHero from "../sections/cross-border/BlueHero.jsx";
 import Offices from "../sections/home/Offices.jsx";
 import FirstVisit from "../sections/home/FirstVisit.jsx";
 import OtherWays from "../sections/home/OtherWays.jsx";
@@ -19,7 +20,7 @@ export default function UsCrossBorderPage() {
     <div className="min-h-screen bg-white">
       <SiteHeader />
       <main id="main">
-        <Hero content={content} />
+        <BlueHero hero={content.hero} />
         <TrustBand content={content} />
         <Situations situations={content.situations} />
         <OtherWays content={content} section="services" className="bg-gray-50 px-4 py-16 md:px-8 md:py-24" />

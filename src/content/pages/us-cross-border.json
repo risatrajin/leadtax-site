@@ -35,11 +35,9 @@
       }
     ],
     "image": {
-      "src": "/images/cross-border-cityscape.webp",
-      "alt": "Creative composite of Vancouver and New York waterfront skylines",
-      "position": "50% 55%"
-    },
-    "align": "center"
+      "src": "/images/cross-border-friends-cutout.webp",
+      "alt": "Two friends laughing at a phone, one in a U.S. flag jacket and one in a Canadian flag hoodie"
+    }
   },
   "situations": {
     "eyebrow": "US & cross-border tax",
