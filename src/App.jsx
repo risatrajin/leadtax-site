@@ -25,7 +25,8 @@ import NotFoundPage from "./pages/NotFoundPage.jsx";
 
 /*
  * "/" is the service-focused homepage from the developer package; /home-legacy and /home-v2
- * redirect to "/", /home-redesign to /us-cross-border, /business-tax to /corporate-tax.
+ * redirect to "/", /home-redesign and /cross-border-tax to /us-cross-border, /business-tax to
+ * /corporate-tax.
  * Other routes are in the same order as the original build. /sign-in, /diy-landing,
  * /dyi-landing and /file-remote-landing were not rebuilt (their copy is in
  * src/content/archive/). /sitemap.xml and /robots.txt are static files in public/.
@@ -50,6 +51,7 @@ export default function App() {
         <Route path="/personal-tax" element={<ServicePage key="personal-tax" slug="personal-tax" />} />
         <Route path="/corporate-tax" element={<ServicePage key="corporate-tax" slug="corporate-tax" />} />
         <Route path="/business-tax" element={<RedirectTo to="/corporate-tax" />} />
+        <Route path="/cross-border-tax" element={<RedirectTo to="/us-cross-border" />} />
         <Route path="/bookkeeping" element={<ServicePage key="bookkeeping" slug="bookkeeping" />} />
         <Route path="/trust-estate-tax" element={<ServicePage key="trust-estate-tax" slug="trust-estate-tax" />} />
         <Route path="/contact" element={<ContactPage />} />

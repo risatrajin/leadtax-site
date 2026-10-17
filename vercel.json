@@ -47,6 +47,11 @@
       "permanent": true
     },
     {
+      "source": "/cross-border-tax",
+      "destination": "/us-cross-border",
+      "permanent": true
+    },
+    {
       "source": "/:path*",
       "has": [
         {
