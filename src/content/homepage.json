@@ -2,7 +2,6 @@
   "_note": "Homepage. Copy from the developer package (website/index.html). The page title and description stay as before to protect search rankings (see seo.json).",
   "hero": {
     "title": "Your life. Your business. Your tax team.",
-    "services": "Personal Tax. Corporate Tax. Bookkeeping. Trust & Estate. Cross-Border Tax.",
     "text": "Find the right support for your next return, your growing business, or your next chapter.",
     "actions": [
       {

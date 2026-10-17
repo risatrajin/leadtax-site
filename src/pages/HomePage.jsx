@@ -40,8 +40,7 @@ function Hero() {
             <span className="font-medium normal-case tracking-normal opacity-90">{hero.location.text}</span>
           </p>
           <h1 className="text-4xl font-bold leading-tight tracking-tight sm:text-5xl lg:text-6xl">{hero.title}</h1>
-          <p className="mt-5 font-semibold text-brand-subtle xl:text-white">{hero.services}</p>
-          <p className="mt-4 text-lg text-brand-subtle md:text-xl xl:text-white/90">{hero.text}</p>
+          <p className="mt-6 text-lg text-brand-subtle md:text-xl xl:text-white/90">{hero.text}</p>
           <div className="mt-8 flex flex-col gap-4 sm:flex-row [text-shadow:none]">
             {hero.actions.map((action, index) => (
               <Button key={action.label} href={action.href} variant={index === 0 ? "inverse" : "outlineInverseFill"}>
