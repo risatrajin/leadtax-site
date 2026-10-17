@@ -8,11 +8,16 @@ import Button from "../../components/ui/Button.jsx";
  */
 export default function BlueHero({ hero }) {
   return (
-    <section className="bg-hero-blue px-4 text-white md:px-8">
-      <div className="mx-auto grid max-w-7xl items-center gap-8 lg:grid-cols-[1.1fr_0.9fr]">
+    <section className="overflow-hidden bg-hero-blue px-4 text-white md:px-8">
+      <div className="mx-auto grid max-w-7xl items-center gap-8 lg:grid-cols-[1fr_1fr] lg:gap-4">
         <div className="pb-12 pt-14 md:pt-20 lg:pb-24 lg:pt-24">
           <h1 className="text-4xl font-semibold leading-[1.04] tracking-tight sm:text-5xl xl:text-[4rem]">
-            <span className="block">{hero.titleLead}</span>
+            {/* "Two countries." and "One life." each on their own line. */}
+            {hero.titleLead.match(/[^.]+\./g).map((part) => (
+              <span key={part} className="block">
+                {part.trim()}
+              </span>
+            ))}
             <span className="block text-white/85">{hero.titleAccent}</span>
           </h1>
           <p className="mt-8 max-w-xl text-lg text-white/90 md:text-xl">{hero.text}</p>
@@ -28,7 +33,7 @@ export default function BlueHero({ hero }) {
             </Button>
           </div>
         </div>
-        <div className="hero-rise mx-auto w-full max-w-md pb-12 lg:max-w-none lg:py-12">
+        <div className="hero-rise mx-auto w-full max-w-lg pb-12 lg:-mr-8 lg:max-w-none lg:scale-110 lg:py-10 xl:-mr-16">
           <img src={hero.image.src} alt={hero.image.alt} className="hero-breathe w-full" />
         </div>
       </div>
