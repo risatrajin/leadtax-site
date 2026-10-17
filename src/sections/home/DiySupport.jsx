@@ -21,9 +21,12 @@ function IconSquare({ name }) {
 
 const LIFT = "group transition duration-300 hover:-translate-y-1 hover:shadow-xl motion-reduce:hover:translate-y-0";
 
-/** "Tax tools to simplify your filing experience." Three tool cards. */
+/**
+ * "Tax tools to simplify your filing experience." with the expert add-ons in the same section:
+ * three tool cards, then "Our experts are on standby…" as a sub-heading over the two add-on cards.
+ */
 export function DiyTools() {
-  const { tools } = fileOnline;
+  const { tools, expertAddons } = fileOnline;
   return (
     <section className={`${SECTION} bg-white`}>
       <div className="mx-auto max-w-7xl">
@@ -36,6 +39,21 @@ export function DiyTools() {
               </div>
               <h3 className={`mt-5 ${CARD_TITLE}`}>{tool.title}</h3>
               <p className="mt-2 text-gray-600">{tool.description}</p>
+            </li>
+          ))}
+        </ul>
+
+        <h3 className="mx-auto mt-16 max-w-3xl text-center text-2xl font-semibold tracking-tight text-gray-900 md:text-3xl">
+          {expertAddons.title}
+        </h3>
+        <ul className="mx-auto mt-8 grid max-w-5xl gap-6 md:grid-cols-2">
+          {expertAddons.items.map((addon) => (
+            <li key={addon.title} className={`${CARD} ${LIFT} flex gap-5 p-7`}>
+              <IconSquare name={addon.icon} />
+              <div>
+                <h4 className={CARD_TITLE}>{addon.title}</h4>
+                <p className="mt-2 text-gray-600">{addon.description}</p>
+              </div>
             </li>
           ))}
         </ul>
@@ -69,33 +87,10 @@ export function DiyExpertCta() {
   );
 }
 
-/** "Our experts are on standby to assist you at any step." Two add-on cards. */
-export function DiyExpertAddons() {
-  const { expertAddons } = fileOnline;
-  return (
-    <section className={`${SECTION} bg-white`}>
-      <div className="mx-auto max-w-5xl">
-        <SectionTitle title={expertAddons.title} center />
-        <ul className="mt-12 grid gap-6 md:grid-cols-2">
-          {expertAddons.items.map((addon) => (
-            <li key={addon.title} className={`${CARD} ${LIFT} flex gap-5 p-7`}>
-              <IconSquare name={addon.icon} />
-              <div>
-                <h3 className={CARD_TITLE}>{addon.title}</h3>
-                <p className="mt-2 text-gray-600">{addon.description}</p>
-              </div>
-            </li>
-          ))}
-        </ul>
-      </div>
-    </section>
-  );
-}
-
 /** "Frequently Asked Questions" about the DIY software, in the site's bordered accordion. */
 export function DiyFaq() {
   return (
-    <section className={`${SECTION} bg-gray-50`}>
+    <section className={`${SECTION} bg-white`}>
       <div className="mx-auto max-w-3xl">
         <SectionTitle eyebrow="Do it yourself" title={fileOnline.faq.title} center />
         <div className="mt-10">

@@ -11,7 +11,7 @@ import ReviewsCarousel from "../sections/shared/ReviewsCarousel.jsx";
 import PreviousYearsBanner from "../sections/file-online/PreviousYearsBanner.jsx";
 import ConfidenceCarousel from "../sections/home/ConfidenceCarousel.jsx";
 import HowItWorks from "../sections/file-online/HowItWorks.jsx";
-import { DiyExpertAddons, DiyExpertCta, DiyFaq, DiyTools } from "../sections/home/DiySupport.jsx";
+import { DiyExpertCta, DiyFaq, DiyTools } from "../sections/home/DiySupport.jsx";
 
 const SECTION = "scroll-mt-28 px-4 py-16 md:px-8 md:py-24";
 
@@ -103,7 +103,6 @@ export default function HomePage() {
         <HowItWorks />
         <DiyTools />
         <DiyExpertCta />
-        <DiyExpertAddons />
         <DiyFaq />
       </main>
       <SiteFooter />
