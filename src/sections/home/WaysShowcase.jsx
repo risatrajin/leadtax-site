@@ -1,0 +1,212 @@
+import { useEffect, useState } from "react";
+import { ArrowRight, Check, FileText, Mic, Video } from "lucide-react";
+import inPerson from "../../content/pages/file-in-person.json";
+import remotely from "../../content/pages/file-remotely.json";
+import dropOff from "../../content/pages/drop-off.json";
+import fileOnline from "../../content/pages/file-online.json";
+import pricing from "../../content/pricing.json";
+import { offices, officePhone } from "../../lib/offices.js";
+import { getIcon } from "../../lib/icons.js";
+import { cx } from "../../lib/cx.js";
+import SmartLink from "../../components/ui/SmartLink.jsx";
+import { SectionTitle } from "../../components/ui/ServiceBlocks.jsx";
+import { linkById } from "../../components/layout/site-header/panels.jsx";
+
+/** How long each tab stays open before the next opens on its own (wide screens only). */
+const STEP_MS = 7000;
+
+/** Skeleton lines standing in for text inside the mock cards. */
+function Lines({ widths }) {
+  return widths.map((width) => (
+    <div key={width} className="flex items-center gap-3">
+      <span className="flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-brand-subtle text-brand">
+        <Check className="h-3 w-3" />
+      </span>
+      <span className="h-2.5 rounded-full bg-gray-100" style={{ width: `${width}%` }} />
+    </div>
+  ));
+}
+
+function InPersonMock() {
+  const office = offices[0];
+  return (
+    <div className="w-full max-w-sm rounded-3xl bg-white p-5 shadow-2xl">
+      <img src={office.photo} alt="" className="h-36 w-full rounded-2xl object-cover" />
+      <p className="mt-4 text-lg font-semibold text-gray-900">{office.shortName}</p>
+      <p className="text-sm text-gray-600">{office.display.address}</p>
+      <p className="mt-1 text-sm font-semibold text-gray-900">{officePhone(office)}</p>
+      <div className="mt-4 rounded-full bg-brand py-2.5 text-center text-sm font-semibold text-white">{linkById("fileInPerson").label}</div>
+    </div>
+  );
+}
+
+function RemoteMock() {
+  return (
+    <div className="w-full max-w-sm rounded-3xl bg-white p-5 shadow-2xl">
+      <div className="grid grid-cols-2 gap-3">
+        {["LT", "You"].map((who) => (
+          <div key={who} className="flex aspect-[4/3] items-center justify-center rounded-2xl bg-gradient-to-br from-sky-100 to-indigo-100">
+            <span className="flex h-12 w-12 items-center justify-center rounded-full bg-white text-sm font-bold text-brand shadow">{who}</span>
+          </div>
+        ))}
+      </div>
+      <div className="mt-4 flex justify-center gap-3">
+        {[Mic, Video].map((Icon, index) => (
+          <span key={index} className="flex h-10 w-10 items-center justify-center rounded-full bg-gray-100 text-gray-600">
+            <Icon className="h-5 w-5" />
+          </span>
+        ))}
+      </div>
+      <div className="mt-5 space-y-3 border-t border-gray-100 pt-5">
+        <Lines widths={[90, 72, 58]} />
+      </div>
+    </div>
+  );
+}
+
+function DropOffMock() {
+  return (
+    <div className="w-full max-w-sm rounded-3xl bg-white p-6 shadow-2xl">
+      <div className="flex items-center gap-4">
+        <span className="flex h-14 w-14 items-center justify-center rounded-2xl bg-brand text-white shadow-lg">
+          <FileText className="h-7 w-7" />
+        </span>
+        <div className="flex-1 space-y-2">
+          <span className="block h-3 w-3/4 rounded-full bg-gray-200" />
+          <span className="block h-2.5 w-1/2 rounded-full bg-gray-100" />
+        </div>
+      </div>
+      <div className="mt-6 space-y-3">
+        <Lines widths={[100, 84, 92, 66]} />
+      </div>
+    </div>
+  );
+}
+
+function OnlineMock() {
+  const tier = pricing.diyTiers[0];
+  return (
+    <div className="w-full max-w-xs rounded-3xl bg-white p-7 text-center shadow-2xl">
+      <img src={tier.image} alt="" className="mx-auto h-16 w-16 rounded-full object-cover" />
+      <p className="mt-4 text-xl font-semibold text-gray-900">{tier.title}</p>
+      <p className="mt-2 text-5xl font-bold text-gray-900">{tier.price}</p>
+      <p className="text-sm text-gray-500">{pricing.perReturnLabel.trim()}</p>
+      <p className="mt-4 text-sm text-gray-600">{tier.description}</p>
+    </div>
+  );
+}
+
+/**
+ * The four ways to file. Each tab's title and text come from that page's hero, and its label,
+ * icon and link from nav.json. The mock on the right is decorative; it uses the site's own data
+ * (the head office, the Basic online package).
+ */
+const TABS = [
+  { link: "fileInPerson", hero: inPerson.hero, Mock: InPersonMock, tint: "bg-brand-subtle/70", glow: "from-sky-200 via-blue-200 to-indigo-200" },
+  { link: "fileRemotely", hero: remotely.hero, Mock: RemoteMock, tint: "bg-indigo-100", glow: "from-indigo-200 via-violet-200 to-sky-200" },
+  { link: "dropOff", hero: dropOff.hero, Mock: DropOffMock, tint: "bg-sky-100", glow: "from-blue-200 via-sky-200 to-cyan-200" },
+  { link: "fileOnline", hero: fileOnline.hero, Mock: OnlineMock, tint: "bg-cyan-100", glow: "from-cyan-200 via-sky-200 to-blue-200" },
+];
+
+/**
+ * Ways to file as a tabbed showcase: icon tabs on a soft gradient, and under them one large card
+ * with the open tab's text on the left and a mock on the right. On wide screens the next tab opens
+ * on its own; hovering or focusing the section pauses it.
+ */
+export default function WaysShowcase({ ways }) {
+  const [active, setActive] = useState(0);
+  const [paused, setPaused] = useState(false);
+  const [autoplay, setAutoplay] = useState(false);
+
+  useEffect(() => {
+    setAutoplay(Boolean(window.matchMedia?.("(min-width: 1024px) and (prefers-reduced-motion: no-preference)").matches));
+  }, []);
+
+  useEffect(() => {
+    if (!autoplay || paused) return undefined;
+    const timer = setTimeout(() => setActive((index) => (index + 1) % TABS.length), STEP_MS);
+    return () => clearTimeout(timer);
+  }, [autoplay, paused, active]);
+
+  const tab = TABS[active];
+  const link = linkById(tab.link);
+  const Icon = getIcon(link.icon);
+  const item = ways.items.find((entry) => entry.link === tab.link);
+
+  return (
+    <section
+      id="services"
+      className="scroll-mt-28 bg-white px-4 py-16 md:px-8 md:py-24"
+      onMouseEnter={() => setPaused(true)}
+      onMouseLeave={() => setPaused(false)}
+      onFocus={() => setPaused(true)}
+      onBlur={(event) => !event.currentTarget.contains(event.relatedTarget) && setPaused(false)}
+    >
+      <div className="mx-auto max-w-7xl">
+        <SectionTitle eyebrow={ways.eyebrow} title={ways.title} text={ways.text} center />
+
+        <div className={cx("relative mt-12 overflow-hidden rounded-[2.5rem] bg-gradient-to-br p-4 transition-colors duration-700 sm:p-8 lg:p-12", tab.glow)}>
+          <div role="tablist" aria-label={ways.eyebrow} className="flex justify-center gap-3 sm:gap-4">
+            {TABS.map((entry, index) => {
+              const entryLink = linkById(entry.link);
+              const TabIcon = getIcon(entryLink.icon);
+              const selected = index === active;
+              return (
+                <div key={entry.link} className="relative">
+                  <button
+                    type="button"
+                    role="tab"
+                    id={`ways-tab-${index}`}
+                    aria-selected={selected}
+                    aria-controls="ways-panel"
+                    aria-label={entryLink.label}
+                    onClick={() => setActive(index)}
+                    className={cx(
+                      "flex h-14 w-14 items-center justify-center rounded-2xl border-4 border-white shadow-sm transition sm:h-16 sm:w-16",
+                      selected ? "bg-brand text-white" : "bg-gray-100 text-gray-400 hover:text-gray-700",
+                    )}
+                  >
+                    <TabIcon aria-hidden="true" className="h-6 w-6 sm:h-7 sm:w-7" />
+                  </button>
+                  {/* Stem joining the open tab to the card below. */}
+                  {selected && <span aria-hidden="true" className="absolute left-1/2 top-full h-5 w-5 -translate-x-1/2 bg-white sm:h-7" />}
+                </div>
+              );
+            })}
+          </div>
+
+          <div
+            id="ways-panel"
+            role="tabpanel"
+            aria-labelledby={`ways-tab-${active}`}
+            className="mt-5 grid items-center gap-8 rounded-[2rem] bg-white p-6 shadow-xl sm:mt-7 sm:p-10 lg:grid-cols-2 lg:gap-12 lg:p-12"
+          >
+            <div key={tab.link} className="situation-in">
+              <p className="inline-flex items-center gap-2 font-semibold text-gray-900">
+                <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-brand text-white">
+                  <Icon aria-hidden="true" className="h-4 w-4" />
+                </span>
+                {link.label}
+              </p>
+              <h3 className="mt-6 text-3xl font-semibold leading-tight tracking-tight text-gray-900 md:text-4xl lg:text-5xl">{tab.hero.title}</h3>
+              <p className="mt-5 text-lg text-gray-600">{tab.hero.text}</p>
+              <SmartLink
+                to={link.to}
+                href={link.href}
+                className="group mt-8 inline-flex items-center gap-2 border-b-2 border-gray-900 pb-1 font-semibold text-gray-900 transition-colors hover:border-brand hover:text-brand"
+              >
+                {item.cta}
+                <ArrowRight aria-hidden="true" className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+              </SmartLink>
+            </div>
+            <div aria-hidden="true" className={cx("flex min-h-[22rem] items-center justify-center rounded-3xl p-6 sm:p-10", tab.tint)}>
+              <div key={tab.link} className="situation-in flex w-full justify-center">
+                <tab.Mock />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}

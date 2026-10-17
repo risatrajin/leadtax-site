@@ -3,16 +3,13 @@ import home from "../content/homepage.json";
 import SiteHeader from "../components/layout/SiteHeader.jsx";
 import SiteFooter from "../components/layout/SiteFooter.jsx";
 import Button from "../components/ui/Button.jsx";
-import SmartLink from "../components/ui/SmartLink.jsx";
 import FaqAccordion from "../components/ui/FaqAccordion.jsx";
 import EnquirySection from "../components/ui/EnquirySection.jsx";
 import { SectionTitle, StepCards } from "../components/ui/ServiceBlocks.jsx";
 import { ServiceCard } from "../sections/home/Hero.jsx";
 import Offices from "../sections/home/Offices.jsx";
+import WaysShowcase from "../sections/home/WaysShowcase.jsx";
 import ReviewsCarousel from "../sections/shared/ReviewsCarousel.jsx";
-import { linkById } from "../components/layout/site-header/panels.jsx";
-import { getIcon } from "../lib/icons.js";
-import { CARD, CARD_TITLE } from "../lib/styles.js";
 
 const SECTION = "scroll-mt-28 px-4 py-16 md:px-8 md:py-24";
 const LINK = "inline-flex items-center gap-1.5 font-semibold text-brand underline-offset-4 hover:underline";
@@ -69,46 +66,6 @@ function Hero() {
   );
 }
 
-/** The four ways to file as cards; titles, text, icons and links come from nav.json. */
-function Ways() {
-  const { ways } = home;
-  return (
-    <section id="services" className={`${SECTION} bg-white`}>
-      <div className="mx-auto max-w-7xl">
-        <SectionTitle eyebrow={ways.eyebrow} title={ways.title} text={ways.text} />
-        <ul className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {ways.items.map((item, index) => {
-            const link = linkById(item.link);
-            const Icon = getIcon(link.icon);
-            return (
-              <li key={item.link}>
-                <SmartLink
-                  to={link.to}
-                  href={link.href}
-                  className={`${CARD} group flex h-full flex-col p-7 transition duration-300 hover:-translate-y-1 hover:shadow-xl motion-reduce:hover:translate-y-0`}
-                >
-                  <div className="flex items-start justify-between">
-                    <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-brand-bright to-brand text-white shadow-md">
-                      <Icon aria-hidden="true" className="h-6 w-6" />
-                    </div>
-                    <span className="text-sm font-bold text-gray-300">{String(index + 1).padStart(2, "0")}</span>
-                  </div>
-                  <h3 className={`mt-5 ${CARD_TITLE}`}>{link.label}</h3>
-                  <p className="mt-2 flex-1 text-gray-600">{link.description}</p>
-                  <span className={`${LINK} mt-6`}>
-                    {item.cta}
-                    <ArrowRight aria-hidden="true" className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-                  </span>
-                </SmartLink>
-              </li>
-            );
-          })}
-        </ul>
-      </div>
-    </section>
-  );
-}
-
 function Process() {
   const { process } = home;
   return (
@@ -152,7 +109,7 @@ export default function HomePage() {
       <main id="main">
         <Hero />
         <ReviewsCarousel className="bg-gray-50" />
-        <Ways />
+        <WaysShowcase ways={home.ways} />
         <Process />
         <Faq />
         <Offices />
