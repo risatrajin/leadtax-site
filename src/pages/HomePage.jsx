@@ -100,7 +100,7 @@ export default function HomePage() {
         <ProcessShowcase process={home.process} tiles={home.hero.tiles} />
         <Faq />
         <PreviousYearsBanner className="bg-gray-50" image={home.previousYears.image} />
-        <ConfidenceCarousel images={home.confidence.images} />
+        <ConfidenceCarousel slides={home.confidence.slides} />
         <HowItWorks />
         <Offices className="bg-white" />
         <EnquirySection />

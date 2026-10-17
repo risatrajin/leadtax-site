@@ -1,10 +1,11 @@
 import { useEffect, useRef, useState } from "react";
+import { Check } from "lucide-react";
 import fileOnline from "../../content/pages/file-online.json";
 import { getIcon } from "../../lib/icons.js";
 import { cx } from "../../lib/cx.js";
 
 /** How long each item stays in the centre before the next slides in. */
-const STEP_MS = 5000;
+const STEP_MS = 3500;
 
 /** Side thumbnails: distance from the centre → size and placement. */
 const SIDES = [
@@ -18,10 +19,10 @@ const SIDES = [
  * "File your tax return with confidence." as a carousel in the style of Calendly's customer
  * stories: a blue gradient band, the current item as a large card (icon, title and text on the
  * left, a photo on the right), and the neighbouring items as photo cards peeking at the sides.
- * It moves on every few seconds while in view; hovering or focusing pauses it, and the side
+ * Each slide adds a short text and two points (homepage.json); it moves on every few seconds while in view; hovering or focusing pauses it, and the side
  * cards and dots jump straight to an item. Items: pages/file-online.json trust.items.
  */
-export default function ConfidenceCarousel({ images }) {
+export default function ConfidenceCarousel({ slides }) {
   const { trust } = fileOnline;
   const items = trust.items;
   const count = items.length;
@@ -46,6 +47,7 @@ export default function ConfidenceCarousel({ images }) {
 
   const at = (offset) => (active + offset + count) % count;
   const item = items[active];
+  const slide = slides[active];
   const Icon = getIcon(item.icon);
 
   return (
@@ -78,7 +80,7 @@ export default function ConfidenceCarousel({ images }) {
                 side.className,
               )}
             >
-              <img key={index} src={images[index].src} alt="" className="situation-in h-full w-full rounded-xl object-cover" />
+              <img key={index} src={slides[index].image.src} alt="" className="situation-in h-full w-full rounded-xl object-cover" />
             </button>
           );
         })}
@@ -99,13 +101,24 @@ export default function ConfidenceCarousel({ images }) {
                 {String(active + 1).padStart(2, "0")} / {String(count).padStart(2, "0")}
               </span>
             </div>
-            <h3 className="mt-8 text-3xl font-semibold leading-tight tracking-tight text-gray-900 md:text-4xl">{item.title}</h3>
-            <p className="mt-6 text-xl leading-snug text-gray-700 md:mt-auto md:text-2xl">“{item.description}”</p>
+            <h3 className="mt-7 text-3xl font-semibold leading-tight tracking-tight text-gray-900 md:text-4xl">{item.title}</h3>
+            <p className="mt-4 text-lg text-gray-600">{slide.text}</p>
+            <ul className="mt-5 space-y-2">
+              {slide.points.map((point) => (
+                <li key={point} className="flex items-center gap-2.5 text-gray-700">
+                  <span className="flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-brand-subtle text-brand">
+                    <Check aria-hidden="true" className="h-3 w-3" />
+                  </span>
+                  {point}
+                </li>
+              ))}
+            </ul>
+            <p className="mt-6 border-t border-gray-100 pt-5 text-lg font-medium leading-snug text-gray-900 md:mt-auto">“{item.description}”</p>
           </div>
           <img
             key={`image-${active}`}
-            src={images[active].src}
-            alt={images[active].alt}
+            src={slide.image.src}
+            alt={slide.image.alt}
             className="situation-in order-first h-56 w-full rounded-2xl object-cover sm:h-72 md:order-none md:h-full"
           />
         </div>

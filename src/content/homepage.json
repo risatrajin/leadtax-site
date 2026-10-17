@@ -125,27 +125,66 @@
     }
   },
   "confidence": {
-    "_note": "Photos for the \"File your tax return with confidence.\" carousel, one per item in pages/file-online.json trust.items (same order). All are images the site already uses.",
-    "images": [
+    "_note": "\"File your tax return with confidence.\" carousel: one slide per item in pages/file-online.json trust.items (same order). Photos are free Lummi images. `text` and `points` are new copy written for the carousel; the client should confirm them, especially for the guarantee and certification items.",
+    "_placeholders": [
+      "slides.text",
+      "slides.points"
+    ],
+    "slides": [
       {
-        "src": "/images/cross-border/double-tax-desk.webp",
-        "alt": "Financial reports, a calculator and a laptop on a desk"
+        "image": {
+          "src": "/images/confidence/refund-relaxed.webp",
+          "alt": "Woman leaning back happily at her desk"
+        },
+        "text": "The software walks you through deductions and credits that may apply to you, so nothing you qualify for is left out.",
+        "points": [
+          "Guided credit and deduction questions",
+          "Prompts for commonly missed claims"
+        ]
       },
       {
-        "src": "/images/cross-border/returns-meeting.webp",
-        "alt": "A tax advisor reviewing documents with a client"
+        "image": {
+          "src": "/images/confidence/accuracy-review.webp",
+          "alt": "Person reviewing printed documents at a desk"
+        },
+        "text": "Built-in checks flag missing information and common errors before you file.",
+        "points": [
+          "Review screens before you submit",
+          "Error checks on every section"
+        ]
       },
       {
-        "src": "/images/cross-border/foreign-accounts-phone.webp",
-        "alt": "A smartphone showing a bank card in a banking app"
+        "image": {
+          "src": "/images/confidence/secure-typing.webp",
+          "alt": "Hands typing on a laptop keyboard"
+        },
+        "text": "Your personal and financial information stays protected while you prepare and file.",
+        "points": [
+          "Encrypted connection",
+          "Secure sign-in to your account"
+        ]
       },
       {
-        "src": "/images/previous-years.webp",
-        "alt": "Woman working at a computer"
+        "image": {
+          "src": "/images/confidence/autofill-laptop.webp",
+          "alt": "Smiling woman working on a laptop in an office"
+        },
+        "text": "Bring in the slips the CRA already has, instead of typing every number by hand.",
+        "points": [
+          "Fewer manual entries",
+          "Slips placed in the right sections"
+        ]
       },
       {
-        "src": "/images/personal-tax-hero.webp",
-        "alt": "An accountant reviewing tax documents with a couple"
+        "image": {
+          "src": "/images/confidence/experts-team.webp",
+          "alt": "Three professionals smiling in an office"
+        },
+        "text": "LeadTax software is built by Canadian tax professionals, and expert help is there if you need it.",
+        "points": [
+          "Made for Canadian returns",
+          "Expert help available"
+        ]
       }
     ]
   }
