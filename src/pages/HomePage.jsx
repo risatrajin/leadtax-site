@@ -6,7 +6,6 @@ import FaqAccordion from "../components/ui/FaqAccordion.jsx";
 import EnquirySection from "../components/ui/EnquirySection.jsx";
 import { SectionTitle } from "../components/ui/ServiceBlocks.jsx";
 import { ServiceCard } from "../sections/home/Hero.jsx";
-import Offices from "../sections/home/Offices.jsx";
 import WaysShowcase from "../sections/home/WaysShowcase.jsx";
 import ProcessShowcase from "../sections/home/ProcessShowcase.jsx";
 import ReviewsCarousel from "../sections/shared/ReviewsCarousel.jsx";
@@ -102,8 +101,7 @@ export default function HomePage() {
         <PreviousYearsBanner className="bg-gray-50" image={home.previousYears.image} />
         <ConfidenceCarousel slides={home.confidence.slides} />
         <HowItWorks />
-        <Offices className="bg-white" />
-        <EnquirySection />
+        <EnquirySection className="bg-white" />
       </main>
       <SiteFooter />
     </div>
