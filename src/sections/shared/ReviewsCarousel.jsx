@@ -131,8 +131,8 @@ export default function ReviewsCarousel({ className = "bg-white" }) {
               </Card>
             ))}
           </div>
-          <ScrollButton position="left-0" enabled={canScrollLeft} onClick={() => scrollBy(-SCROLL_STEP)} label="Scroll left" Icon={ChevronLeft} />
-          <ScrollButton position="right-0" enabled={canScrollRight} onClick={() => scrollBy(SCROLL_STEP)} label="Scroll right" Icon={ChevronRight} />
+          <ScrollButton position="-left-3 max-[1399px]:md:-left-5 min-[1400px]:-left-16" enabled={canScrollLeft} onClick={() => scrollBy(-SCROLL_STEP)} label="Scroll left" Icon={ChevronLeft} />
+          <ScrollButton position="-right-3 max-[1399px]:md:-right-5 min-[1400px]:-right-16" enabled={canScrollRight} onClick={() => scrollBy(SCROLL_STEP)} label="Scroll right" Icon={ChevronRight} />
         </div>
       </div>
     </section>
