@@ -54,12 +54,15 @@ function Hero() {
         </div>
       </div>
 
-      <div className="relative z-10 mx-auto -mt-16 max-w-7xl px-4 pb-12 md:px-8 lg:-mt-24">
-        <h2 className="sr-only">{hero.tilesTitle}</h2>
-        <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-5 lg:gap-4">
-          {hero.tiles.map((tile) => (
-            <ServiceCard key={tile.link} service={tile} />
-          ))}
+      {/* Same column as the text above: padding outside, a 1280px column inside. */}
+      <div className="relative z-10 -mt-16 px-4 pb-12 md:px-8 lg:-mt-24">
+        <div className="mx-auto max-w-7xl">
+          <h2 className="sr-only">{hero.tilesTitle}</h2>
+          <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-5 lg:gap-4">
+            {hero.tiles.map((tile) => (
+              <ServiceCard key={tile.link} service={tile} />
+            ))}
+          </div>
         </div>
       </div>
     </section>
