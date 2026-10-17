@@ -42,7 +42,7 @@ function LinkColumn({ title, links }) {
 /** The one footer used on every page. */
 export default function SiteFooter() {
   return (
-    <footer className="bg-brand text-white">
+    <footer className="bg-footer text-white">
       <div className="mx-auto max-w-7xl px-4 py-12 md:px-8 md:py-16">
         <div className="grid gap-10 lg:grid-cols-12 lg:gap-12">
           <div className="space-y-4 lg:col-span-4">
@@ -88,7 +88,7 @@ export default function SiteFooter() {
           </div>
         </div>
 
-        <div className="mt-12 border-t border-white/20 pt-10">
+        <div className="mt-12 border-t border-white/10 pt-10">
           <h2 className={COLUMN_TITLE}>{footer.officesTitle}</h2>
           <ul className="grid gap-6 text-sm sm:grid-cols-2 lg:grid-cols-5">
             {officesByCity.map((office) => (
@@ -106,7 +106,7 @@ export default function SiteFooter() {
         </div>
 
         {localServices.length > 0 && (
-          <div className="mt-12 grid gap-10 border-t border-white/20 pt-10 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-12 grid gap-10 border-t border-white/10 pt-10 sm:grid-cols-2 lg:grid-cols-4">
             <h2 className="text-lg font-semibold text-white">{localLinks.title}</h2>
             {cities.map((city) => (
               <div key={city}>
@@ -125,7 +125,7 @@ export default function SiteFooter() {
           </div>
         )}
 
-        <div className="mt-12 flex flex-col gap-4 border-t border-white/20 pt-8 md:flex-row md:items-center md:justify-between">
+        <div className="mt-12 flex flex-col gap-4 border-t border-white/10 pt-8 md:flex-row md:items-center md:justify-between">
           <div className="space-y-1">
             <p className="text-sm text-white/60">
               © {new Date().getFullYear()} {footer.legalName}

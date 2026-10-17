@@ -19,6 +19,9 @@
   /* Soft brand blue: Drop-off / In Person hero background, end of the "Need Expert Help?" gradient. Was #81ABDC. */
   --color-brand-fade: #8bc0fb;
 
+  /* Dark navy footer background. */
+  --color-footer: #0b1424;
+
   /* Very pale blue-grey used to start soft section gradients. Was #E8F4F8. */
   --color-surface-tint: #e8f4f8;
 
