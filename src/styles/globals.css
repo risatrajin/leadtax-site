@@ -160,3 +160,13 @@
     animation: situation-in 0.45s cubic-bezier(0.2, 0.7, 0.2, 1);
   }
 }
+
+/* "Print my checklist" on the Personal tax page prints only the checklist. */
+@media print {
+  body.print-checklist header,
+  body.print-checklist footer,
+  body.print-checklist main > :not(#checklist),
+  body.print-checklist .intercom-lightweight-app {
+    display: none !important;
+  }
+}

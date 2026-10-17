@@ -21,7 +21,7 @@ import PrivacyPolicyPage from "./pages/PrivacyPolicyPage.jsx";
 import PricingPage from "./pages/PricingPage.jsx";
 import UsCrossBorderPage from "./pages/UsCrossBorderPage.jsx";
 import CorporateTaxPage from "./pages/CorporateTaxPage.jsx";
-import ServiceLinePage from "./pages/ServiceLinePage.jsx";
+import PersonalTaxPage from "./pages/PersonalTaxPage.jsx";
 import BookkeepingPage from "./pages/BookkeepingPage.jsx";
 import TrustEstatePage from "./pages/TrustEstatePage.jsx";
 import NotFoundPage from "./pages/NotFoundPage.jsx";
@@ -50,7 +50,7 @@ export default function App() {
         <Route path="/drop-off" element={<DropOffPage />} />
         <Route path="/file-in-person" element={<FileInPersonPage />} />
         <Route path="/us-cross-border" element={<UsCrossBorderPage />} />
-        <Route path="/personal-tax" element={<ServiceLinePage slug="personal-tax" />} />
+        <Route path="/personal-tax" element={<PersonalTaxPage />} />
         <Route path="/corporate-tax" element={<CorporateTaxPage />} />
         <Route path="/business-tax" element={<RedirectTo to="/corporate-tax" />} />
         <Route path="/bookkeeping" element={<BookkeepingPage />} />

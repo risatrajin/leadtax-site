@@ -1,163 +1,260 @@
 {
-  "_note": "Service page in the Trust & estate layout. Copy is drawn from existing site content (pricing feature lists, homepage first-visit steps and checklist, /faq answers, blog posts); new wording is flagged. The client should confirm the service scope.",
+  "_note": "Personal tax page. Copy from the supplied LeadTax-Canadian-Tax-Page/index.html, laid out with the site's components. The client should review service wording and contact details before launch.",
   "_placeholders": [
-    "hero.text",
-    "services",
-    "audience"
+    "contact.email"
   ],
   "hero": {
-    "title": "Personal tax filing, made simple.",
-    "text": "Personal tax filing for individuals in Canada, including do-it-yourself filing, remote filing and in-person services.",
+    "title": "Your life changes. Your tax support stays personal.",
+    "text": "A new job, a growing family, your own business. Whatever this year brought, LeadTax helps you file with clarity and claim the deductions and credits you qualify for.",
     "actions": [
       {
         "label": "Book an appointment",
-        "to": "/contact"
+        "href": "#contact"
       },
       {
-        "label": "File online yourself",
-        "href": "app:diy.register"
+        "label": "Explore remote filing",
+        "href": "#remote"
       }
     ],
     "trust": [
-      "In person, remote or online",
-      "Review before we file",
-      "Investments, rental and foreign income"
+      "Personal T1 returns",
+      "In-office appointments",
+      "Remote filing support"
     ],
     "image": {
-      "src": "/images/ee2fa67a338b9bdd3b3f8ba404fce72fa2b6ecef.png",
-      "alt": "Smiling woman at home"
+      "src": "/images/personal-tax-hero.webp",
+      "alt": "An accountant reviewing tax documents with a couple in a bright office"
+    },
+    "imageNote": {
+      "title": "Real people. Clear tax guidance.",
+      "text": "Support that starts with your situation."
     }
   },
+  "strip": [
+    {
+      "title": "Your return",
+      "text": "Reviewed with care"
+    },
+    {
+      "title": "Your questions",
+      "text": "Explained in plain language"
+    },
+    {
+      "title": "Your choice",
+      "text": "In office or remote"
+    }
+  ],
   "services": {
-    "title": "What we help with",
-    "text": "From a single T4 to investments, rentals and special returns.",
+    "eyebrow": "A return that reflects your life",
+    "title": "Canadian tax help for everyday life and bigger changes.",
+    "text": "From a straightforward return to several sources of income, we help you bring it all together.",
     "items": [
       {
+        "icon": "FileText",
+        "title": "Personal & family returns",
+        "text": "Employment income, family changes, medical expenses, childcare and eligible deductions and credits.",
+        "tag": "Employees · Couples · Families"
+      },
+      {
         "icon": "Briefcase",
-        "title": "Employment and pension income",
-        "text": "T4 slips, employment expenses and pension income for employees and retirees."
-      },
-      {
-        "icon": "PiggyBank",
-        "title": "RRSP contributions and credits",
-        "text": "RRSP contributions, tuition, medical expenses, donations and other credits."
-      },
-      {
-        "icon": "TrendingUp",
-        "title": "Investments and capital gains",
-        "text": "Stocks, capital gains and losses, and other investment income."
+        "title": "Self-employed & sole proprietors",
+        "text": "Business income and expense reporting for freelancers, contractors and independent business owners.",
+        "tag": "T1 return with business reporting"
       },
       {
         "icon": "House",
-        "title": "Rental and foreign income",
-        "text": "Rental property income and foreign income, including T1135 reporting."
+        "title": "Rental & investment income",
+        "text": "Rental income and expenses, investment slips, capital gains and property transactions that need review.",
+        "tag": "Landlords · Investors · Property owners"
       },
       {
-        "icon": "Users",
-        "title": "Students, seniors and families",
-        "text": "Simple returns for students and seniors, and transfers between family members."
+        "icon": "Globe",
+        "title": "Newcomers to Canada",
+        "text": "Guidance for your first Canadian return, including residency dates, income records and foreign income questions.",
+        "tag": "Start your Canadian filing history"
       },
       {
-        "icon": "FileText",
-        "title": "Special returns",
-        "text": "Emigrant, non-resident and final (deceased) returns."
+        "icon": "GraduationCap",
+        "title": "Students & retirees",
+        "text": "Tuition slips and carryforwards, pension income, RRSP/RRIF slips and credits relevant to your stage of life.",
+        "tag": "Study years · Retirement years"
+      },
+      {
+        "icon": "History",
+        "title": "Prior years & CRA follow-up",
+        "text": "Catch up on unfiled returns, review corrections and get help understanding CRA requests and notices.",
+        "tag": "Catch-up filings · Adjustments · Reviews"
       }
     ]
   },
   "process": {
-    "title": "Your first visit, start to finish",
-    "text": "Book a time at the office nearest you, bring your documents, and review your return with a tax expert before anything is filed.",
-    "items": [
+    "eyebrow": "A clear path to filing",
+    "title": "Less guesswork. More peace of mind.",
+    "text": "You provide the information. We help organize the tax picture and explain what comes next.",
+    "steps": [
       {
-        "title": "Book a time",
-        "text": "Choose an office and a time online, or call us and we will set it up."
+        "title": "Tell us about your year",
+        "text": "Meet with us in office or ask our team about remote filing. We review your situation and confirm the scope and fee."
       },
       {
-        "title": "Bring your documents",
-        "text": "Slips, receipts and last year's notice of assessment. The list on the right covers most people."
+        "title": "Gather your documents",
+        "text": "We identify the slips and supporting records needed for your return and clarify missing information."
       },
       {
-        "title": "Review it together, then we file",
-        "text": "Your tax expert walks you through the return before anything goes to the CRA."
+        "title": "Review, approve & file",
+        "text": "We prepare your return, explain the result and obtain your approval and required authorization before filing."
       }
     ],
     "panel": {
-      "type": "checklist",
-      "title": "What to bring",
+      "eyebrow": "Look beyond the tax slips",
+      "title": "Have you included the whole picture?",
+      "text": "We review the deductions and credits that may apply to your situation.",
       "items": [
-        "T4 and other tax slips",
-        "Last year's notice of assessment",
-        "RRSP contribution receipts",
-        "Receipts for donations, medical and childcare costs",
-        "Photo ID and your SIN",
-        "US tax forms, if you file in both countries"
+        "RRSP and FHSA contributions",
+        "Eligible medical expenses",
+        "Childcare expenses",
+        "Tuition amounts and carryforwards",
+        "Charitable donations",
+        "Eligible business and rental expenses"
       ],
-      "link": {
-        "label": "Download the full checklist",
-        "href": "download:whatToBring"
-      }
+      "note": "Eligibility and supporting records matter. Your accountant will review what applies to you."
     }
   },
-  "audience": {
-    "title": "Who we help",
-    "items": [
+  "checklist": {
+    "eyebrow": "Prepare for your appointment",
+    "title": "A little preparation. A smoother tax return.",
+    "text": "Use this checklist as a starting point. Select a category to see additional records that may be relevant.",
+    "note": "Your accountant may request more information after reviewing your circumstances.",
+    "printLabel": "Print my checklist",
+    "cardTitle": "Your tax document checklist",
+    "countLabel": "{done} of {total} items checked",
+    "privacy": "Checkmarks are for your preparation only. No documents or personal information are sent from this page.",
+    "tabs": [
       {
-        "icon": "Briefcase",
-        "title": "Employees & retirees",
-        "text": "T4 and pension income, employment expenses and RRSP contributions."
+        "id": "personal",
+        "label": "Personal",
+        "items": [
+          "Government-issued photo ID and personal details",
+          "All income slips, including employment, pension and investment slips",
+          "Last return and Notice of Assessment, if available",
+          "RRSP/FHSA contribution receipts and relevant tax slips",
+          "Medical, childcare and charitable donation receipts",
+          "Tuition slips and other records relevant to your year"
+        ]
       },
       {
-        "icon": "Users",
-        "title": "Students & families",
-        "text": "Tuition credits, childcare and medical expenses, and transfers between family members."
+        "id": "business",
+        "label": "Self-employed",
+        "items": [
+          "Personal tax documents from the Personal checklist",
+          "Business income records and invoices",
+          "Business expense receipts and bank statements",
+          "Vehicle expenses and business-use mileage log, if applicable",
+          "Home workspace expenses and usage details, if applicable",
+          "Equipment purchases and prior-year business schedules"
+        ]
       },
       {
-        "icon": "TrendingUp",
-        "title": "Investors & landlords",
-        "text": "Capital gains and losses, rental properties and foreign income."
+        "id": "rental",
+        "label": "Rental income",
+        "items": [
+          "Personal tax documents from the Personal checklist",
+          "Rental income records for each property",
+          "Expense receipts, property tax and insurance statements",
+          "Mortgage interest statements",
+          "Property purchase or sale documents, if applicable",
+          "Prior-year rental schedules and ownership details"
+        ]
       },
       {
-        "icon": "FileText",
-        "title": "Special situations",
-        "text": "Emigrant, non-resident and final (deceased) returns."
+        "id": "newcomer",
+        "label": "Newcomer",
+        "items": [
+          "Government-issued ID and personal details",
+          "Date of arrival and information about residency ties",
+          "Canadian income slips and supporting records",
+          "Foreign income records and relevant tax documents",
+          "Spouse and dependant information, if applicable",
+          "Prior correspondence from the CRA, if available"
+        ]
+      }
+    ]
+  },
+  "remote": {
+    "eyebrow": "Choose how you work with us",
+    "title": "At our office. Or wherever you are.",
+    "text": "Prefer a face-to-face conversation? Book an office appointment. Prefer to work remotely? Contact our team for the next steps and secure document-sharing instructions.",
+    "actions": [
+      {
+        "label": "Arrange an office visit",
+        "href": "#contact"
+      },
+      {
+        "label": "Ask about remote filing",
+        "to": "/file-remotely"
+      }
+    ],
+    "options": [
+      {
+        "icon": "MapPin",
+        "title": "In-office tax preparation",
+        "text": "Bring your records, speak with an accountant and work through your questions together."
+      },
+      {
+        "icon": "Video",
+        "title": "Remote tax preparation",
+        "text": "Ask our team how to provide your records securely, review your return and complete the filing authorization remotely."
+      },
+      {
+        "icon": "Handshake",
+        "title": "A more complex situation?",
+        "text": "Tell us if you also need corporate, estate and trust, or US/Canada cross-border tax support so we can arrange the right service.",
+        "links": [
+          "corporateTax",
+          "trustEstate",
+          "usCrossBorder"
+        ]
       }
     ]
   },
   "faq": {
-    "title": "Personal tax questions",
+    "eyebrow": "Before you get started",
+    "title": "Good questions. Clear answers.",
     "items": [
       {
-        "question": "What documents do I need to file my taxes?",
-        "answer": "You'll need your T4 slips from employers, receipts for deductions (like charitable donations, medical expenses), RRSP contributions, and any other income statements. If you're self-employed, bring records of your business income and expenses."
+        "question": "How much will my tax return cost?",
+        "answer": "The fee depends on the complexity of your return, income sources and additional filings. Contact us with a brief outline of your situation so we can confirm the scope and fee before starting."
       },
       {
-        "question": "When will I receive my tax refund?",
-        "answer": "If you file electronically and choose direct deposit, most refunds are processed within 8-14 business days. Paper returns can take 8-12 weeks. You can track your refund status through the CRA My Account portal."
+        "question": "Can you help if I have several years to file?",
+        "answer": "Yes. Tell us which years are outstanding and share any CRA correspondence. We will identify the records needed for each year and discuss a plan to bring your filings up to date."
       },
       {
-        "question": "Can I file taxes for previous years?",
-        "answer": "Yes! We can help you file returns for previous tax years. Keep in mind that you can go back up to 10 years, and filing late returns may result in penalties if you owe taxes."
+        "question": "What if I am missing a tax slip?",
+        "answer": "Let us know which document is missing. We can discuss ways to obtain it and identify other records that may be needed. CRA account access requires the appropriate authorization."
       },
       {
-        "question": "What if I make a mistake on my tax return?",
-        "answer": "Don't worry! You can adjust your return by filing a T1 Adjustment Request with the CRA. Our team can help you make corrections and ensure everything is accurate."
+        "question": "Can you prepare my family's returns together?",
+        "answer": "Yes. Let us know who needs a return and whether your marital status or dependants changed. Each person's information and required authorizations will be reviewed separately."
+      },
+      {
+        "question": "Can I file without visiting your office?",
+        "answer": "Contact our team to arrange remote tax preparation and receive secure document-sharing instructions. Please avoid sending your SIN, tax slips or other sensitive records in ordinary email."
+      },
+      {
+        "question": "Will you explain my refund or balance owing?",
+        "answer": "We review the prepared return with you and explain the result before filing. The CRA's assessment may differ if it changes or requests clarification of information in the return."
       }
     ]
   },
-  "articles": {
-    "title": "Related reading",
-    "slugs": [
-      "2026-tax-filing-deadlines",
-      "5-ways-turn-tax-return-financial-opportunity"
-    ]
-  },
-  "cta": {
-    "title": "Ready to file your personal return?",
-    "text": "Book a time at the office nearest you, or call us and we'll set it up.",
-    "primary": {
-      "label": "Book an Appointment",
-      "to": "/contact"
-    },
-    "callLabel": "Or call {phone}"
+  "contact": {
+    "id": "contact",
+    "title": "Let's make this tax year easier.",
+    "text": "Tell us what you need. We'll help you choose the next step.",
+    "button": "Request an appointment",
+    "email": "vincent@leadtax.ca",
+    "emailSubject": "Canadian tax appointment enquiry",
+    "emailBody": "Hello LeadTax,\n\nI would like to arrange a Canadian tax appointment.\nPreferred option: in office / remote\nTax year(s):\nPreferred contact number:\n\nThank you.",
+    "callLabel": "Call {phone}"
   }
 }

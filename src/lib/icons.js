@@ -1,6 +1,7 @@
 import {
   User,
   FilePenLine,
+  GraduationCap,
   Globe,
   DollarSign,
   Award,
@@ -84,6 +85,7 @@ const icons = {
   MapleLeaf: MapleLeafIcon,
   User,
   FilePenLine,
+  GraduationCap,
   Globe,
   DollarSign,
   Award,
