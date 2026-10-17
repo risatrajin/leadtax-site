@@ -1,4 +1,3 @@
-import { ChevronRight } from "lucide-react";
 import nav from "../../../content/nav.json";
 import { officesByCity, officePhone } from "../../../lib/offices.js";
 import { fill } from "../../../lib/template.js";
@@ -132,34 +131,18 @@ export function MegaPanel({ item, id, onNavigate }) {
   );
 }
 
-/** Small dropdown for "Resources", "About" and "Client login". `rich` shows icon tiles, text and arrows. */
+/** Small dropdown for "Resources", "About" and "Client login". `rich` uses the Tax services menu rows. */
 export function DropdownPanel({ id, links, align = "left", rich, onNavigate }) {
   if (rich) {
+    // Same rows as the Tax services menu: round icon, title and a one-line description.
     return (
       <div id={id} className={`absolute top-full pt-2 ${align === "right" ? "right-0" : "left-0"}`}>
-        <ul className="w-[26rem] space-y-1 rounded-2xl border border-gray-200 bg-white p-3 shadow-xl animate-fadeIn">
-          {links.map((link) => {
-            const Icon = getIcon(link.icon);
-            return (
-              <li key={link.label}>
-                <SmartLink
-                  to={link.to}
-                  href={link.href}
-                  onClick={onNavigate}
-                  className="group flex items-center gap-4 rounded-xl p-3 transition-colors hover:bg-gray-50"
-                >
-                  <span className="flex h-14 w-14 flex-shrink-0 items-center justify-center rounded-2xl bg-brand-subtle text-brand transition-colors group-hover:bg-brand group-hover:text-white">
-                    <Icon aria-hidden="true" strokeWidth={1.75} className="h-7 w-7" />
-                  </span>
-                  <span className="min-w-0 flex-1">
-                    <span className="block text-lg font-semibold text-gray-900">{link.label}</span>
-                    <span className="mt-0.5 block text-sm leading-snug text-gray-500">{link.description}</span>
-                  </span>
-                  <ChevronRight aria-hidden="true" className="h-5 w-5 flex-shrink-0 text-gray-400 transition-transform group-hover:translate-x-1 group-hover:text-brand" />
-                </SmartLink>
-              </li>
-            );
-          })}
+        <ul className="w-80 space-y-1 rounded-xl border border-gray-200 bg-white p-2 shadow-xl animate-fadeIn">
+          {links.map((link) => (
+            <li key={link.label}>
+              <MenuLink link={link} onNavigate={onNavigate} />
+            </li>
+          ))}
         </ul>
       </div>
     );
