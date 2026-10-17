@@ -1,0 +1,94 @@
+{
+  "_note": "Deadlines for the 2026 tax year (returns filed in 2027), from standard CRA rules. When a date falls on a weekend or holiday the CRA usually accepts the next business day. The client should confirm these each year.",
+  "_placeholders": [
+    "groups"
+  ],
+  "hero": {
+    "eyebrow": "Important tax dates",
+    "title": "Never miss a tax deadline.",
+    "text": "Key CRA dates for the 2026 tax year, for individuals, the self-employed and businesses."
+  },
+  "groups": [
+    {
+      "title": "Before the year ends",
+      "items": [
+        {
+          "date": "2026-12-15",
+          "title": "Fourth-quarter instalment",
+          "text": "Final 2026 instalment payment, if the CRA asked you to pay by instalments."
+        },
+        {
+          "date": "2026-12-31",
+          "title": "Year-end for donations and expenses",
+          "text": "Last day for charitable donations and most deductible expenses to count for 2026."
+        }
+      ]
+    },
+    {
+      "title": "Early 2027",
+      "items": [
+        {
+          "date": "2027-02-28",
+          "title": "T4 and T5 slips",
+          "text": "Employers and payers send T4 and T5 slips by the end of February."
+        },
+        {
+          "date": "2027-03-01",
+          "title": "RRSP contribution deadline",
+          "text": "Last day to contribute to an RRSP and deduct it on your 2026 return."
+        },
+        {
+          "date": "2027-03-15",
+          "title": "First-quarter instalment",
+          "text": "First 2027 instalment payment, if required."
+        },
+        {
+          "date": "2027-03-31",
+          "title": "Trust returns",
+          "text": "T3 returns for trusts with a December 31 year-end are due within 90 days of year-end."
+        }
+      ]
+    },
+    {
+      "title": "Filing season",
+      "items": [
+        {
+          "date": "2027-04-30",
+          "title": "Personal tax filing and payment deadline",
+          "text": "File your 2026 return and pay any balance owing to avoid interest and penalties."
+        },
+        {
+          "date": "2027-06-15",
+          "title": "Self-employed filing deadline",
+          "text": "Self-employed individuals and their spouses or partners file by June 15. Any balance is still due April 30."
+        },
+        {
+          "date": "2027-06-15",
+          "title": "Second-quarter instalment",
+          "text": "Second 2027 instalment payment, if required."
+        },
+        {
+          "date": "2027-09-15",
+          "title": "Third-quarter instalment",
+          "text": "Third 2027 instalment payment, if required."
+        }
+      ]
+    }
+  ],
+  "corporate": {
+    "title": "Corporations",
+    "items": [
+      "T2 corporate returns are due six months after the end of the tax year.",
+      "Any balance owing is generally due two months after year-end, or three months for some Canadian-controlled private corporations."
+    ],
+    "link": {
+      "label": "Corporate tax services",
+      "to": "/corporate-tax"
+    }
+  },
+  "source": {
+    "text": "Dates follow standard CRA rules. Check your own situation, or ask us.",
+    "label": "CRA due dates",
+    "href": "https://www.canada.ca/en/revenue-agency/services/tax/individuals/topics/about-your-tax-return/tax-return/completing-a-tax-return/deductions-credits-expenses/dates.html"
+  }
+}

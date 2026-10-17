@@ -121,6 +121,21 @@
       "_note": "New page; title and description from the developer package.",
       "title": "Trust & estate services in Vancouver & Burnaby | LeadTax",
       "description": "Tax preparation support for executors, trustees, and families. Make sense of the records, returns, and next steps with a clear, considered approach."
+    },
+    "taxCalculator": {
+      "_note": "New page.",
+      "title": "Canadian Tax Refund Calculator (BC) | LeadTax",
+      "description": "Estimate your federal and BC income tax, and whether you may get a refund or owe a balance, with the free LeadTax tax calculator."
+    },
+    "taxDates": {
+      "_note": "New page.",
+      "title": "Important Tax Dates and CRA Deadlines | LeadTax",
+      "description": "Key CRA deadlines for the tax year: RRSP contributions, instalments, the April 30 filing deadline, self-employed filing and more."
+    },
+    "support": {
+      "_note": "New page.",
+      "title": "Support | LeadTax",
+      "description": "Get help from LeadTax: call, email or visit an office, or find answers in our FAQ, tax calculator, tax dates and blog."
     }
   },
   "meta": {

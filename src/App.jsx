@@ -8,6 +8,9 @@ import Seo from "./components/seo/Seo.jsx";
 import RedirectTo from "./components/global/RedirectTo.jsx";
 import HomePage from "./pages/HomePage.jsx";
 import FileOnlinePage from "./pages/FileOnlinePage.jsx";
+import TaxCalculatorPage from "./pages/TaxCalculatorPage.jsx";
+import TaxDatesPage from "./pages/TaxDatesPage.jsx";
+import SupportPage from "./pages/SupportPage.jsx";
 import FileRemotelyPage from "./pages/FileRemotelyPage.jsx";
 import DropOffPage from "./pages/DropOffPage.jsx";
 import FileInPersonPage from "./pages/FileInPersonPage.jsx";
@@ -61,6 +64,9 @@ export default function App() {
         <Route path="/career" element={<CareerPage />} />
         <Route path="/blog" element={<BlogPage />} />
         <Route path="/blog/:slug" element={<BlogPostPage />} />
+        <Route path="/tax-calculator" element={<TaxCalculatorPage />} />
+        <Route path="/tax-dates" element={<TaxDatesPage />} />
+        <Route path="/support" element={<SupportPage />} />
         <Route path="/faq" element={<FaqPage />} />
         <Route path="/terms" element={<TermsPage />} />
         <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />

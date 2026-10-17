@@ -69,11 +69,33 @@
     },
     "blog": {
       "label": "Blog",
-      "to": "/blog"
+      "to": "/blog",
+      "icon": "BookOpen",
+      "description": "Free education, tips and ideas to help you."
+    },
+    "taxCalculator": {
+      "label": "Tax calculator",
+      "to": "/tax-calculator",
+      "icon": "Calculator",
+      "description": "Estimate your tax refund and plan ahead."
+    },
+    "support": {
+      "label": "Support",
+      "to": "/support",
+      "icon": "Headphones",
+      "description": "Get tax help and find answers fast."
+    },
+    "taxDates": {
+      "label": "Important tax dates",
+      "to": "/tax-dates",
+      "icon": "Calendar",
+      "description": "Key deadlines for the tax year."
     },
     "faq": {
       "label": "FAQ",
-      "to": "/faq"
+      "to": "/faq",
+      "icon": "MessageCircle",
+      "description": "Answers to common tax filing questions."
     },
     "about": {
       "label": "About us",
@@ -167,9 +189,12 @@
         "id": "resources",
         "label": "Resources",
         "items": [
+          "taxCalculator",
+          "support",
           "blog",
-          "faq"
-        ]
+          "taxDates"
+        ],
+        "rich": true
       },
       {
         "type": "dropdown",

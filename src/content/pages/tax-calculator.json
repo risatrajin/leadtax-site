@@ -1,0 +1,109 @@
+{
+  "_note": "Simple BC income tax estimate. Rates, thresholds and basic personal amounts are for the 2025 tax year (federal and British Columbia) as understood when built; the client must confirm them and update them each year. The estimate ignores CPP/EI and most credits.",
+  "_placeholders": [
+    "taxYear",
+    "federal",
+    "province"
+  ],
+  "hero": {
+    "eyebrow": "Tax calculator",
+    "title": "Estimate your tax refund.",
+    "text": "A quick estimate of your federal and BC income tax for the year, and whether you may get a refund or owe a balance."
+  },
+  "taxYear": 2025,
+  "form": {
+    "title": "Your income",
+    "employment": "Employment income",
+    "employmentHint": "Box 14 of your T4 slips.",
+    "other": "Other income",
+    "otherHint": "Self-employment, interest, rental and other taxable income.",
+    "rrsp": "RRSP deduction",
+    "rrspHint": "Contributions you'll deduct for the year.",
+    "withheld": "Income tax already deducted",
+    "withheldHint": "Box 22 of your T4 slips."
+  },
+  "result": {
+    "title": "Your estimate",
+    "taxable": "Taxable income",
+    "federal": "Federal tax",
+    "provincial": "BC tax",
+    "total": "Total income tax",
+    "refund": "Estimated refund",
+    "owing": "Estimated balance owing",
+    "even": "No refund or balance expected"
+  },
+  "note": "This is an estimate only. It uses {year} federal and British Columbia rates and the basic personal amounts, and leaves out CPP and EI contributions and other credits and deductions. Your actual result depends on your full return.",
+  "cta": {
+    "title": "Want an exact number?",
+    "text": "File with LeadTax online, or let one of our tax experts prepare your return.",
+    "primary": {
+      "label": "Do it yourself",
+      "to": "/file-online"
+    },
+    "secondary": {
+      "label": "Book an appointment",
+      "to": "/contact"
+    }
+  },
+  "federal": {
+    "brackets": [
+      [
+        57375,
+        0.145
+      ],
+      [
+        114750,
+        0.205
+      ],
+      [
+        177882,
+        0.26
+      ],
+      [
+        253414,
+        0.29
+      ],
+      [
+        null,
+        0.33
+      ]
+    ],
+    "basicPersonalAmount": 16129,
+    "creditRate": 0.145
+  },
+  "province": {
+    "name": "British Columbia",
+    "brackets": [
+      [
+        49279,
+        0.0506
+      ],
+      [
+        98560,
+        0.077
+      ],
+      [
+        113158,
+        0.105
+      ],
+      [
+        137407,
+        0.1229
+      ],
+      [
+        186306,
+        0.147
+      ],
+      [
+        259829,
+        0.168
+      ],
+      [
+        null,
+        0.205
+      ]
+    ],
+    "basicPersonalAmount": 12932,
+    "creditRate": 0.0506
+  }
+}

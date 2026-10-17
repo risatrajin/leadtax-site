@@ -173,3 +173,10 @@ what you can; anything left blank stays as it is now.
     starting prices: Bookkeeping Light $199/mo ($1,910/yr), Core $399/mo ($3,830/yr),
     Bookkeeping + Tax $649/mo ($6,230/yr). Please also confirm the "free consultation" offer, the
     industries listed and the tools (QuickBooks Online, Clover, Square, Stripe, Shopify).
+40. **Are the tax calculator rates right?** `/tax-calculator` estimates federal and BC tax with
+    2025 brackets and basic personal amounts (federal 14.5% blended lowest rate, BPA $16,129; BC
+    5.06%–20.5%, BPA $12,932). It leaves out CPP/EI and other credits. Please confirm the figures,
+    which tax year to show, and update them every year (`src/content/pages/tax-calculator.json`).
+41. **Are the important tax dates right?** `/tax-dates` lists 2026 tax-year deadlines from standard
+    CRA rules (instalments, RRSP March 1 2027, April 30 and June 15 2027, T3 within 90 days,
+    corporate T2 six months). Please confirm and keep them current (`src/content/pages/tax-dates.json`).

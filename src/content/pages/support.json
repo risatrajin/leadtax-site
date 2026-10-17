@@ -1,0 +1,46 @@
+{
+  "_note": "Support hub. Contact details come from site.json and offices.json.",
+  "hero": {
+    "eyebrow": "Support",
+    "title": "How can we help?",
+    "text": "Get in touch with our team, or find answers on your own in a few clicks."
+  },
+  "contactTitle": "Talk to us",
+  "contact": [
+    {
+      "icon": "Phone",
+      "title": "Call us",
+      "text": "Speak with our team about your return or account.",
+      "kind": "phone"
+    },
+    {
+      "icon": "Mail",
+      "title": "Email us",
+      "text": "Send your question and we'll get back to you.",
+      "kind": "email"
+    },
+    {
+      "icon": "MapPin",
+      "title": "Visit an office",
+      "text": "Five locations across Vancouver and Burnaby.",
+      "to": "/contact",
+      "label": "Find an office"
+    },
+    {
+      "icon": "Calendar",
+      "title": "Book an appointment",
+      "text": "Meet a tax professional in person or by video.",
+      "to": "/file-in-person",
+      "label": "Book now"
+    }
+  ],
+  "selfTitle": "Find answers",
+  "self": [
+    "faq",
+    "taxCalculator",
+    "taxDates",
+    "blog"
+  ],
+  "loginTitle": "Already a client?",
+  "loginText": "Sign in to continue your return or upload documents."
+}

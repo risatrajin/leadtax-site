@@ -127,8 +127,7 @@
   "confidence": {
     "_note": "\"File your tax return with confidence.\" carousel: one slide per item in pages/file-online.json trust.items (same order). Photos are free Lummi images. `text` and `points` are new copy written for the carousel; the client should confirm them, especially for the guarantee and certification items.",
     "_placeholders": [
-      "slides.text",
-      "slides.points"
+      "slides"
     ],
     "slides": [
       {

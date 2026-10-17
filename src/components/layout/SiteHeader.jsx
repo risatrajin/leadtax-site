@@ -84,7 +84,7 @@ export default function SiteHeader() {
                         (isMega ? (
                           <MegaPanel item={item} id={panelId} onNavigate={close} />
                         ) : (
-                          <DropdownPanel id={panelId} links={enabledLinks(item.items)} onNavigate={close} />
+                          <DropdownPanel id={panelId} links={enabledLinks(item.items)} rich={item.rich} onNavigate={close} />
                         ))}
                     </li>
                   );
