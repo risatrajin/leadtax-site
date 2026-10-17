@@ -45,7 +45,7 @@ function RemoteMock() {
     <div className="w-full max-w-sm rounded-2xl bg-white p-5 shadow-2xl">
       <div className="grid grid-cols-2 gap-3">
         {["LT", "You"].map((who) => (
-          <div key={who} className="flex aspect-[4/3] items-center justify-center rounded-2xl bg-gradient-to-br from-sky-100 to-indigo-100">
+          <div key={who} className="flex aspect-[4/3] items-center justify-center rounded-2xl bg-gradient-to-br from-sky-100 to-blue-100">
             <span className="flex h-12 w-12 items-center justify-center rounded-full bg-white text-sm font-bold text-brand shadow">{who}</span>
           </div>
         ))}
@@ -102,10 +102,10 @@ function OnlineMock() {
  * (the head office, the Basic online package).
  */
 const TABS = [
-  { link: "fileInPerson", hero: inPerson.hero, Mock: InPersonMock, tint: "bg-brand-subtle/70", glow: "from-sky-200 via-blue-200 to-indigo-200" },
-  { link: "fileRemotely", hero: remotely.hero, Mock: RemoteMock, tint: "bg-indigo-100", glow: "from-indigo-200 via-violet-200 to-sky-200" },
-  { link: "dropOff", hero: dropOff.hero, Mock: DropOffMock, tint: "bg-sky-100", glow: "from-blue-200 via-sky-200 to-cyan-200" },
-  { link: "fileOnline", hero: fileOnline.hero, Mock: OnlineMock, tint: "bg-cyan-100", glow: "from-cyan-200 via-sky-200 to-blue-200" },
+  { link: "fileInPerson", hero: inPerson.hero, Mock: InPersonMock, tint: "bg-blue-50", glow: "from-sky-100 via-blue-100 to-blue-200" },
+  { link: "fileRemotely", hero: remotely.hero, Mock: RemoteMock, tint: "bg-sky-50", glow: "from-blue-100 via-sky-100 to-sky-200" },
+  { link: "dropOff", hero: dropOff.hero, Mock: DropOffMock, tint: "bg-blue-50", glow: "from-sky-200 via-blue-100 to-sky-100" },
+  { link: "fileOnline", hero: fileOnline.hero, Mock: OnlineMock, tint: "bg-sky-50", glow: "from-blue-200 via-sky-100 to-blue-100" },
 ];
 
 /**
