@@ -30,7 +30,7 @@ function Lines({ widths }) {
 function InPersonMock() {
   const office = offices[0];
   return (
-    <div className="w-full max-w-sm rounded-3xl bg-white p-5 shadow-2xl">
+    <div className="w-full max-w-sm rounded-2xl bg-white p-5 shadow-2xl">
       <img src={office.photo} alt="" className="h-36 w-full rounded-2xl object-cover" />
       <p className="mt-4 text-lg font-semibold text-gray-900">{office.shortName}</p>
       <p className="text-sm text-gray-600">{office.display.address}</p>
@@ -42,7 +42,7 @@ function InPersonMock() {
 
 function RemoteMock() {
   return (
-    <div className="w-full max-w-sm rounded-3xl bg-white p-5 shadow-2xl">
+    <div className="w-full max-w-sm rounded-2xl bg-white p-5 shadow-2xl">
       <div className="grid grid-cols-2 gap-3">
         {["LT", "You"].map((who) => (
           <div key={who} className="flex aspect-[4/3] items-center justify-center rounded-2xl bg-gradient-to-br from-sky-100 to-indigo-100">
@@ -66,7 +66,7 @@ function RemoteMock() {
 
 function DropOffMock() {
   return (
-    <div className="w-full max-w-sm rounded-3xl bg-white p-6 shadow-2xl">
+    <div className="w-full max-w-sm rounded-2xl bg-white p-6 shadow-2xl">
       <div className="flex items-center gap-4">
         <span className="flex h-14 w-14 items-center justify-center rounded-2xl bg-brand text-white shadow-lg">
           <FileText className="h-7 w-7" />
@@ -86,7 +86,7 @@ function DropOffMock() {
 function OnlineMock() {
   const tier = pricing.diyTiers[0];
   return (
-    <div className="w-full max-w-xs rounded-3xl bg-white p-7 text-center shadow-2xl">
+    <div className="w-full max-w-xs rounded-2xl bg-white p-7 text-center shadow-2xl">
       <img src={tier.image} alt="" className="mx-auto h-16 w-16 rounded-full object-cover" />
       <p className="mt-4 text-xl font-semibold text-gray-900">{tier.title}</p>
       <p className="mt-2 text-5xl font-bold text-gray-900">{tier.price}</p>
@@ -241,7 +241,7 @@ export default function WaysShowcase({ ways }) {
             id="ways-panel"
             role="tabpanel"
             aria-labelledby={`ways-tab-${active}`}
-            className="mt-5 grid items-center gap-8 rounded-[2rem] bg-white p-6 shadow-xl sm:mt-7 sm:p-10 lg:grid-cols-2 lg:gap-12 lg:p-12"
+            className="mt-5 grid items-center gap-8 rounded-2xl bg-white p-6 shadow-xl sm:mt-7 sm:p-10 lg:grid-cols-2 lg:gap-12 lg:p-12"
           >
             <div key={tab.link} className="situation-in">
               <p className="inline-flex items-center gap-2 font-semibold text-gray-900">
@@ -261,7 +261,7 @@ export default function WaysShowcase({ ways }) {
                 <ArrowRight aria-hidden="true" className="h-4 w-4 transition-transform group-hover:translate-x-1" />
               </SmartLink>
             </div>
-            <div aria-hidden="true" className={cx("flex min-h-[22rem] items-center justify-center rounded-3xl p-6 sm:p-10", tab.tint)}>
+            <div aria-hidden="true" className={cx("flex min-h-[22rem] items-center justify-center rounded-xl p-6 sm:p-10", tab.tint)}>
               <div key={tab.link} className="situation-in flex w-full justify-center">
                 <tab.Mock />
               </div>
