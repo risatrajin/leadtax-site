@@ -98,24 +98,24 @@
       "description": "How LeadTax collects, uses and protects your personal information."
     },
     "personalTax": {
-      "_note": "New page.",
-      "title": "Personal Tax Filing in Vancouver & Burnaby | LeadTax",
-      "description": "Canadian personal tax preparation from LeadTax. Support for families, self-employed individuals, rental income, newcomers and prior-year returns. Meet in office or ask about remote filing."
+      "_note": "New page; title and description from the developer package.",
+      "title": "Personal tax services in Vancouver & Burnaby | LeadTax",
+      "description": "From your first return to retirement, get personal tax help that sees the whole picture. In person in Vancouver and Burnaby, or remotely across Canada."
     },
     "corporateTax": {
-      "_note": "New page.",
-      "title": "Corporate Tax & Year-End Accounting | LeadTax",
-      "description": "Corporate tax returns, year-end accounting and tax planning for Canadian businesses. Meet LeadTax in Burnaby or enquire about remote filing."
+      "_note": "New page; title and description from the developer package.",
+      "title": "Corporate tax services in Vancouver & Burnaby | LeadTax",
+      "description": "Corporate tax preparation and year-end support for Canadian business owners. Connect your records, your corporate return, and your next business decision."
     },
     "bookkeeping": {
-      "_note": "New page; title and description from the supplied bookkeeping design.",
-      "title": "Bookkeeping Services | LeadTax",
-      "description": "Modern bookkeeping for Canadian businesses. Monthly bookkeeping, payroll, GST/HST, QuickBooks, catch-up bookkeeping and corporate tax support from LeadTax."
+      "_note": "New page; title and description from the developer package.",
+      "title": "Bookkeeping services in Vancouver & Burnaby | LeadTax",
+      "description": "Organized records and a clearer view of your numbers. Monthly bookkeeping, catch-up support, and year-end coordination for Canadian businesses."
     },
     "trustEstateTax": {
-      "_note": "New page; title and description from the supplied estate & trust design.",
-      "title": "Estate & Trust Tax Returns | LeadTax",
-      "description": "Professional Canadian estate and trust tax return preparation. T3 trust returns, estate tax filings, Schedule 15 reporting, T3 slips, and support for executors and trustees."
+      "_note": "New page; title and description from the developer package.",
+      "title": "Trust & estate services in Vancouver & Burnaby | LeadTax",
+      "description": "Tax preparation support for executors, trustees, and families. Make sense of the records, returns, and next steps with a clear, considered approach."
     }
   },
   "meta": {

@@ -20,10 +20,7 @@ import TermsPage from "./pages/TermsPage.jsx";
 import PrivacyPolicyPage from "./pages/PrivacyPolicyPage.jsx";
 import PricingPage from "./pages/PricingPage.jsx";
 import UsCrossBorderPage from "./pages/UsCrossBorderPage.jsx";
-import CorporateTaxPage from "./pages/CorporateTaxPage.jsx";
-import PersonalTaxPage from "./pages/PersonalTaxPage.jsx";
-import BookkeepingPage from "./pages/BookkeepingPage.jsx";
-import TrustEstatePage from "./pages/TrustEstatePage.jsx";
+import ServicePage from "./pages/ServicePage.jsx";
 import NotFoundPage from "./pages/NotFoundPage.jsx";
 
 /*
@@ -50,11 +47,11 @@ export default function App() {
         <Route path="/drop-off" element={<DropOffPage />} />
         <Route path="/file-in-person" element={<FileInPersonPage />} />
         <Route path="/us-cross-border" element={<UsCrossBorderPage />} />
-        <Route path="/personal-tax" element={<PersonalTaxPage />} />
-        <Route path="/corporate-tax" element={<CorporateTaxPage />} />
+        <Route path="/personal-tax" element={<ServicePage key="personal-tax" slug="personal-tax" />} />
+        <Route path="/corporate-tax" element={<ServicePage key="corporate-tax" slug="corporate-tax" />} />
         <Route path="/business-tax" element={<RedirectTo to="/corporate-tax" />} />
-        <Route path="/bookkeeping" element={<BookkeepingPage />} />
-        <Route path="/trust-estate-tax" element={<TrustEstatePage />} />
+        <Route path="/bookkeeping" element={<ServicePage key="bookkeeping" slug="bookkeeping" />} />
+        <Route path="/trust-estate-tax" element={<ServicePage key="trust-estate-tax" slug="trust-estate-tax" />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/career" element={<CareerPage />} />

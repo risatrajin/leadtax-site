@@ -1,0 +1,332 @@
+{
+  "_note": "Service pages (Personal tax, Corporate tax, Bookkeeping, Trust & estate). Copy from the developer package (website/assets/services.json and the service pages). The client should review service copy and tax content before launch.",
+  "fitPoints": [
+    "In person in BC",
+    "Remote options available",
+    "Scope and fees confirmed first"
+  ],
+  "anchors": [
+    {
+      "label": "What we help with",
+      "href": "#included"
+    },
+    {
+      "label": "What to prepare",
+      "href": "#prepare"
+    },
+    {
+      "label": "Common questions",
+      "href": "#questions"
+    },
+    {
+      "label": "Get started",
+      "href": "#contact"
+    }
+  ],
+  "heroActions": [
+    {
+      "label": "Let's discuss your needs",
+      "href": "#contact"
+    },
+    {
+      "label": "Explore the service",
+      "href": "#included"
+    }
+  ],
+  "scopeEyebrow": "Support that fits",
+  "prepare": {
+    "eyebrow": "A little preparation goes a long way",
+    "title": "Start with these essentials.",
+    "text": "This is a starting checklist. We'll confirm any additional records needed after learning about your situation.",
+    "download": "Download your checklist",
+    "privacy": "Your selections stay on this page only. Share sensitive documents only through an agreed secure method.",
+    "fileHeader": "LEADTAX — {name}\nPreparation checklist",
+    "fileFooter": "This is a starting checklist. Additional records may be required.\nPlease share sensitive documents only through an agreed secure method.\n\ninfo@leadtax.ca | 604 978 4850"
+  },
+  "process": {
+    "eyebrow": "A clear way forward",
+    "title": "From “where do I start?” to “taken care of.”",
+    "text": "Know what comes next, at every step.",
+    "steps": [
+      {
+        "label": "Connect",
+        "title": "Tell us your situation.",
+        "text": "Choose a service, book an office visit, or start remotely. We'll define the scope and confirm the fee."
+      },
+      {
+        "label": "Prepare",
+        "title": "Bring it all together.",
+        "text": "Gather the relevant documents. We review the information and follow up on what's missing."
+      },
+      {
+        "label": "Move forward",
+        "title": "Review. Approve. File.",
+        "text": "Review the prepared work and authorize the filing. Leave with a clearer understanding of your next steps."
+      }
+    ]
+  },
+  "faq": {
+    "eyebrow": "Good questions",
+    "title": "A little clarity, before you start.",
+    "text": "Have a more specific question?",
+    "link": {
+      "label": "Let's talk",
+      "href": "#contact"
+    }
+  },
+  "pages": {
+    "personal-tax": {
+      "nav": "personalTax",
+      "name": "Personal tax",
+      "eyebrow": "Personal tax services",
+      "titleLines": [
+        "Life changes.",
+        "Your tax support stays."
+      ],
+      "intro": "From your first return to retirement, get personal tax help that sees the whole picture. In person in Vancouver and Burnaby, or remotely across Canada.",
+      "fit": "Individuals & families",
+      "image": {
+        "src": "/images/personal-tax-hero.webp",
+        "alt": "An accountant reviewing tax documents with a couple in a bright office"
+      },
+      "scope": {
+        "title": "A return that reflects your real life.",
+        "text": "A new job. A first home. A growing family. We help you understand what to bring and what happens next.",
+        "items": [
+          {
+            "icon": "Wallet",
+            "title": "Income, brought together",
+            "text": "Employment, pensions, investments, rental income, and self-employment in one coordinated return."
+          },
+          {
+            "icon": "Receipt",
+            "title": "Credits worth a closer look",
+            "text": "A review of the deductions and credits relevant to your circumstances, including tuition, medical expenses, donations, and RRSP contributions."
+          },
+          {
+            "icon": "History",
+            "title": "Changes handled thoughtfully",
+            "text": "Support with prior-year returns, adjustments, moving, retirement, and changes in family circumstances."
+          }
+        ]
+      },
+      "docs": [
+        "Photo identification and prior-year notice of assessment",
+        "Employment, pension, investment, and other income slips",
+        "RRSP receipts and relevant deduction receipts",
+        "Rental or self-employment records, if applicable",
+        "Details of changes in address, residency, or family status"
+      ],
+      "faqs": [
+        {
+          "question": "Can I file without visiting an office?",
+          "answer": "Yes. Start through the existing remote filing page, or contact us to discuss the best way to share your documents."
+        },
+        {
+          "question": "Can you help with more than one tax year?",
+          "answer": "Tell us which years you need prepared. We will review the scope and confirm the records required and fees before proceeding."
+        },
+        {
+          "question": "How much will my return cost?",
+          "answer": "Your fee depends on the income sources and work involved. Contact us for a quote tailored to your situation."
+        }
+      ]
+    },
+    "corporate-tax": {
+      "nav": "corporateTax",
+      "name": "Corporate tax",
+      "eyebrow": "Corporate tax services",
+      "titleLines": [
+        "You build the business.",
+        "We help with the tax."
+      ],
+      "intro": "Corporate tax preparation and year-end support for Canadian business owners. Connect your records, your corporate return, and your next business decision.",
+      "fit": "Corporations & business owners",
+      "image": {
+        "src": "/images/corporate-team.webp",
+        "alt": "Business owners reviewing a financial report with an accountant"
+      },
+      "scope": {
+        "title": "A more connected year end.",
+        "text": "Bookkeeping, business tax, and your personal return belong in the same conversation. Start with where your business is today.",
+        "items": [
+          {
+            "icon": "FileText",
+            "title": "Corporate returns",
+            "text": "T2 return preparation and a review of the supporting financial information and schedules required for your corporation."
+          },
+          {
+            "icon": "Users",
+            "title": "Owner-manager coordination",
+            "text": "Review salary and dividend considerations alongside your corporate and personal tax needs."
+          },
+          {
+            "icon": "Calendar",
+            "title": "Year-end readiness",
+            "text": "Identify missing records, reconcile key balances, and coordinate bookkeeping, GST/HST, and payroll needs."
+          }
+        ]
+      },
+      "docs": [
+        "Prior corporate tax return and notice of assessment",
+        "Year-end trial balance, general ledger, and financial statements",
+        "Bank, credit card, loan, and investment statements",
+        "Asset purchases, disposals, and financing details",
+        "Shareholder, payroll, dividend, and GST/HST records"
+      ],
+      "faqs": [
+        {
+          "question": "Is this different from filing as a sole proprietor?",
+          "answer": "Yes. A corporation files a corporate return. Sole-proprietor income is generally addressed through a personal return. Tell us how your business is structured so we can direct you."
+        },
+        {
+          "question": "Can you help if my books are behind?",
+          "answer": "Yes. We can discuss catch-up bookkeeping and the work needed to prepare your records for the corporate return."
+        },
+        {
+          "question": "Can you coordinate my personal and corporate tax?",
+          "answer": "We can review both engagements together so owner compensation and supporting records are considered consistently."
+        }
+      ]
+    },
+    "bookkeeping": {
+      "nav": "bookkeeping",
+      "name": "Bookkeeping",
+      "eyebrow": "Bookkeeping services",
+      "titleLines": [
+        "Less time in the books.",
+        "More clarity in your business."
+      ],
+      "intro": "Organized records and a clearer view of your numbers. Monthly bookkeeping, catch-up support, and year-end coordination for Canadian businesses.",
+      "fit": "Small businesses & entrepreneurs",
+      "image": {
+        "src": "https://images.unsplash.com/photo-1762319007311-31597c44aad8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhY2NvdW50aW5nJTIwY2FsY3VsYXRvciUyMGJ1c2luZXNzJTIwZmluYW5jZXxlbnwxfHx8fDE3Njk5NDA4MzV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+        "alt": "Calculator and colour-coded documents on a desk"
+      },
+      "scope": {
+        "title": "Find the right level of support.",
+        "text": "Choose ongoing monthly help, a one-time cleanup, or bookkeeping coordinated with year-end tax. We will quote the work your business needs.",
+        "items": [
+          {
+            "icon": "BookOpen",
+            "title": "Monthly bookkeeping",
+            "text": "Transaction categorization, bank and credit card reconciliations, and organized financial records."
+          },
+          {
+            "icon": "History",
+            "title": "Catch-up and cleanup",
+            "text": "Bring outstanding months into order and identify missing information before year end."
+          },
+          {
+            "icon": "Handshake",
+            "title": "Connected business support",
+            "text": "Discuss payroll, GST/HST reporting, QuickBooks support, and corporate tax as part of a clearly defined service plan."
+          }
+        ]
+      },
+      "docs": [
+        "Business structure and current bookkeeping software",
+        "Months or years requiring bookkeeping",
+        "Bank, credit card, and payment processor statements",
+        "Sales invoices, purchase receipts, and expense records",
+        "Payroll, loan, and GST/HST records, if applicable"
+      ],
+      "faqs": [
+        {
+          "question": "Can you work with QuickBooks?",
+          "answer": "Yes. Tell us which version you use and how your current records are maintained so we can discuss the setup and access required."
+        },
+        {
+          "question": "Do you offer catch-up bookkeeping?",
+          "answer": "Yes. Share the outstanding periods and approximate transaction volume so we can assess the work and provide a quote."
+        },
+        {
+          "question": "What does monthly bookkeeping cost?",
+          "answer": "Pricing depends on transaction volume, the number of accounts, record quality, and the services included. We confirm your scope and fee before work starts."
+        }
+      ],
+      "pace": {
+        "eyebrow": "Choose your starting point",
+        "title": "Support at your pace.",
+        "note": "Each engagement is quoted to your transaction volume, records, and service scope.",
+        "items": [
+          {
+            "label": "Ongoing",
+            "title": "Monthly support",
+            "text": "Keep reconciliations and records current, month after month.",
+            "link": "Discuss monthly support"
+          },
+          {
+            "label": "A fresh start",
+            "title": "Catch-up & cleanup",
+            "text": "Get outstanding periods organized and ready for the next step.",
+            "link": "Discuss a cleanup"
+          },
+          {
+            "label": "Connected",
+            "title": "Books + year end",
+            "text": "Coordinate bookkeeping with corporate tax and year-end preparation.",
+            "link": "Discuss combined support"
+          }
+        ]
+      }
+    },
+    "trust-estate-tax": {
+      "nav": "trustEstate",
+      "name": "Trust & estate",
+      "eyebrow": "Trust & estate tax services",
+      "titleLines": [
+        "Thoughtful guidance.",
+        "When it matters most."
+      ],
+      "intro": "Tax preparation support for executors, trustees, and families. Make sense of the records, returns, and next steps with a clear, considered approach.",
+      "fit": "Executors, trustees & families",
+      "image": {
+        "src": "https://images.unsplash.com/photo-1762941177632-fe37c485c428?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxlc3RhdGUlMjBwbGFubmluZyUyMHdlYWx0aHxlbnwxfHx8fDE3Njc5OTExMDJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+        "alt": "Small model house with a coin"
+      },
+      "scope": {
+        "title": "A clear place to begin.",
+        "text": "You do not need to have every answer before you speak with us. Start with the documents available and we will help organize the next steps.",
+        "items": [
+          {
+            "icon": "FileText",
+            "title": "Final personal returns",
+            "text": "Review the deceased person’s tax records and discuss the final personal return and other returns that may be relevant."
+          },
+          {
+            "icon": "ScrollText",
+            "title": "Estate and trust returns",
+            "text": "T3 return preparation, beneficiary reporting, and supporting schedules based on the trust or estate circumstances."
+          },
+          {
+            "icon": "Scale",
+            "title": "Executor and trustee support",
+            "text": "Organize the information needed for the engagement and discuss outstanding returns, tax notices, and clearance certificate support."
+          }
+        ]
+      },
+      "docs": [
+        "Date of death and executor or trustee contact details",
+        "Will, trust deed, and relevant legal documents",
+        "Prior returns, tax notices, and trust account details",
+        "Income slips and investment statements",
+        "Asset values, disposition records, and distribution details"
+      ],
+      "faqs": [
+        {
+          "question": "Is the final personal return the same as an estate return?",
+          "answer": "They are separate filings. We review the income, dates, and estate activity to identify the returns that may be needed."
+        },
+        {
+          "question": "Can I start before I have all the documents?",
+          "answer": "Yes. A consultation can help you identify the missing records and plan the next steps."
+        },
+        {
+          "question": "Do all estates and trusts need the same forms?",
+          "answer": "No. Requirements depend on the type of trust or estate and its circumstances. We confirm the preparation scope after reviewing the details."
+        }
+      ]
+    }
+  }
+}

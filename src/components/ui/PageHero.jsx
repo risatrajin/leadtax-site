@@ -9,12 +9,12 @@ export function actionProps(action) {
 }
 
 /**
- * The one hero used by inner pages: a navy band with a white title, a light-blue intro and up to
+ * The one hero used by inner pages: a navy band with an optional small label, a white title, a light-blue intro and up to
  * two actions (white, then white outline). An action is { label, to | href, newTab } or
  * { label, props } with ready-made link props. With an image the text sits left and the photo right;
  * without one the text is centred. `decor` adds soft light glows and a faint grid. `imageNote` ({ title, text }) adds a white note card over the photo.
  */
-export default function PageHero({ title, text, actions = [], image, imageNote, decor, children }) {
+export default function PageHero({ eyebrow, title, text, actions = [], image, imageNote, decor, children }) {
   return (
     <section className={cx("bg-gradient-to-br from-brand to-brand-strong px-4 py-16 text-white md:px-8 md:py-24", decor && "relative isolate overflow-hidden")}>
       {decor && (
@@ -29,6 +29,7 @@ export default function PageHero({ title, text, actions = [], image, imageNote, 
       )}
       <div className={cx("mx-auto max-w-7xl", image && "grid items-center gap-12 lg:grid-cols-2")}>
         <div className={cx(!image && "mx-auto max-w-3xl text-center")}>
+          {eyebrow && <p className="mb-4 text-sm font-semibold uppercase tracking-wider text-brand-subtle">{eyebrow}</p>}
           <h1 className="text-4xl font-bold tracking-tight md:text-5xl lg:text-6xl">{title}</h1>
           {text && <p className="mt-6 text-lg text-brand-subtle md:text-xl">{text}</p>}
           {actions.length > 0 && (

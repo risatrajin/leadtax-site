@@ -1,0 +1,34 @@
+{
+  "_note": "Closing enquiry section used on the homepage, the service pages and the 404 page. Copy from the developer package. The form opens an email draft; nothing is submitted.",
+  "id": "contact",
+  "eyebrow": "Your next step",
+  "title": "Let's make tax feel clearer.",
+  "text": "Tell us what you need. We'll help you find the right service and explain how to get started.",
+  "call": "Call {phone}",
+  "phone": "6049784850",
+  "readyLabel": "Already ready to file?",
+  "remote": {
+    "label": "Start remote filing",
+    "to": "/file-remotely"
+  },
+  "form": {
+    "title": "Send us a note",
+    "nameLabel": "Your name",
+    "emailLabel": "Email address",
+    "serviceLabel": "I need help with",
+    "services": [
+      "Personal tax",
+      "Corporate tax",
+      "Cross-border tax",
+      "Bookkeeping",
+      "Trust & estate",
+      "General enquiry"
+    ],
+    "messageLabel": "A little about what you need",
+    "note": "Please leave out SINs, account numbers, and tax documents. This opens a draft in your email app; nothing is submitted through this page.",
+    "button": "Prepare email enquiry",
+    "status": "Your email app should open with a draft. Send it from there to complete your enquiry, or contact {email} directly.",
+    "emailSubject": "LeadTax enquiry — {service}",
+    "emailBody": "Name: {name}\nEmail: {email}\nService: {service}\n\n{message}"
+  }
+}
