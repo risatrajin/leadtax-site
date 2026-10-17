@@ -42,11 +42,14 @@ function Hero() {
               ))}
             </div>
           </div>
-          <img
-            src={hero.image.src}
-            alt={hero.image.alt}
-            className="mx-auto -mb-px w-full max-w-sm self-end [mask-composite:intersect] [mask-image:linear-gradient(to_right,transparent,black_8%,black_92%,transparent),linear-gradient(to_bottom,transparent,black_6%)] sm:max-w-md lg:max-w-none"
-          />
+          {/* The portrait rises in on load, then zooms very slowly in and out from its bottom edge. */}
+          <div className="hero-rise mx-auto w-full max-w-sm self-end sm:max-w-md lg:max-w-none">
+            <img
+              src={hero.image.src}
+              alt={hero.image.alt}
+              className="hero-breathe -mb-px w-full origin-bottom [mask-composite:intersect] [mask-image:linear-gradient(to_right,transparent,black_8%,black_92%,transparent),linear-gradient(to_bottom,transparent,black_6%)]"
+            />
+          </div>
         </div>
       </div>
 

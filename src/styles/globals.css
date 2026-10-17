@@ -170,3 +170,34 @@
     display: none !important;
   }
 }
+
+/* Homepage hero portrait: rises in on load, then zooms very slowly in and out. */
+@keyframes hero-rise {
+  from {
+    opacity: 0;
+    transform: translateY(48px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes hero-breathe {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.035);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .hero-rise {
+    animation: hero-rise 1s cubic-bezier(0.2, 0.7, 0.2, 1) 0.15s both;
+  }
+  .hero-breathe {
+    animation: hero-breathe 9s ease-in-out 1.2s infinite;
+  }
+}
