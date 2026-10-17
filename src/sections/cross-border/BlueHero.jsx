@@ -3,13 +3,13 @@ import Button from "../../components/ui/Button.jsx";
 
 /**
  * US & cross-border hero in the homepage style: a bright blue band, the headline in two lines with
- * the intro and actions on the left, and the cut-out photo standing on the band's bottom edge on
- * the right (it rises in on load).
+ * the intro and actions on the left, and the U.S.–Canada collage on the right (white background
+ * removed), which rises in on load and then zooms very slowly.
  */
 export default function BlueHero({ hero }) {
   return (
     <section className="bg-hero-blue px-4 text-white md:px-8">
-      <div className="mx-auto grid max-w-7xl items-end gap-8 lg:grid-cols-[1.3fr_0.7fr]">
+      <div className="mx-auto grid max-w-7xl items-center gap-8 lg:grid-cols-[1.1fr_0.9fr]">
         <div className="pb-12 pt-14 md:pt-20 lg:pb-24 lg:pt-24">
           <h1 className="text-4xl font-semibold leading-[1.04] tracking-tight sm:text-5xl xl:text-[4rem]">
             <span className="block">{hero.titleLead}</span>
@@ -28,8 +28,8 @@ export default function BlueHero({ hero }) {
             </Button>
           </div>
         </div>
-        <div className="hero-rise mx-auto w-full max-w-md self-end lg:max-w-none">
-          <img src={hero.image.src} alt={hero.image.alt} className="-mb-px w-full" />
+        <div className="hero-rise mx-auto w-full max-w-md pb-12 lg:max-w-none lg:py-12">
+          <img src={hero.image.src} alt={hero.image.alt} className="hero-breathe w-full" />
         </div>
       </div>
     </section>
