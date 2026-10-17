@@ -6,18 +6,18 @@
 @theme {
   /* Site typeface: Google Sans (loaded from Google Fonts in index.html), with system fallbacks. */
   --font-sans: "Google Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
-  /* Primary brand colour: main buttons, brand text, footer, step badges. Was #033D76. */
-  --color-brand: #033d76;
+  /* Primary brand colour: main buttons, brand text, footer, step badges. Was #033D76 (navy) until the switch to bright blue. */
+  --color-brand: #177ff8;
   /* Darker brand shade: hover/pressed state of brand surfaces, gradient ends. Was #022A54. */
-  --color-brand-strong: #022a54;
+  --color-brand-strong: #0b5fcc;
   /* Pale brand tint: icon wells, dropdown hover, text on brand backgrounds. Was #CAE1FF. */
-  --color-brand-subtle: #cae1ff;
+  --color-brand-subtle: #d6e8fe;
   /* Raised brand surface. Only used on the archived DIY landing page; kept for future use. Was #044385. */
-  --color-brand-raised: #044385;
+  --color-brand-raised: #1470dd;
   /* Lighter brand blue used as the highlight stop in the hero gradient. Was #044994. */
-  --color-brand-highlight: #044994;
+  --color-brand-highlight: #3a93fa;
   /* Soft brand blue: Drop-off / In Person hero background, end of the "Need Expert Help?" gradient. Was #81ABDC. */
-  --color-brand-fade: #81abdc;
+  --color-brand-fade: #8bc0fb;
 
   /* Very pale blue-grey used to start soft section gradients. Was #E8F4F8. */
   --color-surface-tint: #e8f4f8;
@@ -43,7 +43,7 @@
   /* Bright blue behind the homepage hero; matches the backdrop of its portrait photo. */
   --color-hero-blue: #1080fc;
   /* Brighter brand blue for the accent word, service icons and arrows in the hero. */
-  --color-brand-bright: #1459c7;
+  --color-brand-bright: #177ff8;
   /* Canadian red for the maple leaf. */
   --color-canada-red: #d52b1e;
 }
