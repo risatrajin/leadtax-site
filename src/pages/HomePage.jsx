@@ -10,6 +10,7 @@ import Offices from "../sections/home/Offices.jsx";
 import WaysShowcase from "../sections/home/WaysShowcase.jsx";
 import ProcessShowcase from "../sections/home/ProcessShowcase.jsx";
 import ReviewsCarousel from "../sections/shared/ReviewsCarousel.jsx";
+import PreviousYearsBanner from "../sections/file-online/PreviousYearsBanner.jsx";
 
 const SECTION = "scroll-mt-28 px-4 py-16 md:px-8 md:py-24";
 
@@ -96,8 +97,9 @@ export default function HomePage() {
         <WaysShowcase ways={home.ways} />
         <ProcessShowcase process={home.process} tiles={home.hero.tiles} />
         <Faq />
-        <Offices />
-        <EnquirySection className="bg-white" />
+        <PreviousYearsBanner className="bg-gray-50" />
+        <Offices className="bg-white" />
+        <EnquirySection />
       </main>
       <SiteFooter />
     </div>

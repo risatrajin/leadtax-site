@@ -159,12 +159,12 @@ function OfficeCard({ office, selected, onSelect }) {
  * Offices: a list grouped by city on the left and, from 1024px, a grayscale Google map on the
  * right centred on the selected office, with a card showing its photo, hours and actions.
  */
-export default function Offices() {
+export default function Offices({ className = "bg-gray-50" }) {
   const [activeId, setActiveId] = useState(offices[0].id);
   const active = offices.find((office) => office.id === activeId);
 
   return (
-    <section id="offices" className="scroll-mt-24 bg-gray-50 px-4 py-16 md:px-8 md:py-24">
+    <section id="offices" className={`scroll-mt-24 ${className} px-4 py-16 md:px-8 md:py-24`}>
       <div className="mx-auto max-w-7xl">
         <div className="grid gap-6 lg:grid-cols-12 lg:items-end lg:gap-12">
           <h2 className="text-3xl text-gray-900 md:text-4xl lg:col-span-5 lg:text-5xl">{copy.title}</h2>

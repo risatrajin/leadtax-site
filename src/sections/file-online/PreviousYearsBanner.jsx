@@ -4,9 +4,9 @@ import Button from "../../components/ui/Button.jsx";
 const { previousYears } = home;
 
 /** "Want to file taxes for previous years?" The button opens the DIY tax software sign-up. */
-export default function PreviousYearsBanner() {
+export default function PreviousYearsBanner({ className = "bg-gray-100" }) {
   return (
-    <section className="bg-gray-100 px-[32px] py-[80px]">
+    <section className={`${className} px-[32px] py-[80px]`}>
       <div className="max-w-4xl mx-auto text-center space-y-6">
         <div className="mb-8">
           <img
