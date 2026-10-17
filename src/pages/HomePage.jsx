@@ -9,6 +9,7 @@ import EnquirySection from "../components/ui/EnquirySection.jsx";
 import { SectionTitle, StepCards } from "../components/ui/ServiceBlocks.jsx";
 import { ServiceCard } from "../sections/home/Hero.jsx";
 import Offices from "../sections/home/Offices.jsx";
+import ReviewsCarousel from "../sections/shared/ReviewsCarousel.jsx";
 import { linkById } from "../components/layout/site-header/panels.jsx";
 import { getIcon } from "../lib/icons.js";
 import { CARD, CARD_TITLE, ICON_BADGE } from "../lib/styles.js";
@@ -216,6 +217,7 @@ export default function HomePage() {
       <main id="main">
         <Hero />
         <Promises />
+        <ReviewsCarousel className="bg-gray-50" />
         <Services />
         <Ways />
         <Process />
