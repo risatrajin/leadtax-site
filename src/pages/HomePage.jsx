@@ -1,4 +1,4 @@
-import { ArrowRight, Check, MapPin } from "lucide-react";
+import { ArrowRight, Check } from "lucide-react";
 import home from "../content/homepage.json";
 import SiteHeader from "../components/layout/SiteHeader.jsx";
 import SiteFooter from "../components/layout/SiteFooter.jsx";
@@ -17,41 +17,44 @@ import { CARD, CARD_TITLE, ICON_BADGE } from "../lib/styles.js";
 const SECTION = "scroll-mt-28 px-4 py-16 md:px-8 md:py-24";
 const LINK = "inline-flex items-center gap-1.5 font-semibold text-brand underline-offset-4 hover:underline";
 
-/** Full-bleed seawall photo with the headline and the five services as tiles along the bottom. */
+/**
+ * Bright blue hero: a three-line headline and the actions on the left, the portrait on the right
+ * (its blue backdrop matches the section), and the five services as tiles overlapping the
+ * bottom edge of the blue band.
+ */
 function Hero() {
   const { hero } = home;
+  const lines = hero.title.match(/[^.]+\./g);
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-brand via-brand-highlight to-brand text-white">
-      {/* Below 1280px the photo sits on top; from 1280px it covers the whole hero behind the text. */}
-      <div className="relative h-64 sm:h-80 lg:h-[26rem] xl:absolute xl:inset-0 xl:h-auto">
-        <img src={hero.image.src} alt={hero.image.alt} className="h-full w-full object-cover" style={{ objectPosition: hero.image.position }} />
-        <div
-          aria-hidden="true"
-          className="absolute inset-0 hidden bg-gradient-to-r from-gray-950/60 via-gray-950/25 via-40% to-transparent to-60% xl:block"
-        />
-      </div>
-
-      <div className="relative mx-auto max-w-7xl px-4 pb-12 pt-10 md:px-8 xl:pb-16 xl:pt-24">
-        <div className="max-w-2xl xl:[text-shadow:0_1px_8px_rgb(0_0_0/0.25)]">
-          <p className="mb-5 flex items-center gap-2 text-sm font-semibold uppercase tracking-wider text-brand-subtle xl:text-white">
-            <MapPin aria-hidden="true" className="h-4 w-4" />
-            {hero.location.title}
-            <span aria-hidden="true" className="h-1 w-1 rounded-full bg-current opacity-60" />
-            <span className="font-medium normal-case tracking-normal opacity-90">{hero.location.text}</span>
-          </p>
-          <h1 className="text-4xl font-bold leading-tight tracking-tight sm:text-5xl lg:text-6xl">{hero.title}</h1>
-          <p className="mt-6 text-lg text-brand-subtle md:text-xl xl:text-white/90">{hero.text}</p>
-          <div className="mt-8 flex flex-col gap-4 sm:flex-row [text-shadow:none]">
-            {hero.actions.map((action, index) => (
-              <Button key={action.label} href={action.href} variant={index === 0 ? "inverse" : "outlineInverseFill"}>
-                {action.label}
-              </Button>
-            ))}
+    <section className="relative bg-white">
+      <div className="bg-hero-blue px-4 text-white md:px-8">
+        <div className="mx-auto grid max-w-7xl items-end gap-8 lg:grid-cols-[1.15fr_0.85fr]">
+          <div className="pb-10 pt-14 md:pt-20 lg:pb-40 lg:pt-24">
+            <h1 className="text-5xl font-semibold leading-[1.02] tracking-tight sm:text-6xl lg:text-7xl xl:text-[5.5rem]">
+              {lines.map((line) => (
+                <span key={line} className="block">
+                  {line.trim()}
+                </span>
+              ))}
+            </h1>
+            <p className="mt-8 max-w-xl text-lg text-white/90 md:text-xl">{hero.text}</p>
+            <div className="mt-10 flex flex-col gap-4 sm:flex-row">
+              {hero.actions.map((action, index) => (
+                <Button key={action.label} href={action.href} variant={index === 0 ? "inverse" : "outlineInverseFill"}>
+                  {action.label}
+                </Button>
+              ))}
+            </div>
           </div>
+          <img
+            src={hero.image.src}
+            alt={hero.image.alt}
+            className="mx-auto -mb-px w-full max-w-sm self-end [mask-composite:intersect] [mask-image:linear-gradient(to_right,transparent,black_8%,black_92%,transparent),linear-gradient(to_bottom,transparent,black_6%)] sm:max-w-md lg:max-w-none"
+          />
         </div>
       </div>
 
-      <div className="relative mx-auto max-w-7xl px-4 pb-12 md:px-8 xl:pb-10">
+      <div className="relative z-10 mx-auto -mt-16 max-w-7xl px-4 pb-12 md:px-8 lg:-mt-24">
         <h2 className="sr-only">{hero.tilesTitle}</h2>
         <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-5 lg:gap-4">
           {hero.tiles.map((tile) => (

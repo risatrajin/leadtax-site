@@ -40,6 +40,8 @@
 
 /* Homepage hero (client mockup). */
 @theme {
+  /* Bright blue behind the homepage hero; matches the backdrop of its portrait photo. */
+  --color-hero-blue: #1080fc;
   /* Brighter brand blue for the accent word, service icons and arrows in the hero. */
   --color-brand-bright: #1459c7;
   /* Canadian red for the maple leaf. */

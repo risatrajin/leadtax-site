@@ -13,14 +13,9 @@
         "href": "#contact"
       }
     ],
-    "location": {
-      "title": "Vancouver & Burnaby",
-      "text": "In person or remotely."
-    },
     "image": {
-      "src": "/images/hero-vancouver-seawall.webp",
-      "alt": "Smiling woman in a LeadTax jacket using her phone on the Vancouver seawall",
-      "position": "70% 30%"
+      "src": "/images/hero-portrait-blue.webp",
+      "alt": "Portrait of a young professional woman against a bright blue background"
     },
     "tilesTitle": "How can we help? Five services. One place.",
     "tiles": [
