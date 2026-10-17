@@ -15,7 +15,7 @@ export default function PreviousYearsBanner({ className = "bg-gray-100", portrai
         <div className="mb-8">
           {portrait ? (
             <div className="relative flex h-[250px] items-end justify-center overflow-hidden rounded-2xl bg-hero-blue shadow-lg md:h-[400px]">
-              <div aria-hidden="true" className="absolute bottom-[12%] left-1/2 h-[68%] w-[46%] -translate-x-1/2 rounded-3xl bg-brand-strong/60 md:w-[34%]" />
+              <div aria-hidden="true" className="absolute bottom-[12%] left-1/2 h-[70%] w-[44%] -translate-x-[30%] rounded-3xl bg-brand-strong/60 md:w-[32%]" />
               <img src={portrait.src} alt={portrait.alt} className="relative h-[94%] w-auto object-contain object-bottom" />
             </div>
           ) : (
