@@ -11,6 +11,8 @@ import WaysShowcase from "../sections/home/WaysShowcase.jsx";
 import ProcessShowcase from "../sections/home/ProcessShowcase.jsx";
 import ReviewsCarousel from "../sections/shared/ReviewsCarousel.jsx";
 import PreviousYearsBanner from "../sections/file-online/PreviousYearsBanner.jsx";
+import TrustFeatures from "../sections/file-online/TrustFeatures.jsx";
+import HowItWorks from "../sections/file-online/HowItWorks.jsx";
 
 const SECTION = "scroll-mt-28 px-4 py-16 md:px-8 md:py-24";
 
@@ -98,6 +100,8 @@ export default function HomePage() {
         <ProcessShowcase process={home.process} tiles={home.hero.tiles} />
         <Faq />
         <PreviousYearsBanner className="bg-gray-50" image={home.previousYears.image} />
+        <TrustFeatures />
+        <HowItWorks />
         <Offices className="bg-white" />
         <EnquirySection />
       </main>
