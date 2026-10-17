@@ -22,7 +22,7 @@ Status: **done** = rebuilt and verified pixel-identical at 1440px and 390px with
 | Route | Minified | Line | New file | Status |
 |---|---|---|---|---|
 | `/` | — | — | `src/pages/HomePage.jsx` (the redesign, see below) | new homepage |
-| `/` | `K0` | 14753 | `src/pages/LegacyHomePage.jsx` (the original homepage, restored to `/`; `/home-legacy` redirects here) | done |
+| `/` | `K0` | 14753 | `src/pages/HomePage.jsx` (service-focused homepage from the developer package; the original DIY homepage was removed, see git history) | done |
 | `/home-v2`, `/home-legacy` | — | — | redirect to `/` (keep query and hash) | redirect |
 | `/file-remotely` | `V1` | 16771 | `src/pages/FileRemotelyPage.jsx` | done |
 | `/drop-off` | `av` | 17137 | `src/pages/DropOffPage.jsx` | done |
@@ -65,7 +65,9 @@ images, form fields) and `otherText`: every other human-readable string from the
 
 ## Page sections
 
-### Original homepage (`K0`, at `/`)
+### Original homepage (`K0`) — removed
+
+The original DIY homepage and its sections were replaced by the developer package homepage. The table records where they lived before removal.
 
 | Order | Minified | Line | New file |
 |---|---|---|---|
@@ -131,7 +133,9 @@ The three pages share one template, `src/sections/services/ServicePage.jsx`, wit
 | FAQs: homepage, /faq | `src/content/faqs.json` |
 | DIY tiers, expert tiers, /pricing comparison rows | `src/content/pricing.json` |
 | Reviews | `src/content/reviews.json` |
-| Homepage service cards | `src/content/home-legacy.json` → `filingOptions.cards` |
+| Homepage copy | `src/content/homepage.json` |
+| Service pages (Personal, Corporate, Bookkeeping, Trust & estate) | `src/content/service-pages.json` |
+| Closing enquiry form | `src/content/enquiry.json` |
 | All 11 blog posts (listing + article) | `src/content/blog/posts.json` |
 | Page copy | `src/content/home.json`, `src/content/pages/*.json` |
 | Dropped pages | `src/content/archive/*.json` |
@@ -217,7 +221,14 @@ Removed: the `ed-*` tokens, Geist / Instrument Serif and the accent letters, `ed
 `Seo` gained a `robots` prop.
 A brand-coloured `:focus-visible` outline now applies site-wide.
 
-## Homepage switch
+## Developer package pages
+
+- `/`, `/personal-tax`, `/corporate-tax`, `/bookkeeping` and `/trust-estate-tax` use the copy from the
+  developer package (`LeadTax-Website-Developer-Package/website`), laid out with the site's components.
+  The homepage keeps its existing title and description. The cross-border page follows the package's
+  newer `cross-border-latest` page at `/us-cross-border`.
+
+## Homepage switch (historical)
 
 - `/` renders the redesign (`src/pages/HomePage.jsx`, copy in `src/content/home.json`, sections in
   `src/sections/home/`). It uses the site's homepage SEO from `seo.json` → `pages.home` and is indexable;

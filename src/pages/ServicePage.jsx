@@ -7,7 +7,7 @@ import Button from "../components/ui/Button.jsx";
 import SmartLink from "../components/ui/SmartLink.jsx";
 import FaqAccordion from "../components/ui/FaqAccordion.jsx";
 import EnquirySection from "../components/ui/EnquirySection.jsx";
-import { EYEBROW, H2, SectionTitle } from "../components/ui/ServiceBlocks.jsx";
+import { EYEBROW, H2, SectionTitle, StepCards } from "../components/ui/ServiceBlocks.jsx";
 import { getIcon } from "../lib/icons.js";
 import { cx } from "../lib/cx.js";
 import { fill } from "../lib/template.js";
@@ -134,29 +134,6 @@ function Prepare({ page }) {
         </div>
       </div>
     </section>
-  );
-}
-
-/** Numbered cards: "01 / Label", a title and text, with an optional link to the enquiry form. */
-function StepCards({ items, linkHref }) {
-  return (
-    <ol className="mt-10 grid gap-6 md:grid-cols-3">
-      {items.map((item, index) => (
-        <li key={item.title} className={`${CARD} flex flex-col p-7`}>
-          <p className="text-sm font-semibold uppercase tracking-wider text-brand-bright">
-            {String(index + 1).padStart(2, "0")} / {item.label}
-          </p>
-          <h3 className={`mt-4 ${CARD_TITLE}`}>{item.title}</h3>
-          <p className="mt-2 flex-1 text-gray-600">{item.text}</p>
-          {item.link && (
-            <a href={linkHref} className={cx(LINK, "mt-6")}>
-              {item.link}
-              <ArrowRight aria-hidden="true" className="h-4 w-4" />
-            </a>
-          )}
-        </li>
-      ))}
-    </ol>
   );
 }
 

@@ -1,0 +1,215 @@
+{
+  "_note": "Homepage. Copy from the developer package (website/index.html). The page title and description stay as before to protect search rankings (see seo.json).",
+  "hero": {
+    "title": "Your life. Your business. Your tax team.",
+    "services": "Personal Tax. Corporate Tax. Bookkeeping. Trust & Estate. Cross-Border Tax.",
+    "text": "Find the right support for your next return, your growing business, or your next chapter.",
+    "actions": [
+      {
+        "label": "Explore our services",
+        "href": "#services"
+      },
+      {
+        "label": "Let's talk",
+        "href": "#contact"
+      }
+    ],
+    "location": {
+      "title": "Vancouver & Burnaby",
+      "text": "In person or remotely."
+    },
+    "image": {
+      "src": "/images/hero-vancouver-seawall.webp",
+      "alt": "Smiling woman in a LeadTax jacket using her phone on the Vancouver seawall",
+      "position": "70% 30%"
+    },
+    "tilesTitle": "How can we help? Five services. One place.",
+    "tiles": [
+      {
+        "link": "personalTax",
+        "icon": "User",
+        "title": "Personal Tax",
+        "text": "For you & your family"
+      },
+      {
+        "link": "corporateTax",
+        "icon": "Briefcase",
+        "title": "Corporate Tax",
+        "text": "For incorporated businesses"
+      },
+      {
+        "link": "bookkeeping",
+        "icon": "Calculator",
+        "title": "Bookkeeping",
+        "text": "For everyday business clarity"
+      },
+      {
+        "link": "trustEstate",
+        "icon": "FilePenLine",
+        "title": "Trust & Estate",
+        "text": "For executors, trustees & families"
+      },
+      {
+        "link": "usCrossBorder",
+        "icon": "Globe",
+        "title": "Cross-Border Tax",
+        "text": "For life between Canada & the U.S."
+      }
+    ],
+    "help": {
+      "label": "Not sure where to start?",
+      "link": "We'll help you choose",
+      "href": "#contact"
+    }
+  },
+  "promises": [
+    "Personal attention",
+    "In-person & remote options",
+    "Scope & fees confirmed upfront"
+  ],
+  "services": {
+    "eyebrow": "Our core services",
+    "title": "The support you need. All in one place.",
+    "text": "Choose a service to see how we can help, what to prepare and how to get started.",
+    "cards": [
+      {
+        "link": "personalTax",
+        "icon": "User",
+        "eyebrow": "For you & your family",
+        "title": "Personal Tax",
+        "text": "Personal tax returns, with the details of your life in mind. From employment and self-employment to rental income and family changes.",
+        "points": [
+          "T1 personal income tax returns",
+          "Employment, investments & rental income",
+          "Self-employed & family tax needs"
+        ],
+        "cta": "File your personal taxes"
+      },
+      {
+        "link": "corporateTax",
+        "icon": "Briefcase",
+        "eyebrow": "For incorporated businesses",
+        "title": "Corporate Tax",
+        "text": "Keep your corporation's tax filings connected to its financial records, year-end needs and plans for the business.",
+        "points": [
+          "T2 corporate income tax returns",
+          "Year-end records & reporting",
+          "Owner-manager tax considerations"
+        ],
+        "cta": "Explore corporate tax"
+      },
+      {
+        "link": "bookkeeping",
+        "icon": "Calculator",
+        "eyebrow": "For everyday business clarity",
+        "title": "Bookkeeping",
+        "text": "Turn a stack of transactions into a clearer view of your business. Get support with ongoing records and catch-up bookkeeping.",
+        "points": [
+          "Transaction recording & reconciliation",
+          "Catch-up bookkeeping",
+          "Financial reports & year-end readiness"
+        ],
+        "cta": "Get bookkeeping support"
+      },
+      {
+        "link": "trustEstate",
+        "icon": "FilePenLine",
+        "eyebrow": "For executors, trustees & families",
+        "title": "Trust & Estate",
+        "text": "Thoughtful tax support through important transitions. Understand the returns, records and next steps relevant to the estate or trust.",
+        "points": [
+          "T3 trust & estate tax returns",
+          "Final personal income tax returns",
+          "Executor & trustee filing support"
+        ],
+        "cta": "Explore trust & estate"
+      },
+      {
+        "link": "usCrossBorder",
+        "icon": "Globe",
+        "eyebrow": "For life between Canada & the U.S.",
+        "title": "Cross-Border Tax",
+        "text": "Bring both sides of your tax picture together. For people who live, work, invest or own property across the Canada–U.S. border.",
+        "points": [
+          "Canadian & U.S. individual filings",
+          "Residency & foreign reporting review",
+          "Cross-border income & investments"
+        ],
+        "cta": "Explore cross-border tax"
+      }
+    ],
+    "more": {
+      "eyebrow": "Let's find your starting point",
+      "title": "More than one service in mind?",
+      "text": "Your personal and business needs often connect. Tell us about the whole picture.",
+      "cta": "Talk to LeadTax",
+      "href": "#contact"
+    }
+  },
+  "ways": {
+    "eyebrow": "Your choice. Your convenience.",
+    "title": "A local team. Flexible ways to work together.",
+    "text": "Start online or meet us in person. Choose what works for you.",
+    "items": [
+      {
+        "label": "Online",
+        "icon": "Laptop",
+        "title": "File from wherever you are.",
+        "text": "Start through LeadTax's remote filing experience. Contact us first if you need help choosing a service.",
+        "cta": "Start remote filing",
+        "to": "/file-remotely"
+      },
+      {
+        "label": "In person",
+        "icon": "MapPin",
+        "title": "Let's sit down together.",
+        "text": "Arrange an office visit in Vancouver or Burnaby. Review current locations and appointment options before you visit.",
+        "cta": "Book an office visit",
+        "to": "/file-in-person"
+      }
+    ]
+  },
+  "process": {
+    "eyebrow": "A clear way forward",
+    "title": "From your first question to your next step.",
+    "cta": {
+      "label": "Get started",
+      "href": "#contact"
+    },
+    "steps": [
+      {
+        "label": "Choose",
+        "title": "Find your service.",
+        "text": "Choose the support you need, or speak with us. We'll discuss your situation, confirm the scope and provide a quote."
+      },
+      {
+        "label": "Prepare",
+        "title": "Bring it together.",
+        "text": "Gather the relevant records. We'll explain the document-sharing process and follow up on missing information."
+      },
+      {
+        "label": "Complete",
+        "title": "Review & move forward.",
+        "text": "Review the prepared work, ask questions and authorize applicable filings. Know what comes next."
+      }
+    ]
+  },
+  "faq": {
+    "eyebrow": "Before you get started",
+    "title": "Good questions. Clear next steps.",
+    "items": [
+      {
+        "question": "Which service should I choose?",
+        "answer": "Choose Personal Tax for an individual return, Corporate Tax for an incorporated business, and Bookkeeping for business records. Trust & Estate covers executor and trustee filing needs. Cross-Border Tax is for Canadian and U.S. tax connections. Contact us when your needs overlap."
+      },
+      {
+        "question": "Can you help with more than one service?",
+        "answer": "Yes. Tell us about your personal, business and other filing needs so we can discuss the right engagement and coordinate the work."
+      },
+      {
+        "question": "How are fees determined?",
+        "answer": "Fees depend on the services, years, records and complexity involved. We discuss the scope and quote before proceeding."
+      }
+    ]
+  }
+}

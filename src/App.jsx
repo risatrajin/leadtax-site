@@ -6,7 +6,7 @@ import Analytics from "./components/global/Analytics.jsx";
 import IntercomWidget from "./components/global/IntercomWidget.jsx";
 import Seo from "./components/seo/Seo.jsx";
 import RedirectTo from "./components/global/RedirectTo.jsx";
-import LegacyHomePage from "./pages/LegacyHomePage.jsx";
+import HomePage from "./pages/HomePage.jsx";
 import FileRemotelyPage from "./pages/FileRemotelyPage.jsx";
 import DropOffPage from "./pages/DropOffPage.jsx";
 import FileInPersonPage from "./pages/FileInPersonPage.jsx";
@@ -24,8 +24,8 @@ import ServicePage from "./pages/ServicePage.jsx";
 import NotFoundPage from "./pages/NotFoundPage.jsx";
 
 /*
- * "/" is the original DIY homepage; /home-legacy and /home-v2 redirect to "/", /home-redesign to
- * /us-cross-border.
+ * "/" is the service-focused homepage from the developer package; /home-legacy and /home-v2
+ * redirect to "/", /home-redesign to /us-cross-border, /business-tax to /corporate-tax.
  * Other routes are in the same order as the original build. /sign-in, /diy-landing,
  * /dyi-landing and /file-remote-landing were not rebuilt (their copy is in
  * src/content/archive/). /sitemap.xml and /robots.txt are static files in public/.
@@ -42,7 +42,7 @@ export default function App() {
       <Analytics />
       <IntercomWidget />
       <Routes>
-        <Route path="/" element={<LegacyHomePage />} />
+        <Route path="/" element={<HomePage />} />
         <Route path="/file-remotely" element={<FileRemotelyPage />} />
         <Route path="/drop-off" element={<DropOffPage />} />
         <Route path="/file-in-person" element={<FileInPersonPage />} />
