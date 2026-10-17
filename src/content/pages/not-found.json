@@ -1,8 +1,6 @@
 {
-  "title": "Page Not Found",
-  "text": "Sorry, we couldn't find the page you're looking for. It may have moved, or the link may be out of date.",
-  "actions": [
-    { "label": "Go to the homepage", "to": "/", "variant": "primary" },
-    { "label": "Contact us", "to": "/contact", "variant": "outline" }
-  ]
+  "_note": "Copy from the developer package (website/404.html).",
+  "eyebrow": "404",
+  "title": "Let's get you back on track.",
+  "action": { "label": "Go to the homepage", "to": "/" }
 }

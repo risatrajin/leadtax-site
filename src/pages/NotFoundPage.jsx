@@ -1,25 +1,26 @@
+import { ArrowRight } from "lucide-react";
 import copy from "../content/pages/not-found.json";
 import PageShell from "../components/layout/PageShell.jsx";
 import Button from "../components/ui/Button.jsx";
+import EnquirySection from "../components/ui/EnquirySection.jsx";
 
 /**
- * Shown for any path without a route. It is a client-side page, so the server still answers
- * 200; the page is noindex so search engines don't list it.
+ * Shown for any path without a route: a short message with a way home, then the enquiry form.
+ * It is a client-side page, so the server still answers 200; the page is noindex so search
+ * engines don't list it.
  */
 export default function NotFoundPage() {
   return (
-    <PageShell mainClassName="flex flex-1 items-center justify-center">
-      <div className="px-4 py-20 text-center md:px-8">
-        <h1 className="mb-4 text-4xl font-bold text-gray-900">{copy.title}</h1>
-        <p className="mx-auto mb-8 max-w-md text-gray-600">{copy.text}</p>
-        <div className="flex flex-col justify-center gap-4 sm:flex-row">
-          {copy.actions.map((action) => (
-            <Button key={action.label} to={action.to} variant={action.variant} size="md">
-              {action.label}
-            </Button>
-          ))}
-        </div>
-      </div>
+    <PageShell>
+      <section className="bg-gradient-to-br from-brand to-brand-strong px-4 py-20 text-center text-white md:px-8 md:py-28">
+        <p className="text-sm font-semibold uppercase tracking-wider text-brand-subtle">{copy.eyebrow}</p>
+        <h1 className="mx-auto mt-4 max-w-3xl text-4xl font-bold tracking-tight md:text-5xl lg:text-6xl">{copy.title}</h1>
+        <Button to={copy.action.to} variant="inverse" className="mt-10 gap-2">
+          {copy.action.label}
+          <ArrowRight aria-hidden="true" className="h-5 w-5" />
+        </Button>
+      </section>
+      <EnquirySection className="bg-white" />
     </PageShell>
   );
 }
