@@ -123,5 +123,30 @@
       "alt": "Woman working at a computer",
       "position": "50% 30%"
     }
+  },
+  "confidence": {
+    "_note": "Photos for the \"File your tax return with confidence.\" carousel, one per item in pages/file-online.json trust.items (same order). All are images the site already uses.",
+    "images": [
+      {
+        "src": "/images/cross-border/double-tax-desk.webp",
+        "alt": "Financial reports, a calculator and a laptop on a desk"
+      },
+      {
+        "src": "/images/cross-border/returns-meeting.webp",
+        "alt": "A tax advisor reviewing documents with a client"
+      },
+      {
+        "src": "/images/cross-border/foreign-accounts-phone.webp",
+        "alt": "A smartphone showing a bank card in a banking app"
+      },
+      {
+        "src": "/images/previous-years.webp",
+        "alt": "Woman working at a computer"
+      },
+      {
+        "src": "/images/personal-tax-hero.webp",
+        "alt": "An accountant reviewing tax documents with a couple"
+      }
+    ]
   }
 }
