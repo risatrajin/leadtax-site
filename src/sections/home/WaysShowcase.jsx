@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { ArrowRight, Check, FileText, Mic, Video } from "lucide-react";
 import inPerson from "../../content/pages/file-in-person.json";
 import remotely from "../../content/pages/file-remotely.json";
@@ -109,7 +109,8 @@ const TABS = [
 ];
 
 /**
- * Ways to file as a tabbed showcase: icon tabs on a soft gradient, and under them one large card
+ * Ways to file as a tabbed showcase: pill tabs on a soft gradient that widens to the full screen
+ * as it scrolls into view, and under them one large card
  * with the open tab's text on the left and a mock on the right. On wide screens the next tab opens
  * on its own; hovering or focusing the section pauses it.
  */
@@ -117,6 +118,39 @@ export default function WaysShowcase({ ways }) {
   const [active, setActive] = useState(0);
   const [paused, setPaused] = useState(false);
   const [autoplay, setAutoplay] = useState(false);
+  const stageRef = useRef(null);
+  const backdropRef = useRef(null);
+
+  // Widen the backdrop with scroll: inset and corner radius go from the column's to zero.
+  useEffect(() => {
+    const stage = stageRef.current;
+    const backdrop = backdropRef.current;
+    const still = window.matchMedia?.("(prefers-reduced-motion: reduce)").matches;
+    let frame = 0;
+    const update = () => {
+      frame = 0;
+      const width = window.innerWidth;
+      const gutter = width >= 768 ? 32 : 16;
+      const column = Math.min(1280, width - gutter * 2);
+      const startInset = (width - column) / 2;
+      const top = stage.getBoundingClientRect().top;
+      const vh = window.innerHeight;
+      const progress = still ? 1 : Math.min(1, Math.max(0, (vh * 0.8 - top) / (vh * 0.6)));
+      backdrop.style.setProperty("--inset", `${startInset * (1 - progress)}px`);
+      backdrop.style.setProperty("--radius", `${40 * (1 - progress)}px`);
+    };
+    const schedule = () => {
+      if (!frame) frame = requestAnimationFrame(update);
+    };
+    update();
+    window.addEventListener("scroll", schedule, { passive: true });
+    window.addEventListener("resize", schedule);
+    return () => {
+      window.removeEventListener("scroll", schedule);
+      window.removeEventListener("resize", schedule);
+      cancelAnimationFrame(frame);
+    };
+  }, []);
 
   useEffect(() => {
     setAutoplay(Boolean(window.matchMedia?.("(min-width: 1024px) and (prefers-reduced-motion: no-preference)").matches));
@@ -136,16 +170,26 @@ export default function WaysShowcase({ ways }) {
   return (
     <section
       id="services"
-      className="scroll-mt-28 bg-white px-4 py-16 md:px-8 md:py-24"
+      className="scroll-mt-28 bg-white py-16 md:py-24"
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
       onFocus={() => setPaused(true)}
       onBlur={(event) => !event.currentTarget.contains(event.relatedTarget) && setPaused(false)}
     >
-      <div className="mx-auto max-w-7xl">
+      <div className="mx-auto max-w-7xl px-4 md:px-8">
         <SectionTitle eyebrow={ways.eyebrow} title={ways.title} text={ways.text} center />
+      </div>
 
-        <div className={cx("relative mt-12 overflow-hidden rounded-[2.5rem] bg-gradient-to-br p-4 transition-colors duration-700 sm:p-8 lg:p-12", tab.glow)}>
+      {/* The gradient starts as a rounded panel the width of the column and widens to the full
+          screen as the section scrolls into view; the content keeps its column. */}
+      <div ref={stageRef} className="relative mt-12">
+        <div
+          ref={backdropRef}
+          aria-hidden="true"
+          className={cx("absolute inset-y-0 bg-gradient-to-br transition-colors duration-700", tab.glow)}
+          style={{ left: "var(--inset, 0px)", right: "var(--inset, 0px)", borderRadius: "var(--radius, 0px)" }}
+        />
+        <div className="relative mx-auto w-[calc(100%-2rem)] max-w-7xl p-4 sm:p-8 md:w-[calc(100%-4rem)] lg:p-12">
           <div className="flex justify-center">
             <div
               role="tablist"
