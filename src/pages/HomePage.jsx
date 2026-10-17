@@ -1,4 +1,4 @@
-import { ArrowRight, ArrowUpRight, Check, MapPin } from "lucide-react";
+import { ArrowRight, Check, MapPin } from "lucide-react";
 import home from "../content/homepage.json";
 import SiteHeader from "../components/layout/SiteHeader.jsx";
 import SiteFooter from "../components/layout/SiteFooter.jsx";
@@ -58,13 +58,6 @@ function Hero() {
             <ServiceCard key={tile.link} service={tile} />
           ))}
         </div>
-        <p className="mt-6 text-center text-brand-subtle xl:text-white">
-          {hero.help.label}{" "}
-          <a href={hero.help.href} className="inline-flex items-center gap-1 font-semibold text-white underline-offset-4 hover:underline">
-            {hero.help.link}
-            <ArrowUpRight aria-hidden="true" className="h-4 w-4" />
-          </a>
-        </p>
       </div>
     </section>
   );
