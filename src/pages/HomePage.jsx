@@ -32,6 +32,12 @@ function Hero() {
 
       <div className="relative mx-auto max-w-7xl px-4 pb-12 pt-10 md:px-8 xl:pb-16 xl:pt-24">
         <div className="max-w-2xl xl:[text-shadow:0_1px_8px_rgb(0_0_0/0.25)]">
+          <p className="mb-5 flex items-center gap-2 text-sm font-semibold uppercase tracking-wider text-brand-subtle xl:text-white">
+            <MapPin aria-hidden="true" className="h-4 w-4" />
+            {hero.location.title}
+            <span aria-hidden="true" className="h-1 w-1 rounded-full bg-current opacity-60" />
+            <span className="font-medium normal-case tracking-normal opacity-90">{hero.location.text}</span>
+          </p>
           <h1 className="text-4xl font-bold leading-tight tracking-tight sm:text-5xl lg:text-6xl">{hero.title}</h1>
           <p className="mt-5 font-semibold text-brand-subtle xl:text-white">{hero.services}</p>
           <p className="mt-4 text-lg text-brand-subtle md:text-xl xl:text-white/90">{hero.text}</p>
@@ -42,11 +48,6 @@ function Hero() {
               </Button>
             ))}
           </div>
-          <p className="mt-6 inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm backdrop-blur [text-shadow:none]">
-            <MapPin aria-hidden="true" className="h-4 w-4" />
-            <span className="font-semibold">{hero.location.title}</span>
-            <span className="text-white/80">{hero.location.text}</span>
-          </p>
         </div>
       </div>
 
