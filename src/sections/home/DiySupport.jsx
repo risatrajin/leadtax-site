@@ -2,50 +2,35 @@ import { ArrowRight } from "lucide-react";
 import fileOnline from "../../content/pages/file-online.json";
 import faqs from "../../content/faqs.json";
 import { getIcon } from "../../lib/icons.js";
-import { CARD, CARD_TITLE } from "../../lib/styles.js";
 import Button from "../../components/ui/Button.jsx";
 import FaqAccordion from "../../components/ui/FaqAccordion.jsx";
 import { SectionTitle } from "../../components/ui/ServiceBlocks.jsx";
 
 const SECTION = "px-4 py-16 md:px-8 md:py-24";
 
-/** Gradient icon square used on the homepage cards. */
-function IconSquare({ name }) {
-  const Icon = getIcon(name);
-  return (
-    <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-brand-bright to-brand text-white shadow-md transition-transform duration-300 group-hover:scale-110 motion-reduce:group-hover:scale-100">
-      <Icon aria-hidden="true" className="h-6 w-6" />
-    </span>
-  );
-}
-
-const LIFT = "group transition duration-300 hover:-translate-y-1 hover:shadow-xl motion-reduce:hover:translate-y-0";
-
 /**
- * "Tax tools to simplify your filing experience." merged with the expert add-ons as one bento grid:
- * the add-ons' line ("Our experts are on standby…") is the intro under the heading, the three tools
- * fill the top row and the two add-ons the bottom row, all in the same card style.
+ * "Tax tools to simplify your filing experience." merged with the expert add-ons: the add-ons' line
+ * ("Our experts are on standby…") is the intro, and the five items sit in one minimal row (icon,
+ * title, text, thin dividers; no cards).
  */
 export function DiyTools() {
   const { tools, expertAddons } = fileOnline;
-  const cards = [
-    ...tools.items.map((item) => ({ ...item, span: "md:col-span-2" })),
-    ...expertAddons.items.map((item) => ({ ...item, span: "md:col-span-3", wide: true })),
-  ];
+  const items = [...tools.items, ...expertAddons.items];
   return (
     <section className={`${SECTION} bg-white`}>
       <div className="mx-auto max-w-7xl">
         <SectionTitle title={tools.title} text={expertAddons.title} center />
-        <ul className="mt-12 grid gap-6 md:grid-cols-6">
-          {cards.map((card) => (
-            <li key={card.title} className={`${CARD} ${LIFT} flex gap-5 p-7 ${card.span}`}>
-              <IconSquare name={card.icon} />
-              <div>
-                <h3 className={CARD_TITLE}>{card.title}</h3>
-                <p className="mt-2 text-gray-600">{card.description}</p>
-              </div>
-            </li>
-          ))}
+        <ul className="mt-14 grid gap-x-8 gap-y-10 sm:grid-cols-2 lg:grid-cols-5 lg:gap-0 lg:divide-x lg:divide-gray-200">
+          {items.map((item) => {
+            const Icon = getIcon(item.icon);
+            return (
+              <li key={item.title} className="text-center lg:px-6">
+                <Icon aria-hidden="true" strokeWidth={1.5} className="mx-auto h-8 w-8 text-brand" />
+                <h3 className="mt-4 font-semibold text-gray-900">{item.title}</h3>
+                <p className="mt-1.5 text-sm text-gray-600">{item.description}</p>
+              </li>
+            );
+          })}
         </ul>
       </div>
     </section>
