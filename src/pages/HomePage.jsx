@@ -1,18 +1,17 @@
-import { ArrowRight } from "lucide-react";
 import home from "../content/homepage.json";
 import SiteHeader from "../components/layout/SiteHeader.jsx";
 import SiteFooter from "../components/layout/SiteFooter.jsx";
 import Button from "../components/ui/Button.jsx";
 import FaqAccordion from "../components/ui/FaqAccordion.jsx";
 import EnquirySection from "../components/ui/EnquirySection.jsx";
-import { SectionTitle, StepCards } from "../components/ui/ServiceBlocks.jsx";
+import { SectionTitle } from "../components/ui/ServiceBlocks.jsx";
 import { ServiceCard } from "../sections/home/Hero.jsx";
 import Offices from "../sections/home/Offices.jsx";
 import WaysShowcase from "../sections/home/WaysShowcase.jsx";
+import ProcessShowcase from "../sections/home/ProcessShowcase.jsx";
 import ReviewsCarousel from "../sections/shared/ReviewsCarousel.jsx";
 
 const SECTION = "scroll-mt-28 px-4 py-16 md:px-8 md:py-24";
-const LINK = "inline-flex items-center gap-1.5 font-semibold text-brand underline-offset-4 hover:underline";
 
 /**
  * Bright blue hero: a three-line headline and the actions on the left, the portrait on the right
@@ -66,24 +65,6 @@ function Hero() {
   );
 }
 
-function Process() {
-  const { process } = home;
-  return (
-    <section className={`${SECTION} bg-gray-50`}>
-      <div className="mx-auto max-w-7xl">
-        <div className="flex flex-wrap items-end justify-between gap-6">
-          <SectionTitle eyebrow={process.eyebrow} title={process.title} />
-          <a href={process.cta.href} className={LINK}>
-            {process.cta.label}
-            <ArrowRight aria-hidden="true" className="h-4 w-4" />
-          </a>
-        </div>
-        <StepCards items={process.steps} />
-      </div>
-    </section>
-  );
-}
-
 function Faq() {
   const { faq } = home;
   return (
@@ -110,7 +91,7 @@ export default function HomePage() {
         <Hero />
         <ReviewsCarousel className="bg-gray-50" />
         <WaysShowcase ways={home.ways} />
-        <Process />
+        <ProcessShowcase process={home.process} tiles={home.hero.tiles} />
         <Faq />
         <Offices />
         <EnquirySection className="bg-white" />
