@@ -116,5 +116,11 @@
         "answer": "Fees depend on the services, years, records and complexity involved. We discuss the scope and quote before proceeding."
       }
     ]
+  },
+  "previousYears": {
+    "portrait": {
+      "src": "/images/previous-years-portrait.webp",
+      "alt": "Smiling professional man in a grey blazer with his arms crossed"
+    }
   }
 }
