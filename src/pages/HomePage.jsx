@@ -26,7 +26,7 @@ function Hero() {
       <div className="bg-hero-blue px-4 text-white md:px-8">
         <div className="mx-auto grid max-w-7xl items-end gap-8 lg:grid-cols-[1.15fr_0.85fr]">
           <div className="pb-10 pt-14 md:pt-20 lg:pb-40 lg:pt-24">
-            <h1 className="text-5xl font-semibold leading-[1.02] tracking-tight sm:text-6xl lg:text-7xl xl:text-[5.5rem]">
+            <h1 className="text-4xl font-semibold leading-[1.04] tracking-tight sm:text-5xl lg:text-6xl xl:text-7xl">
               {lines.map((line) => (
                 <span key={line} className="block">
                   {line.trim()}
