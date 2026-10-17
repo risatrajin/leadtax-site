@@ -65,7 +65,7 @@ export default function ConfidenceCarousel({ slides }) {
         {trust.title}
       </h2>
 
-      <div className="relative mx-auto mt-12 max-w-7xl lg:h-[34rem]">
+      <div className="relative mx-auto mt-12 max-w-7xl">
         {/* Neighbouring items as photo cards, from 1280px. */}
         {SIDES.map((side) => {
           const index = at(side.offset);
@@ -90,7 +90,7 @@ export default function ConfidenceCarousel({ slides }) {
           role="group"
           aria-roledescription="slide"
           aria-label={`${active + 1} / ${count}`}
-          className="relative mx-auto grid h-full max-w-3xl overflow-hidden rounded-3xl bg-white p-3 shadow-2xl md:grid-cols-2"
+          className="relative mx-auto grid max-w-3xl overflow-hidden rounded-3xl bg-white p-3 shadow-2xl md:min-h-[36rem] md:grid-cols-2"
         >
           <div key={`text-${active}`} className="situation-in flex flex-col p-6 md:p-9">
             <div className="flex items-center justify-between">
