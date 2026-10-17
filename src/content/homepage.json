@@ -51,105 +51,26 @@
       }
     ]
   },
-  "services": {
-    "eyebrow": "Our core services",
-    "title": "The support you need. All in one place.",
-    "text": "Choose a service to see how we can help, what to prepare and how to get started.",
-    "cards": [
-      {
-        "link": "personalTax",
-        "icon": "User",
-        "eyebrow": "For you & your family",
-        "title": "Personal Tax",
-        "text": "Personal tax returns, with the details of your life in mind. From employment and self-employment to rental income and family changes.",
-        "points": [
-          "T1 personal income tax returns",
-          "Employment, investments & rental income",
-          "Self-employed & family tax needs"
-        ],
-        "cta": "File your personal taxes"
-      },
-      {
-        "link": "corporateTax",
-        "icon": "Briefcase",
-        "eyebrow": "For incorporated businesses",
-        "title": "Corporate Tax",
-        "text": "Keep your corporation's tax filings connected to its financial records, year-end needs and plans for the business.",
-        "points": [
-          "T2 corporate income tax returns",
-          "Year-end records & reporting",
-          "Owner-manager tax considerations"
-        ],
-        "cta": "Explore corporate tax"
-      },
-      {
-        "link": "bookkeeping",
-        "icon": "Calculator",
-        "eyebrow": "For everyday business clarity",
-        "title": "Bookkeeping",
-        "text": "Turn a stack of transactions into a clearer view of your business. Get support with ongoing records and catch-up bookkeeping.",
-        "points": [
-          "Transaction recording & reconciliation",
-          "Catch-up bookkeeping",
-          "Financial reports & year-end readiness"
-        ],
-        "cta": "Get bookkeeping support"
-      },
-      {
-        "link": "trustEstate",
-        "icon": "FilePenLine",
-        "eyebrow": "For executors, trustees & families",
-        "title": "Trust & Estate",
-        "text": "Thoughtful tax support through important transitions. Understand the returns, records and next steps relevant to the estate or trust.",
-        "points": [
-          "T3 trust & estate tax returns",
-          "Final personal income tax returns",
-          "Executor & trustee filing support"
-        ],
-        "cta": "Explore trust & estate"
-      },
-      {
-        "link": "usCrossBorder",
-        "icon": "Globe",
-        "eyebrow": "For life between Canada & the U.S.",
-        "title": "Cross-Border Tax",
-        "text": "Bring both sides of your tax picture together. For people who live, work, invest or own property across the Canada–U.S. border.",
-        "points": [
-          "Canadian & U.S. individual filings",
-          "Residency & foreign reporting review",
-          "Cross-border income & investments"
-        ],
-        "cta": "Explore cross-border tax"
-      }
-    ],
-    "more": {
-      "eyebrow": "Let's find your starting point",
-      "title": "More than one service in mind?",
-      "text": "Your personal and business needs often connect. Tell us about the whole picture.",
-      "cta": "Talk to LeadTax",
-      "href": "#contact"
-    }
-  },
   "ways": {
-    "eyebrow": "Your choice. Your convenience.",
+    "eyebrow": "Ways to file",
     "title": "A local team. Flexible ways to work together.",
     "text": "Start online or meet us in person. Choose what works for you.",
     "items": [
       {
-        "label": "Online",
-        "icon": "Laptop",
-        "title": "File from wherever you are.",
-        "text": "Start through LeadTax's remote filing experience. Contact us first if you need help choosing a service.",
-        "cta": "Start remote filing",
-        "to": "/file-remotely"
+        "link": "fileInPerson",
+        "cta": "Book an office visit"
       },
       {
-        "label": "In person",
-        "icon": "MapPin",
-        "title": "Let's sit down together.",
-        "text": "Arrange an office visit in Vancouver or Burnaby. Review current locations and appointment options before you visit.",
-        "cta": "Book an office visit",
-        "to": "/file-in-person"
+        "link": "fileRemotely",
+        "cta": "Start remote filing"
+      },
+      {
+        "link": "dropOff",
+        "cta": "See how drop-off works"
+      },
+      {
+        "link": "fileOnline",
+        "cta": "Start filing online"
       }
     ]
   },
