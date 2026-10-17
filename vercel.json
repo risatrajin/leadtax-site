@@ -13,12 +13,12 @@
     },
     {
       "source": "/diy-landing",
-      "destination": "/pricing",
+      "destination": "/file-online",
       "permanent": true
     },
     {
       "source": "/dyi-landing",
-      "destination": "/pricing",
+      "destination": "/file-online",
       "permanent": true
     },
     {

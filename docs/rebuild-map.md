@@ -37,7 +37,7 @@ Status: **done** = rebuilt and verified pixel-identical at 1440px and 390px with
 | `/terms` | `Iw` | 23309 | `src/pages/TermsPage.jsx` | done |
 | `/privacy-policy` | `zw` | 23865 | `src/pages/PrivacyPolicyPage.jsx` | done |
 | `/pricing` | `$w` | 26043 | `src/pages/PricingPage.jsx` | done |
-| `/diy-landing`, `/dyi-landing` | `ap` | 15246 | `src/content/archive/diy-landing.json` | archived — not rebuilt, will be dropped |
+| `/diy-landing`, `/dyi-landing` | `ap` | 15246 | `src/content/archive/diy-landing.json` | archived — not rebuilt; 301 to `/file-online` (the original DIY homepage, `src/pages/FileOnlinePage.jsx`) |
 | `/file-remote-landing` | `_1` | 16030 | `src/content/archive/file-remote-landing.json` | archived — not rebuilt, will be dropped |
 | `/sign-in` | `Hw` | 25696 | `src/content/archive/sign-in.json` | archived — not rebuilt, will be dropped |
 | `/sitemap.xml` | `Np` | 26406 | `public/sitemap.xml` | static (React route not recreated) |

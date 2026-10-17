@@ -57,7 +57,7 @@
     },
     "fileOnline": {
       "label": "File online yourself",
-      "href": "app:diy.register",
+      "to": "/file-online",
       "icon": "FileCheck",
       "description": "Use LeadTax online software on your own schedule."
     },

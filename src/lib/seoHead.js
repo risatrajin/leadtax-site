@@ -24,6 +24,7 @@ const PAGE_KEYS = {
   "/drop-off": "dropOff",
   "/file-in-person": "fileInPerson",
   "/file-remotely": "fileRemotely",
+  "/file-online": "fileOnline",
   "/us-cross-border": "usCrossBorder",
   "/personal-tax": "personalTax",
   "/corporate-tax": "corporateTax",

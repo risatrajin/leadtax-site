@@ -7,6 +7,7 @@ import IntercomWidget from "./components/global/IntercomWidget.jsx";
 import Seo from "./components/seo/Seo.jsx";
 import RedirectTo from "./components/global/RedirectTo.jsx";
 import HomePage from "./pages/HomePage.jsx";
+import FileOnlinePage from "./pages/FileOnlinePage.jsx";
 import FileRemotelyPage from "./pages/FileRemotelyPage.jsx";
 import DropOffPage from "./pages/DropOffPage.jsx";
 import FileInPersonPage from "./pages/FileInPersonPage.jsx";
@@ -27,8 +28,8 @@ import NotFoundPage from "./pages/NotFoundPage.jsx";
  * "/" is the service-focused homepage from the developer package; /home-legacy and /home-v2
  * redirect to "/", /home-redesign and /cross-border-tax to /us-cross-border, /business-tax to
  * /corporate-tax.
- * Other routes are in the same order as the original build. /sign-in, /diy-landing,
- * /dyi-landing and /file-remote-landing were not rebuilt (their copy is in
+ * Other routes are in the same order as the original build. /sign-in and /file-remote-landing were
+ * not rebuilt; /diy-landing and /dyi-landing redirect to /file-online (their copy is in
  * src/content/archive/). /sitemap.xml and /robots.txt are static files in public/.
  * The original had no catch-all route, so unknown paths rendered a blank page; they now show
  * NotFoundPage.
@@ -46,6 +47,7 @@ export default function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/file-remotely" element={<FileRemotelyPage />} />
         <Route path="/drop-off" element={<DropOffPage />} />
+        <Route path="/file-online" element={<FileOnlinePage />} />
         <Route path="/file-in-person" element={<FileInPersonPage />} />
         <Route path="/us-cross-border" element={<UsCrossBorderPage />} />
         <Route path="/personal-tax" element={<ServicePage key="personal-tax" slug="personal-tax" />} />
