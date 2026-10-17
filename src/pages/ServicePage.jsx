@@ -1,17 +1,17 @@
-import { useState } from "react";
-import { ArrowRight, Download } from "lucide-react";
+import { useEffect, useState } from "react";
+import { ArrowRight, Check, Download } from "lucide-react";
 import content from "../content/service-pages.json";
 import PageShell from "../components/layout/PageShell.jsx";
 import PageHero from "../components/ui/PageHero.jsx";
 import Button from "../components/ui/Button.jsx";
 import SmartLink from "../components/ui/SmartLink.jsx";
 import FaqAccordion from "../components/ui/FaqAccordion.jsx";
+import Collapse from "../components/ui/Collapse.jsx";
 import EnquirySection from "../components/ui/EnquirySection.jsx";
-import { EYEBROW, H2, SectionTitle, StepCards } from "../components/ui/ServiceBlocks.jsx";
+import { SectionTitle, StepCards } from "../components/ui/ServiceBlocks.jsx";
 import { getIcon } from "../lib/icons.js";
 import { cx } from "../lib/cx.js";
 import { fill } from "../lib/template.js";
-import { CARD, CARD_TITLE } from "../lib/styles.js";
 
 const SECTION = "scroll-mt-28 px-4 py-16 md:px-8 md:py-24";
 const LINK = "inline-flex items-center gap-1.5 font-semibold text-brand underline-offset-4 hover:underline";
@@ -46,28 +46,111 @@ function Hero({ page }) {
   );
 }
 
+/** How long each item stays open before the next opens on its own (wide screens only). */
+const STEP_MS = 6000;
+
+/**
+ * "What we help with" as a feature switcher: the items as a list on the left (the open one shows
+ * its text and a progress bar), and a large pastel panel on the right with the open item as a card.
+ * On wide screens the next item opens when the bar fills; hovering or focusing pauses it.
+ */
 function Scope({ scope }) {
+  const [active, setActive] = useState(0);
+  const [paused, setPaused] = useState(false);
+  const [autoplay, setAutoplay] = useState(false);
+  const item = scope.items[active];
+  const Icon = getIcon(item.icon);
+
+  useEffect(() => {
+    setAutoplay(Boolean(window.matchMedia?.("(min-width: 1024px) and (prefers-reduced-motion: no-preference)").matches));
+  }, []);
+
   return (
-    <section id="included" className={cx(SECTION, "bg-white")}>
+    <section
+      id="included"
+      className={cx(SECTION, "bg-white")}
+      onMouseEnter={() => setPaused(true)}
+      onMouseLeave={() => setPaused(false)}
+      onFocus={() => setPaused(true)}
+      onBlur={(event) => !event.currentTarget.contains(event.relatedTarget) && setPaused(false)}
+    >
       <div className="mx-auto max-w-7xl">
-        <SectionTitle eyebrow={content.scopeEyebrow} title={scope.title} text={scope.text} />
-        <ul className="mt-10 grid gap-6 md:grid-cols-3">
-          {scope.items.map((item) => {
-            const Icon = getIcon(item.icon);
-            return (
-              <li
-                key={item.title}
-                className={`${CARD} group p-7 transition duration-300 hover:-translate-y-1 hover:shadow-xl motion-reduce:hover:translate-y-0`}
-              >
-                <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-brand-bright to-brand text-white shadow-md">
-                  <Icon aria-hidden="true" className="h-6 w-6" />
-                </div>
-                <h3 className={`mt-5 ${CARD_TITLE}`}>{item.title}</h3>
-                <p className="mt-2 text-gray-600">{item.text}</p>
-              </li>
-            );
-          })}
-        </ul>
+        <SectionTitle eyebrow={content.scopeEyebrow} title={scope.title} text={scope.text} center />
+        <div className="mt-14 grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
+          <ul className="border-t border-gray-200">
+            {scope.items.map((entry, index) => {
+              const open = index === active;
+              const EntryIcon = getIcon(entry.icon);
+              return (
+                <li key={entry.title} className="relative border-b border-gray-200">
+                  <h3>
+                    <button
+                      type="button"
+                      aria-expanded={open}
+                      aria-controls={`scope-panel-${index}`}
+                      onClick={() => setActive(index)}
+                      className={cx(
+                        "flex w-full items-center gap-4 py-6 text-left text-xl font-semibold transition-colors md:text-2xl",
+                        open ? "text-gray-900" : "text-gray-400 hover:text-gray-700",
+                      )}
+                    >
+                      <EntryIcon aria-hidden="true" className={cx("h-6 w-6 flex-shrink-0", open && "text-brand")} />
+                      {entry.title}
+                    </button>
+                  </h3>
+                  <Collapse id={`scope-panel-${index}`} open={open} className="pb-6 pl-10 text-lg text-gray-600">
+                    {entry.text}
+                  </Collapse>
+                  {open && (
+                    <span
+                      aria-hidden="true"
+                      onAnimationEnd={() => setActive((current) => (current + 1) % scope.items.length)}
+                      className="absolute inset-x-0 -bottom-px h-0.5 origin-left bg-brand"
+                      style={
+                        autoplay
+                          ? { animation: `situation-progress ${STEP_MS}ms linear`, animationPlayState: paused ? "paused" : "running" }
+                          : undefined
+                      }
+                    />
+                  )}
+                </li>
+              );
+            })}
+          </ul>
+
+          <div aria-hidden="true" className="relative isolate hidden overflow-hidden rounded-[2rem] bg-gradient-to-br from-brand-subtle via-sky-100 to-indigo-100 p-8 sm:p-12 lg:block">
+            <div className="absolute -right-16 -top-16 -z-10 h-64 w-64 rounded-full bg-white/60 blur-3xl" />
+            <div key={item.title} className="situation-in rounded-3xl bg-white p-7 shadow-2xl sm:p-9">
+              <div className="flex items-center justify-between">
+                <span className="flex h-14 w-14 items-center justify-center rounded-2xl bg-brand text-white shadow-lg">
+                  <Icon className="h-7 w-7" />
+                </span>
+                <span className="text-sm font-semibold text-gray-400">
+                  {String(active + 1).padStart(2, "0")} / {String(scope.items.length).padStart(2, "0")}
+                </span>
+              </div>
+              <p className="mt-6 text-2xl font-semibold text-gray-900">{item.title}</p>
+              <p className="mt-3 text-gray-600">{item.text}</p>
+              <div className="mt-8 space-y-3">
+                {[100, 82, 64].map((width) => (
+                  <div key={width} className="flex items-center gap-3">
+                    <span className="flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-brand-subtle text-brand">
+                      <Check className="h-3 w-3" />
+                    </span>
+                    <span className="h-2.5 rounded-full bg-gray-100" style={{ width: `${width}%` }} />
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div className="mt-5 flex flex-wrap gap-2">
+              {content.fitPoints.map((point) => (
+                <span key={point} className="rounded-full bg-white/80 px-3 py-1.5 text-sm font-medium text-gray-700 shadow-sm backdrop-blur">
+                  {point}
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );
@@ -111,8 +194,22 @@ function Prepare({ page }) {
             {prepare.download}
           </Button>
         </div>
-        <div className={`${CARD} p-6 md:p-8`}>
-          <ul className="divide-y divide-gray-100">
+        <div className="overflow-hidden rounded-3xl border border-gray-200 bg-white shadow-2xl">
+          {/* App-window bar with progress, in the style of a scheduling app. */}
+          <div className="flex items-center gap-4 border-b border-gray-100 bg-gray-50 px-6 py-4">
+            <span aria-hidden="true" className="flex gap-1.5">
+              <span className="h-3 w-3 rounded-full bg-gray-300" />
+              <span className="h-3 w-3 rounded-full bg-gray-300" />
+              <span className="h-3 w-3 rounded-full bg-gray-300" />
+            </span>
+            <div className="h-2 flex-1 overflow-hidden rounded-full bg-gray-200">
+              <div className="h-full rounded-full bg-brand transition-[width] duration-300" style={{ width: `${(done.size / page.docs.length) * 100}%` }} />
+            </div>
+            <span aria-live="polite" className="text-sm font-semibold text-gray-700">
+              {done.size} / {page.docs.length}
+            </span>
+          </div>
+          <ul className="divide-y divide-gray-100 px-6 md:px-8">
             {page.docs.map((doc) => {
               const checked = done.has(doc);
               return (
@@ -130,7 +227,7 @@ function Prepare({ page }) {
               );
             })}
           </ul>
-          <p className="mt-4 border-t border-gray-100 pt-4 text-sm text-gray-500">{prepare.privacy}</p>
+          <p className="border-t border-gray-100 px-6 py-4 text-sm text-gray-500 md:px-8">{prepare.privacy}</p>
         </div>
       </div>
     </section>
@@ -149,13 +246,29 @@ function Pace({ pace }) {
   );
 }
 
+/** The shared steps, centred, with big numbers joined by a line on wide screens. */
 function Process({ className }) {
   const { process } = content;
   return (
     <section className={cx(SECTION, className)}>
       <div className="mx-auto max-w-7xl">
-        <SectionTitle eyebrow={process.eyebrow} title={process.title} text={process.text} />
-        <StepCards items={process.steps} />
+        <SectionTitle eyebrow={process.eyebrow} title={process.title} text={process.text} center />
+        <ol className="relative mt-14 grid gap-10 md:grid-cols-3 md:gap-8">
+          <span aria-hidden="true" className="absolute left-[16.67%] right-[16.67%] top-8 hidden border-t-2 border-dashed border-brand/30 md:block" />
+          {process.steps.map((step, index) => (
+            <li key={step.title} className="relative text-center">
+              <span
+                aria-hidden="true"
+                className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-brand text-2xl font-bold text-white shadow-lg"
+              >
+                {index + 1}
+              </span>
+              <p className="mt-6 text-sm font-semibold uppercase tracking-wider text-brand">{step.label}</p>
+              <h3 className="mt-2 text-xl font-semibold text-gray-900">{step.title}</h3>
+              <p className="mx-auto mt-2 max-w-xs text-gray-600">{step.text}</p>
+            </li>
+          ))}
+        </ol>
       </div>
     </section>
   );
@@ -165,19 +278,18 @@ function Questions({ faqs, className }) {
   const { faq } = content;
   return (
     <section id="questions" className={cx(SECTION, className)}>
-      <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16">
-        <div>
-          <p className={EYEBROW}>{faq.eyebrow}</p>
-          <h2 className={`mt-3 ${H2}`}>{faq.title}</h2>
-          <p className="mt-4 text-lg text-gray-600">
-            {faq.text}{" "}
-            <SmartLink href={faq.link.href} className={LINK}>
-              {faq.link.label}
-              <ArrowRight aria-hidden="true" className="h-4 w-4" />
-            </SmartLink>
-          </p>
+      <div className="mx-auto max-w-3xl">
+        <SectionTitle eyebrow={faq.eyebrow} title={faq.title} center />
+        <div className="mt-10">
+          <FaqAccordion items={faqs} variant="bordered" />
         </div>
-        <FaqAccordion items={faqs} variant="bordered" />
+        <p className="mt-8 text-center text-lg text-gray-600">
+          {faq.text}{" "}
+          <SmartLink href={faq.link.href} className={LINK}>
+            {faq.link.label}
+            <ArrowRight aria-hidden="true" className="h-4 w-4" />
+          </SmartLink>
+        </p>
       </div>
     </section>
   );
