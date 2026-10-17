@@ -69,21 +69,6 @@ function Hero() {
   );
 }
 
-function Promises() {
-  return (
-    <div className="border-b border-gray-200 bg-white px-4 py-6 md:px-8">
-      <ul className="mx-auto grid max-w-5xl gap-3 sm:grid-cols-3">
-        {home.promises.map((promise, index) => (
-          <li key={promise} className="flex items-center gap-3 sm:justify-center">
-            <span className="text-sm font-bold text-brand-bright">{String(index + 1).padStart(2, "0")}</span>
-            <span className="font-semibold text-gray-900">{promise}</span>
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
-}
-
 function Services() {
   const { services } = home;
   const { more } = services;
@@ -214,7 +199,6 @@ export default function HomePage() {
       <SiteHeader />
       <main id="main">
         <Hero />
-        <Promises />
         <ReviewsCarousel className="bg-gray-50" />
         <Services />
         <Ways />
