@@ -146,33 +146,51 @@ export default function WaysShowcase({ ways }) {
         <SectionTitle eyebrow={ways.eyebrow} title={ways.title} text={ways.text} center />
 
         <div className={cx("relative mt-12 overflow-hidden rounded-[2.5rem] bg-gradient-to-br p-4 transition-colors duration-700 sm:p-8 lg:p-12", tab.glow)}>
-          <div role="tablist" aria-label={ways.eyebrow} className="flex justify-center gap-3 sm:gap-4">
-            {TABS.map((entry, index) => {
-              const entryLink = linkById(entry.link);
-              const TabIcon = getIcon(entryLink.icon);
-              const selected = index === active;
-              return (
-                <div key={entry.link} className="relative">
+          <div className="flex justify-center">
+            <div
+              role="tablist"
+              aria-label={ways.eyebrow}
+              className="grid w-full grid-cols-2 gap-1 rounded-[1.75rem] bg-white/50 p-1.5 shadow-sm ring-1 ring-white/70 backdrop-blur md:flex md:w-auto md:rounded-full"
+            >
+              {TABS.map((entry, index) => {
+                const entryLink = linkById(entry.link);
+                const TabIcon = getIcon(entryLink.icon);
+                const selected = index === active;
+                return (
                   <button
+                    key={entry.link}
                     type="button"
                     role="tab"
                     id={`ways-tab-${index}`}
                     aria-selected={selected}
                     aria-controls="ways-panel"
-                    aria-label={entryLink.label}
+                    tabIndex={selected ? 0 : -1}
                     onClick={() => setActive(index)}
+                    onKeyDown={(event) => {
+                      const next = { ArrowRight: (index + 1) % TABS.length, ArrowLeft: (index + TABS.length - 1) % TABS.length }[event.key];
+                      if (next === undefined) return;
+                      event.preventDefault();
+                      setActive(next);
+                      event.currentTarget.parentElement.children[next].focus();
+                    }}
                     className={cx(
-                      "flex h-14 w-14 items-center justify-center rounded-2xl border-4 border-white shadow-sm transition sm:h-16 sm:w-16",
-                      selected ? "bg-brand text-white" : "bg-gray-100 text-gray-400 hover:text-gray-700",
+                      "flex items-center gap-2.5 rounded-full px-3 py-2.5 text-left text-sm font-semibold leading-tight transition-all md:whitespace-nowrap md:px-5 md:text-base",
+                      selected ? "bg-white text-brand shadow-md" : "text-gray-700 hover:bg-white/60 hover:text-gray-900",
                     )}
                   >
-                    <TabIcon aria-hidden="true" className="h-6 w-6 sm:h-7 sm:w-7" />
+                    <span
+                      className={cx(
+                        "flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full transition-colors",
+                        selected ? "bg-brand text-white" : "bg-white/70 text-gray-500",
+                      )}
+                    >
+                      <TabIcon aria-hidden="true" className="h-4 w-4" />
+                    </span>
+                    {entryLink.label}
                   </button>
-                  {/* Stem joining the open tab to the card below. */}
-                  {selected && <span aria-hidden="true" className="absolute left-1/2 top-full h-5 w-5 -translate-x-1/2 bg-white sm:h-7" />}
-                </div>
-              );
-            })}
+                );
+              })}
+            </div>
           </div>
 
           <div
@@ -183,7 +201,7 @@ export default function WaysShowcase({ ways }) {
           >
             <div key={tab.link} className="situation-in">
               <p className="inline-flex items-center gap-2 font-semibold text-gray-900">
-                <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-brand text-white">
+                <span className="flex h-8 w-8 items-center justify-center rounded-full bg-brand text-white">
                   <Icon aria-hidden="true" className="h-4 w-4" />
                 </span>
                 {link.label}
