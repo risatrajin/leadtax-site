@@ -2,7 +2,13 @@
   "listing": {
     "title": "Tax Tips & Insights",
     "intro": "Stay informed with expert advice, tax tips, and the latest updates from LeadTax.",
-    "readMoreLabel": "Read More →"
+    "readMoreLabel": "Read More →",
+    "eyebrow": "LeadTax blog",
+    "featuredLabel": "Featured",
+    "readLabel": "Read article",
+    "allLabel": "All",
+    "searchLabel": "Search articles",
+    "emptyLabel": "No articles match your search."
   },
   "post": {
     "backLabel": "Back to Blog",
@@ -10,8 +16,16 @@
       "title": "Ready to File Your Taxes with Confidence?",
       "text": "LeadTax makes it simple to maximize your deductions and get the refund you deserve.",
       "actions": [
-        { "label": "Get Started Free", "href": "app:diy.register", "variant": "inverse" },
-        { "label": "Talk to an Expert", "to": "/contact", "variant": "outlineInverse" }
+        {
+          "label": "Get Started Free",
+          "href": "app:diy.register",
+          "variant": "inverse"
+        },
+        {
+          "label": "Talk to an Expert",
+          "to": "/contact",
+          "variant": "outlineInverse"
+        }
       ]
     },
     "relatedTitle": "Related Articles",
