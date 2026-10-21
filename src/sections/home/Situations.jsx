@@ -25,7 +25,8 @@ function Showcase({ item }) {
         className="absolute inset-x-0 top-1/3 h-40 bg-[repeating-linear-gradient(90deg,rgb(255_255_255/0.35)_0_2px,transparent_2px_22px)] [mask-image:linear-gradient(to_bottom,transparent,black_30%,black_70%,transparent)]"
       />
       <div key={item.label} className="situation-in relative rounded-3xl bg-white p-6 shadow-2xl sm:p-8">
-        <div className="flex items-center gap-4">
+        {/* Icon above the heading on phones, beside it from 640px up. */}
+        <div className="flex flex-col items-start gap-4 sm:flex-row sm:items-center">
           <span className="flex h-14 w-14 flex-shrink-0 items-center justify-center rounded-2xl bg-brand-subtle text-brand-bright">
             <Icon aria-hidden="true" className="h-7 w-7" />
           </span>

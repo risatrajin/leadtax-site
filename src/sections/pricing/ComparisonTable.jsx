@@ -1,97 +1,86 @@
 import { useState } from "react";
-import { Check, X } from "lucide-react";
+import { Check, Minus } from "lucide-react";
 import pricing from "../../content/pricing.json";
 import { resolveHref } from "../../lib/links.js";
 import { buttonClasses } from "../../components/ui/Button.jsx";
 
 const { comparison } = pricing;
 
-const TAB = "min-h-10 px-4 sm:px-8 py-2 sm:py-3 rounded-full font-semibold transition-all text-sm sm:text-base";
-const PLAN_HEADER = "text-center py-4 px-2 md:px-4 font-bold text-gray-900 bg-white";
+const TAB = "min-h-10 px-4 sm:px-6 py-2 rounded-full font-semibold transition-all text-sm sm:text-base";
+const CELL = "px-3 py-3.5 text-center";
+/** Soft tint that runs down the popular plan's column. */
+const POPULAR_TINT = "bg-brand-subtle/30";
 
-function Cell({ value, highlight, tinted }) {
-  const background = highlight ? "bg-amber-50" : tinted ? "bg-brand-subtle/20" : "";
-  const className = `text-center py-4 px-2 md:px-4 ${background}`;
+/** Add-on prices read "+$59.99", so they can't be mistaken for the plan price. */
+const extra = (price) => `+${price}`;
+
+function Cell({ value, tinted, addOn }) {
+  const className = `${CELL} ${tinted ? POPULAR_TINT : ""}`;
   if (value === true) {
     return (
       <td className={className}>
-        <Check className="w-5 h-5 md:w-6 md:h-6 text-green-600 mx-auto" />
+        <Check aria-label={comparison.includedLabel} className="mx-auto h-5 w-5 text-brand" />
       </td>
     );
   }
   if (value === false) {
     return (
       <td className={className}>
-        <X className="w-6 h-6 text-gray-300 mx-auto" />
+        <Minus aria-label={comparison.notIncludedLabel} className="mx-auto h-4 w-4 text-gray-300" />
       </td>
     );
   }
   return (
     <td className={className}>
-      {highlight ? (
-        <span className="inline-block bg-brand text-white text-xs font-bold px-3 py-1 rounded-full">{value}</span>
-      ) : (
-        <span className="text-sm font-medium text-gray-700">{value}</span>
-      )}
+      <span className={`text-sm font-semibold ${addOn ? "text-brand" : "text-gray-900"}`}>{addOn ? extra(value) : value}</span>
     </td>
   );
 }
 
-function Row({ row, index }) {
+function Row({ row, popularKey }) {
   if (row.section) {
     return (
-      <tr className="border-b border-gray-200">
-        <td colSpan={5} className="py-5 px-6 bg-white">
-          <span className="text-gray-900 font-bold text-lg">{row.name}</span>
+      <tr>
+        <td colSpan={5} className="px-6 pb-2 pt-8 text-xs font-semibold uppercase tracking-wider text-gray-500">
+          {row.name}
         </td>
       </tr>
     );
   }
-  const rowClass = row.highlight
-    ? "border-amber-200 bg-amber-50"
-    : `border-gray-100 ${index % 2 === 0 ? "bg-white" : "bg-gray-50"}`;
   return (
-    <tr className={`border-b ${rowClass}`}>
-      <td
-        className={`py-4 px-4 md:px-6 font-medium text-sm md:text-base ${row.highlight ? "text-brand font-bold" : "text-gray-700"}`}
-      >
-        {row.name}
-        {row.highlight && (
-          <span className="ml-2 text-xs bg-amber-200 text-amber-800 px-2 py-0.5 rounded-full font-semibold">
-            {comparison.addOnLabel}
-          </span>
+    <tr className="border-t border-gray-100">
+      <td className="px-6 py-3.5 text-sm text-gray-700">
+        {row.highlight ? (
+          <>
+            <span className="block font-semibold text-gray-900">{row.name}</span>
+            <span className="mt-0.5 block text-xs text-gray-500">{comparison.addOnNote}</span>
+          </>
+        ) : (
+          row.name
         )}
       </td>
       {comparison.columns.map((column) => (
-        <Cell key={column.key} value={row[column.key]} highlight={row.highlight} tinted={column.popular} />
+        <Cell key={column.key} value={row[column.key]} tinted={column.key === popularKey} addOn={row.highlight} />
       ))}
     </tr>
   );
 }
 
 /** One plan as a card, for phones: name, price, Get Started, then the included features. */
-function PlanCard({ column, tier, tab, rows }) {
-  const addOn = rows.find((row) => row.highlight);
-  const features = rows.filter((row) => !row.highlight);
+function PlanCard({ column, tier, showPrice, popular, addOn, features }) {
   return (
-    <li
-      className={`rounded-2xl border bg-white p-6 shadow-md ${column.popular && tab.showPrices ? "border-brand ring-2 ring-brand" : "border-gray-200"}`}
-    >
-      {column.popular && tab.showPrices && (
-        <span className="mb-3 inline-block rounded-full bg-popular px-2.5 py-0.5 text-xs font-bold uppercase tracking-wide text-gray-900">
+    <li className={`relative rounded-2xl border bg-white p-6 ${popular ? "border-brand ring-1 ring-brand" : "border-gray-200"}`}>
+      {popular && (
+        <span className="absolute -top-3 left-6 rounded-full bg-brand px-2.5 py-0.5 text-xs font-semibold text-white">
           {comparison.popularLabel}
         </span>
       )}
-      <div className="flex items-baseline justify-between gap-4">
-        <h3 className="text-xl font-bold text-gray-900">{tier.title}</h3>
-        {tab.showPrices && <p className="text-2xl font-bold text-brand">{tier.price}</p>}
-      </div>
-      {addOn && (
-        <p className="mt-2 text-sm text-gray-600">
-          {addOn.name} ({comparison.addOnLabel.toLowerCase()}): <span className="font-semibold text-gray-900">{addOn[column.key]}</span>
-        </p>
-      )}
-      <a href={resolveHref(comparison.getStartedHref)} className={buttonClasses({ size: "block", className: "mt-5" })}>
+      <h3 className="font-semibold text-gray-600">{tier.title}</h3>
+      {showPrice && <p className="mt-1 text-4xl font-semibold tracking-tight text-gray-900">{tier.price}</p>}
+      <a
+        href={resolveHref(comparison.getStartedHref)}
+        className={buttonClasses({ variant: popular ? "primary" : "outline", size: "block", className: "mt-5" })}
+      >
         {comparison.getStartedLabel}
       </a>
       <ul className="mt-5 space-y-2 border-t border-gray-100 pt-5 text-sm">
@@ -105,11 +94,11 @@ function PlanCard({ column, tier, tab, rows }) {
             );
           }
           return (
-            <li key={row.name} className={`flex items-start gap-2.5 ${value ? "text-gray-800" : "text-gray-500 line-through"}`}>
+            <li key={row.name} className={`flex items-start gap-2.5 ${value ? "text-gray-800" : "text-gray-400"}`}>
               {value ? (
-                <Check aria-hidden="true" className="mt-0.5 h-4 w-4 flex-shrink-0 text-green-600" />
+                <Check aria-hidden="true" className="mt-0.5 h-4 w-4 flex-shrink-0 text-brand" />
               ) : (
-                <X aria-hidden="true" className="mt-0.5 h-4 w-4 flex-shrink-0 text-gray-400" />
+                <Minus aria-hidden="true" className="mt-0.5 h-4 w-4 flex-shrink-0 text-gray-300" />
               )}
               <span>
                 {row.name}
@@ -120,29 +109,45 @@ function PlanCard({ column, tier, tab, rows }) {
           );
         })}
       </ul>
+      {addOn && (
+        <div className="mt-6 rounded-xl bg-gray-50 p-4 text-sm">
+          <p className="flex items-baseline justify-between gap-4">
+            <span className="font-semibold text-gray-900">{addOn.name}</span>
+            <span className="font-semibold text-brand">{extra(addOn[column.key])}</span>
+          </p>
+          <p className="mt-0.5 text-xs text-gray-500">{comparison.addOnNote}</p>
+        </div>
+      )}
     </li>
   );
 }
 
 /**
- * Plan comparison with a File Online / File Remotely switch. From 768px it is a table; on
- * phones each plan is a card, so every plan is visible without sideways scrolling.
+ * Plan comparison with a File Online / File Remotely switch. From 1024px it is a table; below that
+ * each plan is a card, so every plan is visible without sideways scrolling.
  */
 export default function ComparisonTable() {
   const [activeId, setActiveId] = useState(comparison.tabs[0].id);
   const tab = comparison.tabs.find((candidate) => candidate.id === activeId);
   const tiers = pricing[tab.tiers];
   const rows = comparison.rows[activeId];
+  // The add-on row moves to the foot of the table.
+  const addOn = rows.find((row) => row.highlight);
+  const features = rows.filter((row) => !row.highlight);
+  // The popular plan is only called out when prices are shown.
+  const popularKey = tab.showPrices ? comparison.columns.find((column) => column.popular)?.key : undefined;
 
   return (
     <>
       <div className="flex justify-center mb-12">
-        <div className="inline-flex bg-white rounded-full p-1.5 shadow-lg border border-gray-200">
+        <div className="inline-flex rounded-full bg-gray-100 p-1">
           {comparison.tabs.map((candidate) => (
             <button
               key={candidate.id}
+              type="button"
+              aria-pressed={activeId === candidate.id}
               onClick={() => setActiveId(candidate.id)}
-              className={`${TAB} ${activeId === candidate.id ? "bg-brand text-white shadow-md" : "text-gray-600 hover:text-gray-900"}`}
+              className={`${TAB} ${activeId === candidate.id ? "bg-white text-gray-900 shadow-sm" : "text-gray-500 hover:text-gray-900"}`}
             >
               {candidate.label}
             </button>
@@ -150,62 +155,64 @@ export default function ComparisonTable() {
         </div>
       </div>
 
-      <ul className="space-y-6 md:hidden">
+      <ul className="grid gap-6 sm:grid-cols-2 lg:hidden">
         {comparison.columns.map((column, index) => (
-          <PlanCard key={column.key} column={column} tier={tiers[index]} tab={tab} rows={rows} />
+          <PlanCard
+            key={column.key}
+            column={column}
+            tier={tiers[index]}
+            showPrice={tab.showPrices}
+            popular={column.key === popularKey}
+            addOn={addOn}
+            features={features}
+          />
         ))}
       </ul>
-
-      <div className="hidden bg-white rounded-2xl shadow-xl overflow-hidden md:block">
-        <div className="overflow-x-auto">
-          <table className="w-full min-w-[700px]">
-            <thead>
-              <tr className="border-b border-gray-200">
-                <th className="text-left py-4 px-4 md:px-6 font-bold text-gray-900 bg-white rounded-tl-2xl min-w-[180px]">
-                  {comparison.featuresLabel}
+      <div className="hidden overflow-hidden rounded-3xl border border-gray-200 bg-white lg:block">
+        <table className="w-full table-fixed">
+          <colgroup>
+            <col className="w-[28%]" />
+            {comparison.columns.map((column) => (
+              <col key={column.key} />
+            ))}
+          </colgroup>
+          <thead>
+            <tr>
+              <th className="px-6 pb-6 pt-8 text-left align-bottom text-sm font-semibold text-gray-500">{comparison.featuresLabel}</th>
+              {comparison.columns.map((column, index) => (
+                <th
+                  key={column.key}
+                  id={column.headerId}
+                  className={`px-4 pb-6 pt-8 text-center align-bottom font-normal ${column.key === popularKey ? POPULAR_TINT : ""}`}
+                >
+                  <p className="flex h-6 items-center justify-center">
+                    {column.key === popularKey && (
+                      <span className="rounded-full bg-brand-subtle px-2.5 py-0.5 text-xs font-semibold text-brand">{comparison.popularLabel}</span>
+                    )}
+                  </p>
+                  <p className="mt-2 font-semibold text-gray-600">{tiers[index].title}</p>
+                  {tab.showPrices && <p className="mt-1 text-4xl font-semibold tracking-tight text-gray-900">{tiers[index].price}</p>}
+                  <a
+                    href={resolveHref(comparison.getStartedHref)}
+                    className={buttonClasses({
+                      variant: column.key === popularKey ? "primary" : "outline",
+                      size: "sm",
+                      className: "mt-5 w-full max-w-40 whitespace-nowrap",
+                    })}
+                  >
+                    {comparison.getStartedLabel}
+                  </a>
                 </th>
-                {comparison.columns.map((column, index) => {
-                  const isLast = index === comparison.columns.length - 1;
-                  return (
-                    <th
-                      key={column.key}
-                      id={column.headerId}
-                      className={isLast ? `${PLAN_HEADER} rounded-tr-2xl` : PLAN_HEADER}
-                    >
-                      {column.popular && tab.showPrices && (
-                        <div className="flex justify-center mb-1">
-                          <span className="bg-popular text-gray-900 text-xs font-bold px-2 py-0.5 rounded-full uppercase tracking-wide">
-                            {comparison.popularLabel}
-                          </span>
-                        </div>
-                      )}
-                      <div className="text-sm md:text-lg">{tiers[index].title}</div>
-                      {tab.showPrices && <div className="text-brand text-base md:text-xl">{tiers[index].price}</div>}
-                    </th>
-                  );
-                })}
-              </tr>
-              <tr className="border-b border-gray-200">
-                <th className="py-4 px-4 md:px-6 bg-white" />
-                {comparison.columns.map((column) => (
-                  <th key={column.key} className="text-center py-4 px-2 md:px-4 bg-white">
-                    <a
-                      href={resolveHref(comparison.getStartedHref)}
-                      className={buttonClasses({ size: "sm", className: "whitespace-nowrap" })}
-                    >
-                      {comparison.getStartedLabel}
-                    </a>
-                  </th>
-                ))}
-              </tr>
-            </thead>
-            <tbody>
-              {rows.map((row, index) => (
-                <Row key={index} row={row} index={index} />
               ))}
-            </tbody>
-          </table>
-        </div>
+            </tr>
+          </thead>
+          <tbody>
+            {features.map((row, index) => (
+              <Row key={index} row={row} popularKey={popularKey} />
+            ))}
+            {addOn && <Row row={addOn} popularKey={popularKey} />}
+          </tbody>
+        </table>
       </div>
     </>
   );

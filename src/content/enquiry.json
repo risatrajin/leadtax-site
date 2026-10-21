@@ -4,7 +4,11 @@
   "eyebrow": "Your next step",
   "title": "Let's make tax feel clearer.",
   "text": "Tell us what you need. We'll help you find the right service and explain how to get started.",
-  "call": "Call {phone}",
+  "contacts": {
+    "call": { "label": "Call us", "detail": "{phone}" },
+    "email": { "label": "Email us", "detail": "{email}" },
+    "visit": { "label": "Visit one of our offices", "detail": "{count} offices in {cities}", "to": "/file-in-person" }
+  },
   "phone": "6049784850",
   "readyLabel": "Already ready to file?",
   "remote": {
@@ -15,6 +19,7 @@
     "title": "Send us a note",
     "nameLabel": "Your name",
     "emailLabel": "Email address",
+    "phoneLabel": "Mobile number",
     "serviceLabel": "I need help with",
     "services": [
       "Personal tax",
@@ -24,11 +29,13 @@
       "Trust & estate",
       "General enquiry"
     ],
+    "locationLabel": "Preferred location",
+    "locationAny": "No preference / remote",
     "messageLabel": "A little about what you need",
     "note": "Please leave out SINs, account numbers, and tax documents. This opens a draft in your email app; nothing is submitted through this page.",
     "button": "Prepare email enquiry",
     "status": "Your email app should open with a draft. Send it from there to complete your enquiry, or contact {email} directly.",
     "emailSubject": "LeadTax enquiry — {service}",
-    "emailBody": "Name: {name}\nEmail: {email}\nService: {service}\n\n{message}"
+    "emailBody": "Name: {name}\nEmail: {email}\nMobile: {phone}\nService: {service}\nLocation: {location}\n\n{message}"
   }
 }

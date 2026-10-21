@@ -18,3 +18,8 @@ export function resolveHref(href) {
 export function isExternal(href) {
   return resolveHref(href).startsWith("http");
 }
+
+/** Opens an email draft in the visitor's mail app (the site has no form backend yet). */
+export function openMailDraft(to, subject, body) {
+  window.location.href = `mailto:${to}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+}

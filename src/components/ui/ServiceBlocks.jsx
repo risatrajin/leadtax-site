@@ -1,6 +1,7 @@
 import { ArrowRight } from "lucide-react";
 import { cx } from "../../lib/cx.js";
-import { CARD, CARD_TITLE } from "../../lib/styles.js";
+import { CARD, CARD_TITLE, LIFT } from "../../lib/styles.js";
+import { getIcon } from "../../lib/icons.js";
 
 /** Building blocks shared by the homepage and the service pages. */
 
@@ -40,5 +41,25 @@ export function StepCards({ items, linkHref }) {
         </li>
       ))}
     </ol>
+  );
+}
+
+/** Three-up grid of cards, each with an icon tile, a title and text. `items` are { icon, title, text }. */
+export function IconCardGrid({ items }) {
+  return (
+    <ul className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      {items.map((item) => {
+        const Icon = getIcon(item.icon);
+        return (
+          <li key={item.title} className={cx(CARD, LIFT, "p-7")}>
+            <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-brand-subtle text-brand">
+              <Icon aria-hidden="true" className="h-6 w-6" />
+            </span>
+            <h3 className="mt-5 text-xl font-semibold text-gray-900">{item.title}</h3>
+            <p className="mt-2 text-gray-600">{item.text}</p>
+          </li>
+        );
+      })}
+    </ul>
   );
 }

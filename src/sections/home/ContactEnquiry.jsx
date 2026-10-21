@@ -1,11 +1,12 @@
 import { useState } from "react";
-import { ArrowRight, ArrowUpRight, ChevronDown, Mail, Phone, ShieldCheck } from "lucide-react";
+import { ArrowRight, ArrowUpRight, ChevronDown, Copy, Mail, Phone, ShieldCheck } from "lucide-react";
 import site from "../../content/site.json";
-import { formatLocalPhone, toE164 } from "../../lib/phone.js";
+import { formatLocalPhone } from "../../lib/phone.js";
 import { fill } from "../../lib/template.js";
 import { CARD } from "../../lib/styles.js";
 import Button from "../../components/ui/Button.jsx";
 import SmartLink from "../../components/ui/SmartLink.jsx";
+import CopyText from "../../components/ui/CopyText.jsx";
 
 const DIRECT_LINK =
   "group flex items-center gap-4 rounded-2xl border border-gray-200 bg-white p-4 shadow-sm transition hover:-translate-y-0.5 hover:border-brand hover:shadow-md motion-reduce:hover:translate-y-0";
@@ -30,24 +31,24 @@ export default function ContactEnquiry({ contact }) {
           </h2>
           <p className="mt-6 max-w-xl text-lg text-gray-600">{contact.text}</p>
 
-          <ul className="mt-8 grid max-w-xl gap-3 sm:grid-cols-2">
+          <ul className="mt-8 grid max-w-xl gap-3 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2">
             <li>
-              <a href={`tel:${toE164(contact.phone)}`} className={DIRECT_LINK}>
+              <CopyText value={formatLocalPhone(contact.phone)} className={`${DIRECT_LINK} w-full text-left`}>
                 <span className="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-full bg-brand-subtle text-brand-bright">
                   <Phone aria-hidden="true" className="h-5 w-5" />
                 </span>
                 <span className="flex-1 font-semibold text-gray-900">{formatLocalPhone(contact.phone)}</span>
-                <ArrowUpRight aria-hidden="true" className="h-4 w-4 text-gray-400 transition group-hover:text-brand" />
-              </a>
+                <Copy aria-hidden="true" className="h-4 w-4 text-gray-400 transition group-hover:text-brand" />
+              </CopyText>
             </li>
             <li>
-              <a href={`mailto:${email}?subject=${encodeURIComponent(contact.emailSubject)}`} className={DIRECT_LINK}>
+              <CopyText value={email} className={`${DIRECT_LINK} w-full text-left`}>
                 <span className="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-full bg-brand-subtle text-brand-bright">
                   <Mail aria-hidden="true" className="h-5 w-5" />
                 </span>
                 <span className="flex-1 font-semibold text-gray-900">{email}</span>
-                <ArrowUpRight aria-hidden="true" className="h-4 w-4 text-gray-400 transition group-hover:text-brand" />
-              </a>
+                <Copy aria-hidden="true" className="h-4 w-4 text-gray-400 transition group-hover:text-brand" />
+              </CopyText>
             </li>
           </ul>
           <p className="mt-6 text-xs font-semibold uppercase tracking-[0.2em] text-gray-500">{contact.location}</p>

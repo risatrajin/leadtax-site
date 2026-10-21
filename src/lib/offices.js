@@ -33,7 +33,15 @@ export function hoursOn(office, date = new Date()) {
 }
 
 export const officePhone = (office) => formatLocalPhone(office.phone);
-export const officeTel = (office) => `tel:+1${office.phone}`;
+
+/** The head office's email address (where the site's enquiry forms send). */
+export const headOfficeEmail = offices.find((office) => office.isHeadOffice).email;
+
+/** Options for a "preferred location" dropdown: `anyLabel` first, then "City — Office" for each office. */
+export const officeLocationOptions = (anyLabel) => [
+  anyLabel,
+  ...offices.map((office) => `${office.schema.addressLocality} — ${office.shortName}`),
+];
 
 /** Cities that have an office, in office order. */
 export const officeCities = [...new Set(offices.map((office) => office.schema.addressLocality))];

@@ -5,6 +5,8 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
+  /* Height of the sticky site header (h-16 / md:h-20 plus its 1px border). Sticky bars sit under it. */
+  --header-h: 65px;
   --font-size: 16px;
   --background: #ffffff;
   --foreground: oklch(0.145 0 0);
@@ -30,6 +32,12 @@
   --font-weight-normal: 400;
   --ring: oklch(0.708 0 0);
   --radius: 0.625rem;
+}
+
+@media (min-width: 768px) {
+  :root {
+    --header-h: 81px;
+  }
 }
 
 @theme inline {
@@ -193,7 +201,47 @@
   }
 }
 
+/* Gentle up-and-down drift (the "Quick question" pill, the trust & estate deadline chips). */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Bookkeeping tools orbit: the ring turns forever; each logo turns back so it stays upright. */
+@keyframes orbit-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes orbit-counter {
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
 @media (prefers-reduced-motion: no-preference) {
+  .orbit-spin {
+    animation: orbit-spin 40s linear infinite;
+  }
+  .orbit-counter {
+    animation: orbit-counter 40s linear infinite;
+  }
+  .orbit-paused {
+    animation-play-state: paused;
+  }
+  .float {
+    animation: float 4s ease-in-out infinite;
+  }
+  .float:hover,
+  .float:focus-visible {
+    animation-play-state: paused;
+  }
   .hero-rise {
     animation: hero-rise 1s cubic-bezier(0.2, 0.7, 0.2, 1) 0.15s both;
   }

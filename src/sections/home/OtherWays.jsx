@@ -14,7 +14,7 @@ export default function OtherWays({ content = home, section = "otherWays", class
       <div className="mx-auto max-w-7xl">
         <h2 className="text-3xl text-gray-900 md:text-4xl lg:text-5xl">{otherWays.title}</h2>
         {otherWays.text && <p className="mt-4 max-w-3xl text-lg text-gray-600">{otherWays.text}</p>}
-        <div className="mt-10 grid gap-6 md:grid-cols-3">
+        <div className={cx("mt-10 grid gap-6", otherWays.cards.length > 3 ? "md:grid-cols-2 lg:grid-cols-3" : "md:grid-cols-3")}>
           {otherWays.cards.map((card) => (
             <article
               key={card.title}

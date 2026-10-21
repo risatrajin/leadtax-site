@@ -1,4 +1,4 @@
-import { ArrowRight, ChevronRight } from "lucide-react";
+import { ArrowRight, ChevronRight, Copy } from "lucide-react";
 import page from "../content/pages/support.json";
 import site from "../content/site.json";
 import PageShell from "../components/layout/PageShell.jsx";
@@ -10,13 +10,14 @@ import { clientLoginLinks, enabledLinks } from "../components/layout/site-header
 import { tollFreeDashed } from "../lib/phone.js";
 import { getIcon } from "../lib/icons.js";
 import { CARD, CARD_TITLE } from "../lib/styles.js";
+import CopyText from "../components/ui/CopyText.jsx";
 
 const LIFT = "group transition duration-300 hover:-translate-y-1 hover:shadow-xl motion-reduce:hover:translate-y-0";
 
-/** Where a contact card points, and its link text. */
+/** Where a contact card points, and its link text. Phone and email cards copy instead of linking. */
 function contactLink(item) {
-  if (item.kind === "phone") return { href: `tel:${tollFreeDashed}`, label: tollFreeDashed };
-  if (item.kind === "email") return { href: `mailto:${site.contact.email}`, label: site.contact.email };
+  if (item.kind === "phone") return { copy: true, label: tollFreeDashed };
+  if (item.kind === "email") return { copy: true, label: site.contact.email };
   return { to: item.to, label: item.label };
 }
 
@@ -36,6 +37,19 @@ export default function SupportPage() {
               const link = contactLink(item);
               return (
                 <li key={item.title}>
+                  {link.copy ? (
+                    <div className={`${CARD} flex h-full flex-col p-7`}>
+                      <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-brand-bright to-brand text-white shadow-md">
+                        <Icon aria-hidden="true" className="h-6 w-6" />
+                      </span>
+                      <h3 className={`mt-5 ${CARD_TITLE}`}>{item.title}</h3>
+                      <p className="mt-2 flex-1 text-gray-600">{item.text}</p>
+                      <CopyText value={link.label} className="mt-5 inline-flex items-center gap-1.5 self-start break-all font-semibold text-brand hover:underline">
+                        {link.label}
+                        <Copy aria-hidden="true" className="h-4 w-4 flex-shrink-0" />
+                      </CopyText>
+                    </div>
+                  ) : (
                   <SmartLink to={link.to} href={link.href} className={`${CARD} ${LIFT} flex h-full flex-col p-7`}>
                     <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-brand-bright to-brand text-white shadow-md">
                       <Icon aria-hidden="true" className="h-6 w-6" />
@@ -47,6 +61,7 @@ export default function SupportPage() {
                       <ArrowRight aria-hidden="true" className="h-4 w-4 flex-shrink-0 transition-transform group-hover:translate-x-1" />
                     </span>
                   </SmartLink>
+                  )}
                 </li>
               );
             })}

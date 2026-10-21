@@ -17,7 +17,7 @@
       "text": "LeadTax makes it simple to maximize your deductions and get the refund you deserve.",
       "actions": [
         {
-          "label": "Get Started Free",
+          "label": "Get Started",
           "href": "app:diy.register",
           "variant": "inverse"
         },

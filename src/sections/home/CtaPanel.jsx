@@ -3,6 +3,7 @@ import home from "../../content/home.json";
 import { tollFreeDashed } from "../../lib/phone.js";
 import { fill } from "../../lib/template.js";
 import Button from "../../components/ui/Button.jsx";
+import CopyText from "../../components/ui/CopyText.jsx";
 
 /**
  * Closing booking panel: a navy card with soft light glows, a faint grid and, when `cta.image` is
@@ -45,13 +46,13 @@ export default function CtaPanel({ to, className = "bg-white", content = home })
               {cta.button.label}
               <ArrowRight aria-hidden="true" className="h-5 w-5 transition-transform group-hover:translate-x-1" />
             </Button>
-            <a
-              href={`tel:${tollFreeDashed}`}
+            <CopyText
+              value={tollFreeDashed}
               className="inline-flex min-h-14 items-center justify-center gap-2 rounded-full border border-white/20 bg-white/10 px-7 font-semibold text-white backdrop-blur transition hover:bg-white/20"
             >
               <Phone aria-hidden="true" className="h-5 w-5" />
               {fill(cta.callLabel, { phone: tollFreeDashed })}
-            </a>
+            </CopyText>
           </div>
         </div>
       </div>

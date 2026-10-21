@@ -1,20 +1,19 @@
 import { useEffect, useState } from "react";
-import { ArrowRight, Check, Download } from "lucide-react";
+import { Check, Download } from "lucide-react";
 import content from "../content/service-pages.json";
 import PageShell from "../components/layout/PageShell.jsx";
 import PageHero from "../components/ui/PageHero.jsx";
 import Button from "../components/ui/Button.jsx";
-import SmartLink from "../components/ui/SmartLink.jsx";
-import FaqAccordion from "../components/ui/FaqAccordion.jsx";
 import Collapse from "../components/ui/Collapse.jsx";
 import EnquirySection from "../components/ui/EnquirySection.jsx";
 import { SectionTitle, StepCards } from "../components/ui/ServiceBlocks.jsx";
 import { getIcon } from "../lib/icons.js";
 import { cx } from "../lib/cx.js";
 import { fill } from "../lib/template.js";
+import OnThisPage from "../components/ui/OnThisPage.jsx";
+import ServiceQuestions from "../sections/services/ServiceQuestions.jsx";
+import { SECTION } from "../lib/styles.js";
 
-const SECTION = "scroll-mt-28 px-4 py-16 md:px-8 md:py-24";
-const LINK = "inline-flex items-center gap-1.5 font-semibold text-brand underline-offset-4 hover:underline";
 
 function Hero({ page }) {
   return (
@@ -28,20 +27,7 @@ function Hero({ page }) {
         imageNote={{ title: page.fit, text: content.fitPoints.join(" · ") }}
         decor
       />
-      <nav aria-label="On this page" className="border-b border-gray-200 bg-white px-4 py-4 md:px-8">
-        <ul className="mx-auto flex max-w-7xl flex-wrap gap-2">
-          {content.anchors.map((anchor) => (
-            <li key={anchor.href}>
-              <a
-                href={anchor.href}
-                className="inline-flex rounded-full border border-gray-200 px-4 py-2 text-sm font-semibold text-gray-700 transition hover:border-brand hover:text-brand"
-              >
-                {anchor.label}
-              </a>
-            </li>
-          ))}
-        </ul>
-      </nav>
+      <OnThisPage anchors={content.anchors} />
     </>
   );
 }
@@ -274,29 +260,8 @@ function Process({ className }) {
   );
 }
 
-function Questions({ faqs, className }) {
-  const { faq } = content;
-  return (
-    <section id="questions" className={cx(SECTION, className)}>
-      <div className="mx-auto max-w-3xl">
-        <SectionTitle eyebrow={faq.eyebrow} title={faq.title} center />
-        <div className="mt-10">
-          <FaqAccordion items={faqs} variant="bordered" />
-        </div>
-        <p className="mt-8 text-center text-lg text-gray-600">
-          {faq.text}{" "}
-          <SmartLink href={faq.link.href} className={LINK}>
-            {faq.link.label}
-            <ArrowRight aria-hidden="true" className="h-4 w-4" />
-          </SmartLink>
-        </p>
-      </div>
-    </section>
-  );
-}
-
 /**
- * Service page (Personal tax, Corporate tax, Bookkeeping, Trust & estate). Copy from the developer
+ * Service page (Personal tax, Corporate tax; Bookkeeping and Trust & estate have their own pages). Copy from the developer
  * package, laid out with the site's components: hero with a "made for" note, in-page links, what we
  * help with, a preparation checklist, an optional "support at your pace" row, the shared steps,
  * the FAQ and the enquiry form. Content: src/content/service-pages.json.
@@ -312,7 +277,7 @@ export default function ServicePage({ slug }) {
       <Prepare page={page} />
       {page.pace && <Pace pace={page.pace} />}
       <Process className={tones[0]} />
-      <Questions faqs={page.faqs} className={tones[1]} />
+      <ServiceQuestions faqs={page.faqs} className={tones[1]} />
       <EnquirySection service={page.name} className={tones[0]} />
     </PageShell>
   );

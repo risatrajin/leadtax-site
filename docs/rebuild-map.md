@@ -102,7 +102,7 @@ The three pages share one template, `src/sections/services/ServicePage.jsx`, wit
 
 | Page | New files |
 |---|---|
-| Contact (`Dw`) | `src/components/ui/OfficeCard.jsx`, `src/sections/contact/ContactForm.jsx`, `src/sections/contact/ExpertPickerDialog.jsx`, `src/components/ui/Dialog.jsx` (shadcn wrapper, bundle lines 20643–20707) |
+| Contact (`Dw`) | `src/sections/home/Offices.jsx` (office finder), `src/sections/contact/ContactForm.jsx`, `src/sections/contact/ExpertPickerDialog.jsx`, `src/components/ui/Dialog.jsx` (shadcn wrapper, bundle lines 20643–20707) |
 | Blog post (`Mw`) | `src/sections/blog/PostHeader.jsx`, `PostBody.jsx`, `PostCta.jsx`, `RelatedArticles.jsx` |
 | Terms, Privacy (`Iw`, `zw`) | `src/components/legal/LegalDocument.jsx` renders both from JSON |
 | Pricing (`$w`) | `src/sections/pricing/ComparisonTable.jsx` |
@@ -117,7 +117,6 @@ The three pages share one template, `src/sections/services/ServicePage.jsx`, wit
 | `src/components/ui/SectionHeading.jsx` | The repeated homepage section heading |
 | `src/components/ui/FaqAccordion.jsx` | FAQ styles: `simple` (homepage), `bordered` (/faq) |
 | `src/components/ui/PricingCard.jsx` | DIY package cards |
-| `src/components/ui/OfficeCard.jsx` | Contact page office cards (reads `offices.json`) |
 | `src/components/ui/CtaBanner.jsx` | Split photo/copy panels on the homepage |
 | `src/components/ui/Dialog.jsx` | shadcn Dialog on Radix |
 | `src/components/ui/TikTokIcon.jsx` | Inline TikTok SVG |

@@ -1,0 +1,395 @@
+{
+  "_note": "Copy for /bookkeeping, from leadtax-bookkeeping-service.html, laid out with the site's components. The page title and description stay in seo.json (bookkeeping) so the indexed listing is unchanged.",
+  "name": "Bookkeeping",
+  "hero": {
+    "eyebrow": "Bookkeeping for Canadian businesses",
+    "text": "Professional bookkeeping without the paperwork headache. LeadTax keeps your books organized, your financials clear, and your business ready for tax time.",
+    "actions": [
+      {
+        "label": "Get a free consultation",
+        "href": "#contact"
+      },
+      {
+        "label": "Explore services",
+        "href": "#services"
+      }
+    ],
+    "image": {
+      "src": "https://images.unsplash.com/photo-1762319007311-31597c44aad8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhY2NvdW50aW5nJTIwY2FsY3VsYXRvciUyMGJ1c2luZXNzJTIwZmluYW5jZXxlbnwxfHx8fDE3Njk5NDA4MzV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "alt": "Calculator and colour-coded documents on a desk"
+    },
+    "note": {
+      "title": "Books up to date",
+      "text": "Monthly bookkeeping · GST/HST & payroll · Tax-ready books"
+    },
+    "titleLines": [
+      "Your books.",
+      "Your taxes.",
+      "One team."
+    ]
+  },
+  "anchors": [
+    {
+      "label": "Services",
+      "href": "#services"
+    },
+    {
+      "label": "How it works",
+      "href": "#how-it-works"
+    },
+    {
+      "label": "Pricing",
+      "href": "#pricing"
+    },
+    {
+      "label": "Catch-up",
+      "href": "#catch-up"
+    },
+    {
+      "label": "Common questions",
+      "href": "#questions"
+    }
+  ],
+  "services": {
+    "eyebrow": "Everything in one place",
+    "title": "Bookkeeping that works with your business.",
+    "text": "Stay organized throughout the year with practical bookkeeping and tax support built for Canadian small businesses.",
+    "items": [
+      {
+        "icon": "BookOpen",
+        "title": "Monthly Bookkeeping",
+        "text": "Transaction categorization, bank and credit-card reconciliation, and organized books every month."
+      },
+      {
+        "icon": "ChartLine",
+        "title": "Financial Reporting",
+        "text": "Clear Profit & Loss and Balance Sheet reports so you can understand how your business is performing."
+      },
+      {
+        "icon": "Wallet",
+        "title": "Payroll Support",
+        "text": "Payroll bookkeeping, source deductions, CRA remittance support, T4s and year-end reconciliation."
+      },
+      {
+        "icon": "Percent",
+        "title": "GST/HST & PST",
+        "text": "Sales tax reconciliation and filing support to keep your business organized and on schedule."
+      },
+      {
+        "icon": "Laptop",
+        "title": "QuickBooks Online",
+        "text": "Setup, cleanup, reconciliation, bank feeds and ongoing QuickBooks Online bookkeeping."
+      },
+      {
+        "icon": "History",
+        "title": "Catch-Up Bookkeeping",
+        "text": "Months or years behind? We can clean up your records and bring your books up to date."
+      }
+    ]
+  },
+  "together": {
+    "eyebrow": "A smarter way to work",
+    "title": "Bookkeeping + Tax. Better together.",
+    "paragraphs": [
+      "Why manage a separate bookkeeper and tax accountant? At LeadTax, your bookkeeping and tax professionals can work together so your records stay organized with year-end filing in mind.",
+      "That means fewer surprises, less back-and-forth, and a team that already understands your business when tax season arrives."
+    ],
+    "action": {
+      "label": "Talk to a LeadTax advisor",
+      "href": "#contact"
+    },
+    "panelTitle": "One connected financial team.",
+    "benefits": [
+      {
+        "title": "Accurate, tax-ready books",
+        "text": "Organized throughout the year."
+      },
+      {
+        "title": "GST/HST & payroll support",
+        "text": "Keep key compliance items coordinated."
+      },
+      {
+        "title": "Corporate tax preparation",
+        "text": "Your year-end team already knows the books."
+      },
+      {
+        "title": "Less year-end back-and-forth",
+        "text": "One place for bookkeeping and tax support."
+      }
+    ]
+  },
+  "steps": {
+    "eyebrow": "How it works",
+    "title": "Simple from day one.",
+    "text": "Getting your bookkeeping under control shouldn't be complicated.",
+    "items": [
+      {
+        "title": "Tell us about your business",
+        "text": "We learn how you operate, what software you use, and what level of support you need."
+      },
+      {
+        "title": "Connect your records",
+        "text": "Securely provide the accounting, bank, credit-card and payroll information needed."
+      },
+      {
+        "title": "We handle the books",
+        "text": "We categorize, reconcile, review and organize your financial records."
+      },
+      {
+        "title": "Stay tax-ready",
+        "text": "Your books stay current so year-end tax preparation is easier and more predictable."
+      }
+    ]
+  },
+  "pricing": {
+    "eyebrow": "Simple, transparent pricing",
+    "title": "Choose the bookkeeping support you need.",
+    "text": "Start simple and add more support as your business grows. Starting prices in Canadian dollars.",
+    "periods": [
+      {
+        "id": "monthly",
+        "label": "Monthly",
+        "suffix": "/mo",
+        "note": "Billed monthly"
+      },
+      {
+        "id": "annual",
+        "label": "Annual",
+        "suffix": "/yr",
+        "note": "Billed annually · save 20%"
+      }
+    ],
+    "saveBadge": "Save 20%",
+    "popularLabel": "Most complete",
+    "getStartedLabel": "Get started",
+    "getStartedHref": "#contact",
+    "plans": [
+      {
+        "name": "Bookkeeping Light",
+        "text": "For lean businesses that need clean, reliable books and straightforward reporting.",
+        "price": {
+          "monthly": "$199",
+          "annual": "$1,910"
+        },
+        "features": [
+          "Monthly bookkeeping",
+          "Bank & credit-card reconciliation",
+          "Profit & Loss and Balance Sheet",
+          "Year-end tax-ready financial package",
+          "Scheduled bookkeeping check-ins"
+        ]
+      },
+      {
+        "name": "Bookkeeping Core",
+        "text": "For growing businesses that want ongoing bookkeeping support and more access to their team.",
+        "price": {
+          "monthly": "$399",
+          "annual": "$3,830"
+        },
+        "features": [
+          "Everything in Bookkeeping Light",
+          "Dedicated bookkeeping support",
+          "Custom account categorization",
+          "GST/HST bookkeeping support",
+          "Priority communication"
+        ]
+      },
+      {
+        "name": "Bookkeeping + Tax",
+        "popular": true,
+        "text": "Full bookkeeping plus year-end corporate tax support from one connected LeadTax team.",
+        "price": {
+          "monthly": "$649",
+          "annual": "$6,230"
+        },
+        "features": [
+          "Everything in Bookkeeping Core",
+          "Corporate tax return preparation",
+          "Year-end tax review",
+          "T4/T5 support where applicable",
+          "Tax planning consultation"
+        ]
+      }
+    ],
+    "footnote": "Pricing is a starting structure and can scale with transaction volume, number of accounts, payroll, sales-tax filings, and bookkeeping complexity. Catch-up work and prior-year cleanup are quoted separately."
+  },
+  "industries": {
+    "eyebrow": "Built for small business",
+    "title": "Bookkeeping for businesses like yours.",
+    "items": [
+      {
+        "icon": "UtensilsCrossed",
+        "label": "Restaurants & Hospitality"
+      },
+      {
+        "icon": "HardHat",
+        "label": "Construction & Trades"
+      },
+      {
+        "icon": "Stethoscope",
+        "label": "Medical Professionals"
+      },
+      {
+        "icon": "Truck",
+        "label": "Transportation"
+      },
+      {
+        "icon": "House",
+        "label": "Real Estate"
+      },
+      {
+        "icon": "ShoppingBag",
+        "label": "Retail & E-Commerce"
+      },
+      {
+        "icon": "Briefcase",
+        "label": "Professional Services"
+      },
+      {
+        "icon": "Building2",
+        "label": "Owner-Managed Corporations"
+      }
+    ]
+  },
+  "catchUp": {
+    "eyebrow": "Catch-up bookkeeping",
+    "title": "Behind on your books? We'll help you catch up.",
+    "text": "Whether you're a few months or a few years behind, LeadTax can organize your records and help get your bookkeeping back on track.",
+    "points": [
+      "Bank reconciliation",
+      "Credit-card reconciliation",
+      "Transaction cleanup",
+      "GST/HST review",
+      "Payroll reconciliation",
+      "Tax-ready year-end books"
+    ],
+    "action": {
+      "label": "Get a catch-up quote",
+      "href": "#contact"
+    },
+    "progressTitle": "Catch-up progress",
+    "progress": [
+      {
+        "icon": "Landmark",
+        "title": "Bank accounts",
+        "detail": "Reconciled",
+        "status": "Complete"
+      },
+      {
+        "icon": "CreditCard",
+        "title": "Credit cards",
+        "detail": "Reconciled",
+        "status": "Complete"
+      },
+      {
+        "icon": "Receipt",
+        "title": "Transactions",
+        "detail": "Categorized",
+        "status": "Complete"
+      },
+      {
+        "icon": "ChartLine",
+        "title": "Financial reports",
+        "detail": "Prepared",
+        "status": "Ready"
+      }
+    ]
+  },
+  "tools": {
+    "eyebrow": "Your existing tools",
+    "title": "Works with the way you already do business.",
+    "text": "LeadTax can work with commonly used accounting, banking, payment, and commerce platforms.",
+    "items": [
+      {
+        "icon": "Calculator",
+        "label": "QuickBooks Online",
+        "logo": "QuickBooks",
+        "info": "Setup, cleanup, bank feeds and ongoing bookkeeping in QuickBooks Online."
+      },
+      {
+        "icon": "Store",
+        "label": "Clover",
+        "info": "Point-of-sale sales and deposits matched to your books."
+      },
+      {
+        "icon": "CreditCard",
+        "label": "Square",
+        "logo": "Square",
+        "info": "Card sales, fees and payouts reconciled each month."
+      },
+      {
+        "icon": "Wallet",
+        "label": "Stripe",
+        "logo": "Stripe",
+        "info": "Online payments, fees and payouts recorded and reconciled."
+      },
+      {
+        "icon": "ShoppingBag",
+        "label": "Shopify",
+        "logo": "Shopify",
+        "info": "Store orders, payouts and sales tax organized in your books."
+      },
+      {
+        "icon": "Landmark",
+        "label": "Canadian Banks",
+        "info": "Bank and credit-card accounts reconciled through bank feeds."
+      }
+    ],
+    "mark": "/images/leadtax-mark.png",
+    "hint": "Tap a logo to see how we work with it."
+  },
+  "canada": {
+    "eyebrow": "Local expertise",
+    "title": "Canadian bookkeeping for Canadian businesses.",
+    "text": "From GST/HST and payroll to corporate tax preparation, LeadTax gives business owners local service, real people, and Canadian tax expertise — in office or online.",
+    "points": [
+      {
+        "icon": "Percent",
+        "title": "GST/HST & payroll",
+        "text": "Canadian sales tax, source deductions and CRA remittances."
+      },
+      {
+        "icon": "Building2",
+        "title": "Corporate tax preparation",
+        "text": "Year-end filing from the team that keeps your books."
+      },
+      {
+        "icon": "Users",
+        "title": "Real people",
+        "text": "Local service from a team you can talk to."
+      },
+      {
+        "icon": "MapPin",
+        "title": "In office or online",
+        "text": "Five offices in Vancouver & Burnaby, or work with us remotely."
+      }
+    ],
+    "action": {
+      "label": "Book an in-office consultation",
+      "to": "/contact#offices"
+    }
+  },
+  "cta": {
+    "title": "Spend more time running your business. We'll take care of the books.",
+    "text": "Get bookkeeping, payroll, GST/HST and tax support from one team.",
+    "action": {
+      "label": "Book a free consultation",
+      "href": "#contact"
+    },
+    "callLabel": "Call {phone}"
+  },
+  "faqs": [
+    {
+      "question": "Can you work with QuickBooks?",
+      "answer": "Yes. Tell us which version you use and how your current records are maintained so we can discuss the setup and access required."
+    },
+    {
+      "question": "Do you offer catch-up bookkeeping?",
+      "answer": "Yes. Share the outstanding periods and approximate transaction volume so we can assess the work and provide a quote."
+    },
+    {
+      "question": "What does monthly bookkeeping cost?",
+      "answer": "Pricing depends on transaction volume, the number of accounts, record quality, and the services included. We confirm your scope and fee before work starts."
+    }
+  ]
+}

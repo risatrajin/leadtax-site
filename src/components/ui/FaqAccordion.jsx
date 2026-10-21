@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useId, useState } from "react";
 import { ArrowUpRight, ChevronDown } from "lucide-react";
 import SmartLink from "./SmartLink.jsx";
 import Collapse from "./Collapse.jsx";
@@ -14,6 +14,7 @@ export default function FaqAccordion({ items, variant = "simple" }) {
 }
 
 function SimpleFaq({ items }) {
+  const uid = useId();
   const [open, setOpen] = useState({});
   const toggle = (question) => setOpen((prev) => ({ ...prev, [question]: !prev[question] }));
 
@@ -22,15 +23,19 @@ function SimpleFaq({ items }) {
       {items.map((item, index) => (
         <div key={index} className="bg-white rounded-xl shadow-sm overflow-hidden">
           <button
+            type="button"
+            aria-expanded={Boolean(open[item.question])}
+            aria-controls={`${uid}-${index}`}
             onClick={() => toggle(item.question)}
             className="w-full px-6 py-5 flex items-center justify-between text-left hover:bg-gray-50 transition-colors"
           >
             <span className="text-lg text-gray-900 pr-4">{item.question}</span>
             <ChevronDown
+              aria-hidden="true"
               className={`w-5 h-5 text-gray-500 flex-shrink-0 transition-transform ${open[item.question] ? "rotate-180" : ""}`}
             />
           </button>
-          <Collapse open={Boolean(open[item.question])} className="px-6 pb-5 text-gray-600 whitespace-pre-line">
+          <Collapse id={`${uid}-${index}`} open={Boolean(open[item.question])} className="px-6 pb-5 text-gray-600 whitespace-pre-line">
             {item.answer}
           </Collapse>
         </div>
@@ -40,6 +45,7 @@ function SimpleFaq({ items }) {
 }
 
 function BorderedFaq({ items }) {
+  const uid = useId();
   const [openIndex, setOpenIndex] = useState(null);
 
   return (
@@ -47,15 +53,19 @@ function BorderedFaq({ items }) {
       {items.map((item, index) => (
         <div key={index} className="bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden">
           <button
+            type="button"
+            aria-expanded={openIndex === index}
+            aria-controls={`${uid}-${index}`}
             onClick={() => setOpenIndex(openIndex === index ? null : index)}
             className="w-full flex items-center justify-between p-6 text-left hover:bg-gray-50 transition-colors"
           >
             <span className="font-semibold text-gray-900 pr-4">{item.question}</span>
             <ChevronDown
+              aria-hidden="true"
               className={`w-5 h-5 text-brand transition-transform flex-shrink-0 ${openIndex === index ? "rotate-180" : ""}`}
             />
           </button>
-          <Collapse open={openIndex === index} className="px-6 pb-6">
+          <Collapse id={`${uid}-${index}`} open={openIndex === index} className="px-6 pb-6">
             <p className="text-gray-600 leading-relaxed">{item.answer}</p>
             {item.link && (
               <SmartLink

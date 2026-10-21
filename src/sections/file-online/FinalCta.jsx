@@ -9,15 +9,15 @@ export default function FinalCta() {
     <CtaBanner
       sectionClassName="bg-white"
       media="bg-gradient-to-br from-promo-from to-promo-to flex items-center justify-center"
-      image={{ ...finalCta.image, className: "w-full h-full object-cover rounded-2xl shadow-lg" }}
+      image={{ ...finalCta.image, className: "block w-full h-full object-cover rounded-2xl shadow-lg" }}
       bodyClassName="bg-brand text-white p-8 md:p-12 flex flex-col justify-center"
       title={finalCta.title}
       text={finalCta.text}
       textClassName="text-lg text-brand-subtle mb-8"
     >
-      <div className="flex flex-col sm:flex-row gap-4">
+      <div className="flex flex-col sm:flex-row sm:flex-wrap gap-4">
         {finalCta.actions.map((action) => (
-          <Button key={action.label} href={action.href} variant={action.variant} className="text-center">
+          <Button key={action.label} href={action.href} variant={action.variant} className="text-center sm:whitespace-nowrap">
             {action.label}
           </Button>
         ))}

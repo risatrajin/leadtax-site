@@ -1,6 +1,7 @@
 import { CircleCheckBig } from "lucide-react";
 import Button from "./Button.jsx";
 import { cx } from "../../lib/cx.js";
+import QuickQueryButton from "./QuickQueryButton.jsx";
 
 /** Link props for a hero action: a router path, or a URL that may open in a new tab. */
 export function actionProps(action) {
@@ -33,12 +34,13 @@ export default function PageHero({ eyebrow, title, text, actions = [], image, im
           <h1 className="text-4xl font-bold tracking-tight md:text-5xl lg:text-6xl">{title}</h1>
           {text && <p className="mt-6 text-lg text-brand-subtle md:text-xl">{text}</p>}
           {actions.length > 0 && (
-            <div className={cx("mt-10 flex flex-col gap-4 sm:flex-row", !image && "sm:justify-center")}>
+            <div className={cx("mt-10 flex flex-col gap-4 sm:flex-row sm:flex-wrap", !image && "sm:justify-center")}>
               {actions.map((action, index) => (
                 <Button
                   key={action.label}
                   {...(action.props ?? actionProps(action))}
                   variant={index === 0 ? "inverse" : "outlineInverseFill"}
+                  className="sm:whitespace-nowrap"
                 >
                   {action.label}
                 </Button>
@@ -49,6 +51,7 @@ export default function PageHero({ eyebrow, title, text, actions = [], image, im
         </div>
         {image && (
           <div className="relative">
+            <QuickQueryButton className="right-3 top-4 sm:right-4 sm:top-6" />
             <img
               src={image.src}
               alt={image.alt}

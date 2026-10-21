@@ -2,11 +2,12 @@ import { Link } from "react-router";
 import nav from "../../content/nav.json";
 import site from "../../content/site.json";
 import { getIcon } from "../../lib/icons.js";
-import { officeCities, officesByCity, officePhone, officeTel } from "../../lib/offices.js";
+import { officeCities, officesByCity, officePhone } from "../../lib/offices.js";
 import { tollFreeDashed } from "../../lib/phone.js";
 import { fill } from "../../lib/template.js";
 import SmartLink from "../ui/SmartLink.jsx";
 import { isEnabled, linkById, visibleColumns } from "./site-header/panels.jsx";
+import CopyText from "../ui/CopyText.jsx";
 
 const { footer, localLinks } = nav;
 const COLUMN_TITLE = "mb-4 text-sm uppercase tracking-wider text-white";
@@ -47,20 +48,15 @@ export default function SiteFooter() {
         <div className="grid gap-10 lg:grid-cols-12 lg:gap-12">
           <div className="space-y-4 lg:col-span-4">
             <Link to="/" className="inline-block" aria-label={nav.header.homeLabel}>
-              {/* White version via CSS filter until the client supplies a reversed logo file. */}
-              <img src={site.logo} alt={site.name} className="h-8 brightness-0 invert" />
+              {/* The colour logo on a white tile (a filter would turn the mark into a white blob). */}
+              <span className="inline-flex rounded-xl bg-white px-3 py-2">
+                <img src={site.logo} alt={site.name} className="h-7" />
+              </span>
             </Link>
             <p className="max-w-sm text-sm text-white/70">{site.footer.tagline}</p>
             <div className="text-sm">
-              <a href={`tel:${tollFreeDashed}`} className="flex min-h-11 w-fit items-center text-white hover:underline md:min-h-0 md:py-0.5">
-                {tollFreeDashed}
-              </a>
-              <a
-                href={`mailto:${site.contact.email}`}
-                className="flex min-h-11 w-fit items-center text-white/70 hover:text-white md:min-h-0 md:py-0.5"
-              >
-                {site.contact.email}
-              </a>
+              <CopyText value={tollFreeDashed} className="flex min-h-11 w-fit items-center text-white hover:underline md:min-h-0 md:py-0.5" />
+              <CopyText value={site.contact.email} className="flex min-h-11 w-fit items-center text-white/70 hover:text-white md:min-h-0 md:py-0.5" />
             </div>
             <ul aria-label={footer.socialLabel} className="-ml-3 flex items-center">
               {site.social.map((social) => {
@@ -97,9 +93,7 @@ export default function SiteFooter() {
                   {office.shortName}
                 </Link>
                 <p className="text-white/70">{office.display.address}</p>
-                <a href={officeTel(office)} className={LINK}>
-                  {officePhone(office)}
-                </a>
+                <CopyText value={officePhone(office)} className={LINK} />
               </li>
             ))}
           </ul>

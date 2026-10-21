@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useLocation } from "react-router";
 import { MapPin, Phone } from "lucide-react";
 import content from "../../content/home.json";
 import {
@@ -7,13 +8,14 @@ import {
   mapEmbedSrc,
   officeCities,
   officePhone,
-  officeTel,
   offices,
 } from "../../lib/offices.js";
 import { OfficePhoto } from "../../lib/officePhoto.jsx";
 import { fill } from "../../lib/template.js";
 import { CARD } from "../../lib/styles.js";
 import Button from "../../components/ui/Button.jsx";
+import ExpertPickerDialog from "../contact/ExpertPickerDialog.jsx";
+import CopyText from "../../components/ui/CopyText.jsx";
 
 const { offices: copy, bookingFallback } = content;
 
@@ -42,12 +44,20 @@ function Hours({ office }) {
   );
 }
 
-function Actions({ office }) {
+/** Book (its own booking link, or the expert picker for the head office) and Directions. */
+function Actions({ office, onPickExpert }) {
+  const picker = office.booking?.type === "expertPicker";
   return (
     <div className="flex gap-3">
-      <Button href={bookingHref(office, bookingFallback.href)} size="sm" className="flex-1 whitespace-nowrap">
-        {copy.bookLabel}
-      </Button>
+      {picker ? (
+        <Button size="sm" className="flex-1 whitespace-nowrap" onClick={onPickExpert}>
+          {copy.bookLabel}
+        </Button>
+      ) : (
+        <Button href={bookingHref(office, bookingFallback.href)} target="_blank" rel="noopener noreferrer" size="sm" className="flex-1 whitespace-nowrap">
+          {copy.bookLabel}
+        </Button>
+      )}
       <Button
         href={directionsHref(office)}
         target="_blank"
@@ -109,9 +119,9 @@ function OfficeMap({ office, className, offsetLeft }) {
  * One office in the list: photo, name, address and phone. Selecting it moves the map. Below
  * 1024px, where there is no side map, the selected card also shows its map, hours and actions.
  */
-function OfficeCard({ office, selected, onSelect }) {
+function OfficeCard({ office, selected, onSelect, onPickExpert }) {
   return (
-    <li className={`${CARD} relative overflow-hidden transition-shadow ${selected ? "ring-2 ring-brand" : "hover:shadow-lg"}`}>
+    <li id={office.id} className={`${CARD} relative scroll-mt-32 overflow-hidden transition-shadow ${selected ? "ring-2 ring-brand" : "hover:shadow-lg"}`}>
       <div className="relative flex gap-4 p-3">
         {/* One button stretched over the whole card, so a click anywhere selects the office. */}
         <button
@@ -135,20 +145,20 @@ function OfficeCard({ office, selected, onSelect }) {
             <MapPin aria-hidden="true" className="mt-0.5 h-4 w-4 flex-shrink-0 text-gray-400" />
             {office.display.address}
           </p>
-          <a
-            href={officeTel(office)}
-            className="relative mt-1 inline-flex min-h-8 items-center gap-1.5 text-sm font-semibold text-gray-900 hover:text-brand"
+          <CopyText
+            value={officePhone(office)}
+            className="mt-1 inline-flex min-h-8 items-center gap-1.5 text-sm font-semibold text-gray-900 hover:text-brand"
           >
             <Phone aria-hidden="true" className="h-4 w-4 flex-shrink-0 text-gray-400" />
             {officePhone(office)}
-          </a>
+          </CopyText>
         </div>
       </div>
       {selected && (
         <div className="space-y-4 border-t border-gray-100 p-4 lg:hidden">
           <OfficeMap office={office} className="relative h-56 w-full rounded-xl" />
           <Hours office={office} />
-          <Actions office={office} />
+          <Actions office={office} onPickExpert={onPickExpert} />
         </div>
       )}
     </li>
@@ -160,7 +170,14 @@ function OfficeCard({ office, selected, onSelect }) {
  * right centred on the selected office, with a card showing its photo, hours and actions.
  */
 export default function Offices({ className = "bg-gray-50" }) {
-  const [activeId, setActiveId] = useState(offices[0].id);
+  // A link like /contact#vancouver-kingsway opens with that office selected.
+  const { hash, key } = useLocation();
+  const hashId = offices.find((office) => `#${office.id}` === hash)?.id;
+  const [activeId, setActiveId] = useState(hashId ?? offices[0].id);
+  const [pickerOpen, setPickerOpen] = useState(false);
+  useEffect(() => {
+    if (hashId) setActiveId(hashId);
+  }, [hashId, key]);
   const active = offices.find((office) => office.id === activeId);
 
   return (
@@ -186,6 +203,7 @@ export default function Offices({ className = "bg-gray-50" }) {
                       office={office}
                       selected={office.id === activeId}
                       onSelect={() => setActiveId(office.id)}
+                      onPickExpert={() => setPickerOpen(true)}
                     />
                   ))}
                 </ul>
@@ -205,13 +223,14 @@ export default function Offices({ className = "bg-gray-50" }) {
                     <p className="text-sm text-gray-600">{active.display.address}</p>
                   </div>
                   <Hours office={active} />
-                  <Actions office={active} />
+                  <Actions office={active} onPickExpert={() => setPickerOpen(true)} />
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
+      <ExpertPickerDialog open={pickerOpen} onOpenChange={setPickerOpen} />
     </section>
   );
 }

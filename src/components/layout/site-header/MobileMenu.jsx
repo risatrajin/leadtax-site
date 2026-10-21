@@ -8,6 +8,7 @@ import Button from "../../ui/Button.jsx";
 import SmartLink from "../../ui/SmartLink.jsx";
 import Collapse from "../../ui/Collapse.jsx";
 import { clientLoginLinks, enabledLinks, isEnabled, linkById, visibleColumns } from "./panels.jsx";
+import CopyText from "../../ui/CopyText.jsx";
 
 const ROW = "flex w-full items-center justify-between border-b border-gray-200 py-4 text-left text-lg font-semibold text-gray-900";
 const SUBLINK = "block py-2 text-gray-700 hover:text-brand";
@@ -123,9 +124,7 @@ export default function MobileMenu({ id, onClose, returnFocusTo }) {
         </ul>
       </nav>
       <div className="flex flex-col gap-3 border-t border-gray-200 bg-white p-4 md:px-8">
-        <a href={`tel:${tollFreeDashed}`} className="text-center font-semibold text-gray-900">
-          {tollFreeDashed}
-        </a>
+        <CopyText value={tollFreeDashed} className="min-h-11 text-center font-semibold text-gray-900" />
         <Button to={nav.header.cta.to} size="md" onClick={onClose} className="w-full">
           {nav.header.cta.label}
         </Button>

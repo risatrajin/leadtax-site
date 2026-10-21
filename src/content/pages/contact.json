@@ -1,34 +1,46 @@
 {
   "title": "Contact Us",
   "intro": "Have questions? We're here to help. Reach out to our friendly team.",
-  "bookLabel": "Book an Appointment",
-  "headOfficeLabel": "Head office",
+  "quick": {
+    "copyPhone": "Copy phone number {phone}",
+    "copyEmail": "Copy email address {email}",
+    "offices": "Find an office"
+  },
   "form": {
-    "_note": "The form is hidden on the live site (known issue). Submitting opens an email to the head office.",
-    "subject": "Contact Form Submission from {firstName} {lastName}",
-    "fields": {
-      "firstName": {
-        "label": "First Name",
-        "placeholder": "John"
+    "_note": "Lead form under the office cards. No backend yet: submitting opens an email draft to the head office with the details filled in.",
+    "eyebrow": "Send us a message",
+    "title": "Tell us what you need. We'll take it from here.",
+    "text": "Share a few details and the right tax expert will get back to you to plan the next step.",
+    "steps": [
+      {
+        "title": "Share a few details",
+        "text": "Your contact details and what you need help with."
       },
-      "lastName": {
-        "label": "Last Name",
-        "placeholder": "Doe"
+      {
+        "title": "We match you with an expert",
+        "text": "Someone who works on situations like yours every day."
       },
-      "email": {
-        "label": "Email",
-        "placeholder": "john@example.com"
-      },
-      "phone": {
-        "label": "Phone Number",
-        "placeholder": "(555) 123-4567"
-      },
-      "message": {
-        "label": "Message",
-        "placeholder": "How can we help you?"
+      {
+        "title": "We reach out to plan next steps",
+        "text": "By phone or email, whichever you prefer."
       }
+    ],
+    "cardTitle": "Request a call back",
+    "fields": {
+      "name": "Full name",
+      "email": "Email address",
+      "phone": "Mobile number",
+      "service": "I need help with",
+      "location": "Preferred location",
+      "message": "How can we help?",
+      "messagePlaceholder": "A sentence or two about your situation"
     },
-    "submitLabel": "Send Message"
+    "consent": "I agree that LeadTax may contact me by phone or email about my enquiry.",
+    "privacyNote": "Please leave out SINs, account numbers and tax documents. This opens a draft in your email app; send it from there to reach us.",
+    "submitLabel": "Send my enquiry",
+    "status": "Your email app should open with your enquiry ready to send. If it doesn't, email us at {email}.",
+    "subject": "Website enquiry — {service} — {name}",
+    "body": "Name: {name}\nEmail: {email}\nMobile: {phone}\nService: {service}\nPreferred location: {location}\nConsent to contact: yes\n\n{message}"
   },
   "expertPicker": {
     "title": "Choose Your Tax Expert",

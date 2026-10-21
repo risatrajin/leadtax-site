@@ -25,6 +25,8 @@ import PrivacyPolicyPage from "./pages/PrivacyPolicyPage.jsx";
 import PricingPage from "./pages/PricingPage.jsx";
 import UsCrossBorderPage from "./pages/UsCrossBorderPage.jsx";
 import ServicePage from "./pages/ServicePage.jsx";
+import BookkeepingPage from "./pages/BookkeepingPage.jsx";
+import TrustEstatePage from "./pages/TrustEstatePage.jsx";
 import NotFoundPage from "./pages/NotFoundPage.jsx";
 
 /*
@@ -57,8 +59,8 @@ export default function App() {
         <Route path="/corporate-tax" element={<ServicePage key="corporate-tax" slug="corporate-tax" />} />
         <Route path="/business-tax" element={<RedirectTo to="/corporate-tax" />} />
         <Route path="/cross-border-tax" element={<RedirectTo to="/us-cross-border" />} />
-        <Route path="/bookkeeping" element={<ServicePage key="bookkeeping" slug="bookkeeping" />} />
-        <Route path="/trust-estate-tax" element={<ServicePage key="trust-estate-tax" slug="trust-estate-tax" />} />
+        <Route path="/bookkeeping" element={<BookkeepingPage />} />
+        <Route path="/trust-estate-tax" element={<TrustEstatePage />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/career" element={<CareerPage />} />

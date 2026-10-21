@@ -10,7 +10,10 @@
   "contact": {
     "email": "info@leadtax.ca",
     "tollFree": "1-877-453-2382",
-    "websiteDisplay": "www.leadtax.ca"
+    "websiteDisplay": "www.leadtax.ca",
+    "copyHint": "Click to copy",
+    "copied": "Copied!",
+    "copyLabel": "Copy {value}"
   },
   "apps": {
     "diy": {

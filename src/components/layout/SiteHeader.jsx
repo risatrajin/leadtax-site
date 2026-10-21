@@ -9,6 +9,7 @@ import SmartLink from "../ui/SmartLink.jsx";
 import MobileMenu from "./site-header/MobileMenu.jsx";
 import { DropdownPanel, MegaPanel, clientLoginLinks, enabledLinks, isEnabled, linkById } from "./site-header/panels.jsx";
 import useDesktopMenus from "./site-header/useDesktopMenus.js";
+import CopyText from "../ui/CopyText.jsx";
 
 const { header } = nav;
 const TRIGGER =
@@ -36,9 +37,7 @@ export default function SiteHeader() {
     <div ref={containerRef} onBlur={onBlur} className="contents">
       <div className="relative z-[60] hidden border-b border-gray-200 bg-gray-50 lg:block">
         <div className="mx-auto flex h-9 max-w-7xl items-center justify-end gap-6 px-8 text-sm text-gray-600">
-          <a href={`tel:${tollFreeDashed}`} className="hover:text-brand xl:hidden">
-            {tollFreeDashed}
-          </a>
+          <CopyText value={tollFreeDashed} tip="below" className="hover:text-brand xl:hidden" />
           <div className="relative" {...itemProps("client-login")}>
             <button
               {...triggerProps("client-login", "site-menu-client-login")}
@@ -93,9 +92,7 @@ export default function SiteHeader() {
             </nav>
 
             <div className="hidden items-center gap-4 lg:flex xl:gap-5">
-              <a href={`tel:${tollFreeDashed}`} className="hidden whitespace-nowrap font-semibold text-gray-700 hover:text-brand xl:inline">
-                {tollFreeDashed}
-              </a>
+              <CopyText value={tollFreeDashed} tip="below" className="hidden whitespace-nowrap font-semibold text-gray-700 hover:text-brand xl:inline" />
               <Button to={header.cta.to} size="header" className="whitespace-nowrap">
                 {header.cta.label}
               </Button>

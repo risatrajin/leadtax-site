@@ -230,9 +230,6 @@
     "menuCloseLabel": "Close menu"
   },
   "footer": {
-    "_placeholders": [
-      "legalName"
-    ],
     "columns": [
       {
         "title": "Services",
@@ -271,7 +268,7 @@
       "privacy",
       "terms"
     ],
-    "legalName": "[TBD: legal company name]"
+    "legalName": "LeadTax Group Limited"
   },
   "localLinks": {
     "title": "Tax services near you",

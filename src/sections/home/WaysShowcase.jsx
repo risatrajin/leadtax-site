@@ -9,6 +9,7 @@ import { offices, officePhone } from "../../lib/offices.js";
 import { getIcon } from "../../lib/icons.js";
 import { cx } from "../../lib/cx.js";
 import SmartLink from "../../components/ui/SmartLink.jsx";
+import { buttonClasses } from "../../components/ui/Button.jsx";
 import { SectionTitle } from "../../components/ui/ServiceBlocks.jsx";
 import { linkById } from "../../components/layout/site-header/panels.jsx";
 
@@ -194,7 +195,7 @@ export default function WaysShowcase({ ways }) {
             <div
               role="tablist"
               aria-label={ways.eyebrow}
-              className="grid w-full grid-cols-2 gap-1 rounded-[1.75rem] bg-white/50 p-1.5 shadow-sm ring-1 ring-white/70 backdrop-blur md:flex md:w-auto md:rounded-full"
+              className="grid w-full grid-cols-2 gap-1 rounded-[1.75rem] bg-white/50 p-1.5 shadow-sm ring-1 ring-white/70 backdrop-blur lg:flex lg:w-auto lg:rounded-full"
             >
               {TABS.map((entry, index) => {
                 const entryLink = linkById(entry.link);
@@ -218,13 +219,13 @@ export default function WaysShowcase({ ways }) {
                       event.currentTarget.parentElement.children[next].focus();
                     }}
                     className={cx(
-                      "flex items-center gap-2.5 rounded-full px-3 py-2.5 text-left text-sm font-semibold leading-tight transition-all md:whitespace-nowrap md:px-5 md:text-base",
+                      "flex items-center justify-center gap-2.5 rounded-full px-3 py-2.5 text-center text-sm sm:justify-start sm:text-left font-semibold leading-tight transition-all lg:whitespace-nowrap lg:px-5 lg:text-base",
                       selected ? "bg-white text-brand shadow-md" : "text-gray-700 hover:bg-white/60 hover:text-gray-900",
                     )}
                   >
                     <span
                       className={cx(
-                        "flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full transition-colors",
+                        "hidden h-8 w-8 flex-shrink-0 items-center justify-center rounded-full transition-colors sm:flex",
                         selected ? "bg-brand text-white" : "bg-white/70 text-gray-500",
                       )}
                     >
@@ -255,7 +256,7 @@ export default function WaysShowcase({ ways }) {
               <SmartLink
                 to={link.to}
                 href={link.href}
-                className="group mt-8 inline-flex items-center gap-2 border-b-2 border-gray-900 pb-1 font-semibold text-gray-900 transition-colors hover:border-brand hover:text-brand"
+                className={buttonClasses({ variant: "outline", size: "md", className: "group mt-8" })}
               >
                 {item.cta}
                 <ArrowRight aria-hidden="true" className="h-4 w-4 transition-transform group-hover:translate-x-1" />

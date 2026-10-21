@@ -59,12 +59,16 @@ import {
   ShoppingBag,
   Scale,
   Landmark,
+  CreditCard,
+  Store,
 } from "lucide-react";
 import TikTokIcon from "../components/ui/TikTokIcon.jsx";
 import MapleLeafIcon from "../components/ui/MapleLeafIcon.jsx";
 
 /** Icons referenced by name from content JSON. */
 const icons = {
+  CreditCard,
+  Store,
   Scale,
   Landmark,
 

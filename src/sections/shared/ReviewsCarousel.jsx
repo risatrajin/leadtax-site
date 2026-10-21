@@ -69,7 +69,7 @@ export default function ReviewsCarousel({ className = "bg-white" }) {
         <h2 className="text-3xl md:text-4xl lg:text-5xl text-center text-gray-900 mb-12">{reviews.heading}</h2>
 
         <div className="bg-white shadow-sm ring-1 ring-gray-200 rounded-2xl p-6 mb-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-          <div className="flex items-center gap-4">
+          <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
             <div className="flex items-center gap-2">
               <GoogleLogo />
               <span className="font-semibold text-gray-900">{reviews.sourceLabel}</span>
@@ -131,8 +131,8 @@ export default function ReviewsCarousel({ className = "bg-white" }) {
               </Card>
             ))}
           </div>
-          <ScrollButton position="-left-3 max-[1399px]:md:-left-5 min-[1400px]:-left-16" enabled={canScrollLeft} onClick={() => scrollBy(-SCROLL_STEP)} label="Scroll left" Icon={ChevronLeft} />
-          <ScrollButton position="-right-3 max-[1399px]:md:-right-5 min-[1400px]:-right-16" enabled={canScrollRight} onClick={() => scrollBy(SCROLL_STEP)} label="Scroll right" Icon={ChevronRight} />
+          <ScrollButton position="max-md:hidden -left-3 max-[1399px]:md:-left-5 min-[1400px]:-left-16" enabled={canScrollLeft} onClick={() => scrollBy(-SCROLL_STEP)} label="Scroll left" Icon={ChevronLeft} />
+          <ScrollButton position="max-md:hidden -right-3 max-[1399px]:md:-right-5 min-[1400px]:-right-16" enabled={canScrollRight} onClick={() => scrollBy(SCROLL_STEP)} label="Scroll right" Icon={ChevronRight} />
         </div>
       </div>
     </section>

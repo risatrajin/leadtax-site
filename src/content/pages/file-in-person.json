@@ -11,7 +11,7 @@
       },
       {
         "label": "Find an office",
-        "to": "/contact"
+        "href": "#offices"
       }
     ],
     "image": {
