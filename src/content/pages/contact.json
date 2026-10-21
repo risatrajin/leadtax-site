@@ -29,7 +29,7 @@
     "fields": {
       "name": "Full name",
       "email": "Email address",
-      "phone": "Mobile number",
+      "phone": "Mobile number (optional)",
       "service": "I need help with",
       "location": "Preferred location",
       "message": "How can we help?",

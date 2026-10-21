@@ -50,7 +50,7 @@ export default function QuickQuery({ open, onOpenChange }) {
           <TextField name="name" label={note.fields.name} autoComplete="name" />
           <div className="grid gap-4 sm:grid-cols-2">
             <TextField name="email" label={note.fields.email} type="email" autoComplete="email" />
-            <TextField name="phone" label={note.fields.phone} type="tel" autoComplete="tel" />
+            <TextField name="phone" label={note.fields.phone} type="tel" autoComplete="tel" required={false} />
           </div>
           <div className="grid gap-4 sm:grid-cols-2">
             <SelectField name="service" label={note.fields.service} options={SERVICES} defaultValue={SERVICES.at(-1)} />

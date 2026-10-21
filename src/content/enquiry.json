@@ -19,7 +19,7 @@
     "title": "Send us a note",
     "nameLabel": "Your name",
     "emailLabel": "Email address",
-    "phoneLabel": "Mobile number",
+    "phoneLabel": "Mobile number (optional)",
     "serviceLabel": "I need help with",
     "services": [
       "Personal tax",

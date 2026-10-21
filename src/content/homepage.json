@@ -58,7 +58,7 @@
       "fields": {
         "name": "Your name",
         "email": "Email address",
-        "phone": "Mobile number",
+        "phone": "Mobile number (optional)",
         "service": "My question is about",
         "location": "Preferred location",
         "question": "Your question",

@@ -100,7 +100,7 @@ export default function EnquirySection({ service = form.services.at(-1), classNa
           <div className="grid gap-4 sm:grid-cols-2">
             <TextField name="name" label={form.nameLabel} autoComplete="name" className="sm:col-span-2" />
             <TextField name="email" label={form.emailLabel} type="email" autoComplete="email" />
-            <TextField name="phone" label={form.phoneLabel} type="tel" autoComplete="tel" />
+            <TextField name="phone" label={form.phoneLabel} type="tel" autoComplete="tel" required={false} />
           </div>
           <SelectField name="service" label={form.serviceLabel} defaultValue={service} options={form.services} />
           <SelectField name="location" label={form.locationLabel} options={LOCATIONS} />

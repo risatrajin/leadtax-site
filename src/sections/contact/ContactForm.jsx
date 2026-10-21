@@ -33,7 +33,7 @@ function LeadForm({ title, className = "" }) {
         <TextField name="name" label={form.fields.name} autoComplete="name" />
         <div className="grid gap-4 sm:grid-cols-2">
           <TextField name="email" label={form.fields.email} type="email" autoComplete="email" />
-          <TextField name="phone" label={form.fields.phone} type="tel" autoComplete="tel" />
+          <TextField name="phone" label={form.fields.phone} type="tel" autoComplete="tel" required={false} />
         </div>
         <div className="grid gap-4 sm:grid-cols-2">
           <SelectField name="service" label={form.fields.service} options={enquiry.form.services} />
