@@ -13,9 +13,16 @@ export default function ScrollToTop() {
       window.scrollTo({ top: 0, behavior: "instant" });
       return undefined;
     }
-    const frame = requestAnimationFrame(() => {
-      document.getElementById(decodeURIComponent(hash.slice(1)))?.scrollIntoView({ behavior: "smooth" });
-    });
+    // Pages load on demand, so the target may appear a moment later: keep looking for up to 3s.
+    const id = decodeURIComponent(hash.slice(1));
+    let frame = 0;
+    const started = performance.now();
+    const seek = () => {
+      const target = document.getElementById(id);
+      if (target) target.scrollIntoView({ behavior: "smooth" });
+      else if (performance.now() - started < 3000) frame = requestAnimationFrame(seek);
+    };
+    frame = requestAnimationFrame(seek);
     return () => cancelAnimationFrame(frame);
   }, [pathname, hash]);
   return null;

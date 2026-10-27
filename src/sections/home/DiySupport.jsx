@@ -48,7 +48,7 @@ export function DiyExpertCta() {
       <div className="relative isolate mx-auto grid max-w-7xl overflow-hidden rounded-3xl bg-hero-blue text-white shadow-2xl md:grid-cols-2">
         <div aria-hidden="true" className="absolute -right-24 -top-24 -z-10 h-80 w-80 rounded-full bg-white/20 blur-3xl" />
         <div aria-hidden="true" className="absolute -bottom-32 right-1/4 -z-10 h-80 w-80 rounded-full bg-brand-strong/50 blur-3xl" />
-        <img src={expertCta.image.src} alt={expertCta.image.alt} className="h-64 w-full object-cover md:h-full" />
+        <img src={expertCta.image.src} alt={expertCta.image.alt} loading="lazy" decoding="async" className="h-64 w-full object-cover md:h-full" />
         <div className="flex flex-col justify-center p-8 md:p-12 lg:p-16">
           <h2 className="text-3xl font-semibold leading-tight tracking-tight md:text-4xl lg:text-5xl">{expertCta.title}</h2>
           <p className="mt-5 text-lg text-white/90 md:text-xl">{expertCta.text}</p>

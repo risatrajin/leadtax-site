@@ -36,7 +36,7 @@ export default function BlueHero({ hero }) {
         </div>
         <div className="hero-rise mx-auto w-full max-w-lg pb-12 lg:-mr-8 lg:max-w-none lg:scale-110 lg:py-10 xl:-mr-16">
           <div className="relative">
-            <img src={hero.image.src} alt={hero.image.alt} className="hero-breathe w-full" />
+            <img src={hero.image.src} alt={hero.image.alt} width="1200" height="1079" fetchpriority="high" className="hero-breathe w-full" />
             <QuickQueryButton className="bottom-[10%] right-2 lg:bottom-[14%] lg:right-[14%]" />
           </div>
         </div>

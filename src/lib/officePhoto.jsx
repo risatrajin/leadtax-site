@@ -21,6 +21,8 @@ export function OfficePhoto({ office, alt, className }) {
       <div role="img" aria-label={alt || undefined} className={`${className} overflow-hidden`}>
         <img
           src={office.photo}
+          loading="lazy"
+          decoding="async"
           alt=""
           className="h-full w-full object-cover"
           style={{ objectPosition: office.photoPosition, transform: `scale(${office.photoZoom})`, transformOrigin: office.photoPosition }}
@@ -28,5 +30,5 @@ export function OfficePhoto({ office, alt, className }) {
       </div>
     );
   }
-  return <img src={office.photo} alt={alt} className={className} />;
+  return <img src={office.photo} alt={alt} loading="lazy" decoding="async" className={className} />;
 }

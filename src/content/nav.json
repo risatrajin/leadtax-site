@@ -153,7 +153,7 @@
           }
         ],
         "feature": {
-          "image": "/images/c19d00da11be60b4716f88962976ce14c225dea3.png",
+          "image": "/images/c19d00da11be60b4716f88962976ce14c225dea3.webp",
           "imageAlt": "LeadTax office entrance on Hastings Street, Burnaby",
           "imagePosition": "50% 40%",
           "title": "Book an appointment",
@@ -174,7 +174,7 @@
         "offices": true,
         "officeHref": "/contact#{id}",
         "feature": {
-          "image": "/images/kingsway-2681.jpg",
+          "image": "/images/kingsway-2681.webp",
           "imageAlt": "LeadTax office on Kingsway, Vancouver",
           "imagePosition": "50% 45%",
           "title": "Find an office near you",

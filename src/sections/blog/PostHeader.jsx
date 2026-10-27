@@ -38,7 +38,7 @@ export default function PostHeader({ post, backLabel }) {
         </div>
         {post.image && (
           <div className="rounded-xl overflow-hidden shadow-2xl">
-            <img src={post.image} alt={post.title} className="w-full h-64 md:h-96 object-cover" />
+            <img src={post.image} alt={post.title} fetchpriority="high" className="w-full h-64 md:h-96 object-cover" />
           </div>
         )}
       </div>

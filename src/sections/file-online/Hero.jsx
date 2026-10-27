@@ -19,6 +19,7 @@ export default function Hero() {
       <div className="relative h-64 sm:h-80 lg:h-[26rem] xl:absolute xl:inset-0 xl:h-auto">
         <img
           src={hero.image.src}
+          fetchpriority="high"
           alt={hero.image.alt}
           className="h-full w-full object-cover"
           style={{ objectPosition: hero.image.position }}

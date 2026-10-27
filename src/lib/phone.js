@@ -11,7 +11,8 @@ export function formatLocalPhone(digits) {
   return `(${digits.slice(0, 3)}) ${digits.slice(3, 6)}-${digits.slice(6)}`;
 }
 
-/** Office phone as published in JSON-LD: "+16049784850". */
-export function toE164(digits) {
-  return `+1${digits}`;
+/** Phone as published in JSON-LD and tel: links: "6049784850" or "1-877-453-2382" → "+16049784850". */
+export function toE164(phone) {
+  const digits = String(phone).replace(/\D/g, "");
+  return `+${digits.length === 10 ? `1${digits}` : digits}`;
 }

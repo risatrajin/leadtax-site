@@ -1,0 +1,62 @@
+# Apache / cPanel / LiteSpeed hosting for the LeadTax site (upload the contents of dist/).
+# Other hosts: vercel.json (Vercel), deploy/nginx.conf (Docker, Coolify), _redirects (Netlify).
+
+Options -Indexes
+DirectoryIndex index.html
+# Pages live at /<page>/index.html; keep their URLs without a trailing slash (the canonical form).
+DirectorySlash Off
+ErrorDocument 404 /404.html
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # One address for the whole site: https://leadtax.ca (the host Google indexes).
+  RewriteCond %{HTTP_HOST} ^www\.leadtax\.ca$ [NC]
+  RewriteRule ^(.*)$ https://leadtax.ca/$1 [R=301,L]
+  RewriteCond %{HTTPS} !=on
+  RewriteCond %{HTTP:X-Forwarded-Proto} !=https
+  RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
+
+  # Old pages that no longer exist: permanent redirects keep their search ranking.
+  RewriteRule ^sign-in/?$ https://app.leadtax.ca/user/auth/login [R=301,L]
+  RewriteRule ^(diy-landing|dyi-landing)/?$ https://%{HTTP_HOST}/file-online [R=301,L]
+  RewriteRule ^file-remote-landing/?$ https://%{HTTP_HOST}/file-remotely [R=301,L]
+  RewriteRule ^(home-v2|home-legacy)/?$ https://%{HTTP_HOST}/ [R=301,L]
+  RewriteRule ^(home-redesign|cross-border-tax)/?$ https://%{HTTP_HOST}/us-cross-border [R=301,L]
+  RewriteRule ^business-tax/?$ https://%{HTTP_HOST}/corporate-tax [R=301,L]
+
+  # Redirect targets are written with https:// so a proxy in front never causes an extra hop.
+  # Remove trailing slashes (except the homepage) so each page has one URL.
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^(.+)/$ https://%{HTTP_HOST}/$1 [R=301,L]
+
+  # Serve /about from /about/index.html.
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteCond %{REQUEST_FILENAME}/index.html -f
+  RewriteRule ^(.+)$ /$1/index.html [L]
+</IfModule>
+
+<IfModule mod_headers.c>
+  Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set X-Frame-Options "SAMEORIGIN"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  # Hashed build files never change.
+  <If "%{REQUEST_URI} =~ m#^/assets/#">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </If>
+</IfModule>
+
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType image/webp "access plus 30 days"
+  ExpiresByType image/png "access plus 30 days"
+  ExpiresByType image/jpeg "access plus 30 days"
+  ExpiresByType text/css "access plus 1 year"
+  ExpiresByType application/javascript "access plus 1 year"
+  ExpiresByType text/html "access plus 0 seconds"
+</IfModule>
+
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css application/javascript application/json image/svg+xml application/xml text/plain
+</IfModule>

@@ -45,6 +45,8 @@ function FeatureCard({ feature }) {
     <div className="overflow-hidden rounded-2xl border border-gray-200 bg-gray-50">
       <img
         src={feature.image}
+        loading="lazy"
+        decoding="async"
         alt={feature.imageAlt}
         className="h-40 w-full object-cover"
         style={{ objectPosition: feature.imagePosition }}

@@ -14,6 +14,8 @@ export default function PreviousYearsBanner({ className = "bg-gray-100", image =
         <div className="mb-8">
           <img
             src={image.src}
+            loading="lazy"
+            decoding="async"
             alt={image.alt}
             className="w-full h-[250px] md:h-[400px] object-cover shadow-lg rounded-lg"
             style={{ objectPosition: image.position }}

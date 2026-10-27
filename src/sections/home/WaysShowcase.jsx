@@ -32,7 +32,7 @@ function InPersonMock() {
   const office = offices[0];
   return (
     <div className="w-full max-w-sm rounded-2xl bg-white p-5 shadow-2xl">
-      <img src={office.photo} alt="" className="h-36 w-full rounded-2xl object-cover" />
+      <img src={office.photo} alt="" loading="lazy" decoding="async" className="h-36 w-full rounded-2xl object-cover" />
       <p className="mt-4 text-lg font-semibold text-gray-900">{office.shortName}</p>
       <p className="text-sm text-gray-600">{office.display.address}</p>
       <p className="mt-1 text-sm font-semibold text-gray-900">{officePhone(office)}</p>
@@ -88,7 +88,7 @@ function OnlineMock() {
   const tier = pricing.diyTiers[0];
   return (
     <div className="w-full max-w-xs rounded-2xl bg-white p-7 text-center shadow-2xl">
-      <img src={tier.image} alt="" className="mx-auto h-16 w-16 rounded-full object-cover" />
+      <img src={tier.image} alt="" loading="lazy" decoding="async" className="mx-auto h-16 w-16 rounded-full object-cover" />
       <p className="mt-4 text-xl font-semibold text-gray-900">{tier.title}</p>
       <p className="mt-2 text-5xl font-bold text-gray-900">{tier.price}</p>
       <p className="text-sm text-gray-500">{pricing.perReturnLabel.trim()}</p>

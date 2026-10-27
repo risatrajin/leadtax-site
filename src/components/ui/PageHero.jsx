@@ -54,6 +54,7 @@ export default function PageHero({ eyebrow, title, text, actions = [], image, im
             <QuickQueryButton className="right-3 top-4 sm:right-4 sm:top-6" />
             <img
               src={image.src}
+              fetchpriority="high"
               alt={image.alt}
               className={cx("h-64 w-full object-cover shadow-2xl md:h-96", decor ? "rounded-3xl ring-1 ring-white/15" : "rounded-2xl")}
             />

@@ -12,7 +12,7 @@ import CopyText from "../ui/CopyText.jsx";
 const { footer, localLinks } = nav;
 const COLUMN_TITLE = "mb-4 text-sm uppercase tracking-wider text-white";
 // On phones each link gets a 32px-tall tap area; the list spacing shrinks to match.
-const LINK = "inline-block py-1.5 text-sm text-white/70 transition-colors hover:text-white md:py-0";
+const LINK = "inline-block py-1.5 text-sm text-white/70 transition-colors hover:text-white md:py-0 md:pointer-coarse:py-1.5";
 // Extra cities whose name is still a placeholder are left out, so "[TBD: city]" never shows.
 const linkColumns = visibleColumns(footer.columns);
 const COLUMN_GRID = { 1: "", 2: "sm:grid-cols-2", 3: "sm:grid-cols-3" };
@@ -48,15 +48,13 @@ export default function SiteFooter() {
         <div className="grid gap-10 lg:grid-cols-12 lg:gap-12">
           <div className="space-y-4 lg:col-span-4">
             <Link to="/" className="inline-block" aria-label={nav.header.homeLabel}>
-              {/* The colour logo on a white tile (a filter would turn the mark into a white blob). */}
-              <span className="inline-flex rounded-xl bg-white px-3 py-2">
-                <img src={site.logo} alt={site.name} className="h-7" />
-              </span>
+              {/* Reversed logo: white wordmark, the LT mark in its own colours. */}
+              <img src={site.logoWhite} alt={site.name} loading="lazy" decoding="async" className="h-8" />
             </Link>
             <p className="max-w-sm text-sm text-white/70">{site.footer.tagline}</p>
             <div className="text-sm">
-              <CopyText value={tollFreeDashed} className="flex min-h-11 w-fit items-center text-white hover:underline md:min-h-0 md:py-0.5" />
-              <CopyText value={site.contact.email} className="flex min-h-11 w-fit items-center text-white/70 hover:text-white md:min-h-0 md:py-0.5" />
+              <CopyText value={tollFreeDashed} className="flex min-h-11 w-fit items-center text-white hover:underline md:min-h-0 md:py-0.5 md:pointer-coarse:min-h-11" />
+              <CopyText value={site.contact.email} className="flex min-h-11 w-fit items-center text-white/70 hover:text-white md:min-h-0 md:py-0.5 md:pointer-coarse:min-h-11" />
             </div>
             <ul aria-label={footer.socialLabel} className="-ml-3 flex items-center">
               {site.social.map((social) => {

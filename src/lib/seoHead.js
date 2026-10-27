@@ -9,12 +9,20 @@
  */
 import seo from "../content/seo.json";
 import site from "../content/site.json";
+import nav from "../content/nav.json";
 import faqs from "../content/faqs.json";
 import { offices } from "../content/offices.json";
 import { posts } from "../content/blog/posts.json";
+import servicePages from "../content/service-pages.json";
+import bookkeeping from "../content/pages/bookkeeping.json";
+import trustEstate from "../content/pages/trust-estate.json";
+import crossBorder from "../content/pages/us-cross-border.json";
 import { toE164 } from "./phone.js";
 
 const { defaults, meta, schema, pages } = seo;
+
+/** Cities that have an office, in office order. */
+const officeCities = [...new Set(offices.map((office) => office.schema.addressLocality))];
 
 /** Route → seo.json page key. */
 const PAGE_KEYS = {
@@ -39,6 +47,34 @@ const PAGE_KEYS = {
   "/blog": "blog",
   "/terms": "terms",
   "/privacy-policy": "privacyPolicy",
+};
+
+/**
+ * The five service pages: their name for breadcrumbs and the Service schema, and the questions
+ * their FAQ block shows (published as FAQPage JSON-LD for search and AI answers).
+ */
+export const SERVICE_PAGES = {
+  "/personal-tax": { name: "Personal tax", faqs: servicePages.pages["personal-tax"].faqs },
+  "/corporate-tax": { name: "Corporate tax", faqs: servicePages.pages["corporate-tax"].faqs },
+  "/bookkeeping": { name: "Bookkeeping", faqs: bookkeeping.faqs },
+  "/trust-estate-tax": { name: "Trust & estate tax", faqs: trustEstate.faqs },
+  "/us-cross-border": { name: "US & cross-border tax", faqs: crossBorder.faq.items },
+};
+
+/** Breadcrumb names for top-level routes (URL slugs alone would read "Us Cross Border"). */
+const CRUMB_NAMES = {
+  "us-cross-border": "US & Cross-Border",
+  "trust-estate-tax": "Trust & Estate",
+  "personal-tax": "Personal Tax",
+  "corporate-tax": "Corporate Tax",
+  "file-in-person": "File in Person",
+  "file-remotely": "File Remotely",
+  "file-online": "File Online",
+  "drop-off": "Drop Off",
+  "tax-calculator": "Tax Calculator",
+  "tax-dates": "Tax Dates",
+  faq: "FAQ",
+  "privacy-policy": "Privacy Policy",
 };
 
 /** Every route that has its own page, for the pre-render and the sitemap. */
@@ -95,18 +131,25 @@ function siteGraph(pathname, page) {
     .filter((office) => office.schema.role === "department")
     .sort((a, b) => a.schema.order - b.schema.order);
 
+  const organizationId = `${siteUrl}/#organization`;
   const organization = {
     "@context": "https://schema.org",
     "@type": "Organization",
+    "@id": organizationId,
     name: site.name,
+    legalName: nav.footer.legalName,
     url: siteUrl,
-    logo: schema.organization.logo,
+    logo: absolute(site.logo),
     description: schema.organization.description,
     foundingDate: schema.organization.foundingDate,
-    address: { "@type": "PostalAddress", addressCountry: "CA", addressRegion: "Canada" },
+    email: site.contact.email,
+    telephone: toE164(site.contact.tollFree),
+    address: postalAddress(mainOffice),
     contactPoint: {
       "@type": "ContactPoint",
       contactType: "Customer Service",
+      telephone: toE164(site.contact.tollFree),
+      email: site.contact.email,
       areaServed: "CA",
       availableLanguage: schema.organization.availableLanguage,
     },
@@ -116,21 +159,21 @@ function siteGraph(pathname, page) {
     ),
   };
 
+  // No SearchAction: the site has no search page (and Google retired the sitelinks search box).
   const website = {
     "@context": "https://schema.org",
     "@type": "WebSite",
     name: site.name,
     url: siteUrl,
-    potentialAction: {
-      "@type": "SearchAction",
-      target: { "@type": "EntryPoint", urlTemplate: schema.searchUrlTemplate },
-      "query-input": "required name=search_term_string",
-    },
+    inLanguage: "en-CA",
+    publisher: { "@id": organizationId },
   };
 
   const localBusiness = {
     "@context": "https://schema.org",
-    "@type": "FinancialService",
+    "@type": "AccountingService",
+    "@id": `${siteUrl}/#business`,
+    parentOrganization: { "@id": organizationId },
     name: site.name,
     image: mainOffice.schema.image,
     url: siteUrl,
@@ -139,15 +182,35 @@ function siteGraph(pathname, page) {
     address: postalAddress(mainOffice),
     geo: { "@type": "GeoCoordinates", ...mainOffice.schema.geo },
     department: departments.map((office) => ({
-      "@type": "FinancialService",
+      "@type": "AccountingService",
       name: office.schema.name,
+      url: `${siteUrl}/contact#${office.id}`,
       ...(office.schema.omitTelephone ? {} : { telephone: toE164(office.phone) }),
       address: postalAddress(office),
+      ...(office.schema.geo ? { geo: { "@type": "GeoCoordinates", ...office.schema.geo } } : {}),
     })),
-    areaServed: { "@type": "Country", name: "Canada" },
+    areaServed: [
+      ...officeCities.map((city) => ({ "@type": "City", name: city })),
+      { "@type": "Country", name: "Canada" },
+    ],
   };
 
-  const service = {
+  const servicePage = SERVICE_PAGES[normalize(pathname)];
+  const service = servicePage
+    ? {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        name: servicePage.name,
+        serviceType: servicePage.name,
+        description: page.description,
+        url: `${siteUrl}${normalize(pathname)}`,
+        provider: { "@id": `${siteUrl}/#business` },
+        areaServed: [
+          ...officeCities.map((city) => ({ "@type": "City", name: city })),
+          { "@type": "Country", name: "Canada" },
+        ],
+      }
+    : {
     "@context": "https://schema.org",
     "@type": "Service",
     serviceType: schema.serviceType,
@@ -174,7 +237,8 @@ function siteGraph(pathname, page) {
       name:
         isLast && page.article
           ? page.article.title
-          : segment
+          : CRUMB_NAMES[segment] ??
+            segment
               .split("-")
               .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
               .join(" "),
@@ -196,7 +260,7 @@ function siteGraph(pathname, page) {
       datePublished: isoDate(post.date),
       // Credited to the company: the personal author names on some posts are unconfirmed (question 23).
       author: { "@type": "Organization", name: site.name, url: siteUrl },
-      publisher: { "@type": "Organization", name: site.name, logo: { "@type": "ImageObject", url: schema.organization.logo } },
+      publisher: { "@id": `${siteUrl}/#organization` },
       mainEntityOfPage: { "@type": "WebPage", "@id": url },
       articleSection: post.category,
     });
@@ -275,6 +339,9 @@ export function buildHead(pathname) {
 
   const jsonLd = [{ id: "site", data: siteGraph(pathname, page) }];
   if (normalize(pathname) === "/faq") jsonLd.push({ id: "faq", data: faqSchema() });
+  // Service pages publish their own questions (id differs from "faq", which FaqSchema manages).
+  const servicePage = SERVICE_PAGES[normalize(pathname)];
+  if (servicePage?.faqs?.length) jsonLd.push({ id: "service-faq", data: faqSchema(servicePage.faqs) });
 
   return { title: page.title, tags, jsonLd, notFound: Boolean(page.notFound) };
 }

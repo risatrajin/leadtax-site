@@ -58,6 +58,9 @@ function Hero() {
           <div className="lg:absolute lg:inset-x-0 lg:bottom-0 lg:top-0 lg:flex lg:justify-center">
             <img
               src={hero.image.src}
+              width="900"
+              height="1184"
+              fetchpriority="high"
               alt={hero.image.alt}
               className="-mb-px w-full [mask-composite:intersect] [mask-image:linear-gradient(to_right,transparent,black_8%,black_92%,transparent),linear-gradient(to_bottom,transparent,black_6%)] lg:h-full lg:w-auto lg:max-w-none"
             />

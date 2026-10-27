@@ -22,7 +22,7 @@ export default function CtaBanner({
         <div className={cx("rounded-3xl overflow-hidden shadow-xl", frameClassName)}>
           <div className={gridClassName}>
             <div className={media}>
-              <img src={image.src} alt={image.alt} className={image.className} />
+              <img src={image.src} alt={image.alt} loading="lazy" decoding="async" className={image.className} />
             </div>
             <div className={bodyClassName}>
               <h2 className="text-3xl md:text-4xl mb-4">{title}</h2>

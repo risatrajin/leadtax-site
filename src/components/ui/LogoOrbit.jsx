@@ -35,7 +35,7 @@ export default function LogoOrbit({ items, mark, markAlt, hint }) {
 
       {/* Centre tile with the LeadTax mark. */}
       <div className="absolute left-1/2 top-1/2 flex h-[24%] w-[24%] -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-[28%] bg-white shadow-2xl ring-8 ring-white/60">
-        <img src={mark} alt={markAlt} className="h-[62%] w-[62%] object-contain" />
+        <img src={mark} alt={markAlt} loading="lazy" decoding="async" className="h-[62%] w-[62%] object-contain" />
       </div>
 
       {/* The turning ring of logos. */}
@@ -54,6 +54,7 @@ export default function LogoOrbit({ items, mark, markAlt, hint }) {
                   tabIndex={0}
                   aria-describedby={`orbit-info-${index}`}
                   onMouseEnter={(event) => open(index, event.currentTarget)}
+                  onClick={(event) => open(index, event.currentTarget)}
                   onMouseLeave={() => setActive(null)}
                   onFocus={(event) => open(index, event.currentTarget)}
                   onBlur={() => setActive(null)}

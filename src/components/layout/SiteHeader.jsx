@@ -41,7 +41,7 @@ export default function SiteHeader() {
           <div className="relative" {...itemProps("client-login")}>
             <button
               {...triggerProps("client-login", "site-menu-client-login")}
-              className="inline-flex items-center gap-1 text-sm font-medium text-gray-600 hover:text-brand"
+              className="inline-flex items-center gap-1 text-sm font-medium text-gray-600 hover:text-brand pointer-coarse:min-h-9"
             >
               {header.clientLogin.label}
               <ChevronDown aria-hidden="true" className="h-3.5 w-3.5" />

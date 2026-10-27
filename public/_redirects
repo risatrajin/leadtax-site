@@ -1,0 +1,16 @@
+# Netlify / Cloudflare Pages redirects for the LeadTax site.
+# Other hosts: vercel.json (Vercel), deploy/nginx.conf (Docker, Coolify), .htaccess (Apache, cPanel).
+
+# One address for the whole site: https://leadtax.ca (the host Google indexes). Netlify only.
+https://www.leadtax.ca/*  https://leadtax.ca/:splat  301!
+
+# Old pages that no longer exist: permanent redirects keep their search ranking.
+/sign-in               https://app.leadtax.ca/user/auth/login  301
+/diy-landing           /file-online      301
+/dyi-landing           /file-online      301
+/file-remote-landing   /file-remotely    301
+/home-v2               /                 301
+/home-legacy           /                 301
+/home-redesign         /us-cross-border  301
+/business-tax          /corporate-tax    301
+/cross-border-tax      /us-cross-border  301

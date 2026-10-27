@@ -30,15 +30,25 @@ export default function RevealOnScroll() {
       if (!frame) frame = requestAnimationFrame(check);
     };
 
-    const start = requestAnimationFrame(() => {
-      pending = [...document.querySelectorAll("#root section")]
-        .filter((section) => !section.closest("header, footer") && !section.parentElement.closest("section"))
-        .slice(1)
-        .filter((section) => !section.classList.contains("is-visible"));
+    const sections = () =>
+      [...document.querySelectorAll("#root section")].filter(
+        (section) => !section.closest("header, footer") && !section.parentElement.closest("section"),
+      );
+    // Pages load on demand, so wait (up to 3s) for the new page's sections to appear.
+    const begun = performance.now();
+    let start = 0;
+    const begin = () => {
+      const found = sections();
+      if (found.length < 2 && performance.now() - begun < 3000) {
+        start = requestAnimationFrame(begin);
+        return;
+      }
+      pending = found.slice(1).filter((section) => !section.classList.contains("is-visible"));
       pending.forEach((section) => section.classList.add("reveal"));
       window.addEventListener("scroll", onScroll, { passive: true });
       check();
-    });
+    };
+    start = requestAnimationFrame(begin);
 
     return () => {
       cancelAnimationFrame(start);

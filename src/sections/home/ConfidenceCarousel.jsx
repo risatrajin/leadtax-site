@@ -150,6 +150,8 @@ export default function ConfidenceCarousel({ slides }) {
                 </div>
                 <img
                   src={slides[index].image.src}
+                  loading="lazy"
+                  decoding="async"
                   alt={current ? slides[index].image.alt : ""}
                   className={cx("h-full min-w-0 flex-1 object-cover transition-[border-radius] duration-700", current ? "rounded-2xl" : "rounded-xl")}
                 />
@@ -178,14 +180,16 @@ export default function ConfidenceCarousel({ slides }) {
           <img
             key={`image-${active}`}
             src={slide.image.src}
+            loading="lazy"
+            decoding="async"
             alt={slide.image.alt}
             className="situation-in order-first h-56 w-full rounded-2xl object-cover sm:h-72 md:order-none md:h-full"
           />
         </div>
       )}
 
-      {/* Dots: one per item, the current one wide. */}
-      <div className="mt-10 flex justify-center gap-2">
+      {/* Dots: one per item, the current one wide. Each sits in a larger tap area (44px on touch screens). */}
+      <div className="mt-8 flex justify-center">
         {items.map((entry, index) => (
           <button
             key={entry.title}
@@ -193,11 +197,15 @@ export default function ConfidenceCarousel({ slides }) {
             onClick={() => setActive(index)}
             aria-label={entry.title}
             aria-current={index === active}
-            className={cx(
-              "h-2.5 rounded-full transition-all duration-500",
-              index === active ? "w-8 bg-brand" : "w-2.5 bg-brand/30 hover:bg-brand/60",
-            )}
-          />
+            className="group flex h-6 min-w-6 items-center justify-center px-1 pointer-coarse:h-11 pointer-coarse:min-w-11"
+          >
+            <span
+              className={cx(
+                "h-2.5 rounded-full transition-all duration-500",
+                index === active ? "w-8 bg-brand" : "w-2.5 bg-brand/30 group-hover:bg-brand/60",
+              )}
+            />
+          </button>
         ))}
       </div>
     </section>

@@ -1,6 +1,5 @@
 import { useEffect } from "react";
 import { useLocation } from "react-router";
-import { buildHead } from "../../lib/seoHead.js";
 
 /** Find or create the <meta> or <link> for a head tag, then set its value. */
 function applyTag(tag) {
@@ -38,17 +37,26 @@ function applyJsonLd({ id, data }) {
 
 /**
  * Keeps the document head in sync with the current route. The values come from lib/seoHead.js,
- * which the build also uses to pre-render each page's head (scripts/prerender.mjs).
+ * which the build also uses to pre-render each page's head (scripts/prerender.mjs). Each page's
+ * HTML already has the right head, so the module (with every blog post's details) loads in the
+ * background rather than in the main bundle.
  */
 export default function Seo() {
   const { pathname } = useLocation();
 
   useEffect(() => {
-    const head = buildHead(pathname);
-    document.title = head.title;
-    head.tags.forEach(applyTag);
-    // The FAQ schema is managed by FaqSchema while the FAQ page is open.
-    head.jsonLd.filter((entry) => entry.id !== "faq").forEach(applyJsonLd);
+    let current = true;
+    import("../../lib/seoHead.js").then(({ buildHead }) => {
+      if (!current) return;
+      const head = buildHead(pathname);
+      document.title = head.title;
+      head.tags.forEach(applyTag);
+      // The FAQ schema is managed by FaqSchema while the FAQ page is open.
+      head.jsonLd.filter((entry) => entry.id !== "faq").forEach(applyJsonLd);
+    });
+    return () => {
+      current = false;
+    };
   }, [pathname]);
 
   return null;

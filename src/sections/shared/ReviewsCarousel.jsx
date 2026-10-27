@@ -109,7 +109,7 @@ export default function ReviewsCarousel({ className = "bg-white" }) {
               >
                 <div className="flex items-start gap-3 mb-4">
                   {review.avatar ? (
-                    <img src={review.avatar} alt={review.name} className="w-12 h-12 rounded-full object-cover flex-shrink-0" />
+                    <img src={review.avatar} alt={review.name} loading="lazy" decoding="async" className="w-12 h-12 rounded-full object-cover flex-shrink-0" />
                   ) : (
                     <div className="w-12 h-12 rounded-full bg-gradient-to-br from-blue-500 to-purple-500 flex items-center justify-center text-white font-semibold flex-shrink-0">
                       {review.initials}

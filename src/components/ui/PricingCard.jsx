@@ -6,7 +6,7 @@ export default function PricingCard({ tier, perReturnLabel, ctaLabel }) {
   return (
     <Card className="shadow-lg overflow-hidden flex flex-col hover:shadow-xl transition-shadow">
       <div className="h-48 overflow-hidden">
-        <img src={tier.image} alt={tier.imageAlt} className="w-full h-full object-cover" />
+        <img src={tier.image} alt={tier.imageAlt} loading="lazy" decoding="async" className="w-full h-full object-cover" />
       </div>
       <div className="p-6 flex flex-col flex-1">
         <h3 className="text-xl md:text-2xl text-gray-900 mb-2">{tier.title}</h3>

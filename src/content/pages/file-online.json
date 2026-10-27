@@ -122,7 +122,7 @@
       "to": "/pricing"
     },
     "image": {
-      "src": "/images/d9d0a1e2d55eae8789abfd6f4bbf7547e5cf1318.png",
+      "src": "/images/d9d0a1e2d55eae8789abfd6f4bbf7547e5cf1318.webp",
       "alt": "Professional woman with tablet"
     }
   },
@@ -151,7 +151,7 @@
     "title": "Ready to file your taxes?",
     "text": "Whether you want to file on your own or get expert help, LeadTax is here.",
     "image": {
-      "src": "/images/05c84d9500830dfbb3380883971c5a91afd89da2.png",
+      "src": "/images/05c84d9500830dfbb3380883971c5a91afd89da2.webp",
       "alt": "Man with tablet"
     },
     "actions": [

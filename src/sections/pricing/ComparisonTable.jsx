@@ -139,6 +139,7 @@ export default function ComparisonTable() {
 
   return (
     <>
+      <h2 className="sr-only">{comparison.title}</h2>
       <div className="flex justify-center mb-12">
         <div className="inline-flex rounded-full bg-gray-100 p-1">
           {comparison.tabs.map((candidate) => (

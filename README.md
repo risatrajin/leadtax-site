@@ -71,3 +71,45 @@ In Coolify: add both `leadtax.ca` and `www.leadtax.ca` to the app, build pack "D
 clean URLs without trailing slashes, the 301 redirects (removed pages, `www` → `leadtax.ca`),
 security headers (CSP in report-only mode) and asset caching. Vercel serves `dist/404.html` with
 a 404 status for unknown paths. Import the repo in Vercel; no framework preset is needed.
+
+## Deploy anywhere else (Apache / cPanel, Netlify, Cloudflare Pages, any static host)
+
+`npm run build` writes a complete static site to `dist/`; upload its contents. Host config for
+the same rules ships inside `dist/`:
+
+| Host | File | Notes |
+|---|---|---|
+| Apache, cPanel, LiteSpeed (most shared hosting) | `.htaccess` | needs `mod_rewrite`; tested on Apache 2.4 |
+| Netlify | `_redirects` | the `www` rule is Netlify-only |
+| Cloudflare Pages | `_redirects` | set `www` → `leadtax.ca` as a Bulk Redirect in Cloudflare |
+| Docker / Coolify | `deploy/nginx.conf` | see above |
+| Vercel | `vercel.json` | see above |
+
+Whatever the host, these must hold for SEO (check them after the first deploy):
+
+1. `https://www.leadtax.ca/...` and `http://...` answer **301** to `https://leadtax.ca/...`
+   (the host Google indexes).
+2. `/about` serves `about/index.html` with status 200, and `/about/` redirects to `/about`.
+3. Unknown paths return **404** with `404.html`, not the homepage.
+4. The old addresses (`/business-tax`, `/sign-in`, `/diy-landing` …) answer 301.
+5. `/sitemap.xml`, `/robots.txt` and `/llms.txt` load.
+
+## SEO and AI search (GEO)
+
+- Every page's `<head>` (title, description, canonical, Open Graph, JSON-LD) is pre-rendered by
+  `scripts/prerender.mjs` from `src/lib/seoHead.js` and `src/content/seo.json`. Titles and
+  descriptions of pages that already rank are kept as published; change them only on purpose.
+- JSON-LD: Organization, WebSite, AccountingService with each office, BreadcrumbList on every
+  page; a Service and FAQPage on the five service pages; BlogPosting on posts; FAQPage on /faq.
+- Generated on every build, so they always match the pages:
+  - `sitemap.xml`: every page; posts use their publish date.
+  - `/sitemap`: a human-readable list of every page.
+  - `llms.txt`: a plain-text summary for AI assistants (services, offices, contact, key pages).
+- `public/robots.txt` allows search engines and AI search crawlers and points to the sitemap.
+
+After launch on the final domain:
+1. Add `https://leadtax.ca` to Google Search Console and Bing Webmaster Tools and submit
+   `https://leadtax.ca/sitemap.xml`.
+2. Check a few pages in Google's Rich Results Test (structured data) and URL Inspection.
+3. Keep office details (address, phone, hours) the same here, on Google Business Profile and in
+   directories; AI search compares them.
