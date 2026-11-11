@@ -2,7 +2,7 @@ import { useState } from "react";
 import { ArrowRight, ShieldCheck } from "lucide-react";
 import home from "../../content/homepage.json";
 import enquiry from "../../content/enquiry.json";
-import { headOfficeEmail, officeLocationOptions } from "../../lib/offices.js";
+import { enquiryEmail, officeLocationOptions } from "../../lib/offices.js";
 import { openMailDraft } from "../../lib/links.js";
 import { fill } from "../../lib/template.js";
 import Button from "../../components/ui/Button.jsx";
@@ -24,8 +24,8 @@ export default function QuickQuery({ open, onOpenChange }) {
   const submit = (event) => {
     event.preventDefault();
     const values = Object.fromEntries(new FormData(event.currentTarget));
-    openMailDraft(headOfficeEmail, fill(note.subject, values), fill(note.body, values));
-    setStatus(fill(note.status, { email: headOfficeEmail }));
+    openMailDraft(enquiryEmail, fill(note.subject, values), fill(note.body, values));
+    setStatus(fill(note.status, { email: enquiryEmail }));
   };
 
   return (

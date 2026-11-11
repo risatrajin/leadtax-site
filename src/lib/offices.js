@@ -1,4 +1,5 @@
 import { offices } from "../content/offices.json";
+import site from "../content/site.json";
 import { formatLocalPhone } from "./phone.js";
 
 export { offices };
@@ -34,8 +35,8 @@ export function hoursOn(office, date = new Date()) {
 
 export const officePhone = (office) => formatLocalPhone(office.phone);
 
-/** The head office's email address (where the site's enquiry forms send). */
-export const headOfficeEmail = offices.find((office) => office.isHeadOffice).email;
+/** Where the site's enquiry forms send (the client asked for every form to go to info@). */
+export const enquiryEmail = site.contact.email;
 
 /** Options for a "preferred location" dropdown: `anyLabel` first, then "City — Office" for each office. */
 export const officeLocationOptions = (anyLabel) => [

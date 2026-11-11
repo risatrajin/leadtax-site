@@ -28,13 +28,14 @@ npm run preview    # serve the production build
 | `src/content/` | All site copy and data (offices, navigation, reviews, pricing, SEO) |
 | `src/lib/` | Small helpers (links, offices, icons, shared card styles) |
 | `src/styles/` | Design tokens and base styles |
-| `public/` | Images, `robots.txt`, `sitemap.xml` |
+| `public/` | Images, `robots.txt`, host configs (`.htaccess`, `_redirects`) |
 | `scripts/` | Build steps and checks: pre-render, placeholders, header behaviour, screenshot comparison |
 | `docs/` | Open questions for the client, known issues, placeholders, image inventory, rebuild notes |
 
 ## Before launch
 
-- `docs/questions-for-client.md`: answers needed (hours, prices, legal name, photos, booking links).
+- `docs/questions-for-client.md`: answers needed (legal name, photos, booking links). Hours,
+  bookkeeping prices and the enquiry inbox (info@) are answered.
 - `docs/placeholders.md` and `npm run placeholders`: every value still marked `[TBD]` or unconfirmed.
 - `docs/known-issues.md`: issues carried over from the original site and what was fixed.
 

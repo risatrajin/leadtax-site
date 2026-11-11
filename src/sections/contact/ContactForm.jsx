@@ -2,7 +2,7 @@ import { useState } from "react";
 import { ArrowRight, ShieldCheck } from "lucide-react";
 import contact from "../../content/pages/contact.json";
 import enquiry from "../../content/enquiry.json";
-import { headOfficeEmail, officeLocationOptions } from "../../lib/offices.js";
+import { enquiryEmail, officeLocationOptions } from "../../lib/offices.js";
 import { openMailDraft } from "../../lib/links.js";
 import { fill } from "../../lib/template.js";
 import { CARD } from "../../lib/styles.js";
@@ -23,8 +23,8 @@ function LeadForm({ title, className = "" }) {
   const submit = (event) => {
     event.preventDefault();
     const values = Object.fromEntries(new FormData(event.currentTarget));
-    openMailDraft(headOfficeEmail, fill(form.subject, values), fill(form.body, values));
-    setStatus(fill(form.status, { email: headOfficeEmail }));
+    openMailDraft(enquiryEmail, fill(form.subject, values), fill(form.body, values));
+    setStatus(fill(form.status, { email: enquiryEmail }));
   };
 
   return (

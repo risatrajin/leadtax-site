@@ -34,9 +34,12 @@ what you can; anything left blank stays as it is now.
 
 6. **What are your opening hours, and do you take walk-ins?** The site says "walk-ins welcome"
    and "no appointment needed during business hours" but never lists hours.
+   **Answered (Nov 2026):** every office: Mon–Fri 10:00 AM – 6:00 PM, Sat 10:00 AM – 4:00 PM,
+   Sun closed. Walk-ins still to confirm.
 
 7. **Where should website messages go?** The contact form is currently hidden. If we show it,
    which email address should receive messages?
+   **Answered (Nov 2026):** all form submissions go to info@leadtax.ca.
 
 ## Prices and guarantees
 
@@ -173,6 +176,7 @@ what you can; anything left blank stays as it is now.
     starting prices: Bookkeeping Light $199/mo ($1,910/yr), Core $399/mo ($3,830/yr),
     Bookkeeping + Tax $649/mo ($6,230/yr). Please also confirm the "free consultation" offer, the
     industries listed and the tools (QuickBooks Online, Clover, Square, Stripe, Shopify).
+    **Answered (Nov 2026):** the prices listed are accurate. The rest is still to confirm.
 40. **Are the tax calculator rates right?** `/tax-calculator` estimates federal and BC tax with
     2025 brackets and basic personal amounts (federal 14.5% blended lowest rate, BPA $16,129; BC
     5.06%–20.5%, BPA $12,932). It leaves out CPP/EI and other credits. Please confirm the figures,

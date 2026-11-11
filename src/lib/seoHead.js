@@ -124,6 +124,14 @@ function postalAddress(office) {
   return { "@type": "PostalAddress", streetAddress, addressLocality, addressRegion, postalCode, addressCountry: "CA" };
 }
 
+// Every office keeps the same hours.
+const openingHoursSpecification = schema.openingHours.map(({ days, opens, closes }) => ({
+  "@type": "OpeningHoursSpecification",
+  dayOfWeek: days.map((day) => `https://schema.org/${day}`),
+  opens,
+  closes,
+}));
+
 function siteGraph(pathname, page) {
   const siteUrl = site.siteUrl;
   const mainOffice = offices.find((office) => office.schema.role === "main");
@@ -181,6 +189,7 @@ function siteGraph(pathname, page) {
     priceRange: schema.priceRange,
     address: postalAddress(mainOffice),
     geo: { "@type": "GeoCoordinates", ...mainOffice.schema.geo },
+    openingHoursSpecification,
     department: departments.map((office) => ({
       "@type": "AccountingService",
       name: office.schema.name,
@@ -188,6 +197,7 @@ function siteGraph(pathname, page) {
       ...(office.schema.omitTelephone ? {} : { telephone: toE164(office.phone) }),
       address: postalAddress(office),
       ...(office.schema.geo ? { geo: { "@type": "GeoCoordinates", ...office.schema.geo } } : {}),
+      openingHoursSpecification,
     })),
     areaServed: [
       ...officeCities.map((city) => ({ "@type": "City", name: city })),

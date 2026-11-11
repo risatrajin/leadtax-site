@@ -1,5 +1,5 @@
 {
-  "_note": "Single source for office data. 'display' is what the Contact page shows; 'schema' is what the SEO JSON-LD publishes. The two disagree in places on purpose (see docs/known-issues.md).",
+  "_note": "Single source for office data. 'display' is what the Contact page shows; 'schema' is what the SEO JSON-LD publishes. The two disagree in places on purpose. Hours are the same at every office; seo.json schema.openingHours publishes them for search engines.",
   "photoPlaceholderLabel": "[Photo needed: {office} storefront]",
   "offices": [
     {
@@ -11,8 +11,7 @@
         "schema.streetAddress",
         "schema.postalCode",
         "isHeadOffice",
-        "shortName",
-        "hours"
+        "shortName"
       ],
       "id": "burnaby-4350-hastings",
       "shortName": "4350 Hastings",
@@ -41,9 +40,9 @@
         }
       },
       "hours": {
-        "weekdays": "[TBD: Mon–Fri hours]",
-        "saturday": "[TBD: Saturday hours]",
-        "sunday": "[TBD: Sunday hours]"
+        "weekdays": "10:00 AM – 6:00 PM",
+        "saturday": "10:00 AM – 4:00 PM",
+        "sunday": "Closed"
       }
     },
     {
@@ -51,8 +50,7 @@
         "phone",
         "email",
         "booking",
-        "shortName",
-        "hours"
+        "shortName"
       ],
       "id": "vancouver-davie",
       "shortName": "Davie Street",
@@ -77,9 +75,9 @@
         "postalCode": "V6E 1N3"
       },
       "hours": {
-        "weekdays": "[TBD: Mon–Fri hours]",
-        "saturday": "[TBD: Saturday hours]",
-        "sunday": "[TBD: Sunday hours]"
+        "weekdays": "10:00 AM – 6:00 PM",
+        "saturday": "10:00 AM – 4:00 PM",
+        "sunday": "Closed"
       }
     },
     {
@@ -87,8 +85,7 @@
         "phone",
         "email",
         "booking",
-        "shortName",
-        "hours"
+        "shortName"
       ],
       "id": "vancouver-commercial",
       "shortName": "Commercial Drive",
@@ -117,9 +114,9 @@
         "postalCode": "V5N 4B4"
       },
       "hours": {
-        "weekdays": "[TBD: Mon–Fri hours]",
-        "saturday": "[TBD: Saturday hours]",
-        "sunday": "[TBD: Sunday hours]"
+        "weekdays": "10:00 AM – 6:00 PM",
+        "saturday": "10:00 AM – 4:00 PM",
+        "sunday": "Closed"
       }
     },
     {
@@ -127,8 +124,7 @@
         "phone",
         "email",
         "booking",
-        "shortName",
-        "hours"
+        "shortName"
       ],
       "id": "vancouver-kingsway",
       "shortName": "Kingsway",
@@ -153,9 +149,9 @@
         "postalCode": "V5R 5H4"
       },
       "hours": {
-        "weekdays": "[TBD: Mon–Fri hours]",
-        "saturday": "[TBD: Saturday hours]",
-        "sunday": "[TBD: Sunday hours]"
+        "weekdays": "10:00 AM – 6:00 PM",
+        "saturday": "10:00 AM – 4:00 PM",
+        "sunday": "Closed"
       }
     },
     {
@@ -166,8 +162,7 @@
         "display.address",
         "schema.streetAddress",
         "schema.postalCode",
-        "shortName",
-        "hours"
+        "shortName"
       ],
       "id": "burnaby-4125-hastings",
       "shortName": "4125 Hastings",
@@ -193,9 +188,9 @@
         "postalCode": "V5C 2J3"
       },
       "hours": {
-        "weekdays": "[TBD: Mon–Fri hours]",
-        "saturday": "[TBD: Saturday hours]",
-        "sunday": "[TBD: Sunday hours]"
+        "weekdays": "10:00 AM – 6:00 PM",
+        "saturday": "10:00 AM – 4:00 PM",
+        "sunday": "Closed"
       }
     }
   ]
