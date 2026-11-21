@@ -14,7 +14,8 @@ export default function DropoffModal({ open, onOpenChange }) {
           </span>
           <div>
             <DialogTitle className="text-xl font-semibold tracking-tight text-gray-900 sm:text-2xl">{copy.title}</DialogTitle>
-            <DialogDescription className="text-sm text-gray-500">{copy.text}</DialogDescription>
+            {/* On phones the line is left to screen readers to save space; the form explains itself. */}
+            <DialogDescription className="sr-only text-sm text-gray-500 sm:not-sr-only">{copy.text}</DialogDescription>
           </div>
         </div>
         <DropoffFrame title={copy.title} fallbackLabel={copy.fallbackLabel} loadingLabel={copy.loadingLabel} className="mt-2" />
