@@ -53,9 +53,28 @@ function dropoffStyles({ brand, brandStrong, brandSubtle, font }, serviceIcon) {
     .etm-step-introduction { margin: 18px 0 12px !important; }
     .etm-step-introduction h3 { margin: 0 0 2px !important; font-size: 18px !important; }
 
-    /* Steps and choices. */
-    #steps .step { border-color: #e5e7eb !important; background: #f9fafb !important; color: #4b5563 !important; border-radius: 12px !important; }
-    #steps .step.active { background: ${brand} !important; border-color: ${brand} !important; color: #fff !important; }
+    /* The step bar as a stepper: numbered circles joined by a line, names underneath; the current
+       step is filled blue and finished ones show a tick (see decorateSteps). */
+    #steps.stepbar { display: flex !important; gap: 0 !important; margin: 8px 0 20px !important; padding: 8px 0 !important; overflow: visible !important; background: #fff !important; }
+    #steps .step { position: relative; display: flex !important; flex: 1 1 0 !important; min-width: 0 !important; flex-direction: column; align-items: center; gap: 6px; padding: 0 4px !important; border: 0 !important; background: none !important; box-shadow: none !important; color: #6b7280 !important; font-size: 12px !important; font-weight: 500 !important; line-height: 1.3; text-align: center; }
+    #steps .step:not(:last-child)::after { content: ""; position: absolute; top: 15px; left: calc(50% + 20px); right: calc(-50% + 20px); height: 2px; border-radius: 2px; background: #e5e7eb; }
+    #steps .step.done::after { background: ${brand}; }
+    #steps .step-num { position: relative; z-index: 1; display: flex; align-items: center; justify-content: center; width: 32px; height: 32px; border: 2px solid #d1d5db; border-radius: 50%; background: #fff; color: #6b7280; font-size: 13px; font-weight: 600; transition: background .2s, border-color .2s, box-shadow .2s; }
+    #steps .step.active .step-num { border-color: ${brand}; background: ${brand}; color: #fff; box-shadow: 0 0 0 4px rgb(23 127 248 / 0.15); }
+    #steps .step.done .step-num { border-color: ${brand}; background: ${brand}; color: #fff; }
+    #steps .step.active { color: #111827 !important; font-weight: 600 !important; }
+    #steps .step.done { color: #374151 !important; }
+    #steps .step { overflow-wrap: normal !important; word-break: normal !important; }
+    /* Phones: circles only, with the current step's name on one line underneath. */
+    @media (max-width: 480px) {
+      #steps.stepbar { padding-bottom: 30px !important; }
+      #steps .step:not(.active) .step-name { display: none; }
+      #steps .step.active .step-name { position: absolute; top: 40px; left: 50%; transform: translateX(-50%); white-space: nowrap; }
+      #steps .step.active:first-child .step-name { left: 0; transform: none; }
+      #steps .step.active:last-child .step-name { left: auto; right: 0; transform: none; }
+    }
+
+    /* Choices. */
     .etm-checkbox-option { border: 1px solid #e5e7eb !important; border-radius: 14px !important; box-shadow: none !important; }
     .etm-checkbox-option:has(input:checked) { background: #f7faff !important; border-color: ${brand} !important; }
     input[type=checkbox], input[type=radio] { accent-color: ${brand}; }
@@ -67,6 +86,42 @@ function dropoffStyles({ brand, brandStrong, brandSubtle, font }, serviceIcon) {
     .btn.secondary { background: #fff !important; color: ${brand} !important; border: 1px solid #d1d5db !important; }
     .btn.secondary:hover:not(:disabled) { border-color: ${brand} !important; }
   `;
+}
+
+const TICK =
+  '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>';
+
+/**
+ * Turns eTaskMe's step bar ("1. Business profile" boxes) into stepper markup: a number circle and a
+ * name for each step, with steps before the current one marked done (a tick). eTaskMe redraws the
+ * bar on every step, so this runs again whenever it changes.
+ */
+function decorateSteps(doc) {
+  const bar = doc.getElementById("steps");
+  if (!bar) return;
+  const apply = () => {
+    observer.disconnect();
+    const steps = [...bar.querySelectorAll(".step")];
+    const current = steps.findIndex((step) => step.classList.contains("active"));
+    steps.forEach((step, index) => {
+      if (!step.querySelector(".step-num")) {
+        const [, number = index + 1, name = step.textContent.trim()] = step.textContent.trim().match(/^(\d+)\.\s*(.*)$/) ?? [];
+        step.dataset.number = number;
+        step.innerHTML = `<span class="step-num"></span><span class="step-name"></span>`;
+        step.querySelector(".step-name").textContent = name;
+      }
+      const done = current > -1 && index < current;
+      step.classList.toggle("done", done);
+      const circle = step.querySelector(".step-num");
+      if (done) circle.innerHTML = TICK;
+      else circle.textContent = step.dataset.number;
+      if (step.classList.contains("active")) step.setAttribute("aria-current", "step");
+      else step.removeAttribute("aria-current");
+    });
+    observer.observe(bar, { childList: true, subtree: true, attributes: true, attributeFilter: ["class"] });
+  };
+  const observer = new MutationObserver(apply);
+  apply();
 }
 
 /**
@@ -93,6 +148,7 @@ export default function DropoffFrame({ title, fallbackLabel, loadingLabel, class
     const service = doc.querySelector(".service");
     const icon = service ? getComputedStyle(service, "::before").backgroundImage.replace(/%23[0-9a-f]{6}/gi, encodeURIComponent(theme.brand)) : "none";
     restyleFrame(doc, dropoffStyles(theme, icon));
+    decorateSteps(doc);
     fitFrame(frame, doc);
     // Picking a service or moving between steps redraws the form; bring its top back into view.
     doc.addEventListener("click", (event) => {
