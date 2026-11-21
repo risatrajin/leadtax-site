@@ -95,6 +95,21 @@ Whatever the host, these must hold for SEO (check them after the first deploy):
 4. The old addresses (`/business-tax`, `/sign-in`, `/diy-landing` …) answer 301.
 5. `/sitemap.xml`, `/robots.txt` and `/llms.txt` load.
 
+## Enquiry form (eTaskMe)
+
+Every enquiry form on the site (the "Quick question" modal, the Contact page and the closing
+section of the service pages) is the client's eTaskMe form, shown in an iframe
+(`src/components/ui/LeadFormFrame.jsx`). eTaskMe only allows its form inside pages on its own
+domain (`X-Frame-Options: SAMEORIGIN`), so each host forwards `/PublicLead` and `/PublicLead/*` to
+`https://erp.etaskme.com` and the site loads the form from its own domain. The rule is in
+`vite.config.js` (dev), `vercel.json`, `deploy/nginx.conf`, `_redirects` and `.htaccess`.
+On Apache it needs `mod_proxy` with SSL proxying, which some shared hosts don't offer. Where the
+forwarding is missing, the forms show a "Request a Consultation" link to the form instead.
+
+After deploying, check that `https://leadtax.ca/PublicLead?slug=…` (see `leadFormPath` in
+`src/content/site.json`) shows the form. The form link lives in `site.json`; which service each page
+preselects is `form.serviceTypes` in `src/content/enquiry.json`.
+
 ## SEO and AI search (GEO)
 
 - Every page's `<head>` (title, description, canonical, Open Graph, JSON-LD) is pre-rendered by

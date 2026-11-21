@@ -45,8 +45,7 @@ function Hero() {
         ))}
         text={hero.text}
         actions={hero.actions}
-        image={hero.image}
-        imageNote={hero.note}
+        formService={page.name}
         decor
       />
       <OnThisPage anchors={anchors} />

@@ -52,23 +52,11 @@
     ],
     "note": {
       "label": "Quick question",
-      "title": "Ask a quick question",
-      "text": "Send us your question and a tax expert will get back to you.",
+      "title": "Contact our team",
+      "text": "Tell us how we can help.",
       "image": "/images/note-illustration.webp",
-      "fields": {
-        "name": "Your name",
-        "email": "Email address",
-        "phone": "Mobile number (optional)",
-        "service": "My question is about",
-        "location": "Preferred location",
-        "question": "Your question",
-        "questionPlaceholder": "e.g. Do I need to file a U.S. return if I live in Canada?"
-      },
-      "submitLabel": "Send my question",
-      "privacyNote": "Please leave out SINs and account numbers. This opens a draft in your email app; send it from there to reach us.",
-      "status": "Your email app should open with your question ready to send. If it doesn't, email us at {email}.",
-      "subject": "Quick question about {service} from {name}",
-      "body": "Name: {name}\nEmail: {email}\nMobile: {phone}\nAbout: {service}\nPreferred location: {location}\n\n{question}"
+      "formLabel": "Request a Consultation",
+      "loadingLabel": "Loading the enquiry form"
     },
     "textLink": {
       "label": "File Remotely",

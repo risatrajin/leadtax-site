@@ -1,13 +1,23 @@
 {
-  "_note": "Closing enquiry section used on the homepage, the service pages and the 404 page. Copy from the developer package. The form opens an email draft; nothing is submitted.",
+  "_note": "Closing enquiry section used on the service pages and the 404 page. Copy from the developer package. The form is the client's eTaskMe enquiry form (see site.leadFormPath).",
   "id": "contact",
   "eyebrow": "Your next step",
   "title": "Let's make tax feel clearer.",
   "text": "Tell us what you need. We'll help you find the right service and explain how to get started.",
   "contacts": {
-    "call": { "label": "Call us", "detail": "{phone}" },
-    "email": { "label": "Email us", "detail": "{email}" },
-    "visit": { "label": "Visit one of our offices", "detail": "{count} offices in {cities}", "to": "/file-in-person" }
+    "call": {
+      "label": "Call us",
+      "detail": "{phone}"
+    },
+    "email": {
+      "label": "Email us",
+      "detail": "{email}"
+    },
+    "visit": {
+      "label": "Visit one of our offices",
+      "detail": "{count} offices in {cities}",
+      "to": "/file-in-person"
+    }
   },
   "phone": "6049784850",
   "readyLabel": "Already ready to file?",
@@ -17,25 +27,19 @@
   },
   "form": {
     "title": "Send us a note",
-    "nameLabel": "Your name",
-    "emailLabel": "Email address",
-    "phoneLabel": "Mobile number (optional)",
-    "serviceLabel": "I need help with",
-    "services": [
-      "Personal tax",
-      "Corporate tax",
-      "Cross-border tax",
-      "Bookkeeping",
-      "Trust & estate",
-      "General enquiry"
-    ],
-    "locationLabel": "Preferred location",
-    "locationAny": "No preference / remote",
-    "messageLabel": "A little about what you need",
-    "note": "Please leave out SINs, account numbers, and tax documents. This opens a draft in your email app; nothing is submitted through this page.",
-    "button": "Prepare email enquiry",
-    "status": "Your email app should open with a draft. Send it from there to complete your enquiry, or contact {email} directly.",
-    "emailSubject": "LeadTax enquiry — {service}",
-    "emailBody": "Name: {name}\nEmail: {email}\nMobile: {phone}\nService: {service}\nLocation: {location}\n\n{message}"
+    "hero": {
+      "title": "Talk to a tax expert",
+      "text": "Tell us how we can help."
+    },
+    "fallbackLabel": "Request a Consultation",
+    "loadingLabel": "Loading the enquiry form",
+    "_serviceTypesNote": "Which of the eTaskMe form's 'Interested service' options to preselect on each page (page name: option label, exactly as eTaskMe shows it).",
+    "serviceTypes": {
+      "Personal tax": "Personal Tax",
+      "Corporate tax": "Corporate Tax",
+      "Bookkeeping": "Bookkeeping",
+      "Trust & estate": "Estate & Trust Tax",
+      "Cross-border tax": "US Tax"
+    }
   }
 }

@@ -4,6 +4,11 @@
 # One address for the whole site: https://leadtax.ca (the host Google indexes). Netlify only.
 https://www.leadtax.ca/*  https://leadtax.ca/:splat  301!
 
+# The client's enquiry form (eTaskMe), served from this domain so it can load in the quick
+# question modal (it only allows framing by its own origin).
+/PublicLead    https://erp.etaskme.com/PublicLead    200
+/PublicLead/*  https://erp.etaskme.com/PublicLead/:splat  200
+
 # Old pages that no longer exist: permanent redirects keep their search ranking.
 /sign-in               https://app.leadtax.ca/user/auth/login  301
 /diy-landing           /file-online      301

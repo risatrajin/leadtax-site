@@ -1,5 +1,6 @@
 {
   "_note": "US & cross-border page: content from the supplied cross-border design (cross-border-latest/index.html), shown in the previous page design (the redesigned homepage sections). Tax content is general information; an accountant should confirm it (question 25).",
+  "name": "Cross-border tax",
   "_placeholders": [
     "faq",
     "services.cards",
@@ -33,11 +34,7 @@
         "title": "In-person & remote options",
         "text": "Vancouver · Burnaby · Online"
       }
-    ],
-    "image": {
-      "src": "/images/cross-border-collage.webp",
-      "alt": "Collage of U.S. and Canadian landmarks: the Statue of Liberty, Brooklyn Bridge, CN Tower, mountains and both flags"
-    }
+    ]
   },
   "situations": {
     "eyebrow": "US & cross-border tax",

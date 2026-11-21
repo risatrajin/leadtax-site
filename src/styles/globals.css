@@ -180,27 +180,6 @@
 }
 
 /* Homepage hero portrait: rises in on load, then zooms very slowly in and out. */
-@keyframes hero-rise {
-  from {
-    opacity: 0;
-    transform: translateY(48px) scale(0.97);
-  }
-  to {
-    opacity: 1;
-    transform: none;
-  }
-}
-
-@keyframes hero-breathe {
-  0%,
-  100% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.035);
-  }
-}
-
 /* Gentle up-and-down drift (the "Quick question" pill, the trust & estate deadline chips). */
 @keyframes float {
   0%,
@@ -213,6 +192,65 @@
 }
 
 /* Bookkeeping tools orbit: the ring turns forever; each logo turns back so it stays upright. */
+/* The docked "Quick question" orb: a soft, slowly changing blob shape with a swirl inside. */
+@keyframes blob-morph {
+  0%,
+  100% {
+    border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%;
+  }
+  25% {
+    border-radius: 58% 42% 52% 48% / 46% 56% 44% 54%;
+  }
+  50% {
+    border-radius: 45% 55% 42% 58% / 56% 44% 58% 42%;
+  }
+  75% {
+    border-radius: 54% 46% 58% 42% / 42% 58% 46% 54%;
+  }
+}
+
+/* Enquiry sent: the check draws itself, pops in, and a ring pulses out behind it. */
+@keyframes sent-draw {
+  from {
+    stroke-dashoffset: 1;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes sent-pop {
+  0% {
+    transform: scale(0.6);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.08);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes sent-ring {
+  from {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  to {
+    transform: scale(1.9);
+    opacity: 0;
+  }
+}
+
+@keyframes sent-rise {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+}
+
 @keyframes orbit-spin {
   to {
     transform: rotate(360deg);
@@ -238,14 +276,32 @@
   .float {
     animation: float 4s ease-in-out infinite;
   }
+  .blob {
+    animation: blob-morph 6s ease-in-out infinite;
+  }
+  .sent-pop {
+    animation: sent-pop 0.6s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+  }
+  .sent-ring {
+    animation: sent-ring 1.6s ease-out 0.9s 2 both;
+  }
+  .sent-draw-circle,
+  .sent-draw-check {
+    stroke-dasharray: 1;
+    animation: sent-draw 0.6s ease-out 0.15s both;
+  }
+  .sent-draw-check {
+    animation-duration: 0.45s;
+    animation-delay: 0.65s;
+  }
+  .sent-rise {
+    animation: sent-rise 0.5s ease-out 0.6s both;
+  }
+  .blob-swirl {
+    animation: orbit-spin 7s linear infinite;
+  }
   .float:hover,
   .float:focus-visible {
     animation-play-state: paused;
-  }
-  .hero-rise {
-    animation: hero-rise 1s cubic-bezier(0.2, 0.7, 0.2, 1) 0.15s both;
-  }
-  .hero-breathe {
-    animation: hero-breathe 9s ease-in-out 1.2s infinite;
   }
 }

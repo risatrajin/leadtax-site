@@ -20,7 +20,7 @@ export default function UsCrossBorderPage() {
     <div className="min-h-screen bg-white">
       <SiteHeader />
       <main id="main">
-        <BlueHero hero={content.hero} />
+        <BlueHero hero={content.hero} service={content.name} />
         <TrustBand content={content} />
         <Situations situations={content.situations} />
         <OtherWays content={content} section="services" className="bg-gray-50 px-4 py-16 md:px-8 md:py-24" />

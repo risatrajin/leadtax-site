@@ -15,11 +15,17 @@ export function resolveHref(href) {
   return href;
 }
 
-export function isExternal(href) {
-  return resolveHref(href).startsWith("http");
+/**
+ * Opens `href` in a small named window (how the client's eTaskMe snippets open their forms).
+ * Returns false when the browser blocks it, so the link can open it normally instead.
+ */
+export function openPopup(href, name) {
+  const popup = window.open(resolveHref(href), name, "width=780,height=760,resizable=yes,scrollbars=yes");
+  if (!popup) return false;
+  popup.focus();
+  return true;
 }
 
-/** Opens an email draft in the visitor's mail app (the site has no form backend yet). */
-export function openMailDraft(to, subject, body) {
-  window.location.href = `mailto:${to}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+export function isExternal(href) {
+  return resolveHref(href).startsWith("http");
 }

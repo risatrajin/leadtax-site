@@ -23,8 +23,7 @@ function Hero({ page }) {
         title={page.titleLines.join(" ")}
         text={page.intro}
         actions={content.heroActions}
-        image={page.image}
-        imageNote={{ title: page.fit, text: content.fitPoints.join(" · ") }}
+        formService={page.name}
         decor
       />
       <OnThisPage anchors={content.anchors} />

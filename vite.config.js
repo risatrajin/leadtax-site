@@ -2,9 +2,16 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import tailwindcss from "@tailwindcss/vite";
 
+// The client's enquiry form (eTaskMe) is served through the site's own domain so it can load in
+// the quick question modal; every host config has the same proxy (see README).
+const leadFormProxy = {
+  "/PublicLead": { target: "https://erp.etaskme.com", changeOrigin: true, cookieDomainRewrite: "" },
+};
+
 export default defineConfig({
   plugins: [react(), tailwindcss()],
-  server: { port: 5173, strictPort: true },
+  server: { port: 5173, strictPort: true, proxy: leadFormProxy },
+  preview: { proxy: leadFormProxy },
   build: {
     // scripts/prerender.mjs reads the manifest to preload each page's own chunk.
     manifest: true,

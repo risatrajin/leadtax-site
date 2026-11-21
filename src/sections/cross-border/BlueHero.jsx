@@ -1,13 +1,13 @@
 import { ArrowRight, CalendarDays, MapPin } from "lucide-react";
 import Button from "../../components/ui/Button.jsx";
-import QuickQueryButton from "../../components/ui/QuickQueryButton.jsx";
+import { HeroForm } from "../../components/ui/PageHero.jsx";
 
 /**
  * US & cross-border hero in the homepage style: a bright blue band, the headline in two lines with
- * the intro and actions on the left, and the U.S.–Canada collage on the right (white background
- * removed), which rises in on load and then zooms very slowly.
+ * the intro and actions on the left, and the enquiry form on the right (HeroForm, set to
+ * cross-border tax through `service`).
  */
-export default function BlueHero({ hero }) {
+export default function BlueHero({ hero, service }) {
   return (
     <section className="overflow-hidden bg-hero-blue px-4 text-white md:px-8">
       <div className="mx-auto grid max-w-7xl items-center gap-8 lg:grid-cols-[1fr_1fr] lg:gap-4">
@@ -34,11 +34,8 @@ export default function BlueHero({ hero }) {
             </Button>
           </div>
         </div>
-        <div className="hero-rise mx-auto w-full max-w-lg pb-12 lg:-mr-8 lg:max-w-none lg:scale-110 lg:py-10 xl:-mr-16">
-          <div className="relative">
-            <img src={hero.image.src} alt={hero.image.alt} width="1200" height="1079" fetchpriority="high" className="hero-breathe w-full" />
-            <QuickQueryButton className="bottom-[10%] right-2 lg:bottom-[14%] lg:right-[14%]" />
-          </div>
+        <div className="pb-14 lg:py-16">
+          <HeroForm service={service} />
         </div>
       </div>
     </section>

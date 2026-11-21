@@ -5,6 +5,9 @@
   ],
   "name": "LeadTax",
   "siteUrl": "https://leadtax.ca",
+  "_leadFormNote": "Public enquiry form in the client's ERP (eTaskMe). It only loads inside pages on its own domain (X-Frame-Options: SAMEORIGIN), so every host proxies /PublicLead to erp.etaskme.com (see README) and the quick question modal shows leadFormPath. leadFormUrl is the direct link, used when the proxy isn't there.",
+  "leadFormPath": "/PublicLead?slug=Xt_JIyAI2y5tfwpMS_CKVCOaFq_KYeWO",
+  "leadFormUrl": "https://erp.etaskme.com/PublicLead?slug=Xt_JIyAI2y5tfwpMS_CKVCOaFq_KYeWO",
   "logo": "/images/aa522b010086bcaf524c383acdd1db0f7a1d3d46.png",
   "logoWhite": "/images/leadtax-logo-white.png",
   "favicon": "/images/c1a5c15bfe97195bb0026f2c1b2d0d29be68c167.png",
@@ -25,6 +28,10 @@
     "remote": {
       "home": "https://portal.leadtax.ca/user/",
       "register": "https://portal.leadtax.ca/user/auth/register"
+    },
+    "dropoff": {
+      "_note": "Document drop-off form in the client's ERP (eTaskMe). Links with \"popup\" open it in a small window, like the client's embed snippet.",
+      "submit": "https://erp.etaskme.com/dropoff/leadtax-gljry7li"
     }
   },
   "social": [

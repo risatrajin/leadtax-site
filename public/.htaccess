@@ -17,6 +17,13 @@ ErrorDocument 404 /404.html
   RewriteCond %{HTTP:X-Forwarded-Proto} !=https
   RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
 
+  # The client's enquiry form (eTaskMe), served from this domain so it can load in the quick
+  # question modal (it only allows framing by its own origin). Needs mod_proxy with SSL proxying;
+  # without it the modal links to the form instead.
+  <IfModule mod_proxy.c>
+    RewriteRule ^PublicLead(/.*)?$ https://erp.etaskme.com/PublicLead$1 [P,QSA,L]
+  </IfModule>
+
   # Old pages that no longer exist: permanent redirects keep their search ranking.
   RewriteRule ^sign-in/?$ https://app.leadtax.ca/user/auth/login [R=301,L]
   RewriteRule ^(diy-landing|dyi-landing)/?$ https://%{HTTP_HOST}/file-online [R=301,L]

@@ -56,16 +56,19 @@ function Hero() {
             "Quick question" button on it opens a short question form in a modal. */}
         <div className="relative mx-auto w-full max-w-sm self-end sm:max-w-md lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:max-w-none lg:self-stretch">
           <div className="lg:absolute lg:inset-x-0 lg:bottom-0 lg:top-0 lg:flex lg:justify-center">
-            <img
-              src={hero.image.src}
-              width="900"
-              height="1184"
-              fetchpriority="high"
-              alt={hero.image.alt}
-              className="-mb-px w-full [mask-composite:intersect] [mask-image:linear-gradient(to_right,transparent,black_8%,black_92%,transparent),linear-gradient(to_bottom,transparent,black_6%)] lg:h-full lg:w-auto lg:max-w-none"
-            />
+            {/* Sized to the photo so the button can sit on the top-right corner of its dark panel. */}
+            <div className="relative lg:h-full">
+              <img
+                src={hero.image.src}
+                width="900"
+                height="1184"
+                fetchpriority="high"
+                alt={hero.image.alt}
+                className="-mb-px w-full [mask-composite:intersect] [mask-image:linear-gradient(to_right,transparent,black_8%,black_92%,transparent),linear-gradient(to_bottom,transparent,black_6%)] lg:h-full lg:w-auto lg:max-w-none"
+              />
+              <QuickQueryButton className="whitespace-nowrap right-0 top-[15%] md:right-auto md:top-[17%] md:left-[83%] lg:left-[min(83%,calc(100%-17rem))] 2xl:left-[83%]" />
+            </div>
           </div>
-          <QuickQueryButton className="right-0 top-[40%] sm:-right-4 lg:right-0" />
         </div>
 
         <div className="relative z-10 -mt-12 pb-12 md:pb-[50px] lg:col-span-2 lg:col-start-1 lg:row-start-2 lg:mt-0">

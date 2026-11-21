@@ -1,22 +1,18 @@
-import { useState } from "react";
-import { ArrowRight, ArrowUpRight, Copy, Mail, MapPin, Phone, ShieldCheck } from "lucide-react";
+import { ArrowRight, ArrowUpRight, Copy, Mail, MapPin, Phone } from "lucide-react";
 import enquiry from "../../content/enquiry.json";
 import site from "../../content/site.json";
 import { formatLocalPhone } from "../../lib/phone.js";
-import { officeCities, officeLocationOptions, offices } from "../../lib/offices.js";
-import { openMailDraft } from "../../lib/links.js";
+import { officeCities, offices } from "../../lib/offices.js";
 import { fill } from "../../lib/template.js";
 import { CARD } from "../../lib/styles.js";
-import Button from "./Button.jsx";
 import SmartLink from "./SmartLink.jsx";
 import CopyText from "./CopyText.jsx";
-import { SelectField, TextAreaField, TextField } from "./FormFields.jsx";
+import LeadFormFrame from "./LeadFormFrame.jsx";
 import { EYEBROW } from "./ServiceBlocks.jsx";
 
 const { form, contacts } = enquiry;
 const EMAIL = site.contact.email;
 const PHONE = fill(contacts.call.detail, { phone: formatLocalPhone(enquiry.phone) });
-const LOCATIONS = officeLocationOptions(form.locationAny);
 const ROW = "group flex items-center gap-4 py-5";
 
 /** A contact row's icon, label and value; `trailing` is the icon on the right. */
@@ -40,20 +36,11 @@ const COPY_ICON = <Copy aria-hidden="true" className="h-5 w-5 flex-shrink-0 text
 
 /**
  * Closing "Let's make tax feel clearer" section: ways to reach us on the left (phone and email copy
- * to the clipboard; the office row links to the offices) and the remote filing link, and a form on
- * the right that prepares an email draft (nothing is submitted from the site).
- * `service` preselects the form's topic.
+ * to the clipboard; the office row links to the offices) and the remote filing link, and the
+ * client's enquiry form (eTaskMe) on the right. `service` (the page's name) preselects the form's
+ * "Interested service" through form.serviceTypes.
  */
-export default function EnquirySection({ service = form.services.at(-1), className = "bg-gray-50" }) {
-  const [status, setStatus] = useState("");
-
-  const submit = (event) => {
-    event.preventDefault();
-    const values = Object.fromEntries(new FormData(event.currentTarget));
-    openMailDraft(EMAIL, fill(form.emailSubject, values), fill(form.emailBody, values));
-    setStatus(fill(form.status, { email: EMAIL }));
-  };
-
+export default function EnquirySection({ service, className = "bg-gray-50" }) {
   return (
     <section id={enquiry.id} className={`scroll-mt-32 px-4 py-16 md:scroll-mt-40 md:px-8 md:py-24 ${className}`}>
       <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[1fr_minmax(0,32rem)] lg:items-center lg:gap-16">
@@ -95,30 +82,16 @@ export default function EnquirySection({ service = form.services.at(-1), classNa
           </p>
         </div>
 
-        <form key={service} onSubmit={submit} className={`${CARD} space-y-4 p-8 shadow-xl md:p-10`}>
-          <h3 className="text-2xl font-semibold text-gray-900">{form.title}</h3>
-          <div className="grid gap-4 sm:grid-cols-2">
-            <TextField name="name" label={form.nameLabel} autoComplete="name" className="sm:col-span-2" />
-            <TextField name="email" label={form.emailLabel} type="email" autoComplete="email" />
-            <TextField name="phone" label={form.phoneLabel} type="tel" autoComplete="tel" required={false} />
-          </div>
-          <SelectField name="service" label={form.serviceLabel} defaultValue={service} options={form.services} />
-          <SelectField name="location" label={form.locationLabel} options={LOCATIONS} />
-          <TextAreaField name="message" label={form.messageLabel} rows={3} />
-          <Button type="submit" size="block" className="group gap-2">
-            {form.button}
-            <ArrowRight aria-hidden="true" className="h-5 w-5 transition-transform group-hover:translate-x-1" />
-          </Button>
-          <p className="flex gap-2.5 text-sm text-gray-600">
-            <ShieldCheck aria-hidden="true" className="mt-0.5 h-4 w-4 flex-shrink-0 text-brand-bright" />
-            {form.note}
-          </p>
-          {status && (
-            <p role="status" className="rounded-xl bg-brand-subtle/50 p-3 text-sm text-brand">
-              {status}
-            </p>
-          )}
-        </form>
+        <div className={`${CARD} p-8 shadow-xl md:p-10`}>
+          <h3 className="mb-6 text-2xl font-semibold text-gray-900">{form.title}</h3>
+          <LeadFormFrame
+            key={service}
+            title={form.title}
+            service={form.serviceTypes[service]}
+            fallbackLabel={form.fallbackLabel}
+            loadingLabel={form.loadingLabel}
+          />
+        </div>
       </div>
     </section>
   );

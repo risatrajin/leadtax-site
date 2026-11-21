@@ -5,8 +5,9 @@
     "text": "Meet with a tax professional online and get your return prepared accurately without visiting an office.",
     "actions": [
       {
-        "label": "Get started remotely",
-        "href": "app:remote.register"
+        "label": "Submit Documents",
+        "href": "app:dropoff.submit",
+        "popup": "companyDropoff"
       }
     ],
     "image": {

@@ -1,69 +1,13 @@
-import { useState } from "react";
-import { ArrowRight, ShieldCheck } from "lucide-react";
 import contact from "../../content/pages/contact.json";
-import enquiry from "../../content/enquiry.json";
-import { enquiryEmail, officeLocationOptions } from "../../lib/offices.js";
-import { openMailDraft } from "../../lib/links.js";
-import { fill } from "../../lib/template.js";
 import { CARD } from "../../lib/styles.js";
-import Button from "../../components/ui/Button.jsx";
-import { SelectField, TextAreaField, TextField } from "../../components/ui/FormFields.jsx";
+import LeadFormFrame from "../../components/ui/LeadFormFrame.jsx";
 import { EYEBROW } from "../../components/ui/ServiceBlocks.jsx";
 
 const { form } = contact;
-const LOCATIONS = officeLocationOptions(enquiry.form.locationAny);
 
 /**
- * The Contact page's lead form. There is no backend yet, so submitting opens an email draft to the
- * head office. `title` is shown above the fields when given; `className` styles the <form>.
- */
-function LeadForm({ title, className = "" }) {
-  const [status, setStatus] = useState("");
-
-  const submit = (event) => {
-    event.preventDefault();
-    const values = Object.fromEntries(new FormData(event.currentTarget));
-    openMailDraft(enquiryEmail, fill(form.subject, values), fill(form.body, values));
-    setStatus(fill(form.status, { email: enquiryEmail }));
-  };
-
-  return (
-      <form onSubmit={submit} className={`space-y-4 ${className}`}>
-        {title && <h3 className="text-2xl font-semibold text-gray-900">{title}</h3>}
-        <TextField name="name" label={form.fields.name} autoComplete="name" />
-        <div className="grid gap-4 sm:grid-cols-2">
-          <TextField name="email" label={form.fields.email} type="email" autoComplete="email" />
-          <TextField name="phone" label={form.fields.phone} type="tel" autoComplete="tel" required={false} />
-        </div>
-        <div className="grid gap-4 sm:grid-cols-2">
-          <SelectField name="service" label={form.fields.service} options={enquiry.form.services} />
-          <SelectField name="location" label={form.fields.location} options={LOCATIONS} />
-        </div>
-        <TextAreaField name="message" label={form.fields.message} placeholder={form.fields.messagePlaceholder} />
-        <label className="flex cursor-pointer items-start gap-3 text-sm text-gray-700">
-          <input name="consent" type="checkbox" required className="mt-0.5 h-5 w-5 flex-shrink-0 cursor-pointer accent-brand" />
-          {form.consent}
-        </label>
-        <Button type="submit" size="block" className="group gap-2">
-          {form.submitLabel}
-          <ArrowRight aria-hidden="true" className="h-5 w-5 transition-transform group-hover:translate-x-1" />
-        </Button>
-        <p className="flex gap-2.5 text-sm text-gray-600">
-          <ShieldCheck aria-hidden="true" className="mt-0.5 h-4 w-4 flex-shrink-0 text-brand-bright" />
-          {form.privacyNote}
-        </p>
-        {status && (
-          <p role="status" className="rounded-xl bg-brand-subtle/50 p-3 text-sm text-brand">
-            {status}
-          </p>
-        )}
-      </form>
-  );
-}
-
-/**
- * Lead form under the office cards: a centred heading, the three next steps in a row, and the form
- * centred beneath them.
+ * Lead form under the office cards: a centred heading, the three next steps in a row, and the
+ * client's enquiry form centred beneath them.
  */
 export default function ContactForm() {
   return (
@@ -90,7 +34,11 @@ export default function ContactForm() {
         ))}
       </ol>
 
-      <LeadForm title={form.cardTitle} className={`${CARD} mx-auto mt-12 max-w-3xl p-6 shadow-xl sm:p-8 md:p-10`} />
+      {/* The client's enquiry form (eTaskMe) in a card. */}
+      <div className={`${CARD} mx-auto mt-12 max-w-3xl p-6 shadow-xl sm:p-8 md:p-10`}>
+        <h3 className="mb-6 text-2xl font-semibold text-gray-900">{form.cardTitle}</h3>
+        <LeadFormFrame title={form.cardTitle} fallbackLabel={form.fallbackLabel} loadingLabel={form.loadingLabel} />
+      </div>
     </section>
   );
 }

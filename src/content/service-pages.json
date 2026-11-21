@@ -26,7 +26,8 @@
   "heroActions": [
     {
       "label": "Submit your documents",
-      "href": "app:remote.register"
+      "href": "app:dropoff.submit",
+      "popup": "companyDropoff"
     },
     {
       "label": "Explore the service",
@@ -84,11 +85,6 @@
         "Your tax support stays."
       ],
       "intro": "From your first return to retirement, get personal tax help that sees the whole picture. In person in Vancouver and Burnaby, or remotely across Canada.",
-      "fit": "Individuals & families",
-      "image": {
-        "src": "/images/personal-tax-hero.webp",
-        "alt": "An accountant reviewing tax documents with a couple in a bright office"
-      },
       "scope": {
         "title": "A return that reflects your real life.",
         "text": "A new job. A first home. A growing family. We help you understand what to bring and what happens next.",
@@ -141,11 +137,6 @@
         "We help with the tax."
       ],
       "intro": "Corporate tax preparation and year-end support for Canadian business owners. Connect your records, your corporate return, and your next business decision.",
-      "fit": "Corporations & business owners",
-      "image": {
-        "src": "/images/corporate-team.webp",
-        "alt": "Business owners reviewing a financial report with an accountant"
-      },
       "scope": {
         "title": "A more connected year end.",
         "text": "Bookkeeping, business tax, and your personal return belong in the same conversation. Start with where your business is today.",
