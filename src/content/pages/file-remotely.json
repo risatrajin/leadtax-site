@@ -7,7 +7,7 @@
       {
         "label": "Submit Documents",
         "href": "app:dropoff.submit",
-        "popup": "companyDropoff"
+        "dropoff": true
       }
     ],
     "image": {

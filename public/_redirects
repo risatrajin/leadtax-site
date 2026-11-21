@@ -11,6 +11,13 @@ https://www.leadtax.ca/*  https://leadtax.ca/:splat  301!
 /PublicLead/Submit   https://erp.etaskme.com/PublicLead/Submit  200!
 /PublicLead/Thanks   https://erp.etaskme.com/PublicLead/Thanks  200!
 
+# The client's document drop-off form (eTaskMe), proxied the same way for the drop-off modal.
+/dropoff/leadtax-gljry7li                     https://erp.etaskme.com/dropoff/leadtax-gljry7li                     200!
+/PublicDropoff/ValidateIntake        https://erp.etaskme.com/PublicDropoff/ValidateIntake        200!
+/PublicDropoff/SendVerification      https://erp.etaskme.com/PublicDropoff/SendVerification      200!
+/PublicDropoff/ConfirmVerification   https://erp.etaskme.com/PublicDropoff/ConfirmVerification   200!
+/PublicDropoff/SubmitPublic          https://erp.etaskme.com/PublicDropoff/SubmitPublic          200!
+
 # Old pages that no longer exist: permanent redirects keep their search ranking.
 /sign-in               https://app.leadtax.ca/user/auth/login  301
 /diy-landing           /file-online      301

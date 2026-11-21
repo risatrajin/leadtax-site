@@ -1,7 +1,7 @@
 import { CircleCheckBig, MessagesSquare } from "lucide-react";
 import Button from "./Button.jsx";
 import { cx } from "../../lib/cx.js";
-import { openPopup } from "../../lib/links.js";
+import { openDropoff } from "../../lib/links.js";
 import QuickQueryButton from "./QuickQueryButton.jsx";
 import LeadFormFrame from "./LeadFormFrame.jsx";
 import enquiry from "../../content/enquiry.json";
@@ -60,17 +60,22 @@ export function HeroForm({ service }) {
 }
 
 /**
- * Link props for a hero action: a router path, or a URL that may open in a new tab, or (with
- * `popup`, the window's name) in a small popup window, falling back to a new tab if it's blocked.
+ * Link props for a hero action: a router path, or a URL that may open in a new tab. With
+ * `dropoff`, a click opens the document drop-off dialog instead (the href stays as the direct link
+ * for new-tab clicks).
  */
 export function actionProps(action) {
   if (action.to) return { to: action.to };
-  if (action.popup) {
+  if (action.dropoff) {
     return {
       href: action.href,
       target: "_blank",
       rel: "noopener noreferrer",
-      onClick: (event) => openPopup(action.href, action.popup) && event.preventDefault(),
+      onClick: (event) => {
+        if (event.metaKey || event.ctrlKey || event.shiftKey) return;
+        event.preventDefault();
+        openDropoff();
+      },
     };
   }
   return action.newTab ? { href: action.href, target: "_blank", rel: "noopener noreferrer" } : { href: action.href };

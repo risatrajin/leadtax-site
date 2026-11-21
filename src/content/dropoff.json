@@ -1,0 +1,7 @@
+{
+  "_note": "Document drop-off modal: the client's eTaskMe drop-off form (site.apps.dropoff) inside the site's own dialog. Opened by any link with \"dropoff\": true.",
+  "title": "Submit your documents",
+  "text": "Choose your office and service, then upload your documents securely.",
+  "fallbackLabel": "Open the drop-off form",
+  "loadingLabel": "Loading the drop-off form"
+}

@@ -5,6 +5,7 @@ import ScrollToTop from "./components/global/ScrollToTop.jsx";
 import RevealOnScroll from "./components/global/RevealOnScroll.jsx";
 import Analytics from "./components/global/Analytics.jsx";
 import IntercomWidget from "./components/global/IntercomWidget.jsx";
+import DropoffDialog from "./components/global/DropoffDialog.jsx";
 import Seo from "./components/seo/Seo.jsx";
 import RedirectTo from "./components/global/RedirectTo.jsx";
 import HomePage from "./pages/HomePage.jsx";
@@ -51,6 +52,7 @@ export default function App() {
       <RevealOnScroll />
       <Analytics />
       <IntercomWidget />
+      <DropoffDialog />
       {/* A full-height blank while a page's file loads keeps the footer from flashing up the screen. */}
       <Suspense fallback={<div className="min-h-screen" />}>
       <Routes>

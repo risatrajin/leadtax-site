@@ -115,6 +115,17 @@ After deploying, check that `https://leadtax.ca/PublicLead?slug=…` (see `leadF
 `src/content/site.json`) shows the form and that `/PublicLead?slug=other` answers 404. The form link lives in `site.json`; which service each page
 preselects is `form.serviceTypes` in `src/content/enquiry.json`.
 
+## Document drop-off (eTaskMe)
+
+"Submit your documents" buttons (`"dropoff": true` on a hero action) open a dialog with the client's
+eTaskMe drop-off form (`src/components/ui/DropoffFrame.jsx`). It is proxied like the enquiry form:
+each host forwards only `/dropoff/leadtax-gljry7li` (`site.apps.dropoff.path`) and the four steps
+its script posts to (`/PublicDropoff/ValidateIntake`, `SendVerification`, `ConfirmVerification`,
+`SubmitPublic`); everything else answers 404. Uploads are PDFs of up to 8 MB in total, so
+`deploy/nginx.conf` raises the body limit to 10 MB for those steps. Vercel doesn't document a body
+limit for proxied requests, so test an upload of a few MB after deploying there. Without the
+proxy, the dialog shows a button that opens the form in its own window.
+
 ## Images and speed
 
 - Large photos have smaller WebP copies (`<name>-480w.webp`, `-800w.webp`, `-1200w.webp`) and the

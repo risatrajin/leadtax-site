@@ -3,6 +3,7 @@ import { ExternalLink, LoaderCircle } from "lucide-react";
 import site from "../../content/site.json";
 import Button from "./Button.jsx";
 import LeadFormSent from "./LeadFormSent.jsx";
+import { fitFrame, restyleFrame, siteTheme } from "../../lib/embed.js";
 
 /**
  * Restyles the eTaskMe pages to match the site: the form loses its own header (the banner above
@@ -90,11 +91,8 @@ export default function LeadFormFrame({ title, fallbackLabel, loadingLabel, serv
       onSent?.();
       return;
     }
-    const root = getComputedStyle(document.documentElement);
-    const brand = root.getPropertyValue("--color-brand").trim() || "#177ff8";
-    const brandStrong = root.getPropertyValue("--color-brand-strong").trim() || "#0b5ed7";
-    const style = doc.createElement("style");
-    style.textContent = formStyles(brand, brandStrong, getComputedStyle(document.body).fontFamily) + (compact ? compactStyles(brand, brandStrong) : "");
+    const { brand, brandStrong, font } = siteTheme();
+    restyleFrame(doc, formStyles(brand, brandStrong, font) + (compact ? compactStyles(brand, brandStrong) : ""));
     // Wrap the "*" that marks required fields so it can take the brand colour.
     for (const label of doc.querySelectorAll("label")) {
       const last = label.lastChild;
@@ -106,18 +104,10 @@ export default function LeadFormFrame({ title, fallbackLabel, loadingLabel, serv
         label.append(mark);
       }
     }
-    doc.head.append(style);
     const serviceOption = service && [...doc.querySelectorAll("#ProjectTypeId option")].find((option) => option.text.trim() === service);
     if (serviceOption) serviceOption.selected = true;
-    for (const link of document.querySelectorAll('link[rel="stylesheet"][href*="fonts.googleapis.com"]')) {
-      doc.head.append(link.cloneNode());
-    }
     // Keep the frame as tall as its page (the form grows when validation messages appear).
-    const fit = () => {
-      frame.style.height = `${Math.ceil(doc.body.getBoundingClientRect().bottom)}px`;
-    };
-    new ResizeObserver(fit).observe(doc.body);
-    fit();
+    fitFrame(frame, doc);
     setState("loaded");
   };
 

@@ -6,6 +6,8 @@ User-agent: *
 Allow: /
 Disallow: /sign-in
 Disallow: /PublicLead
+Disallow: /dropoff/
+Disallow: /PublicDropoff/
 
 # AI search and assistant crawlers are welcome too, so LeadTax can be found and cited in AI answers.
 User-agent: GPTBot
@@ -23,6 +25,8 @@ User-agent: DuckAssistBot
 Allow: /
 Disallow: /sign-in
 Disallow: /PublicLead
+Disallow: /dropoff/
+Disallow: /PublicDropoff/
 
 Sitemap: https://leadtax.ca/sitemap.xml
 

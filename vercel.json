@@ -14,6 +14,14 @@
     {
       "source": "/PublicLead/:page(Submit|Thanks)",
       "destination": "https://erp.etaskme.com/PublicLead/:page"
+    },
+    {
+      "source": "/dropoff/leadtax-gljry7li",
+      "destination": "https://erp.etaskme.com/dropoff/leadtax-gljry7li"
+    },
+    {
+      "source": "/PublicDropoff/:step(ValidateIntake|SendVerification|ConfirmVerification|SubmitPublic)",
+      "destination": "https://erp.etaskme.com/PublicDropoff/:step"
     }
   ],
   "redirects": [

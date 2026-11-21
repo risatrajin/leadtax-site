@@ -15,6 +15,14 @@ export function resolveHref(href) {
   return href;
 }
 
+/** Window event that opens the document drop-off dialog (components/global/DropoffDialog). */
+export const DROPOFF_EVENT = "leadtax:dropoff";
+
+/** Opens the document drop-off dialog. */
+export function openDropoff() {
+  window.dispatchEvent(new Event(DROPOFF_EVENT));
+}
+
 /**
  * Opens `href` in a small named window (how the client's eTaskMe snippets open their forms).
  * Returns false when the browser blocks it, so the link can open it normally instead.

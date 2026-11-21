@@ -27,7 +27,7 @@
     {
       "label": "Submit your documents",
       "href": "app:dropoff.submit",
-      "popup": "companyDropoff"
+      "dropoff": true
     },
     {
       "label": "Explore the service",

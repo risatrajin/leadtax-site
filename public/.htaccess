@@ -26,6 +26,9 @@ ErrorDocument 404 /404.html
     RewriteCond %{QUERY_STRING} ^slug=Xt_JIyAI2y5tfwpMS_CKVCOaFq_KYeWO$
     RewriteRule ^PublicLead$ https://erp.etaskme.com/PublicLead [P,QSA,L]
     RewriteRule ^PublicLead/(Submit|Thanks)$ https://erp.etaskme.com/PublicLead/$1 [P,QSA,L]
+    # The document drop-off form, proxied the same way for the drop-off modal.
+    RewriteRule ^dropoff/leadtax-gljry7li$ https://erp.etaskme.com/dropoff/leadtax-gljry7li [P,QSA,L]
+    RewriteRule ^PublicDropoff/(ValidateIntake|SendVerification|ConfirmVerification|SubmitPublic)$ https://erp.etaskme.com/PublicDropoff/$1 [P,QSA,L]
   </IfModule>
 
   # Old pages that no longer exist: permanent redirects keep their search ranking.

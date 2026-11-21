@@ -30,8 +30,9 @@
       "register": "https://portal.leadtax.ca/user/auth/register"
     },
     "dropoff": {
-      "_note": "Document drop-off form in the client's ERP (eTaskMe). Links with \"popup\" open it in a small window, like the client's embed snippet.",
-      "submit": "https://erp.etaskme.com/dropoff/leadtax-gljry7li"
+      "_note": "Document drop-off form in the client's ERP (eTaskMe). 'path' is the same page served through this site (each host proxies it, like the enquiry form), shown in the drop-off modal; 'submit' is the direct link, used when the proxy isn't there.",
+      "submit": "https://erp.etaskme.com/dropoff/leadtax-gljry7li",
+      "path": "/dropoff/leadtax-gljry7li"
     }
   },
   "social": [
