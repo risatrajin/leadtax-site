@@ -1,4 +1,5 @@
 import { useEffect, useRef } from "react";
+import { whenIdle } from "../../lib/idle.js";
 
 const PLAYER_SCRIPT = "https://fast.wistia.com/player.js";
 const PLAY_ICON =
@@ -22,11 +23,14 @@ export default function WistiaPopover({ mediaId, label, linkClassName, className
   const containerRef = useRef(null);
 
   useEffect(() => {
-    loadScript(PLAYER_SCRIPT);
-    loadScript(`https://fast.wistia.com/embed/${mediaId}.js`, "module");
+    // Wistia's scripts are large; they load once the page is idle and upgrade the button in place.
+    const cancel = whenIdle(() => {
+      loadScript(PLAYER_SCRIPT);
+      loadScript(`https://fast.wistia.com/embed/${mediaId}.js`, "module");
+    });
 
     const container = containerRef.current;
-    if (!container || container.querySelector("wistia-player")) return;
+    if (!container || container.querySelector("wistia-player")) return cancel;
 
     const player = document.createElement("wistia-player");
     player.setAttribute("media-id", mediaId);
@@ -43,6 +47,7 @@ export default function WistiaPopover({ mediaId, label, linkClassName, className
 
     player.appendChild(trigger);
     container.appendChild(player);
+    return cancel;
   }, []);
 
   return <div ref={containerRef} className={className} />;

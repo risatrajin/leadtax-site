@@ -5,6 +5,7 @@ import { openPopup } from "../../lib/links.js";
 import QuickQueryButton from "./QuickQueryButton.jsx";
 import LeadFormFrame from "./LeadFormFrame.jsx";
 import enquiry from "../../content/enquiry.json";
+import { imgProps } from "../../lib/images.js";
 
 /**
  * Where the "Quick question" pill sits on the hero photo, set per page with `image.quickQuery`.
@@ -124,7 +125,7 @@ export default function PageHero({ eyebrow, title, text, actions = [], image, im
           <div className="relative">
             <QuickQueryButton className={cx("whitespace-nowrap", QUICK_QUERY_POSITIONS[image.quickQuery ?? "top-right"])} />
             <img
-              src={image.src}
+              {...imgProps(image.src, "(min-width: 1024px) 50vw, 100vw")}
               fetchpriority="high"
               alt={image.alt}
               className={cx("h-64 w-full object-cover shadow-2xl md:h-96", decor ? "rounded-3xl ring-1 ring-white/15" : "rounded-2xl")}

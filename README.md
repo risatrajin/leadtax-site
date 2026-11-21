@@ -106,9 +106,24 @@ domain (`X-Frame-Options: SAMEORIGIN`), so each host forwards `/PublicLead` and 
 On Apache it needs `mod_proxy` with SSL proxying, which some shared hosts don't offer. Where the
 forwarding is missing, the forms show a "Request a Consultation" link to the form instead.
 
+Only LeadTax's own form is forwarded: `/PublicLead` with its slug, plus `/PublicLead/Submit` and
+`/PublicLead/Thanks`. Anything else under `/PublicLead` (another company's slug, other eTaskMe
+pages) answers 404, so no other eTaskMe form can be shown under this domain. If the slug in
+`leadFormPath` changes, update it in each host config too.
+
 After deploying, check that `https://leadtax.ca/PublicLead?slug=…` (see `leadFormPath` in
-`src/content/site.json`) shows the form. The form link lives in `site.json`; which service each page
+`src/content/site.json`) shows the form and that `/PublicLead?slug=other` answers 404. The form link lives in `site.json`; which service each page
 preselects is `form.serviceTypes` in `src/content/enquiry.json`.
+
+## Images and speed
+
+- Large photos have smaller WebP copies (`<name>-480w.webp`, `-800w.webp`, `-1200w.webp`) and the
+  site serves them through `srcset` (`src/lib/images.js`), so phones and small cards download a
+  small file. After adding or replacing a large photo, run `npm run images` (macOS; needs `cwebp`,
+  `brew install webp`) and commit the new files and `src/content/image-variants.json`.
+  Unsplash photos are resized by Unsplash itself.
+- Google Tag Manager, Intercom and the Wistia video scripts load once the page has finished
+  loading and the browser is idle (`src/lib/idle.js`), so they don't slow the first view.
 
 ## SEO and AI search (GEO)
 

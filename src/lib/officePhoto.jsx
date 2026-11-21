@@ -1,12 +1,13 @@
 import officeData from "../content/offices.json";
 import PhotoPlaceholder from "../components/ui/PhotoPlaceholder.jsx";
 import { fill } from "./template.js";
+import { imgProps } from "./images.js";
 
 /**
  * The office's photo, or a labelled placeholder when there is no usable photo yet.
- * `photoZoom` in offices.json scales the photo up to crop its edges; `photoPosition` sets the focus.
+ * `sizes` is the photo's displayed width. `photoZoom` in offices.json scales the photo up to crop its edges; `photoPosition` sets the focus.
  */
-export function OfficePhoto({ office, alt, className }) {
+export function OfficePhoto({ office, alt, className, sizes = "160px" }) {
   if (!office.photo) {
     return (
       <PhotoPlaceholder
@@ -20,7 +21,7 @@ export function OfficePhoto({ office, alt, className }) {
     return (
       <div role="img" aria-label={alt || undefined} className={`${className} overflow-hidden`}>
         <img
-          src={office.photo}
+          {...imgProps(office.photo, sizes)}
           loading="lazy"
           decoding="async"
           alt=""
@@ -30,5 +31,5 @@ export function OfficePhoto({ office, alt, className }) {
       </div>
     );
   }
-  return <img src={office.photo} alt={alt} loading="lazy" decoding="async" className={className} />;
+  return <img {...imgProps(office.photo, sizes)} alt={alt} loading="lazy" decoding="async" className={className} />;
 }

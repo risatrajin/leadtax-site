@@ -5,9 +5,11 @@
 https://www.leadtax.ca/*  https://leadtax.ca/:splat  301!
 
 # The client's enquiry form (eTaskMe), served from this domain so it can load in the quick
-# question modal (it only allows framing by its own origin).
-/PublicLead    https://erp.etaskme.com/PublicLead    200
-/PublicLead/*  https://erp.etaskme.com/PublicLead/:splat  200
+# question modal (it only allows framing by its own origin). Only LeadTax's form (the slug from
+# leadFormPath in src/content/site.json), the send step and the thank-you page are forwarded.
+/PublicLead          https://erp.etaskme.com/PublicLead?slug=Xt_JIyAI2y5tfwpMS_CKVCOaFq_KYeWO  200!
+/PublicLead/Submit   https://erp.etaskme.com/PublicLead/Submit  200!
+/PublicLead/Thanks   https://erp.etaskme.com/PublicLead/Thanks  200!
 
 # Old pages that no longer exist: permanent redirects keep their search ranking.
 /sign-in               https://app.leadtax.ca/user/auth/login  301

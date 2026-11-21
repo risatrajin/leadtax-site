@@ -12,6 +12,7 @@ import SmartLink from "../../components/ui/SmartLink.jsx";
 import { buttonClasses } from "../../components/ui/Button.jsx";
 import { SectionTitle } from "../../components/ui/ServiceBlocks.jsx";
 import { linkById } from "../../components/layout/site-header/panels.jsx";
+import { imgProps } from "../../lib/images.js";
 
 /** How long each tab stays open before the next opens on its own (wide screens only). */
 const STEP_MS = 7000;
@@ -32,7 +33,7 @@ function InPersonMock() {
   const office = offices[0];
   return (
     <div className="w-full max-w-sm rounded-2xl bg-white p-5 shadow-2xl">
-      <img src={office.photo} alt="" loading="lazy" decoding="async" className="h-36 w-full rounded-2xl object-cover" />
+      <img {...imgProps(office.photo, "(min-width: 1024px) 300px, 50vw")} alt="" loading="lazy" decoding="async" className="h-36 w-full rounded-2xl object-cover" />
       <p className="mt-4 text-lg font-semibold text-gray-900">{office.shortName}</p>
       <p className="text-sm text-gray-600">{office.display.address}</p>
       <p className="mt-1 text-sm font-semibold text-gray-900">{officePhone(office)}</p>

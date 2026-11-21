@@ -10,7 +10,8 @@
     "placeholders": "node scripts/list-placeholders.mjs",
     "check:header": "node scripts/check-header.mjs",
     "compare": "node scripts/compare-screenshots.mjs",
-    "baseline:save": "node scripts/compare-screenshots.mjs --save-baseline"
+    "baseline:save": "node scripts/compare-screenshots.mjs --save-baseline",
+    "images": "node scripts/make-image-variants.mjs"
   },
   "dependencies": {
     "@radix-ui/react-dialog": "^1.1.23",

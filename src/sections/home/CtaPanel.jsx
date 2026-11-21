@@ -4,6 +4,7 @@ import { tollFreeDashed } from "../../lib/phone.js";
 import { fill } from "../../lib/template.js";
 import Button from "../../components/ui/Button.jsx";
 import CopyText from "../../components/ui/CopyText.jsx";
+import { imgProps } from "../../lib/images.js";
 
 /**
  * Closing booking panel: a navy card with soft light glows, a faint grid and, when `cta.image` is
@@ -17,7 +18,7 @@ export default function CtaPanel({ to, className = "bg-white", content = home })
       <div className="relative isolate mx-auto max-w-7xl overflow-hidden rounded-[2rem] bg-brand-strong px-8 py-14 text-white shadow-2xl md:px-14 md:py-20">
         {cta.image && (
           <img
-            src={cta.image.src}
+            {...imgProps(cta.image.src, "60vw")}
             alt=""
             loading="lazy"
             className="absolute inset-y-0 right-0 -z-10 hidden h-full w-3/5 object-cover opacity-40 mix-blend-luminosity [mask-image:linear-gradient(to_left,black_20%,transparent)] lg:block"

@@ -1,9 +1,11 @@
 import { useEffect } from "react";
 import site from "../../content/site.json";
+import { whenIdle } from "../../lib/idle.js";
 
-/** Boots the Intercom chat launcher (standard Intercom install snippet). */
+/** Boots the Intercom chat launcher (standard Intercom install snippet), once the page is idle. */
 export default function IntercomWidget() {
   useEffect(() => {
+    let cancelLoad;
     const { intercomAppId: appId, intercomApiBase: apiBase } = site.integrations;
     window.intercomSettings = { api_base: apiBase, app_id: appId };
 
@@ -29,11 +31,11 @@ export default function IntercomWidget() {
         const first = document.getElementsByTagName("script")[0];
         first.parentNode?.insertBefore(script, first);
       };
-      if (document.readyState === "complete") load();
-      else window.addEventListener("load", load, false);
+      cancelLoad = whenIdle(load);
     }
 
     return () => {
+      cancelLoad?.();
       const intercom = window.Intercom;
       if (typeof intercom === "function") intercom("shutdown");
     };

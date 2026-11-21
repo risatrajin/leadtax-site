@@ -208,6 +208,9 @@ try {
   fs.mkdirSync(path.join(DIST, "sitemap"), { recursive: true });
   fs.writeFileSync(path.join(DIST, "sitemap", "index.html"), sitemapHtml(PAGE_ROUTES, buildHead, SERVICE_PAGES));
 
+  // The build manifest was only needed above; don't publish it.
+  fs.rmSync(path.join(DIST, ".vite"), { recursive: true, force: true });
+
   console.log(`Pre-rendered ${PAGE_ROUTES.length} pages and 404.html; wrote sitemap.xml, /sitemap and llms.txt`);
 } finally {
   await vite.close();

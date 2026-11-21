@@ -3,6 +3,7 @@ import { Check } from "lucide-react";
 import fileOnline from "../../content/pages/file-online.json";
 import { getIcon } from "../../lib/icons.js";
 import { cx } from "../../lib/cx.js";
+import { imgProps } from "../../lib/images.js";
 
 /** How long each item stays in the centre before the next slides in. */
 const STEP_MS = 3500;
@@ -149,7 +150,7 @@ export default function ConfidenceCarousel({ slides }) {
                   </div>
                 </div>
                 <img
-                  src={slides[index].image.src}
+                  {...imgProps(slides[index].image.src, "380px")}
                   loading="lazy"
                   decoding="async"
                   alt={current ? slides[index].image.alt : ""}
@@ -179,7 +180,7 @@ export default function ConfidenceCarousel({ slides }) {
           </div>
           <img
             key={`image-${active}`}
-            src={slide.image.src}
+            {...imgProps(slide.image.src, "(min-width: 768px) 380px, 100vw")}
             loading="lazy"
             decoding="async"
             alt={slide.image.alt}

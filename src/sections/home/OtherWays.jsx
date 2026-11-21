@@ -2,6 +2,7 @@ import { ArrowRight, Check } from "lucide-react";
 import home from "../../content/home.json";
 import SmartLink from "../../components/ui/SmartLink.jsx";
 import { cx } from "../../lib/cx.js";
+import { imgProps } from "../../lib/images.js";
 
 /**
  * A titled grid of cards, each with text, an optional photo, badge and checklist, and a link. `section` is the
@@ -26,7 +27,7 @@ export default function OtherWays({ content = home, section = "otherWays", class
               {card.image && (
                 <div className="mb-6 overflow-hidden rounded-xl">
                   <img
-                    src={card.image.src}
+                    {...imgProps(card.image.src, "(min-width: 1024px) 380px, (min-width: 768px) 50vw, 100vw")}
                     alt={card.image.alt}
                     loading="lazy"
                     className="aspect-[4/3] w-full object-cover transition duration-500 group-hover:scale-105 motion-reduce:group-hover:scale-100"

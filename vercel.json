@@ -8,11 +8,12 @@
   "rewrites": [
     {
       "source": "/PublicLead",
+      "has": [{ "type": "query", "key": "slug", "value": "Xt_JIyAI2y5tfwpMS_CKVCOaFq_KYeWO" }],
       "destination": "https://erp.etaskme.com/PublicLead"
     },
     {
-      "source": "/PublicLead/:path*",
-      "destination": "https://erp.etaskme.com/PublicLead/:path*"
+      "source": "/PublicLead/:page(Submit|Thanks)",
+      "destination": "https://erp.etaskme.com/PublicLead/:page"
     }
   ],
   "redirects": [

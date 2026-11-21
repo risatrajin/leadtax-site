@@ -216,7 +216,7 @@ export default function Offices({ className = "bg-gray-50" }) {
               {/* The map runs 22rem past the left edge, so the office pin centres in the open area left of the card. */}
               <OfficeMap office={active} offsetLeft="22rem" className="absolute inset-0" />
               <div key={active.id} className={`${CARD} animate-fadeIn absolute right-4 top-4 w-80 overflow-hidden`}>
-                <OfficePhoto office={active} alt={photoAlt(active)} className="h-40 w-full object-cover" />
+                <OfficePhoto office={active} alt={photoAlt(active)} sizes="400px" className="h-40 w-full object-cover" />
                 <div className="space-y-4 p-5">
                   <div>
                     <p className="text-lg font-semibold text-gray-900">{active.shortName}</p>

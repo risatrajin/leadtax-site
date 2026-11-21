@@ -20,8 +20,12 @@ ErrorDocument 404 /404.html
   # The client's enquiry form (eTaskMe), served from this domain so it can load in the quick
   # question modal (it only allows framing by its own origin). Needs mod_proxy with SSL proxying;
   # without it the modal links to the form instead.
+  # Only LeadTax's form (the slug from leadFormPath in src/content/site.json), the send step and
+  # the thank-you page are forwarded.
   <IfModule mod_proxy.c>
-    RewriteRule ^PublicLead(/.*)?$ https://erp.etaskme.com/PublicLead$1 [P,QSA,L]
+    RewriteCond %{QUERY_STRING} ^slug=Xt_JIyAI2y5tfwpMS_CKVCOaFq_KYeWO$
+    RewriteRule ^PublicLead$ https://erp.etaskme.com/PublicLead [P,QSA,L]
+    RewriteRule ^PublicLead/(Submit|Thanks)$ https://erp.etaskme.com/PublicLead/$1 [P,QSA,L]
   </IfModule>
 
   # Old pages that no longer exist: permanent redirects keep their search ranking.

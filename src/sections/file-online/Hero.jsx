@@ -6,6 +6,7 @@ import Button from "../../components/ui/Button.jsx";
 import WistiaPopover from "../../components/media/WistiaPopover.jsx";
 import CopyText from "../../components/ui/CopyText.jsx";
 import QuickQueryButton from "../../components/ui/QuickQueryButton.jsx";
+import { imgProps } from "../../lib/images.js";
 
 const { hero } = home;
 
@@ -18,7 +19,7 @@ export default function Hero() {
       {/* Below 1280px the photo sits on top; from 1280px it covers the whole hero behind the text. */}
       <div className="relative h-64 sm:h-80 lg:h-[26rem] xl:absolute xl:inset-0 xl:h-auto">
         <img
-          src={hero.image.src}
+          {...imgProps(hero.image.src, "100vw")}
           fetchpriority="high"
           alt={hero.image.alt}
           className="h-full w-full object-cover"

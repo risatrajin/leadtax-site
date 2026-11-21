@@ -14,6 +14,7 @@ import PreviousYearsBanner from "../sections/file-online/PreviousYearsBanner.jsx
 import ConfidenceCarousel from "../sections/home/ConfidenceCarousel.jsx";
 import HowItWorks from "../sections/file-online/HowItWorks.jsx";
 import { DiyExpertCta, DiyFaq, DiyTools } from "../sections/home/DiySupport.jsx";
+import { imgProps } from "../lib/images.js";
 
 const SECTION = "scroll-mt-28 px-4 py-16 md:px-8 md:py-24";
 
@@ -59,7 +60,7 @@ function Hero() {
             {/* Sized to the photo so the button can sit on the top-right corner of its dark panel. */}
             <div className="relative lg:h-full">
               <img
-                src={hero.image.src}
+                {...imgProps(hero.image.src, "(min-width: 1024px) 612px, (min-width: 640px) 448px, 384px")}
                 width="900"
                 height="1184"
                 fetchpriority="high"

@@ -7,6 +7,7 @@ import PageShell from "../components/layout/PageShell.jsx";
 import PageHero, { actionProps } from "../components/ui/PageHero.jsx";
 import Button from "../components/ui/Button.jsx";
 import { cx } from "../lib/cx.js";
+import { imgProps } from "../lib/images.js";
 
 const copy = blog.listing;
 const listedPosts = posts.filter((post) => post.excerpt);
@@ -44,7 +45,7 @@ function Featured({ post }) {
     >
       <div className="overflow-hidden">
         <img
-          src={post.image ?? post.cardImage}
+          {...imgProps(post.image ?? post.cardImage, "(min-width: 1024px) 55vw, 100vw")}
           alt=""
           className="h-64 w-full object-cover transition duration-700 group-hover:scale-105 motion-reduce:group-hover:scale-100 sm:h-80 lg:h-full"
         />
@@ -77,7 +78,7 @@ function PostCard({ post }) {
     <Link to={`/blog/${post.slug}`} className="group flex h-full flex-col">
       <div className="overflow-hidden rounded-2xl">
         <img
-          src={post.cardImage ?? post.image}
+          {...imgProps(post.cardImage ?? post.image, "(min-width: 1024px) 400px, (min-width: 768px) 50vw, 100vw")}
           alt=""
           loading="lazy"
           className="aspect-[16/10] w-full object-cover transition duration-700 group-hover:scale-105 motion-reduce:group-hover:scale-100"
