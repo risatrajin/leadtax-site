@@ -2,6 +2,7 @@ import { useId, useState } from "react";
 import { ArrowUpRight, ChevronDown } from "lucide-react";
 import SmartLink from "./SmartLink.jsx";
 import Collapse from "./Collapse.jsx";
+import RichText from "./RichText.jsx";
 
 /**
  * Expandable question list. Two styles exist on the site:
@@ -36,7 +37,7 @@ function SimpleFaq({ items }) {
             />
           </button>
           <Collapse id={`${uid}-${index}`} open={Boolean(open[item.question])} className="px-6 pb-5 text-gray-600 whitespace-pre-line">
-            {item.answer}
+            <RichText text={item.answer} />
           </Collapse>
         </div>
       ))}
@@ -66,7 +67,9 @@ function BorderedFaq({ items }) {
             />
           </button>
           <Collapse id={`${uid}-${index}`} open={openIndex === index} className="px-6 pb-6">
-            <p className="text-gray-600 leading-relaxed">{item.answer}</p>
+            <p className="text-gray-600 leading-relaxed">
+              <RichText text={item.answer} />
+            </p>
             {item.link && (
               <SmartLink
                 to={item.link.to}

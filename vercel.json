@@ -75,10 +75,10 @@
       "has": [
         {
           "type": "host",
-          "value": "www.leadtax.ca"
+          "value": "leadtax.ca"
         }
       ],
-      "destination": "https://leadtax.ca/:path*",
+      "destination": "https://www.leadtax.ca/:path*",
       "permanent": true
     }
   ],

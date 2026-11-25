@@ -34,12 +34,12 @@ export default function PostHeader({ post, backLabel }) {
           </div>
           <div>
             <p className="font-bold">{post.author}</p>
-            <p className="text-sm text-brand-subtle">{post.authorRole}</p>
+            {post.authorRole && <p className="text-sm text-brand-subtle">{post.authorRole}</p>}
           </div>
         </div>
         {post.image && (
           <div className="rounded-xl overflow-hidden shadow-2xl">
-            <img {...imgProps(post.image, "(min-width: 1024px) 50vw, 100vw")} alt={post.title} fetchpriority="high" className="w-full h-64 md:h-96 object-cover" />
+            <img {...imgProps(post.image, "(min-width: 1024px) 50vw, 100vw")} alt={post.imageAlt ?? post.title} fetchpriority="high" className="w-full h-64 md:h-96 object-cover" />
           </div>
         )}
       </div>

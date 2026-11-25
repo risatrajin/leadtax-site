@@ -16,6 +16,7 @@ import { CARD } from "../../lib/styles.js";
 import Button from "../../components/ui/Button.jsx";
 import ExpertPickerDialog from "../contact/ExpertPickerDialog.jsx";
 import CopyText from "../../components/ui/CopyText.jsx";
+import RichText from "../../components/ui/RichText.jsx";
 
 const { offices: copy, bookingFallback } = content;
 
@@ -169,7 +170,7 @@ function OfficeCard({ office, selected, onSelect, onPickExpert }) {
  * Offices: a list grouped by city on the left and, from 1024px, a grayscale Google map on the
  * right centred on the selected office, with a card showing its photo, hours and actions.
  */
-export default function Offices({ className = "bg-gray-50" }) {
+export default function Offices({ className = "bg-gray-50", title = copy.title, intro = copy.intro }) {
   // A link like /contact#vancouver-kingsway opens with that office selected.
   const { hash, key } = useLocation();
   const hashId = offices.find((office) => `#${office.id}` === hash)?.id;
@@ -184,8 +185,10 @@ export default function Offices({ className = "bg-gray-50" }) {
     <section id="offices" className={`scroll-mt-24 ${className} px-4 py-16 md:px-8 md:py-24`}>
       <div className="mx-auto max-w-7xl">
         <div className="grid gap-6 lg:grid-cols-12 lg:items-end lg:gap-12">
-          <h2 className="text-3xl text-gray-900 md:text-4xl lg:col-span-5 lg:text-5xl">{copy.title}</h2>
-          <p className="max-w-xl text-lg text-gray-600 lg:col-span-7">{copy.intro}</p>
+          <h2 className="text-3xl text-gray-900 md:text-4xl lg:col-span-5 lg:text-5xl">{title}</h2>
+          <p className="max-w-xl text-lg text-gray-600 lg:col-span-7">
+            <RichText text={intro} />
+          </p>
         </div>
 
         <div className="mt-12 grid gap-10 lg:grid-cols-12 lg:gap-8">

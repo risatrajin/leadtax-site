@@ -11,6 +11,7 @@ import seo from "../content/seo.json";
 import site from "../content/site.json";
 import nav from "../content/nav.json";
 import faqs from "../content/faqs.json";
+import home from "../content/homepage.json";
 import { offices } from "../content/offices.json";
 import { posts } from "../content/blog/posts.json";
 import servicePages from "../content/service-pages.json";
@@ -18,6 +19,7 @@ import bookkeeping from "../content/pages/bookkeeping.json";
 import trustEstate from "../content/pages/trust-estate.json";
 import crossBorder from "../content/pages/us-cross-border.json";
 import { toE164 } from "./phone.js";
+import { plainText } from "./markup.js";
 
 const { defaults, meta, schema, pages } = seo;
 
@@ -56,14 +58,23 @@ const PAGE_KEYS = {
 export const SERVICE_PAGES = {
   "/personal-tax": { name: "Personal tax", faqs: servicePages.pages["personal-tax"].faqs },
   "/corporate-tax": { name: "Corporate tax", faqs: servicePages.pages["corporate-tax"].faqs },
-  "/bookkeeping": { name: "Bookkeeping", faqs: bookkeeping.faqs },
+  "/bookkeeping": {
+    name: "Bookkeeping",
+    faqs: bookkeeping.faqs,
+    offers: bookkeeping.pricing.plans.map((plan) => ({
+      "@type": "Offer",
+      name: plan.name,
+      price: plan.price.monthly.replace(/[^0-9.]/g, ""),
+      priceCurrency: "CAD",
+    })),
+  },
   "/trust-estate-tax": { name: "Trust & estate tax", faqs: trustEstate.faqs },
   "/us-cross-border": { name: "US & cross-border tax", faqs: crossBorder.faq.items },
 };
 
 /** Breadcrumb names for top-level routes (URL slugs alone would read "Us Cross Border"). */
 const CRUMB_NAMES = {
-  "us-cross-border": "US & Cross-Border",
+  "us-cross-border": "US and Cross-Border Tax",
   "trust-estate-tax": "Trust & Estate",
   "personal-tax": "Personal Tax",
   "corporate-tax": "Corporate Tax",
@@ -89,9 +100,10 @@ function isoDate(text) {
 }
 
 function summary(post) {
+  if (post.seoDescription) return post.seoDescription;
   if (post.excerpt) return post.excerpt;
   const first = post.content.find((block) => block.type === "intro" || block.type === "paragraph");
-  const text = first?.text ?? "";
+  const text = plainText(first?.text ?? "");
   return text.length > 160 ? `${text.slice(0, 157).replace(/\s+\S*$/, "")}...` : text;
 }
 
@@ -109,7 +121,7 @@ export function pageSeo(pathname) {
     return {
       ...defaults,
       robots: meta.robots,
-      title: `${post.title} | LeadTax Blog`,
+      title: post.seoTitle ?? `${post.title} | LeadTax Blog`,
       description: summary(post),
       ogType: "article",
       ogImage: absolute(post.cardImage ?? post.image) ?? defaults.ogImage,
@@ -142,7 +154,7 @@ function siteGraph(pathname, page) {
   const organizationId = `${siteUrl}/#organization`;
   const organization = {
     "@context": "https://schema.org",
-    "@type": "Organization",
+    "@type": ["Organization", "AccountingService"],
     "@id": organizationId,
     name: site.name,
     legalName: nav.footer.legalName,
@@ -161,6 +173,7 @@ function siteGraph(pathname, page) {
       areaServed: "CA",
       availableLanguage: schema.organization.availableLanguage,
     },
+    areaServed: schema.organization.areaServed,
     // Order differs from the footer icons; kept as published.
     sameAs: ["x", "facebook", "linkedin", "instagram", "youtube", "tiktok"].map(
       (id) => site.social.find((social) => social.id === id).url,
@@ -171,6 +184,7 @@ function siteGraph(pathname, page) {
   const website = {
     "@context": "https://schema.org",
     "@type": "WebSite",
+    "@id": `${siteUrl}/#website`,
     name: site.name,
     url: siteUrl,
     inLanguage: "en-CA",
@@ -205,20 +219,25 @@ function siteGraph(pathname, page) {
     ],
   };
 
+  const pageUrl = `${siteUrl}${normalize(pathname) === "/" ? "/" : normalize(pathname)}`;
   const servicePage = SERVICE_PAGES[normalize(pathname)];
+  // A page's own Service name and type (seo.json → pages → schema.service) ties it to the organization.
+  const ownService = page.schema?.service;
+  const cities = officeCities.map((city) => ({ "@type": "City", name: city }));
   const service = servicePage
     ? {
         "@context": "https://schema.org",
         "@type": "Service",
-        name: servicePage.name,
-        serviceType: servicePage.name,
+        ...(ownService ? { "@id": `${pageUrl}#service` } : {}),
+        name: ownService?.name ?? servicePage.name,
+        serviceType: ownService?.serviceType ?? servicePage.name,
         description: page.description,
-        url: `${siteUrl}${normalize(pathname)}`,
-        provider: { "@id": `${siteUrl}/#business` },
-        areaServed: [
-          ...officeCities.map((city) => ({ "@type": "City", name: city })),
-          { "@type": "Country", name: "Canada" },
-        ],
+        url: pageUrl,
+        provider: ownService ? { "@id": organizationId } : { "@id": `${siteUrl}/#business` },
+        areaServed: ownService
+          ? [...cities, { "@type": "AdministrativeArea", name: "British Columbia" }]
+          : [...cities, { "@type": "Country", name: "Canada" }],
+        ...(servicePage.offers ? { offers: servicePage.offers } : {}),
       }
     : {
     "@context": "https://schema.org",
@@ -258,18 +277,35 @@ function siteGraph(pathname, page) {
 
   const graph = [organization, website, localBusiness, service, breadcrumbs];
 
+  // Pages with a recorded update date (seo.json → pages → schema.dateModified) publish a WebPage node.
+  if (page.schema?.dateModified) {
+    graph.push({
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "@id": `${pageUrl}#webpage`,
+      url: pageUrl,
+      name: page.title,
+      isPartOf: { "@id": `${siteUrl}/#website` },
+      about: { "@id": organizationId },
+      dateModified: page.schema.dateModified,
+    });
+  }
+
   if (page.article) {
     const post = page.article;
     const url = `${siteUrl}${normalize(pathname)}`;
     graph.push({
       "@context": "https://schema.org",
       "@type": "BlogPosting",
+      "@id": `${url}#article`,
       headline: post.title,
       description: page.description,
       image: page.ogImage,
       datePublished: isoDate(post.date),
+      ...(post.updated ? { dateModified: isoDate(post.updated) } : {}),
       // Credited to the company: the personal author names on some posts are unconfirmed (question 23).
-      author: { "@type": "Organization", name: site.name, url: siteUrl },
+      // Posts by a team (authorIsOrganization) carry that name.
+      author: { "@type": "Organization", name: post.authorIsOrganization ? post.author : site.name, url: siteUrl },
       publisher: { "@id": `${siteUrl}/#organization` },
       mainEntityOfPage: { "@type": "WebPage", "@id": url },
       articleSection: post.category,
@@ -287,7 +323,7 @@ export function faqSchema(items = faqs.faqPage) {
     mainEntity: items.map((item) => ({
       "@type": "Question",
       name: item.question,
-      acceptedAnswer: { "@type": "Answer", text: item.answer },
+      acceptedAnswer: { "@type": "Answer", text: plainText(item.answer) },
     })),
   };
 }
@@ -349,9 +385,14 @@ export function buildHead(pathname) {
 
   const jsonLd = [{ id: "site", data: siteGraph(pathname, page) }];
   if (normalize(pathname) === "/faq") jsonLd.push({ id: "faq", data: faqSchema() });
+  if (normalize(pathname) === "/") jsonLd.push({ id: "home-faq", data: faqSchema(home.faq.items) });
   // Service pages publish their own questions (id differs from "faq", which FaqSchema manages).
   const servicePage = SERVICE_PAGES[normalize(pathname)];
   if (servicePage?.faqs?.length) jsonLd.push({ id: "service-faq", data: faqSchema(servicePage.faqs) });
+
+  // Articles with a question block publish those questions too.
+  const articleFaq = page.article?.content.find((block) => block.type === "faq");
+  if (articleFaq?.items?.length) jsonLd.push({ id: "article-faq", data: faqSchema(articleFaq.items) });
 
   return { title: page.title, tags, jsonLd, notFound: Boolean(page.notFound) };
 }

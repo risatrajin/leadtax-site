@@ -1,8 +1,8 @@
 # Netlify / Cloudflare Pages redirects for the LeadTax site.
 # Other hosts: vercel.json (Vercel), deploy/nginx.conf (Docker, Coolify), .htaccess (Apache, cPanel).
 
-# One address for the whole site: https://leadtax.ca (the host Google indexes). Netlify only.
-https://www.leadtax.ca/*  https://leadtax.ca/:splat  301!
+# One address for the whole site: https://www.leadtax.ca (as the live site). Netlify only.
+https://leadtax.ca/*  https://www.leadtax.ca/:splat  301!
 
 # The client's enquiry form (eTaskMe), served from this domain so it can load in the quick
 # question modal (it only allows framing by its own origin). Only LeadTax's form (the slug from

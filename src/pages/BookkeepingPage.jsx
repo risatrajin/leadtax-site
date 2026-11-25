@@ -1,22 +1,22 @@
 import { useState } from "react";
-import { ArrowRight, Check, Phone } from "lucide-react";
+import { ArrowRight, Check } from "lucide-react";
 import page from "../content/pages/bookkeeping.json";
 import site from "../content/site.json";
 import PageShell from "../components/layout/PageShell.jsx";
 import PageHero from "../components/ui/PageHero.jsx";
 import Button, { buttonClasses } from "../components/ui/Button.jsx";
 import SmartLink from "../components/ui/SmartLink.jsx";
-import CopyText from "../components/ui/CopyText.jsx";
 import LogoOrbit from "../components/ui/LogoOrbit.jsx";
 import { QuickBooksLogo, ShopifyLogo, SquareLogo, StripeLogo } from "../components/ui/BrandLogos.jsx";
 import EnquirySection from "../components/ui/EnquirySection.jsx";
 import { EYEBROW, H2, IconCardGrid, SectionTitle } from "../components/ui/ServiceBlocks.jsx";
+import PageNote from "../components/ui/PageNote.jsx";
+import { splitLead } from "../lib/markup.js";
+import RichText from "../components/ui/RichText.jsx";
 import ServiceQuestions from "../sections/services/ServiceQuestions.jsx";
 import { getIcon } from "../lib/icons.js";
-import { tollFreeDashed } from "../lib/phone.js";
 import { CARD, SECTION } from "../lib/styles.js";
 import { cx } from "../lib/cx.js";
-import { fill } from "../lib/template.js";
 import OnThisPage from "../components/ui/OnThisPage.jsx";
 
 /** Brand logos for the tools row, by the "logo" key in the content. */
@@ -38,12 +38,13 @@ function Hero() {
     <>
       <PageHero
         eyebrow={hero.eyebrow}
+        heading={hero.h1}
         title={hero.titleLines.map((line) => (
           <span key={line} className="block">
             {line}{" "}
           </span>
         ))}
-        text={hero.text}
+        text={hero.h1 ? splitLead(hero.text)[0] : hero.text}
         actions={hero.actions}
         formService={page.name}
         decor
@@ -66,50 +67,11 @@ function Services() {
   );
 }
 
-/** Bookkeeping + tax: the case on the left, the benefits on a blue panel on the right. */
-function Together() {
-  const { together } = page;
-  return (
-    <section className={cx(SECTION, "bg-gray-50")}>
-      <div className="mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-2 lg:gap-16">
-        <div>
-          <p className={cx(EYEBROW, "mb-3")}>{together.eyebrow}</p>
-          <h2 className={H2}>{together.title}</h2>
-          {together.paragraphs.map((text) => (
-            <p key={text} className="mt-5 text-lg text-gray-600">
-              {text}
-            </p>
-          ))}
-          <Button href={together.action.href} className="group mt-8 gap-2">
-            {together.action.label}
-            <ArrowRight aria-hidden="true" className="h-5 w-5 transition-transform group-hover:translate-x-1" />
-          </Button>
-        </div>
-        <div className="relative isolate overflow-hidden rounded-[2rem] bg-gradient-to-br from-brand to-brand-strong p-8 text-white shadow-xl sm:p-10">
-          <div aria-hidden="true" className="absolute -right-24 -top-24 -z-10 h-72 w-72 rounded-full bg-white/10 blur-2xl" />
-          <h3 className="text-2xl font-semibold sm:text-3xl">{together.panelTitle}</h3>
-          <ul className="mt-6 space-y-3">
-            {together.benefits.map((benefit) => (
-              <li key={benefit.title} className="flex gap-3 rounded-2xl bg-white/10 p-4">
-                <Tick className="bg-white text-brand" />
-                <span>
-                  <span className="block font-semibold">{benefit.title}</span>
-                  <span className="block text-sm text-white/80">{benefit.text}</span>
-                </span>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </div>
-    </section>
-  );
-}
-
 /** Four numbered steps joined by a line on wide screens. */
 function Steps() {
   const { steps } = page;
   return (
-    <section id="how-it-works" className={cx(SECTION, "bg-white")}>
+    <section id="how-it-works" className={cx(SECTION, "bg-gray-50")}>
       <div className="mx-auto max-w-7xl">
         <SectionTitle eyebrow={steps.eyebrow} title={steps.title} text={steps.text} center />
         <ol className="relative mt-14 grid gap-10 sm:grid-cols-2 lg:grid-cols-4 lg:gap-8">
@@ -139,7 +101,7 @@ function Pricing() {
   const period = pricing.periods.find((candidate) => candidate.id === periodId);
 
   return (
-    <section id="pricing" className={cx(SECTION, "bg-gray-50")}>
+    <section id="pricing" className={cx(SECTION, "bg-white")}>
       <div className="mx-auto max-w-7xl">
         <SectionTitle eyebrow={pricing.eyebrow} title={pricing.title} text={pricing.text} center />
         <div className="mt-8 flex items-center justify-center gap-3">
@@ -200,7 +162,9 @@ function Pricing() {
             </li>
           ))}
         </ul>
-        <p className="mx-auto mt-10 max-w-3xl text-center text-sm text-gray-500">{pricing.footnote}</p>
+        <p className="mx-auto mt-10 max-w-3xl text-center text-sm text-gray-500">
+          <RichText text={pricing.footnote} />
+        </p>
       </div>
     </section>
   );
@@ -209,9 +173,9 @@ function Pricing() {
 function Industries() {
   const { industries } = page;
   return (
-    <section className={cx(SECTION, "bg-white")}>
+    <section className={cx(SECTION, "bg-gray-50")}>
       <div className="mx-auto max-w-7xl">
-        <SectionTitle eyebrow={industries.eyebrow} title={industries.title} center />
+        <SectionTitle eyebrow={industries.eyebrow} title={industries.title} text={industries.text} center />
         <ul className="mx-auto mt-10 flex max-w-5xl flex-wrap justify-center gap-3">
           {industries.items.map((item) => {
             const Icon = getIcon(item.icon);
@@ -329,7 +293,9 @@ function Canada() {
           </span>
           <p className={cx(EYEBROW, "mb-3 mt-6")}>{canada.eyebrow}</p>
           <h2 className={H2}>{canada.title}</h2>
-          <p className="mt-5 text-lg text-gray-600">{canada.text}</p>
+          <p className="mt-5 text-lg text-gray-600">
+            <RichText text={canada.text} />
+          </p>
           <SmartLink to={canada.action.to} className="group mt-8 inline-flex items-center gap-1.5 font-semibold text-brand underline-offset-4 hover:underline">
             {canada.action.label}
             <ArrowRight aria-hidden="true" className="h-4 w-4 transition-transform group-hover:translate-x-1" />
@@ -352,49 +318,24 @@ function Canada() {
   );
 }
 
-/** Blue closing call to action. */
-function Closing() {
-  const { cta } = page;
-  return (
-    <section className={cx(SECTION, "bg-white")}>
-      <div className="mx-auto max-w-7xl rounded-[2rem] bg-gradient-to-br from-brand to-brand-strong px-6 py-14 text-center text-white shadow-xl sm:px-12">
-        <h2 className="mx-auto max-w-3xl text-3xl font-semibold md:text-4xl lg:text-5xl">{cta.title}</h2>
-        <p className="mx-auto mt-5 max-w-2xl text-lg text-white/85">{cta.text}</p>
-        <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
-          <Button href={cta.action.href} variant="inverse" className="group gap-2">
-            {cta.action.label}
-            <ArrowRight aria-hidden="true" className="h-5 w-5 transition-transform group-hover:translate-x-1" />
-          </Button>
-          <CopyText value={tollFreeDashed} className={buttonClasses({ variant: "outlineInverseFill", className: "gap-2" })}>
-            <Phone aria-hidden="true" className="h-5 w-5" />
-            {fill(cta.callLabel, { phone: tollFreeDashed })}
-          </CopyText>
-        </div>
-      </div>
-    </section>
-  );
-}
-
 /**
- * Bookkeeping page: services, bookkeeping + tax together, how it works, plans, industries,
- * catch-up, tools, a Canadian panel and a closing call to action, then the FAQ and the enquiry
- * form (#contact). Content: src/content/pages/bookkeeping.json.
+ * Bookkeeping page: an intro, services, how it works, plans, industries, catch-up, tools and a
+ * local help panel, then the FAQ and the enquiry form (#contact). Content: src/content/pages/bookkeeping.json.
  */
 export default function BookkeepingPage() {
   return (
     <PageShell>
       <Hero />
       <Services />
-      <Together />
       <Steps />
       <Pricing />
       <Industries />
       <CatchUp />
       <Tools />
       <Canada />
-      <Closing />
-      <ServiceQuestions faqs={page.faqs} className="bg-gray-50" />
-      <EnquirySection service={page.name} className="bg-white" />
+      <ServiceQuestions faqs={page.faqs} className="bg-white" heading={page.faqHeading} sources={page.sources} />
+      <EnquirySection service={page.name} className="bg-gray-50" />
+      <PageNote text={page.hero.h1 ? splitLead(page.hero.text)[1] : undefined} blocks={[page.intro]} />
     </PageShell>
   );
 }

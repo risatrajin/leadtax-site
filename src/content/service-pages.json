@@ -77,56 +77,110 @@
   },
   "pages": {
     "personal-tax": {
+      "_note": "Copy, H1, title and description from the 7Figures SEO content strategy (Nov 18, 2026). Fields left out here (prepare, process, faq heading) use the shared values at the top of this file, which Corporate tax also uses. Inline links use [label](/path).",
       "nav": "personalTax",
       "name": "Personal tax",
+      "h1": "Personal Income Tax Preparation in Vancouver, BC",
       "eyebrow": "Personal tax services",
       "titleLines": [
         "Life changes.",
         "Your tax support stays."
       ],
-      "intro": "From your first return to retirement, get personal tax help that sees the whole picture. In person in Vancouver and Burnaby, or remotely across Canada.",
+      "intro": "LeadTax prepares personal tax returns in Vancouver and Burnaby for employees, families, renters, landlords and the self-employed. We review your slips, claim the credits and deductions you qualify for and file with the CRA, in person or remotely. Americans can add [US and cross-border tax](/us-cross-border) support, and business owners can pair filing with [bookkeeping](/bookkeeping). [Book a personal tax appointment](/contact).",
+      "servicesIntro": {
+        "title": "Personal Tax Return Services in Vancouver and Burnaby",
+        "text": "From your first return to retirement, get personal tax help that sees the whole picture. Meet us in person in Vancouver and Burnaby, or file remotely from anywhere in Canada. Scope and fees are confirmed first."
+      },
       "scope": {
-        "title": "A return that reflects your real life.",
-        "text": "A new job. A first home. A growing family. We help you understand what to bring and what happens next.",
+        "title": "What Does a Personal Tax Accountant Help With?",
+        "text": "A new job, a first home, a growing family or a move can all change your return.",
         "items": [
           {
             "icon": "Wallet",
             "title": "Income, brought together",
-            "text": "Employment, pensions, investments, rental income, and self-employment in one coordinated return."
+            "text": "Employment, pension, investment and other income slips on one return."
           },
           {
             "icon": "Receipt",
             "title": "Credits worth a closer look",
-            "text": "A review of the deductions and credits relevant to your circumstances, including tuition, medical expenses, donations, and RRSP contributions."
+            "text": "RRSP contributions, childcare, tuition, medical expenses and other claims you may qualify for."
           },
           {
             "icon": "History",
             "title": "Changes handled thoughtfully",
-            "text": "Support with prior-year returns, adjustments, moving, retirement, and changes in family circumstances."
+            "text": "Prior-year returns, adjustments, moving, retirement and changes in family circumstances."
+          },
+          {
+            "icon": "House",
+            "title": "Rental and self-employment income",
+            "text": "Records organized so deductions are claimed correctly."
           }
         ]
       },
+      "prepare": {
+        "title": "What Documents Do I Need to File a Personal Tax Return in BC?",
+        "text": "Start with these essentials. We confirm any additional records once we understand your situation.",
+        "privacy": "Share sensitive documents only through a secure method we agree on with you."
+      },
       "docs": [
-        "Photo identification and prior-year notice of assessment",
-        "Employment, pension, investment, and other income slips",
+        "Photo identification and your prior-year notice of assessment",
+        "Employment, pension, investment and other income slips",
         "RRSP receipts and relevant deduction receipts",
         "Rental or self-employment records, if applicable",
-        "Details of changes in address, residency, or family status"
+        "Details of changes in address, residency or family status"
       ],
+      "deadline": {
+        "title": "When Is the Personal Tax Return Deadline in Canada?",
+        "text": "For 2026 returns, most individuals must file and pay by April 30, 2027. Self-employed individuals and their spouses or partners can file by June 15, 2027, but any balance owing is still due April 30. Budget 2026 proposes a single May 15 deadline starting with 2027 returns. That change is a proposal, so confirm the date before you file. Review our [key tax dates](/tax-dates)."
+      },
+      "process": {
+        "title": "How Does Personal Tax Filing Work?",
+        "steps": [
+          {
+            "label": "Connect",
+            "title": "Tell us your situation.",
+            "text": "Choose a service, book an office visit or start remotely. We confirm the scope and fee."
+          },
+          {
+            "label": "Prepare",
+            "title": "Bring the relevant documents together.",
+            "text": "We review them and follow up on what is missing."
+          },
+          {
+            "label": "Move forward",
+            "title": "Review, approve and file.",
+            "text": "Leave with a clearer understanding of your next steps."
+          }
+        ]
+      },
+      "localHelp": {
+        "title": "Personal Tax Help in Vancouver and Burnaby",
+        "text": "Visit our office on Commercial Drive or another Vancouver or Burnaby location. Prefer to file yourself? [File your taxes online](/file-online) and estimate your refund with the [tax calculator](/tax-calculator). Read [RRSP vs TFSA](/blog/rrsp-vs-tfsa) or [common tax mistakes](/blog/common-tax-mistakes) before you file."
+      },
+      "faqHeading": {
+        "title": "Frequently Asked Questions About Personal Tax in Vancouver"
+      },
       "faqs": [
         {
-          "question": "Can I file without visiting an office?",
-          "answer": "Yes. Start through the existing remote filing page, or contact us to discuss the best way to share your documents."
+          "question": "Can I file my personal tax return without visiting an office?",
+          "answer": "Yes. We support remote filing, document drop-off and in-person visits. You share your documents securely, review the prepared return and approve it before we file."
         },
         {
           "question": "Can you help with more than one tax year?",
-          "answer": "Tell us which years you need prepared. We will review the scope and confirm the records required and fees before proceeding."
+          "answer": "Yes. We prepare prior-year returns and help you catch up, so you can restore access to credits and benefits that depend on filing."
         },
         {
           "question": "How much will my return cost?",
-          "answer": "Your fee depends on the income sources and work involved. Contact us for a quote tailored to your situation."
+          "answer": "Cost depends on your income sources and how many slips and credits are involved. We confirm the scope and fee before any work starts. Call 1-877-453-2382 for a quote."
         }
-      ]
+      ],
+      "sources": {
+        "title": "Sources",
+        "items": [
+          "Canada Revenue Agency: [2026 tax deadlines for Canadian businesses and self-employed individuals](https://www.canada.ca/en/services/taxes/resources-for-small-and-medium-businesses/2026-tax-deadlines-canadian-businesses-self-employed-individuals.html)",
+          "Government of Canada: [Budget 2026](https://budget.canada.ca/2026/report-rapport/pdf/budget-2026.pdf)"
+        ]
+      }
     },
     "corporate-tax": {
       "nav": "corporateTax",

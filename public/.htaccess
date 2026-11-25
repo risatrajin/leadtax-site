@@ -10,9 +10,9 @@ ErrorDocument 404 /404.html
 <IfModule mod_rewrite.c>
   RewriteEngine On
 
-  # One address for the whole site: https://leadtax.ca (the host Google indexes).
-  RewriteCond %{HTTP_HOST} ^www\.leadtax\.ca$ [NC]
-  RewriteRule ^(.*)$ https://leadtax.ca/$1 [R=301,L]
+  # One address for the whole site: https://www.leadtax.ca (as the live site).
+  RewriteCond %{HTTP_HOST} ^leadtax\.ca$ [NC]
+  RewriteRule ^(.*)$ https://www.leadtax.ca/$1 [R=301,L]
   RewriteCond %{HTTPS} !=on
   RewriteCond %{HTTP:X-Forwarded-Proto} !=https
   RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]

@@ -2,6 +2,7 @@ import { ArrowRight } from "lucide-react";
 import { cx } from "../../lib/cx.js";
 import { CARD, CARD_TITLE, LIFT } from "../../lib/styles.js";
 import { getIcon } from "../../lib/icons.js";
+import RichText from "./RichText.jsx";
 
 /** Building blocks shared by the homepage and the service pages. */
 
@@ -16,7 +17,11 @@ export function SectionTitle({ eyebrow, title, text, center }) {
     <div className={cx("max-w-3xl", center && "mx-auto text-center")}>
       {eyebrow && <p className={cx(EYEBROW, "mb-3")}>{eyebrow}</p>}
       <h2 className={H2}>{title}</h2>
-      {text && <p className="mt-4 text-lg text-gray-600">{text}</p>}
+      {text && (
+        <p className="mt-4 text-lg text-gray-600">
+          <RichText text={text} />
+        </p>
+      )}
     </div>
   );
 }

@@ -1,8 +1,9 @@
 {
   "_note": "Homepage. Copy from the developer package (website/index.html). The page title and description stay as before to protect search rankings (see seo.json).",
   "hero": {
+    "eyebrow": "Tax Services in Vancouver, BC",
     "title": "Your life. Your business. Your tax team.",
-    "text": "Find the right support for your next return, your growing business, or your next chapter.",
+    "text": "LeadTax is a tax accountant serving Vancouver and Burnaby, BC, with in-person, drop-off, remote and online filing. Our team prepares [personal tax returns](/personal-tax), [corporate tax](/corporate-tax), [US and cross-border returns](/us-cross-border) and [trust and estate returns](/trust-estate-tax), and provides [bookkeeping](/bookkeeping). We confirm the scope and fee before work begins. [Book an appointment](/contact).",
     "actions": [
       {
         "label": "Book an appointment",
@@ -17,13 +18,14 @@
       "src": "/images/hero-portrait-blue.webp",
       "alt": "Portrait of a young professional woman against a bright blue background"
     },
-    "tilesTitle": "How can we help? Five services. One place.",
+    "tilesTitle": "Tax Accountant Services in Vancouver and Burnaby",
+    "tilesIntro": "Your life, your business and your tax needs change over time. LeadTax gives you one team for each filing.",
     "tiles": [
       {
         "link": "personalTax",
         "icon": "User",
         "title": "Personal Tax",
-        "text": "For you & your family"
+        "text": "For individuals, families, renters, landlords & the self-employed"
       },
       {
         "link": "corporateTax",
@@ -35,7 +37,7 @@
         "link": "bookkeeping",
         "icon": "Calculator",
         "title": "Bookkeeping",
-        "text": "For everyday business clarity"
+        "text": "For small businesses"
       },
       {
         "link": "trustEstate",
@@ -47,7 +49,7 @@
         "link": "usCrossBorder",
         "icon": "Globe",
         "title": "Cross-Border Tax",
-        "text": "For life between Canada & the U.S."
+        "text": "For people with ties to both countries"
       }
     ],
     "note": {
@@ -66,7 +68,7 @@
   "ways": {
     "eyebrow": "Ways to file",
     "title": "A local team. Flexible ways to work together.",
-    "text": "Start online or meet us in person. Choose what works for you.",
+    "text": "You can [file in person](/file-in-person), [drop off documents](/drop-off), [file remotely](/file-remotely) or [file online yourself](/file-online). Estimate your refund with the [tax calculator](/tax-calculator) and check the [key tax dates](/tax-dates).",
     "items": [
       {
         "link": "fileInPerson",
@@ -88,7 +90,7 @@
   },
   "process": {
     "eyebrow": "A clear way forward",
-    "title": "From your first question to your next step.",
+    "title": "How Does Tax Filing Work in Vancouver?",
     "cta": {
       "label": "Get started",
       "to": "/contact"
@@ -97,106 +99,75 @@
       {
         "label": "Choose",
         "title": "Find your service.",
-        "text": "Choose the support you need, or speak with us. We'll discuss your situation, confirm the scope and provide a quote."
+        "text": "Tell us your situation and we confirm the right service."
       },
       {
         "label": "Prepare",
         "title": "Bring it together.",
-        "text": "Gather the relevant records. We'll explain the document-sharing process and follow up on missing information."
+        "text": "Gather your documents. We explain the process and follow up on anything missing."
       },
       {
         "label": "Complete",
-        "title": "Review & move forward.",
-        "text": "Review the prepared work, ask questions and authorize applicable filings. Know what comes next."
+        "title": "Review and move forward.",
+        "text": "Review the prepared work, approve it and file."
       }
     ]
+  },
+  "offices": {
+    "title": "Where Can I Meet a Tax Accountant in Vancouver or Burnaby?",
+    "intro": "Walk-ins are welcome. Not sure which office suits you? Visit the [contact page](/contact) or call [1-877-453-2382](tel:18774532382)."
   },
   "faq": {
     "eyebrow": "Before you get started",
-    "title": "Good questions. Clear next steps.",
+    "title": "Frequently Asked Questions About Tax Accountants in Vancouver",
     "items": [
       {
-        "question": "Which service should I choose?",
-        "answer": "Choose Personal Tax for an individual return, Corporate Tax for an incorporated business, and Bookkeeping for business records. Trust & Estate covers executor and trustee filing needs. Cross-Border Tax is for Canadian and U.S. tax connections. Contact us when your needs overlap."
+        "question": "Which tax service should I choose?",
+        "answer": "Choose the service that matches your situation. Individuals and families usually need [personal tax](/personal-tax). Incorporated businesses need [corporate tax](/corporate-tax). Americans in Canada may need [cross-border tax](/us-cross-border), and executors need [estate tax](/trust-estate-tax). Not sure? Tell us your situation and we will point you to the right one."
       },
       {
-        "question": "Can you help with more than one service?",
-        "answer": "Yes. Tell us about your personal, business and other filing needs so we can discuss the right engagement and coordinate the work."
+        "question": "Can LeadTax help with more than one service?",
+        "answer": "Yes. Many clients combine services, such as personal and cross-border returns, or corporate tax and bookkeeping. Using one team keeps your records consistent, and your return reflects your whole financial picture instead of one slice of it. We confirm the scope of each service before work begins."
       },
       {
-        "question": "How are fees determined?",
-        "answer": "Fees depend on the services, years, records and complexity involved. We discuss the scope and quote before proceeding."
+        "question": "How are tax preparation fees determined?",
+        "answer": "Fees depend on the service, the number of slips and accounts, and how complex your situation is. We confirm the scope and the fee before we start. Filing online yourself starts at $19 per return, and [bookkeeping plans](/bookkeeping) start at $199 per month. See current [pricing](/pricing) or call 1-877-453-2382."
+      },
+      {
+        "question": "What documents do I need to file my taxes in BC?",
+        "answer": "Bring photo identification and your prior-year notice of assessment. Add every income slip, such as T4, T4A and T5, plus RRSP receipts and records for deductions you plan to claim. Landlords and self-employed clients also bring income and expense records. Tell us about any change in address, residency or family status."
+      },
+      {
+        "question": "When are Canadian personal tax returns due?",
+        "answer": "For 2026 returns, most individuals must file and pay by April 30, 2027. Self-employed individuals and their spouses or partners have until June 15, 2027 to file, but any balance owing is still due April 30. Budget 2026 proposes a single May 15 deadline starting with 2027 returns, but that is a proposal and not yet law. See the [key tax dates](/tax-dates)."
+      },
+      {
+        "question": "Can I file my taxes without visiting an office?",
+        "answer": "Yes. LeadTax supports remote filing, document drop-off and online filing. You share your documents using a secure method we confirm with you, review the prepared return and approve it before we file. If you prefer a face-to-face visit, book an appointment at one of our Vancouver or Burnaby offices."
+      },
+      {
+        "question": "Do Americans living in Vancouver have to file US taxes?",
+        "answer": "Generally yes. US citizens and green card holders must file a US return on worldwide income wherever they live, even when they owe no US tax after credits. Many also report foreign accounts. Our [cross-border tax team](/us-cross-border) prepares US and Canadian returns together."
+      },
+      {
+        "question": "What is the difference between a tax accountant and a bookkeeper?",
+        "answer": "A bookkeeper records and reconciles your transactions during the year. A tax accountant uses those records to prepare returns and plan ahead. At LeadTax, [bookkeeping](/bookkeeping) and [corporate tax](/corporate-tax) work together, so your records are ready when it is time to file."
+      },
+      {
+        "question": "Can I file tax returns for previous years?",
+        "answer": "Yes. We help with prior-year and overdue returns. Bring any slips you still have, and we will help you identify what is missing. Filing overdue returns can restore access to credits and benefits tied to filing, and it can limit further penalties and interest. Contact us to get started."
+      },
+      {
+        "question": "How do I find a reliable tax accountant near me in Vancouver or Burnaby?",
+        "answer": "Look for a local office, clear fees agreed in advance and reviews from real clients. Check how the firm handles your specific situation, such as cross-border or corporate filing. Clients have left more than 360 reviews across our locations. You can read our Google reviews, visit an office from the list above or [contact LeadTax](/contact) to talk through your needs."
       }
-    ]
-  },
-  "previousYears": {
-    "image": {
-      "src": "/images/previous-years.webp",
-      "alt": "Woman working at a computer",
-      "position": "50% 30%"
-    }
-  },
-  "confidence": {
-    "_note": "\"File your tax return with confidence.\" carousel: one slide per item in pages/file-online.json trust.items (same order). Photos are free Lummi images. `text` and `points` are new copy written for the carousel; the client should confirm them, especially for the guarantee and certification items.",
-    "_placeholders": [
-      "slides"
     ],
-    "slides": [
-      {
-        "image": {
-          "src": "/images/confidence/refund-relaxed.webp",
-          "alt": "Woman leaning back happily at her desk"
-        },
-        "text": "The software walks you through deductions and credits that may apply to you, so nothing you qualify for is left out.",
-        "points": [
-          "Guided credit and deduction questions",
-          "Prompts for commonly missed claims"
-        ]
-      },
-      {
-        "image": {
-          "src": "/images/confidence/accuracy-review.webp",
-          "alt": "Person reviewing printed documents at a desk"
-        },
-        "text": "Built-in checks flag missing information and common errors before you file.",
-        "points": [
-          "Review screens before you submit",
-          "Error checks on every section"
-        ]
-      },
-      {
-        "image": {
-          "src": "/images/confidence/secure-typing.webp",
-          "alt": "Hands typing on a laptop keyboard"
-        },
-        "text": "Your personal and financial information stays protected while you prepare and file.",
-        "points": [
-          "Encrypted connection",
-          "Secure sign-in to your account"
-        ]
-      },
-      {
-        "image": {
-          "src": "/images/confidence/autofill-laptop.webp",
-          "alt": "Smiling woman working on a laptop in an office"
-        },
-        "text": "Bring in the slips the CRA already has, instead of typing every number by hand.",
-        "points": [
-          "Fewer manual entries",
-          "Slips placed in the right sections"
-        ]
-      },
-      {
-        "image": {
-          "src": "/images/confidence/experts-team.webp",
-          "alt": "Three professionals smiling in an office"
-        },
-        "text": "LeadTax software is built by Canadian tax professionals, and expert help is there if you need it.",
-        "points": [
-          "Made for Canadian returns",
-          "Expert help available"
-        ]
-      }
-    ]
+    "sources": {
+      "title": "Sources",
+      "items": [
+        "Canada Revenue Agency: [2026 tax deadlines for Canadian businesses and self-employed individuals](https://www.canada.ca/en/services/taxes/resources-for-small-and-medium-businesses/2026-tax-deadlines-canadian-businesses-self-employed-individuals.html)",
+        "Government of Canada: [Budget 2026](https://budget.canada.ca/2026/report-rapport/pdf/budget-2026.pdf)"
+      ]
+    }
   }
 }

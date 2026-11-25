@@ -55,7 +55,7 @@ npm run compare         # compare the site with the stored screenshots
 The `Dockerfile` builds the site and serves `dist/` with nginx (`deploy/nginx.conf`):
 - every page is served from its pre-rendered HTML; unknown paths return a real 404 with the
   site's 404 page;
-- 301 redirects: `www.leadtax.ca` → `leadtax.ca` (the host Google indexes), trailing slashes,
+- 301 redirects: `leadtax.ca` → `www.leadtax.ca` (the address the live site uses), trailing slashes,
   and the removed pages `/sign-in`, `/file-remote-landing`, `/diy-landing` and `/dyi-landing`
   (→ `/file-online`), `/home-v2`, `/home-legacy`, `/home-redesign` (→ `/us-cross-border`);
 - security headers (HSTS, nosniff, frame and referrer policies) and a Content-Security-Policy
@@ -69,7 +69,7 @@ In Coolify: add both `leadtax.ca` and `www.leadtax.ca` to the app, build pack "D
 ## Deploy on Vercel
 
 `vercel.json` holds the same setup as the nginx config: build `npm run build`, output `dist/`,
-clean URLs without trailing slashes, the 301 redirects (removed pages, `www` → `leadtax.ca`),
+clean URLs without trailing slashes, the 301 redirects (removed pages, `leadtax.ca` → `www.leadtax.ca`),
 security headers (CSP in report-only mode) and asset caching. Vercel serves `dist/404.html` with
 a 404 status for unknown paths. Import the repo in Vercel; no framework preset is needed.
 
@@ -81,14 +81,14 @@ the same rules ships inside `dist/`:
 | Host | File | Notes |
 |---|---|---|
 | Apache, cPanel, LiteSpeed (most shared hosting) | `.htaccess` | needs `mod_rewrite`; tested on Apache 2.4 |
-| Netlify | `_redirects` | the `www` rule is Netlify-only |
-| Cloudflare Pages | `_redirects` | set `www` → `leadtax.ca` as a Bulk Redirect in Cloudflare |
+| Netlify | `_redirects` | the `leadtax.ca` → `www` rule is Netlify-only |
+| Cloudflare Pages | `_redirects` | set `leadtax.ca` → `www.leadtax.ca` as a Bulk Redirect in Cloudflare |
 | Docker / Coolify | `deploy/nginx.conf` | see above |
 | Vercel | `vercel.json` | see above |
 
 Whatever the host, these must hold for SEO (check them after the first deploy):
 
-1. `https://www.leadtax.ca/...` and `http://...` answer **301** to `https://leadtax.ca/...`
+1. `https://leadtax.ca/...` and `http://...` answer **301** to `https://www.leadtax.ca/...`
    (the host Google indexes).
 2. `/about` serves `about/index.html` with status 200, and `/about/` redirects to `/about`.
 3. Unknown paths return **404** with `404.html`, not the homepage.
@@ -111,7 +111,7 @@ Only LeadTax's own form is forwarded: `/PublicLead` with its slug, plus `/Public
 pages) answers 404, so no other eTaskMe form can be shown under this domain. If the slug in
 `leadFormPath` changes, update it in each host config too.
 
-After deploying, check that `https://leadtax.ca/PublicLead?slug=…` (see `leadFormPath` in
+After deploying, check that `https://www.leadtax.ca/PublicLead?slug=…` (see `leadFormPath` in
 `src/content/site.json`) shows the form and that `/PublicLead?slug=other` answers 404. The form link lives in `site.json`; which service each page
 preselects is `form.serviceTypes` in `src/content/enquiry.json`.
 
@@ -150,8 +150,8 @@ proxy, the dialog shows a button that opens the form in its own window.
 - `public/robots.txt` allows search engines and AI search crawlers and points to the sitemap.
 
 After launch on the final domain:
-1. Add `https://leadtax.ca` to Google Search Console and Bing Webmaster Tools and submit
-   `https://leadtax.ca/sitemap.xml`.
+1. Add `https://www.leadtax.ca` to Google Search Console and Bing Webmaster Tools and submit
+   `https://www.leadtax.ca/sitemap.xml`.
 2. Check a few pages in Google's Rich Results Test (structured data) and URL Inspection.
 3. Keep office details (address, phone, hours) the same here, on Google Business Profile and in
    directories; AI search compares them.

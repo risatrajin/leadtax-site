@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Check, Download } from "lucide-react";
+import { CalendarClock, Check, Download } from "lucide-react";
 import content from "../content/service-pages.json";
 import PageShell from "../components/layout/PageShell.jsx";
 import PageHero from "../components/ui/PageHero.jsx";
@@ -7,12 +7,15 @@ import Button from "../components/ui/Button.jsx";
 import Collapse from "../components/ui/Collapse.jsx";
 import EnquirySection from "../components/ui/EnquirySection.jsx";
 import { SectionTitle, StepCards } from "../components/ui/ServiceBlocks.jsx";
+import PageNote from "../components/ui/PageNote.jsx";
+import { splitLead } from "../lib/markup.js";
+import RichText from "../components/ui/RichText.jsx";
 import { getIcon } from "../lib/icons.js";
 import { cx } from "../lib/cx.js";
 import { fill } from "../lib/template.js";
 import OnThisPage from "../components/ui/OnThisPage.jsx";
 import ServiceQuestions from "../sections/services/ServiceQuestions.jsx";
-import { SECTION } from "../lib/styles.js";
+import { CARD, SECTION } from "../lib/styles.js";
 
 
 function Hero({ page }) {
@@ -20,14 +23,31 @@ function Hero({ page }) {
     <>
       <PageHero
         eyebrow={page.eyebrow}
+        heading={page.h1}
         title={page.titleLines.join(" ")}
-        text={page.intro}
+        // Pages with search copy (h1) show the intro's first sentence; the rest sits in the page note.
+        text={page.h1 ? splitLead(page.intro)[0] : page.intro}
         actions={content.heroActions}
         formService={page.name}
         decor
       />
       <OnThisPage anchors={content.anchors} />
     </>
+  );
+}
+
+/** A card with the filing deadline, under the checklist heading. */
+function Deadline({ deadline }) {
+  return (
+    <div className={cx(CARD, "mt-10 p-6")}>
+      <div className="flex items-center gap-3">
+        <CalendarClock aria-hidden="true" className="h-6 w-6 flex-shrink-0 text-brand" />
+        <h2 className="text-xl font-semibold text-gray-900">{deadline.title}</h2>
+      </div>
+      <p className="mt-3 text-gray-600">
+        <RichText text={deadline.text} />
+      </p>
+    </div>
   );
 }
 
@@ -160,7 +180,8 @@ function downloadChecklist(page) {
 }
 
 function Prepare({ page }) {
-  const { prepare } = content;
+  // A page may override the shared checklist heading, text and privacy line.
+  const prepare = { ...content.prepare, ...page.prepare };
   const [done, setDone] = useState(() => new Set());
   const toggle = (doc) =>
     setDone((prev) => {
@@ -178,6 +199,7 @@ function Prepare({ page }) {
             <Download aria-hidden="true" className="h-5 w-5" />
             {prepare.download}
           </Button>
+          {page.deadline && <Deadline deadline={page.deadline} />}
         </div>
         <div className="overflow-hidden rounded-3xl border border-gray-200 bg-white shadow-2xl">
           {/* App-window bar with progress, in the style of a scheduling app. */}
@@ -232,8 +254,8 @@ function Pace({ pace }) {
 }
 
 /** The shared steps, centred, with big numbers joined by a line on wide screens. */
-function Process({ className }) {
-  const { process } = content;
+function Process({ className, overrides }) {
+  const process = { ...content.process, ...overrides };
   return (
     <section className={cx(SECTION, className)}>
       <div className="mx-auto max-w-7xl">
@@ -275,9 +297,10 @@ export default function ServicePage({ slug }) {
       <Scope scope={page.scope} />
       <Prepare page={page} />
       {page.pace && <Pace pace={page.pace} />}
-      <Process className={tones[0]} />
-      <ServiceQuestions faqs={page.faqs} className={tones[1]} />
+      <Process className={tones[0]} overrides={page.process} />
+      <ServiceQuestions faqs={page.faqs} className={tones[1]} heading={page.faqHeading} sources={page.sources} />
       <EnquirySection service={page.name} className={tones[0]} />
+      <PageNote text={page.h1 ? splitLead(page.intro)[1] : undefined} blocks={[page.servicesIntro, page.localHelp]} />
     </PageShell>
   );
 }

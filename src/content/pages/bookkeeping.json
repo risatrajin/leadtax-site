@@ -2,8 +2,9 @@
   "_note": "Copy for /bookkeeping, from leadtax-bookkeeping-service.html, laid out with the site's components. The page title and description stay in seo.json (bookkeeping) so the indexed listing is unchanged.",
   "name": "Bookkeeping",
   "hero": {
+    "h1": "Bookkeeping Services for Small Businesses in Vancouver, BC",
     "eyebrow": "Bookkeeping for Canadian businesses",
-    "text": "Professional bookkeeping without the paperwork headache. LeadTax keeps your books organized, your financials clear, and your business ready for tax time.",
+    "text": "LeadTax provides bookkeeping services in Vancouver and Burnaby, BC, starting at $199 per month. Our team handles monthly bookkeeping, bank and credit card reconciliation, financial reports, payroll support, GST/HST and PST support, QuickBooks Online and catch-up bookkeeping. Because our bookkeepers work alongside our [corporate tax team](/corporate-tax), your records stay ready for filing. [Book a free consultation](/contact).",
     "actions": [
       {
         "label": "Get a free consultation",
@@ -42,101 +43,73 @@
       "href": "#questions"
     }
   ],
+  "intro": {
+    "title": "Bookkeeping Services for Small Businesses in Vancouver",
+    "text": "Professional bookkeeping built for Canadian small businesses. Organized records and a clearer view of your numbers, with monthly bookkeeping, catch-up support and year-end coordination in one place."
+  },
   "services": {
     "eyebrow": "Everything in one place",
-    "title": "Bookkeeping that works with your business.",
-    "text": "Stay organized throughout the year with practical bookkeeping and tax support built for Canadian small businesses.",
+    "title": "What Bookkeeping Services Do We Offer in Vancouver?",
     "items": [
       {
         "icon": "BookOpen",
         "title": "Monthly Bookkeeping",
-        "text": "Transaction categorization, bank and credit-card reconciliation, and organized books every month."
+        "text": "Transaction categorization and bank and credit card reconciliation, every month."
       },
       {
         "icon": "ChartLine",
         "title": "Financial Reporting",
-        "text": "Clear Profit & Loss and Balance Sheet reports so you can understand how your business is performing."
+        "text": "Clear Profit and Loss statements and Balance Sheets."
       },
       {
         "icon": "Wallet",
         "title": "Payroll Support",
-        "text": "Payroll bookkeeping, source deductions, CRA remittance support, T4s and year-end reconciliation."
+        "text": "Payroll records, deductions and CRA remittance support."
       },
       {
         "icon": "Percent",
         "title": "GST/HST & PST",
-        "text": "Sales tax reconciliation and filing support to keep your business organized and on schedule."
+        "text": "Sales tax reconciliation and filing support on your schedule."
       },
       {
         "icon": "Laptop",
         "title": "QuickBooks Online",
-        "text": "Setup, cleanup, reconciliation, bank feeds and ongoing QuickBooks Online bookkeeping."
+        "text": "Setup, cleanup, reconciliation, bank feeds and ongoing support."
       },
       {
         "icon": "History",
         "title": "Catch-Up Bookkeeping",
-        "text": "Months or years behind? We can clean up your records and bring your books up to date."
-      }
-    ]
-  },
-  "together": {
-    "eyebrow": "A smarter way to work",
-    "title": "Bookkeeping + Tax. Better together.",
-    "paragraphs": [
-      "Why manage a separate bookkeeper and tax accountant? At LeadTax, your bookkeeping and tax professionals can work together so your records stay organized with year-end filing in mind.",
-      "That means fewer surprises, less back-and-forth, and a team that already understands your business when tax season arrives."
-    ],
-    "action": {
-      "label": "Talk to a LeadTax advisor",
-      "href": "#contact"
-    },
-    "panelTitle": "One connected financial team.",
-    "benefits": [
-      {
-        "title": "Accurate, tax-ready books",
-        "text": "Organized throughout the year."
-      },
-      {
-        "title": "GST/HST & payroll support",
-        "text": "Keep key compliance items coordinated."
-      },
-      {
-        "title": "Corporate tax preparation",
-        "text": "Your year-end team already knows the books."
-      },
-      {
-        "title": "Less year-end back-and-forth",
-        "text": "One place for bookkeeping and tax support."
+        "text": "Months or years behind? We clean it up and bring you current."
       }
     ]
   },
   "steps": {
     "eyebrow": "How it works",
-    "title": "Simple from day one.",
+    "title": "How Does Monthly Bookkeeping Work?",
     "text": "Getting your bookkeeping under control shouldn't be complicated.",
     "items": [
       {
         "title": "Tell us about your business",
-        "text": "We learn how you operate, what software you use, and what level of support you need."
+        "text": "We learn how you operate, what software you use and what support you need."
       },
       {
         "title": "Connect your records",
-        "text": "Securely provide the accounting, bank, credit-card and payroll information needed."
+        "text": "Securely share accounting, bank, credit card and payment information."
       },
       {
         "title": "We handle the books",
-        "text": "We categorize, reconcile, review and organize your financial records."
+        "text": "We categorize, reconcile and organize your financial records."
       },
       {
         "title": "Stay tax-ready",
-        "text": "Your books stay current so year-end tax preparation is easier and more predictable."
+        "text": "Your books stay current, and year-end tax preparation is easier and more predictable."
       }
     ]
   },
   "pricing": {
     "eyebrow": "Simple, transparent pricing",
-    "title": "Choose the bookkeeping support you need.",
-    "text": "Start simple and add more support as your business grows. Starting prices in Canadian dollars.",
+    "title": "How Much Does Bookkeeping Cost in Vancouver?",
+    "text": "Pricing is a starting point. It depends on transaction volume, number of accounts, sales tax filing and any cleanup work. Billing is monthly, and annual billing saves 20%.",
     "periods": [
       {
         "id": "monthly",
@@ -158,17 +131,17 @@
     "plans": [
       {
         "name": "Bookkeeping Light",
-        "text": "For lean businesses that need clean, reliable books and straightforward reporting.",
+        "text": "For businesses that need steady, reliable books.",
         "price": {
           "monthly": "$199",
           "annual": "$1,910"
         },
         "features": [
           "Monthly bookkeeping",
-          "Bank & credit-card reconciliation",
-          "Profit & Loss and Balance Sheet",
-          "Year-end tax-ready financial package",
-          "Scheduled bookkeeping check-ins"
+          "Bank & credit card reconciliation",
+          "Profit & Loss and Balance Sheet reports",
+          "Year-end tax-ready package",
+          "Scheduled bookkeeper check-ins"
         ]
       },
       {
@@ -180,9 +153,8 @@
         },
         "features": [
           "Everything in Bookkeeping Light",
-          "Dedicated bookkeeping support",
-          "Custom account categorization",
-          "GST/HST bookkeeping support",
+          "Dedicated account categorization",
+          "GST/HST support",
           "Priority communication"
         ]
       },
@@ -198,16 +170,16 @@
           "Everything in Bookkeeping Core",
           "Corporate tax return preparation",
           "Year-end tax review",
-          "T4/T5 support where applicable",
+          "T4 and T5 support where applicable",
           "Tax planning consultation"
         ]
       }
     ],
-    "footnote": "Pricing is a starting structure and can scale with transaction volume, number of accounts, payroll, sales-tax filings, and bookkeeping complexity. Catch-up work and prior-year cleanup are quoted separately."
+    "footnote": "Want more detail? See our [pricing page](/pricing) or read [How Much Does Bookkeeping Cost in Vancouver?](/blog/bookkeeping-cost-vancouver-bc)"
   },
   "industries": {
     "eyebrow": "Built for small business",
-    "title": "Bookkeeping for businesses like yours.",
+    "title": "Which Vancouver Businesses Need Bookkeeping Services?",
     "items": [
       {
         "icon": "UtensilsCrossed",
@@ -241,12 +213,13 @@
         "icon": "Building2",
         "label": "Owner-Managed Corporations"
       }
-    ]
+    ],
+    "text": "We support restaurants and hospitality, construction and trades, medical professionals, transportation, real estate, retail and e-commerce, professional services and owner-managed corporations."
   },
   "catchUp": {
     "eyebrow": "Catch-up bookkeeping",
-    "title": "Behind on your books? We'll help you catch up.",
-    "text": "Whether you're a few months or a few years behind, LeadTax can organize your records and help get your bookkeeping back on track.",
+    "title": "What Is Catch-Up Bookkeeping in Vancouver?",
+    "text": "Whether you are a few months or a few years behind, we can reconcile bank and credit card accounts, categorize transactions, clean up GST/HST and payroll records and prepare your books for tax filing.",
     "points": [
       "Bank reconciliation",
       "Credit-card reconciliation",
@@ -289,8 +262,8 @@
   },
   "tools": {
     "eyebrow": "Your existing tools",
-    "title": "Works with the way you already do business.",
-    "text": "LeadTax can work with commonly used accounting, banking, payment, and commerce platforms.",
+    "title": "Which Accounting Software Do Vancouver Bookkeepers Use?",
+    "text": "We work with commonly used accounting, banking, payment and commerce platforms, including QuickBooks Online. Read why [bookkeepers are your first line of defense against wasted spending](/blog/bookkeepers-first-line-defense-wasted-spending).",
     "items": [
       {
         "icon": "Calculator",
@@ -332,8 +305,8 @@
   },
   "canada": {
     "eyebrow": "Local expertise",
-    "title": "Canadian bookkeeping for Canadian businesses.",
-    "text": "From GST/HST and payroll to corporate tax preparation, LeadTax gives business owners local service, real people, and Canadian tax expertise — in office or online.",
+    "title": "Bookkeeping Help in Vancouver and Burnaby",
+    "text": "Meet your bookkeeper at our Commercial Drive office or another Vancouver or Burnaby location, or work remotely. [Contact LeadTax](/contact) or call [1-877-453-2382](tel:18774532382).",
     "points": [
       {
         "icon": "Percent",
@@ -353,7 +326,7 @@
       {
         "icon": "MapPin",
         "title": "In office or online",
-        "text": "Five offices in Vancouver & Burnaby, or work with us remotely."
+        "text": "Offices in Vancouver & Burnaby, or work with us remotely."
       }
     ],
     "action": {
@@ -361,27 +334,21 @@
       "to": "/contact#offices"
     }
   },
-  "cta": {
-    "title": "Spend more time running your business. We'll take care of the books.",
-    "text": "Get bookkeeping, payroll, GST/HST and tax support from one team.",
-    "action": {
-      "label": "Book a free consultation",
-      "href": "#contact"
-    },
-    "callLabel": "Call {phone}"
+  "faqHeading": {
+    "title": "Frequently Asked Questions About Bookkeeping in Vancouver"
   },
   "faqs": [
     {
       "question": "Can you work with QuickBooks?",
-      "answer": "Yes. Tell us which version you use and how your current records are maintained so we can discuss the setup and access required."
+      "answer": "Yes. We set up, clean up and reconcile QuickBooks Online, and we work with other common accounting, banking, payment and commerce platforms."
     },
     {
       "question": "Do you offer catch-up bookkeeping?",
-      "answer": "Yes. Share the outstanding periods and approximate transaction volume so we can assess the work and provide a quote."
+      "answer": "Yes. We reconcile overdue accounts, categorize transactions and bring your records current so you can file with confidence."
     },
     {
       "question": "What does monthly bookkeeping cost?",
-      "answer": "Pricing depends on transaction volume, the number of accounts, record quality, and the services included. We confirm your scope and fee before work starts."
+      "answer": "Plans start at $199 per month, depending on volume, accounts and sales tax needs. We confirm the scope and the price before work starts."
     }
   ]
 }

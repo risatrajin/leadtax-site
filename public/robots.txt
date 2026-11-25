@@ -1,4 +1,4 @@
-# robots.txt for LeadTax (https://leadtax.ca)
+# robots.txt for LeadTax (https://www.leadtax.ca)
 
 # All search engines: the whole site may be crawled.
 # /sign-in only redirects to the client app, so it is not worth crawling.
@@ -28,6 +28,6 @@ Disallow: /PublicLead
 Disallow: /dropoff/
 Disallow: /PublicDropoff/
 
-Sitemap: https://leadtax.ca/sitemap.xml
+Sitemap: https://www.leadtax.ca/sitemap.xml
 
-# A plain-text summary of LeadTax for AI assistants: https://leadtax.ca/llms.txt
+# A plain-text summary of LeadTax for AI assistants: https://www.leadtax.ca/llms.txt

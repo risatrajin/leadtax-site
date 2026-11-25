@@ -36,7 +36,8 @@ function ScrollButton({ position, enabled, onClick, label, Icon }) {
 }
 
 /** Google rating summary and a horizontally scrolling row of review cards. */
-export default function ReviewsCarousel({ className = "bg-white" }) {
+/** `after` (optional) renders under the review cards, e.g. the homepage's services intro. */
+export default function ReviewsCarousel({ className = "bg-white", after }) {
   const trackRef = useRef(null);
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(true);
@@ -134,6 +135,7 @@ export default function ReviewsCarousel({ className = "bg-white" }) {
           <ScrollButton position="max-md:hidden -left-3 max-[1399px]:md:-left-5 min-[1400px]:-left-16" enabled={canScrollLeft} onClick={() => scrollBy(-SCROLL_STEP)} label="Scroll left" Icon={ChevronLeft} />
           <ScrollButton position="max-md:hidden -right-3 max-[1399px]:md:-right-5 min-[1400px]:-right-16" enabled={canScrollRight} onClick={() => scrollBy(SCROLL_STEP)} label="Scroll right" Icon={ChevronRight} />
         </div>
+        {after}
       </div>
     </section>
   );

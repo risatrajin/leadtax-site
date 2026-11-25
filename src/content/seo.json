@@ -7,7 +7,7 @@
     "title": "LeadTax - Local Tax Experts in Vancouver & Burnaby | In-Person, Drop-Off & Remote Filing",
     "description": "LeadTax offers tax filing at 5 offices across Vancouver and Burnaby, BC — walk-in, drop-off, or book an appointment. Also file remotely from anywhere in Canada. Expert help or DIY from $19. CRA-certified.",
     "keywords": "tax filing Vancouver, tax filing Burnaby, remote tax filing Canada, in-person tax expert Vancouver, tax office near me BC, drop off taxes Vancouver, local tax expert Canada, CRA certified tax",
-    "ogImage": "https://leadtax.ca/og-image.png",
+    "ogImage": "https://www.leadtax.ca/og-image.png",
     "ogType": "website"
   },
   "pages": {
@@ -15,9 +15,12 @@
       "_placeholders": [
         "description"
       ],
-      "title": "LeadTax - Local Tax Experts in Vancouver & Burnaby | File In-Person or Remotely",
-      "description": "LeadTax has 5 offices across Vancouver & Burnaby for in-person and drop-off tax filing, plus remote filing from anywhere in Canada. Expert help or DIY from $19. CRA-certified, maximum refund guaranteed.",
-      "keywords": "tax filing Vancouver, tax filing Burnaby, remote tax filing Canada, in-person tax help Vancouver, tax office Burnaby BC, local tax expert Vancouver, drop off taxes Burnaby, Canadian tax expert near me"
+      "title": "Tax Accountant in Vancouver, BC | Tax Preparation Near You",
+      "description": "Income tax returns for individuals, T2 corporate returns, GST/HST, estates and bookkeeping across Vancouver and Burnaby. Drop off or file online. Book today.",
+      "keywords": "tax filing Vancouver, tax filing Burnaby, remote tax filing Canada, in-person tax help Vancouver, tax office Burnaby BC, local tax expert Vancouver, drop off taxes Burnaby, Canadian tax expert near me",
+      "schema": {
+        "dateModified": "2026-11-18"
+      }
     },
     "about": {
       "_placeholders": [
@@ -68,9 +71,10 @@
       "robots": "noindex, follow"
     },
     "fileRemotely": {
-      "_note": "Added: this page used the generic default title.",
-      "title": "Remote Tax Filing Across Canada | LeadTax",
-      "description": "File your taxes remotely with expert guidance. Meet with a LeadTax tax professional online and get your return prepared accurately without visiting an office."
+      "_note": "Title, description and keywords from the September 2026 SEO update of /file-remote-landing, which now redirects here.",
+      "title": "Remote Tax Filing Canada | File From Anywhere with a LeadTax Expert",
+      "description": "File your Canadian taxes remotely with a LeadTax expert. Upload your documents securely, we prepare and file your return from anywhere in Canada. Maximum refund guaranteed. CRA-certified.",
+      "keywords": "remote tax filing Canada, virtual tax filing, file taxes online with expert, tax expert remote Canada, online tax preparation BC, remote tax return Canada"
     },
     "fileOnline": {
       "_note": "New page: the original DIY homepage content, now the \"Do it yourself\" landing page.",
@@ -78,9 +82,16 @@
       "description": "File your Canadian taxes online with LeadTax software built by tax experts. Step-by-step guidance, packages for every situation, and expert help when you need it."
     },
     "usCrossBorder": {
-      "_note": "Title and description from the supplied cross-border design. The URL is unchanged; this page previously had the generic site title.",
-      "title": "U.S. & Canada Cross-Border Tax | LeadTax",
-      "description": "A clearer path through U.S. and Canadian tax. Explore cross-border filing, residency, foreign asset reporting and tax planning with LeadTax in Vancouver, Burnaby and online."
+      "_note": "Title and description from the 7Figures SEO content strategy (Nov 18, 2026).",
+      "title": "Cross Border Tax in Vancouver, BC | Form 1040 Filing Near Me",
+      "description": "Americans in Canada: IRS and CRA returns, FBAR, foreign tax credits, T1135 and missed-year catch-up for Vancouver and Burnaby residents. Book a consultation.",
+      "schema": {
+        "dateModified": "2026-11-18",
+        "service": {
+          "name": "US Tax Accountant in Vancouver, BC",
+          "serviceType": "US and Canada cross-border tax preparation"
+        }
+      }
     },
     "career": {
       "_note": "Added: this page used the generic default title.",
@@ -103,9 +114,16 @@
       "description": "How LeadTax collects, uses, stores and protects your personal and tax information when you file online, remotely or at our Vancouver and Burnaby offices."
     },
     "personalTax": {
-      "_note": "New page; title and description from the developer package.",
-      "title": "Personal tax services in Vancouver & Burnaby | LeadTax",
-      "description": "From your first return to retirement, get personal tax help that sees the whole picture. In person in Vancouver and Burnaby, or remotely across Canada."
+      "_note": "Title and description from the 7Figures SEO content strategy (Nov 18, 2026).",
+      "title": "Personal Tax Return in Vancouver, BC | Tax Prepare Near You",
+      "description": "T1 returns for employees, landlords and the self-employed with RRSP, childcare and tuition claims. Prior-year catch-up in Vancouver and Burnaby. Book today.",
+      "schema": {
+        "dateModified": "2026-11-18",
+        "service": {
+          "name": "Personal Income Tax Preparation in Vancouver, BC",
+          "serviceType": "Personal tax return preparation"
+        }
+      }
     },
     "corporateTax": {
       "_note": "New page; title and description from the developer package.",
@@ -113,9 +131,16 @@
       "description": "Corporate tax preparation and year-end support for Canadian business owners. Connect your records, your corporate return, and your next business decision."
     },
     "bookkeeping": {
-      "_note": "New page; title and description from the developer package.",
-      "title": "Bookkeeping services in Vancouver & Burnaby | LeadTax",
-      "description": "Organized records and a clearer view of your numbers. Monthly bookkeeping, catch-up support, and year-end coordination for Canadian businesses."
+      "_note": "Title and description from the 7Figures SEO content strategy (Nov 18, 2026).",
+      "title": "Bookkeeping Services in Vancouver, BC | Bookkeeper Near Me",
+      "description": "Monthly books from $199: bank reconciliations, payroll, GST/PST and QuickBooks Online. Cleanup of overdue records in Vancouver and Burnaby. Free consultation.",
+      "schema": {
+        "dateModified": "2026-11-18",
+        "service": {
+          "name": "Small Business Bookkeeping in Vancouver, BC",
+          "serviceType": "Bookkeeping"
+        }
+      }
     },
     "trustEstateTax": {
       "_note": "New page; title and description from the developer package.",
@@ -162,8 +187,24 @@
       "priceRange"
     ],
     "openingHours": [
-      { "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], "opens": "10:00", "closes": "18:00" },
-      { "days": ["Saturday"], "opens": "10:00", "closes": "16:00" }
+      {
+        "days": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday"
+        ],
+        "opens": "10:00",
+        "closes": "18:00"
+      },
+      {
+        "days": [
+          "Saturday"
+        ],
+        "opens": "10:00",
+        "closes": "16:00"
+      }
     ],
     "organization": {
       "_placeholders": [
@@ -175,6 +216,12 @@
       "availableLanguage": [
         "English",
         "French"
+      ],
+      "areaServed": [
+        "Vancouver",
+        "Burnaby",
+        "British Columbia",
+        "Canada"
       ]
     },
     "priceRange": "$19 - $169",

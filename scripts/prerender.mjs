@@ -67,8 +67,8 @@ function pageHtml(head, route) {
     .replace(/\n\s*<\/head>/, `\n${[rendered.tags, ...preloads].join("\n")}\n  </head>`);
 }
 
-const SITE_URL = "https://leadtax.ca";
 const readJson = (file) => JSON.parse(fs.readFileSync(path.resolve(file), "utf8"));
+const SITE_URL = readJson("src/content/site.json").siteUrl;
 const xmlEscape = (value) => String(value).replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;");
 
 /** "January 8, 2026" → "2026-01-08". */

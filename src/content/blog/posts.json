@@ -2,6 +2,491 @@
   "_note": "Posts in their original order (Related Articles shows the first three other posts in this order). Posts with an excerpt are listed on /blog; the other five are only reachable by URL or Related Articles. cardImage is the /blog card photo when it differs from the article image.",
   "posts": [
     {
+      "_note": "From the 7Figures SEO content strategy (Nov 18, 2026), blog article 1. Photo supplied by the client.",
+      "slug": "us-taxes-americans-living-in-vancouver",
+      "title": "How to File a US Tax Return in Vancouver, BC",
+      "seoTitle": "US Tax Guide for Americans in Vancouver, BC | Expat Tax Services",
+      "seoDescription": "Citizens and green card holders in Vancouver and Burnaby: Form 1040 rules, the June 15 deadline, FBAR, foreign tax credits and catch-up options. Read the guide.",
+      "date": "November 18, 2026",
+      "updated": "November 18, 2026",
+      "category": "Cross-Border Tax",
+      "readTime": "5 min read",
+      "author": "LeadTax Tax Team",
+      "image": "/images/blog/us-taxes-americans-vancouver.webp",
+      "imageAlt": "A LeadTax tax professional reviewing tax documents with a client in a Vancouver office",
+      "excerpt": "US citizens and green card holders living in Vancouver generally must file a US tax return every year, even when they owe no US tax. Here is how filing, deadlines and foreign account reporting work.",
+      "content": [
+        {
+          "type": "intro",
+          "text": "Yes. US citizens and green card holders living in Vancouver generally must file a US tax return every year on worldwide income, even when they owe no US tax. Foreign tax credits and the Canada-US tax treaty often reduce or remove US tax. LeadTax prepares both returns through its [cross-border tax services](/us-cross-border). Read our [FBAR guide](/blog/fbar-form-8938-t1135-canadian-residents) or [book a consultation](/contact)."
+        },
+        {
+          "type": "heading",
+          "text": "Do Americans Living in Vancouver Have to File US Taxes?"
+        },
+        {
+          "type": "paragraph",
+          "text": "In most cases, yes. The United States taxes its citizens and green card holders on worldwide income, wherever they live. An American in Vancouver or Burnaby generally files a US federal return each year alongside the Canadian T1 return. Many cross-border filers owe little or no US tax after credits, but the filing requirement remains. Filing also keeps access to benefits such as the foreign tax credit, which are available only when a US return is filed."
+        },
+        {
+          "type": "heading",
+          "text": "Who Must File a US Tax Return From Canada?"
+        },
+        {
+          "type": "list",
+          "items": [
+            "US citizens, including people born in the US or born abroad to US parents",
+            "Green card holders",
+            "Dual citizens of Canada and the US",
+            "US citizens who moved to Canada years ago and have not filed since"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Whether you must file depends on your income and filing status. Owing no tax does not automatically mean you can skip the return, so check before assuming you are exempt."
+        },
+        {
+          "type": "heading",
+          "text": "Does Living in Canada Reduce What You Owe the US?"
+        },
+        {
+          "type": "paragraph",
+          "text": "Often, yes. Two tools do most of the work. The foreign tax credit lets you offset US tax with Canadian tax you paid on the same income. The foreign earned income exclusion can exclude part of qualifying foreign earnings in some situations. The Canada-US tax treaty adds rules about which country taxes certain income first. The right choice depends on your facts, because a choice made in one year can affect later years, so compare options before you file."
+        },
+        {
+          "type": "heading",
+          "text": "What Are the Filing Deadlines for Americans in Canada?"
+        },
+        {
+          "type": "paragraph",
+          "text": "US returns are normally due April 15. US citizens and residents living abroad get an automatic extension to June 15 to file, but interest generally applies to tax paid after April 15. A further extension to October 15 is available by filing Form 4868. Your Canadian return is separate. For 2026 returns, most individuals file by April 30, 2027 and the self-employed by June 15, 2027, with any balance still due April 30. LeadTax tracks both calendars."
+        },
+        {
+          "type": "heading",
+          "text": "Which Foreign Account Reports May Apply?"
+        },
+        {
+          "type": "paragraph",
+          "text": "Filing a return is only part of the job. A US person must file an FBAR when foreign accounts total more than $10,000 at any time during the year. Form 8938 may also apply, with higher thresholds for people who live abroad. Canadian residents with specified foreign property costing more than $100,000 may need Form T1135 for the CRA. Read [FBAR vs Form 8938 vs T1135](/blog/fbar-form-8938-t1135-canadian-residents) for details."
+        },
+        {
+          "type": "heading",
+          "text": "What Common Mistakes Do Americans in Canada Make?"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Assuming no US return is needed because no tax is owed",
+            "Missing FBAR reporting on Canadian accounts",
+            "Treating a TFSA as tax-free for US purposes",
+            "Choosing between the credit and the exclusion without comparing the long-term effect",
+            "Waiting years to catch up on missed filings"
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "What Can You Do If You Have Not Filed US Taxes for Several Years?"
+        },
+        {
+          "type": "paragraph",
+          "text": "You are not alone, and there are ways to catch up. The IRS has programs for eligible taxpayers who missed filings without intending to evade tax, including streamlined procedures for people living abroad. Which path fits depends on your facts, so speak with a cross-border specialist before you file anything. LeadTax identifies which years and forms are outstanding and explains your options."
+        },
+        {
+          "type": "heading",
+          "text": "What Should You Bring to a Cross-Border Tax Appointment?"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Your countries of citizenship and residence",
+            "Income slips from both countries, such as T4, T5, W-2 and 1099",
+            "Statements for Canadian and US bank, investment and registered accounts",
+            "Prior US and Canadian returns and any notices",
+            "Dates of any move between the two countries"
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Cross-Border Tax Help in Vancouver and Burnaby"
+        },
+        {
+          "type": "paragraph",
+          "text": "LeadTax prepares US and Canadian returns together for clients in Vancouver, Burnaby and across Canada. Visit us at our Commercial Drive office or work with us remotely. Start with our [US and cross-border tax page](/us-cross-border), explore [personal tax services](/personal-tax) or [contact LeadTax](/contact). This article is general information, not personal tax advice."
+        },
+        {
+          "type": "faq",
+          "title": "Frequently Asked Questions About US Taxes for Americans in Vancouver",
+          "items": [
+            {
+              "question": "Do I have to file US taxes if I live in Canada and earn no US income?",
+              "answer": "Yes, if you are a US citizen or green card holder. The US taxes worldwide income, so income earned in Canada belongs on your US return. Credits for Canadian tax paid often remove any US tax due, but the return itself is still required each year."
+            },
+            {
+              "question": "Do green card holders living in Canada have to file US taxes?",
+              "answer": "Generally yes. Green card holders are treated as US residents for tax purposes until they formally end that status. If you moved to Canada and still hold a green card, speak with a cross-border accountant about your obligations before the next deadline."
+            },
+            {
+              "question": "Do I pay US tax and Canadian tax on the same income?",
+              "answer": "Not usually. The foreign tax credit and the Canada-US tax treaty are designed to prevent double taxation. Canada generally taxes you first as a resident, and the US allows credits for that Canadian tax. Differences in how each country treats certain income can still leave some US tax payable."
+            },
+            {
+              "question": "What happens if I do not file US taxes while living in Canada?",
+              "answer": "Penalties and interest can build, and you may lose access to credits and exclusions that depend on filing. Filing late is generally better than not filing at all. Speak with a specialist about catching up before you submit anything."
+            },
+            {
+              "question": "What is the deadline for US taxes for Americans living abroad?",
+              "answer": "The regular deadline is April 15. Americans living outside the US get an automatic extension to June 15, and Form 4868 extends filing to October 15. Interest generally applies to tax paid after April 15, so many filers pay an estimate by the original date."
+            },
+            {
+              "question": "Can I file US taxes online from Vancouver?",
+              "answer": "Yes. LeadTax supports remote filing for US and Canadian returns. You share documents securely, review your prepared returns and approve them before we file. If you prefer to meet in person, visit one of our Vancouver or Burnaby offices."
+            },
+            {
+              "question": "How much does cross-border tax preparation cost in Vancouver?",
+              "answer": "Fees depend on the number of forms, accounts and years involved. A single year with simple income costs less than a multi-year catch-up with foreign accounts. LeadTax confirms the scope and fee before work starts. Call 1-877-453-2382 for a quote."
+            },
+            {
+              "question": "Do I need to report my Canadian bank accounts to the IRS?",
+              "answer": "Possibly. If the combined value of your foreign financial accounts exceeds $10,000 at any time during the year, you must file an FBAR. Form 8938 may also apply at higher thresholds. Accounts can include chequing, savings, investment and some registered accounts."
+            },
+            {
+              "question": "Is my RRSP taxable in the US?",
+              "answer": "The Canada-US tax treaty generally allows RRSP growth to stay tax-deferred for US purposes, so you are not usually taxed each year on growth. TFSAs and RESPs are treated differently. Review your accounts with a cross-border specialist before you contribute or withdraw."
+            },
+            {
+              "question": "Can LeadTax prepare both my US and Canadian tax returns?",
+              "answer": "Yes. Preparing both together lets us apply foreign tax credits, report foreign accounts and keep your numbers consistent across countries. See our [cross-border tax services](/us-cross-border) or [book an appointment](/contact)."
+            }
+          ]
+        },
+        {
+          "type": "sources",
+          "title": "Sources",
+          "items": [
+            "IRS: [U.S. citizens and resident aliens abroad](https://www.irs.gov/ht/individuals/international-taxpayers/us-citizens-and-resident-aliens-abroad)",
+            "IRS: [Report of Foreign Bank and Financial Accounts (FBAR)](https://www.irs.gov/fbar)",
+            "Journal of Accountancy: [Foreign financial asset reporting](https://www.journalofaccountancy.com/issues/2015/mar/foreign-financial-asset-reporting/)",
+            "Canada Revenue Agency: [2026 tax deadlines](https://www.canada.ca/en/services/taxes/resources-for-small-and-medium-businesses/2026-tax-deadlines-canadian-businesses-self-employed-individuals.html)"
+          ]
+        }
+      ],
+      "authorIsOrganization": true
+    },
+    {
+      "_note": "From the 7Figures SEO content strategy (Nov 18, 2026), blog article 2. Photo supplied by the client.",
+      "slug": "fbar-form-8938-t1135-canadian-residents",
+      "title": "Foreign Asset Reporting in Vancouver, BC",
+      "seoTitle": "FBAR Filing in Vancouver, BC | T1135 Reporting Near Me",
+      "seoDescription": "Compare the US and CRA forms for foreign accounts: Form 8938, FinCEN 114, thresholds, deadlines and penalties for Vancouver and Burnaby residents with US ties.",
+      "date": "November 18, 2026",
+      "updated": "November 18, 2026",
+      "category": "Cross-Border Tax",
+      "readTime": "5 min read",
+      "author": "LeadTax Tax Team",
+      "image": "/images/blog/fbar-form-8938-t1135.webp",
+      "imageAlt": "A woman reviewing financial statements with a calculator at a desk overlooking the Vancouver waterfront",
+      "excerpt": "FBAR, Form 8938 and Form T1135 each have their own threshold, deadline and filing place. Here is how they compare for Americans and other residents of Vancouver with foreign accounts.",
+      "content": [
+        {
+          "type": "intro",
+          "text": "FBAR and Form 8938 are US foreign account reports for US citizens and green card holders, while Form T1135 is a CRA report for Canadian residents whose foreign property currently costs more than $100,000. An American living in Vancouver may need all three. LeadTax's [cross-border tax team](/us-cross-border) explains each threshold and deadline. Start with [Do Americans Living in Vancouver Have to File US Taxes?](/blog/us-taxes-americans-living-in-vancouver) or [contact us](/contact)."
+        },
+        {
+          "type": "heading",
+          "text": "What Is the Difference Between FBAR, Form 8938 and T1135?"
+        },
+        {
+          "type": "paragraph",
+          "text": "FBAR and Form 8938 go to US authorities and apply to US persons, including Americans living in Canada. Form T1135 goes to the CRA and applies to Canadian tax residents who hold foreign property above a cost threshold. The forms overlap, but each has its own threshold, filing place and definition of assets. Many Americans in Vancouver file two or all three each year."
+        },
+        {
+          "type": "heading",
+          "text": "What Is an FBAR and Who Must File It?"
+        },
+        {
+          "type": "paragraph",
+          "text": "The FBAR, officially FinCEN Form 114, reports foreign financial accounts. A US person must file when the combined value of all foreign financial accounts exceeded $10,000 at any time during the calendar year. For an American in Vancouver, Canadian chequing, savings, investment and some registered accounts can count toward that total. The FBAR is filed electronically with FinCEN, not with your tax return. It is due April 15, with an automatic extension to October 15."
+        },
+        {
+          "type": "heading",
+          "text": "What Is Form 8938 and How Is It Different From the FBAR?"
+        },
+        {
+          "type": "paragraph",
+          "text": "Form 8938 reports specified foreign financial assets and is attached to your US tax return. Its thresholds are higher than the FBAR's and depend on filing status and where you live. A single filer living abroad generally must file when specified foreign assets exceed $200,000 on the last day of the year or $300,000 at any time during the year. Married couples filing jointly abroad use $400,000 and $600,000. Form 8938 can include assets beyond accounts, such as some foreign investments. Filing one form does not replace the other."
+        },
+        {
+          "type": "heading",
+          "text": "What Is Form T1135 for Canadian Residents?"
+        },
+        {
+          "type": "paragraph",
+          "text": "Form T1135, the Foreign Income Verification Statement, goes to the CRA with your Canadian return. A Canadian resident must currently file it when the total cost of specified foreign property exceeds $100,000 at any time during the year. A simplified reporting method applies when the total cost stays under $250,000. Budget 2026 proposes raising these thresholds to $200,000 and $500,000, but that change is a proposal and not yet law, so confirm the current rule before you file. Specified foreign property includes foreign bank accounts, shares of non-Canadian corporations and foreign rental property. Canadian accounts are not foreign property for this form, while a US brokerage account can be."
+        },
+        {
+          "type": "heading",
+          "text": "FBAR vs Form 8938 vs T1135: How Do They Compare?"
+        },
+        {
+          "type": "list",
+          "items": [
+            "**FBAR.** For US persons. Applies above $10,000 in combined foreign accounts. Filed with FinCEN. Due April 15, with an automatic extension to October 15.",
+            "**Form 8938.** For US persons. Higher thresholds that depend on residence and filing status. Filed with your US tax return.",
+            "**Form T1135.** For Canadian residents. Applies when foreign property costs more than $100,000 (current rule). Filed with your Canadian return."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Which Foreign Accounts and Assets Should You Review?"
+        },
+        {
+          "type": "list",
+          "items": [
+            "US bank, brokerage and retirement accounts held by a Canadian resident",
+            "Canadian bank and investment accounts held by a US person",
+            "Foreign mutual funds, shares and other investments",
+            "Foreign rental property",
+            "Accounts where you only have signing authority"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "The rules have exceptions, so review your accounts with a specialist and report only what applies."
+        },
+        {
+          "type": "heading",
+          "text": "What Happens If You Miss a Foreign Reporting Form?"
+        },
+        {
+          "type": "paragraph",
+          "text": "Penalties can be significant, and US penalties can apply even when no tax is owed. Missing a T1135 can also bring CRA penalties. If you have missed a filing, do not ignore it and do not file anything until you understand your options. The IRS and CRA both have processes for people who come forward, and the right path depends on your facts. Learn more on our [US and cross-border tax page](/us-cross-border)."
+        },
+        {
+          "type": "heading",
+          "text": "Foreign Asset Reporting Help in Vancouver and Burnaby"
+        },
+        {
+          "type": "paragraph",
+          "text": "LeadTax prepares FBARs, Form 8938 and Form T1135 together with your US and Canadian returns. Visit us at our Commercial Drive office or file remotely. Explore our [personal tax services](/personal-tax) or [contact LeadTax](/contact). This article is general information, not personal tax advice."
+        },
+        {
+          "type": "faq",
+          "title": "Frequently Asked Questions About FBAR, Form 8938 and T1135",
+          "items": [
+            {
+              "question": "Do I have to file both an FBAR and Form 8938?",
+              "answer": "Possibly. The forms have different thresholds and different filing places, and you can owe both in the same year. Meeting the FBAR threshold does not mean you meet the Form 8938 threshold, and filing one never replaces the other. A cross-border accountant checks each test against your accounts."
+            },
+            {
+              "question": "Is the FBAR filed with my tax return?",
+              "answer": "No. The FBAR is filed separately and electronically with FinCEN, a bureau of the US Treasury. It is due April 15, with an automatic extension to October 15. Form 8938, by contrast, is attached to your US federal tax return."
+            },
+            {
+              "question": "Do Canadian bank accounts need to be reported on the FBAR?",
+              "answer": "Yes, for US persons. Canadian accounts are foreign accounts from the US perspective. If the combined value of all your foreign accounts exceeds $10,000 at any point during the year, you must file, even if no single account is above that amount."
+            },
+            {
+              "question": "Does a US citizen living in Canada have to file Form T1135?",
+              "answer": "Only if you are a Canadian tax resident with specified foreign property costing more than $100,000 at any time during the year, under the current rule. A US brokerage or retirement account held while living in Canada can count. Canadian accounts do not count for this form."
+            },
+            {
+              "question": "What counts as specified foreign property for the T1135?",
+              "answer": "It generally includes foreign bank accounts, shares in non-Canadian corporations, foreign rental property and other income-earning property held outside Canada. Personal-use property is generally excluded, as is property used in an active business. Exceptions exist, so confirm your list before you file."
+            },
+            {
+              "question": "What is the deadline for the T1135?",
+              "answer": "The T1135 is due by the filing due date of your Canadian income tax return. For 2026 returns, that is April 30, 2027 for most individuals and June 15, 2027 for the self-employed. Budget 2026 proposes a single May 15 date starting with 2027 returns, but that is not yet law."
+            },
+            {
+              "question": "What happens if I miss an FBAR?",
+              "answer": "The IRS can assess penalties, and the amount depends on the circumstances. Americans who missed filings without intending to evade tax often have catch-up options, including delinquent submission and streamlined procedures. Speak with a specialist before you file anything so you choose the right path."
+            },
+            {
+              "question": "Do joint accounts and signing authority count?",
+              "answer": "Yes. Joint accounts generally count for each owner, and accounts where you have signing authority can also require FBAR reporting. List every account you can access, including accounts held by a business you control, so nothing is overlooked."
+            },
+            {
+              "question": "How much does foreign asset reporting cost?",
+              "answer": "Cost depends on the number of accounts, forms and years involved. A single year with a few accounts costs less than a multi-year catch-up. LeadTax confirms the scope and fee before work starts. Call 1-877-453-2382 for a quote."
+            },
+            {
+              "question": "Can LeadTax file my FBAR, Form 8938 and T1135?",
+              "answer": "Yes. We prepare all three alongside your US and Canadian returns so each report stays consistent. See our [cross-border tax services](/us-cross-border) or [book an appointment](/contact)."
+            }
+          ]
+        },
+        {
+          "type": "sources",
+          "title": "Sources",
+          "items": [
+            "IRS: [Report of Foreign Bank and Financial Accounts (FBAR)](https://www.irs.gov/fbar)",
+            "Journal of Accountancy: [Foreign financial asset reporting (Form 8938 thresholds)](https://www.journalofaccountancy.com/issues/2015/mar/foreign-financial-asset-reporting/)",
+            "Canada Revenue Agency: [Streamlining reporting requirements for foreign assets (Form T1135)](https://www.canada.ca/en/revenue-agency/programs/about-canada-revenue-agency-cra/federal-government-budgets/budget-2015-strong-leadership/streamlining-reporting-requirements-foreign-assets.html)",
+            "Government of Canada: [Budget 2026](https://budget.canada.ca/2026/report-rapport/pdf/budget-2026.pdf)"
+          ]
+        }
+      ],
+      "authorIsOrganization": true
+    },
+    {
+      "_note": "From the 7Figures SEO content strategy (Nov 18, 2026), blog article 3. Photo supplied by the client.",
+      "slug": "bookkeeping-cost-vancouver-bc",
+      "title": "Monthly Bookkeeping Prices in Vancouver, BC",
+      "seoTitle": "Bookkeeper Cost in Vancouver, BC | Bookkeeping Rates Near Me",
+      "seoDescription": "See what drives monthly fees for Vancouver small businesses: transaction volume, payroll, GST/PST and cleanup. Plans from $199 a month. Ask for a free quote.",
+      "date": "November 18, 2026",
+      "updated": "November 18, 2026",
+      "category": "Bookkeeping",
+      "readTime": "4 min read",
+      "author": "LeadTax Tax Team",
+      "image": "/images/blog/bookkeeping-cost-vancouver.webp",
+      "imageAlt": "A bookkeeper reviewing monthly reports with a small shop owner at her store counter",
+      "excerpt": "Bookkeeping in Vancouver is priced by workload. Here is what drives the monthly cost, how pricing models compare and what LeadTax plans include, from $199 a month.",
+      "content": [
+        {
+          "type": "intro",
+          "text": "Bookkeeping in Vancouver, BC is usually priced by workload, so cost depends on transaction volume, number of accounts, payroll and sales tax filing. LeadTax monthly plans start at $199, with Core at $399 and Bookkeeping + Tax at $649. Compare plans on our [bookkeeping services page](/bookkeeping), see our [pricing page](/pricing) or [book a free consultation](/contact)."
+        },
+        {
+          "type": "heading",
+          "text": "How Much Does Bookkeeping Cost in Vancouver?"
+        },
+        {
+          "type": "paragraph",
+          "text": "There is no single price, because bookkeeping is priced by workload. A sole proprietor with one bank account and a few dozen transactions needs far less work than a restaurant with payroll, several accounts and GST/PST filing. The most reliable way to compare quotes is to ask what is included in each, rather than comparing the headline price alone."
+        },
+        {
+          "type": "heading",
+          "text": "What Affects the Cost of Bookkeeping in Vancouver?"
+        },
+        {
+          "type": "list",
+          "items": [
+            "**Transaction volume.** More transactions mean more categorizing and reconciling.",
+            "**Number of accounts.** Each bank, credit card and loan account adds work.",
+            "**Payroll.** Payroll records, deductions and remittances add monthly tasks.",
+            "**GST/HST and PST.** Sales tax reconciliation and filing support add time.",
+            "**Cleanup needs.** Books that are behind need catch-up work first.",
+            "**Software.** QuickBooks Online and other platforms each have their own setup and support needs.",
+            "**Reporting.** Monthly Profit and Loss statements and Balance Sheets take review time."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "What Are the Common Bookkeeping Pricing Models?"
+        },
+        {
+          "type": "paragraph",
+          "text": "Hourly billing charges for time spent, which can be hard to predict. Fixed monthly plans bundle a defined scope for one price, which makes budgeting easier. Per-transaction pricing can suit very low volume but grows quickly as your business does. Many small businesses prefer a fixed monthly plan because the scope and the price are clear in advance."
+        },
+        {
+          "type": "heading",
+          "text": "What Are LeadTax Bookkeeping Plans and Prices?"
+        },
+        {
+          "type": "paragraph",
+          "text": "LeadTax offers three monthly plans. Billing is monthly, and annual billing saves 20%."
+        },
+        {
+          "type": "list",
+          "items": [
+            "**Bookkeeping Light, $199 per month.** Monthly bookkeeping, bank and credit card reconciliation, Profit and Loss and Balance Sheet reports, a year-end tax-ready package and scheduled bookkeeper check-ins.",
+            "**Bookkeeping Core, $399 per month.** Everything in Light, plus dedicated account categorization, GST/HST support and priority communication.",
+            "**Bookkeeping + Tax, $649 per month.** Everything in Core, plus corporate tax return preparation, year-end tax review, T4 and T5 support where applicable and a tax planning consultation."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Pricing is a starting point, and the final price depends on volume, accounts and cleanup work. See the [bookkeeping services page](/bookkeeping) and our [pricing page](/pricing)."
+        },
+        {
+          "type": "heading",
+          "text": "What Is Included in Monthly Bookkeeping?"
+        },
+        {
+          "type": "paragraph",
+          "text": "Monthly bookkeeping records and categorizes your transactions, reconciles bank and credit card accounts and produces reports you can read. You see your income, expenses and cash position without chasing receipts at year-end. Filing also gets faster because your records are already organized. Owners can combine bookkeeping with [corporate tax services](/corporate-tax) so one team handles both."
+        },
+        {
+          "type": "heading",
+          "text": "Is Bookkeeping Worth the Cost for a Small Business?"
+        },
+        {
+          "type": "paragraph",
+          "text": "For many owners, yes. Accurate books help you catch missed deductions, price jobs properly, stay current on GST/HST and PST, and answer quickly when the CRA or a lender asks for records. Time spent on spreadsheets is time not spent serving customers. If your books are behind, ask us about catch-up bookkeeping. You can also read why [bookkeepers are a first line of defense against wasted spending](/blog/bookkeepers-first-line-defense-wasted-spending)."
+        },
+        {
+          "type": "heading",
+          "text": "How Do You Choose a Bookkeeper in Vancouver?"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Ask exactly what is included in the monthly price",
+            "Confirm which software they support, such as QuickBooks Online",
+            "Ask how they handle payroll and GST/PST",
+            "Ask whether they can also prepare your tax returns",
+            "Read reviews and confirm there is a local office you can visit"
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Bookkeeping Help in Vancouver and Burnaby"
+        },
+        {
+          "type": "paragraph",
+          "text": "Meet your bookkeeper at our Commercial Drive office or another Vancouver or Burnaby location, or work remotely. [Contact LeadTax](/contact) for a free consultation. This article is general information, not accounting advice for your situation."
+        },
+        {
+          "type": "faq",
+          "title": "Frequently Asked Questions About Bookkeeping Costs in Vancouver",
+          "items": [
+            {
+              "question": "What is the average cost of a bookkeeper in Vancouver?",
+              "answer": "Costs vary widely because bookkeeping is priced by workload. A simple business with one account costs much less than a company with payroll and sales tax filing. Ask each provider for a written scope so you can compare prices fairly, and confirm what happens when your transaction volume grows."
+            },
+            {
+              "question": "How much does bookkeeping cost per month for a small business?",
+              "answer": "LeadTax plans start at $199 per month. The right plan depends on your transaction volume, number of accounts, payroll and GST/HST needs. We confirm the scope and the price before work starts, so you know your monthly cost in advance."
+            },
+            {
+              "question": "Is it cheaper to hire a bookkeeper or do my own books?",
+              "answer": "Doing your own books costs no cash upfront, but it costs time and can lead to errors, missed deductions and late filings. A bookkeeper keeps records accurate and gives your time back. Many owners find the monthly fee is worth the hours they save."
+            },
+            {
+              "question": "Do bookkeeping fees include tax preparation?",
+              "answer": "Not always. Basic plans cover monthly records and reports, while corporate tax returns are often separate. LeadTax's Bookkeeping + Tax plan includes corporate tax return preparation, year-end tax review and a tax planning consultation in one monthly price."
+            },
+            {
+              "question": "Does bookkeeping include payroll and GST/PST filing?",
+              "answer": "It depends on the plan. Payroll support and sales tax work are often add-ons or higher-tier features. LeadTax Core includes GST/HST support, and payroll support is available. Confirm what is covered before you sign so there are no surprises."
+            },
+            {
+              "question": "How much does catch-up bookkeeping cost?",
+              "answer": "Catch-up bookkeeping is usually priced by the amount of work, such as the number of months behind and the number of transactions. It is a one-time cleanup before monthly bookkeeping begins. We review your records and give you a clear scope and fee first."
+            },
+            {
+              "question": "Can I save money by paying annually?",
+              "answer": "Yes. LeadTax annual billing saves 20% compared with monthly billing. Annual plans suit businesses with steady volume that want predictable costs and a long-term bookkeeping partner."
+            },
+            {
+              "question": "Does LeadTax work with QuickBooks Online?",
+              "answer": "Yes. We set up, clean up, reconcile and support QuickBooks Online, and we work with other common accounting, banking, payment and commerce platforms."
+            },
+            {
+              "question": "What do I need to start bookkeeping with LeadTax?",
+              "answer": "Tell us about your business, then securely connect your bank statements, credit cards and records. We categorize your transactions, reconcile your accounts and set up a regular reporting schedule so your books stay current."
+            },
+            {
+              "question": "Where can I get bookkeeping help near me in Vancouver or Burnaby?",
+              "answer": "LeadTax has offices in Vancouver and Burnaby, including Commercial Drive, and also works remotely. Visit our [contact page](/contact) or call 1-877-453-2382 to book a free consultation."
+            }
+          ]
+        }
+      ],
+      "authorIsOrganization": true
+    },
+    {
       "_placeholders": [
         "content"
       ],

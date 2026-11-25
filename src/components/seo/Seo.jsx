@@ -52,7 +52,13 @@ export default function Seo() {
       document.title = head.title;
       head.tags.forEach(applyTag);
       // The FAQ schema is managed by FaqSchema while the FAQ page is open.
-      head.jsonLd.filter((entry) => entry.id !== "faq").forEach(applyJsonLd);
+      const entries = head.jsonLd.filter((entry) => entry.id !== "faq");
+      // Drop schemas the previous page added that this page doesn't have (home, service or article questions).
+      const ids = new Set(entries.map((entry) => entry.id));
+      document.head.querySelectorAll("script[data-schema]").forEach((script) => {
+        if (script.dataset.schema !== "faq" && !ids.has(script.dataset.schema)) script.remove();
+      });
+      entries.forEach(applyJsonLd);
     });
     return () => {
       current = false;

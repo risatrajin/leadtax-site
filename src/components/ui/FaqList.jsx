@@ -1,6 +1,7 @@
 import { useId, useState } from "react";
 import { Plus } from "lucide-react";
 import Collapse from "./Collapse.jsx";
+import RichText from "./RichText.jsx";
 
 /** Questions as cards; each is a button that reveals its answer. One open at a time. */
 export default function FaqList({ items }) {
@@ -25,7 +26,7 @@ export default function FaqList({ items }) {
               <Plus aria-hidden="true" className={`h-5 w-5 flex-shrink-0 text-brand transition-transform ${isOpen ? "rotate-45" : ""}`} />
             </button>
             <Collapse id={answerId} open={isOpen} className="px-6 pb-6 leading-relaxed text-gray-600">
-              {item.answer}
+              <RichText text={item.answer} />
             </Collapse>
           </li>
         );

@@ -6,6 +6,7 @@ import QuickQueryButton from "./QuickQueryButton.jsx";
 import LeadFormFrame from "./LeadFormFrame.jsx";
 import enquiry from "../../content/enquiry.json";
 import { imgProps } from "../../lib/images.js";
+import RichText, { LINK_CLASS_ON_DARK } from "./RichText.jsx";
 
 /**
  * Where the "Quick question" pill sits on the hero photo, set per page with `image.quickQuery`.
@@ -89,7 +90,7 @@ export function actionProps(action) {
  * `image.quickQuery` picks the corner for the "Quick question" pill (see QUICK_QUERY_POSITIONS).
  * With `formService` (the page's name) the enquiry form takes the photo's place (HeroForm).
  */
-export default function PageHero({ eyebrow, title, text, actions = [], image, imageNote, formService, decor, children }) {
+export default function PageHero({ eyebrow, heading, title, text, actions = [], image, imageNote, formService, decor, children }) {
   const form = Boolean(formService);
   return (
     <section className={cx("bg-gradient-to-br from-brand to-brand-strong px-4 py-16 text-white md:px-8 md:py-24", decor && "relative isolate overflow-hidden")}>
@@ -104,11 +105,26 @@ export default function PageHero({ eyebrow, title, text, actions = [], image, im
         </>
       )}
       <div className={cx("mx-auto max-w-7xl", (image || form) && "grid items-center gap-12 lg:grid-cols-2", form && "lg:items-start")}>
-        {/* Beside the tall form, the text sits near the top rather than centred. */}
-        <div className={cx(!image && !form && "mx-auto max-w-3xl text-center", form && "lg:pt-16")}>
-          {eyebrow && <p className="mb-4 text-sm font-semibold uppercase tracking-wider text-brand-subtle">{eyebrow}</p>}
-          <h1 className="text-4xl font-bold tracking-tight md:text-5xl lg:text-6xl">{title}</h1>
-          {text && <p className="mt-6 text-lg text-brand-subtle md:text-xl">{text}</p>}
+        {/* Beside the form, the text sits centred to its height. */}
+        <div className={cx(!image && !form && "mx-auto max-w-3xl text-center", form && "lg:self-center")}>
+          {/* With a `heading`, that short line is the page's h1 (for search) and the big title is a
+              plain paragraph; otherwise the title is the h1, under the optional eyebrow. */}
+          {heading ? (
+            <>
+              <h1 className="mb-4 text-sm font-semibold uppercase tracking-wider text-brand-subtle">{heading}</h1>
+              <p className="text-4xl font-bold tracking-tight md:text-5xl lg:text-6xl">{title}</p>
+            </>
+          ) : (
+            <>
+              {eyebrow && <p className="mb-4 text-sm font-semibold uppercase tracking-wider text-brand-subtle">{eyebrow}</p>}
+              <h1 className="text-4xl font-bold tracking-tight md:text-5xl lg:text-6xl">{title}</h1>
+            </>
+          )}
+          {text && (
+            <p className={cx("mt-6 text-lg text-brand-subtle", !heading && "md:text-xl")}>
+              <RichText text={text} linkClassName={LINK_CLASS_ON_DARK} />
+            </p>
+          )}
           {actions.length > 0 && (
             <div className={cx("mt-10 flex flex-col gap-4 sm:flex-row sm:flex-wrap", !image && !form && "sm:justify-center")}>
               {actions.map((action, index) => (

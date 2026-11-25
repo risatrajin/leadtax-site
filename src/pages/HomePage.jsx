@@ -10,10 +10,10 @@ import { ServiceCard } from "../sections/home/Hero.jsx";
 import WaysShowcase from "../sections/home/WaysShowcase.jsx";
 import ProcessShowcase from "../sections/home/ProcessShowcase.jsx";
 import ReviewsCarousel from "../sections/shared/ReviewsCarousel.jsx";
-import PreviousYearsBanner from "../sections/file-online/PreviousYearsBanner.jsx";
-import ConfidenceCarousel from "../sections/home/ConfidenceCarousel.jsx";
-import HowItWorks from "../sections/file-online/HowItWorks.jsx";
-import { DiyExpertCta, DiyFaq, DiyTools } from "../sections/home/DiySupport.jsx";
+import Offices from "../sections/home/Offices.jsx";
+import RichText, { LINK_CLASS_ON_DARK, Sources } from "../components/ui/RichText.jsx";
+import { splitLead } from "../lib/markup.js";
+import PageNote from "../components/ui/PageNote.jsx";
 import { imgProps } from "../lib/images.js";
 
 const SECTION = "scroll-mt-28 px-4 py-16 md:px-8 md:py-24";
@@ -30,14 +30,18 @@ function Hero() {
     <section className="relative overflow-x-clip bg-hero-blue px-4 text-white md:px-8">
       <div className="mx-auto grid max-w-7xl items-end lg:grid-cols-[1.15fr_0.85fr] lg:gap-x-8">
         <div className="relative z-10 pb-10 pt-14 md:pt-20 lg:col-start-1 lg:row-start-1 lg:pb-24 lg:pt-24">
-          <h1 className="text-4xl font-semibold leading-[1.04] tracking-tight sm:text-5xl lg:text-6xl xl:text-7xl">
+          <h1 className="mb-4 text-sm font-semibold uppercase tracking-wider text-brand-subtle">{hero.eyebrow}</h1>
+          <p className="text-4xl font-semibold leading-[1.04] tracking-tight sm:text-5xl lg:text-6xl xl:text-7xl">
             {lines.map((line) => (
               <span key={line} className="block">
                 {line.trim()}
               </span>
             ))}
-          </h1>
-          <p className="mt-8 max-w-xl text-lg text-white/90 md:text-xl">{hero.text}</p>
+          </p>
+          {/* The intro's first sentence; the rest sits in the page note at the end of the page. */}
+          <p className="mt-8 max-w-xl text-lg text-white/90">
+            <RichText text={splitLead(hero.text)[0]} linkClassName={LINK_CLASS_ON_DARK} />
+          </p>
           <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:flex-wrap sm:items-center">
             {hero.actions.map((action, index) => (
               <Button key={action.label} to={action.to} href={action.href} variant={index === 0 ? "inverse" : "outlineInverseFill"}>
@@ -72,8 +76,8 @@ function Hero() {
           </div>
         </div>
 
+        {/* The tiles' heading and intro sit centred under the reviews (ServicesLead). */}
         <div className="relative z-10 -mt-12 pb-12 md:pb-[50px] lg:col-span-2 lg:col-start-1 lg:row-start-2 lg:mt-0">
-          <h2 className="sr-only">{hero.tilesTitle}</h2>
           <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-5 lg:gap-4">
             {hero.tiles.map((tile) => (
               <ServiceCard key={tile.link} service={tile} />
@@ -82,6 +86,17 @@ function Hero() {
         </div>
       </div>
     </section>
+  );
+}
+
+/** The services heading and intro, centred under the reviews, so the hero stays uncluttered. */
+function ServicesLead() {
+  const { hero } = home;
+  return (
+    <div className="mx-auto mt-14 max-w-2xl text-center md:mt-16">
+      <h2 className="text-sm font-semibold uppercase tracking-wider text-brand-bright">{hero.tilesTitle}</h2>
+      <p className="mt-3 text-lg text-gray-600">{hero.tilesIntro}</p>
+    </div>
   );
 }
 
@@ -94,14 +109,15 @@ function Faq() {
         <div className="mt-10">
           <FaqAccordion items={faq.items} variant="bordered" />
         </div>
+        <Sources sources={faq.sources} />
       </div>
     </section>
   );
 }
 
 /**
- * Homepage: the five services in one place. Copy from the developer package (website/index.html),
- * laid out with the site's components; the offices section is the site's own map and office cards.
+ * Homepage: the five services in one place, how filing works, the offices and common questions.
+ * Copy from the 7Figures SEO content strategy (Nov 18, 2026), laid out with the site's components.
  */
 export default function HomePage() {
   return (
@@ -109,16 +125,12 @@ export default function HomePage() {
       <SiteHeader />
       <main id="main">
         <Hero />
-        <ReviewsCarousel className="bg-gray-50" />
+        <ReviewsCarousel className="bg-gray-50" after={<ServicesLead />} />
         <WaysShowcase ways={home.ways} />
         <ProcessShowcase process={home.process} tiles={home.hero.tiles} />
+        <Offices title={home.offices.title} intro={home.offices.intro} />
         <Faq />
-        <PreviousYearsBanner className="bg-gray-50" image={home.previousYears.image} />
-        <ConfidenceCarousel slides={home.confidence.slides} />
-        <HowItWorks />
-        <DiyTools />
-        <DiyExpertCta />
-        <DiyFaq />
+        <PageNote text={splitLead(home.hero.text)[1]} />
       </main>
       <SiteFooter />
     </div>

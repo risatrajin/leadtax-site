@@ -4,11 +4,11 @@ import SmartLink from "../../components/ui/SmartLink.jsx";
 import { CARD, CARD_TITLE } from "../../lib/styles.js";
 
 /** Numbered steps with a checklist card beside them. The download link is optional. */
-export default function FirstVisit({ content = home }) {
+export default function FirstVisit({ content = home, className = "bg-white" }) {
   const { firstVisit } = content;
   const { checklist } = firstVisit;
   return (
-    <section className="bg-white px-4 py-16 md:px-8 md:py-24">
+    <section className={`${className} px-4 py-16 md:px-8 md:py-24`}>
       <div className="mx-auto grid max-w-7xl gap-12 xl:grid-cols-[1fr_420px] xl:items-end xl:gap-16">
         <div>
           <h2 className="text-3xl text-gray-900 md:text-4xl lg:text-5xl">{firstVisit.title}</h2>
@@ -38,6 +38,7 @@ export default function FirstVisit({ content = home }) {
               </li>
             ))}
           </ul>
+          {checklist.note && <p className="mt-6 text-sm text-gray-500">{checklist.note}</p>}
           {checklist.download && (
           <SmartLink
             href={checklist.download.href}
